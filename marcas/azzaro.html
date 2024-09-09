@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Azzaro</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Azzaro" data-name="Pour Homme Intense" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\azzaro\Untitled-1.jpg" alt="Azzaro Pour Homme Intense" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Azzaro</strong></h3>
+                    <p>Pour Homme Intense Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>91$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Azzaro" data-name="Chrome EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\azzaro\Untitled-2.jpg" alt="Azzaro Chrome EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Azzaro</strong></h3>
+                    <p>Chrome Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>94$</p>
+                    <p>200 <strong>ml - </strong>118$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Azzaro" data-name="Chrome EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\azzaro\Untitled-3.jpg" alt="Azzaro Chrome EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Azzaro</strong></h3>
+                    <p>Chrome Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>92$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Azzaro" data-name="Wanted Girl EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\azzaro\Azzaro-wanted-girl-pr.jpg" alt="Azzaro Wanted Girl EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Azzaro</strong></h3>
+                    <p>Wanted Girl Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>117$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Azzaro" data-name="Wanted Girl By Night EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\azzaro\Untitled-5.jpg" alt="Azzaro Wanted Girl By Night EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Azzaro</strong></h3>
+                    <p>Wanted Girl By Night Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>114$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

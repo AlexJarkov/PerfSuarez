@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Moncler</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Moncler" data-name="Moncler Pour Homme" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\moncler\Untitled-1.jpg" alt="Moncler Pour Homme" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moncler</strong></h3>
+                    <p>Moncler Pour Homme</p>
+                    <p>60 <strong>ml - </strong>110$</p>
+                    <p>100 <strong>ml - </strong>161$</p>
+                    <p>150 <strong>ml (con pantalla) - </strong>208$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Moncler" data-name="Moncler Pour Femme" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\moncler\Untitled.jpg" alt="Moncler Pour Femme" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moncler</strong></h3>
+                    <p>Moncler Pour Femme</p>
+                    <p>60 <strong>ml - </strong>110$</p>
+                    <p>100 <strong>ml - </strong>161$</p>
+                    <p>150 <strong>ml (con pantalla) - </strong>208$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Moncler" data-name="Moncler Sunrise Pour Homme" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\moncler\MC006A01_MONCLERSUNRISE_POURHOMME_100ML_BOTTLEFRONTVIEW_master.webp" alt="Moncler Sunrise Pour Homme" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moncler</strong></h3>
+                    <p>Moncler Sunrise Pour Homme</p>
+                    <p>100 <strong>ml - </strong>138$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Moncler" data-name="Moncler Sunrise Pour Femme" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\moncler\0c277468e500180723e2be95cf04df7f3ae18d31_eccbb7bd-3434-4819-90d2-front.webp" alt="Moncler Sunrise Pour Femme" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moncler</strong></h3>
+                    <p>Moncler Sunrise Pour Femme</p>
+                    <p>100 <strong>ml - </strong>138$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

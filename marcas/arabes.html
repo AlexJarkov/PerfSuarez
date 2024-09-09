@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes Árabes</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('unisex')">Mostrar perfumes unisex</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="AFNAN" data-name="9PM" data-tags="hombre">
+                    <img src="..\imagenes\fotos-catalogo\arabes\Afnam-9pm.png" alt="AFNAN 9PM" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>AFNAN</strong></h3>
+                    <p>9PM Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>82$</p>
+                </div>
+                
+                <div class="perfume" data-brand="AFNAN" data-name="9AM Dive" data-tags="hombre">
+                    <img src="..\imagenes\fotos-catalogo\arabes\download.jpg" alt="AFNAN 9AM Dive" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>AFNAN</strong></h3>
+                    <p>9AM Dive Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>82$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Rasasi" data-name="Hawas For Him" data-tags="hombre">
+                    <img src="..\imagenes\fotos-catalogo\arabes\hawas-pr-of.webp" alt="Rasasi Hawas For Him" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Rasasi</strong></h3>
+                    <p>Hawas For Him Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>95$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lattafa" data-name="Asad" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\arabes\777571_3_lattafa-asad-man-eau-de-parfum-100ml.jpg" alt="Lattafa Asad" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lattafa</strong></h3>
+                    <p>Asad Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>82$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lattafa" data-name="Asad Zanzibar" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\arabes\ASAD-ZANZIBAR-1.jpg" alt="Lattafa Asad Zanzibar" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lattafa</strong></h3>
+                    <p>Asad Zanzibar Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>82$</p>
+                </div>
+
+                <div class="perfume" data-brand="Lattafa" data-name="Khamrah" data-tags="unisex hombre">
+                    <img src="../imagenes\fotos-catalogo\arabes\KHAMRAH-LATTAFA-.jpg" alt="Lattafa Khamrah" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lattafa</strong></h3>
+                    <p>Khamrah</p>
+                    <p>100 <strong>ml - </strong>95$</p>
+                </div>
+
+                <div class="perfume" data-brand="Lattafa" data-name="Khamrah Qahwa" data-tags="unisex hombre">
+                    <img src="../imagenes\fotos-catalogo\arabes\1149057834.avif" alt="Lattafa Khamrah Qahwa" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lattafa</strong></h3>
+                    <p>Khamrah Qahwa</p>
+                    <p>100 <strong>ml - </strong>95$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lattafa" data-name="Qaed Al Fursan Unlimited" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\arabes\qaed-al-fursan-unlimited-perfume-bottle-against-white-background.webp" alt="Lattafa Qaed Al Fursan Unlimited" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lattafa</strong></h3>
+                    <p>Qaed Al Fursan Unlimited Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>82$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Armaf" data-name="Club De Nuit Intense EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\arabes\armaf-club-de-nuit-edp-pr.webp" alt="Armaf Club De Nuit Intense" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Armaf</strong></h3>
+                    <p>Club De Nuit Intense EDT</p>
+                    <p>110 <strong>ml - </strong>82$</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

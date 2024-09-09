@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Paco Rabanne</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Rabanne" data-name="Phantom EDT" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/Untitled.jpg" alt="Phantom"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Phantom Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>107$</p>
+                    <p>150 <strong>ml - </strong>127$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="Phantom Parfum" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/Untitled-1.jpg" alt="Phantom Parfum"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Phantom Parfum</p>
+                    <p>100 <strong>ml - </strong>118$</p>
+                    <p>150 <strong>ml - </strong>140$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="Pure XS Eau De Toilette" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/SPR-4952_3349668576173_d4700a59-7785-4d84-8877-48739d7fcf0e.webp"
+                        alt="Pure XS EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Pure XS Eau De Toilette</p>
+                    <p>50 <strong>ml - </strong>61$</p>
+                    <p>100 <strong>ml - </strong>95$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="One Million EDT" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/Untitled-2.png" alt="One Million"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>One Million Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>100$</p>
+                    <p>200 <strong>ml - </strong>112$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="One Million Parfum" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/Untitled-3.png" alt="One Million Parfum"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>One Million Parfum</p>
+                    <p>100 <strong>ml - </strong>110$</p>
+                    <p>200 <strong>ml - </strong>160$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="One Million Royal" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/65190440_00.png" alt="One Million Royal"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>One Million Royal</p>
+                    <p>100 <strong>ml - </strong>114$</p>
+                    <p>200 <strong>ml - </strong>167$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="Invictus EDT" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/Untitled-2.jpg" alt="Invictus"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Invictus Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>100$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="Invictus Victory" data-tags="hombre">
+                    <img src="../imagenes/fotos-catalogo/paco/paco-rabanne-invictus-victory-pr.jpg"
+                        alt="Invictus Victory" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Invictus Victory</p>
+                    <p>100 <strong>ml - </strong>110$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="Olympea Flora EDP" data-tags="mujer">
+                    <img src="../imagenes/fotos-catalogo/paco/Untitled-5.png" alt="Olympea Flora"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Olympea Flora Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>117$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="Lady Million Royal EDP" data-tags="mujer">
+                    <img src="../imagenes/fotos-catalogo/paco/paco-lady-millon-royal-pr-of.jpg" alt="Lady Million Royal"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Lady Million Royal Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>107$</p>
+                </div>
+                <div class="perfume" data-brand="Rabanne" data-name="Fame EDP" data-tags="mujer">
+                    <img src="../imagenes/fotos-catalogo/paco/Untitled-8.png" alt="Fame"
+                        onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Paco Rabanne</strong></h3>
+                    <p>Fame Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>120$</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

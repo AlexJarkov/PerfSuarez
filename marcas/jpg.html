@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Jean Paul Gaultier</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Jean Paul Gaultier" data-name="Le Beau Paradise Garden" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\jpg\1708093208.jpg" alt="Le Beau Paradise Garden" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Jean Paul Gaultier</strong></h3>
+                    <p>Le Beau Paradise Garden</p>
+                    <p>75 <strong>ml - </strong>87$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Jean Paul Gaultier" data-name="La Belle Paradise Garden" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\jpg\IMG_3238.WEBP" alt="La Belle Paradise Garden" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Jean Paul Gaultier</strong></h3>
+                    <p>La Belle Paradise Garden</p>
+                    <p>100 <strong>ml - </strong>132$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Jean Paul Gaultier" data-name="Scandal Pour Homme EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\jpg\Untitled.jpg" alt="Scandal Pour Homme EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Jean Paul Gaultier</strong></h3>
+                    <p>Scandal Pour Homme Eau De Toilette</p>
+                    <p>50 <strong>ml - </strong>81$</p>
+                    <p>100 <strong>ml - </strong>108$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Jean Paul Gaultier" data-name="Gaultier Divine" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\jpg\dasdasdsa.png" alt="Gaultier Divine" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Jean Paul Gaultier</strong></h3>
+                    <p>Gaultier Divine</p>
+                    <p>100 <strong>ml - </strong>128$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Jean Paul Gaultier" data-name="La Belle EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\jpg\Untitled-2.jpg" alt="La Belle EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Jean Paul Gaultier</strong></h3>
+                    <p>La Belle Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>114$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Jean Paul Gaultier" data-name="Classique EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\jpg\Untitled-3.jpg" alt="Classique EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Jean Paul Gaultier</strong></h3>
+                    <p>Classique Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>102$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

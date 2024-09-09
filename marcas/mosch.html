@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Moschino</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Moschino" data-name="Toy Boy" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\mosch\eau-de-parfum-moschino-moschino-moschino-toy-boy8011003845132A.png" alt="Toy Boy" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moschino</strong></h3>
+                    <p>Toy Boy</p>
+                </div>
+                
+                <div class="perfume" data-brand="Moschino" data-name="Fresh Couture EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\mosch\Untitled.jpg" alt="Fresh Couture EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moschino</strong></h3>
+                    <p>Fresh Couture Eau De Toilette</p>
+                </div>
+                
+                <div class="perfume" data-brand="Moschino" data-name="I Love Love EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\mosch\Untitled-1.jpg" alt="I Love Love EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moschino</strong></h3>
+                    <p>I Love Love Eau De Toilette</p>
+                </div>
+                
+                <div class="perfume" data-brand="Moschino" data-name="Pink Fresh Couture EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\mosch\Untitled-2.jpg" alt="Pink Fresh Couture EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Moschino</strong></h3>
+                    <p>Pink Fresh Couture Eau De Toilette</p>
+                </div>   
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

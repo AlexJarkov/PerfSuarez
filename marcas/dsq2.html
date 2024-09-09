@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de DSQUARED2</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('unisex')">Mostrar perfumes unisex</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Dsquared2" data-name="Wood Green Pour Homme EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\dsq2\Untitled.png" alt="Wood Green Pour Homme EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Dsquared2</strong></h3>
+                    <p>Wood Green Pour Homme Eau De Toilette</p>
+                </div>
+                
+                <div class="perfume" data-brand="Dsquared2" data-name="Wood Pour Homme EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\dsq2\Untitled.jpg" alt="Wood Pour Homme EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Dsquared2</strong></h3>
+                    <p>Wood Pour Homme Eau De Toilette</p>
+                </div>
+                
+                <div class="perfume" data-brand="Dsquared2" data-name="Original Wood EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\dsq2\Untitled-1.jpg" alt="Original Wood EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Dsquared2</strong></h3>
+                    <p>Original Wood Eau De Parfum</p>
+                </div>
+                
+                <div class="perfume" data-brand="Dsquared2" data-name="2 Wood EDT" data-tags="unisex">
+                    <img src="../imagenes\fotos-catalogo\dsq2\Untitled-2.jpg" alt="2 Wood EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Dsquared2</strong></h3>
+                    <p>2 Wood Eau De Toilette</p>
+                </div>
+                
+                <div class="perfume" data-brand="Dsquared2" data-name="Wood Pour Femme EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\dsq2\Untitled-3.jpg" alt="Wood Pour Femme EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Dsquared2</strong></h3>
+                    <p>Wood Pour Femme Eau De Toilette</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

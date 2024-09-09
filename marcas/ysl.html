@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Yves Saint Laurent</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="MYSLF EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ysl\ysl-myslf-240415062511.webp" alt="MYSLF EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>MYSLF Eau De Parfum</p>
+                    <p>60 <strong>ml - </strong>117$</p>
+                    <p>100 <strong>ml - </strong>148$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="Libre EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ysl\Untitled-2.png" alt="Libre EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>Libre Eau De Toilette</p>
+                    <p>90 <strong>ml - </strong>132$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="Mon Paris EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ysl\Untitled-3.png" alt="Mon Paris EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>Mon Paris Eau De Toilette</p>
+                    <p>90 <strong>ml - </strong>115$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="L'Homme EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ysl\3365440316546.webp" alt="L'Homme EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>L'Homme Eau De Toilette</p>
+                    <p>60 <strong>ml - </strong>84$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

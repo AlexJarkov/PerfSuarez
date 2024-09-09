@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Lacoste</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Lacoste" data-name="L12.12 Blanc EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\lacoste\LACO8244887803_G.jpg" alt="L12.12 Blanc EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lacoste</strong></h3>
+                    <p>L12.12 Blanc Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>94$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lacoste" data-name="L12.12 Noir EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\lacoste\lacoste-l-12-12-noir-intense-pr.webp" alt="L12.12 Noir EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lacoste</strong></h3>
+                    <p>L12.12 Noir Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>94$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lacoste" data-name="L12.12 Rose EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\lacoste\lacoste-l1212-woman-pure-rose-eau-de-parfum-100-ml.webp" alt="L12.12 Rose EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lacoste</strong></h3>
+                    <p>L12.12 Rose Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>105$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lacoste" data-name="L12.12 Rose Eau Intense EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\lacoste\lacoste-l-12-12-rose-edt-pr.webp" alt="L12.12 Rose Eau Intense EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lacoste</strong></h3>
+                    <p>L12.12 Rose Eau Intense Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>97$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lacoste" data-name="L'Homme EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\lacoste\LACO8247179603_G.jpg" alt="L'Homme EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lacoste</strong></h3>
+                    <p>L'Homme Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>89$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Lacoste" data-name="Pour Femme" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\lacoste\lacoste-012893xl_02.jpg" alt="Pour Femme" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Lacoste</strong></h3>
+                    <p>Pour Femme</p>
+                    <p>30 <strong>ml - </strong>38$</p>
+                    <p>50 <strong>ml - </strong>68$</p>
+                    <p>90 <strong>ml - </strong>89$</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

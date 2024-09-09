@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Kenzo</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Kenzo" data-name="Homme Intense EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\kenzo\Untitled.jpg" alt="Homme Intense EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Kenzo</strong></h3>
+                    <p>Homme Intense Eau De Toilette</p>
+                    <p>110 <strong>ml - </strong>97$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Kenzo" data-name="Homme EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\kenzo\Untitled.png" alt="Homme EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Kenzo</strong></h3>
+                    <p>Homme Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>104$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Kenzo" data-name="Homme Marine EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\kenzo\KENZOHOMMEEAUMARINEEDTPACKSHOTBOTTLE60MLPACKSHOT_5272fdf0-70fc-4b3e-8de1-474a91ffc91f.webp" alt="Homme Marine EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Kenzo</strong></h3>
+                    <p>Homme Marine Eau De Toilette</p>
+                    <p>110 <strong>ml - </strong>102$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Kenzo" data-name="Flower By Kenzo EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\kenzo\Untitled-1.jpg" alt="Flower By Kenzo EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Kenzo</strong></h3>
+                    <p>Flower By Kenzo Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>114$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Kenzo" data-name="Flower By Kenzo L'Absolue" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\kenzo\flower_by_kenzo_l_absolue_bottle_100ml_149914_18c047cf-f165-4698-807f-f87601c60374.png" alt="Flower By Kenzo L'Absolue" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Kenzo</strong></h3>
+                    <p>Flower By Kenzo L'Absolue</p>
+                    <p>100 <strong>ml - </strong>104$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Kenzo" data-name="Flower By Kenzo Ikebana" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\kenzo\flower_by_kenzo_ikebana_packshot_bottle_75ml_153695.webp" alt="Flower By Kenzo Ikebana" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Kenzo</strong></h3>
+                    <p>Flower By Kenzo Ikebana</p>
+                    <p>100 <strong>ml - </strong>122$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Kenzo" data-name="Flower By Kenzo Poppy Bouquet" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\kenzo\142629-a-poppy-bouquet-edt-50ml.webp" alt="Flower By Kenzo Poppy Bouquet" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Kenzo</strong></h3>
+                    <p>Flower By Kenzo Poppy Bouquet</p>
+                    <p>100 <strong>ml - </strong>114$</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

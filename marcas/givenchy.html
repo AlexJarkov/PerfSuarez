@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Givenchy</h2>
+            </div>
+            <div class="filter-buttons">
+                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
+                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
+                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Givenchy" data-name="Gentleman EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\givenchy\Untitled.png" alt="Gentleman EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Gentleman Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>98$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Givenchy" data-name="Gentleman Boisée" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\givenchy\Untitled-1.jpg" alt="Gentleman Boisée" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Gentleman Boisée</p>
+                    <p>100 <strong>ml - </strong>104$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Givenchy" data-name="Gentleman Society EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\givenchy\Untitled-2.jpg" alt="Gentleman Society EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Gentleman Society Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>128$</p>
+                    <p>200 <strong>ml - </strong>215$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Givenchy" data-name="Organza EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\givenchy\Untitled-1.png" alt="Organza EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Organza Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>138$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Givenchy" data-name="Very Irresistible EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\givenchy\Untitled-5.jpg" alt="Very Irresistible EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Very Irresistible Eau De Parfum</p>
+                </div>
+                
+                <div class="perfume" data-brand="Givenchy" data-name="Irresistible EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\givenchy\Untitled-6.jpg" alt="Irresistible EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Irresistible Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>107$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Givenchy" data-name="Irresistible Rose Velvet EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\givenchy\Untitled-7.jpg" alt="Irresistible Rose Velvet EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Irresistible Rose Velvet Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>134$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Givenchy" data-name="Irresistible Very Floral EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\givenchy\givenchy-irresistible-very-floral-pr-of_1.webp" alt="Irresistible Very Floral EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Givenchy</strong></h3>
+                    <p>Irresistible Very Floral Eau De Parfum</p>
+                    <p>50 <strong>ml - </strong>121$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html">
+    </div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>
