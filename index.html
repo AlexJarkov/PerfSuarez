@@ -78,50 +78,50 @@
                 TikTok! 🤠</a>
         </div>
     </main>
-    <div data-include="footer.html">
-    </div>
+    <div data-include="footer.html"></div>
+    <script src="js/meta.js"></script>
     <script src="js/scripts.js"></script>
-            <script src="js/include.js"></script>
-            <script>
-                let slideIndex = 0;
-                const slides = document.querySelectorAll(".carousel-slide");
-                const totalSlides = slides.length;
+    <script src="js/include.js"></script>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".carousel-slide");
+        const totalSlides = slides.length;
 
-                // Mostrar la primera imagen al cargar
-                document.addEventListener('DOMContentLoaded', () => {
-                    moveCarousel(0); // Mostrar el primer slide al cargar la página
-                });
+        // Mostrar la primera imagen al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            moveCarousel(0); // Mostrar el primer slide al cargar la página
+        });
 
-                function moveCarousel(n) {
-                    slideIndex += n;
+        function moveCarousel(n) {
+            slideIndex += n;
 
-                    if (slideIndex >= totalSlides) {
-                        slideIndex = 0; // Si llega al final, vuelve al inicio
-                    } else if (slideIndex < 0) {
-                        slideIndex = totalSlides - 1; // Si va hacia atrás desde la primera imagen, ve al último slide
-                    }
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0; // Si llega al final, vuelve al inicio
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1; // Si va hacia atrás desde la primera imagen, ve al último slide
+            }
 
-                    const carouselContainer = document.querySelector(".carousel-container");
-                    carouselContainer.style.transform = `translateX(${-slideIndex * 100}%)`; // Transición suave usando transform
-                }
+            const carouselContainer = document.querySelector(".carousel-container");
+            carouselContainer.style.transform = `translateX(${-slideIndex * 100}%)`; // Transición suave usando transform
+        }
 
-                // Cambia automáticamente las imágenes cada 5 segundos
-                setInterval(() => {
-                    moveCarousel(1); // Avanza una imagen
-                }, 5000);
+        // Cambia automáticamente las imágenes cada 5 segundos
+        setInterval(() => {
+            moveCarousel(1); // Avanza una imagen
+        }, 5000);
 
-                function sendWhatsAppMessage(producto, message) {
-                    const phoneNumber = '+59178064327';
-                    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        function sendWhatsAppMessage(producto, message) {
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-                    // Cuadro de confirmación
-                    const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${producto}?`);
-                    if (confirmation) {
-                        // Si el usuario confirma, abre WhatsApp
-                        window.open(url, '_blank');
-                    }
-                }
-            </script>
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${producto}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
 </body>
 
 </html>
