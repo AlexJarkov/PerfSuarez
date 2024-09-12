@@ -23,103 +23,124 @@
             <div class="title">
                 <h2>Perfumes de Montblanc</h2>
             </div>
-            <div class="filter-buttons">
-                <button onclick="filterPerfumes('all')">Mostrar todos los perfumes</button>
-                <button onclick="filterPerfumes('hombre')">Mostrar perfumes de hombre</button>
-                <button onclick="filterPerfumes('mujer')">Mostrar perfumes de mujer</button>
+            <div class="filter-select">
+                <label for="perfume-filter">Filtrar perfumes:</label>
+                <select id="perfume-filter" onchange="filterPerfumes(this.value)">
+                    <option value="all">Mostrar todos los perfumes</option>
+                    <option value="hombre">Mostrar perfumes de hombre</option>
+                    <option value="mujer">Mostrar perfumes de mujer</option>
+                </select>
             </div>
             <div class="perfume-grid">
                 <div class="perfume" data-brand="Montblanc" data-name="Explorer Ultra Blue" data-tags="hombre">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\DECANdasdas.png" alt="Explorer Ultra Blue" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\DECANdasdas.png" alt="Explorer Ultra Blue"
+                        onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Explorer Ultra Blue</p>
                     <p>100 <strong>ml - </strong>104$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Legend Spirit" data-tags="hombre">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\MB013A01_-_Legend_Spirit_100ml_BOTTLE_2.png" alt="Legend Spirit" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\MB013A01_-_Legend_Spirit_100ml_BOTTLE_2.png"
+                        alt="Legend Spirit" onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Legend Spirit</p>
                     <p>50 <strong>ml - </strong>65$</p>
                     <p>100 <strong>ml - </strong>84$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Legend" data-tags="hombre">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\MPONT.png" alt="Legend" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\MPONT.png" alt="Legend"
+                        onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Legend</p>
                     <p>50 <strong>ml - </strong>74$</p>
                     <p>100 <strong>ml - </strong>94$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Legend Blue" data-tags="hombre">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\3386460144230.webp" alt="Legend Blue" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\3386460144230.webp" alt="Legend Blue"
+                        onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Legend Blue</p>
                     <p>50 <strong>ml - </strong>81$</p>
                     <p>100 <strong>ml - </strong>104$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Legend Red" data-tags="hombre">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\AJIODSA.png" alt="Legend Red" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\AJIODSA.png" alt="Legend Red"
+                        onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Legend Red</p>
                     <p>50 <strong>ml - </strong>81$</p>
                     <p>100 <strong>ml - </strong>104$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Signature EDP" data-tags="mujer">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\mb018a01.png" alt="Signature EDP" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\mb018a01.png" alt="Signature EDP"
+                        onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Signature Eau De Parfum</p>
                     <p>90 <strong>ml - </strong>87$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Individuel EDT" data-tags="hombre">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\individuel-600x600-optimized.webp" alt="Individuel EDT" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\individuel-600x600-optimized.webp"
+                        alt="Individuel EDT" onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Individuel Eau De Toilette</p>
                     <p>75 <strong>ml - </strong>74$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Femme Individuelle EDT" data-tags="mujer">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\7585844fd31613b4bc1603b57cefdbd3.jpg" alt="Femme Individuelle EDT" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\7585844fd31613b4bc1603b57cefdbd3.jpg"
+                        alt="Femme Individuelle EDT" onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Femme Individuelle Eau De Toilette</p>
                     <p>75 <strong>ml - </strong>82$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Presence EDT" data-tags="hombre">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\2_5fec2879-1a31-45bc-882c-48ca914e6809.webp" alt="Presence EDT" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\2_5fec2879-1a31-45bc-882c-48ca914e6809.webp"
+                        alt="Presence EDT" onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Presence Eau De Toilette</p>
                     <p>75 <strong>ml - </strong>74$</p>
                 </div>
-                
+
                 <div class="perfume" data-brand="Montblanc" data-name="Presence D'Une Femme EDT" data-tags="mujer">
-                    <img src="../imagenes\fotos-catalogo\mntblanc\1145602498.png" alt="Presence D'Une Femme EDT" onclick="sendWhatsAppMessage(this)">
+                    <img src="../imagenes\fotos-catalogo\mntblanc\1145602498.png" alt="Presence D'Une Femme EDT"
+                        onclick="sendWhatsAppMessage(this)">
                     <h3><strong>Montblanc</strong></h3>
                     <p>Presence D'Une Femme Eau De Toilette</p>
                     <p>75 <strong>ml - </strong>82$</p>
                 </div>
-                
+
             </div>
         </section>
     </main>
     <script>
         function filterPerfumes(category) {
             const perfumes = document.querySelectorAll('.perfume');
+
+            // Aplica el efecto fade-out
             perfumes.forEach(perfume => {
-                if (category === 'all') {
-                    perfume.style.display = 'block';
-                } else {
-                    if (perfume.getAttribute('data-tags').includes(category)) {
-                        perfume.style.display = 'block';
-                    } else {
-                        perfume.style.display = 'none';
-                    }
-                }
+                perfume.classList.add('fade-out'); // Inicia el fade-out
             });
+
+            // Usa un temporizador para esperar a que la animación fade-out termine
+            setTimeout(() => {
+                perfumes.forEach(perfume => {
+                    // Oculta o muestra según la categoría
+                    if (category === 'all' || perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block'; // Asegura que se muestre
+                        perfume.classList.remove('fade-out'); // Elimina fade-out
+                        perfume.classList.add('fade-in'); // Añade fade-in
+                    } else {
+                        perfume.style.display = 'none'; // Oculta si no coincide
+                    }
+                });
+            }, 500); // Ajustado para coincidir con la duración de la transición
         }
 
         function sendWhatsAppMessage(element) {
@@ -142,4 +163,5 @@
     <script src="../js/scripts.js"></script>
     <script src="../js/include.js"></script>
 </body>
+
 </html>

@@ -17,18 +17,21 @@
 </head>
 
 <body>
-    <div data-include="header.html"></div>
+    <div data-include="../header.html"></div>
     <main>
         <section id="decants">
             <div class="title">
                 <h2>Decants</h2>
-                <div class="filter-buttons">
-                    <button onclick="filterPerfumes('all')">Mostrar todos los decants</button>
-                    <button onclick="filterPerfumes('hombre')">Mostrar decants de hombre</button>
-                    <button onclick="filterPerfumes('mujer')">Mostrar decants de mujer</button>
-                    <button onclick="filterPerfumes('unisex')">Mostrar decants unisex</button>
-                    <button onclick="filterPerfumes('nicho')">Mostrar decants de nicho</button>
-                    <button onclick="filterPerfumes('arabes')">Mostrar decants de Árabes</button>
+                <div class="filter-select">
+                    <label for="decant-filter">Filtrar decants:</label>
+                    <select id="decant-filter" onchange="filterPerfumes(this.value)">
+                        <option value="all">Mostrar todos los decants</option>
+                        <option value="hombre">Mostrar decants de hombre</option>
+                        <option value="mujer">Mostrar decants de mujer</option>
+                        <option value="unisex">Mostrar decants unisex</option>
+                        <option value="nicho">Mostrar decants de nicho</option>
+                        <option value="arabes">Mostrar decants de Árabes</option>
+                    </select>
                 </div>
                 <div class="perfume-grid">
                     <div class="decant" data-name="Orto Parisi Megamare" data-tags="hombre nicho">
@@ -195,7 +198,7 @@
                         <p>5 <strong>ml - </strong>140 Bs</p>
                         <p>10 <strong>ml - </strong>260 Bs</p>
                         <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
-                        
+
                     </div>
 
                     <div class="decant" data-name="Giorgio Armani Stronger With You Absolutely" data-tags="hombre">
@@ -205,6 +208,7 @@
                         <p>Stronger With You Absolutely</p>
                         <p>5 <strong>ml - </strong>140 Bs</p>
                         <p>10 <strong>ml - </strong>260 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
                     </div>
 
                     <div class="decant" data-name="Giorgio Armani Acqua Di Gio EDT" data-tags="hombre">
@@ -259,11 +263,21 @@
                     </div>
 
                     <div class="decant" data-name="Yves Saint Laurent Libre L'Absolu Platine" data-tags="mujer">
-                        <img src="imagenes\fotos-decants\mujer\LIBRE L'ABSOLU PLATINE.JPEG" alt="Yves Saint Laurent Libre L'Absolu Platine">
+                        <img src="imagenes\fotos-decants\mujer\LIBRE L'ABSOLU PLATINE.JPEG"
+                            alt="Yves Saint Laurent Libre L'Absolu Platine">
                         <h3><strong>Yves Saint Laurent</strong></h3>
                         <p>Libre L'Absolu Platine Parfum</p>
                         <p>5 <strong>ml - </strong>170 Bs</p>
                         <p>10 <strong>ml - </strong>320 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Valentino Born In Roma Green Stravaganza" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\VALENTINO GREEN STRAVAGANZA.JPEG"
+                            alt="Valentino Born In Roma Green Stravaganza">
+                        <h3><strong>Valentino</strong></h3>
+                        <p>Born In Roma Green Stravaganza</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
                     </div>
 
                     <div class="decant" data-name="Bvlgari Man In Black EDP" data-tags="hombre">
@@ -397,6 +411,7 @@
                         <p>Le Beau Eau De Toilette</p>
                         <p>5 <strong>ml - </strong>100 Bs</p>
                         <p>10 <strong>ml - </strong>180 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Le Beau Paradise Garden" data-tags="hombre">
@@ -511,8 +526,7 @@
                     </div>
 
                     <div class="decant" data-name="Rabanne Pure XS Night" data-tags="hombre">
-                        <img src="imagenes\fotos-decants\hombre\PURE XS NIGHT.JPEG"
-                            alt="Rabanne Pure XS Night EDP">
+                        <img src="imagenes\fotos-decants\hombre\PURE XS NIGHT.JPEG" alt="Rabanne Pure XS Night EDP">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Pure XS Night Eau De Parfum</p>
                         <p>5 <strong>ml - </strong>70 Bs</p>
@@ -810,20 +824,29 @@
         </section>
     </main>
     <script>
-        function filterPerfumes(category) {
-            const decants = document.querySelectorAll('.decant');
-            decants.forEach(decant => {
-                if (category === 'all') {
-                    decant.style.display = 'block';
-                } else {
-                    if (decant.getAttribute('data-tags') && decant.getAttribute('data-tags').includes(category)) {
+        function filterPerfumes(filter) {
+            const decantsContainer = document.getElementById('decants');
+
+            // Añade clase para aplicar el fade-out
+            decantsContainer.classList.add('fade-out');
+
+            // Temporizador para el efecto fade-out
+            setTimeout(() => {
+                const decants = document.querySelectorAll('.decant');
+                decants.forEach(decant => {
+                    if (filter === 'all' || decant.getAttribute('data-tags').includes(filter)) {
                         decant.style.display = 'block';
                     } else {
                         decant.style.display = 'none';
                     }
-                }
-            });
+                });
+
+                // Elimina la clase fade-out para restaurar la opacidad
+                decantsContainer.classList.remove('fade-out');
+            }, 500); // Ajustado para que coincida con la duración de la transición
         }
+
+
 
         function sendToWhatsApp(name) {
             const whatsappNumber = "78064327";

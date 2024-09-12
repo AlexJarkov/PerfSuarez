@@ -18,13 +18,29 @@
 </head>
 
 <body>
-    <div data-include="header.html"></div>
+    <div data-include="../header.html"></div>
     <main>
         <section id="carousel">
             <div class="carousel-container">
                 <div class="carousel-slide">
                     <div class="carousel-content">
-                        <img src="imagenes\fotos-anuncios\original-SMW_image-8-054858.avif" alt="Objeto 1"
+                        <img src="imagenes\fotos-anuncios\368368E4-00C2-4EF3-98C2-E39E2E57A9AF.JPEG" alt="Objeto 1"
+                            onclick="sendWhatsAppMessage('vernos en la Expocruz', 'Hola! Quiero saber detalles de su participación en la Expocruz!.')">
+                        <div class="carousel-text1">¡Perfumería Suarez en la Expocruz!</div>
+                        <div class="carousel-text2">¡Click aquí para más detalles!</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-content">
+                        <img src="imagenes\fotos-anuncios\platine (6).jpg" alt="Objeto 2"
+                            onclick="sendWhatsAppMessage('Yves Saint Laurent Libre LAbsolu Platine', 'Hola! Me gustaría pedir el Yves Saint Laurent LAbsolu Platine.')">
+                        <div class="carousel-text1">YSL Libre L'Absolu Platine</div>
+                        <div class="carousel-text2">¡Ya disponible!</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-content">
+                        <img src="imagenes\fotos-anuncios\original-SMW_image-8-054858.avif" alt="Objeto 3"
                             onclick="sendWhatsAppMessage('Creed Silver Mountain Water', 'Hola! Me gustaría pedir el decant de Creed Silver Mountain Water.')">
                         <div class="carousel-text1">Creed Silver Mountain Water</div>
                         <div class="carousel-text2">¡Ya disponible en decants!</div>
@@ -32,16 +48,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="carousel-content">
-                        <img src="imagenes\fotos-anuncios\118724871_361567638177193_1306497339622925239_n.webp"
-                            alt="Objeto 2"
-                            onclick="sendWhatsAppMessage('Orto Parisi Megamare', 'Hola! Me gustaría pedir el decant de Megamare.')">
-                        <div class="carousel-text1">Orto Parisi Megamare</div>
-                        <div class="carousel-text2">¡Ya disponible en decants!</div>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <div class="carousel-content">
-                        <img src="imagenes\fotos-anuncios\ITALIAN-LEATHER_EDP_75ml_NEW.webp" alt="Objeto 3"
+                        <img src="imagenes\fotos-anuncios\ITALIAN-LEATHER_EDP_75ml_NEW.webp" alt="Objeto 4"
                             onclick="sendWhatsAppMessage('Memo Italian Leather', 'Hola! Me gustaría pedir el decant de Memo Italian Leather.')">
                         <div class="carousel-text1">Memo Italian Leather</div>
                         <div class="carousel-text2">¡Ya disponible en decants!</div>
@@ -119,7 +126,7 @@
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
             // Cuadro de confirmación
-            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${producto}?`);
+            const confirmation = confirm(`¿Estás seguro que deseas ${producto}?`);
             if (confirmation) {
                 // Si el usuario confirma, abre WhatsApp
                 window.open(url, '_blank');
