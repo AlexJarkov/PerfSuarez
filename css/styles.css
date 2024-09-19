@@ -594,6 +594,7 @@ footer {
     /* 4 columns for the dropdowns */
     gap: 20px;
     padding: 20px;
+    max-width: 1600px;
 }
 
 .combo-item {
@@ -619,6 +620,7 @@ footer {
     margin: 10px 0;
     font-size: 16px;
     min-height: 40px;
+    max-width: 400px;
     /* Ajusta la altura mínima según sea necesario */
     width: 100%;
     text-align: center;
@@ -771,6 +773,7 @@ footer {
         display: flex;
         flex-direction: column;
         grid-template-columns: repeat(auto-fill, minmax(1, 1fr));
+        max-width: 400px;
         align-items: center;
         gap: 10px;
     }
@@ -831,7 +834,7 @@ footer {
     .dropdown-item p {
         flex: 1;
         margin: 0;
-        font-size: 12px;
+        font-size: 14px;
         text-align: left;
     }
 
