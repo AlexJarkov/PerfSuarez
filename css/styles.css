@@ -756,7 +756,7 @@ footer {
 
     .marca-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         justify-content: center;
     }
@@ -767,6 +767,7 @@ footer {
         width: 100%;
         max-width: 100%;
         gap: 10px;
+        align-items: center;
     }
 
     .combo-container {
@@ -799,9 +800,11 @@ footer {
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        padding: 10px;
+        padding: 5px;
         z-index: 1000;
         width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 500px;
         max-height: 300px;
         overflow-y: auto;
     }
@@ -809,11 +812,13 @@ footer {
     .dropdown.show {
         display: block;
         grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
     }
 
     .dropdown-item {
         display: flex;
         align-items: center;
+        max-width: 100px;
         width: 100%;
         padding: 10px;
         background-color: #f9f9f9;
