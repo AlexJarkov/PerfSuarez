@@ -22,6 +22,14 @@
         <section id="combos-personalizados">
             <div class="container">
                 <h2>Combos Personalizados</h2>
+                <div class="filter-select">
+                    <label for="combo-type">Selecciona el tipo de combo:</label>
+                    <select id="combo-type" onchange="toggleComboType(this.value)">
+                        <option value="perfumes">Perfumes Completos</option>
+                        <option value="decants-3">Set de 3 Decants</option>
+                        <option value="decants-5">Set de 5 Decants</option>
+                    </select>
+                </div>
                 <div class="combo-container">
                     <div class="combo-item">
                         <div class="combo-selection">
@@ -60,7 +68,7 @@
                         <div class="combo-selection">
                             <img src="imagenes/depositphotos_82350542-stock-photo-beautiful-gold-present-box-with.jpg"
                                 alt="Regalo" id="gift-image">
-                                <h3>Regalo</h3>
+                            <h3>Regalo</h3>
                             <p id="gift-name"></p>
                             <button class="dropdown-toggle" data-category="gift"
                                 onclick="toggleDropdown('gift')">Seleccionar Regalo</button>
@@ -83,6 +91,32 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            function toggleComboType(comboType) {
+                const perfumeCombo = document.getElementById('perfume-combo');
+                const decantCombo = document.getElementById('decant-combo');
+
+                if (comboType === 'perfumes') {
+                    perfumeCombo.style.display = 'block';
+                    decantCombo.style.display = 'none';
+                } else {
+                    perfumeCombo.style.display = 'none';
+                    decantCombo.style.display = 'block';
+                    populateDecantDropdown(comboType);
+                }
+            }
+
+            function populateDecantDropdown(comboType) {
+                // Lógica para poblar los decants según el tipo seleccionado (3 o 5 decants)
+                const dropdown = document.getElementById('decant-combo');
+                dropdown.innerHTML = ''; // Limpiar la lista anterior de decants
+
+                // Dependiendo del valor de comboType, se mostrarán diferentes opciones de decants
+                if (comboType === 'decants-3') {
+                    // Aquí iría el código para mostrar los 3 decants
+                } else if (comboType === 'decants-5') {
+                    // Aquí iría el código para mostrar los 5 decants
+                }
+            }
             const whatsappLink = document.getElementById('whatsapp-link');
 
             const perfumes = {
@@ -90,7 +124,7 @@
                     { name: 'K By Dolce&Gabbana EDT 100ml', image: 'imagenes/fotos-catalogo/d&g/30494500000.png', price: 110, discountedPrice: 87 },
                     { name: 'K By Dolce&Gabbana EDT 200ml', image: 'imagenes/fotos-catalogo/d&g/30494500000.png', price: 160, discountedPrice: 122 },
                     { name: 'Q By Dolce&Gabbana EDP 100ml', image: 'imagenes/fotos-catalogo/d&g/8057971187829_G.jpg', price: 150, discountedPrice: 115 },
-                    { name: 'Versace Pour Homme Dylan Blue EDT 100ml', image: 'imagenes/fotos-catalogo/versace/Untitled.png', price: 114 , discountedPrice: 93 },
+                    { name: 'Versace Pour Homme Dylan Blue EDT 100ml', image: 'imagenes/fotos-catalogo/versace/Untitled.png', price: 114, discountedPrice: 93 },
                     { name: 'Montblanc Explorer Ultra Blue EDP 100ml', image: 'imagenes/fotos-catalogo/mntblanc/DECANdasdas.png', price: 104, discountedPrice: 89 },
                     { name: 'Lattafa Asad Zanzibar EDP 100ml', image: 'imagenes/fotos-catalogo/arabes/ASAD-ZANZIBAR-1.jpg', price: 82, discountedPrice: 77 },
                     { name: 'Carolina Herrera 212 Heroes Man EDT 90ml', image: 'imagenes/fotos-catalogo/ch/Untitled-2.jpg', price: 104, discountedPrice: 92 },
@@ -207,10 +241,15 @@
             }
 
 
+            // Definimos la tasa de conversión de USD a Bolivianos
+            const USD_TO_BOLIVIANOS = 6.96; // Ajusta esta tasa según sea necesario
+
             function updateTotal() {
                 let total = 0;
                 let originalTotal = 0;
                 let selectedCount = 0;
+                const comboType = document.getElementById('combo-type').value; // Detectar el tipo de combo seleccionado
+
                 ['daily', 'formal', 'party', 'gift'].forEach(category => {
                     const selectElement = document.getElementById(`${category}-perfume`);
                     if (selectElement && selectElement.options.length > 0) {
@@ -226,8 +265,17 @@
                 });
 
                 const savings = originalTotal - total;
-                document.getElementById('total-price').innerText = total.toFixed(2);
-                document.getElementById('savings').innerText = `Estás ahorrando: $${savings.toFixed(2)}`;
+
+                // Convertir el total a Bolivianos si se seleccionó un combo de decants
+                if (comboType === 'decants-3' || comboType === 'decants-5') {
+                    total = total * USD_TO_BOLIVIANOS;
+                    document.getElementById('total-price').innerText = total.toFixed(2) + ' BOB';
+                    document.getElementById('savings').innerText = `Estás ahorrando: ${(savings * USD_TO_BOLIVIANOS).toFixed(2)} BOB`;
+                } else {
+                    document.getElementById('total-price').innerText = total.toFixed(2) + ' USD';
+                    document.getElementById('savings').innerText = `Estás ahorrando: $${savings.toFixed(2)}`;
+                }
+
                 whatsappCount(selectedCount, total);
             }
 
