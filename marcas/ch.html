@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Carolina Herrera</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Carolina Herrera">
+    <meta property="og:description" content="Descubre nuestros perfumes de Carolina Herrera.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/ch.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Carolina Herrera</h2>
+            </div>
+            <div class="filter-select">
+                <label for="perfume-filter">Filtrar perfumes:</label>
+                <select id="perfume-filter" onchange="filterPerfumes(this.value)">
+                    <option value="all">Mostrar todos los perfumes</option>
+                    <option value="hombre">Mostrar perfumes de hombre</option>
+                    <option value="mujer">Mostrar perfumes de mujer</option>
+                </select>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Bad Boy Le Parfum" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled.png" alt="Bad Boy Le Parfum" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Bad Boy Le Parfum</p>
+                    <p>100 <strong>ml - </strong>118$</p>
+                    <p>150 <strong>ml - </strong>148$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Bad Boy Cobalt EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled-1.png" alt="Bad Boy Cobalt EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Bad Boy Cobalt Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>112$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Bad Boy Cobalt Elixir" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\1010-65198208_1200x.webp" alt="Bad Boy Cobalt Elixir" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Bad Boy Cobalt Elixir</p>
+                    <p>100 <strong>ml - </strong>115$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Bad Boy Extreme" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled.jpg" alt="Bad Boy Extreme" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Bad Boy Extreme</p>
+                    <p>100 <strong>ml - </strong>118$</p>
+                    <p>150 <strong>ml - </strong>148$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Bad Boy EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled-1.jpg" alt="Bad Boy EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Bad Boy Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>107$</p>
+                    <p>150 <strong>ml - </strong>134$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="212 VIP EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled-3.png" alt="212 VIP EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>212 VIP Eau De Toilette</p>
+                    <p>200 <strong>ml - </strong>142$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="212 Heroes EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled-2.jpg" alt="212 Heroes EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>212 Heroes Eau De Toilette</p>
+                    <p>90 <strong>ml - </strong>104$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="CH Men EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled-4.png" alt="CH Men EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>CH Men Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>100$</p>
+                    <p>200 <strong>ml - </strong>157$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="CH Men Pasion" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ch\DECANT-Recuperado.png" alt="CH Men Pasion" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>CH Men Pasion</p>
+                    <p>100 <strong>ml - </strong>110$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="212 Vip Rosé Fit For Friends" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ch\CAROLINAHERRERA_212VIPROSE_FITFORFRIENDS_LIMITEDEDITION.webp" alt="212 Vip Rosé Fit For Friends" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>212 Vip Rosé Fit For Friends</p>
+                    <p>80 <strong>ml - </strong>105$</p>
+                </div>
+
+                <div class="perfume" data-brand="Carolina Herrera" data-name="212 Vip Rosé Elixir" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ch\carolina-herrera-212-vip-rose-elixir-edp-80ml.jpg" alt="212 Vip Rosé Elixir" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>212 Vip Rosé Elixir</p>
+                    <p>80 <strong>ml - </strong>132$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Very Good Girl EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled-8.png" alt="Very Good Girl EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Very Good Girl Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>124$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Very Good Girl Glam EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ch\Untitled-3.jpg" alt="Very Good Girl Glam EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Very Good Girl Glam Eau De Parfum</p>
+                    <p>80 <strong>ml - </strong>144$</p>
+                </div>
+
+                <div class="perfume" data-brand="Carolina Herrera" data-name="Good Girl Blush Elixir" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ch\SCH-40215_65198197_GG-BLUSH-ELIXIR-EDP-80ML.webp" alt="Good Girl Blush Elixir" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Carolina Herrera</strong></h3>
+                    <p>Good Girl Blush Elixir</p>
+                    <p>80 <strong>ml - </strong>160$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+
+            // Aplica el efecto fade-out
+            perfumes.forEach(perfume => {
+                perfume.classList.add('fade-out'); // Inicia el fade-out
+            });
+
+            // Usa un temporizador para esperar a que la animación fade-out termine
+            setTimeout(() => {
+                perfumes.forEach(perfume => {
+                    // Oculta o muestra según la categoría
+                    if (category === 'all' || perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block'; // Asegura que se muestre
+                        perfume.classList.remove('fade-out'); // Elimina fade-out
+                        perfume.classList.add('fade-in'); // Añade fade-in
+                    } else {
+                        perfume.style.display = 'none'; // Oculta si no coincide
+                    }
+                });
+            }, 500); // Ajustado para coincidir con la duración de la transición
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html"></div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>
