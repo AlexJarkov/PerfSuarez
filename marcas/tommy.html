@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Tommy Hilfiger</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Tommy Hilfiger">
+    <meta property="og:description" content="Descubre nuestros perfumes de Tommy Hilfiger.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/tommy.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Tommy Hilfiger</h2>
+            </div>
+            <div class="filter-select">
+                <label for="perfume-filter">Filtrar perfumes:</label>
+                <select id="perfume-filter" onchange="filterPerfumes(this.value)">
+                    <option value="all">Mostrar todos los perfumes</option>
+                    <option value="hombre">Mostrar perfumes de hombre</option>
+                    <option value="mujer">Mostrar perfumes de mujer</option>
+                </select>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Tommy Hilfiger" data-name="Tommy EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\tommy\269202_Tommy_Classic_Boy_p.webp" alt="Tommy EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Tommy Hilfiger</strong></h3>
+                    <p>Tommy Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>61$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Tommy Hilfiger" data-name="Tommy Girl EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\tommy\tommy-girl-edt-pr.webp" alt="Tommy Girl EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Tommy Hilfiger</strong></h3>
+                    <p>Tommy Girl Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>61$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Tommy Hilfiger" data-name="Tommy Now EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\tommy\tommy-now-tommy-hilfiger.webp" alt="Tommy Now EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Tommy Hilfiger</strong></h3>
+                    <p>Tommy Now Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>54$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Tommy Hilfiger" data-name="TH Impact EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\tommy\Untitled.jpg" alt="TH Impact EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Tommy Hilfiger</strong></h3>
+                    <p>TH Impact Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>80$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Tommy Hilfiger" data-name="TH Impact Spark EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\tommy\impact-spark-eau-de-toilette.webp" alt="TH Impact Spark EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Tommy Hilfiger</strong></h3>
+                    <p>TH Impact Spark Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>75$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Tommy Hilfiger" data-name="TH Impact Intense EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\tommy\tommy-impact-intense-pr-of-1.webp" alt="TH Impact Intense EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Tommy Hilfiger</strong></h3>
+                    <p>TH Impact Intense Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>88$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+
+            // Aplica el efecto fade-out
+            perfumes.forEach(perfume => {
+                perfume.classList.add('fade-out'); // Inicia el fade-out
+            });
+
+            // Usa un temporizador para esperar a que la animación fade-out termine
+            setTimeout(() => {
+                perfumes.forEach(perfume => {
+                    // Oculta o muestra según la categoría
+                    if (category === 'all' || perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block'; // Asegura que se muestre
+                        perfume.classList.remove('fade-out'); // Elimina fade-out
+                        perfume.classList.add('fade-in'); // Añade fade-in
+                    } else {
+                        perfume.style.display = 'none'; // Oculta si no coincide
+                    }
+                });
+            }, 500); // Ajustado para coincidir con la duración de la transición
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html"></div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>
