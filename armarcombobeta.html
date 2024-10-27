@@ -316,29 +316,27 @@
             };
 
             function toggleComboType() {
-    const comboType = comboTypeSelect.value;
+                const comboType = comboTypeSelect.value;
 
-    // Restablecer el precio total a cero
-    document.getElementById('total-price').innerText = '0.00';
-    document.getElementById('savings').innerText = 'Estás ahorrando: $0.00';
+                // Restablecer el precio total a cero
+                document.getElementById('total-price').innerText = '0.00';
+                document.getElementById('savings').innerText = 'Estás ahorrando: $0.00';
 
-    // Mostrar u ocultar el selector de cantidad de decants según el tipo de combo
-    if (comboType === 'decants') {
-        console.log("Mostrando selector de decants");
-        decantQuantityContainer.classList.remove('hidden'); // Mostrar el selector de decants
-        currentCurrency = 'bs'; // Cambiar moneda a bolivianos
-    } else if (comboType === 'perfumes') {
-        console.log("Ocultando selector de decants");
-        decantQuantityContainer.classList.add('hidden'); // Ocultar el selector de decants
-        currentCurrency = 'usd'; // Cambiar moneda a dólares
-    }
+                // Mostrar u ocultar el selector de cantidad de decants según el tipo de combo
+                if (comboType === 'decants') {
+                    console.log("Mostrando selector de decants");
+                    decantQuantityContainer.classList.remove('hidden'); // Mostrar el selector de decants
+                    currentCurrency = 'bs'; // Cambiar moneda a bolivianos
+                } else if (comboType === 'perfumes') {
+                    console.log("Ocultando selector de decants");
+                    decantQuantityContainer.classList.add('hidden'); // Ocultar el selector de decants
+                    currentCurrency = 'usd'; // Cambiar moneda a dólares
+                }
 
-    // Actualizar la interfaz para reflejar la selección actual
-    populateComboItems();
-    updateTotal();
-}
-
-
+                // Actualizar la interfaz para reflejar la selección actual
+                populateComboItems();
+                updateTotal();
+            }
 
             function populateComboItems() {
                 // Limpiar el contenedor para evitar duplicados
@@ -355,18 +353,23 @@
 
                 // Crear los elementos de acuerdo con la cantidad seleccionada
                 for (let i = 0; i < count; i++) {
+                    console.log(`Creando el elemento del combo ${i + 1} de tipo ${comboType}`);
                     const comboItem = createComboItem(comboType, i);
                     comboItemsContainer.appendChild(comboItem);
                 }
 
                 // Añadir el regalo solo si el combo es de perfumes completos
                 if (comboType === 'perfumes') {
+                    console.log("Añadiendo el regalo al combo de perfumes completos");
                     const giftItem = createGiftItem();
                     comboItemsContainer.appendChild(giftItem);
                 }
             }
 
+
+
             function createGiftItem() {
+                console.log("Creando el contenedor de regalo...");
                 const giftItem = document.createElement('div');
                 giftItem.className = 'combo-item';
 
@@ -405,6 +408,8 @@
 
                 return giftItem;
             }
+
+
 
 
             function createComboItem(category, index) {
