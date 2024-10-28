@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>DKNY</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Donna Karan New York">
+    <meta property="og:description" content="Descubre nuestros perfumes de DKNY.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/dkny.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Donna Karan New York</h2>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Donna Karan New York" data-name="Be Delicious EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\dkny\Untitled.jpg" alt="Be Delicious EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Donna Karan New York</strong></h3>
+                    <p>Be Delicious Eau De Parfum</p>
+                    <p>50 <strong>ml - </strong>78$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Donna Karan New York" data-name="Nectar Love EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\dkny\Copia de Untitled.jpg" alt="Nectar Love EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Donna Karan New York</strong></h3>
+                    <p>Nectar Love Eau De Parfum</p>
+                    <p>50 <strong>ml - </strong>81$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Donna Karan New York" data-name="Stories EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\dkny\Untitled-2.jpg" alt="Stories EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Donna Karan New York</strong></h3>
+                    <p>Stories Eau De Toilette</p>
+                    <p>100 <strong>ml - </strong>91$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html"></div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>
