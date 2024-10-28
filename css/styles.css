@@ -1,0 +1,1125 @@
+@import url('font.css');
+
+.hidden {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    top: 0;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    border-radius: 20%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 0 15px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0071e3;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    flex-direction: row;
+    transition: max-height 0.5s ease-out;
+}
+
+.menu-item {
+    margin: 0 15px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    margin-top: 80px;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    z-index: 998;
+}
+
+#overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#combos {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.title h2 {
+    margin-bottom: 20px;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+#perfumes {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    max-width: 1400px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#perfumes .perfume {
+    background-color: #f5f5f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#perfumes .perfume.fade-out {
+    opacity: 0;
+}
+
+#perfumes .perfume:hover {
+    transform: scale(1.05); /* Aumenta el tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    background-color: #ffffff; /* Cambia el color de fondo */
+}
+
+#perfumes .perfume img {
+    max-width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Efecto de hover en la imagen */
+}
+
+#perfumes .perfume:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al hacer hover */
+}
+
+/* Configuración del grid */
+.perfume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .perfume-grid {
+        grid-template-columns: repeat(2, 1fr); /* Fuerza dos columnas */
+        gap: 10px; /* Reduce el espacio entre los elementos si es necesario */
+    }
+
+    #perfumes .perfume img {
+        height: 150px;
+    }
+}
+
+
+
+.combo {
+    background-color: #f5f5f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.combo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.combo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.combo h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+#decants {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    max-width: 1400px; /* Define un ancho máximo para el contenedor */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
+}
+
+#decants .decant {
+    background-color: #f5f5f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#decants.fade-out .decant {
+    opacity: 0;
+}
+
+#decants .decant:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    background-color: #ffffff; /* Cambia el fondo */
+}
+
+#decants .decant img {
+    max-width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Efecto de hover en la imagen */
+}
+
+#decants .decant:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al hacer hover */
+}
+
+/* Configuración del grid */
+.decant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .decant-grid {
+        grid-template-columns: repeat(2, 1fr); /* Fuerza dos columnas */
+        gap: 10px; /* Reduce el espacio entre los elementos si es necesario */
+    }
+
+    #decants .decant img {
+        height: 150px;
+    }
+}
+
+
+.etiquetas {
+    margin-top: 10px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.mas-vendidos {
+    background-color: #28a745;
+}
+
+.en-tendencias {
+    background-color: #17a2b8;
+}
+
+.fuera-de-stock {
+    background-color: #dc3545;
+}
+
+.novedad {
+    background-color: #ffc107;
+}
+
+#sobre-nosotros {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.integrante {
+    background-color: #f5f5f7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.integrante h3 {
+    margin-top: 0;
+}
+
+#contacto {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contacto-info {
+    margin-top: 20px;
+}
+
+.boton-red-social {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #0071e3;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.boton-red-social:hover {
+    background-color: #005bb5;
+}
+
+.boton-red-social img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #25d366;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #1ebe5b;
+}
+
+.marca-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.marca {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.marca:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.marca a {
+    text-decoration: none;
+    color: #333;
+}
+
+.marca-image-container {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.marca-image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.marca h3 {
+    margin: 10px 0 0;
+}
+
+.marca img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+    color: #0071e3;
+}
+
+#combos-personalizados .container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    /* Ajustado para compensar el header fijo */
+    text-align: center;
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+}
+
+.combo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1600px;
+}
+
+.combo-item {
+    flex: 1 1 calc(25% - 10px);
+    /* Ajusta el tamaño de cada casilla */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.combo-selection {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Grid container for dropdown items */
+.combo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for the dropdowns */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+}
+
+.combo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.combo-selection {
+    position: relative;
+    width: 100%;
+}
+
+.combo-selection img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los nombres de los perfumes */
+.combo-selection p {
+    margin: 10px 0;
+    font-size: 16px;
+    min-height: 40px;
+    max-width: 400px;
+    /* Ajusta la altura mínima según sea necesario */
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    /* Esconder el desbordamiento de texto */
+    text-overflow: ellipsis;
+    /* Añadir puntos suspensivos al texto largo */
+}
+
+.dropdown-toggle {
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-toggle:hover {
+    background-color: #005bb5;
+}
+
+/* Estilo para el dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+    max-height: 300px;
+    width: fixed;
+    overflow-y: auto;
+}
+
+.dropdown.show {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Estilo para los items dentro del dropdown */
+.dropdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 120px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.dropdown-item p {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background-color: #e0e0e0;
+}
+
+.combo-selection img {
+    width: 200px;
+    /* Ajusta según sea necesario */
+    height: 200px;
+    /* Ajusta según sea necesario */
+    object-fit: cover;
+    /* Asegura que las imágenes se ajusten al tamaño del contenedor */
+}
+
+.combo-selection select {
+    width: 100%;
+    /* Ajustar según sea necesario */
+    padding: 10px;
+    /* Ajustar según sea necesario */
+    margin-top: 10px;
+    /* Ajustar según sea necesario */
+}
+
+.combo-selection select:focus {
+    border-color: #0071e3;
+    box-shadow: 0 0 5px rgba(0, 113, 227, 0.5);
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        max-height: 300px;
+    }
+
+    .menu-item {
+        margin: 10px 0;
+    }
+
+    .marca-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+    }
+
+    #combos-personalizados .container {
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .combo-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .combo-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .combo-selection {
+        width: 100%;
+        text-align: center;
+    }
+
+    .combo-selection img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 5px;
+        z-index: 1000;
+        width: 100%;
+        max-width: fit-content;
+        max-height: 350px;
+        overflow-y: auto;
+        gap: 10px;
+    }
+
+    .dropdown.show {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        max-width: 100px;
+        width: 100%;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 5px;
+    }
+
+    .dropdown-item img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 10px;
+    }
+
+    .dropdown-item p {
+        flex: 1;
+        margin: 0;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .dropdown-item:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+.extras {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.extras h3 {
+    margin-bottom: 10px;
+}
+
+.extras label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#savings {
+    color: green;
+    font-weight: bold;
+}
+
+.total {
+    margin-top: 20px;
+}
+
+#whatsapp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Puedes usar center, flex-start, flex-end según tus necesidades */
+    gap: 10px; /* Espaciado entre los botones */
+    margin-top: 20px;
+}
+
+
+.whatsapp-button {
+    margin-top: 20px;
+}
+
+.whatsapp-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button a.disabled {
+    background-color: #cccccc;
+    pointer-events: none;
+}
+
+.whatsapp-button a:hover:not(.disabled) {
+    background-color: #1ebe5b;
+}
+
+.tiktok-profile {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    /* Aumenta el tamaño máximo */
+    min-width: 1000px;
+    margin-top: 60px;
+    /* Ajustar para acercar la caja al header */
+}
+
+@media (max-width: 768px) {
+    .tiktok-profile {
+        display: none;
+    }
+}
+
+.tiktok-profile h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tiktok-profile .follow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0050;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.tiktok-profile .follow-button:hover {
+    background-color: #e60045;
+}
+
+.tiktok-embed {
+    width: 100%;
+    /* Asegúrate de que ocupe todo el ancho disponible */
+    min-height: 300px;
+    /* Ajusta la altura mínima para que sea más grande */
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #0071e3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #005bb5;
+}
+
+/* Carrusel */
+#carousel {
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+    
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.6s ease-in-out; /* Transición más suave */
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+    
+}
+
+.carousel-content {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Tamaño fijo del contenedor */
+}
+
+.carousel-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    border-radius: 15px; /* Bordes redondeados */
+    filter: brightness(0.85); /* Aplica un pequeño oscurecimiento a la imagen */
+    transition: transform 0.6s ease; /* Transición suave en la imagen */
+}
+
+.carousel-content img:hover {
+    transform: scale(1.05); /* Zoom suave al hacer hover */
+    border-radius: 15px;
+}
+
+.carousel-text1 {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra al texto para mayor visibilidad */
+}
+
+.carousel-text2 {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra al texto para mayor visibilidad */
+}
+
+#carousel .prev, #carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+#carousel .prev {
+    left: 10px;
+}
+
+#carousel .next {
+    right: 10px;
+}
+
+/* Botones de navegación */
+#buttons-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-button {
+    background-color: #0071e3;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #005bb5;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+}
+
+.search-button {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+#perfume-results,
+#decant-results {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.filter-select, .combo-type-selection, .decant-quantity-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#decant-filter, #perfume-filter, #combo-type, #decant-quantity {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
