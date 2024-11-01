@@ -1123,3 +1123,31 @@ footer {
     font-size: 16px;
     border: 1px solid #ccc;
 }
+
+/* Estilos para el contenedor del filtro de stock */
+.stock-filter, .new-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido */
+    gap: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Estilos para el checkbox tradicional */
+#stock-filter, #new-filter {
+    width: 24px; /* Aumenta el tamaño del checkbox */
+    height: 24px;
+    cursor: pointer;
+    accent-color: #007bff; /* Cambia el color del checkbox */
+}
+
+/* Estilos del texto */
+.stock-filter, .new-filter label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
