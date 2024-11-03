@@ -1124,6 +1124,19 @@ footer {
     border: 1px solid #ccc;
 }
 
+.search-filter {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#decant-search {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
 /* Estilos para el contenedor del filtro de stock */
 .stock-filter, .new-filter {
     display: flex;

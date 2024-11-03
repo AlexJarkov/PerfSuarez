@@ -22,6 +22,11 @@
         <section id="decants">
             <div class="title">
                 <h2>Decants</h2>
+                <div class="search-filter">
+                    <label for="decant-search">Buscar decants:</label>
+                    <input type="text" id="decant-search" placeholder="Introduce el nombre del decant"
+                        oninput="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
                 <div class="filter-select">
                     <label for="decant-filter">Filtrar decants:</label>
                     <select id="decant-filter" onchange="filterPerfumes(this.value)">
@@ -42,6 +47,9 @@
                     <label for="new-filter">Mostrar solo decants nuevos:</label>
                     <input type="checkbox" id="new-filter"
                         onchange="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
+                    <p>Perdón pariente... No tenemos decants que coincidan con tu búsqueda :(</p>
                 </div>
                 <div class="perfume-grid">
                     <div class="decant" data-name="Orto Parisi Megamare" data-tags="hombre nicho">
@@ -1108,32 +1116,41 @@
     <script>
         function filterPerfumes(filter) {
             const decantsContainer = document.getElementById('decants');
-            const stockFilter = document.getElementById('stock-filter').checked; // Lee el estado del checkbox de disponibilidad
-            const newFilter = document.getElementById('new-filter').checked; // Lee el estado del checkbox de novedades
+            const stockFilter = document.getElementById('stock-filter').checked;
+            const newFilter = document.getElementById('new-filter').checked;
+            const searchQuery = document.getElementById('decant-search').value.toLowerCase();
+            const noResultsMessage = document.getElementById('no-results-message');
 
-            // Añade clase para aplicar el fade-out
             decantsContainer.classList.add('fade-out');
 
-            // Temporizador para el efecto fade-out
             setTimeout(() => {
                 const decants = document.querySelectorAll('.decant');
+                let visibleCount = 0; // Contador de decants visibles
+
                 decants.forEach(decant => {
                     const isOutOfStock = decant.querySelector('.etiqueta.fuera-de-stock') !== null;
                     const isNew = decant.querySelector('.etiqueta.novedad') !== null;
                     const matchesFilter = filter === 'all' || decant.getAttribute('data-tags').includes(filter);
+                    const name = decant.getAttribute('data-name').toLowerCase();
 
-                    // Verifica si el perfume debe mostrarse en base a los filtros seleccionados
                     const shouldShow = matchesFilter &&
                         (!stockFilter || !isOutOfStock) &&
-                        (!newFilter || isNew);
+                        (!newFilter || isNew) &&
+                        (searchQuery === '' || name.includes(searchQuery));
 
                     decant.style.display = shouldShow ? 'block' : 'none';
+
+                    if (shouldShow) visibleCount++; // Aumenta el contador si el decant es visible
                 });
 
-                // Elimina la clase fade-out para restaurar la opacidad
+                // Mostrar mensaje de "sin resultados" si no hay decants visibles
+                noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+
                 decantsContainer.classList.remove('fade-out');
-            }, 500); // Ajustado para que coincida con la duración de la transición
+            }, 500);
         }
+
+
 
         function sendToWhatsApp(name) {
             const whatsappNumber = "78064327";
