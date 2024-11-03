@@ -1120,6 +1120,8 @@ footer {
 #decant-filter, #perfume-filter, #combo-type, #decant-quantity {
     padding: 10px;
     border-radius: 5px;
+    width: 300px;
+    text-overflow: none;
     font-size: 16px;
     border: 1px solid #ccc;
 }
@@ -1134,6 +1136,7 @@ footer {
     border-radius: 5px;
     font-size: 16px;
     border: 1px solid #ccc;
+    text-overflow: none;
     width: 300px;
 }
 
