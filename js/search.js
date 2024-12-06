@@ -20,7 +20,6 @@ const filesToSearch = [
     '../marcas/missoni.html',
     '../marcas/mntblanc.html',
     '../marcas/moncler.html',
-    '../marcas/mosch.html',
     '../marcas/paco.html',
     '../marcas/prl.html',
     '../marcas/tomford.html',
