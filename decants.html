@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Decants</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Decants">
+    <meta property="og:description" content="Descubre nuestro catálogo de decants.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/decants.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="decants">
+            <div class="title">
+                <h2>Decants</h2>
+                <div class="search-filter">
+                    <label for="decant-search">Buscar decants:</label>
+                    <input type="text" id="decant-search" placeholder="Introduce el nombre del decant"
+                        oninput="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div class="filter-select">
+                    <label for="decant-filter">Filtrar decants:</label>
+                    <select id="decant-filter" onchange="filterPerfumes(this.value)">
+                        <option value="all">Mostrar todos los decants</option>
+                        <option value="hombre">Mostrar decants de hombre</option>
+                        <option value="mujer">Mostrar decants de mujer</option>
+                        <option value="unisex">Mostrar decants unisex</option>
+                        <option value="nicho">Mostrar decants de nicho</option>
+                        <option value="arabes">Mostrar decants de Árabes</option>
+                    </select>
+                </div>
+                <div class="stock-filter">
+                    <label for="stock-filter">Ocultar decants fuera de stock:</label>
+                    <input type="checkbox" id="stock-filter"
+                        onchange="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div class="new-filter">
+                    <label for="new-filter">Mostrar solo decants nuevos:</label>
+                    <input type="checkbox" id="new-filter"
+                        onchange="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
+                    <p>Perdón pariente... No tenemos decants que coincidan con tu búsqueda :(</p>
+                </div>
+                <div class="perfume-grid">
+                    <div class="decant" data-name="Orto Parisi Megamare" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\MEGAMARE.JPEG" alt="Orto Parisi Megamare">
+                        <h3><strong>Orto Parisi</strong></h3>
+                        <p>Megamare</p>
+                        <p>5 <strong>ml - </strong>420 Bs</p>
+                        <p>10 <strong>ml - </strong>820 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Louis Vuitton Imagination" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\LV IMAGINATION.JPEG" alt="Louis Vuitton Imagination">
+                        <h3><strong>Louis Vuitton</strong></h3>
+                        <p>Imagination</p>
+                        <p>5 <strong>ml - </strong>420 Bs</p>
+                        <p>10 <strong>ml - </strong>820 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Memo Italian Leather" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\MEMO ITALIAN LEATHER.JPEG" alt="Memo Italian Leather">
+                        <h3><strong>Memo</strong></h3>
+                        <p>Italian Leather</p>
+                        <p>5 <strong>ml - </strong>250 Bs</p>
+                        <p>10 <strong>ml - </strong>480 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Creed Silver Mountain Water" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\CREED SILVER MOUNTAIN WATER.JPEG"
+                            alt="Creed Silver Mountain Water">
+                        <h3><strong>Creed</strong></h3>
+                        <p>Silver Mountain Water</p>
+                        <p>5 <strong>ml - </strong>280 Bs</p>
+                        <p>10 <strong>ml - </strong>540 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Xerjoff Erba Pura" data-tags="hombre unisex nicho mujer">
+                        <img src="imagenes\fotos-decants\hombre\ERBA PURA.JPEG" alt="Xerjoff Erba Pura">
+                        <h3><strong>Xerjoff</strong></h3>
+                        <p>Erba Pura</p>
+                        <p>5 <strong>ml - </strong>230 Bs</p>
+                        <p>10 <strong>ml - </strong>440 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Xerjoff Naxos" data-tags="hombre unisex nicho mujer">
+                        <img src="imagenes\fotos-decants\hombre\NAXOS.png" alt="Xerjoff Naxos">
+                        <h3><strong>Xerjoff</strong></h3>
+                        <p>Naxos</p>
+                        <p>5 <strong>ml - </strong>230 Bs</p>
+                        <p>10 <strong>ml - </strong>440 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Le Labo Santal 33" data-tags="hombre unisex nicho">
+                        <img src="imagenes\fotos-decants\hombre\SANTAL 33.JPEG" alt="Le Labo Santal 33">
+                        <h3><strong>Le Labo</strong></h3>
+                        <p>Santal 33</p>
+                        <p>5 <strong>ml - </strong>230 Bs</p>
+                        <p>10 <strong>ml - </strong>440 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">De regreso en stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Parfums de Marly Layton" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\LAYTON.png" alt="Parfums de Marly Layton">
+                        <h3><strong>Parfums de Marly</strong></h3>
+                        <p>Layton</p>
+                        <p>5 <strong>ml - </strong>190 Bs</p>
+                        <p>10 <strong>ml - </strong>360 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Parfums de Marly Layton Exclusif" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\LAYTON EXCLUSIF.JPEG"
+                            alt="Parfums de Marly Layton Exclusif">
+                        <h3><strong>Parfums de Marly</strong></h3>
+                        <p>Layton Exclusif</p>
+                        <p>5 <strong>ml - </strong>270 Bs</p>
+                        <p>10 <strong>ml - </strong>520 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Parfums de Marly Herod" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\HEROD.JPEG" alt="Parfums de Marly Herod">
+                        <h3><strong>Parfums de Marly</strong></h3>
+                        <p>Herod</p>
+                        <p>5 <strong>ml - </strong>230 Bs</p>
+                        <p>10 <strong>ml - </strong>440 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Parfums de Marly Pegasus" data-tags="hombre nicho">
+                        <img src="imagenes\fotos-decants\hombre\PEGASUS.JPEG" alt="Parfums de Marly Pegasus">
+                        <h3><strong>Parfums de Marly</strong></h3>
+                        <p>Pegasus</p>
+                        <p>5 <strong>ml - </strong>230 Bs</p>
+                        <p>10 <strong>ml - </strong>440 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Mancera Red Tobacco" data-tags="hombre unisex nicho mujer">
+                        <img src="imagenes\fotos-decants\hombre\RED TOBACCO.png" alt="Mancera Red Tobacco">
+                        <h3><strong>Mancera</strong></h3>
+                        <p>Red Tobacco</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">De regreso en stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Mancera Holidays" data-tags="hombre unisex nicho mujer">
+                        <img src="imagenes\fotos-decants\hombre\HOLIDAYS.JPEG" alt="Mancera Holidays">
+                        <h3><strong>Mancera</strong></h3>
+                        <p>Holidays</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Tom Ford Ombré Leather" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\TOM FORD OMBRÉ LEATHER.png"
+                            alt="Tom Ford Ombré Leather">
+                        <h3><strong>Tom Ford</strong></h3>
+                        <p>Ombré Leather</p>
+                        <p>5 <strong>ml - </strong>140 Bs</p>
+                        <p>10 <strong>ml - </strong>260 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Tom Ford Noir Extreme" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\TOM FORD NOIR EXTREME.JPEG" alt="Tom Ford Noir Extreme">
+                        <h3><strong>Tom Ford</strong></h3>
+                        <p>Noir Extreme</p>
+                        <p>5 <strong>ml - </strong>130 Bs</p>
+                        <p>10 <strong>ml - </strong>240 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Tom Ford Bitter Peach" data-tags="unisex mujer">
+                        <img src="imagenes\fotos-decants\mujer\TOM FORD BITTER PEACH.JPEG" alt="Tom Ford Bitter Peach">
+                        <h3><strong>Tom Ford</strong></h3>
+                        <p>Bitter Peach</p>
+                        <p>5 <strong>ml - </strong>360 Bs</p>
+                        <p>10 <strong>ml - </strong>700 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Tom Ford Black Orchid" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\TOM FORD BLACK ORCHID.JPEG" alt="Tom Ford Black Orchid">
+                        <h3><strong>Tom Ford</strong></h3>
+                        <p>Black Orchid</p>
+                        <p>5 <strong>ml - </strong>160 Bs</p>
+                        <p>10 <strong>ml - </strong>300 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Atelier Versace Iris D'Elite" data-tags="hombre unisex mujer">
+                        <img src="imagenes\fotos-decants\hombre\ATELIER.JPEG" alt="Atelier Versace Iris D'Elite">
+                        <h3><strong>Atelier Versace</strong></h3>
+                        <p>Iris D'Elite</p>
+                        <p>5 <strong>ml - </strong>210 Bs</p>
+                        <p>10 <strong>ml - </strong>400 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Atelier Versace Tabac Imperial" data-tags="hombre unisex mujer">
+                        <img src="imagenes\fotos-decants\hombre\ATELIER.JPEG" alt="Atelier Versace Tabac Imperial">
+                        <h3><strong>Atelier Versace</strong></h3>
+                        <p>Tabac Imperial</p>
+                        <p>5 <strong>ml - </strong>210 Bs</p>
+                        <p>10 <strong>ml - </strong>400 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Atelier Versace Figue Blanche" data-tags="hombre unisex mujer">
+                        <img src="imagenes\fotos-decants\hombre\ATELIER.JPEG" alt="Atelier Versace Figue Blanche">
+                        <h3><strong>Atelier Versace</strong></h3>
+                        <p>Figue Blanche</p>
+                        <p>5 <strong>ml - </strong>210 Bs</p>
+                        <p>10 <strong>ml - </strong>400 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Moncler Pour Femme" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\MONCLER POUR FEMME.png" alt="Moncler Pour Femme">
+                        <h3><strong>Moncler</strong></h3>
+                        <p>Pour Femme</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lancôme La Vie Est Belle L'Eau De Parfum" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\LA VIE EST BELLE.JPEG" alt="La Vie Est Belle EDP">
+                        <h3><strong>Lancôme</strong></h3>
+                        <p>La Vie Est Belle L'Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Chanel N°5 EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\CHANEL N5.JPEG" alt="Chanel N°5 EDP">
+                        <h3><strong>Chanel</strong></h3>
+                        <p>N°5 Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Bleu de Chanel EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\BLEU DE CHANEL EDT.JPEG" alt="Bleu De Chanel EDT">
+                        <h3><strong>Chanel</strong></h3>
+                        <p>Bleu de Chanel Eau de Toilette</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Santos de Cartier" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SANTOS DE CARTIER.JPEG" alt="Santos de Cartier">
+                        <h3><strong>Cartier</strong></h3>
+                        <p>Santos de Cartier</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Calvin Klein" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\CK ONE.JPEG" alt="CK One">
+                        <h3><strong>Calvin Klein</strong></h3>
+                        <p>CK One</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Dior Sauvage EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SAUVAGE EDT.JPEG" alt="Dior Sauvage EDT">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Sauvage Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dior Sauvage EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SAUVAGE EDP.png" alt="Dior Sauvage EDP">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Sauvage Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Dior Sauvage Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SAUVAGE PARFUM.JPEG" alt="Dior Sauvage Parfum">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Sauvage Parfum</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Dior Sauvage Eau Forte" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SAUVAGE EAU FORTE.JPEG" alt="Dior Sauvage Eau Forte">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Sauvage Eau Forte</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dior Sauvage Elixir" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SAUVAGE ELIXIR.png" alt="Dior Sauvage Elixir">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Sauvage Elixir</p>
+                        <p>5 <strong>ml - </strong>220 Bs</p>
+                        <p>10 <strong>ml - </strong>420 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Dior Homme Intense" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\DIOR HOMME INTENSE.JPEG" alt="Dior Homme Intense">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Homme Intense</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Miss Dior EDT" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\MISS DIOR.JPEG" alt="Miss Dior EDT">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Miss Dior Eau de Toilette</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Azzaro Wanted EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\WANTED EDT.JPEG" alt="Azzaro Wanted EDT">
+                        <h3><strong>Azzaro</strong></h3>
+                        <p>Wanted EDT</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Azzaro Wanted EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\WANTED EDP.JPEG" alt="Azzaro Wanted EDP">
+                        <h3><strong>Azzaro</strong></h3>
+                        <p>Wanted EDP</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Azzaro Wanted By Night" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\WANTED BY NIGHT.JPEG" alt="Azzaro Wanted By Night">
+                        <h3><strong>Azzaro</strong></h3>
+                        <p>Wanted By Night</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Azzaro The Most Wanted EDP Intense" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\MOST WANTED INTENSE.JPEG"
+                            alt="Azzaro The Most Wanted EDP Intense">
+                        <h3><strong>Azzaro</strong></h3>
+                        <p>The Most Wanted EDP Intense</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani Stronger With You Intensely" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\STRONGER WITH YOU INTENSELY.png"
+                            alt="Giorgio Armani Stronger With You Intensely">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Stronger With You Intensely</p>
+                        <p>5 <strong>ml - </strong>140 Bs</p>
+                        <p>10 <strong>ml - </strong>260 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani Stronger With You Absolutely" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\STRONGER WITH YOU ABSOLUTELY.png"
+                            alt="Giorgio Armani Stronger With You Absolutely">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Stronger With You Absolutely</p>
+                        <p>5 <strong>ml - </strong>140 Bs</p>
+                        <p>10 <strong>ml - </strong>260 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani Acqua Di Gio EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\ACQUA DI GIO EDT.JPEG"
+                            alt="Giorgio Armani Acqua Di Gio EDT">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Acqua Di Gio Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani Acqua Di Gio EDP" data-tags="hombre">
+                        <img src="imagenes/fotos-decants/hombre/ACQUA DI GIO EDP.png"
+                            alt="Giorgio Armani Acqua Di Gio EDT">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Acqua Di Gio Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani Acqua Di Gio Profondo" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\ACQUA DI GIO PROFONDO.png"
+                            alt="Giorgio Armani Acqua Di Gio Profondo">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Acqua Di Gio Profondo</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani Acqua Di Gio Absolu" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\ACQUA DI GIO ABSOLU.JPEG"
+                            alt="Giorgio Armani Acqua Di Gio Absolu">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Acqua Di Gio Absolu</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani My Way EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\MY WAY EDP.JPEG" alt="Giorgio Armani My Way EDP">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>My Way Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Viktor&Rolf Spicebomb EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SPICEBOMB EDT.JPEG" alt="Viktor&Rolf Spicebomb Extreme">
+                        <h3><strong>Viktor&Rolf</strong></h3>
+                        <p>Spicebomb Eau de Toilette</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Viktor&Rolf Spicebomb Extreme" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SPICEBOMB extreme.png"
+                            alt="Viktor&Rolf Spicebomb Extreme">
+                        <h3><strong>Viktor&Rolf</strong></h3>
+                        <p>Spicebomb Extreme</p>
+                        <p>5 <strong>ml - </strong>160 Bs</p>
+                        <p>10 <strong>ml - </strong>300 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent Y EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\Y EDT.JPEG" alt="Yves Saint Laurent Y EDT">
+                        <h3><strong>Yves Saint Laurent</strong></h3>
+                        <p>Y Eau de Toilette</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent Y EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\YSL Y EDP.JPEG" alt="Yves Saint Laurent Y EDP">
+                        <h3><strong>Yves Saint Laurent</strong></h3>
+                        <p>Y Eau de Parfum</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent MYSLF EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\MYSLF.JPEG" alt="Yves Saint Laurent MYSLF EDP">
+                        <h3><strong>Yves Saint Laurent</strong></h3>
+                        <p>MYSLF Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent Mon Paris" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\MON PARIS.JPEG" alt="Yves Saint Laurent Mon Paris">
+                        <h3><strong>Yves Saint Laurent</strong></h3>
+                        <p>Mon Paris</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent Black Opium Intense" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\BLACK OPIUM INTENSE.JPEG"
+                            alt="Yves Saint Laurent Black Opium Intense">
+                        <h3><strong>Yves Saint Laurent</strong></h3>
+                        <p>Black Opium Intense</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent Libre EDT" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\YVES LIBRE.png" alt="Yves Saint Laurent Libre EDT">
+                        <h3><strong>Yves Saint Laurent</strong></h3>
+                        <p>Libre Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent Libre L'Absolu Platine" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\LIBRE L'ABSOLU PLATINE.JPEG"
+                            alt="Yves Saint Laurent Libre L'Absolu Platine">
+                        <h3><strong>Yves Saint Laurent</strong></h3>
+                        <p>Libre L'Absolu Platine Parfum</p>
+                        <p>5 <strong>ml - </strong>170 Bs</p>
+                        <p>10 <strong>ml - </strong>320 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Valentino Born In Roma Green Stravaganza" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\VALENTINO GREEN STRAVAGANZA.JPEG"
+                            alt="Valentino Born In Roma Green Stravaganza">
+                        <h3><strong>Valentino</strong></h3>
+                        <p>Born In Roma Green Stravaganza</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Bvlgari Man In Black EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\MAN IN BLACK.JPEG" alt="Bvlgari Man In Black">
+                        <h3><strong>Bvlgari</strong></h3>
+                        <p>Man In Black Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana The One Pour Homme EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\D&G THE ONE.JPEG"
+                            alt="Dolce&Gabbana The One Pour Homme EDP">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>The One Pour Homme Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana Pour Homme EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\D&G POUR HOMME.JPEG" alt="Dolce&Gabbana Pour Homme EDT">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>Pour Homme Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana The One Pour Homme Gold" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\THE ONE GOLD.JPEG"
+                            alt="Dolce&Gabbana The One Pour Homme Gold">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>The One Pour Homme Gold</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana K By D&G EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\DOLCE GABBANA K.png" alt="Dolce&Gabbana K By D&G EDT">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>K By D&G Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana K By D&G EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\K EDP.JPEG" alt="Dolce&Gabbana K By D&G EDP">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>K By D&G Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana Light Blue Pour Homme" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LIGHT BLUE POUR HOMME.png"
+                            alt="Dolce&Gabbana Light Blue Pour Homme">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>Light Blue Pour Homme</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana The One" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\THE ONE LADY.png" alt="Dolce&Gabbana The One">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>The One</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana Light Blue" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\POUR FEMME.png" alt="Dolce&Gabbana Light Blue">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>Light Blue</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana Q By D&G EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\Q.png" alt="Dolce&Gabbana Q By D&G EDP">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>Q By D&G Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Moschino Fresh Couture" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\FRESH COUTURE.JPEG" alt="Moschino Fresh Couture">
+                        <h3><strong>Moschino</strong></h3>
+                        <p>Fresh Couture</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Moschino Toy Boy" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\MOSCHINO TOY BOY.png" alt="Moschino Toy Boy">
+                        <h3><strong>Moschino</strong></h3>
+                        <p>Toy Boy</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Versace Eros Flame" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\EROS FLAME.png" alt="Versace Eros Flame">
+                        <h3><strong>Versace</strong></h3>
+                        <p>Eros Flame</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Versace Pour Homme Dylan Blue" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\DYLAN BLUE.JPEG" alt="Versace Pour Homme Dylan Blue">
+                        <h3><strong>Versace</strong></h3>
+                        <p>Pour Homme Dylan Blue</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Versace Pour Homme EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\VERSACE POUR HOMME.JPEG" alt="Versace Pour Homme EDT">
+                        <h3><strong>Versace</strong></h3>
+                        <p>Pour Homme Eau de Toilette</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Adolfo Domínguez Aguafresca Citrus Cedro" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\CITRUS CEDRO.JPEG"
+                            alt="Adolfo Domínguez Aguafresca Citrus Cedro">
+                        <h3><strong>Adolfo Domínguez</strong></h3>
+                        <p>Aguafresca Citrus Cedro</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Pour Homme EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SCANDALL.png" alt="Jean Paul Gaultier Scandal Pour Homme EDT">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Scandal Pour Homme Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Pour Homme Absolu" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\SCANDAL ABSOLU.JPEG"
+                            alt="Jean Paul Gaultier Scandal Pour Homme Absolu">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Scandal Pour Homme Absolu</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Absolu" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\SCANDAL ABSOLU.JPEG"
+                            alt="Jean Paul Gaultier Scandal Absolu">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Scandal Absolu</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Beau Le Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LE BEAU LE PARFUM.png"
+                            alt="Jean Paul Gaultier Le Beau Le Parfum">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Le Beau Le Parfum</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Beau EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LE BEAU.JPEG" alt="Jean Paul Gaultier Le Beau EDT">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Le Beau Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Beau Paradise Garden" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LE BEAU PARADISE GARDEN.png"
+                            alt="Jean Paul Gaultier Le Beau Paradise Garden">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Le Beau Paradise Garden</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Male Lover" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LE MALE LOVER.png"
+                            alt="Jean Paul Gaultier Le Male Lover">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Le Male Lover</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Male Elixir" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LE MALE ELIXIR PARFUM.png"
+                            alt="Jean Paul Gaultier Le Male Elixir">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Le Male Elixir</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Male Le Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LE MALE LE PARFUM.png"
+                            alt="Jean Paul Gaultier Le Male Le Parfum">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Le Male Le Parfum</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier La Belle EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\LA BELLE.jpeg" alt="Jean Paul Gaultier La Belle EDP">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>La Belle Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier La Belle Paradise Garden" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\LA BELLE PARADISE GARDEN.JPEG"
+                            alt="Jean Paul Gaultier La Belle Paradise Garden">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>La Belle Paradise Garden</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Gaultier Divine" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\JEAN PAUL DIVINE.png"
+                            alt="Jean Paul Gaultier Gaultier Divine">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Gaultier Divine</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Million Gold" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\MILLION GOLD.JPEG" alt="Rabanne Million Gold">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Million Gold</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne One Million Privé" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\1MILLION PRIVE.png" alt="Rabanne One Million Privé">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>One Million Privé</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne One Million Lucky" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\1MILLION LUCKY.png" alt="Rabanne One Million Lucky">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>One Million Lucky</p>
+                        <p>5 <strong>ml - </strong>130 Bs</p>
+                        <p>10 <strong>ml - </strong>240 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne One Million Royal" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\1MILLION ROYAL.png" alt="Rabanne One Million Royal">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>One Million Royal</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne One Million Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\1 MILLION PARFUM.png" alt="Rabanne One Million Parfum">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>One Million Parfum</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Phantom Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\PHANTOM PARFUM.png" alt="Rabanne Phantom Parfum">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Phantom Parfum</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Phantom Intense" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\PHANTOM INTENSE.JPEG" alt="Rabanne Phantom Intense">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Phantom Intense</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Invictus Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\INVICTUS PARFUM.JPEG"
+                            alt="Rabanne Invictus Parfum">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Invictus Parfum</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Invictus Victory Elixir" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\INVICTUS VICTORY ELIXIR.png"
+                            alt="Rabanne Invictus Victory Elixir">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Invictus Victory Elixir</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Invictus Victory" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\INVICTUS VICTORY.JPEG" alt="Rabanne Invictus Victory">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Invictus Victory</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Pure XS Night" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\PURE XS NIGHT.JPEG" alt="Rabanne Pure XS Night EDP">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Pure XS Night Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Fame EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\FAME.png" alt="Rabanne Fame EDP">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Fame Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Fame Parfum" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\FAME PARFUM.png" alt="Rabanne Fame Parfum">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Fame Parfum</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Fame Intense" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\FAME INTENSE.JPEG" alt="Rabanne Fame Intense">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Fame Intense</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Fame Blooming Pink" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\FAME BLOOMING PINK.png" alt="Rabanne Fame Blooming Pink">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Fame Blooming Pink</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Kenzo Homme Intense" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\KENZO HOMME INTENSE.png" alt="Kenzo Homme Intense">
+                        <h3><strong>Kenzo</strong></h3>
+                        <p>Homme Intense</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Kenzo Homme EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\KENZO HOMME EDP.png" alt="Kenzo Homme EDP">
+                        <h3><strong>Kenzo</strong></h3>
+                        <p>Homme Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Kenzo Flower By Kenzo L'Absolue" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\FLOWER ABSOLU.png" alt="Kenzo Flower By Kenzo L'Absolue">
+                        <h3><strong>Kenzo</strong></h3>
+                        <p>Flower By Kenzo L'Absolue</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Bad Boy Extreme" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\BAD BOY EXTREME.png"
+                            alt="Carolina Herrera Bad Boy Extreme">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy Extreme</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Bad Boy Le Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\BAD BOY LE PARFUM.png"
+                            alt="Carolina Herrera Bad Boy Le Parfum">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy Le Parfum</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Bad Boy Cobalt" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\BAD BOY COBALT.JPEG"
+                            alt="Carolina Herrera Bad Boy Cobalt">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy Cobalt</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Bad Boy Cobalt Elixir" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\BAD BOY COBALT ELIXIR.JPEG"
+                            alt="Carolina Herrera Bad Boy Cobalt Elixir">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy Cobalt Elixir</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Very Good Girl EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\VERY GOOD GIRL.jpeg"
+                            alt="Carolina Herrera Very Good Girl EDP">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Very Good Girl Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Very Good Girl Glam" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\VERY GOOD GIRL GLAM.jpeg"
+                            alt="Carolina Herrera Very Good Girl Glam">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Very Good Girl Glam</p>
+                        <p>5 <strong>ml - </strong>120 Bs</p>
+                        <p>10 <strong>ml - </strong>220 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Good Girl Blush Elixir EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\GOOD GIRL BLUSH ELIXIR.JPEG"
+                            alt="Carolina Herrera Good Girl Blush Elixir">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Good Girl Blush Elixir</p>
+                        <p>5 <strong>ml - </strong>130 Bs</p>
+                        <p>10 <strong>ml - </strong>240 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Good Girl EDP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\GOOD GIRL EDP.png" alt="Carolina Herrera Good Girl EDP">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Good Girl Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera 212 VIP Men" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\212 VIP MEN.jpeg" alt="Carolina Herrera 212 VIP Men">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>212 VIP Men</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera 212 VIP Men Black MTV Edition" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\212 VIP MEN BLACK MTV.jpeg" alt="Carolina Herrera 212 VIP Men Black MTV Edition">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>212 VIP Men Black MTV Edition</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera 212 Heroes Men" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\212 HEROES.jpeg" alt="Carolina Herrera 212 Heroes Men">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>212 Heroes Men</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera 212 VIP" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\212 VIP.JPEG" alt="Carolina Herrera 212 VIP">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>212 VIP</p>
+                        <p>5 <strong>ml - </strong>110 Bs</p>
+                        <p>10 <strong>ml - </strong>200 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera 212 VIP Rosé Elixir" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\212 VIP ROSE ELIXIR.JPEG"
+                            alt="Carolina Herrera 212 VIP Rosé Elixir">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>212 VIP Rosé Elixir</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera CH Men EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\CH MEN.jpeg" alt="Carolina Herrera CH Men EDT">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>CH Men Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera CH Men Pasion" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\CH MEN PASION.JPEG"
+                            alt="Carolina Herrera CH Men Pasion">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>CH Men Pasion</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera CH EDT" data-tags="mujer">
+                        <img src="imagenes\fotos-decants\mujer\CH.jpeg" alt="Carolina Herrera CH EDT">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>CH Eau De Toilette</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Givenchy Gentleman Eau De Parfum" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\GENTLEMAN EDP.JPEG" alt="Givenchy Gentleman EDP">
+                        <h3><strong>Givenchy</strong></h3>
+                        <p>Gentleman Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Givenchy Gentleman Society" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\GIVENCHY GENTLEMAN SOCIETY.png"
+                            alt="Givenchy Gentleman Society">
+                        <h3><strong>Givenchy</strong></h3>
+                        <p>Gentleman Society</p>
+                        <p>5 <strong>ml - </strong>90 Bs</p>
+                        <p>10 <strong>ml - </strong>160 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Givenchy Gentleman Society Extreme" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\Givenchy society extreme.png"
+                            alt="Givenchy Gentleman Society Extreme">
+                        <h3><strong>Givenchy</strong></h3>
+                        <p>Gentleman Society Extreme</p>
+                        <p>5 <strong>ml - </strong>100 Bs</p>
+                        <p>10 <strong>ml - </strong>180 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Givenchy Gentleman Boisée" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\GENTLEMAN BOISEE.png" alt="Givenchy Gentleman Boisée">
+                        <h3><strong>Givenchy</strong></h3>
+                        <p>Gentleman Boisée</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lacoste L12.12 Blanc" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LACOSTE L12.12 BLANC.JPEG" alt="Lacoste L12.12 Blanc">
+                        <h3><strong>Lacoste</strong></h3>
+                        <p>L12.12 Blanc</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Explorer Ultra Blue" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\EXPLORER ULTRA BLUE.jpeg"
+                            alt="Montblanc Explorer Ultra Blue">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Explorer Ultra Blue</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Explorer" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\EXPLORER.JPEG" alt="Montblanc Explorer">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Explorer</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Legend EDT" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\MONTBLANC LEGEND.png" alt="Montblanc Legend EDT">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Legend Eau de Toilette</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Legend EDP" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\LEGEND EDP.JPEG" alt="Montblanc Legend EDP">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Legend Eau de Parfum</p>
+                        <p>5 <strong>ml - </strong>80 Bs</p>
+                        <p>10 <strong>ml - </strong>140 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Legend Spirit" data-tags="hombre">
+                        <img src="imagenes\fotos-decants\hombre\MONTBLANC LEGEND SPIRIT.JPEG" alt="Montblanc Legend Spirit">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Legend Spirit</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="AFNAN 9PM" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\9PM.png" alt="AFNAN 9PM">
+                        <h3><strong>AFNAN</strong></h3>
+                        <p>9PM</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="AFNAN 9AM Dive" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\9AM DIVE.JPEG" alt="AFNAN 9AM Dive">
+                        <h3><strong>AFNAN</strong></h3>
+                        <p>9AM Dive</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="AFNAN Turathi Blue" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\TURATHI BLUE.JPEG" alt="AFNAN Turathi Blue">
+                        <h3><strong>AFNAN</strong></h3>
+                        <p>Turathi Blue</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Rasasi Hawas For Him" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\HAWAS.JPEG" alt="Rasasi Hawas For Him">
+                        <h3><strong>Rasasi</strong></h3>
+                        <p>Hawas For Him</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Bharara King" data-tags="hombre unisex arabes">
+                        <img src="imagenes\fotos-decants\hombre\BHARARA KING.png" alt="Bharara King">
+                        <h3><strong>Bharara</strong></h3>
+                        <p>King Eau De Parfum</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Asad Zanzibar" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\ASAD ZANZIBAR.JPEG" alt="Lattafa Asad Zanzibar">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Asad Zanzibar</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Asad" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\ASAD.JPEG" alt="Lattafa Asad">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Asad</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Yara" data-tags="mujer arabes">
+                        <img src="imagenes\fotos-decants\mujer\YARA.JPEG" alt="Lattafa Yara">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Yara</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Yara Tous" data-tags="mujer arabes">
+                        <img src="imagenes\fotos-decants\mujer\YARA TOUS.JPEG" alt="Lattafa Yara Tous">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Yara Tous</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Yara Moi" data-tags="mujer arabes">
+                        <img src="imagenes\fotos-decants\mujer\YARA MOI.JPEG" alt="Lattafa Yara Moi">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Yara Moi</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Hayaatim" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\HAYAATIM.JPEG" alt="Lattafa Hayaatim">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Hayaatim</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Armaf Club de Nuit Intense" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\CLUB DE LA NUIT.png" alt="Armaf Club de Nuit Intense">
+                        <h3><strong>Armaf</strong></h3>
+                        <p>Club de Nuit Intense</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Armaf Club de Nuit Urban Man Elixir" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\CLUB DE NUIT URBAN ELIXIR.JPEG"
+                            alt="Armaf Club de Nuit Urban Man Elixir">
+                        <h3><strong>Armaf</strong></h3>
+                        <p>Club de Nuit Urban Man Elixir</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">De regreso en stock</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Armaf Odyssey Homme White Edition" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\ODYSSEY WHITE.JPEG"
+                            alt="Armaf Odyssey Homme White Edition">
+                        <h3><strong>Armaf</strong></h3>
+                        <p>Odyssey Homme White Edition</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Badee Al Oud Oud For Glory" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\OUD FOR GLORY.JPEG"
+                            alt="Lattafa Badee Al Oud Oud For Glory">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Badee Al Oud Oud For Glory</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Badee Al Oud Honor And Glory" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\HONOR AND GLORY.JPEG"
+                            alt="Lattafa Badee Al Oud Honor And Glory">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Badee Al Oud Honor And Glory</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Khamrah" data-tags="hombre unisex arabes mujer">
+                        <img src="imagenes\fotos-decants\hombre\KHAMRAH.png" alt="Lattafa Khamrah">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Khamrah</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Khamrah Qahwa" data-tags="hombre unisex arabes mujer">
+                        <img src="imagenes\fotos-decants\hombre\KHAMRAH QAHWA.JPEG" alt="Lattafa Khamrah Qahwa">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Khamrah Qahwa</p>
+                        <p>5 <strong>ml - </strong>70 Bs</p>
+                        <p>10 <strong>ml - </strong>120 Bs</p>
+                    </div>
+
+                    <div class="decant" data-name="Lattafa Qaed Al Fursan Unlimited" data-tags="hombre arabes">
+                        <img src="imagenes\fotos-decants\hombre\QAED AL FURSAN UNLIMITED.JPEG"
+                            alt="Lattafa Qaed Al Fursan Unlimited">
+                        <h3><strong>Lattafa</strong></h3>
+                        <p>Qaed Al Fursan Unlimited</p>
+                        <p>5 <strong>ml - </strong>60 Bs</p>
+                        <p>10 <strong>ml - </strong>100 Bs</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(filter) {
+            const decantsContainer = document.getElementById('decants');
+            const stockFilter = document.getElementById('stock-filter').checked;
+            const newFilter = document.getElementById('new-filter').checked;
+            const searchQuery = document.getElementById('decant-search').value.toLowerCase();
+            const noResultsMessage = document.getElementById('no-results-message');
+
+            decantsContainer.classList.add('fade-out');
+
+            setTimeout(() => {
+                const decants = document.querySelectorAll('.decant');
+                let visibleCount = 0; // Contador de decants visibles
+
+                decants.forEach(decant => {
+                    const isOutOfStock = decant.querySelector('.etiqueta.fuera-de-stock') !== null;
+                    const isNew = decant.querySelector('.etiqueta.novedad') !== null;
+                    const matchesFilter = filter === 'all' || decant.getAttribute('data-tags').includes(filter);
+                    const name = decant.getAttribute('data-name').toLowerCase();
+
+                    const shouldShow = matchesFilter &&
+                        (!stockFilter || !isOutOfStock) &&
+                        (!newFilter || isNew) &&
+                        (searchQuery === '' || name.includes(searchQuery));
+
+                    decant.style.display = shouldShow ? 'block' : 'none';
+
+                    if (shouldShow) visibleCount++; // Aumenta el contador si el decant es visible
+                });
+
+                // Mostrar mensaje de "sin resultados" si no hay decants visibles
+                noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+
+                decantsContainer.classList.remove('fade-out');
+            }, 500);
+        }
+
+        function sendToWhatsApp(name) {
+            const whatsappNumber = "78064327";
+            const message = `Hola!%20Quisiera%20saber%20si%20tienen%20disponible%20el%20decant%20del%20${name}!`;
+            const confirmation = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
+
+            if (confirmation) {
+                window.open(`https://wa.me/${whatsappNumber}/?text=${message}`, '_blank');
+            }
+        }
+
+        const decants = document.querySelectorAll('.decant');
+        decants.forEach(decant => {
+            decant.addEventListener('click', () => {
+                const name = decant.getAttribute('data-name');
+                const price = decant.getAttribute('data-price');
+                sendToWhatsApp(name, price);
+            });
+        });
+
+        // Asocia el evento 'change' al checkbox directamente
+        document.getElementById('stock-filter').addEventListener('change', () => {
+            filterPerfumes(document.getElementById('decant-filter').value);
+        });
+
+        document.getElementById('new-filter').addEventListener('change', () => {
+            filterPerfumes(document.getElementById('decant-filter').value);
+        });
+
+    </script>
+    <div data-include="footer.html">
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/include.js"></script>
+</body>
+
+</html>

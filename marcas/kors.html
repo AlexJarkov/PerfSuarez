@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Michael Kors</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Michael Kors">
+    <meta property="og:description" content="Descubre nuestros perfumes de Michael Kors.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/kors.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Michael Kors</h2>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Michael Kors" data-name="Sexy Amber EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\kors\Untitled.jpg" alt="Sexy Amber EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Michael Kors</strong></h3>
+                    <p>Sexy Amber Eau De Parfum</p>
+                    <p>50 <strong>ml - </strong>88$</p>
+                    <p>100 <strong>ml - </strong>105$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Michael Kors" data-name="Wonderlust EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\kors\Untitled-2.jpg" alt="Wonderlust EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Michael Kors</strong></h3>
+                    <p>Wonderlust Eau De Parfum</p>
+                    <p>100 <strong>ml - </strong>117$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Michael Kors" data-name="Gourgeous EDP" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\kors\Untitled-5.jpg" alt="Gourgeous EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Michael Kors</strong></h3>
+                    <p>Gourgeous Eau De Parfum</p>
+                    <p>50 <strong>ml - </strong>74$</p>
+                    <p>100 <strong>ml - </strong>94$</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+            perfumes.forEach(perfume => {
+                if (category === 'all') {
+                    perfume.style.display = 'block';
+                } else {
+                    if (perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block';
+                    } else {
+                        perfume.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html"></div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Yves Saint Laurent</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Yves Saint Laurent">
+    <meta property="og:description" content="Descubre nuestros perfumes de Yves Saint Laurent.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/ysl.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="perfumes">
+            <div class="title">
+                <h2>Perfumes de Yves Saint Laurent</h2>
+            </div>
+            <div class="filter-select">
+                <label for="perfume-filter">Filtrar perfumes:</label>
+                <select id="perfume-filter" onchange="filterPerfumes(this.value)">
+                    <option value="all">Mostrar todos los perfumes</option>
+                    <option value="hombre">Mostrar perfumes de hombre</option>
+                    <option value="mujer">Mostrar perfumes de mujer</option>
+                </select>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="Y Eau De Toilette" data-tags="hombre">
+                    <img src="..\imagenes\fotos-catalogo\ysl\Untitled-1.png" alt="Y Eau de Toilette" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>Y Eau De Toilette</p>
+                    <p>60 <strong>ml - </strong>101$</p>
+                    <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                </div>
+
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="MYSLF EDP" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ysl\ysl-myslf-240415062511.webp" alt="MYSLF EDP" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>MYSLF Eau De Parfum</p>
+                    <p>60 <strong>ml - </strong>117$</p>
+                    <p>100 <strong>ml - </strong>148$</p>
+                </div>
+
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="Black Opium Intense" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ysl\BLACK OPIUM INTENSE.JPG" alt="Black Opium Intense" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>Black Opium Intense Eau de Parfum</p>
+                    <p>90 <strong>ml - </strong>134$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="Libre EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ysl\Untitled-2.png" alt="Libre EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>Libre Eau De Toilette</p>
+                    <p>90 <strong>ml - </strong>132$</p>
+                </div>
+
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="Libre L'Absolu Platine" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ysl\3614273924030-libre-labsolu-alt1.png" alt="Libre L'Absolu Platine" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>Libre L'Absolu Platine</p>
+                    <p>90 <strong>ml - </strong>234$</p>
+                    <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
+                </div>
+                
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="Mon Paris EDT" data-tags="mujer">
+                    <img src="../imagenes\fotos-catalogo\ysl\Untitled-3.png" alt="Mon Paris EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>Mon Paris Eau De Toilette</p>
+                    <p>90 <strong>ml - </strong>115$</p>
+                </div>
+                
+                <div class="perfume" data-brand="Yves Saint Laurent" data-name="L'Homme EDT" data-tags="hombre">
+                    <img src="../imagenes\fotos-catalogo\ysl\3365440316546.webp" alt="L'Homme EDT" onclick="sendWhatsAppMessage(this)">
+                    <h3><strong>Yves Saint Laurent</strong></h3>
+                    <p>L'Homme Eau De Toilette</p>
+                    <p>60 <strong>ml - </strong>84$</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(category) {
+            const perfumes = document.querySelectorAll('.perfume');
+
+            // Aplica el efecto fade-out
+            perfumes.forEach(perfume => {
+                perfume.classList.add('fade-out'); // Inicia el fade-out
+            });
+
+            // Usa un temporizador para esperar a que la animación fade-out termine
+            setTimeout(() => {
+                perfumes.forEach(perfume => {
+                    // Oculta o muestra según la categoría
+                    if (category === 'all' || perfume.getAttribute('data-tags').includes(category)) {
+                        perfume.style.display = 'block'; // Asegura que se muestre
+                        perfume.classList.remove('fade-out'); // Elimina fade-out
+                        perfume.classList.add('fade-in'); // Añade fade-in
+                    } else {
+                        perfume.style.display = 'none'; // Oculta si no coincide
+                    }
+                });
+            }, 500); // Ajustado para coincidir con la duración de la transición
+        }
+
+        function sendWhatsAppMessage(element) {
+            const perfume = element.closest('.perfume');
+            const name = perfume.getAttribute('data-name');
+            const brand = perfume.getAttribute('data-brand');
+            const message = `Hola! Me gustaría pedir el perfume ${brand} ${name}.`;
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // Cuadro de confirmación
+            const confirmation = confirm(`¿Estás seguro que deseas pedir el perfume ${brand} ${name}?`);
+            if (confirmation) {
+                // Si el usuario confirma, abre WhatsApp
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+    <div data-include="../footer.html"></div>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/include.js"></script>
+</body>
+</html>
