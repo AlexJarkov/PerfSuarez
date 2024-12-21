@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const confirmation = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
 
             if (confirmation) {
-                window.open(`https://wa.me/${whatsappNumber}/?text=Hola!%20Quisiera%20saber%20si%20tienen%20disponible%20el%20${nomCombo}!`, '_blank');
+                window.open(`https://wa.me/${whatsappNumber}/?text=Hola!%20Quisiera%20pedir%20el%20${nomCombo}!`, '_blank');
             }
         });
     });

@@ -188,7 +188,7 @@ main {
 
 .combo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    
     gap: 20px;
     justify-content: center;
 }
@@ -746,7 +746,7 @@ footer {
     }
 
     .menu.show {
-        max-height: 300px;
+        max-height: 400px;
     }
 
     .menu-item {
