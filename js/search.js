@@ -27,6 +27,7 @@ const filesToSearch = [
     '../marcas/v&r.html',
     '../marcas/valentino.html',
     '../marcas/versace.html',
+    '../marcas/xerjoff.html',
     '../marcas/ysl.html',
     '../decants.html'
 ];
