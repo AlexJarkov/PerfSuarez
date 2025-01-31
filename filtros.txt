@@ -1,0 +1,3 @@
+<div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+
+<div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>

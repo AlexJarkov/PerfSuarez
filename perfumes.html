@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Perfumes">
+    <meta property="og:description" content="Descubre nuestro catálogo de perfumes completos.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/perfumes.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="decants">
+            <div class="title">
+                <h2>Perfumes</h2>
+                <div class="search-filter">
+                    <label for="decant-search">Buscar perfumes:</label>
+                    <input type="text" id="decant-search" placeholder="Introduce el nombre del perfume"
+                        oninput="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div class="filter-select">
+                    <label for="decant-filter">Filtrar perfumes:</label>
+                    <select id="decant-filter" onchange="filterPerfumes(this.value)">
+                        <option value="all">Mostrar todos los perfumes</option>
+                        <option value="hombre">Mostrar perfumes de hombre</option>
+                        <option value="mujer">Mostrar perfumes de mujer</option>
+                        <option value="unisex">Mostrar perfumes unisex</option>
+                        <option value="nicho">Mostrar perfumes de nicho</option>
+                        <option value="arabes">Mostrar perfumes de Árabes</option>
+                    </select>
+                </div>
+                <div class="filter-select">
+                    <label for="decant-filter">Filtrar por marca:</label>
+                    <select id="decant-filter" onchange="filterPerfumes(this.value)">
+                        <option value="all">Mostrar todas las marcas</option>
+                        <option value="ch">Carolina Herrera</option>
+                        <option value="rabanne">Rabanne</option>
+                        <option value="jpg">Jean Paul Gaultier</option>
+                        <option value="armani">Giorgio Armani</option>
+                        <option value="d&g">Dolce&Gabbana</option>
+                        <option value="mntblanc">Montblanc</option>
+                    </select>
+                </div>
+                <div class="stock-filter">
+                    <label for="stock-filter">Ocultar perfumes fuera de stock:</label>
+                    <input type="checkbox" id="stock-filter"
+                        onchange="filterPerfumes(document.getElementById('decant-filter').value)" checked>
+                </div>
+                <div class="new-filter">
+                    <label for="new-filter">Mostrar solo perfumes nuevos:</label>
+                    <input type="checkbox" id="new-filter"
+                        onchange="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
+                    <p>Perdón pariente... No tenemos decants que coincidan con tu búsqueda :(</p>
+                </div>
+                <div class="perfume-grid">
+                    <div class="decant" data-name="Carolina Herrera Bad Boy Extreme" data-tags="hombre ch">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled.jpg" alt="Bad Boy Extreme">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy Extreme</p>
+                        <p>100 <strong>ml - </strong>122$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Bad Boy Cobalt Elixir" data-tags="hombre ch">
+                        <img src="imagenes\fotos-catalogo\ch\1010-65198208_1200x.webp" alt="Bad Boy Cobalt Elixir">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy Cobalt Elixir</p>
+                        <p>100 <strong>ml - </strong>126$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Bad Boy Le Parfum" data-tags="hombre ch">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled.png" alt="Bad Boy Le Parfum">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy Le Parfum</p>
+                        <p>100 <strong>ml - </strong>126$</p>
+                        <p>150 <strong>ml - </strong>168$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Bad Boy EDT" data-tags="hombre ch">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-1.jpg" alt="Bad Boy EDT">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Bad Boy EDT</p>
+                        <p>100 <strong>ml - </strong>108$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera 212 VIP Men" data-tags="hombre ch">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-3.png" alt="212 VIP Men">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>212 VIP Men</p>
+                        <p>100 <strong>ml - </strong>102$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera 212 VIP Rosé Elixir" data-tags="mujer ch">
+                        <img src="imagenes\fotos-catalogo\ch\carolina-herrera-212-vip-rose-elixir-edp-80ml.jpg" alt="212 VIP Rosé Elixir">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>212 VIP Rosé Elixir</p>
+                        <p>80 <strong>ml - </strong>142$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera CH Men Pasión" data-tags="hombre ch">
+                        <img src="imagenes\fotos-catalogo\ch\DECANT-Recuperado.png" alt="CH Men Pasión">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>CH Men Pasión</p>
+                        <p>100 <strong>ml - </strong>115$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera CH" data-tags="mujer ch">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-5.png" alt="CH">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>CH</p>
+                        <p>100 <strong>ml - </strong>122$</p>
+                    </div>
+
+                    <div class="decant" data-name="Carolina Herrera Very Good Girl" data-tags="mujer ch">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-8.png" alt="Very Good Girl">
+                        <h3><strong>Carolina Herrera</strong></h3>
+                        <p>Very Good Girl</p>
+                        <p>80 <strong>ml - </strong>146$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Phantom Parfum" data-tags="hombre rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\Untitled-1.jpg" alt="Phantom Parfum">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Phantom Parfum</p>
+                        <p>150 <strong>ml - </strong>145$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Fame Intense" data-tags="mujer rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\FAME INTENSE.WEBP" alt="Fame Intense">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Fame Intense</p>
+                        <p>80 <strong>ml - </strong>131$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne One Million Royal" data-tags="hombre rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\65190440_00.png" alt="One Million Royal">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>One Million Royal</p>
+                        <p>100 <strong>ml - </strong>131$</p>
+                        <p>200 <strong>ml - </strong>164$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne One Million Parfum" data-tags="hombre rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\Untitled-3.png" alt="One Million Parfum">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>One Million Parfum</p>
+                        <p>100 <strong>ml - </strong>115$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Million Gold" data-tags="hombre rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\3349668630356_Million_Gold_Eau_de_Parfum_Intense_200_ml_Product_Left_1.webp" alt="Million Gold">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Million Gold</p>
+                        <p>100 <strong>ml - </strong>122$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne One Million EDT" data-tags="hombre rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\Untitled-2.png" alt="One Million EDT">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>One Million EDT</p>
+                        <p>100 <strong>ml - </strong>102$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Invictus Victory" data-tags="hombre rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\paco-rabanne-invictus-victory-pr.jpg" alt="Invictus Victory">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Invictus Victory</p>
+                        <p>100 <strong>ml - </strong>119$</p>
+                    </div>
+
+                    <div class="decant" data-name="Rabanne Invictus Parfum" data-tags="hombre rabanne">
+                        <img src="imagenes\fotos-catalogo\paco\Invictus Parfum.jpg" alt="Invictus Parfum">
+                        <h3><strong>Rabanne</strong></h3>
+                        <p>Invictus Parfum</p>
+                        <p>100 <strong>ml - </strong>115$</p>
+                        <p>200 <strong>ml - </strong>165$</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Male ELixir" data-tags="hombre jpg">
+                        <img src="imagenes\fotos-catalogo\jpg\LE MALE ELIXIR.webp" alt="Le Male Elixir">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Le Male Elixir</p>
+                        <p>125 <strong>ml - </strong>183$</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier La Belle Paradise Garden" data-tags="mujer jpg">
+                        <img src="imagenes\fotos-catalogo\jpg\IMG_3238.WEBP" alt="La Belle Paradise Garden">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>La Belle Paradise Garden</p>
+                        <p>100 <strong>ml - </strong>139$</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Divine" data-tags="mujer jpg">
+                        <img src="imagenes\fotos-catalogo\jpg\dasdasdsa.png" alt="Gaultier Divine">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Gaultier Divine</p>
+                        <p>100 <strong>ml - </strong>144$</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Pour Homme EDT" data-tags="hombre jpg">
+                        <img src="imagenes\fotos-catalogo\jpg\Untitled.jpg" alt="Scandal Pour Homme EDT">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Scandal Pour Homme EDT</p>
+                        <p>100 <strong>ml - </strong>117$</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Pour Homme Absolu" data-tags="hombre jpg">
+                        <img src="imagenes\fotos-catalogo\jpg\Scandal Absolu Pour Homme.jpg" alt="Scandal Pour Homme Absolu">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Scandal Pour Homme Absolu</p>
+                        <p>100 <strong>ml - </strong>126$</p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Absolu" data-tags="mujer jpg">
+                        <img src="imagenes\fotos-catalogo\jpg\Scandal Absolu.webp" alt="Scandal Absolu">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Scandal Absolu</p>
+                        <p>80 <strong>ml - </strong>135$</p>
+                    </div>
+
+                    <div class="decant" data-name="Giorgio Armani Code Parfum" data-tags="hombre armani">
+                        <img src="imagenes\fotos-catalogo\armani\ARMANI CODE PARFUM.webp" alt="Armani Code Parfum">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Armani Code Parfum</p>
+                        <p>125 <strong>ml - </strong>153$</p>
+                    </div>
+                    
+                    <div class="decant" data-name="Giorgio Armani Acqua Di Gio Absolu" data-tags="hombre armani">
+                        <img src="imagenes\fotos-catalogo\armani\armani-absolu-EDP-pr.png" alt="Acqua Di Gio Absolu">
+                        <h3><strong>Giorgio Armani</strong></h3>
+                        <p>Aqcua Di Gio Absolu</p>
+                        <p>125 <strong>ml - </strong>153$</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana K EDT" data-tags="hombre d&g">
+                        <img src="imagenes\fotos-catalogo\d&g\30494500000.png" alt="K By D&G EDT">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>K By D&G EDT</p>
+                        <p>100 <strong>ml - </strong>114$</p>
+                        <p>200 <strong>ml - </strong>167$</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana K EDP" data-tags="hombre d&g">
+                        <img src="imagenes\fotos-catalogo\d&g\DG_K_EDP_PACK_200ML_TIFF_RGB_300_DPI2000x2000.png" alt="K By D&G EDP">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>K By D&G EDP</p>
+                        <p>100 <strong>ml - </strong>139$</p>
+                        <p>200 <strong>ml - </strong>202$</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana K EDP Intense" data-tags="hombre d&g">
+                        <img src="imagenes\fotos-catalogo\d&g\d42ab86d-c8d7-419d-bb14-2ec7dbeab2fa.9f1ca683e8878c7d9e877652290a6c1c.webp" alt="K By D&G EDP Intense">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>K By D&G EDP Intense</p>
+                        <p>100 <strong>ml - </strong>153$</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana Q EDP" data-tags="mujer d&g">
+                        <img src="imagenes\fotos-catalogo\d&g\8057971187829_G.jpg" alt="Q By D&G EDP">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>Q By D&G EDP</p>
+                        <p>100 <strong>ml - </strong>148$</p>
+                    </div>
+
+                    <div class="decant" data-name="Dolce&Gabbana Light Blue Pour Homme Eau Intense" data-tags="hombre d&g">
+                        <img src="imagenes\fotos-catalogo\d&g\LIGHT BLUE POUR HOMME EAU INTENSE.webp" alt="Light Blue Eau Intense">
+                        <h3><strong>Dolce&Gabbana</strong></h3>
+                        <p>Light Blue Pour Homme Eau Intense</p>
+                        <p>100 <strong>ml - </strong>105$</p>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Legend EDT" data-tags="hombre mntblanc">
+                        <img src="imagenes\fotos-catalogo\mntblanc\MPONT.png" alt="Legend EDT">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Legend EDT</p>
+                        <p>100 <strong>ml - </strong>98$</p>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Legend EDP" data-tags="hombre mntblanc">
+                        <img src="imagenes\fotos-catalogo\mntblanc\LEGEND EDP.WEBP" alt="Legend EDP">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Legend EDP</p>
+                        <p>100 <strong>ml - </strong>100$</p>
+                    </div>
+
+                    <div class="decant" data-name="Montblanc Explorer Ultra Blue" data-tags="hombre mntblanc">
+                        <img src="imagenes\fotos-catalogo\mntblanc\DECANdasdas.png" alt="Explorer Ultra Blue">
+                        <h3><strong>Montblanc</strong></h3>
+                        <p>Explorer Ultra Blue</p>
+                        <p>100 <strong>ml - </strong>108$</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(filter) {
+            const decantsContainer = document.getElementById('decants');
+            const stockFilter = document.getElementById('stock-filter').checked;
+            const newFilter = document.getElementById('new-filter').checked;
+            const searchQuery = document.getElementById('decant-search').value.toLowerCase();
+            const noResultsMessage = document.getElementById('no-results-message');
+
+            decantsContainer.classList.add('fade-out');
+
+            setTimeout(() => {
+                const decants = document.querySelectorAll('.decant');
+                let visibleCount = 0; // Contador de decants visibles
+
+                decants.forEach(decant => {
+                    const isOutOfStock = decant.querySelector('.etiqueta.fuera-de-stock') !== null;
+                    const isNew = decant.querySelector('.etiqueta.novedad') !== null;
+                    const matchesFilter = filter === 'all' || decant.getAttribute('data-tags').includes(filter);
+                    const name = decant.getAttribute('data-name').toLowerCase();
+
+                    const shouldShow = matchesFilter &&
+                        (!stockFilter || !isOutOfStock) &&
+                        (!newFilter || isNew) &&
+                        (searchQuery === '' || name.includes(searchQuery));
+
+                    decant.style.display = shouldShow ? 'block' : 'none';
+
+                    if (shouldShow) visibleCount++; // Aumenta el contador si el decant es visible
+                });
+
+                // Mostrar mensaje de "sin resultados" si no hay decants visibles
+                noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+
+                decantsContainer.classList.remove('fade-out');
+            }, 500);
+        }
+
+        function sendToWhatsApp(name) {
+            const whatsappNumber = "78064327";
+            const message = `Hola!%20Quisiera%20saber%20si%20tienen%20disponible%20el%20perfume%20${name}!`;
+            const confirmation = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
+
+            if (confirmation) {
+                window.open(`https://wa.me/${whatsappNumber}/?text=${message}`, '_blank');
+            }
+        }
+
+        const decants = document.querySelectorAll('.decant');
+        decants.forEach(decant => {
+            decant.addEventListener('click', () => {
+                const name = decant.getAttribute('data-name');
+                const price = decant.getAttribute('data-price');
+                sendToWhatsApp(name, price);
+            });
+        });
+
+        // Asocia el evento 'change' al checkbox directamente
+        document.getElementById('stock-filter').addEventListener('change', () => {
+            filterPerfumes(document.getElementById('decant-filter').value);
+        });
+
+        document.getElementById('new-filter').addEventListener('change', () => {
+            filterPerfumes(document.getElementById('decant-filter').value);
+        });
+
+        filterPerfumes(document.getElementById('decant-filter').value);
+
+    </script>
+    <div data-include="footer.html">
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/include.js"></script>
+</body>
+
+</html>
