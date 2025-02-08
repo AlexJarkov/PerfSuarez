@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Velas Aromáticas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="../PerfSuarez/imagenes/Cowboy.webp" type="image/webp">
+    <meta property="og:title" content="Velas Aromáticas">
+    <meta property="og:description" content="Descubre nuestro catálogo de velas aromáticas.">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com/velas.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    <main>
+        <section id="decants">
+            <div class="title">
+                <h2>Velas Aromáticas</h2>
+                <div class="search-filter">
+                    <label for="decant-search">Buscar velas:</label>
+                    <input type="text" id="decant-search" placeholder="Introduce el nombre del perfume"
+                        oninput="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div class="stock-filter">
+                    <label for="stock-filter">Ocultar velas fuera de stock:</label>
+                    <input type="checkbox" id="stock-filter"
+                        onchange="filterPerfumes(document.getElementById('decant-filter').value)" checked>
+                </div>
+                <div class="new-filter">
+                    <label for="new-filter">Mostrar solo velas nuevas:</label>
+                    <input type="checkbox" id="new-filter"
+                        onchange="filterPerfumes(document.getElementById('decant-filter').value)">
+                </div>
+                <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
+                    <p>Perdón pariente... No tenemos velas que coincidan con tu búsqueda :(</p>
+                </div>
+                <div class="perfume-grid">
+                    <div class="decant" data-name="Xerjoff Naxos">
+                        <img src="imagenes\fotos-velas\NAXOS.jpg" alt="Naxos">
+                        <h3><strong>Xerjoff</strong></h3>
+                        <p>Vela "Naxos"</p>
+                        <p>300 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Xerjoff Erba Pura">
+                        <img src="imagenes\fotos-velas\ERBA PURA.jpg" alt="Erba Pura">
+                        <h3><strong>Xerjoff</strong></h3>
+                        <p>Vela "Erba Pura"</p>
+                        <p>300 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Parfums de Marly Layton Exclusif">
+                        <img src="imagenes\fotos-velas\LAYTON EXCLUSIF.jpg" alt="Layton Exclusif">
+                        <h3><strong>Parfums de Marly</strong></h3>
+                        <p>Vela "Layton Exclusif"</p>
+                        <p>300 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Le Labo Santal 33">
+                        <img src="imagenes\fotos-velas\SANTAL 33.jpg" alt="Santal 33">
+                        <h3><strong>Le Labo</strong></h3>
+                        <p>Vela "Santal 33"</p>
+                        <p>300 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Tom Ford Ombré Leather">
+                        <img src="imagenes\fotos-velas\OMBRE LEATHER.jpg" alt="Ombré Leather">
+                        <h3><strong>Tom Ford</strong></h3>
+                        <p>Vela "Ombré Leather"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Dior Homme Intense">
+                        <img src="imagenes\fotos-velas\DIOR HOMME.jpg" alt="Dior Homme Intense">
+                        <h3><strong>Dior</strong></h3>
+                        <p>Vela "Homme Intense"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Viktor&Rolf Spicebomb Extreme">
+                        <img src="imagenes\fotos-velas\SPICEBOMB EXTREME.jpg" alt="Spicebomb Extreme">
+                        <h3><strong>Viktor&Rolf</strong></h3>
+                        <p>Vela "Spicebomb Extreme"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Viktor&Rolf Spicebomb EDT">
+                        <img src="imagenes\fotos-velas\SPICEBOMB EDT.jpg" alt="Spicebomb EDT">
+                        <h3><strong>Viktor&Rolf</strong></h3>
+                        <p>Vela "Spicebomb EDT"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Male Elixir">
+                        <img src="imagenes\fotos-velas\LE MALE ELIXIR.jpg" alt="Le Male Elixir">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Le Male Elixir"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Ultra Male">
+                        <img src="imagenes\fotos-velas\ULTRA MALE.jpg" alt="Ultra Male">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Ultra Male"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Beau Le Parfum">
+                        <img src="imagenes\fotos-velas\LE BEAU LP.jpg" alt="Le Beau Le Parfum">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Le Beau Le Parfum"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Le Beau Paradise Garden">
+                        <img src="imagenes\fotos-velas\LE BEAU PG.jpg" alt="Le Beau Paradise Garden">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Le Beau Paradise Garden"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier La Belle Paradise Garden">
+                        <img src="imagenes\fotos-velas\LA BELLE PG.jpg" alt="La Belle Paradise Garden">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Le Beau Paradise Garden"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal EDT">
+                        <img src="imagenes\fotos-velas\SCANDAL EDT.jpg" alt="Scandal EDT">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Scandal EDT"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Absolu">
+                        <img src="imagenes\fotos-velas\SCANDAL ABSOLU.jpg" alt="Scandal Absolu">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Scandal Absolu"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Absolu de mujer">
+                        <img src="imagenes\fotos-velas\SCANDAL MUJER.jpg" alt="Scandal Absolu de mujer">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Scandal Absolu Pour Femme"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Jean Paul Gaultier Scandal Absolu">
+                        <img src="imagenes\fotos-velas\SCANDAL ABSOLU.jpg" alt="Scandal Absolu">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Scandal Absolu"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+
+                    <div class="decant" data-name="Yves Saint Laurent Y EDP">
+                        <img src="imagenes\fotos-velas\SCANDAL ABSOLU.jpg" alt="Scandal Absolu">
+                        <h3><strong>Jean Paul Gaultier</strong></h3>
+                        <p>Vela "Scandal Absolu"</p>
+                        <p>150 <strong>Bs</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterPerfumes(filter) {
+            const decantsContainer = document.getElementById('decants');
+            const stockFilter = document.getElementById('stock-filter').checked;
+            const newFilter = document.getElementById('new-filter').checked;
+            const searchQuery = document.getElementById('decant-search').value.toLowerCase();
+            const noResultsMessage = document.getElementById('no-results-message');
+
+            decantsContainer.classList.add('fade-out');
+
+            setTimeout(() => {
+                const decants = document.querySelectorAll('.decant');
+                let visibleCount = 0; // Contador de decants visibles
+
+                decants.forEach(decant => {
+                    const isOutOfStock = decant.querySelector('.etiqueta.fuera-de-stock') !== null;
+                    const isNew = decant.querySelector('.etiqueta.novedad') !== null;
+                    const matchesFilter = filter === 'all' || decant.getAttribute('data-tags').includes(filter);
+                    const name = decant.getAttribute('data-name').toLowerCase();
+
+                    const shouldShow = matchesFilter &&
+                        (!stockFilter || !isOutOfStock) &&
+                        (!newFilter || isNew) &&
+                        (searchQuery === '' || name.includes(searchQuery));
+
+                    decant.style.display = shouldShow ? 'block' : 'none';
+
+                    if (shouldShow) visibleCount++; // Aumenta el contador si el decant es visible
+                });
+
+                // Mostrar mensaje de "sin resultados" si no hay decants visibles
+                noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+
+                decantsContainer.classList.remove('fade-out');
+            }, 500);
+        }
+
+        function sendToWhatsApp(name) {
+            const whatsappNumber = "78064327";
+            const message = `Hola!%20Quisiera%20saber%20si%20tienen%20disponible%20el%20perfume%20${name}!`;
+            const confirmation = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
+
+            if (confirmation) {
+                window.open(`https://wa.me/${whatsappNumber}/?text=${message}`, '_blank');
+            }
+        }
+
+        const decants = document.querySelectorAll('.decant');
+        decants.forEach(decant => {
+            decant.addEventListener('click', () => {
+                const name = decant.getAttribute('data-name');
+                const price = decant.getAttribute('data-price');
+                sendToWhatsApp(name, price);
+            });
+        });
+
+        // Asocia el evento 'change' al checkbox directamente
+        document.getElementById('stock-filter').addEventListener('change', () => {
+            filterPerfumes(document.getElementById('decant-filter').value);
+        });
+
+        document.getElementById('new-filter').addEventListener('change', () => {
+            filterPerfumes(document.getElementById('decant-filter').value);
+        });
+
+        filterPerfumes(document.getElementById('decant-filter').value);
+
+    </script>
+    <div data-include="footer.html">
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/include.js"></script>
+</body>
+
+</html>
