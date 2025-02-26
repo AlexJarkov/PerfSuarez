@@ -1167,3 +1167,31 @@ footer {
     color: #333;
     cursor: pointer;
 }
+
+/* Ajustes para selectores de tamaño */
+.size-selector {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Mejoras para móviles */
+@media (max-width: 768px) {
+    .combo-item {
+        margin: 10px 0;
+    }
+    
+    .dropdown {
+        width: 90vw;
+        left: 5vw !important;
+    }
+}
+
+/* Estado deshabilitado para WhatsApp */
+.whatsapp-button a.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

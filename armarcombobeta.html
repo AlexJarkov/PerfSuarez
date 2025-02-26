@@ -40,14 +40,12 @@
                         <option value="10">10</option>
                     </select>
                 </div>
-                <div class="combo-container">
-                    <div id="combo-items"></div>
-                </div>
+                <div id="combo-items" class="combo-grid"></div>
 
-                <div class="total">
-                    <p id="savings" style="color: green;">Estás ahorrando: $0.00</p>
-                    <h3>Total: <span id="total-price-currency">$</span><span id="total-price">0.00</span></h3>
-                </div>
+        <div class="total-container">
+            <p id="savings">Estás ahorrando: $0.00</p>
+            <h2>Total: <span id="total-price-currency">$</span><span id="total-price">0.00</span></h2>
+        </div>
 
                 <div class="whatsapp-button">
                     <a id="whatsapp-link" class="disabled" href="javascript:void(0);">Selecciona tres perfumes y el
@@ -57,171 +55,9 @@
             </div>
         </section>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-    const comboTypeSelect = document.getElementById('combo-type');
-    const decantQuantitySelect = document.getElementById('decant-quantity');
-    const comboItemsContainer = document.getElementById('combo-items');
-    const totalPriceElement = document.getElementById('total-price');
-    const savingsElement = document.getElementById('savings');
-    const currencyElement = document.getElementById('total-price-currency');
-    const whatsappLink = document.getElementById('whatsapp-link');
-
-    let perfumes = [];
-    let decants = [];
-    const exchangeRate = 7;
-    
-    // Cargar productos desde los catálogos HTML
-    async function fetchProducts(url, isPerfume) {
-        try {
-            const response = await fetch(url);
-            const text = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, 'text/html');
-            const items = doc.querySelectorAll('.decant');
-            
-            return Array.from(items).map(item => {
-                const name = item.getAttribute('data-name');
-                const cost = parseFloat(item.getAttribute('data-cost')) || 0;
-                const image = item.querySelector('img').src;
-                const sizes = Array.from(item.querySelectorAll('p')).filter(p => p.innerText.includes('ml'))
-                    .map(p => {
-                        const match = p.innerText.match(/(\d+)\s*ml\s*-\s*(\d+)/);
-                        return match ? { size: parseInt(match[1]), price: parseInt(match[2]) } : null;
-                    }).filter(Boolean);
-                
-                if (isPerfume) {
-                    const salePrice = sizes.length ? sizes[0].price : 0;
-                    const calculatedPrice = (cost + 50) * 1.354;
-                    if (calculatedPrice > salePrice) {
-                        return { name, cost, image, sizes, salePrice };
-                    }
-                    return null;
-                }
-                return { name, image, sizes };
-            }).filter(Boolean);
-        } catch (error) {
-            console.error('Error al cargar productos:', error);
-            return [];
-        }
-    }
-
-    async function loadProducts() {
-        perfumes = await fetchProducts('perfumes.html', true);
-        decants = await fetchProducts('decants.html', false);
-        populateComboItems();
-    }
-
-    function populateComboItems() {
-        comboItemsContainer.innerHTML = '';
-        const comboType = comboTypeSelect.value;
-        let count = comboType === 'decants' ? parseInt(decantQuantitySelect.value) : 3;
-
-        for (let i = 0; i < count; i++) {
-            const comboItem = createComboItem(comboType, i);
-            comboItemsContainer.appendChild(comboItem);
-        }
-        if (comboType === 'perfumes') {
-            const giftItem = createGiftItem();
-            comboItemsContainer.appendChild(giftItem);
-        }
-    }
-
-    function createComboItem(category, index) {
-        const comboItem = document.createElement('div');
-        comboItem.classList.add('combo-item');
-        
-        const comboSelection = document.createElement('div');
-        comboSelection.classList.add('combo-selection');
-
-        const image = document.createElement('img');
-        image.src = 'imagenes/image.webp';
-        image.alt = `${category} producto`;
-        image.id = `${category}-image-${index}`;
-
-        const title = document.createElement('h3');
-        title.innerText = `Producto ${index + 1}`;
-
-        const name = document.createElement('p');
-        name.id = `${category}-name-${index}`;
-        
-        const sizeSelector = document.createElement('select');
-        sizeSelector.id = `${category}-size-${index}`;
-        sizeSelector.onchange = () => updateTotal();
-
-        const button = document.createElement('button');
-        button.className = 'dropdown-toggle';
-        button.innerText = 'Seleccionar Producto';
-        button.onclick = () => toggleDropdown(category, index);
-
-        const dropdown = document.createElement('div');
-        dropdown.className = 'dropdown';
-        dropdown.id = `${category}-dropdown-${index}`;
-
-        populateDropdown(dropdown, category, index, sizeSelector);
-
-        comboSelection.append(image, title, name, sizeSelector, button, dropdown);
-        comboItem.append(comboSelection);
-        return comboItem;
-    }
-
-    function populateDropdown(dropdown, category, index, sizeSelector) {
-        dropdown.innerHTML = '';
-        const productList = category === 'perfumes' ? perfumes : decants;
-        
-        productList.forEach(product => {
-            const item = document.createElement('div');
-            item.className = 'dropdown-item';
-            item.innerHTML = `<img src="${product.image}" alt="${product.name}"><p>${product.name}</p>`;
-            item.onclick = () => {
-                selectProduct(category, index, product, item, sizeSelector);
-                closeAllDropdowns();
-            };
-            dropdown.appendChild(item);
-        });
-    }
-
-    function selectProduct(category, index, product, itemElement, sizeSelector) {
-        document.getElementById(`${category}-name-${index}`).innerText = product.name;
-        document.getElementById(`${category}-image-${index}`).src = product.image;
-        
-        sizeSelector.innerHTML = '';
-        product.sizes.forEach(size => {
-            const option = document.createElement('option');
-            option.value = size.price;
-            option.text = `${size.size} ml - ${size.price} Bs`;
-            sizeSelector.appendChild(option);
-        });
-        updateTotal();
-    }
-
-    function updateTotal() {
-        let total = 0;
-        document.querySelectorAll('.combo-item select').forEach(select => {
-            total += parseFloat(select.value);
-        });
-        totalPriceElement.innerText = total.toFixed(2);
-        savingsElement.innerText = `Estás ahorrando: ${total * 0.1} Bs`;
-        currencyElement.innerText = 'Bs ';
-    }
-
-    function closeAllDropdowns() {
-        document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.classList.remove('show'));
-    }
-
-    function handleResize() {
-        const isMobile = window.innerWidth < 768;
-        comboItemsContainer.style.gridTemplateColumns = isMobile ? '1fr' : 'repeat(3, 1fr)';
-    }
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    loadProducts();
-});
-
-    </script>
     <div data-include="footer.html">
     </div>
+    <script src="js/armarcombo.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/include.js"></script>
 </body>
