@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.className = 'combo-item';
         item.innerHTML = `
             <div class="combo-selection">
-                <img src="imagenes/placeholder.jpg" alt="${type}" id="${type}-image-${index}">
+                <img src="imagenes/image.webp" alt="${type}" id="${type}-image-${index}">
                 <h3>${type === 'perfumes' ? 'Perfume' : 'Decant'} ${index + 1}</h3>
                 <p id="${type}-name-${index}"></p>
                 <button class="dropdown-toggle">Seleccionar</button>
@@ -140,8 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createGiftSelector() {
         const gifts = [
-            { name: 'Waka', image: 'imagenes/waka.jpg' },
-            { name: 'Boxer', image: 'imagenes/boxer.jpg' },
+            { name: 'Waka', image: 'imagenes/waka.webp' },
             { name: 'Vela aromática', image: 'imagenes/vela.jpg' }
         ];
 
