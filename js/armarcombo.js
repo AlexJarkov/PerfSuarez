@@ -98,21 +98,52 @@ document.addEventListener('DOMContentLoaded', () => {
         return item;
     }
 
-    function populateDropdown(type, index, dropdown) {
-        const filteredProducts = type === 'perfumes' 
-            ? products.perfumes.filter(p => (p.cost + 50) * 1.354 > p.prices[0].price)
-            : products.decants;
+    async function populateDropdown(type, index, dropdown) {
+        try {
+            const products = type === 'perfumes' 
+                ? await getFilteredPerfumes() 
+                : await getDecants();
+    
+            dropdown.innerHTML = ''; // Limpiar contenido previo
+    
+            products.forEach(product => {
+                const item = document.createElement('div');
+                item.className = 'dropdown-item-combo';
+                item.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="dropdown-product-image">
+                    <div class="dropdown-product-info">
+                        <p class="dropdown-product-name">${product.name}</p>
+                        <p class="dropdown-product-prices">
+                            ${product.prices.map(price => `${price.size}ml - ${type === 'decants' ? 'Bs' : '$'}${price.price}`).join(' • ')}
+                        </p>
+                    </div>
+                `;
+    
+                item.onclick = (e) => {
+                    e.stopPropagation();
+                    selectProduct(type, index, product, item.closest('.combo-item'));
+                    dropdown.classList.remove('show');
+                };
+    
+                dropdown.appendChild(item);
+            });
+    
+        } catch (error) {
+            console.error('Error poblando dropdown:', error);
+            dropdown.innerHTML = '<div class="dropdown-error">Error cargando productos</div>';
+        }
+    }
 
-        filteredProducts.forEach(product => {
-            const item = document.createElement('div');
-            item.className = 'dropdown-item';
-            item.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <p>${product.name}</p>
-            `;
-            item.onclick = () => selectProduct(type, index, product, dropdown.parentElement);
-            dropdown.appendChild(item);
+    async function getFilteredPerfumes() {
+        return (await products.perfumes).filter(product => {
+            const cost = product.cost || 0;
+            const calculatedPrice = (parseFloat(cost) + 50) * 1.354;
+            return calculatedPrice > product.prices[0].price;
         });
+    }
+
+    async function getDecants() {
+        return products.decants;
     }
 
     function selectProduct(type, index, product, container) {
