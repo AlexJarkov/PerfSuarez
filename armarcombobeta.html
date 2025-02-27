@@ -18,20 +18,22 @@
 
 <body>
     <div data-include="../header.html"></div>
-    <main>
-        <section id="combos-personalizados">
-            <div class="container">
-                <h2>Combos y Sets</h2>
+    <main id="combos-personalizados">
+        <section class="container">
+            <h2 class="title">Combos y Sets Personalizados</h2>
+            
+            <div class="combo-controls">
                 <div class="combo-type-selection">
-                    <label for="combo-type">Selecciona el tipo de combo:</label>
-                    <select id="combo-type" onchange="toggleComboType()">
+                    <label for="combo-type">Tipo de combo:</label>
+                    <select id="combo-type">
                         <option value="perfumes">Combo de Perfumes</option>
                         <option value="decants">Set de Decants</option>
                     </select>
                 </div>
+                
                 <div id="decant-quantity-container" class="hidden">
-                    <label for="decant-quantity">Selecciona la cantidad de decants:</label>
-                    <select id="decant-quantity" onchange="populateComboItems()">
+                    <label for="decant-quantity">Cantidad de decants:</label>
+                    <select id="decant-quantity">
                         <option value="5">5</option>
                         <option value="6">6</option>
                         <option value="7">7</option>
@@ -40,18 +42,19 @@
                         <option value="10">10</option>
                     </select>
                 </div>
-                <div id="combo-items" class="combo-grid"></div>
+            </div>
 
-        <div class="total-container">
-            <p id="savings">Estás ahorrando: $0.00</p>
-            <h2>Total: <span id="total-price-currency">$</span><span id="total-price">0.00</span></h2>
-        </div>
+            <div class="combo-builder-grid" id="combo-items"></div>
 
-                <div class="whatsapp-button">
-                    <a id="whatsapp-link" class="disabled" href="javascript:void(0);">Selecciona tres perfumes y el
-                        regalo para
-                        continuar</a>
-                </div>
+            <div class="total-container-combo">
+                <p id="savings">Estás ahorrando: $0.00</p>
+                <h3>Total: <span id="total-price-currency">$</span><span id="total-price">0.00</span></h3>
+            </div>
+
+            <div class="whatsapp-button">
+                <a id="whatsapp-link" class="disabled" href="javascript:void(0);">Selecciona tres perfumes y el
+                    regalo para
+                    continuar</a>
             </div>
         </section>
     </main>
