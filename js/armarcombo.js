@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const doc = parser.parseFromString(texto, 'text/html');
 
             return Array.from(doc.querySelectorAll('.decant'))
-                .filter(elemento => !elemento.querySelector('.etiquetas .fuera-de-stock'))
+                .filter(elemento => !elemento.querySelector('.etiquetas .fuera-de-stock' && '.etiquetas .a-pedido'))
                 .map(elemento => {
                     const precios = Array.from(elemento.querySelectorAll('p'))
                         .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
@@ -278,43 +278,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function actualizarTotal() {
         let total = 0;
+        let originalTotal = 0; // Nuevo: Total sin descuentos
         let productosSeleccionados = 0;
         const tipoCombo = comboTypeSelect.value;
         const esDecants = tipoCombo === 'decants';
         const cantidadDecants = esDecants ? parseInt(decantQuantitySelect.value) : 0;
-
-        // Calcular descuentos para decants
+    
+        // Calcular descuento adicional para decants
         let descuentoExtra = 0;
         if (esDecants) {
-            const descuentos = { 5: 0, 6: 2, 7: 4, 8: 6, 9: 8, 10: 10 };
+            const descuentos = {5:0, 6:2, 7:4, 8:6, 9:8, 10:10};
             descuentoExtra = descuentos[cantidadDecants] || 0;
         }
-
+    
         document.querySelectorAll('.size-selector').forEach(selector => {
             if (selector.value) {
                 const producto = JSON.parse(selector.dataset.producto);
                 const precioData = JSON.parse(selector.value);
-
+                
+                // Calcular valores originales
+                const precioOriginal = precioData.precio;
+                originalTotal += precioOriginal;
+    
                 if (producto.tipo === 'decants') {
-                    // Cálculo para decants
+                    // Cálculo para decants con descuento
                     const descuentoTotal = 10 + descuentoExtra;
-                    total += precioData.precio * (1 - descuentoTotal / 100);
+                    const precioDescontado = precioOriginal * (1 - descuentoTotal/100);
+                    total += precioDescontado;
                     productosSeleccionados++;
                 } else {
-                    // Cálculo para perfumes usando SKU
+                    // Cálculo normal para perfumes
                     if (producto.sku) {
                         const cifrado = costosCifrados[producto.sku];
                         const costoBase = descifrarCosto(cifrado);
-                        total += (costoBase + 50) * 1.354; // Fórmula existente
+                        total += (costoBase + 50) * 1.354;
                     }
                     productosSeleccionados++;
                 }
             }
         });
-
+    
+        // Calcular ahorro
+        const ahorro = originalTotal - total;
+        const moneda = esDecants ? 'Bs' : '$';
+        
         // Actualizar UI
         document.getElementById('total-price').textContent = total.toFixed(2);
-        document.getElementById('total-price-currency').textContent = esDecants ? 'Bs' : '$';
+        document.getElementById('total-price-currency').textContent = moneda;
+        document.getElementById('savings').textContent = 
+            `Estás ahorrando: ${moneda}${ahorro.toFixed(2)}`;
+    
         actualizarBotonWhatsApp(productosSeleccionados);
         actualizarEnlaceWhatsApp(total, esDecants);
     }
