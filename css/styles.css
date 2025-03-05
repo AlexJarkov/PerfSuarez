@@ -353,7 +353,7 @@ main {
         gap: 10px; /* Reduce el espacio entre los elementos si es necesario */
     }
 
-    #decants .decant img {
+    #decants .decant, .perfume img {
         height: 150px;
     }
 }
