@@ -5,282 +5,294 @@ document.addEventListener('DOMContentLoaded', () => {
     const comboItemsContainer = document.getElementById('combo-items');
     const whatsappLink = document.getElementById('whatsapp-link');
     
-    let products = {
+    // Configuración de seguridad
+    const CRYPTO_KEY = 'TuClaveSuperSecreta'; // ¡CAMBIAR ESTO!
+    const costosCifrados = {
+        "PERF-001": "7a57416a6f6d",
+        "PERF-002": "7a58416a6f6d",
+        "PERF-003": "7a59416a6f6d"
+    };
+
+    let productos = {
         perfumes: [],
         decants: []
     };
 
     // Cargar productos inicialmente
-    loadProducts();
+    cargarProductos();
 
-    async function loadProducts() {
+    async function cargarProductos() {
         try {
-            products.perfumes = await fetchProducts('perfumes');
-            products.decants = await fetchProducts('decants');
-            populateComboItems();
+            productos.perfumes = await obtenerProductos('perfumes');
+            productos.decants = await obtenerProductos('decants');
+            actualizarInterfaz();
         } catch (error) {
             console.error('Error cargando productos:', error);
         }
     }
 
-    async function fetchProducts(category) {
-        const file = `${category}.html`;
+    async function obtenerProductos(tipo) {
+        const archivo = `${tipo}.html`;
         try {
-            const response = await fetch(file);
-            const text = await response.text();
+            const respuesta = await fetch(archivo);
+            const texto = await respuesta.text();
             const parser = new DOMParser();
-            const doc = parser.parseFromString(text, 'text/html');
+            const doc = parser.parseFromString(texto, 'text/html');
             
-            return Array.from(doc.querySelectorAll(`.${category}`)).map(element => {
-                const prices = Array.from(element.querySelectorAll('p'))
+            return Array.from(doc.querySelectorAll('.producto')).map(elemento => ({
+                sku: elemento.dataset.sku,
+                nombre: elemento.dataset.nombre,
+                imagen: elemento.querySelector('img').src,
+                precios: Array.from(elemento.querySelectorAll('p'))
                     .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
                     .map(p => {
                         const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
                         return {
-                            size: parseInt(match[1]),
-                            price: parseFloat(match[2])
+                            tamaño: parseInt(match[1]),
+                            precio: parseFloat(match[2])
                         };
-                    }).sort((a, b) => a.size - b.size);
-
-                return {
-                    name: element.dataset.name,
-                    image: element.querySelector('img').src,
-                    prices: prices,
-                    cost: parseFloat(element.dataset.cost || 0),
-                    tags: element.dataset.tags || ''
-                };
-            });
+                    }).sort((a, b) => a.tamaño - b.tamaño),
+                etiquetas: elemento.dataset.etiquetas || ''
+            }));
         } catch (error) {
-            console.error(`Error cargando ${file}:`, error);
+            console.error(`Error cargando ${archivo}:`, error);
             return [];
         }
     }
 
-    function toggleComboType() {
-        const type = comboTypeSelect.value;
-        decantQuantityContainer.classList.toggle('hidden', type !== 'decants');
-        populateComboItems();
+    function manejarCambioTipo() {
+        const tipo = comboTypeSelect.value;
+        decantQuantityContainer.classList.toggle('hidden', tipo !== 'decants');
+        actualizarInterfaz();
     }
 
-    function populateComboItems() {
+    function actualizarInterfaz() {
         comboItemsContainer.innerHTML = '';
-        const type = comboTypeSelect.value;
-        const count = type === 'decants' ? parseInt(decantQuantitySelect.value) : 3;
+        const tipo = comboTypeSelect.value;
+        const cantidad = tipo === 'decants' 
+            ? parseInt(decantQuantitySelect.value) 
+            : 3;
 
-        for (let i = 0; i < count; i++) {
-            comboItemsContainer.appendChild(createComboItem(type, i));
+        for (let i = 0; i < cantidad; i++) {
+            comboItemsContainer.appendChild(crearItemCombo(tipo, i));
         }
 
-        if (type === 'perfumes') {
-            comboItemsContainer.appendChild(createGiftSelector());
+        if (tipo === 'perfumes') {
+            comboItemsContainer.appendChild(crearSelectorRegalo());
         }
 
-        handleResize();
+        manejarRedimension();
     }
 
-    function createComboItem(type, index) {
+    function crearItemCombo(tipo, indice) {
         const item = document.createElement('div');
         item.className = 'combo-item';
         item.innerHTML = `
             <div class="combo-selection">
-                <img src="imagenes/image.webp" alt="${type}" id="${type}-image-${index}">
-                <h3>${type === 'perfumes' ? 'Perfume' : 'Decant'} ${index + 1}</h3>
-                <p id="${type}-name-${index}"></p>
+                <img src="imagenes/image.webp" alt="${tipo}" id="${tipo}-imagen-${indice}">
+                <h3>${tipo === 'perfumes' ? 'Perfume' : 'Decant'} ${indice + 1}</h3>
+                <p id="${tipo}-nombre-${indice}"></p>
                 <button class="dropdown-toggle">Seleccionar</button>
-                <div class="dropdown" id="${type}-dropdown-${index}"></div>
+                <div class="dropdown" id="${tipo}-dropdown-${indice}"></div>
             </div>
         `;
 
         const dropdown = item.querySelector('.dropdown');
-        populateDropdown(type, index, dropdown);
-        setupDropdownToggle(item);
-
+        poblarDropdown(tipo, indice, dropdown);
+        configurarEventosDropdown(item);
         return item;
     }
 
-    async function populateDropdown(type, index, dropdown) {
+    async function poblarDropdown(tipo, indice, dropdown) {
         try {
-            const products = type === 'perfumes' 
-                ? await getFilteredPerfumes() 
-                : await getDecants();
-    
-            dropdown.innerHTML = ''; // Limpiar contenido previo
-    
-            products.forEach(product => {
-                const item = document.createElement('div');
-                item.className = 'dropdown-item-combo';
-                item.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="dropdown-product-image">
+            const productosFiltrados = tipo === 'perfumes' 
+                ? await obtenerPerfumesFiltrados() 
+                : productos.decants;
+
+            dropdown.innerHTML = productosFiltrados.map(producto => `
+                <div class="dropdown-item-combo" data-sku="${producto.sku}">
+                    <img src="${producto.imagen}" alt="${producto.nombre}" class="dropdown-product-image">
                     <div class="dropdown-product-info">
-                        <p class="dropdown-product-name">${product.name}</p>
+                        <p class="dropdown-product-name">${producto.nombre}</p>
                         <p class="dropdown-product-prices">
-                            ${product.prices.map(price => `${price.size}ml - ${type === 'decants' ? 'Bs' : '$'}${price.price}`).join(' • ')}
+                            ${producto.precios.map(p => `${p.tamaño}ml - ${tipo === 'decants' ? 'Bs' : '$'}${p.precio}`).join(' • ')}
                         </p>
                     </div>
-                `;
-    
-                item.onclick = (e) => {
-                    e.stopPropagation();
-                    selectProduct(type, index, product, item.closest('.combo-item'));
-                    dropdown.classList.remove('show');
-                };
-    
-                dropdown.appendChild(item);
+                </div>
+            `).join('');
+
+            dropdown.querySelectorAll('.dropdown-item-combo').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    const sku = item.dataset.sku;
+                    const producto = productosFiltrados.find(p => p.sku === sku);
+                    seleccionarProducto(tipo, indice, producto, item.closest('.combo-item'));
+                });
             });
-    
+
         } catch (error) {
             console.error('Error poblando dropdown:', error);
             dropdown.innerHTML = '<div class="dropdown-error">Error cargando productos</div>';
         }
     }
 
-    async function getFilteredPerfumes() {
-        return (await products.perfumes).filter(product => {
-            const cost = product.cost || 0;
-            const calculatedPrice = (parseFloat(cost) + 50) * 1.354;
-            return calculatedPrice > product.prices[0].price;
+    async function obtenerPerfumesFiltrados() {
+        return (await productos.perfumes).filter(producto => {
+            const cifrado = costosCifrados[producto.sku];
+            if (!cifrado) return false;
+            
+            const costo = descifrarCosto(cifrado);
+            if (!costo) return false;
+            
+            const precioMinimo = (costo + 50) * 1.354;
+            return producto.precios[0].precio > precioMinimo;
         });
     }
 
-    async function getDecants() {
-        return products.decants;
+    function descifrarCosto(cifrado) {
+        try {
+            const textoCifrado = atob(cifrado);
+            return parseFloat(
+                textoCifrado.split('')
+                    .map((char, i) => 
+                        String.fromCharCode(char.charCodeAt(0) ^ 
+                        CRYPTO_KEY.charCodeAt(i % CRYPTO_KEY.length))
+                    ).join('')
+            );
+        } catch (error) {
+            console.error('Error descifrando:', error);
+            return null;
+        }
     }
 
-    function selectProduct(type, index, product, container) {
-        const selection = container.querySelector('.combo-selection');
-        selection.querySelector(`#${type}-name-${index}`).textContent = product.name;
-        selection.querySelector(`#${type}-image-${index}`).src = product.image;
+    function seleccionarProducto(tipo, indice, producto, contenedor) {
+        contenedor.querySelector(`#${tipo}-nombre-${indice}`).textContent = producto.nombre;
+        contenedor.querySelector(`#${tipo}-imagen-${indice}`).src = producto.imagen;
 
-        // Crear selector de tamaño
-        const sizeContainer = document.createElement('div');
-        sizeContainer.className = 'size-selector-container visible';
-        sizeContainer.innerHTML = `
-            <select class="size-selector" data-product-id="${type}-${index}">
-                ${product.prices.map(price => `
-                    <option value="${price.price}">${price.size}ml - ${type === 'decants' ? 'Bs' : '$'}${price.price.toFixed(2)}</option>
-                `).join('')}
-            </select>
-        `;
+        const selectorTamano = document.createElement('select');
+        selectorTamano.className = 'size-selector';
+        producto.precios.forEach(precio => {
+            const opcion = document.createElement('option');
+            opcion.value = precio.precio;
+            opcion.textContent = `${precio.tamaño}ml - ${tipo === 'decants' ? 'Bs' : '$'}${precio.precio}`;
+            selectorTamano.appendChild(opcion);
+        });
 
-        sizeContainer.querySelector('select').addEventListener('change', updateTotal);
-        selection.querySelector('.size-selector-container')?.remove();
-        selection.appendChild(sizeContainer);
+        contenedor.querySelector('.size-selector-container')?.remove();
+        contenedor.querySelector('.combo-selection').appendChild(selectorTamano);
+        selectorTamano.addEventListener('change', actualizarTotal);
         
-        updateTotal();
+        actualizarTotal();
     }
 
-    function createGiftSelector() {
-        const gifts = [
-            { name: 'Waka', image: 'imagenes/waka.webp' },
-            { name: 'Vela aromática', image: 'imagenes/vela.jpg' }
+    function crearSelectorRegalo() {
+        const regalos = [
+            { nombre: 'Waka', imagen: 'imagenes/waka.webp' },
+            { nombre: 'Vela aromática', imagen: 'imagenes/vela.jpg' }
         ];
 
         const item = document.createElement('div');
         item.className = 'combo-item';
         item.innerHTML = `
             <div class="combo-selection">
-                <img src="imagenes/gift.jpg" alt="Regalo" id="gift-image">
+                <img src="imagenes/gift.jpg" alt="Regalo" id="regalo-imagen">
                 <h3>Regalo</h3>
-                <p id="gift-name"></p>
+                <p id="regalo-nombre"></p>
                 <button class="dropdown-toggle">Seleccionar Regalo</button>
-                <div class="dropdown" id="gift-dropdown"></div>
+                <div class="dropdown" id="regalo-dropdown"></div>
             </div>
         `;
 
         const dropdown = item.querySelector('.dropdown');
-        gifts.forEach(gift => {
-            const giftItem = document.createElement('div');
-            giftItem.className = 'dropdown-item';
-            giftItem.innerHTML = `
-                <img src="${gift.image}" alt="${gift.name}">
-                <p>${gift.name}</p>
+        regalos.forEach(regalo => {
+            const elementoRegalo = document.createElement('div');
+            elementoRegalo.className = 'dropdown-item';
+            elementoRegalo.innerHTML = `
+                <img src="${regalo.imagen}" alt="${regalo.nombre}">
+                <p>${regalo.nombre}</p>
             `;
-            giftItem.onclick = () => {
-                item.querySelector('#gift-name').textContent = gift.name;
-                item.querySelector('#gift-image').src = gift.image;
-                updateTotal();
+            elementoRegalo.onclick = () => {
+                item.querySelector('#regalo-nombre').textContent = regalo.nombre;
+                item.querySelector('#regalo-imagen').src = regalo.imagen;
             };
-            dropdown.appendChild(giftItem);
+            dropdown.appendChild(elementoRegalo);
         });
 
-        setupDropdownToggle(item);
+        configurarEventosDropdown(item);
         return item;
     }
 
-    function setupDropdownToggle(container) {
-        const toggle = container.querySelector('.dropdown-toggle');
-        const dropdown = container.querySelector('.dropdown');
+    function configurarEventosDropdown(contenedor) {
+        const boton = contenedor.querySelector('.dropdown-toggle');
+        const dropdown = contenedor.querySelector('.dropdown');
         
-        toggle.addEventListener('click', (e) => {
+        boton.addEventListener('click', (e) => {
             e.stopPropagation();
             dropdown.classList.toggle('show');
-            closeOtherDropdowns(dropdown);
+            cerrarOtrosDropdowns(dropdown);
         });
     }
 
-    function closeOtherDropdowns(current) {
+    function cerrarOtrosDropdowns(actual) {
         document.querySelectorAll('.dropdown').forEach(d => {
-            if (d !== current) d.classList.remove('show');
+            if (d !== actual) d.classList.remove('show');
         });
     }
 
-    function updateTotal() {
+    function actualizarTotal() {
         let total = 0;
-        let originalTotal = 0;
-        let selectedCount = 0;
+        let productosSeleccionados = 0;
 
         document.querySelectorAll('.combo-item').forEach(item => {
             const selector = item.querySelector('.size-selector');
             if (selector) {
-                const price = parseFloat(selector.value);
-                total += price;
-                selectedCount++;
+                total += parseFloat(selector.value);
+                productosSeleccionados++;
             }
         });
 
         document.getElementById('total-price').textContent = total.toFixed(2);
-        updateWhatsappLink(total);
-        updateWhatsappButton(selectedCount);
+        actualizarBotonWhatsApp(productosSeleccionados);
+        actualizarEnlaceWhatsApp(total);
     }
 
-    function updateWhatsappButton(selectedCount) {
-        const required = comboTypeSelect.value === 'decants' 
+    function actualizarBotonWhatsApp(seleccionados) {
+        const requeridos = comboTypeSelect.value === 'decants' 
             ? parseInt(decantQuantitySelect.value)
             : 3;
 
-        whatsappLink.classList.toggle('disabled', selectedCount < required);
+        whatsappLink.classList.toggle('disabled', seleccionados < requeridos);
     }
 
-    function updateWhatsappLink(total) {
-        const type = comboTypeSelect.value;
-        const currency = type === 'decants' ? 'Bs' : '$';
-        let message = `¡Hola! Quiero armar mi combo de ${type}:\n\n`;
+    function actualizarEnlaceWhatsApp(total) {
+        const tipo = comboTypeSelect.value;
+        const moneda = tipo === 'decants' ? 'Bs' : '$';
+        let mensaje = `¡Hola! Quiero armar mi combo de ${tipo}:\n\n`;
 
-        document.querySelectorAll('.combo-item').forEach((item, index) => {
-            const name = item.querySelector('[id$="-name"]')?.textContent;
-            const size = item.querySelector('.size-selector')?.selectedOptions[0]?.textContent;
+        document.querySelectorAll('.combo-item').forEach((item, indice) => {
+            const nombre = item.querySelector('[id$="-nombre"]')?.textContent;
+            const tamano = item.querySelector('.size-selector')?.selectedOptions[0]?.textContent;
             
-            if (name) {
-                message += `➤ ${name}${size ? ` (${size})` : ''}\n`;
+            if (nombre) {
+                mensaje += `➤ ${nombre}${tamano ? ` (${tamano})` : ''}\n`;
             }
         });
 
-        message += `\nTotal: ${currency} ${total.toFixed(2)}`;
-        whatsappLink.href = `https://wa.me/78064327?text=${encodeURIComponent(message)}`;
+        mensaje += `\nTotal: ${moneda} ${total.toFixed(2)}`;
+        whatsappLink.href = `https://wa.me/78064327?text=${encodeURIComponent(mensaje)}`;
     }
 
-    function handleResize() {
+    function manejarRedimension() {
         comboItemsContainer.style.gridTemplateColumns = window.innerWidth < 768 
             ? '1fr' 
             : 'repeat(auto-fill, minmax(250px, 1fr))';
     }
 
     // Event Listeners
-    comboTypeSelect.addEventListener('change', toggleComboType);
-    decantQuantitySelect.addEventListener('change', populateComboItems);
-    window.addEventListener('resize', handleResize);
-    document.addEventListener('click', closeOtherDropdowns.bind(null, null));
+    comboTypeSelect.addEventListener('change', manejarCambioTipo);
+    decantQuantitySelect.addEventListener('change', actualizarInterfaz);
+    window.addEventListener('resize', manejarRedimension);
+    document.addEventListener('click', cerrarOtrosDropdowns.bind(null, null));
 
     // Inicialización
-    handleResize();
+    manejarRedimension();
 });
