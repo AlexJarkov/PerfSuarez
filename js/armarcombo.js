@@ -6,22 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const whatsappLink = document.getElementById('whatsapp-link');
 
     const SKUS_PERMITIDOS = [
-        "PERF-001", // Bad Boy Extreme
-        "PERF-002", // Bad Boy Cobalt
-        "PERF-003", // Bad Boy Cobalt Elixir
-        "PERF-004", // Bad Boy Le Parfum
-        "PERF-005", // Bad Boy EDT
-        // Añade aquí los SKUs que deseas permitir
+        "PERF-033", 
+        "PERF-037", 
+        "PERF-039", 
+        "PERF-057", 
+        "PERF-058", 
+        "PERF-059", 
+        "PERF-060", 
     ];
     
-    // Lista manual de SKUs permitidos (¡Actualiza esta lista!)
     const PRECIOS_COMBOS = {
-        "PERF-001": 150.00, // Precio precalculado para Bad Boy Extreme
-        "PERF-002": 150.00, // Precio precalculado para Bad Boy Cobalt
-        "PERF-003": 160.00, // Precio precalculado para Bad Boy Cobalt Elixir
-        "PERF-004": 160.00, // Precio precalculado para Bad Boy Le Parfum
-        "PERF-005": 140.00, // Precio precalculado para Bad Boy EDT
-        // Añade aquí los precios para los demás SKUs
+        "PERF-033-100": 96.00, 
+        "PERF-037-100": 116.00, 
+        "PERF-039-100": 121.00, 
+        "PERF-057-100": 73.00, 
+        "PERF-058-100": 71.00,
+        "PERF-059-100": 70.00,
+        "PERF-060-100": 104.00, 
     };
 
     let productos = {
@@ -52,30 +53,34 @@ document.addEventListener('DOMContentLoaded', () => {
             
             return Array.from(doc.querySelectorAll('.decant'))
                 .filter(elemento => {
-                    // Filtros básicos
                     const tieneStock = !elemento.querySelector('.etiquetas .fuera-de-stock');
                     const esPermitido = tipo === 'perfumes' 
-                        ? SKUS_PERMITIDOS.includes(elemento.dataset.sku)
+                        ? SKUS_PERMITIDOS.some(sku => elemento.dataset.baseSku === sku.split('-')[0])
                         : true;
                     
                     return tieneStock && esPermitido;
                 })
-                .map(elemento => ({
-                    sku: elemento.dataset.sku,
-                    nombre: elemento.dataset.name,
-                    imagen: elemento.querySelector('img').src,
-                    precios: Array.from(elemento.querySelectorAll('p'))
-                        .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
-                        .map(p => {
-                            const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
-                            return {
-                                tamaño: parseInt(match[1]),
-                                precio: parseFloat(match[2]),
-                                moneda: p.textContent.includes('Bs') ? 'Bs' : '$'
-                            };
-                        }).sort((a, b) => a.tamaño - b.tamaño),
-                    tipo: tipo
-                }));
+                .map(elemento => {
+                    const baseSKU = elemento.dataset.baseSku;
+                    
+                    return {
+                        nombre: elemento.dataset.name,
+                        imagen: elemento.querySelector('img').src,
+                        precios: Array.from(elemento.querySelectorAll('p'))
+                            .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
+                            .map(p => {
+                                const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
+                                return {
+                                    sku: p.dataset.sku, // SKU completo con tamaño
+                                    tamaño: parseInt(match[1]),
+                                    precio: parseFloat(match[2]),
+                                    moneda: p.textContent.includes('Bs') ? 'Bs' : '$'
+                                };
+                            }).sort((a, b) => a.tamaño - b.tamaño),
+                        tipo: tipo,
+                        baseSKU: baseSKU
+                    };
+                });
         } catch (error) {
             console.error(`Error cargando ${archivo}:`, error);
             return [];
@@ -212,25 +217,36 @@ document.addEventListener('DOMContentLoaded', () => {
         contenedor.querySelector(`#${tipo}-imagen-${indice}`).src = producto.imagen;
     
         // Limpiar selectores anteriores
-        const containerSelector = contenedor.querySelector(`#${tipo}-size-${indice}`);
-        containerSelector.innerHTML = '';
+        contenedor.querySelector('.size-selector-container')?.remove();
         
-        // Crear y agregar selector de tamaños
+        // Crear selector de tamaños
         const selector = document.createElement('select');
         selector.className = 'size-selector';
         
         producto.precios.forEach(precio => {
             const opcion = document.createElement('option');
-            opcion.value = JSON.stringify(precio);
+            opcion.value = JSON.stringify({
+                sku: precio.sku,
+                precio: precio.precio,
+                moneda: precio.moneda
+            });
             opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
             selector.appendChild(opcion);
         });
     
-        // Almacenar datos del producto
-        selector.dataset.producto = JSON.stringify(producto);
-        selector.addEventListener('change', actualizarTotal);
+        // Almacenar datos base del producto
+        selector.dataset.producto = JSON.stringify({
+            nombre: producto.nombre,
+            tipo: producto.tipo,
+            baseSKU: producto.baseSKU
+        });
+    
+        const container = document.createElement('div');
+        container.className = 'size-selector-container';
+        container.appendChild(selector);
+        contenedor.querySelector('.combo-selection').appendChild(container);
         
-        containerSelector.appendChild(selector);
+        selector.addEventListener('change', actualizarTotal);
         actualizarTotal();
     }
 
@@ -291,12 +307,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function actualizarTotal() {
         let total = 0;
+        let originalTotal = 0;
         let productosSeleccionados = 0;
         const tipoCombo = comboTypeSelect.value;
         const esDecants = tipoCombo === 'decants';
         const cantidadDecants = esDecants ? parseInt(decantQuantitySelect.value) : 0;
     
-        // Calcular descuento adicional para decants
         let descuentoExtra = 0;
         if (esDecants) {
             const descuentos = {5:0, 6:2, 7:4, 8:6, 9:8, 10:10};
@@ -305,18 +321,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
         document.querySelectorAll('.size-selector').forEach(selector => {
             if (selector.value) {
-                const producto = JSON.parse(selector.dataset.producto);
                 const precioData = JSON.parse(selector.value);
+                const producto = JSON.parse(selector.dataset.producto);
                 
                 if (producto.tipo === 'decants') {
-                    // Cálculo para decants con descuento
                     const descuentoTotal = 10 + descuentoExtra;
-                    total += precioData.precio * (1 - descuentoTotal/100);
+                    const precioDescontado = precioData.precio * (1 - descuentoTotal/100);
+                    
+                    originalTotal += precioData.precio;
+                    total += precioDescontado;
                     productosSeleccionados++;
-                } else if (SKUS_PERMITIDOS.includes(producto.sku)) {
-                    // Para perfumes completos permitidos, usar el precio precalculado
-                    const precioCombo = PRECIOS_COMBOS[producto.sku];
+                } else {
+                    const precioCombo = PRECIOS_COMBOS[precioData.sku];
+                    
                     if (precioCombo) {
+                        originalTotal += precioData.precio;
                         total += precioCombo;
                         productosSeleccionados++;
                     }
@@ -324,9 +343,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     
-        // Actualizar UI
+        const ahorro = originalTotal - total;
+        const moneda = esDecants ? 'Bs' : '$';
+    
         document.getElementById('total-price').textContent = total.toFixed(2);
-        document.getElementById('total-price-currency').textContent = esDecants ? 'Bs' : '$';
+        document.getElementById('total-price-currency').textContent = moneda;
+        document.getElementById('savings').textContent = 
+            `Estás ahorrando: ${moneda}${ahorro.toFixed(2)}`;
+    
         actualizarBotonWhatsApp(productosSeleccionados);
         actualizarEnlaceWhatsApp(total, esDecants);
     }
@@ -350,15 +374,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (nombre && selector) {
                 const precioData = JSON.parse(selector.value);
-                // Mostrar precio original en el mensaje
-                mensaje += `➤ ${nombre} (${precioData.tamaño}ml - ${precioData.moneda}${precioData.precio})\n`;
+                const producto = JSON.parse(selector.dataset.producto);
+                
+                mensaje += `➤ ${nombre} (${precioData.tamaño}ml - ${producto.baseSKU})\n`;
             }
         });
-    
-        if (esDecants) {
-            const cantidad = parseInt(decantQuantitySelect.value);
-            mensaje += `\nDescuentos aplicados:\n- 10% base\n- ${cantidad > 5 ? (2 * (cantidad - 5)) + '% adicional por cantidad' : ''}`;
-        }
     
         mensaje += `\nTotal: ${moneda} ${total.toFixed(2)}`;
         whatsappLink.href = `https://wa.me/78064327?text=${encodeURIComponent(mensaje)}`;
