@@ -248,18 +248,6 @@ main {
     justify-content: center;
 }
 
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-    .perfume-grid {
-        grid-template-columns: repeat(2, 1fr); /* Fuerza dos columnas */
-        gap: 10px; /* Reduce el espacio entre los elementos si es necesario */
-    }
-
-    #perfumes .perfume img {
-        height: 150px;
-    }
-}
-
 
 
 .combo {
@@ -308,6 +296,7 @@ main {
 #decants .decant {
     background-color: #f5f5f7;
     padding: 15px;
+    padding-bottom: 250px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -328,6 +317,7 @@ main {
 
 #decants .decant img {
     max-width: 100%;
+    max-height: min-content;
     height: 220px;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -348,12 +338,12 @@ main {
 
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
-    .decant-grid {
+    .decant-grid, .perfume-grid {
         grid-template-columns: repeat(2, 1fr); /* Fuerza dos columnas */
         gap: 10px; /* Reduce el espacio entre los elementos si es necesario */
     }
 
-    #decants .decant, .perfume img {
+    #decants .decant{
         height: 150px;
     }
 }
