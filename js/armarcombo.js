@@ -5,12 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const comboItemsContainer = document.getElementById('combo-items');
     const whatsappLink = document.getElementById('whatsapp-link');
 
-    // Configuración de seguridad
-    const CRYPTO_KEY = 'TuClaveSuperSecreta'; // ¡CAMBIAR ESTO!
-    const costosCifrados = {
-        "PERF-001": "7a57416a6f6d",
-        "PERF-002": "7a58416a6f6d",
-        "PERF-003": "7a59416a6f6d"
+    const SKUS_PERMITIDOS = [
+        "PERF-001", // Bad Boy Extreme
+        "PERF-002", // Bad Boy Cobalt
+        "PERF-003", // Bad Boy Cobalt Elixir
+        "PERF-004", // Bad Boy Le Parfum
+        "PERF-005", // Bad Boy EDT
+        // Añade aquí los SKUs que deseas permitir
+    ];
+    
+    // Lista manual de SKUs permitidos (¡Actualiza esta lista!)
+    const PRECIOS_COMBOS = {
+        "PERF-001": 150.00, // Precio precalculado para Bad Boy Extreme
+        "PERF-002": 150.00, // Precio precalculado para Bad Boy Cobalt
+        "PERF-003": 160.00, // Precio precalculado para Bad Boy Cobalt Elixir
+        "PERF-004": 160.00, // Precio precalculado para Bad Boy Le Parfum
+        "PERF-005": 140.00, // Precio precalculado para Bad Boy EDT
+        // Añade aquí los precios para los demás SKUs
     };
 
     let productos = {
@@ -31,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Modificaciones en obtenerProductos
     async function obtenerProductos(tipo) {
         const archivo = `${tipo}.html`;
         try {
@@ -39,11 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const texto = await respuesta.text();
             const parser = new DOMParser();
             const doc = parser.parseFromString(texto, 'text/html');
-
+            
             return Array.from(doc.querySelectorAll('.decant'))
-                .filter(elemento => !elemento.querySelector('.etiquetas .fuera-de-stock' && '.etiquetas .a-pedido'))
-                .map(elemento => {
-                    const precios = Array.from(elemento.querySelectorAll('p'))
+                .filter(elemento => {
+                    // Filtros básicos
+                    const tieneStock = !elemento.querySelector('.etiquetas .fuera-de-stock');
+                    const esPermitido = tipo === 'perfumes' 
+                        ? SKUS_PERMITIDOS.includes(elemento.dataset.sku)
+                        : true;
+                    
+                    return tieneStock && esPermitido;
+                })
+                .map(elemento => ({
+                    sku: elemento.dataset.sku,
+                    nombre: elemento.dataset.name,
+                    imagen: elemento.querySelector('img').src,
+                    precios: Array.from(elemento.querySelectorAll('p'))
                         .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
                         .map(p => {
                             const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
@@ -52,22 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 precio: parseFloat(match[2]),
                                 moneda: p.textContent.includes('Bs') ? 'Bs' : '$'
                             };
-                        }).sort((a, b) => a.tamaño - b.tamaño);
-
-                    return {
-                        nombre: elemento.dataset.name,
-                        imagen: elemento.querySelector('img').src,
-                        precios: precios,
-                        tipo: tipo,
-                        sku: tipo === 'perfumes' ? elemento.dataset.sku : null // SKU solo para perfumes
-                    };
-                });
+                        }).sort((a, b) => a.tamaño - b.tamaño),
+                    tipo: tipo
+                }));
         } catch (error) {
             console.error(`Error cargando ${archivo}:`, error);
             return [];
         }
     }
-
 
     function manejarCambioTipo() {
         const tipo = comboTypeSelect.value;
@@ -278,7 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function actualizarTotal() {
         let total = 0;
-        let originalTotal = 0; // Nuevo: Total sin descuentos
         let productosSeleccionados = 0;
         const tipoCombo = comboTypeSelect.value;
         const esDecants = tipoCombo === 'decants';
@@ -296,41 +308,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 const producto = JSON.parse(selector.dataset.producto);
                 const precioData = JSON.parse(selector.value);
                 
-                // Calcular valores originales
-                const precioOriginal = precioData.precio;
-                originalTotal += precioOriginal;
-    
                 if (producto.tipo === 'decants') {
                     // Cálculo para decants con descuento
                     const descuentoTotal = 10 + descuentoExtra;
-                    const precioDescontado = precioOriginal * (1 - descuentoTotal/100);
-                    total += precioDescontado;
+                    total += precioData.precio * (1 - descuentoTotal/100);
                     productosSeleccionados++;
-                } else {
-                    // Cálculo normal para perfumes
-                    if (producto.sku) {
-                        const cifrado = costosCifrados[producto.sku];
-                        const costoBase = descifrarCosto(cifrado);
-                        total += (costoBase + 50) * 1.354;
+                } else if (SKUS_PERMITIDOS.includes(producto.sku)) {
+                    // Para perfumes completos permitidos, usar el precio precalculado
+                    const precioCombo = PRECIOS_COMBOS[producto.sku];
+                    if (precioCombo) {
+                        total += precioCombo;
+                        productosSeleccionados++;
                     }
-                    productosSeleccionados++;
                 }
             }
         });
     
-        // Calcular ahorro
-        const ahorro = originalTotal - total;
-        const moneda = esDecants ? 'Bs' : '$';
-        
         // Actualizar UI
         document.getElementById('total-price').textContent = total.toFixed(2);
-        document.getElementById('total-price-currency').textContent = moneda;
-        document.getElementById('savings').textContent = 
-            `Estás ahorrando: ${moneda}${ahorro.toFixed(2)}`;
-    
+        document.getElementById('total-price-currency').textContent = esDecants ? 'Bs' : '$';
         actualizarBotonWhatsApp(productosSeleccionados);
         actualizarEnlaceWhatsApp(total, esDecants);
     }
+
 
     function actualizarBotonWhatsApp(seleccionados) {
         const requeridos = comboTypeSelect.value === 'decants'
