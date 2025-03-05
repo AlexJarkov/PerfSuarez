@@ -1213,6 +1213,9 @@ footer {
 .combo-selection {
     position: relative;
     text-align: center;
+    padding: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
 }
 
 .combo-builder-dropdown {
@@ -1253,6 +1256,15 @@ footer {
     background: #f8f9fa;
 }
 
+.combo-selection .selected-product {
+    border: 2px solid #4CAF50;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border-color: #4CAF50;
+    background-color: #f8fff8;
+}
+
 .dropdown-item-combo img {
     width: 60px;
     height: 60px;
@@ -1260,15 +1272,6 @@ footer {
     border-radius: 8px;
 }
 
-.size-selector-container {
-    margin-top: 15px;
-    display: none;
-}
-
-.size-selector-container.visible {
-    display: block;
-    animation: slideIn 0.3s ease;
-}
 
 @keyframes slideIn {
     from { opacity: 0; transform: translateY(-10px); }
@@ -1287,6 +1290,7 @@ footer {
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 16px;
+    background-color: #fff;
 }
 
 .total-container-combo {

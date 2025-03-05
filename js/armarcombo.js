@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }).sort((a, b) => a.tamaño - b.tamaño);
 
                     return {
-                        sku: elemento.dataset.sku,
-                        nombre: elemento.dataset.name, // Cambiado a data-name
+                        nombre: elemento.dataset.name,
                         imagen: elemento.querySelector('img').src,
                         precios: precios,
-                        tipo: tipo
+                        tipo: tipo,
+                        sku: tipo === 'perfumes' ? elemento.dataset.sku : null // SKU solo para perfumes
                     };
                 });
         } catch (error) {
@@ -103,9 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p id="${tipo}-nombre-${indice}"></p>
                 <button class="dropdown-toggle">Seleccionar</button>
                 <div class="dropdown" id="${tipo}-dropdown-${indice}"></div>
+                <!-- Contenedor para el selector de tamaños -->
+                <div class="size-selector-container" id="${tipo}-size-${indice}"></div>
             </div>
         `;
-
+    
         const dropdown = item.querySelector('.dropdown');
         poblarDropdown(tipo, indice, dropdown);
         configurarEventosDropdown(item);
@@ -118,20 +120,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? productos.perfumes
                 : productos.decants;
 
-            dropdown.innerHTML = productosFiltrados.map(producto => `
-            <div class="dropdown-item-combo" data-sku="${producto.sku}">
-                <img src="${producto.imagen}" alt="${producto.nombre}" class="dropdown-product-image">
-                <div class="dropdown-product-info">
-                    <p class="dropdown-product-name">${producto.nombre}</p>
-                </div>
+            dropdown.innerHTML = productosFiltrados.map((producto, index) => `
+        <div class="dropdown-item-combo" data-index="${index}">
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="dropdown-product-image">
+            <div class="dropdown-product-info">
+                <p class="dropdown-product-name">${producto.nombre}</p>
             </div>
-        `).join('');
+        </div>
+    `).join('');
 
             dropdown.querySelectorAll('.dropdown-item-combo').forEach(item => {
                 item.addEventListener('click', (e) => {
-                    const sku = item.dataset.sku;
-                    const producto = productosFiltrados.find(p => p.sku === sku);
-                    seleccionarProducto(tipo, indice, producto, item.closest('.combo-item'));
+                    const index = item.dataset.index;
+                    const producto = productosFiltrados[index];
+                    const comboItem = item.closest('.combo-item');
+
+                    seleccionarProducto(tipo, indice, producto, comboItem);
+                    dropdown.classList.remove('show');
                 });
             });
 
@@ -144,17 +149,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function crearSelectorTamanos(producto) {
         const contenedor = document.createElement('div');
         contenedor.className = 'size-selector-container';
-
+        
         const selector = document.createElement('select');
         selector.className = 'size-selector';
-
+        
         producto.precios.forEach((precio, index) => {
             const opcion = document.createElement('option');
-            opcion.value = JSON.stringify(precio); // Guardamos todos los datos
-            opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
+            opcion.value = JSON.stringify(precio);
+            // Mostrar solo el tamaño sin precio
+            opcion.textContent = `${precio.tamaño}ml`;
             selector.appendChild(opcion);
         });
-
+    
         contenedor.appendChild(selector);
         return contenedor;
     }
@@ -191,15 +197,27 @@ document.addEventListener('DOMContentLoaded', () => {
     function seleccionarProducto(tipo, indice, producto, contenedor) {
         contenedor.querySelector(`#${tipo}-nombre-${indice}`).textContent = producto.nombre;
         contenedor.querySelector(`#${tipo}-imagen-${indice}`).src = producto.imagen;
-
+    
         // Limpiar selectores anteriores
-        contenedor.querySelector('.size-selector-container')?.remove();
-
-        // Agregar nuevo selector de tamaños
-        const selectorContainer = crearSelectorTamanos(producto);
-        contenedor.querySelector('.combo-selection').appendChild(selectorContainer);
-
-        selectorContainer.querySelector('select').addEventListener('change', actualizarTotal);
+        const containerSelector = contenedor.querySelector(`#${tipo}-size-${indice}`);
+        containerSelector.innerHTML = '';
+        
+        // Crear y agregar selector de tamaños
+        const selector = document.createElement('select');
+        selector.className = 'size-selector';
+        
+        producto.precios.forEach(precio => {
+            const opcion = document.createElement('option');
+            opcion.value = JSON.stringify(precio);
+            opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
+            selector.appendChild(opcion);
+        });
+    
+        // Almacenar datos del producto
+        selector.dataset.producto = JSON.stringify(producto);
+        selector.addEventListener('change', actualizarTotal);
+        
+        containerSelector.appendChild(selector);
         actualizarTotal();
     }
 
@@ -264,39 +282,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const tipoCombo = comboTypeSelect.value;
         const esDecants = tipoCombo === 'decants';
         const cantidadDecants = esDecants ? parseInt(decantQuantitySelect.value) : 0;
-    
-        // Calcular descuento adicional para decants
+
+        // Calcular descuentos para decants
         let descuentoExtra = 0;
         if (esDecants) {
-            const descuentos = {5:0, 6:2, 7:4, 8:6, 9:8, 10:10};
+            const descuentos = { 5: 0, 6: 2, 7: 4, 8: 6, 9: 8, 10: 10 };
             descuentoExtra = descuentos[cantidadDecants] || 0;
         }
-    
-        document.querySelectorAll('.combo-item').forEach(item => {
-            const selector = item.querySelector('.size-selector');
-            if (selector && selector.value) {
+
+        document.querySelectorAll('.size-selector').forEach(selector => {
+            if (selector.value) {
+                const producto = JSON.parse(selector.dataset.producto);
                 const precioData = JSON.parse(selector.value);
-                
-                if (esDecants) {
-                    // Aplicar 10% base + descuento extra
+
+                if (producto.tipo === 'decants') {
+                    // Cálculo para decants
                     const descuentoTotal = 10 + descuentoExtra;
-                    total += precioData.precio * (1 - descuentoTotal/100);
+                    total += precioData.precio * (1 - descuentoTotal / 100);
+                    productosSeleccionados++;
                 } else {
-                    // Cálculo normal para perfumes
-                    if (precioData.moneda === '$') {
+                    // Cálculo para perfumes usando SKU
+                    if (producto.sku) {
                         const cifrado = costosCifrados[producto.sku];
                         const costoBase = descifrarCosto(cifrado);
                         total += (costoBase + 50) * 1.354; // Fórmula existente
-                    } else {
-                        total += precioData.precio;
                     }
+                    productosSeleccionados++;
                 }
-                
-                productosSeleccionados++;
             }
         });
-    
-        // Actualizar interfaz
+
+        // Actualizar UI
         document.getElementById('total-price').textContent = total.toFixed(2);
         document.getElementById('total-price-currency').textContent = esDecants ? 'Bs' : '$';
         actualizarBotonWhatsApp(productosSeleccionados);
@@ -321,12 +337,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (nombre && selector) {
                 const precioData = JSON.parse(selector.value);
+                // Mostrar precio original en el mensaje
                 mensaje += `➤ ${nombre} (${precioData.tamaño}ml - ${precioData.moneda}${precioData.precio})\n`;
             }
         });
     
         if (esDecants) {
-            mensaje += `\nDescuentos aplicados:\n- 10% descuento por unidad\n- ${descuentoExtra}% descuento adicional por cantidad\n`;
+            const cantidad = parseInt(decantQuantitySelect.value);
+            mensaje += `\nDescuentos aplicados:\n- 10% base\n- ${cantidad > 5 ? (2 * (cantidad - 5)) + '% adicional por cantidad' : ''}`;
         }
     
         mensaje += `\nTotal: ${moneda} ${total.toFixed(2)}`;
