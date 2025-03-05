@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const decantQuantityContainer = document.getElementById('decant-quantity-container');
     const comboItemsContainer = document.getElementById('combo-items');
     const whatsappLink = document.getElementById('whatsapp-link');
-    
+
     // Configuración de seguridad
     const CRYPTO_KEY = 'TuClaveSuperSecreta'; // ¡CAMBIAR ESTO!
     const costosCifrados = {
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Modificaciones en obtenerProductos
     async function obtenerProductos(tipo) {
         const archivo = `${tipo}.html`;
         try {
@@ -38,27 +39,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const texto = await respuesta.text();
             const parser = new DOMParser();
             const doc = parser.parseFromString(texto, 'text/html');
-            
-            return Array.from(doc.querySelectorAll('.producto')).map(elemento => ({
-                sku: elemento.dataset.sku,
-                nombre: elemento.dataset.nombre,
-                imagen: elemento.querySelector('img').src,
-                precios: Array.from(elemento.querySelectorAll('p'))
-                    .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
-                    .map(p => {
-                        const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
-                        return {
-                            tamaño: parseInt(match[1]),
-                            precio: parseFloat(match[2])
-                        };
-                    }).sort((a, b) => a.tamaño - b.tamaño),
-                etiquetas: elemento.dataset.etiquetas || ''
-            }));
+
+            return Array.from(doc.querySelectorAll('.decant'))
+                .filter(elemento => !elemento.querySelector('.etiquetas .fuera-de-stock'))
+                .map(elemento => {
+                    const precios = Array.from(elemento.querySelectorAll('p'))
+                        .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
+                        .map(p => {
+                            const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
+                            return {
+                                tamaño: parseInt(match[1]),
+                                precio: parseFloat(match[2]),
+                                moneda: p.textContent.includes('Bs') ? 'Bs' : '$'
+                            };
+                        }).sort((a, b) => a.tamaño - b.tamaño);
+
+                    return {
+                        sku: elemento.dataset.sku,
+                        nombre: elemento.dataset.name, // Cambiado a data-name
+                        imagen: elemento.querySelector('img').src,
+                        precios: precios,
+                        tipo: tipo
+                    };
+                });
         } catch (error) {
             console.error(`Error cargando ${archivo}:`, error);
             return [];
         }
     }
+
 
     function manejarCambioTipo() {
         const tipo = comboTypeSelect.value;
@@ -69,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function actualizarInterfaz() {
         comboItemsContainer.innerHTML = '';
         const tipo = comboTypeSelect.value;
-        const cantidad = tipo === 'decants' 
-            ? parseInt(decantQuantitySelect.value) 
+        const cantidad = tipo === 'decants'
+            ? parseInt(decantQuantitySelect.value)
             : 3;
 
         for (let i = 0; i < cantidad; i++) {
@@ -105,21 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function poblarDropdown(tipo, indice, dropdown) {
         try {
-            const productosFiltrados = tipo === 'perfumes' 
-                ? await obtenerPerfumesFiltrados() 
+            const productosFiltrados = tipo === 'perfumes'
+                ? productos.perfumes
                 : productos.decants;
 
             dropdown.innerHTML = productosFiltrados.map(producto => `
-                <div class="dropdown-item-combo" data-sku="${producto.sku}">
-                    <img src="${producto.imagen}" alt="${producto.nombre}" class="dropdown-product-image">
-                    <div class="dropdown-product-info">
-                        <p class="dropdown-product-name">${producto.nombre}</p>
-                        <p class="dropdown-product-prices">
-                            ${producto.precios.map(p => `${p.tamaño}ml - ${tipo === 'decants' ? 'Bs' : '$'}${p.precio}`).join(' • ')}
-                        </p>
-                    </div>
+            <div class="dropdown-item-combo" data-sku="${producto.sku}">
+                <img src="${producto.imagen}" alt="${producto.nombre}" class="dropdown-product-image">
+                <div class="dropdown-product-info">
+                    <p class="dropdown-product-name">${producto.nombre}</p>
                 </div>
-            `).join('');
+            </div>
+        `).join('');
 
             dropdown.querySelectorAll('.dropdown-item-combo').forEach(item => {
                 item.addEventListener('click', (e) => {
@@ -135,14 +141,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function crearSelectorTamanos(producto) {
+        const contenedor = document.createElement('div');
+        contenedor.className = 'size-selector-container';
+
+        const selector = document.createElement('select');
+        selector.className = 'size-selector';
+
+        producto.precios.forEach((precio, index) => {
+            const opcion = document.createElement('option');
+            opcion.value = JSON.stringify(precio); // Guardamos todos los datos
+            opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
+            selector.appendChild(opcion);
+        });
+
+        contenedor.appendChild(selector);
+        return contenedor;
+    }
+
     async function obtenerPerfumesFiltrados() {
         return (await productos.perfumes).filter(producto => {
             const cifrado = costosCifrados[producto.sku];
             if (!cifrado) return false;
-            
+
             const costo = descifrarCosto(cifrado);
             if (!costo) return false;
-            
+
             const precioMinimo = (costo + 50) * 1.354;
             return producto.precios[0].precio > precioMinimo;
         });
@@ -153,9 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const textoCifrado = atob(cifrado);
             return parseFloat(
                 textoCifrado.split('')
-                    .map((char, i) => 
-                        String.fromCharCode(char.charCodeAt(0) ^ 
-                        CRYPTO_KEY.charCodeAt(i % CRYPTO_KEY.length))
+                    .map((char, i) =>
+                        String.fromCharCode(char.charCodeAt(0) ^
+                            CRYPTO_KEY.charCodeAt(i % CRYPTO_KEY.length))
                     ).join('')
             );
         } catch (error) {
@@ -168,21 +192,17 @@ document.addEventListener('DOMContentLoaded', () => {
         contenedor.querySelector(`#${tipo}-nombre-${indice}`).textContent = producto.nombre;
         contenedor.querySelector(`#${tipo}-imagen-${indice}`).src = producto.imagen;
 
-        const selectorTamano = document.createElement('select');
-        selectorTamano.className = 'size-selector';
-        producto.precios.forEach(precio => {
-            const opcion = document.createElement('option');
-            opcion.value = precio.precio;
-            opcion.textContent = `${precio.tamaño}ml - ${tipo === 'decants' ? 'Bs' : '$'}${precio.precio}`;
-            selectorTamano.appendChild(opcion);
-        });
-
+        // Limpiar selectores anteriores
         contenedor.querySelector('.size-selector-container')?.remove();
-        contenedor.querySelector('.combo-selection').appendChild(selectorTamano);
-        selectorTamano.addEventListener('change', actualizarTotal);
-        
+
+        // Agregar nuevo selector de tamaños
+        const selectorContainer = crearSelectorTamanos(producto);
+        contenedor.querySelector('.combo-selection').appendChild(selectorContainer);
+
+        selectorContainer.querySelector('select').addEventListener('change', actualizarTotal);
         actualizarTotal();
     }
+
 
     function crearSelectorRegalo() {
         const regalos = [
@@ -224,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function configurarEventosDropdown(contenedor) {
         const boton = contenedor.querySelector('.dropdown-toggle');
         const dropdown = contenedor.querySelector('.dropdown');
-        
+
         boton.addEventListener('click', (e) => {
             e.stopPropagation();
             dropdown.classList.toggle('show');
@@ -241,49 +261,81 @@ document.addEventListener('DOMContentLoaded', () => {
     function actualizarTotal() {
         let total = 0;
         let productosSeleccionados = 0;
-
+        const tipoCombo = comboTypeSelect.value;
+        const esDecants = tipoCombo === 'decants';
+        const cantidadDecants = esDecants ? parseInt(decantQuantitySelect.value) : 0;
+    
+        // Calcular descuento adicional para decants
+        let descuentoExtra = 0;
+        if (esDecants) {
+            const descuentos = {5:0, 6:2, 7:4, 8:6, 9:8, 10:10};
+            descuentoExtra = descuentos[cantidadDecants] || 0;
+        }
+    
         document.querySelectorAll('.combo-item').forEach(item => {
             const selector = item.querySelector('.size-selector');
-            if (selector) {
-                total += parseFloat(selector.value);
+            if (selector && selector.value) {
+                const precioData = JSON.parse(selector.value);
+                
+                if (esDecants) {
+                    // Aplicar 10% base + descuento extra
+                    const descuentoTotal = 10 + descuentoExtra;
+                    total += precioData.precio * (1 - descuentoTotal/100);
+                } else {
+                    // Cálculo normal para perfumes
+                    if (precioData.moneda === '$') {
+                        const cifrado = costosCifrados[producto.sku];
+                        const costoBase = descifrarCosto(cifrado);
+                        total += (costoBase + 50) * 1.354; // Fórmula existente
+                    } else {
+                        total += precioData.precio;
+                    }
+                }
+                
                 productosSeleccionados++;
             }
         });
-
+    
+        // Actualizar interfaz
         document.getElementById('total-price').textContent = total.toFixed(2);
+        document.getElementById('total-price-currency').textContent = esDecants ? 'Bs' : '$';
         actualizarBotonWhatsApp(productosSeleccionados);
-        actualizarEnlaceWhatsApp(total);
+        actualizarEnlaceWhatsApp(total, esDecants);
     }
 
     function actualizarBotonWhatsApp(seleccionados) {
-        const requeridos = comboTypeSelect.value === 'decants' 
+        const requeridos = comboTypeSelect.value === 'decants'
             ? parseInt(decantQuantitySelect.value)
             : 3;
 
         whatsappLink.classList.toggle('disabled', seleccionados < requeridos);
     }
 
-    function actualizarEnlaceWhatsApp(total) {
-        const tipo = comboTypeSelect.value;
-        const moneda = tipo === 'decants' ? 'Bs' : '$';
-        let mensaje = `¡Hola! Quiero armar mi combo de ${tipo}:\n\n`;
-
+    function actualizarEnlaceWhatsApp(total, esDecants) {
+        const moneda = esDecants ? 'Bs' : '$';
+        let mensaje = `¡Hola! Quiero armar mi combo de ${esDecants ? 'decants' : 'perfumes'}:\n\n`;
+    
         document.querySelectorAll('.combo-item').forEach((item, indice) => {
             const nombre = item.querySelector('[id$="-nombre"]')?.textContent;
-            const tamano = item.querySelector('.size-selector')?.selectedOptions[0]?.textContent;
+            const selector = item.querySelector('.size-selector');
             
-            if (nombre) {
-                mensaje += `➤ ${nombre}${tamano ? ` (${tamano})` : ''}\n`;
+            if (nombre && selector) {
+                const precioData = JSON.parse(selector.value);
+                mensaje += `➤ ${nombre} (${precioData.tamaño}ml - ${precioData.moneda}${precioData.precio})\n`;
             }
         });
-
+    
+        if (esDecants) {
+            mensaje += `\nDescuentos aplicados:\n- 10% descuento por unidad\n- ${descuentoExtra}% descuento adicional por cantidad\n`;
+        }
+    
         mensaje += `\nTotal: ${moneda} ${total.toFixed(2)}`;
         whatsappLink.href = `https://wa.me/78064327?text=${encodeURIComponent(mensaje)}`;
     }
 
     function manejarRedimension() {
-        comboItemsContainer.style.gridTemplateColumns = window.innerWidth < 768 
-            ? '1fr' 
+        comboItemsContainer.style.gridTemplateColumns = window.innerWidth < 768
+            ? '1fr'
             : 'repeat(auto-fill, minmax(250px, 1fr))';
     }
 
