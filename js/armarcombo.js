@@ -6,23 +6,88 @@ document.addEventListener('DOMContentLoaded', () => {
     const whatsappLink = document.getElementById('whatsapp-link');
 
     const SKUS_PERMITIDOS = [
+        "PERF-029", 
+        "PERF-030", 
+        "PERF-031", 
+        "PERF-032", 
         "PERF-033", 
+        "PERF-034", 
+        "PERF-036", 
         "PERF-037", 
         "PERF-039", 
+        "PERF-046", 
+        "PERF-047", 
+        "PERF-050", 
+        "PERF-051", 
+        "PERF-052", 
+        "PERF-053", 
+        "PERF-054", 
+        "PERF-055", 
+        "PERF-056", 
         "PERF-057", 
         "PERF-058", 
         "PERF-059", 
         "PERF-060", 
+        "PERF-061", 
+        "PERF-062", 
     ];
     
+    const TAMANOS_PERMITIDOS = {
+        "PERF-029": [100, 200], 
+        "PERF-030": [100, 200], 
+        "PERF-031": [100], 
+        "PERF-032": [100],
+        "PERF-033": [100],
+        "PERF-034": [100], 
+        "PERF-036": [100], 
+        "PERF-037": [100],
+        "PERF-039": [100],
+        "PERF-046": [100, 150], 
+        "PERF-047": [100, 150], 
+        "PERF-050": [100], 
+        "PERF-051": [100], 
+        "PERF-052": [100], 
+        "PERF-053": [100], 
+        "PERF-054": [100], 
+        "PERF-055": [100], 
+        "PERF-056": [100], 
+        "PERF-057": [100],
+        "PERF-058": [100],
+        "PERF-059": [100],
+        "PERF-060": [100],
+        "PERF-061": [105],
+        "PERF-062": [105],
+    };
+
     const PRECIOS_COMBOS = {
+        "PERF-029-100": 91.00, 
+        "PERF-029-200": 128.00, 
+        "PERF-030-100": 103.00, 
+        "PERF-030-200": 154.00, 
+        "PERF-031-100": 121.00, 
+        "PERF-032-100": 121.00, 
         "PERF-033-100": 96.00, 
+        "PERF-034-100": 91.00, 
+        "PERF-037-100": 93.00, 
         "PERF-037-100": 116.00, 
         "PERF-039-100": 121.00, 
+        "PERF-046-100": 138.00, 
+        "PERF-046-150": 203.00, 
+        "PERF-047-100": 138.00, 
+        "PERF-047-150": 203.00, 
+        "PERF-050-100": 69.00, 
+        "PERF-051-100": 67.00, 
+        "PERF-052-100": 82.00, 
+        "PERF-053-100": 82.00, 
+        "PERF-054-100": 65.00, 
+        "PERF-055-100": 73.00, 
+        "PERF-056-100": 54.00, 
         "PERF-057-100": 73.00, 
         "PERF-058-100": 71.00,
         "PERF-059-100": 70.00,
         "PERF-060-100": 104.00, 
+        "PERF-061-105": 73.00, 
+        "PERF-062-105": 85.00, 
     };
 
     let productos = {
@@ -54,33 +119,36 @@ document.addEventListener('DOMContentLoaded', () => {
             return Array.from(doc.querySelectorAll('.decant'))
                 .filter(elemento => {
                     const tieneStock = !elemento.querySelector('.etiquetas .fuera-de-stock');
-                    const esPermitido = tipo === 'perfumes' 
-                        ? SKUS_PERMITIDOS.some(sku => elemento.dataset.baseSku === sku.split('-')[0])
-                        : true;
-                    
-                    return tieneStock && esPermitido;
+                    const skuBase = elemento.dataset.sku;
+                    return tieneStock && SKUS_PERMITIDOS.includes(skuBase);
                 })
                 .map(elemento => {
-                    const baseSKU = elemento.dataset.baseSku;
-                    
+                    const skuBase = elemento.dataset.sku;
                     return {
+                        skuBase: skuBase,
                         nombre: elemento.dataset.name,
                         imagen: elemento.querySelector('img').src,
                         precios: Array.from(elemento.querySelectorAll('p'))
-                            .filter(p => p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/))
+                            .filter(p => {
+                                const match = p.textContent.match(/(\d+)\s*ml/);
+                                if (!match) return false;
+                                const tamaño = parseInt(match[1]);
+                                // Filtrar por tamaños permitidos
+                                return TAMANOS_PERMITIDOS[skuBase]?.includes(tamaño) || false;
+                            })
                             .map(p => {
                                 const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
                                 return {
-                                    sku: p.dataset.sku, // SKU completo con tamaño
+                                    sku: p.dataset.sku,
                                     tamaño: parseInt(match[1]),
                                     precio: parseFloat(match[2]),
                                     moneda: p.textContent.includes('Bs') ? 'Bs' : '$'
                                 };
                             }).sort((a, b) => a.tamaño - b.tamaño),
-                        tipo: tipo,
-                        baseSKU: baseSKU
+                        tipo: tipo
                     };
-                });
+                })
+                .filter(producto => producto.precios.length > 0); // Eliminar productos sin tamaños válidos
         } catch (error) {
             console.error(`Error cargando ${archivo}:`, error);
             return [];
@@ -170,13 +238,38 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const selector = document.createElement('select');
         selector.className = 'size-selector';
+    
+        // Obtener tamaños permitidos para este SKU base
+        const tamanosPermitidos = TAMANOS_PERMITIDOS[producto.skuBase] || [];
         
-        producto.precios.forEach((precio, index) => {
+        producto.precios.forEach(precio => {
+            // Verificar si el tamaño está permitido
+            if (tamanosPermitidos.includes(precio.tamaño)) {
+                const opcion = document.createElement('option');
+                opcion.value = JSON.stringify({
+                    sku: precio.sku,
+                    precio: precio.precio,
+                    tamaño: precio.tamaño,
+                    moneda: precio.moneda
+                });
+                opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
+                selector.appendChild(opcion);
+            }
+        });
+    
+        // Manejar caso donde no hay tamaños válidos
+        if (selector.options.length === 0) {
             const opcion = document.createElement('option');
-            opcion.value = JSON.stringify(precio);
-            // Mostrar solo el tamaño sin precio
-            opcion.textContent = `${precio.tamaño}ml`;
+            opcion.textContent = 'No disponible';
+            opcion.disabled = true;
             selector.appendChild(opcion);
+        }
+    
+        // Almacenar datos base del producto
+        selector.dataset.producto = JSON.stringify({
+            nombre: producto.nombre,
+            skuBase: producto.skuBase,
+            tipo: producto.tipo
         });
     
         contenedor.appendChild(selector);
