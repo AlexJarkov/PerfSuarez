@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfumería Suárez</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
+    <meta property="og:title" content="Perfumería Suárez">
+    <meta property="og:description" content="Descubre nuestros nuevos lanzamientos!">
+    <meta property="og:image" content="https://www.perfumeriasuarez.com/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="https://perfumeriasuarez.com">
+    <meta property="og:type" content="website">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div data-include="../header.html"></div>
+    
+    <main>
+        <!-- Carrusel Mejorado -->
+        <section class="hero-carousel">
+            <div class="carousel-track">
+                <div class="carousel-item active">
+                    <img src="imagenes/fotos-anuncios/15ml.jpeg" alt="Promoción 15ml">
+                    <div class="carousel-caption">
+                        <h2>Personaliza tu fragancia</h2>
+                        <a href="armarcombo.html" class="cta-button">Crear Combo</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/Mystery Box.jpg" alt="Mystery Box">
+                    <div class="carousel-caption">
+                        <h2>Mystery Box</h2>
+                        <p>¡5 decants sorpresa!</p>
+                        <button class="cta-button" 
+                                onclick="sendWhatsAppMessage('Mystery Box', 'Hola! Quiero una Mystery Box')">
+                            Pedir ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-dots"></div>
+        </section>
+
+        <!-- Navegación con iconos -->
+        <section class="icon-nav">
+            <a href="perfumes.html" class="nav-card">
+                <img src="imagenes/iconos/perfume-icon.svg" alt="Perfumes">
+                <span>Perfumes</span>
+            </a>
+            <a href="decants.html" class="nav-card">
+                <img src="imagenes/iconos/decant-icon.svg" alt="Decants">
+                <span>Decants</span>
+            </a>
+            <a href="velas.html" class="nav-card">
+                <img src="imagenes/iconos/vela-icon.svg" alt="Velas">
+                <span>Velas</span>
+            </a>
+            <a href="armarcombo.html" class="nav-card">
+                <img src="imagenes/iconos/combo-icon.svg" alt="Combos">
+                <span>Combos</span>
+            </a>
+        </section>
+
+        <!-- Más vendidos -->
+        <section class="best-sellers">
+            <h2 class="section-title">Perfumes Más Vendidos</h2>
+            <div class="product-grid">
+                <!-- Repetir este bloque por cada producto -->
+                <div class="product-card">
+                    <img src="imagenes/perfumes/ejemplo.jpg" alt="Nombre Perfume">
+                    <h3>Nombre del Perfume</h3>
+                    <p class="price">$99.99</p>
+                    <button class="buy-button" 
+                            onclick="sendWhatsAppMessage('Nombre Perfume', 'Hola! Quiero comprar este perfume')">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+                <!-- Fin bloque producto -->
+            </div>
+        </section>
+
+        <!-- Decants destacados -->
+        <section class="best-sellers">
+            <h2 class="section-title">Decants Destacados</h2>
+            <div class="decant-grid">
+                <div class="decant-card">
+                    <img src="imagenes/decants/ejemplo.jpg" alt="Nombre Decant">
+                    <div class="decant-info">
+                        <h3>Nombre del Decant</h3>
+                        <div class="size-selector">
+                            <button class="size-option active">5ml</button>
+                            <button class="size-option">10ml</button>
+                            <button class="size-option">15ml</button>
+                        </div>
+                        <button class="buy-button decant-btn">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+                <!-- Repetir para otros decants -->
+            </div>
+        </section>
+
+        <!-- WhatsApp Fijo -->
+        <div class="whatsapp-fab">
+            <a href="https://wa.link/hqv4bq" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </main>
+
+    <div data-include="footer.html"></div>
+    
+    <script src="js/scripts.js"></script>
+    <script src="js/include.js"></script>
+    <script>
+        // Carrusel mejorado
+        class Carousel {
+            constructor() {
+                this.carousel = document.querySelector('.hero-carousel');
+                this.track = this.carousel.querySelector('.carousel-track');
+                this.items = Array.from(this.track.children);
+                this.dotsContainer = this.carousel.querySelector('.carousel-dots');
+                this.currentIndex = 0;
+                this.interval = null;
+                
+                this.initDots();
+                this.startAutoPlay();
+                this.addEventListeners();
+            }
+
+            initDots() {
+                this.items.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    if(index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                    this.dotsContainer.appendChild(dot);
+                });
+            }
+
+            startAutoPlay() {
+                this.interval = setInterval(() => this.nextSlide(), 7000);
+            }
+
+            nextSlide() {
+                this.goToSlide((this.currentIndex + 1) % this.items.length);
+            }
+
+            goToSlide(index) {
+                this.items[this.currentIndex].classList.remove('active');
+                this.dotsContainer.children[this.currentIndex].classList.remove('active');
+                
+                this.currentIndex = (index + this.items.length) % this.items.length;
+                
+                this.items[this.currentIndex].classList.add('active');
+                this.dotsContainer.children[this.currentIndex].classList.add('active');
+                
+                this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+            }
+
+            addEventListeners() {
+                this.carousel.addEventListener('mouseenter', () => clearInterval(this.interval));
+                this.carousel.addEventListener('mouseleave', () => this.startAutoPlay());
+            }
+        }
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', () => {
+            new Carousel();
+        });
+
+        // Funciones existentes
+        function sendWhatsAppMessage(producto, message) {
+            const phoneNumber = '+59178064327';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            if(confirm(`¿Confirmar pedido de ${producto}?`)) {
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
