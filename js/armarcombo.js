@@ -112,63 +112,59 @@ document.addEventListener('DOMContentLoaded', () => {
         const archivo = `${tipo}.html`;
         try {
             const respuesta = await fetch(archivo);
-            if (!respuesta.ok) throw new Error(`Error ${respuesta.status}`);
             const texto = await respuesta.text();
-            
-            // Verificar contenido del HTML
-            console.log(`Contenido de ${archivo}:`, texto);
-    
             const parser = new DOMParser();
             const doc = parser.parseFromString(texto, 'text/html');
             
-            const productosFiltrados = Array.from(doc.querySelectorAll('.decant'))
+            return Array.from(doc.querySelectorAll('.decant'))
                 .filter(elemento => {
-                    // 1. Verificar stock
                     const tieneStock = !elemento.querySelector('.etiquetas .fuera-de-stock');
-                    
-                    // 2. Solo perfumes usan SKU
                     if (tipo === 'perfumes') {
                         const skuDiv = elemento.dataset.sku;
-                        const permitido = SKUS_PERMITIDOS.includes(skuDiv);
-                        console.log(`Perfume ${skuDiv} permitido: ${permitido}`);
-                        return tieneStock && permitido;
+                        return tieneStock && SKUS_PERMITIDOS.includes(skuDiv);
                     }
                     return tieneStock;
                 })
                 .map(elemento => {
-                    // Mapear datos básicos
-                    const producto = {
-                        skuBase: tipo === 'perfumes' ? elemento.dataset.sku : 'DECANT',
+                    const esPerfume = tipo === 'perfumes';
+                    const skuBase = esPerfume ? elemento.dataset.sku : null;
+    
+                    return {
+                        skuBase: skuBase,
                         nombre: elemento.dataset.name,
                         imagen: elemento.querySelector('img').src,
-                        precios: [],
+                        precios: Array.from(elemento.querySelectorAll('p'))
+                            .filter(p => {
+                                // Limpiar texto y usar nueva regex
+                                const texto = p.textContent.replace(/\s|<[^>]+>/g, '');
+                                const match = texto.match(/(\d+)ml.*?(\d+\.?\d*)(Bs|\$)/i);
+                                
+                                if (!match) {
+                                    console.log('No match para:', texto);
+                                    return false;
+                                }
+                                
+                                const tamaño = parseInt(match[1]);
+                                return esPerfume 
+                                    ? TAMANOS_PERMITIDOS[skuBase]?.includes(tamaño)
+                                    : true;
+                            })
+                            .map(p => {
+                                const texto = p.textContent.replace(/\s|<[^>]+>/g, '');
+                                const match = texto.match(/(\d+)ml.*?(\d+\.?\d*)(Bs|\$)/i);
+                                
+                                return {
+                                    sku: p.dataset.sku || 'DECANT',
+                                    tamaño: parseInt(match[1]),
+                                    precio: parseFloat(match[2]),
+                                    moneda: match[3].toUpperCase()
+                                };
+                            })
+                            .sort((a, b) => a.tamaño - b.tamaño),
                         tipo: tipo
                     };
-    
-                    // Procesar precios
-                    elemento.querySelectorAll('p').forEach(p => {
-                        const textoLimpio = p.textContent.replace(/\s|<[^>]+>/g, '');
-                        const match = textoLimpio.match(/(\d+)ml.*?(Bs|\$)(\d+\.?\d*)/i);
-                        
-                        if (match) {
-                            producto.precios.push({
-                                sku: p.dataset.sku || 'DECANT',
-                                tamaño: parseInt(match[1]),
-                                precio: parseFloat(match[3]),
-                                moneda: match[2].toUpperCase()
-                            });
-                        }
-                    });
-    
-                    // Ordenar por tamaño
-                    producto.precios.sort((a, b) => a.tamaño - b.tamaño);
-                    return producto;
                 })
                 .filter(producto => producto.precios.length > 0);
-    
-            console.log(`Productos filtrados (${tipo}):`, productosFiltrados);
-            return productosFiltrados;
-    
         } catch (error) {
             console.error(`Error cargando ${archivo}:`, error);
             return [];
@@ -294,35 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
         contenedor.appendChild(selector);
         return contenedor;
-    }
-
-    async function obtenerPerfumesFiltrados() {
-        return (await productos.perfumes).filter(producto => {
-            const cifrado = costosCifrados[producto.sku];
-            if (!cifrado) return false;
-
-            const costo = descifrarCosto(cifrado);
-            if (!costo) return false;
-
-            const precioMinimo = (costo + 50) * 1.354;
-            return producto.precios[0].precio > precioMinimo;
-        });
-    }
-
-    function descifrarCosto(cifrado) {
-        try {
-            const textoCifrado = atob(cifrado);
-            return parseFloat(
-                textoCifrado.split('')
-                    .map((char, i) =>
-                        String.fromCharCode(char.charCodeAt(0) ^
-                            CRYPTO_KEY.charCodeAt(i % CRYPTO_KEY.length))
-                    ).join('')
-            );
-        } catch (error) {
-            console.error('Error descifrando:', error);
-            return null;
-        }
     }
 
     function seleccionarProducto(tipo, indice, producto, contenedor) {
@@ -485,11 +452,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const nombre = item.querySelector('[id$="-nombre"]')?.textContent;
             const selector = item.querySelector('.size-selector');
             
-            if (nombre && selector) {
+            if (nombre && selector && selector.value) {
                 const precioData = JSON.parse(selector.value);
                 const producto = JSON.parse(selector.dataset.producto);
                 
-                mensaje += `➤ ${nombre} (${precioData.tamaño}ml - ${producto.baseSKU})\n`;
+                // Diferenciar entre perfumes y decants
+                if (producto.tipo === 'perfumes') {
+                    mensaje += `➤ ${nombre} (${precioData.tamaño}ml - ${producto.skuBase})\n`;
+                } else {
+                    mensaje += `➤ ${nombre} (${precioData.tamaño}ml)\n`;
+                }
             }
         });
     
