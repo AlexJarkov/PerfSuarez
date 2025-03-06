@@ -14,6 +14,7 @@ body {
     box-sizing: border-box;
     background-color: #f5f5f7;
     color: #333;
+    overflow-x: hidden;
 }
 
 header {
@@ -558,19 +559,6 @@ footer {
     color: #0071e3;
 }
 
-#combos-personalizados .container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
-    /* Ajustado para compensar el header fijo */
-    text-align: center;
-    max-width: 1600px;
-    width: 100%;
-    margin: auto;
-}
-
 .combo-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -580,23 +568,7 @@ footer {
     margin: auto;
 }
 
-.combo-item {
-    box-sizing: border-box;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.combo-selection {
-    position: relative;
-    width: 100%;
-    cursor: pointer;
-}
-
-.combo-item.selected .combo-selection {
+.combo-item.selected{
     animation: itemSelected 0.6s ease;
     border: 2px solid #4CAF50;
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
@@ -613,122 +585,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-    #combos-personalizados .container {
-        margin-top: 80px;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .combo-builder-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        width: 100%;
-        padding: 0;
-    }
-
-    .combo-item {
-        width: 100%;
-        margin: 0 auto 15px;
-        max-width: 350px;
-    }
-
-    .combo-selection {
-        padding: 15px;
-    }
-
-    .dropdown {
-        width: 90vw;
-        left: 50%;
-        transform: translateX(-50%);
-        max-height: 60vh;
-    }
-
-    .dropdown.show {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .dropdown-item-combo {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .dropdown-item-combo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    /* Centrado vertical perfecto */
-    .combo-selection {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
     .total-container-combo {
         width: 90%;
         margin: 20px auto;
     }
-}
-
-.combo-selection img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-/* Estilo para los nombres de los perfumes */
-.combo-selection p {
-    margin: 10px 0;
-    font-size: 16px;
-    min-height: 40px;
-    max-width: 400px;
-    /* Ajusta la altura mínima según sea necesario */
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-    /* Esconder el desbordamiento de texto */
-    text-overflow: ellipsis;
-    /* Añadir puntos suspensivos al texto largo */
-}
-
-.dropdown-toggle {
-    background-color: #0071e3;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.dropdown-toggle:hover {
-    background-color: #005bb5;
-}
-
-/* Estilo para el dropdown */
-.dropdown {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 10px;
-    z-index: 1000;
-    max-height: 300px;
-    width: fixed;
-    overflow-y: auto;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    background: rgba(255, 255, 255, 0.95);
-}
-
-.dropdown.show {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 }
 
 /* Estilo para los items dentro del dropdown */
@@ -837,100 +697,6 @@ footer {
         gap: 10px;
         justify-content: center;
     }
-
-    #combos-personalizados .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-        margin: 100px auto 20px;
-        width: 95%;
-        max-width: 1600px;
-    }
-
-    .combo-container {
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .combo-item {
-        display: flex;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .combo-selection {
-        width: 100%;
-        text-align: center;
-    }
-
-    .combo-selection img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .dropdown {
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        will-change: opacity, transform;
-    }
-
-    .dropdown-toggle {
-        width: 300px;
-    }
-
-    .dropdown.show {
-        opacity: 1;
-        transform: translateY(0);
-        animation: dropdownSlide 0.4s ease-out;
-    }
-
-    @keyframes dropdownSlide {
-        0% {
-            opacity: 0;
-            transform: translateY(-15px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .dropdown-item {
-        display: flex;
-        align-items: center;
-        max-width: 100px;
-        width: 100%;
-        padding: 10px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        margin-bottom: 5px;
-    }
-
-    .dropdown-item img {
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-right: 10px;
-    }
-
-    .dropdown-item p {
-        flex: 1;
-        margin: 0;
-        font-size: 14px;
-        text-align: left;
-    }
-
-    .dropdown-item:hover {
-        background-color: #e0e0e0;
-    }
 }
 
 .extras {
@@ -947,11 +713,6 @@ footer {
     margin-bottom: 10px;
 }
 
-#savings {
-    color: green;
-    font-weight: bold;
-}
-
 .total {
     margin-top: 20px;
 }
@@ -962,31 +723,6 @@ footer {
     justify-content: space-around; /* Puedes usar center, flex-start, flex-end según tus necesidades */
     gap: 10px; /* Espaciado entre los botones */
     margin-top: 20px;
-}
-
-
-.whatsapp-button {
-    margin: 25px auto;
-    width: fit-content;
-}
-
-.whatsapp-button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.whatsapp-button a.disabled {
-    background-color: #cccccc;
-    pointer-events: none;
-}
-
-.whatsapp-button a:hover:not(.disabled) {
-    background-color: #1ebe5b;
 }
 
 .tiktok-profile {
@@ -1196,7 +932,7 @@ footer {
     width: 100%;
 }
 
-.filter-select, .combo-type-selection, .decant-quantity-container {
+.filter-select {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -1252,36 +988,6 @@ footer {
     cursor: pointer;
 }
 
-/* ===== Estilos específicos para Arma Tu Combo ===== */
-.combo-type-selection {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.combo-controls {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 800px;
-    margin: 15px auto;
-    width: fit-content;
-}
-
-.decant-quantity-container {
-    margin-top: 15px;
-    transition: opacity 0.3s ease;
-}
-
-.combo-builder-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
 .combo-builder-item {
     background: #fff;
     border-radius: 12px;
@@ -1327,27 +1033,9 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.dropdown-item-combo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-bottom: 1px solid #eee;
-    transition: background 0.2s ease;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    border-radius: 8px;
-    padding: 12px;
-    margin: 3px;
-}
-
 @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0.4; }
-}
-
-.dropdown-item-combo:hover {
-    background: rgba(0, 113, 227, 0.08);
-    transform: translateX(3px);
 }
 
 .combo-selection .selected-product {
@@ -1359,62 +1047,10 @@ footer {
     background-color: #f8fff8;
 }
 
-.combo-selection h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #1d1d1f;
-}
-
-.dropdown-item-combo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
 
 @keyframes slideIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.size-selector {
-    width: 100%;
-    padding: 10px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    background: #fff;
-    font-size: 14px;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
-    background-color: #fff;
-}
-
-.total-container-combo {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    max-width: 400px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-#total-price {
-    font-size: 2em;
-    color: #1d1d1f;
-    font-weight: 600;
-}
-
-#savings {
-    font-size: 1.1em;
-    padding: 8px 15px;
-    background: #e8f5e9;
-    border-radius: 20px;
-    display: inline-block;
 }
 
 .whatsapp-button-combo {
@@ -1431,10 +1067,6 @@ footer {
 
 /* ===== Media Queries ===== */
 @media (max-width: 768px) {
-    .combo-builder-grid {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
     
     .combo-builder-item {
         margin-bottom: 20px;
@@ -1457,18 +1089,342 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .combo-controls {
+/* ===== Estilos generales ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f7;
+    color: #333;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    top: 0;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Estilos específicos para Arma Tu Combo ===== */
+#combos-personalizados .container {
+    width: 94%;
+    max-width: 1600px;
+    padding: 20px 3%;
+    margin: 100px auto 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.combo-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.combo-type-selection,
+.decant-quantity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.combo-type-selection label,
+.decant-quantity-container label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.combo-type-selection select,
+.decant-quantity-container select {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.combo-type-selection select:hover,
+.decant-quantity-container select:hover {
+    border-color: #0071e3;
+}
+
+.combo-builder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.combo-item {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.combo-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.combo-selection img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.combo-selection h3 {
+    font-size: 1.2em;
+    color: #1d1d1f;
+    margin: 10px 0;
+}
+
+.combo-selection p {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+}
+
+.dropdown-toggle {
+    background: #0071e3;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background: #005bb5;
+}
+
+/* ===== Dropdown mejorado ===== */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Centrado horizontal */
+    width: 800px; /* Ancho fijo para PC */
+    max-width: 60vw; /* Máximo ancho en móviles */
+    max-height: 400px; /* Altura máxima */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) translateX(-50%); /* Centrado y animación */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto; /* Scroll vertical */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+    gap: 15px;
+    padding: 15px;
+}
+
+.dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateX(-50%); /* Centrado y animación */
+}
+
+.dropdown-item-combo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item-combo:hover {
+    background: #f8f9fa;
+}
+
+.dropdown-item-combo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.dropdown-item-combo p {
+    font-size: 0.95em;
+    color: #333;
+    flex: 1;
+    text-align: left;
+}
+
+/* ===== Selector de tamaños ===== */
+.size-selector-container {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+}
+
+.size-selector {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    appearance: none;
+    background: #fff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 12px center/16px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.size-selector:focus {
+    border-color: #0071e3;
+    outline: none;
+}
+
+/* ===== Total y WhatsApp ===== */
+.total-container-combo {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto 0;
+    max-width: 400px;
+    text-align: center;
+}
+
+#total-price {
+    font-size: 2em;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+#savings {
+    font-size: 1.1em;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.whatsapp-button {
+    margin: 25px auto;
+    width: fit-content;
+}
+
+.whatsapp-button a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button a.disabled {
+    background-color: #cccccc;
+    pointer-events: none;
+}
+
+.whatsapp-button a:hover:not(.disabled) {
+    background-color: #1ebe5b;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+    .dropdown {
+        width: 90vw; /* Ancho casi completo en móviles */
+        max-width: 75vw; /* Evita que se salga de la pantalla */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #combos-personalizados .container {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 80px;
         padding: 15px;
     }
-    
+
+    .combo-builder-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .combo-selection img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .dropdown {
+        width: 94vw;
+        left: 3vw;
+        right: 3vw;
+        transform: none !important;
+    }
+
     .dropdown-item-combo {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .dropdown-item-combo img {
         width: 80px;
         height: 80px;
     }
+
+    .dropdown-item-combo p {
+        text-align: center;
+    }
+
+    .size-selector-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .total-container-combo {
+        width: 90%;
+    }
 }
+
