@@ -1,14 +1,14 @@
 {
     "name": "Perfumería Suárez",
-    "short_name": "Suárez",
+    "short_name": "Perfumería Suárez",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#2d3e50",
     "icons": [
       {
-        "src": "imagenes/Cowboy.ico",
-        "sizes": "16x16 32x32 48x48",
+        "src": "imagenes/applogo.png",
+        "sizes": "192x192 512x512",
         "type": "image/png"
       }
     ]
