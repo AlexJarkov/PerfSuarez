@@ -1191,8 +1191,12 @@ main {
 .combo-item {
     position: relative;
     background: #fff;
+    align-content: left !important;
     border-radius: 12px;
-    padding: 15px;
+    padding-left: 0;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -1380,16 +1384,18 @@ main {
     }
 
     #combos-personalizados .container {
-        width: 100%;
-        border-radius: 0;
-        margin-top: 80px;
-        padding: 15px;
+        width: 95%;
+        border-radius: 12px;
+        margin-top: 40px;
+        padding: auto;
+        align-content: center;
     }
 
     .combo-builder-grid {
         grid-template-columns: 1fr;
         gap: 15px;
         padding: 10px;
+        padding-left: 0;
     }
 
     .combo-selection img {
@@ -1425,6 +1431,7 @@ main {
 
     .total-container-combo {
         width: 90%;
+        padding-left: 0;
     }
 
     /* Carrusel Mejorado */
