@@ -6,51 +6,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const whatsappLink = document.getElementById('whatsapp-link');
 
     const SKUS_PERMITIDOS = [
-        "PERF-029", 
-        "PERF-030", 
-        "PERF-031", 
-        "PERF-032", 
-        "PERF-033", 
-        "PERF-034", 
-        "PERF-036", 
-        "PERF-037", 
-        "PERF-039", 
-        "PERF-046", 
-        "PERF-047", 
-        "PERF-050", 
-        "PERF-051", 
-        "PERF-052", 
-        "PERF-053", 
-        "PERF-054", 
-        "PERF-055", 
-        "PERF-056", 
-        "PERF-057", 
-        "PERF-058", 
-        "PERF-059", 
-        "PERF-060", 
-        "PERF-061", 
-        "PERF-062", 
+        "PERF-029",
+        "PERF-030",
+        "PERF-031",
+        "PERF-032",
+        "PERF-033",
+        "PERF-034",
+        "PERF-036",
+        "PERF-037",
+        "PERF-039",
+        "PERF-046",
+        "PERF-047",
+        "PERF-050",
+        "PERF-051",
+        "PERF-052",
+        "PERF-053",
+        "PERF-054",
+        "PERF-055",
+        "PERF-056",
+        "PERF-057",
+        "PERF-058",
+        "PERF-059",
+        "PERF-060",
+        "PERF-061",
+        "PERF-062",
     ];
-    
+
     const TAMANOS_PERMITIDOS = {
-        "PERF-029": [100, 200], 
-        "PERF-030": [100, 200], 
-        "PERF-031": [100], 
+        "PERF-029": [100, 200],
+        "PERF-030": [100, 200],
+        "PERF-031": [100],
         "PERF-032": [100],
         "PERF-033": [100],
-        "PERF-034": [100], 
-        "PERF-036": [100], 
+        "PERF-034": [100],
+        "PERF-036": [100],
         "PERF-037": [100],
         "PERF-039": [100],
-        "PERF-046": [100, 150], 
-        "PERF-047": [100, 150], 
-        "PERF-050": [100], 
-        "PERF-051": [100], 
-        "PERF-052": [100], 
-        "PERF-053": [100], 
-        "PERF-054": [100], 
-        "PERF-055": [100], 
-        "PERF-056": [100], 
+        "PERF-046": [100, 150],
+        "PERF-047": [100, 150],
+        "PERF-050": [100],
+        "PERF-051": [100],
+        "PERF-052": [100],
+        "PERF-053": [100],
+        "PERF-054": [100],
+        "PERF-055": [100],
+        "PERF-056": [100],
         "PERF-057": [100],
         "PERF-058": [100],
         "PERF-059": [100],
@@ -60,34 +60,34 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const PRECIOS_COMBOS = {
-        "PERF-029-100": 91.00, 
-        "PERF-029-200": 128.00, 
-        "PERF-030-100": 103.00, 
-        "PERF-030-200": 154.00, 
-        "PERF-031-100": 121.00, 
-        "PERF-032-100": 121.00, 
-        "PERF-033-100": 96.00, 
-        "PERF-034-100": 91.00, 
-        "PERF-037-100": 93.00, 
-        "PERF-037-100": 116.00, 
-        "PERF-039-100": 121.00, 
-        "PERF-046-100": 138.00, 
-        "PERF-046-150": 203.00, 
-        "PERF-047-100": 138.00, 
-        "PERF-047-150": 203.00, 
-        "PERF-050-100": 69.00, 
-        "PERF-051-100": 67.00, 
-        "PERF-052-100": 82.00, 
-        "PERF-053-100": 82.00, 
-        "PERF-054-100": 65.00, 
-        "PERF-055-100": 73.00, 
-        "PERF-056-100": 54.00, 
-        "PERF-057-100": 73.00, 
+        "PERF-029-100": 91.00,
+        "PERF-029-200": 128.00,
+        "PERF-030-100": 103.00,
+        "PERF-030-200": 154.00,
+        "PERF-031-100": 121.00,
+        "PERF-032-100": 121.00,
+        "PERF-033-100": 96.00,
+        "PERF-034-100": 91.00,
+        "PERF-037-100": 93.00,
+        "PERF-037-100": 116.00,
+        "PERF-039-100": 121.00,
+        "PERF-046-100": 138.00,
+        "PERF-046-150": 203.00,
+        "PERF-047-100": 138.00,
+        "PERF-047-150": 203.00,
+        "PERF-050-100": 69.00,
+        "PERF-051-100": 67.00,
+        "PERF-052-100": 82.00,
+        "PERF-053-100": 82.00,
+        "PERF-054-100": 65.00,
+        "PERF-055-100": 73.00,
+        "PERF-056-100": 54.00,
+        "PERF-057-100": 73.00,
         "PERF-058-100": 71.00,
         "PERF-059-100": 70.00,
-        "PERF-060-100": 104.00, 
-        "PERF-061-105": 73.00, 
-        "PERF-062-105": 85.00, 
+        "PERF-060-100": 104.00,
+        "PERF-061-105": 73.00,
+        "PERF-062-105": 85.00,
     };
 
     let productos = {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const texto = await respuesta.text();
             const parser = new DOMParser();
             const doc = parser.parseFromString(texto, 'text/html');
-            
+
             return Array.from(doc.querySelectorAll('.decant'))
                 .filter(elemento => {
                     const tieneStock = !elemento.querySelector('.etiquetas .fuera-de-stock');
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .map(elemento => {
                     const esPerfume = tipo === 'perfumes';
                     const skuBase = esPerfume ? elemento.dataset.sku : null;
-    
+
                     return {
                         skuBase: skuBase,
                         nombre: elemento.dataset.name,
@@ -138,21 +138,21 @@ document.addEventListener('DOMContentLoaded', () => {
                                 // Limpiar texto y usar nueva regex
                                 const texto = p.textContent.replace(/\s|<[^>]+>/g, '');
                                 const match = texto.match(/(\d+)ml.*?(\d+\.?\d*)(Bs|\$)/i);
-                                
+
                                 if (!match) {
                                     console.log('No match para:', texto);
                                     return false;
                                 }
-                                
+
                                 const tamaño = parseInt(match[1]);
-                                return esPerfume 
+                                return esPerfume
                                     ? TAMANOS_PERMITIDOS[skuBase]?.includes(tamaño)
                                     : true;
                             })
                             .map(p => {
                                 const texto = p.textContent.replace(/\s|<[^>]+>/g, '');
                                 const match = texto.match(/(\d+)ml.*?(\d+\.?\d*)(Bs|\$)/i);
-                                
+
                                 return {
                                     sku: p.dataset.sku || 'DECANT',
                                     tamaño: parseInt(match[1]),
@@ -178,6 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function actualizarInterfaz() {
+        comboItemsContainer.querySelectorAll('.combo-item').forEach(item => {
+            // Agregar efecto fade-out a items anteriores
+            item.classList.add('fade-out');
+            setTimeout(() => item.remove(), 400);
+        });
         comboItemsContainer.innerHTML = '';
         const tipo = comboTypeSelect.value;
         const cantidad = tipo === 'decants'
@@ -209,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="size-selector-container" id="${tipo}-size-${indice}"></div>
             </div>
         `;
-    
+
         const dropdown = item.querySelector('.dropdown');
         poblarDropdown(tipo, indice, dropdown);
         configurarEventosDropdown(item);
@@ -251,13 +256,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function crearSelectorTamanos(producto) {
         const contenedor = document.createElement('div');
         contenedor.className = 'size-selector-container';
-        
+
         const selector = document.createElement('select');
         selector.className = 'size-selector';
-    
+
         // Obtener tamaños permitidos para este SKU base
         const tamanosPermitidos = TAMANOS_PERMITIDOS[producto.skuBase] || [];
-        
+
         producto.precios.forEach(precio => {
             // Verificar si el tamaño está permitido
             if (tamanosPermitidos.includes(precio.tamaño)) {
@@ -272,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 selector.appendChild(opcion);
             }
         });
-    
+
         // Manejar caso donde no hay tamaños válidos
         if (selector.options.length === 0) {
             const opcion = document.createElement('option');
@@ -280,52 +285,55 @@ document.addEventListener('DOMContentLoaded', () => {
             opcion.disabled = true;
             selector.appendChild(opcion);
         }
-    
+
         // Almacenar datos base del producto
         selector.dataset.producto = JSON.stringify({
             nombre: producto.nombre,
             skuBase: producto.skuBase,
             tipo: producto.tipo
         });
-    
+
         contenedor.appendChild(selector);
         return contenedor;
     }
 
     function seleccionarProducto(tipo, indice, producto, contenedor) {
+        contenedor.classList.add('selected');
+        setTimeout(() => contenedor.classList.remove('selected'), 600);
         contenedor.querySelector(`#${tipo}-nombre-${indice}`).textContent = producto.nombre;
         contenedor.querySelector(`#${tipo}-imagen-${indice}`).src = producto.imagen;
-    
+
         // Limpiar selectores anteriores
         contenedor.querySelector('.size-selector-container')?.remove();
-        
+
         // Crear selector de tamaños
         const selector = document.createElement('select');
         selector.className = 'size-selector';
-        
+
         producto.precios.forEach(precio => {
             const opcion = document.createElement('option');
             opcion.value = JSON.stringify({
                 sku: precio.sku,
                 precio: precio.precio,
-                moneda: precio.moneda
+                moneda: precio.moneda,
+                tamaño: precio.tamaño
             });
             opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
             selector.appendChild(opcion);
         });
-    
+
         // Almacenar datos base del producto
         selector.dataset.producto = JSON.stringify({
             nombre: producto.nombre,
             tipo: producto.tipo,
             baseSKU: producto.baseSKU
         });
-    
+
         const container = document.createElement('div');
         container.className = 'size-selector-container';
         container.appendChild(selector);
         contenedor.querySelector('.combo-selection').appendChild(container);
-        
+
         selector.addEventListener('change', actualizarTotal);
         actualizarTotal();
     }
@@ -392,28 +400,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const tipoCombo = comboTypeSelect.value;
         const esDecants = tipoCombo === 'decants';
         const cantidadDecants = esDecants ? parseInt(decantQuantitySelect.value) : 0;
-    
+
         let descuentoExtra = 0;
         if (esDecants) {
-            const descuentos = {5:0, 6:2, 7:4, 8:6, 9:8, 10:10};
+            const descuentos = { 5: 0, 6: 2, 7: 4, 8: 6, 9: 8, 10: 10 };
             descuentoExtra = descuentos[cantidadDecants] || 0;
         }
-    
+
         document.querySelectorAll('.size-selector').forEach(selector => {
             if (selector.value) {
                 const precioData = JSON.parse(selector.value);
                 const producto = JSON.parse(selector.dataset.producto);
-                
+
                 if (producto.tipo === 'decants') {
                     const descuentoTotal = 10 + descuentoExtra;
-                    const precioDescontado = precioData.precio * (1 - descuentoTotal/100);
-                    
+                    const precioDescontado = precioData.precio * (1 - descuentoTotal / 100);
+
                     originalTotal += precioData.precio;
                     total += precioDescontado;
                     productosSeleccionados++;
                 } else {
                     const precioCombo = PRECIOS_COMBOS[precioData.sku];
-                    
+
                     if (precioCombo) {
                         originalTotal += precioData.precio;
                         total += precioCombo;
@@ -422,15 +430,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-    
+
         const ahorro = originalTotal - total;
         const moneda = esDecants ? 'Bs' : '$';
-    
+
         document.getElementById('total-price').textContent = total.toFixed(2);
         document.getElementById('total-price-currency').textContent = moneda;
-        document.getElementById('savings').textContent = 
+        document.getElementById('savings').textContent =
             `Estás ahorrando: ${moneda}${ahorro.toFixed(2)}`;
-    
+
         actualizarBotonWhatsApp(productosSeleccionados);
         actualizarEnlaceWhatsApp(total, esDecants);
     }
@@ -447,24 +455,27 @@ document.addEventListener('DOMContentLoaded', () => {
     function actualizarEnlaceWhatsApp(total, esDecants) {
         const moneda = esDecants ? 'Bs' : '$';
         let mensaje = `¡Hola! Quiero armar mi combo de ${esDecants ? 'decants' : 'perfumes'}:\n\n`;
-    
-        document.querySelectorAll('.combo-item').forEach((item, indice) => {
-            const nombre = item.querySelector('[id$="-nombre"]')?.textContent;
+
+        document.querySelectorAll('.combo-item').forEach((item) => {
+            const nombreElement = item.querySelector('[id^="perfumes-nombre"], [id^="decants-nombre"]');
+            const nombre = nombreElement?.textContent;
             const selector = item.querySelector('.size-selector');
-            
+
             if (nombre && selector && selector.value) {
                 const precioData = JSON.parse(selector.value);
-                const producto = JSON.parse(selector.dataset.producto);
-                
-                // Diferenciar entre perfumes y decants
-                if (producto.tipo === 'perfumes') {
-                    mensaje += `➤ ${nombre} (${precioData.tamaño}ml - ${producto.skuBase})\n`;
-                } else {
-                    mensaje += `➤ ${nombre} (${precioData.tamaño}ml)\n`;
+                const producto = JSON.parse(selector.dataset.producto || '{}');
+
+                // Obtener tamaño del selector (corregido)
+                const tamaño = precioData.tamaño || precioData.tamano; // Usar alias si es necesario
+
+                let linea = `➤ ${nombre} (${tamaño}ml`;
+                if (producto.tipo === 'perfumes' && producto.skuBase) {
+                    linea += ` - ${producto.skuBase}`;
                 }
+                mensaje += linea + ')\n';
             }
         });
-    
+
         mensaje += `\nTotal: ${moneda} ${total.toFixed(2)}`;
         whatsappLink.href = `https://wa.me/78064327?text=${encodeURIComponent(mensaje)}`;
     }
