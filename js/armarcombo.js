@@ -112,43 +112,63 @@ document.addEventListener('DOMContentLoaded', () => {
         const archivo = `${tipo}.html`;
         try {
             const respuesta = await fetch(archivo);
+            if (!respuesta.ok) throw new Error(`Error ${respuesta.status}`);
             const texto = await respuesta.text();
+            
+            // Verificar contenido del HTML
+            console.log(`Contenido de ${archivo}:`, texto);
+    
             const parser = new DOMParser();
             const doc = parser.parseFromString(texto, 'text/html');
             
-            return Array.from(doc.querySelectorAll('.decant'))
+            const productosFiltrados = Array.from(doc.querySelectorAll('.decant'))
                 .filter(elemento => {
+                    // 1. Verificar stock
                     const tieneStock = !elemento.querySelector('.etiquetas .fuera-de-stock');
-                    const skuBase = elemento.dataset.sku;
-                    return tieneStock && SKUS_PERMITIDOS.includes(skuBase);
+                    
+                    // 2. Solo perfumes usan SKU
+                    if (tipo === 'perfumes') {
+                        const skuDiv = elemento.dataset.sku;
+                        const permitido = SKUS_PERMITIDOS.includes(skuDiv);
+                        console.log(`Perfume ${skuDiv} permitido: ${permitido}`);
+                        return tieneStock && permitido;
+                    }
+                    return tieneStock;
                 })
                 .map(elemento => {
-                    const skuBase = elemento.dataset.sku;
-                    return {
-                        skuBase: skuBase,
+                    // Mapear datos básicos
+                    const producto = {
+                        skuBase: tipo === 'perfumes' ? elemento.dataset.sku : 'DECANT',
                         nombre: elemento.dataset.name,
                         imagen: elemento.querySelector('img').src,
-                        precios: Array.from(elemento.querySelectorAll('p'))
-                            .filter(p => {
-                                const match = p.textContent.match(/(\d+)\s*ml/);
-                                if (!match) return false;
-                                const tamaño = parseInt(match[1]);
-                                // Filtrar por tamaños permitidos
-                                return TAMANOS_PERMITIDOS[skuBase]?.includes(tamaño) || false;
-                            })
-                            .map(p => {
-                                const match = p.textContent.match(/(\d+)\s*ml\s*-\s*([\d.]+)/);
-                                return {
-                                    sku: p.dataset.sku,
-                                    tamaño: parseInt(match[1]),
-                                    precio: parseFloat(match[2]),
-                                    moneda: p.textContent.includes('Bs') ? 'Bs' : '$'
-                                };
-                            }).sort((a, b) => a.tamaño - b.tamaño),
+                        precios: [],
                         tipo: tipo
                     };
+    
+                    // Procesar precios
+                    elemento.querySelectorAll('p').forEach(p => {
+                        const textoLimpio = p.textContent.replace(/\s|<[^>]+>/g, '');
+                        const match = textoLimpio.match(/(\d+)ml.*?(Bs|\$)(\d+\.?\d*)/i);
+                        
+                        if (match) {
+                            producto.precios.push({
+                                sku: p.dataset.sku || 'DECANT',
+                                tamaño: parseInt(match[1]),
+                                precio: parseFloat(match[3]),
+                                moneda: match[2].toUpperCase()
+                            });
+                        }
+                    });
+    
+                    // Ordenar por tamaño
+                    producto.precios.sort((a, b) => a.tamaño - b.tamaño);
+                    return producto;
                 })
-                .filter(producto => producto.precios.length > 0); // Eliminar productos sin tamaños válidos
+                .filter(producto => producto.precios.length > 0);
+    
+            console.log(`Productos filtrados (${tipo}):`, productosFiltrados);
+            return productosFiltrados;
+    
         } catch (error) {
             console.error(`Error cargando ${archivo}:`, error);
             return [];
