@@ -1193,7 +1193,7 @@ main {
     background: #fff;
     align-content: left !important;
     border-radius: 12px;
-    padding-left: 0;
+    padding-left: 10px;
     padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1387,7 +1387,7 @@ main {
         width: 95%;
         border-radius: 12px;
         margin-top: 40px;
-        padding: auto;
+        padding: 15px;
         align-content: center;
     }
 
