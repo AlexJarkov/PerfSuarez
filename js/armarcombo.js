@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "PERF-060",
         "PERF-061",
         "PERF-062",
+        "PERF-064",
     ];
 
     const TAMANOS_PERMITIDOS = {
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "PERF-060": [100],
         "PERF-061": [105],
         "PERF-062": [105],
+        "PERF-064": [100],
     };
 
     const PRECIOS_COMBOS = {
@@ -88,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "PERF-060-100": 104.00,
         "PERF-061-105": 73.00,
         "PERF-062-105": 85.00,
+        "PERF-064-100": 85.00,
     };
 
     let productos = {
