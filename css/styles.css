@@ -386,8 +386,12 @@ main {
     background-color: #dc3545;
 }
 
-.novedad, .a-pedido {
+.novedad {
     background-color: #ffc107;
+}
+
+.a-pedido {
+    background-color: #075eff;
 }
 
 #sobre-nosotros {
