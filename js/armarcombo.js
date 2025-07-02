@@ -350,7 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function crearSelectorRegalo() {
         const regalos = [
-            { nombre: 'Waka', imagen: 'imagenes/waka.webp' },
+            { nombre: 'Desodorante Khamrah', imagen: 'imagenes/fotos-catalogo/arabes/DESODORANTE KHAMRAH.jpg' },
+            { nombre: 'Desodorante Yara', imagen: 'imagenes/fotos-catalogo/arabes/DESODORANTE YARA.webp' },
             { nombre: 'Vela aromática', imagen: 'imagenes/vela.jpg' }
         ];
 
