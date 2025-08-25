@@ -59,7 +59,7 @@
                 <div class="pagination-controls">
                     <div class="page-size">
                         <label for="page-size-input">Tarjetas por página:</label>
-                        <input id="page-size-input" type="number" min="1" step="1" value="30">
+                        <input id="page-size-input" type="number" min="1" step="1" value="20">
                     </div>
 
                     <div class="pager">
@@ -737,7 +737,7 @@
                         <p>5 <strong>ml - </strong>110 Bs</p>
                         <p>10 <strong>ml - </strong>210 Bs</p>
                         <p>15 <strong>ml - </strong>300 Bs</p>
-                        <div class="etiquetas"><span class="etiqueta novedad">Nuevo</span></div>
+                        <div class="etiquetas"><span class="etiqueta novedad">De Regreso en Stock</span></div>
                     </div>
 
                     <div class="decant" data-name="Giorgio Armani Acqua Di Gio Absolu" data-tags="hombre">
@@ -2196,16 +2196,17 @@
                     </div>
 
                 </div>
-                <div class="pagination-controls">
+                <!-- Controles de paginación (parte inferior del catálogo) -->
+                <div class="pagination-controls" id="pagination-bottom">
                     <div class="page-size">
-                        <label for="page-size-input">Tarjetas por página:</label>
-                        <input id="page-size-input" type="number" min="1" step="1" value="30">
+                        <label for="page-size-input-bottom">Tarjetas por página:</label>
+                        <input id="page-size-input-bottom" type="number" min="1" step="1" value="20">
                     </div>
 
                     <div class="pager">
-                        <button id="page-prev" type="button" aria-label="Página anterior">&laquo;</button>
-                        <span id="page-status" aria-live="polite">Página 1 de 1</span>
-                        <button id="page-next" type="button" aria-label="Página siguiente">&raquo;</button>
+                        <button id="page-prev-bottom" type="button" aria-label="Página anterior">&laquo;</button>
+                        <span id="page-status-bottom" aria-live="polite">Página 1 de 1</span>
+                        <button id="page-next-bottom" type="button" aria-label="Página siguiente">&raquo;</button>
                     </div>
                 </div>
             </div>
@@ -2216,7 +2217,7 @@
         (function () {
             'use strict';
 
-            // ---- LazyImages (fallback, no rompe si ya agregaste loading="lazy") ----
+            // ---------- Lazy Images (suave, no interfiere si ya pusiste loading="lazy") ----------
             class LazyImages {
                 constructor(selector = '.perfume-grid img, .decant-grid img') { this.selector = selector; }
                 init() {
@@ -2235,29 +2236,56 @@
                 }
             }
 
-            // ---- Paginador minimalista (sin overrides ni envoltorios raros) ----
+            // ---------- Paginador con múltiples controles (top y bottom) ----------
             class Paginator {
                 constructor(opts) {
                     this.grid = typeof opts.gridEl === 'string' ? document.querySelector(opts.gridEl) : opts.gridEl;
                     this.sel = opts.itemSelector || '.decant';
-                    this.input = typeof opts.inputEl === 'string' ? document.querySelector(opts.inputEl) : opts.inputEl;
-                    this.prev = typeof opts.prevEl === 'string' ? document.querySelector(opts.prevEl) : opts.prevEl;
-                    this.next = typeof opts.nextEl === 'string' ? document.querySelector(opts.nextEl) : opts.nextEl;
-                    this.status = typeof opts.statusEl === 'string' ? document.querySelector(opts.statusEl) : opts.statusEl;
-
                     this.items = Array.from(this.grid ? this.grid.querySelectorAll(this.sel) : []);
-                    this.pageSize = Math.max(1, parseInt((this.input && this.input.value) || '12', 10) || 12);
+                    this.controls = [];
+                    // Soporta: controls: [{inputEl,prevEl,nextEl,statusEl}] o los campos sueltos para retrocompatibilidad
+                    if (Array.isArray(opts.controls)) {
+                        opts.controls.forEach(c => this._attachControls(c));
+                    } else {
+                        this._attachControls(opts);
+                    }
+                    this.pageSize = this._initialPageSize();
                     this.page = 1;
                     this._bind();
                 }
-                // Universo = elementos visibles por filtros (display !== 'none')
+                _qs(elOrSel) { return typeof elOrSel === 'string' ? document.querySelector(elOrSel) : elOrSel; }
+                _attachControls(c) {
+                    const input = this._qs(c.inputEl);
+                    const prev = this._qs(c.prevEl);
+                    const next = this._qs(c.nextEl);
+                    const status = this._qs(c.statusEl);
+                    const wrapper = (input || prev || next || status) ? (input || prev || next || status).closest('.pagination-controls') : null;
+                    this.controls.push({ input, prev, next, status, wrapper });
+                }
+                _initialPageSize() {
+                    for (const c of this.controls) {
+                        if (c.input && c.input.value) {
+                            const v = parseInt(c.input.value, 10);
+                            if (Number.isFinite(v) && v > 0) return v;
+                        }
+                    }
+                    return 30; // tu default (coincide con el valor del input que pasaste)
+                }
+                // Universo: tarjetas visibles por filtros (filterPerfumes usa style.display)
                 _universe() { return this.items.filter(el => el.style.display !== 'none'); }
                 _total() { const n = this._universe().length; return Math.max(1, Math.ceil(n / this.pageSize)); }
+                _syncInputs() {
+                    for (const c of this.controls) if (c.input && String(c.input.value) !== String(this.pageSize)) c.input.value = String(this.pageSize);
+                }
                 _updateUI(total) {
                     if (!total) total = this._total();
-                    if (this.status) this.status.textContent = `Página ${this.page} de ${total}`;
-                    if (this.prev) this.prev.disabled = this.page <= 1;
-                    if (this.next) this.next.disabled = this.page >= total;
+                    for (const c of this.controls) {
+                        if (c.status) c.status.textContent = `Página ${this.page} de ${total}`;
+                        if (c.prev) c.prev.disabled = this.page <= 1;
+                        if (c.next) c.next.disabled = this.page >= total;
+                        if (c.wrapper) c.wrapper.style.display = total > 1 ? '' : 'none';
+                    }
+                    this._syncInputs();
                 }
                 render() {
                     if (!this.grid) return;
@@ -2273,7 +2301,7 @@
                     // Limpia paginación previa
                     this.items.forEach(el => el.classList.remove('pag-hidden'));
 
-                    // Aplica paginación sólo a los visibles por filtros
+                    // Oculta fuera de rango sólo en universo filtrado
                     universe.forEach((el, idx) => {
                         el.classList.toggle('pag-hidden', !(idx >= start && idx < end));
                     });
@@ -2289,26 +2317,25 @@
                 setPageSize(n) {
                     const old = this.pageSize;
                     this.pageSize = Math.max(1, parseInt(n, 10) || 1);
-                    if (this.input) {
-                        const val = String(this.pageSize);
-                        if (this.input.value !== val) this.input.value = val;
-                    }
                     const startIndex = (this.page - 1) * old;
                     this.page = Math.floor(startIndex / this.pageSize) + 1;
+                    this._syncInputs();
                     this.render();
                 }
                 _bind() {
-                    if (this.prev) this.prev.addEventListener('click', () => { this.page = Math.max(1, this.page - 1); this.render(); });
-                    if (this.next) this.next.addEventListener('click', () => { this.page = Math.min(this._total(), this.page + 1); this.render(); });
-                    if (this.input) this.input.addEventListener('change', () => {
-                        let v = parseInt(this.input.value, 10);
-                        if (!Number.isFinite(v) || v < 1) v = 1;
-                        this.setPageSize(v);
-                    });
+                    for (const c of this.controls) {
+                        if (c.prev) c.prev.addEventListener('click', () => { this.page = Math.max(1, this.page - 1); this.render(); });
+                        if (c.next) c.next.addEventListener('click', () => { this.page = Math.min(this._total(), this.page + 1); this.render(); });
+                        if (c.input) c.input.addEventListener('change', () => {
+                            let v = parseInt(c.input.value, 10);
+                            if (!Number.isFinite(v) || v < 1) v = 1;
+                            this.setPageSize(v);
+                        });
+                    }
                 }
             }
 
-            // ---- Filtros (definición ÚNICA) ----
+            // ---------- Filtros (única definición) ----------
             function filterPerfumes(filter) {
                 const decantsContainer = document.getElementById('decants');
                 const stockEl = document.getElementById('stock-filter');
@@ -2345,59 +2372,126 @@
 
                     if (noMsg) noMsg.style.display = visible === 0 ? 'block' : 'none';
 
-                    // Refresca paginación cuando ya terminó el filtrado/animación
+                    // Refresca paginación al finalizar el filtrado
                     if (window.decantsPager) window.decantsPager.refresh();
 
                     decantsContainer && decantsContainer.classList.remove('fade-out');
-                }, 500); // coincide con tu transición CSS
+                }, 500);
             }
-            window.filterPerfumes = filterPerfumes; // tu HTML la usa en oninput/onchange
+            window.filterPerfumes = filterPerfumes;
 
-            // ---- Bootstrap ----
+            // ---------- Bootstrap ----------
             document.addEventListener('DOMContentLoaded', () => {
-                // Lazy loading reforzado
+                // Lazy
                 try { new LazyImages().init(); } catch (_) { }
 
-                // Click en tarjeta -> WhatsApp
-                document.querySelectorAll('.decant').forEach(card => {
-                    card.addEventListener('click', () => {
+                // Delegación: click en tarjeta => WhatsApp
+                const gridContainer = document.querySelector('.perfume-grid, .decant-grid');
+                if (gridContainer) {
+                    gridContainer.addEventListener('click', (e) => {
+                        const card = e.target.closest('.decant');
+                        if (!card) return;
                         const name = card.getAttribute('data-name') || '';
                         const whatsappNumber = '78064327';
                         const msg = encodeURIComponent(`Hola! Quisiera saber si tienen disponible el decant del ${name}!`);
-                        const ok = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
-                        if (ok) window.open(`https://wa.me/${whatsappNumber}/?text=${msg}`, '_blank');
-                    });
-                });
-
-                // Listeners de filtros (UNA sola vez)
-                const stockEl = document.getElementById('stock-filter');
-                const newEl = document.getElementById('new-filter');
-                stockEl && stockEl.addEventListener('change', () => filterPerfumes());
-                newEl && newEl.addEventListener('change', () => filterPerfumes());
-
-                // Paginador (acepta .perfume-grid o .decant-grid)
-                const grid = document.querySelector('.perfume-grid') || document.querySelector('.decant-grid');
-                const input = document.querySelector('#page-size-input');
-                const prev = document.querySelector('#page-prev');
-                const next = document.querySelector('#page-next');
-                const status = document.querySelector('#page-status');
-
-                if (grid && input && prev && next && status) {
-                    window.decantsPager = new Paginator({
-                        gridEl: grid,
-                        itemSelector: '.decant',
-                        inputEl: input,
-                        prevEl: prev,
-                        nextEl: next,
-                        statusEl: status
+                        if (confirm('¿Desea continuar a WhatsApp para realizar su consulta?')) {
+                            window.open(`https://wa.me/${whatsappNumber}/?text=${msg}`, '_blank', 'noopener');
+                        }
                     });
                 }
 
-                // Primer render (aplica filtros actuales y pagina)
+                // Listeners de checkboxes (una sola vez)
+                document.getElementById('stock-filter')?.addEventListener('change', () => filterPerfumes());
+                document.getElementById('new-filter')?.addEventListener('change', () => filterPerfumes());
+
+                // Paginador con controles arriba y abajo (si existen)
+                const grid = document.querySelector('.perfume-grid') || document.querySelector('.decant-grid');
+                const controls = [];
+
+                // Controles superiores (IDs originales)
+                if (document.querySelector('#page-size-input') &&
+                    document.querySelector('#page-prev') &&
+                    document.querySelector('#page-next') &&
+                    document.querySelector('#page-status')) {
+                    controls.push({
+                        inputEl: '#page-size-input',
+                        prevEl: '#page-prev',
+                        nextEl: '#page-next',
+                        statusEl: '#page-status'
+                    });
+                }
+
+                // Controles inferiores (IDs -bottom)
+                if (document.querySelector('#page-size-input-bottom') &&
+                    document.querySelector('#page-prev-bottom') &&
+                    document.querySelector('#page-next-bottom') &&
+                    document.querySelector('#page-status-bottom')) {
+                    controls.push({
+                        inputEl: '#page-size-input-bottom',
+                        prevEl: '#page-prev-bottom',
+                        nextEl: '#page-next-bottom',
+                        statusEl: '#page-status-bottom'
+                    });
+                }
+
+                if (grid && controls.length) {
+                    window.decantsPager = new Paginator({
+                        gridEl: grid,
+                        itemSelector: '.decant',
+                        controls
+                    });
+                }
+
+                // Primer render (aplica filtros existentes + pagina)
                 filterPerfumes();
             }, { once: true });
 
         })();
+
+        // ---- Filtros (definición ÚNICA) ----
+        function filterPerfumes(filter) {
+            const decantsContainer = document.getElementById('decants');
+            const stockEl = document.getElementById('stock-filter');
+            const newEl = document.getElementById('new-filter');
+            const search = document.getElementById('decant-search');
+            const noMsg = document.getElementById('no-results-message');
+
+            const stockFilter = !!(stockEl && stockEl.checked);
+            const newFilter = !!(newEl && newEl.checked);
+            const searchQuery = (search && search.value || '').toLowerCase();
+            const currentTag = filter || (document.getElementById('decant-filter')?.value || 'all');
+
+            decantsContainer && decantsContainer.classList.add('fade-out');
+
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.decant');
+                let visible = 0;
+
+                cards.forEach(card => {
+                    const isOutOfStock = card.querySelector('.etiqueta.fuera-de-stock') !== null;
+                    const isNew = card.querySelector('.etiqueta.novedad') !== null;
+                    const tags = (card.getAttribute('data-tags') || '');
+                    const name = (card.getAttribute('data-name') || '').toLowerCase();
+
+                    const matchesFilter = currentTag === 'all' || tags.includes(currentTag);
+                    const shouldShow = matchesFilter &&
+                        (!stockFilter || !isOutOfStock) &&
+                        (!newFilter || isNew) &&
+                        (searchQuery === '' || name.includes(searchQuery));
+
+                    card.style.display = shouldShow ? 'block' : 'none';
+                    if (shouldShow) visible++;
+                });
+
+                if (noMsg) noMsg.style.display = visible === 0 ? 'block' : 'none';
+
+                // Refresca paginación cuando ya terminó el filtrado/animación
+                if (window.decantsPager) window.decantsPager.refresh();
+
+                decantsContainer && decantsContainer.classList.remove('fade-out');
+            }, 500); // coincide con tu transición CSS
+        }
+        window.filterPerfumes = filterPerfumes; // tu HTML la usa en oninput/onchange
     </script>
     <div data-include="footer.html">
     </div>

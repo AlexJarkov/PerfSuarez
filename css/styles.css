@@ -1805,80 +1805,100 @@ main {
     margin-top: .7rem;
 }
 
-/* ---------- Paginación ---------- */
+/* ---------- Paginación (arriba y abajo) ---------- */
 .pagination-controls {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 16px 0 8px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 8px;
 }
 
 .pagination-controls .page-size {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
-#page-size-input {
-    width: 90px;
-    max-width: 100%;
-    padding: 6px 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font: inherit;
+/* Inputs de tamaño de página (top y bottom) */
+#page-size-input,
+#page-size-input-bottom,
+.pagination-controls .page-size input[type="number"] {
+  width: 90px;
+  max-width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font: inherit;
 }
 
 .pagination-controls .pager {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
 }
 
 .pagination-controls .pager button {
-    border: 1px solid #ddd;
-    background: #fff;
-    padding: 6px 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    font: inherit;
-    transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  transition: transform .06s ease, box-shadow .15s ease, border-color .15s ease;
 }
 
 .pagination-controls .pager button:hover:not(:disabled) {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
-    border-color: #ccc;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  border-color: #ccc;
 }
 
 .pagination-controls .pager button:disabled {
-    opacity: .5;
-    cursor: not-allowed;
+  opacity: .5;
+  cursor: not-allowed;
 }
 
-#page-status {
-    min-width: 120px;
-    text-align: center;
-    font-weight: 600;
+/* Estado de página (top y bottom) */
+#page-status,
+#page-status-bottom,
+.pagination-controls .pager span {
+  min-width: 120px;
+  text-align: center;
+  font-weight: 600;
 }
 
 /* Oculta por paginación sin pelearse con tus filtros */
 .pag-hidden {
-    display: none !important;
+  display: none !important;
 }
 
-/* Suaviza el cambio de página (reutiliza tu .fade-out si quieres) */
-.perfume-grid {
-    transition: opacity .18s ease;
+/* Suaviza el cambio de página para ambas grillas */
+.perfume-grid,
+.decant-grid {
+  transition: opacity .18s ease;
 }
-
-.perfume-grid.is-paging {
-    opacity: .5;
+.perfume-grid.is-paging,
+.decant-grid.is-paging {
+  opacity: .5;
 }
 
 /* ---------- Lazy images ---------- */
 img[loading="lazy"] {
-    /* Evita layout shift si declaras width/height en HTML; si no, mantenemos por defecto */
-    background: #f6f6f6;
+  /* Evita layout shift si declaras width/height; si no, mantenemos por defecto */
+  background: #f6f6f6;
+}
+
+/* Responsive: acomoda los controles en pantallas chicas */
+@media (max-width: 640px) {
+  .pagination-controls {
+    gap: .75rem;
+  }
+  #page-size-input,
+  #page-size-input-bottom,
+  .pagination-controls .page-size input[type="number"] {
+    width: 80px;
+    padding: 6px 8px;
+  }
 }
