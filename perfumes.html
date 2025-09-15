@@ -83,60 +83,73 @@
                         onchange="filterPerfumes(document.getElementById('decant-filter').value)">
                 </div>
                 <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
-                    <p>Perdón pariente... No tenemos decants que coincidan con tu búsqueda :(</p>
+                    <p>Perdón pariente... No tenemos perfumes que coincidan con tu búsqueda :(</p>
+                </div>
+                <!-- Controles de paginación (parte superior) -->
+                <div class="pagination-controls">
+                    <div class="page-size">
+                        <label for="page-size-input">Tarjetas por página:</label>
+                        <input id="page-size-input" type="number" min="1" step="1" value="20">
+                    </div>
+
+                    <div class="pager">
+                        <button id="page-prev" type="button" aria-label="Página anterior">&laquo;</button>
+                        <span id="page-status" aria-live="polite">Página 1 de 1</span>
+                        <button id="page-next" type="button" aria-label="Página siguiente">&raquo;</button>
+                    </div>
                 </div>
                 <div class="perfume-grid">
                     <div class="decant" data-name="Xerjoff XJ 1861 Naxos" data-tags="hombre mujer unisex xerjoff nicho">
-                        <img src="imagenes\fotos-catalogo\xerjoff\NAXOS.jpg" alt="XJ 1861 Naxos">
+                        <img src="imagenes\fotos-catalogo\xerjoff\NAXOS.jpg" alt="XJ 1861 Naxos" loading="lazy" decoding="async">
                         <h3><strong>Xerjoff</strong></h3>
                         <p>XJ 1861 Naxos</p>
                         <div class="etiquetas"><span class="etiqueta a-pedido">A Pedido</span></div>
                     </div>
 
                     <div class="decant" data-name="Xerjoff Erba Pura" data-tags="hombre mujer unisex xerjoff nicho">
-                        <img src="imagenes\fotos-catalogo\xerjoff\ERBA PURA.webp" alt="Erba Pura">
+                        <img src="imagenes\fotos-catalogo\xerjoff\ERBA PURA.webp" alt="Erba Pura" loading="lazy" decoding="async">
                         <h3><strong>Xerjoff</strong></h3>
                         <p>Erba Pura</p>
                         <div class="etiquetas"><span class="etiqueta a-pedido">A Pedido</span></div>
                     </div>
 
                     <div class="decant" data-name="Xerjoff Erba Gold" data-tags="hombre mujer unisex xerjoff nicho">
-                        <img src="imagenes\fotos-catalogo\xerjoff\ERBA GOLD.jpg" alt="Erba Gold">
+                        <img src="imagenes\fotos-catalogo\xerjoff\ERBA GOLD.jpg" alt="Erba Gold" loading="lazy" decoding="async">
                         <h3><strong>Xerjoff</strong></h3>
                         <p>Erba Gold</p>
                         <div class="etiquetas"><span class="etiqueta a-pedido">A Pedido</span></div>
                     </div>
 
                     <div class="decant" data-name="Parfums de Marly Layton" data-tags="hombre marly nicho">
-                        <img src="imagenes\fotos-catalogo\marly\LAYTON.jpg" alt="Layton">
+                        <img src="imagenes\fotos-catalogo\marly\LAYTON.jpg" alt="Layton" loading="lazy" decoding="async">
                         <h3><strong>Parfums de Marly</strong></h3>
                         <p>Layton</p>
                         <div class="etiquetas"><span class="etiqueta a-pedido">A Pedido</span></div>
                     </div>
 
                     <div class="decant" data-name="Parfums de Marly Layton Exclusif" data-tags="hombre marly nicho">
-                        <img src="imagenes\fotos-catalogo\marly\LAYTON EXCLUSIF.webp" alt="Layton Exclusif">
+                        <img src="imagenes\fotos-catalogo\marly\LAYTON EXCLUSIF.webp" alt="Layton Exclusif" loading="lazy" decoding="async">
                         <h3><strong>Parfums de Marly</strong></h3>
                         <p>Layton Exclusif</p>
                         <div class="etiquetas"><span class="etiqueta a-pedido">A Pedido</span></div>
                     </div>
 
                     <div class="decant" data-name="Emporio Armani Stronger With You Intensely" data-tags="hombre armani">
-                        <img src="imagenes\fotos-catalogo\armani\SWY INTENSELY.webp" alt="Megamare">
+                        <img src="imagenes\fotos-catalogo\armani\SWY INTENSELY.webp" alt="Megamare" loading="lazy" decoding="async">
                         <h3><strong>Emporio Armani</strong></h3>
                         <p>Stronger With You Intensely</p>
                         <div class="etiquetas"><span class="etiqueta a-pedido">A Pedido</span></div>
                     </div>
 
                     <div class="decant" data-sku="PERF-070" data-name="Louis Vuitton Imagination" data-tags="hombre louisv nicho">
-                        <img src="imagenes\fotos-catalogo\louisv\IMAGINATION.webp" alt="Imagination">
+                        <img src="imagenes\fotos-catalogo\louisv\IMAGINATION.webp" alt="Imagination" loading="lazy" decoding="async">
                         <h3><strong>Louis Vuitton</strong></h3>
                         <p>Imagination</p>
                         <div class="etiquetas"><span class="etiqueta a-pedido">A Pedido</span></div>
                     </div>
 
                     <div class="decant" data-sku="PERF-072" data-name="Orto Parisi Megamare" data-tags="hombre mujer unisex ortoparisi nicho">
-                        <img src="imagenes\fotos-catalogo\ortoparisi\MEGAMARE.jpg" alt="Megamare">
+                        <img src="imagenes\fotos-catalogo\ortoparisi\MEGAMARE.jpg" alt="Megamare" loading="lazy" decoding="async">
                         <h3><strong>Orto Parisi</strong></h3>
                         <p>Megamare</p>
                         <p data-sku="PERF-072-050">50 <strong>ml - </strong>571$</p>
@@ -144,7 +157,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-073" data-name="Le Labo Santal 33" data-tags="hombre mujer unisex lelabo nicho">
-                        <img src="imagenes\fotos-catalogo\lelabo\SANTAL 33.webp" alt="Santal 33">
+                        <img src="imagenes\fotos-catalogo\lelabo\SANTAL 33.webp" alt="Santal 33" loading="lazy" decoding="async">
                         <h3><strong>Le Labo</strong></h3>
                         <p>Santal 33</p>
                         <!-- <p data-sku="PERF-073-100">100 <strong>ml - </strong>500$</p> -->
@@ -152,7 +165,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-071" data-name="Parfums de Marly Althaïr" data-tags="hombre marly nicho">
-                        <img src="imagenes\fotos-catalogo\marly\ALTHAIR.webp" alt="Althaïr">
+                        <img src="imagenes\fotos-catalogo\marly\ALTHAIR.webp" alt="Althaïr" loading="lazy" decoding="async">
                         <h3><strong>Parfums de Marly</strong></h3>
                         <p>Althaïr</p>
                         <!-- <p data-sku="PERF-071-125">125 <strong>ml - </strong>643$</p> -->
@@ -160,7 +173,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-087" data-name="Mancera Instant Crush" data-tags="hombre mancera nicho">
-                        <img src="imagenes/fotos-catalogo/mancera/INSTANT CRUSH.png" alt="Instant Crush">
+                        <img src="imagenes/fotos-catalogo/mancera/INSTANT CRUSH.png" alt="Instant Crush" loading="lazy" decoding="async">
                         <h3><strong>Mancera</strong></h3>
                         <p>Instant Crush</p>
                         <p data-sku="PERF-087-120">120 <strong>ml - </strong>257$</p>
@@ -168,7 +181,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-092" data-name="Sauvage EDT" data-tags="hombre dior">
-                        <img src="imagenes\fotos-catalogo\dior\Untitled-1.jpg" alt="Sauvage EDT">
+                        <img src="imagenes\fotos-catalogo\dior\Untitled-1.jpg" alt="Sauvage EDT" loading="lazy" decoding="async">
                         <h3><strong>Dior</strong></h3>
                         <p>Sauvage Eau De Toilette</p>
                         <p data-sku="PERF-092-200">200 <strong>ml - </strong>214$</p>
@@ -176,7 +189,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-001" data-name="Carolina Herrera Bad Boy Extreme" data-tags="hombre carolina">
-                        <img src="imagenes\fotos-catalogo\ch\Untitled.jpg" alt="Bad Boy Extreme">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled.jpg" alt="Bad Boy Extreme" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Bad Boy Extreme</p>
                         <p data-sku="PERF-001-100">100 <strong>ml - </strong>192$</p>
@@ -184,7 +197,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-002" data-name="Carolina Herrera Bad Boy Cobalt" data-tags="hombre carolina">
-                        <img src="imagenes/fotos-catalogo/ch/Untitled-1.png" alt="Bad Boy Cobalt">
+                        <img src="imagenes/fotos-catalogo/ch/Untitled-1.png" alt="Bad Boy Cobalt" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Bad Boy Cobalt</p>
                         <!-- <p data-sku="PERF-002-100">100 <strong>ml - </strong>122$</p> -->
@@ -192,7 +205,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-003" data-name="Carolina Herrera Bad Boy Cobalt Elixir" data-tags="hombre carolina">
-                        <img src="imagenes\fotos-catalogo\ch\1010-65198208_1200x.webp" alt="Bad Boy Cobalt Elixir">
+                        <img src="imagenes\fotos-catalogo\ch\1010-65198208_1200x.webp" alt="Bad Boy Cobalt Elixir" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Bad Boy Cobalt Elixir</p>
                         <p data-sku="PERF-003-100">100 <strong>ml - </strong>178$</p>
@@ -200,7 +213,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-004" data-name="Carolina Herrera Bad Boy Le Parfum" data-tags="hombre carolina">
-                        <img src="imagenes\fotos-catalogo\ch\Untitled.png" alt="Bad Boy Le Parfum">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled.png" alt="Bad Boy Le Parfum" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Bad Boy Le Parfum</p>
                         <!-- <p data-sku="PERF-004-100">100 <strong>ml - </strong>126$</p> -->
@@ -208,7 +221,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-005" data-name="Carolina Herrera Bad Boy EDT" data-tags="hombre carolina">
-                        <img src="imagenes\fotos-catalogo\ch\Untitled-1.jpg" alt="Bad Boy EDT">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-1.jpg" alt="Bad Boy EDT" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Bad Boy EDT</p>
                         <!-- <p data-sku="PERF-005-100">100 <strong>ml - </strong>108$</p> -->
@@ -216,7 +229,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-006" data-name="Carolina Herrera 212 VIP Men" data-tags="hombre carolina">
-                        <img src="imagenes\fotos-catalogo\ch\Untitled-3.png" alt="212 VIP Men">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-3.png" alt="212 VIP Men" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>212 VIP Men</p>
                         <!-- <p data-sku="PERF-006-100">100 <strong>ml - </strong>102$</p> -->
@@ -224,7 +237,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-007" data-name="Carolina Herrera 212 VIP Rosé Elixir" data-tags="mujer carolina">
-                        <img src="imagenes\fotos-catalogo\ch\carolina-herrera-212-vip-rose-elixir-edp-80ml.jpg" alt="212 VIP Rosé Elixir">
+                        <img src="imagenes\fotos-catalogo\ch\carolina-herrera-212-vip-rose-elixir-edp-80ml.jpg" alt="212 VIP Rosé Elixir" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>212 VIP Rosé Elixir</p>
                         <!-- <p data-sku="PERF-007-080">80 <strong>ml - </strong>142$</p> -->
@@ -232,35 +245,35 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-008" data-name="Carolina Herrera CH Men Pasión" data-tags="hombre carolina">
-                        <img src="imagenes\fotos-catalogo\ch\DECANT-Recuperado.png" alt="CH Men Pasión">
+                        <img src="imagenes\fotos-catalogo\ch\DECANT-Recuperado.png" alt="CH Men Pasión" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>CH Men Pasión</p>
                         <p data-sku="PERF-008-100">100 <strong>ml - </strong>115$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-009" data-name="Carolina Herrera CH" data-tags="mujer carolina">
-                        <img src="imagenes\fotos-catalogo\ch\Untitled-5.png" alt="CH">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-5.png" alt="CH" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>CH</p>
                         <p data-sku="PERF-009-100">100 <strong>ml - </strong>122$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-010" data-name="Carolina Herrera Very Good Girl" data-tags="mujer carolina">
-                        <img src="imagenes\fotos-catalogo\ch\Untitled-8.png" alt="Very Good Girl">
+                        <img src="imagenes\fotos-catalogo\ch\Untitled-8.png" alt="Very Good Girl" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Very Good Girl</p>
                         <p data-sku="PERF-010-080">80 <strong>ml - </strong>146$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-091" data-name="Carolina Herrera Good Girl Blush Elixir" data-tags="mujer carolina">
-                        <img src="imagenes/fotos-catalogo/ch/8455.png" alt="Good Girl Blush Elixir">
+                        <img src="imagenes/fotos-catalogo/ch/8455.png" alt="Good Girl Blush Elixir" loading="lazy" decoding="async">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Good Girl Blush Elixir</p>
                         <p data-sku="PERF-091-080">80 <strong>ml - </strong>207$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-089" data-name="Azzaro The Most Wanted Intense" data-tags="hombre azzaro">
-                        <img src="imagenes/fotos-catalogo/azzaro/THE MOST WANTED INTENSE.webp" alt="The Most Wanted Intense">
+                        <img src="imagenes/fotos-catalogo/azzaro/THE MOST WANTED INTENSE.webp" alt="The Most Wanted Intense" loading="lazy" decoding="async">
                         <h3><strong>Azzaro</strong></h3>
                         <p>The Most Wanted EDP Intense</p>
                         <p data-sku="PERF-089-100">100 <strong>ml - </strong>185$</p>
@@ -268,7 +281,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-011" data-name="Rabanne Phantom Parfum" data-tags="hombre rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\Untitled-1.jpg" alt="Phantom Parfum">
+                        <img src="imagenes\fotos-catalogo\paco\Untitled-1.jpg" alt="Phantom Parfum" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Phantom Parfum</p>
                         <!-- <p data-sku="PERF-011-150">150 <strong>ml - </strong>145$</p> -->
@@ -276,7 +289,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-012" data-name="Rabanne Fame Intense" data-tags="mujer rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\FAME INTENSE.WEBP" alt="Fame Intense">
+                        <img src="imagenes\fotos-catalogo\paco\FAME INTENSE.WEBP" alt="Fame Intense" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Fame Intense</p>
                         <p data-sku="PERF-012-080">80 <strong>ml - </strong>192$</p>
@@ -284,7 +297,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-013" data-name="Rabanne One Million Royal" data-tags="hombre rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\65190440_00.png" alt="One Million Royal">
+                        <img src="imagenes\fotos-catalogo\paco\65190440_00.png" alt="One Million Royal" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>One Million Royal</p>
                         <p data-sku="PERF-013-100">100 <strong>ml - </strong>178$</p>
@@ -293,7 +306,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-014" data-name="Rabanne One Million Parfum" data-tags="hombre rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\Untitled-3.png" alt="One Million Parfum">
+                        <img src="imagenes\fotos-catalogo\paco\Untitled-3.png" alt="One Million Parfum" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>One Million Parfum</p>
                         <!-- <p data-sku="PERF-014-100">100 <strong>ml - </strong>115$</p> -->
@@ -301,7 +314,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-015" data-name="Rabanne Million Gold" data-tags="hombre rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\3349668630356_Million_Gold_Eau_de_Parfum_Intense_200_ml_Product_Left_1.webp" alt="Million Gold">
+                        <img src="imagenes\fotos-catalogo\paco\3349668630356_Million_Gold_Eau_de_Parfum_Intense_200_ml_Product_Left_1.webp" alt="Million Gold" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Million Gold</p>
                         <!-- <p data-sku="PERF-015-100">100 <strong>ml - </strong>122$</p> -->
@@ -309,7 +322,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-016" data-name="Rabanne One Million EDT" data-tags="hombre rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\Untitled-2.png" alt="One Million EDT">
+                        <img src="imagenes\fotos-catalogo\paco\Untitled-2.png" alt="One Million EDT" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>One Million EDT</p>
                         <!-- <p data-sku="PERF-016-100">100 <strong>ml - </strong>102$</p> -->
@@ -317,7 +330,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-017" data-name="Rabanne Invictus Victory" data-tags="hombre rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\paco-rabanne-invictus-victory-pr.jpg" alt="Invictus Victory">
+                        <img src="imagenes\fotos-catalogo\paco\paco-rabanne-invictus-victory-pr.jpg" alt="Invictus Victory" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Invictus Victory</p>
                         <p data-sku="PERF-017-100">100 <strong>ml - </strong>170$</p>
@@ -325,7 +338,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-018" data-name="Rabanne Invictus Parfum" data-tags="hombre rabanne">
-                        <img src="imagenes\fotos-catalogo\paco\Invictus Parfum.jpg" alt="Invictus Parfum">
+                        <img src="imagenes\fotos-catalogo\paco\Invictus Parfum.jpg" alt="Invictus Parfum" loading="lazy" decoding="async">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Invictus Parfum</p>
                         <!-- <p data-sku="PERF-018-100">100 <strong>ml - </strong>122$</p> -->
@@ -333,7 +346,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-068" data-name="Jean Paul Gaultier Ultra Male" data-tags="hombre jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\ULTRA MALE.jpg" alt="Ultra Male">
+                        <img src="imagenes\fotos-catalogo\jpg\ULTRA MALE.jpg" alt="Ultra Male" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Ultra Male</p>
                         <p data-sku="PERF-068-125">125 <strong>ml - </strong>257$</p>
@@ -341,7 +354,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-019" data-name="Jean Paul Gaultier Le Male Elixir" data-tags="hombre jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\LE MALE ELIXIR.webp" alt="Le Male Elixir">
+                        <img src="imagenes\fotos-catalogo\jpg\LE MALE ELIXIR.webp" alt="Le Male Elixir" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Le Male Elixir</p>
                         <p data-sku="PERF-019-075">75 <strong>ml - </strong>193$</p>
@@ -349,7 +362,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-066" data-name="Jean Paul Gaultier Le Beau Le Parfum" data-tags="hombre jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\LE BEAU LE PARFUM.avif" alt="Le Beau Le Parfum">
+                        <img src="imagenes\fotos-catalogo\jpg\LE BEAU LE PARFUM.avif" alt="Le Beau Le Parfum" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Le Beau Le Parfum</p>
                         <!-- <p data-sku="PERF-066-125">125 <strong>ml - </strong>257$</p> -->
@@ -357,21 +370,21 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-094" data-name="Jean Paul Gaultier Le Beau Paradise Garden" data-tags="hombre jpg">
-                        <img src="imagenes/fotos-catalogo/jpg/1708093208.jpg" alt="Le Beau Paradise Garden">
+                        <img src="imagenes/fotos-catalogo/jpg/1708093208.jpg" alt="Le Beau Paradise Garden" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Le Beau Paradise Garden</p>
                         <p data-sku="PERF-094-125">125 <strong>ml - </strong>221$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-020" data-name="Jean Paul Gaultier La Belle Paradise Garden" data-tags="mujer jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\IMG_3238.WEBP" alt="La Belle Paradise Garden">
+                        <img src="imagenes\fotos-catalogo\jpg\IMG_3238.WEBP" alt="La Belle Paradise Garden" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>La Belle Paradise Garden</p>
                         <p data-sku="PERF-020-100">100 <strong>ml - </strong>139$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-021" data-name="Jean Paul Gaultier Divine" data-tags="mujer jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\dasdasdsa.png" alt="Gaultier Divine">
+                        <img src="imagenes\fotos-catalogo\jpg\dasdasdsa.png" alt="Gaultier Divine" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Gaultier Divine</p>
                         <!-- <p data-sku="PERF-021-100">100 <strong>ml - </strong>192$</p> -->
@@ -379,7 +392,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-093" data-name="Jean Paul Gaultier Divine Le Parfum" data-tags="mujer jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\GAULTIER DIVINE LE PARFUM.webp" alt="Gaultier Divine Le Parfum">
+                        <img src="imagenes\fotos-catalogo\jpg\GAULTIER DIVINE LE PARFUM.webp" alt="Gaultier Divine Le Parfum" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Gaultier Divine Le Parfum</p>
                         <p data-sku="PERF-093-100">100 <strong>ml - </strong>192$</p>
@@ -387,14 +400,14 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-022" data-name="Jean Paul Gaultier Scandal Pour Homme EDT" data-tags="hombre jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\Untitled.jpg" alt="Scandal Pour Homme EDT">
+                        <img src="imagenes\fotos-catalogo\jpg\Untitled.jpg" alt="Scandal Pour Homme EDT" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Scandal Pour Homme EDT</p>
                         <p data-sku="PERF-022-100">100 <strong>ml - </strong>207$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-023" data-name="Jean Paul Gaultier Scandal Pour Homme Absolu" data-tags="hombre jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\Scandal Absolu Pour Homme.jpg" alt="Scandal Pour Homme Absolu">
+                        <img src="imagenes\fotos-catalogo\jpg\Scandal Absolu Pour Homme.jpg" alt="Scandal Pour Homme Absolu" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Scandal Pour Homme Absolu</p>
                         <!-- <p data-sku="PERF-023-100">100 <strong>ml - </strong>132$</p> -->
@@ -402,21 +415,21 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-024" data-name="Jean Paul Gaultier Scandal Absolu" data-tags="mujer jpg">
-                        <img src="imagenes\fotos-catalogo\jpg\Scandal Absolu.webp" alt="Scandal Absolu">
+                        <img src="imagenes\fotos-catalogo\jpg\Scandal Absolu.webp" alt="Scandal Absolu" loading="lazy" decoding="async">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Scandal Absolu</p>
                         <p data-sku="PERF-024-080">80 <strong>ml - </strong>135$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-025" data-name="Miss Dior Blooming Bouquet" data-tags="mujer dior">
-                        <img src="imagenes\fotos-catalogo\dior\MISS DIOR BLOOMING BOUQUET.webp" alt="Miss Dior Blooming Bouquet">
+                        <img src="imagenes\fotos-catalogo\dior\MISS DIOR BLOOMING BOUQUET.webp" alt="Miss Dior Blooming Bouquet" loading="lazy" decoding="async">
                         <h3><strong>Dior</strong></h3>
                         <!-- <p>Miss Dior Blooming Bouquet</p> -->
                         <div class="etiquetas"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>
                     </div>
                     
                     <div class="decant" data-sku="PERF-026" data-name="Tom Ford Black Orchid" data-tags="mujer tomford">
-                        <img src="imagenes\fotos-catalogo\tomford\Tom Ford Black Orchid.webp" alt="Black Orchid">
+                        <img src="imagenes\fotos-catalogo\tomford\Tom Ford Black Orchid.webp" alt="Black Orchid" loading="lazy" decoding="async">
                         <h3><strong>Tom Ford</strong></h3>
                         <p>Black Orchid</p>
                         <!-- <p data-sku="PERF-026-100">100 <strong>ml - </strong>238$</p> -->
@@ -424,7 +437,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-027" data-name="Giorgio Armani Code Parfum" data-tags="hombre armani">
-                        <img src="imagenes\fotos-catalogo\armani\ARMANI CODE PARFUM.webp" alt="Armani Code Parfum">
+                        <img src="imagenes\fotos-catalogo\armani\ARMANI CODE PARFUM.webp" alt="Armani Code Parfum" loading="lazy" decoding="async">
                         <h3><strong>Giorgio Armani</strong></h3>
                         <p>Armani Code Parfum</p>
                         <!-- <p data-sku="PERF-027-125">125 <strong>ml - </strong>153$</p> -->
@@ -432,21 +445,21 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-028" data-name="Giorgio Armani Acqua Di Gio Absolu" data-tags="hombre armani">
-                        <img src="imagenes\fotos-catalogo\armani\armani-absolu-EDP-pr.png" alt="Acqua Di Gio Absolu">
+                        <img src="imagenes\fotos-catalogo\armani\armani-absolu-EDP-pr.png" alt="Acqua Di Gio Absolu" loading="lazy" decoding="async">
                         <h3><strong>Giorgio Armani</strong></h3>
                         <p>Aqcua Di Gio Absolu</p>
                         <p data-sku="PERF-028-125">125 <strong>ml - </strong>153$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-090" data-name="Giorgio Armani Acqua Di Gio Profondo" data-tags="hombre armani">
-                        <img src="imagenes/fotos-catalogo/armani/Untitled-1.jpg" alt="Acqua Di Gio Profondo">
+                        <img src="imagenes/fotos-catalogo/armani/Untitled-1.jpg" alt="Acqua Di Gio Profondo" loading="lazy" decoding="async">
                         <h3><strong>Giorgio Armani</strong></h3>
                         <p>Aqcua Di Gio Profondo</p>
                         <p data-sku="PERF-090-200">200 <strong>ml - </strong>414$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-029" data-name="Dolce&Gabbana K EDT" data-tags="hombre d&g">
-                        <img src="imagenes\fotos-catalogo\d&g\30494500000.png" alt="K By D&G EDT">
+                        <img src="imagenes\fotos-catalogo\d&g\30494500000.png" alt="K By D&G EDT" loading="lazy" decoding="async">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>K By D&G EDT</p>
                         <!-- <p data-sku="PERF-029-100">100 <strong>ml - </strong>114$</p> -->
@@ -455,7 +468,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-030" data-name="Dolce&Gabbana K EDP" data-tags="hombre d&g">
-                        <img src="imagenes\fotos-catalogo\d&g\DG_K_EDP_PACK_200ML_TIFF_RGB_300_DPI2000x2000.png" alt="K By D&G EDP">
+                        <img src="imagenes\fotos-catalogo\d&g\DG_K_EDP_PACK_200ML_TIFF_RGB_300_DPI2000x2000.png" alt="K By D&G EDP" loading="lazy" decoding="async">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>K By D&G EDP</p>
                         <!-- <p data-sku="PERF-030-100">100 <strong>ml - </strong>139$</p>
@@ -464,7 +477,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-031" data-name="Dolce&Gabbana K EDP Intense" data-tags="hombre d&g">
-                        <img src="imagenes\fotos-catalogo\d&g\d42ab86d-c8d7-419d-bb14-2ec7dbeab2fa.9f1ca683e8878c7d9e877652290a6c1c.webp" alt="K By D&G EDP Intense">
+                        <img src="imagenes\fotos-catalogo\d&g\d42ab86d-c8d7-419d-bb14-2ec7dbeab2fa.9f1ca683e8878c7d9e877652290a6c1c.webp" alt="K By D&G EDP Intense" loading="lazy" decoding="async">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>K By D&G EDP Intense</p>
                         <!-- <p data-sku="PERF-031-100">100 <strong>ml - </strong>129$</p> -->
@@ -472,7 +485,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-032" data-name="Dolce&Gabbana Q EDP" data-tags="mujer d&g">
-                        <img src="imagenes\fotos-catalogo\d&g\8057971187829_G.jpg" alt="Q By D&G EDP">
+                        <img src="imagenes\fotos-catalogo\d&g\8057971187829_G.jpg" alt="Q By D&G EDP" loading="lazy" decoding="async">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>Q By D&G EDP</p>
                         <!-- <p data-sku="PERF-032-100">100 <strong>ml - </strong>150$</p> -->
@@ -480,7 +493,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-033" data-name="Dolce&Gabbana Light Blue Pour Homme Eau Intense" data-tags="hombre d&g">
-                        <img src="imagenes\fotos-catalogo\d&g\LIGHT BLUE POUR HOMME EAU INTENSE.webp" alt="Light Blue Eau Intense">
+                        <img src="imagenes\fotos-catalogo\d&g\LIGHT BLUE POUR HOMME EAU INTENSE.webp" alt="Light Blue Eau Intense" loading="lazy" decoding="async">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>Light Blue Pour Homme Eau Intense</p>
                         <!-- <p data-sku="PERF-033-100">100 <strong>ml - </strong>105$</p> -->
@@ -488,7 +501,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-034" data-name="Montblanc Legend EDT" data-tags="hombre mntblanc">
-                        <img src="imagenes\fotos-catalogo\mntblanc\MPONT.png" alt="Legend EDT">
+                        <img src="imagenes\fotos-catalogo\mntblanc\MPONT.png" alt="Legend EDT" loading="lazy" decoding="async">
                         <h3><strong>Montblanc</strong></h3>
                         <p>Legend EDT</p>
                         <!-- <p data-sku="PERF-034-100">100 <strong>ml - </strong>98$</p> -->
@@ -496,14 +509,14 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-035" data-name="Montblanc Legend EDP" data-tags="hombre mntblanc">
-                        <img src="imagenes\fotos-catalogo\mntblanc\LEGEND EDP.WEBP" alt="Legend EDP">
+                        <img src="imagenes\fotos-catalogo\mntblanc\LEGEND EDP.WEBP" alt="Legend EDP" loading="lazy" decoding="async">
                         <h3><strong>Montblanc</strong></h3>
                         <p>Legend EDP</p>
                         <p data-sku="PERF-035-100">100 <strong>ml - </strong>110$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-036" data-name="Montblanc Explorer Ultra Blue" data-tags="hombre mntblanc">
-                        <img src="imagenes\fotos-catalogo\mntblanc\DECANdasdas.png" alt="Explorer Ultra Blue">
+                        <img src="imagenes\fotos-catalogo\mntblanc\DECANdasdas.png" alt="Explorer Ultra Blue" loading="lazy" decoding="async">
                         <h3><strong>Montblanc</strong></h3>
                         <p>Explorer Ultra Blue</p>
                         <!-- <p data-sku="PERF-036-100">100 <strong>ml - </strong>108$</p> -->
@@ -511,7 +524,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-037" data-name="Givenchy Gentleman EDP" data-tags="hombre givenchy">
-                        <img src="imagenes\fotos-catalogo\givenchy\Untitled.png" alt="Gentleman EDP">
+                        <img src="imagenes\fotos-catalogo\givenchy\Untitled.png" alt="Gentleman EDP" loading="lazy" decoding="async">
                         <h3><strong>Givenchy</strong></h3>
                         <p>Gentleman EDP</p>
                         <p data-sku="PERF-037-100">100 <strong>ml - </strong>157$</p>
@@ -519,7 +532,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-038" data-name="Givenchy Gentleman Boisée" data-tags="hombre givenchy">
-                        <img src="imagenes\fotos-catalogo\givenchy\Untitled-1.jpg" alt="Gentleman Boisée">
+                        <img src="imagenes\fotos-catalogo\givenchy\Untitled-1.jpg" alt="Gentleman Boisée" loading="lazy" decoding="async">
                         <h3><strong>Givenchy</strong></h3>
                         <p>Gentleman Boisée</p>
                         <!-- <p data-sku="PERF-038-100">100 <strong>ml - </strong>104$</p> -->
@@ -527,7 +540,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-039" data-name="Givenchy Gentleman Society" data-tags="hombre givenchy">
-                        <img src="imagenes\fotos-catalogo\givenchy\Untitled-2.jpg" alt="Gentleman Society">
+                        <img src="imagenes\fotos-catalogo\givenchy\Untitled-2.jpg" alt="Gentleman Society" loading="lazy" decoding="async">
                         <h3><strong>Givenchy</strong></h3>
                         <p>Gentleman Society</p>
                         <p data-sku="PERF-039-100">100 <strong>ml - </strong>142$</p>
@@ -536,7 +549,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-088" data-name="Givenchy Gentleman Society Extreme" data-tags="hombre givenchy">
-                        <img src="imagenes\fotos-catalogo\givenchy\SOCI.png" alt="Gentleman Society Extreme">
+                        <img src="imagenes\fotos-catalogo\givenchy\SOCI.png" alt="Gentleman Society Extreme" loading="lazy" decoding="async">
                         <h3><strong>Givenchy</strong></h3>
                         <p>Gentleman Society Extreme</p>
                         <p data-sku="PERF-088-200">200 <strong>ml - </strong>414$</p>
@@ -544,7 +557,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-040" data-name="Yves Saint Laurent Libre EDT" data-tags="mujer ysl">
-                        <img src="imagenes\fotos-catalogo\ysl\LIBRE EDT.webp" alt="Libre EDT">
+                        <img src="imagenes\fotos-catalogo\ysl\LIBRE EDT.webp" alt="Libre EDT" loading="lazy" decoding="async">
                         <h3><strong>Yves Saint Laurent</strong></h3>
                         <p>Libre EDT</p>
                         <!-- <p data-sku="PERF-040-090">90 <strong>ml - </strong>148$</p> -->
@@ -552,7 +565,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-041" data-name="Yves Saint Laurent Black Opium Intense" data-tags="mujer ysl">
-                        <img src="imagenes\fotos-catalogo\ysl\Untitled-4.png" alt="Black Opium Intense">
+                        <img src="imagenes\fotos-catalogo\ysl\Untitled-4.png" alt="Black Opium Intense" loading="lazy" decoding="async">
                         <h3><strong>Yves Saint Laurent</strong></h3>
                         <p>Black Opium Intense</p>
                         <!-- <p data-sku="PERF-041-090">90 <strong>ml - </strong>134$</p> -->
@@ -560,7 +573,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-042" data-name="Yves Saint Laurent Y EDT" data-tags="hombre ysl">
-                        <img src="imagenes\fotos-catalogo\ysl\Untitled-1.png" alt="Y EDT">
+                        <img src="imagenes\fotos-catalogo\ysl\Untitled-1.png" alt="Y EDT" loading="lazy" decoding="async">
                         <h3><strong>Yves Saint Laurent</strong></h3>
                         <p>Y EDT</p>
                         <!-- <p data-sku="PERF-042-060">60 <strong>ml - </strong>101$</p> -->
@@ -568,7 +581,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-043" data-name="Yves Saint Laurent MYSLF" data-tags="hombre ysl">
-                        <img src="imagenes\fotos-catalogo\ysl\ysl-myslf-240415062511.webp" alt="MYSLF">
+                        <img src="imagenes\fotos-catalogo\ysl\ysl-myslf-240415062511.webp" alt="MYSLF" loading="lazy" decoding="async">
                         <h3><strong>Yves Saint Laurent</strong></h3>
                         <p>MYSLF</p>
                         <p data-sku="PERF-043-100">100 <strong>ml - </strong>221$</p>
@@ -576,7 +589,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-069" data-name="Polo Ralph Lauren Set Polo Blue" data-tags="hombre prl">
-                        <img src="imagenes\fotos-catalogo\prl\Polo Blue Parfum.webp" alt="Set Polo Blue">
+                        <img src="imagenes\fotos-catalogo\prl\Polo Blue Parfum.webp" alt="Set Polo Blue" loading="lazy" decoding="async">
                         <h3><strong>Polo Ralph Lauren</strong></h3>
                         <p>Set Polo Blue</p>
                         <!-- <p data-sku="PERF-069-100">186$</p> -->
@@ -584,7 +597,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-044" data-name="Adolfo Domínguez Aguafresca Citrus Cedro" data-tags="hombre adolfo">
-                        <img src="imagenes\fotos-catalogo\adolfo\Untitled-1.jpg" alt="Aguafresca Citrus Cedro">
+                        <img src="imagenes\fotos-catalogo\adolfo\Untitled-1.jpg" alt="Aguafresca Citrus Cedro" loading="lazy" decoding="async">
                         <h3><strong>Adolfo Domínguez</strong></h3>
                         <p>Aguafresca Citrus Cedro</p>
                         <!-- <p data-sku="PERF-044-120">120 <strong>ml - </strong>48$</p>
@@ -593,7 +606,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-045" data-name="Kenzo Homme EDP" data-tags="hombre kenzo">
-                        <img src="imagenes\fotos-catalogo\kenzo\Untitled.png" alt="Homme EDP">
+                        <img src="imagenes\fotos-catalogo\kenzo\Untitled.png" alt="Homme EDP" loading="lazy" decoding="async">
                         <h3><strong>Kenzo</strong></h3>
                         <p>Homme EDP</p>
                         <!-- <p data-sku="PERF-045-110">110 <strong>ml - </strong>104$</p> -->
@@ -601,7 +614,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-045" data-name="Kenzo Homme Intense" data-tags="hombre kenzo">
-                        <img src="imagenes\fotos-catalogo\kenzo\Untitled.jpg" alt="Homme Intense">
+                        <img src="imagenes\fotos-catalogo\kenzo\Untitled.jpg" alt="Homme Intense" loading="lazy" decoding="async">
                         <h3><strong>Kenzo</strong></h3>
                         <p>Homme Intense</p>
                         <p data-sku="PERF-045-110">110 <strong>ml - </strong>135$</p>
@@ -609,7 +622,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-046" data-name="Moncler Pour Homme" data-tags="hombre moncler">
-                        <img src="imagenes\fotos-catalogo\moncler\Untitled-1.jpg" alt="Pour Homme">
+                        <img src="imagenes\fotos-catalogo\moncler\Untitled-1.jpg" alt="Pour Homme" loading="lazy" decoding="async">
                         <h3><strong>Moncler</strong></h3>
                         <p>Pour Homme</p>
                         <!-- <p data-sku="PERF-046-100">100 <strong>ml - </strong>175$</p> -->
@@ -617,7 +630,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-047" data-name="Moncler Pour Femme" data-tags="mujer moncler">
-                        <img src="imagenes\fotos-catalogo\moncler\Untitled.jpg" alt="Pour Femme">
+                        <img src="imagenes\fotos-catalogo\moncler\Untitled.jpg" alt="Pour Femme" loading="lazy" decoding="async">
                         <h3><strong>Moncler</strong></h3>
                         <p>Pour Femme</p>
                         <p data-sku="PERF-047-100">100 <strong>ml - </strong>175$</p>
@@ -625,14 +638,14 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-048" data-name="Versace Pour Homme" data-tags="hombre versace">
-                        <img src="imagenes\fotos-catalogo\versace\Untitled-2.png" alt="Versace Pour Homme">
+                        <img src="imagenes\fotos-catalogo\versace\Untitled-2.png" alt="Versace Pour Homme" loading="lazy" decoding="async">
                         <h3><strong>Versace</strong></h3>
                         <p>Pour Homme</p>
                         <p data-sku="PERF-048-100">100 <strong>ml - </strong>120$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-049" data-name="Lancôme La Vie Est Belle L'Eau De Parfum" data-tags="mujer lancome">
-                        <img src="imagenes\fotos-catalogo\lancome\LA VIE EST BELLE EDP.png" alt="La Vie Est Belle">
+                        <img src="imagenes\fotos-catalogo\lancome\LA VIE EST BELLE EDP.png" alt="La Vie Est Belle" loading="lazy" decoding="async">
                         <h3><strong>Lancôme</strong></h3>
                         <p>La Vie Est Belle L'Eau De Parfum</p>
                         <!-- <p data-sku="PERF-049-100">100 <strong>ml (Botella refill)- </strong>150$</p> -->
@@ -640,7 +653,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-085" data-name="Rasasi Hawas ICE" data-tags="hombre rasasi arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\HAWAS ICE.png" alt="Hawas ICE">
+                        <img src="imagenes\fotos-catalogo\arabes\HAWAS ICE.png" alt="Hawas ICE" loading="lazy" decoding="async">
                         <h3><strong>Rasasi</strong></h3>
                         <p>Hawas ICE</p>
                         <p data-sku="PERF-085-100">100 <strong>ml - </strong>103$</p>
@@ -648,14 +661,14 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-050" data-name="Lattafa Asad" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\777571_3_lattafa-asad-man-eau-de-parfum-100ml.jpg" alt="Asad">
+                        <img src="imagenes\fotos-catalogo\arabes\777571_3_lattafa-asad-man-eau-de-parfum-100ml.jpg" alt="Asad" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Asad</p>
                         <p data-sku="PERF-050-100">100 <strong>ml - </strong>83$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-050" data-name="Lattafa Asad Zanzibar" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\ASAD-ZANZIBAR-1.jpg" alt="Asad">
+                        <img src="imagenes\fotos-catalogo\arabes\ASAD-ZANZIBAR-1.jpg" alt="Asad" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Asad Zanzibar</p>
                         <!-- <p data-sku="PERF-050-100">100 <strong>ml - </strong>83$</p> -->
@@ -663,14 +676,14 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-064" data-name="Lattafa Asad Bourbon" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\ASAD BOURBON.webp" alt="Asad Bourbon">
+                        <img src="imagenes\fotos-catalogo\arabes\ASAD BOURBON.webp" alt="Asad Bourbon" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Asad Bourbon</p>
                         <p data-sku="PERF-064-100">100 <strong>ml - </strong>92$</p>
                     </div>
 
                     <div class="decant" data-name="Lattafa Desodorante Yara" data-tags="hombre mujer unisex lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\DESODORANTE YARA.webp" alt="Yara">
+                        <img src="imagenes\fotos-catalogo\arabes\DESODORANTE YARA.webp" alt="Yara" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Yara (Desodorante)</p>
                         <p>120 Bs</p>
@@ -678,14 +691,14 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-051" data-name="Lattafa Yara" data-tags="mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\Yara.JPG" alt="Yara">
+                        <img src="imagenes\fotos-catalogo\arabes\Yara.JPG" alt="Yara" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Yara</p>
                         <p data-sku="PERF-051-100">100 <strong>ml - </strong>83$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-075" data-name="Lattafa Yara Candy" data-tags="mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\YARA CANDY.jpg" alt="Yara">
+                        <img src="imagenes\fotos-catalogo\arabes\YARA CANDY.jpg" alt="Yara" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Yara Candy</p>
                         <p data-sku="PERF-075-100">100 <strong>ml - </strong>83$</p>
@@ -693,7 +706,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-074" data-name="Lattafa Yara Tous" data-tags="mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\YARA TOUS.WEBP" alt="Yara Tous">
+                        <img src="imagenes\fotos-catalogo\arabes\YARA TOUS.WEBP" alt="Yara Tous" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Yara Tous</p>
                         <p data-sku="PERF-074-100">100 <strong>ml - </strong>83$</p>
@@ -701,63 +714,63 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-081" data-name="Lattafa Fakhar Black" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\FAKHAR BLACK.jpg" alt="Fakhar Black">
+                        <img src="imagenes\fotos-catalogo\arabes\FAKHAR BLACK.jpg" alt="Fakhar Black" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Fakhar Black</p>
                         <p data-sku="PERF-081-100">100 <strong>ml - </strong>87$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-081" data-name="Lattafa Fakhar Extrait" data-tags="hombre mujer unisex lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\FAKHAR EXTRAIT.webp" alt="Fakhar Extrait">
+                        <img src="imagenes\fotos-catalogo\arabes\FAKHAR EXTRAIT.webp" alt="Fakhar Extrait" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Fakhar Extrait</p>
                         <p data-sku="PERF-081-100">100 <strong>ml - </strong>93$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-082" data-name="Lattafa Maahir Legacy" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\MAAHIR LEGACY.webp" alt="Maahir Legacy">
+                        <img src="imagenes\fotos-catalogo\arabes\MAAHIR LEGACY.webp" alt="Maahir Legacy" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Maahir Legacy</p>
                         <p data-sku="PERF-082-100">100 <strong>ml - </strong>83$</p>
                     </div>
 
                     <div class="decant" data-name="Lattafa Desodorante Khamrah" data-tags="hombre mujer unisex lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\DESODORANTE KHAMRAH.jpg" alt="Khamrah">
+                        <img src="imagenes\fotos-catalogo\arabes\DESODORANTE KHAMRAH.jpg" alt="Khamrah" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Khamrah (Desodorante)</p>
                         <p>120 Bs</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-052" data-name="Lattafa Khamrah" data-tags="hombre mujer unisex lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\KHAMRAH-LATTAFA-.jpg" alt="Khamrah">
+                        <img src="imagenes\fotos-catalogo\arabes\KHAMRAH-LATTAFA-.jpg" alt="Khamrah" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Khamrah</p>
                         <p data-sku="PERF-052-100">100 <strong>ml - </strong>90$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-053" data-name="Lattafa Khamrah Qahwa" data-tags="hombre mujer unisex lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\1149057834.avif" alt="Khamrah Qahwa">
+                        <img src="imagenes\fotos-catalogo\arabes\1149057834.avif" alt="Khamrah Qahwa" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Khamrah Qahwa</p>
                         <p data-sku="PERF-053-100">100 <strong>ml - </strong>111$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-076" data-name="Lattafa Khamrah Dukhan" data-tags="hombre mujer unisex lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\KHAMRAH DUKHAN.webp" alt="Khamrah Dukhan">
+                        <img src="imagenes\fotos-catalogo\arabes\KHAMRAH DUKHAN.webp" alt="Khamrah Dukhan" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Khamrah Dukhan</p>
                         <p data-sku="PERF-076-100">100 <strong>ml - </strong>111$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-054" data-name="Lattafa Bade'e Al Oud: Oud For Glory" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\OUD FOR GLORY.JPG" alt="Oud For Glory">
+                        <img src="imagenes\fotos-catalogo\arabes\OUD FOR GLORY.JPG" alt="Oud For Glory" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Bade'e Al Oud: Oud For Glory</p>
                         <p data-sku="PERF-054-100">100 <strong>ml - </strong>83$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-055" data-name="Lattafa Bade'e Al Oud: Honor And Glory" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\HONOR AND GLORY.WEBP" alt="Honor And Glory">
+                        <img src="imagenes\fotos-catalogo\arabes\HONOR AND GLORY.WEBP" alt="Honor And Glory" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Bade'e Al Oud: Honor And Glory</p>
                         <!-- <p data-sku="PERF-055-100">100 <strong>ml - </strong>83$</p> -->
@@ -765,14 +778,14 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-086" data-name="Lattafa Bade'e Al Oud: Amethyst" data-tags="unisex hombre mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\AMETHYST.webp" alt="Amethyst">
+                        <img src="imagenes\fotos-catalogo\arabes\AMETHYST.webp" alt="Amethyst" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Bade'e Al Oud: Amethyst</p>
                         <p data-sku="PERF-086-100">100 <strong>ml - </strong>83$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-086" data-name="Lattafa Bade'e Al Oud: Noble Blush" data-tags="unisex hombre mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\NOBLE BLUSH.webp" alt="Amethyst">
+                        <img src="imagenes\fotos-catalogo\arabes\NOBLE BLUSH.webp" alt="Amethyst" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Bade'e Al Oud: Noble Blush</p>
                         <p data-sku="PERF-086-100">100 <strong>ml - </strong>83$</p>
@@ -780,28 +793,28 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-080" data-name="Lattafa Bade'e Al Oud: Sublime" data-tags="unisex hombre mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\SUBLIME.jpg" alt="Sublime">
+                        <img src="imagenes\fotos-catalogo\arabes\SUBLIME.jpg" alt="Sublime" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Bade'e Al Oud: Sublime</p>
                         <p data-sku="PERF-080-100">100 <strong>ml - </strong>83$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-065" data-name="Lattafa Eclaire" data-tags="mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\ECLAIRE.webp" alt="Eclaire">
+                        <img src="imagenes\fotos-catalogo\arabes\ECLAIRE.webp" alt="Eclaire" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Eclaire</p>
                         <p data-sku="PERF-065-100">100 <strong>ml - </strong>93$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-077" data-name="Lattafa His Confession" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\HIS CONFESSION.jpg" alt="His Confession">
+                        <img src="imagenes\fotos-catalogo\arabes\HIS CONFESSION.jpg" alt="His Confession" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>His Confession</p>
                         <p data-sku="PERF-077-100">100 <strong>ml - </strong>93$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-083" data-name="Lattafa Her Confession" data-tags="mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\HER CONFESSION.png" alt="Her Confession">
+                        <img src="imagenes\fotos-catalogo\arabes\HER CONFESSION.png" alt="Her Confession" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Her Confession</p>
                         <p data-sku="PERF-083-100">100 <strong>ml - </strong>93$</p>
@@ -809,7 +822,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-084" data-name="Lattafa Mayar" data-tags="mujer lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\MAYAR.webp" alt="Mayar">
+                        <img src="imagenes\fotos-catalogo\arabes\MAYAR.webp" alt="Mayar" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Mayar</p>
                         <p data-sku="PERF-084-100">100 <strong>ml - </strong>100$</p>
@@ -817,14 +830,14 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-056" data-name="Lattafa Qaed Al Fursan" data-tags="hombre lattafa arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\QAED AL FURSAN.webp" alt="Qaed Al Fursan">
+                        <img src="imagenes\fotos-catalogo\arabes\QAED AL FURSAN.webp" alt="Qaed Al Fursan" loading="lazy" decoding="async">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Qaed Al Fursan</p>
                         <p data-sku="PERF-056-100">100 <strong>ml - </strong>69$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-078" data-name="AFNAN 9AM" data-tags="hombre afnan arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\9AM.webp" alt="9AM">
+                        <img src="imagenes\fotos-catalogo\arabes\9AM.webp" alt="9AM" loading="lazy" decoding="async">
                         <h3><strong>AFNAN</strong></h3>
                         <p>9AM</p>
                         <p data-sku="PERF-078-100">100 <strong>ml - </strong>60$</p>
@@ -832,28 +845,28 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-057" data-name="AFNAN 9AM Dive" data-tags="hombre afnan arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\download.jpg" alt="9AM Dive">
+                        <img src="imagenes\fotos-catalogo\arabes\download.jpg" alt="9AM Dive" loading="lazy" decoding="async">
                         <h3><strong>AFNAN</strong></h3>
                         <p>9AM Dive</p>
                         <p data-sku="PERF-057-100">100 <strong>ml - </strong>93$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-058" data-name="AFNAN 9PM" data-tags="hombre afnan arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\Afnam-9pm.png" alt="9PM">
+                        <img src="imagenes\fotos-catalogo\arabes\Afnam-9pm.png" alt="9PM" loading="lazy" decoding="async">
                         <h3><strong>AFNAN</strong></h3>
                         <p>9PM</p>
                         <p data-sku="PERF-058-100">100 <strong>ml - </strong>85$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-079" data-name="AFNAN 9PM Tester" data-tags="hombre afnan arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\Afnam-9pm.png" alt="9PM">
+                        <img src="imagenes\fotos-catalogo\arabes\Afnam-9pm.png" alt="9PM" loading="lazy" decoding="async">
                         <h3><strong>AFNAN</strong></h3>
                         <p>9PM (Versión Tester)</p>
                         <p data-sku="PERF-079-100">100 <strong>ml - </strong>79$</p>
                     </div>
 
                     <div class="decant" data-sku="PERF-058" data-name="AFNAN 9PM Set" data-tags="hombre afnan arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\9PM SET.jpg" alt="9PM Set">
+                        <img src="imagenes\fotos-catalogo\arabes\9PM SET.jpg" alt="9PM Set" loading="lazy" decoding="async">
                         <h3><strong>AFNAN</strong></h3>
                         <p>9PM Set (Crema y desodorante)</p>
                         <p data-sku="PERF-058-100">100 <strong>ml - </strong>104$</p>
@@ -861,7 +874,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-059" data-name="AFNAN 9PM Rebel" data-tags="hombre afnan arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\9PM REBEL.jpeg" alt="9PM Rebel">
+                        <img src="imagenes\fotos-catalogo\arabes\9PM REBEL.jpeg" alt="9PM Rebel" loading="lazy" decoding="async">
                         <h3><strong>AFNAN</strong></h3>
                         <p>9PM Rebel</p>
                         <p data-sku="PERF-059-100">100 <strong>ml - </strong>111$</p>
@@ -869,7 +882,7 @@
                     </div>
 
                     <div class="decant" data-sku="PERF-067" data-name="AFNAN Turathi Blue" data-tags="hombre afnan arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\Turathi Blue.JPG" alt="Turathi Blue">
+                        <img src="imagenes\fotos-catalogo\arabes\Turathi Blue.JPG" alt="Turathi Blue" loading="lazy" decoding="async">
                         <h3><strong>AFNAN</strong></h3>
                         <p>Turathi Blue</p>
                         <p data-sku="PERF-067-100">100 <strong>ml - </strong>107$</p>
@@ -877,7 +890,7 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-060" data-name="Bharara King" data-tags="hombre mujer unisex bharara arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\bharara-king-pr.webp" alt="Bharara King">
+                        <img src="imagenes\fotos-catalogo\arabes\bharara-king-pr.webp" alt="Bharara King" loading="lazy" decoding="async">
                         <h3><strong>Bharara</strong></h3>
                         <p>King</p>
                         <!-- <p data-sku="PERF-060-100">100 <strong>ml - </strong>107$</p> -->
@@ -885,101 +898,298 @@
                     </div>
                     
                     <div class="decant" data-sku="PERF-061" data-name="ARMAF Club de Nuit Intense" data-tags="hombre armaf arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\armaf-club-de-nuit-edp-pr.webp" alt="Club de Nuit">
+                        <img src="imagenes\fotos-catalogo\arabes\armaf-club-de-nuit-edp-pr.webp" alt="Club de Nuit" loading="lazy" decoding="async">
                         <h3><strong>ARMAF</strong></h3>
                         <p>Club de Nuit Intense</p>
                         <p data-sku="PERF-061-105">105 <strong>ml - </strong>89$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-062" data-name="ARMAF Club de Nuit Urban Man Elixir" data-tags="hombre armaf arabes">
-                        <img src="imagenes/fotos-catalogo/arabes/CLUB DE NUIT URBAN MAN ELIXIR.jpg" alt="Club de Nuit Urban Man Elixir">
+                        <img src="imagenes/fotos-catalogo/arabes/CLUB DE NUIT URBAN MAN ELIXIR.jpg" alt="Club de Nuit Urban Man Elixir" loading="lazy" decoding="async">
                         <h3><strong>ARMAF</strong></h3>
                         <p>Club de Nuit Urban Man Elixir</p>
                         <p data-sku="PERF-062-105">105 <strong>ml - </strong>111$</p>
                     </div>
                     
                     <div class="decant" data-sku="PERF-063" data-name="ARMAF Odyssey Mandarin Sky" data-tags="hombre armaf arabes">
-                        <img src="imagenes\fotos-catalogo\arabes\MANDARIN SKY.webp" alt="Odyssey Mandarin Sky">
+                        <img src="imagenes\fotos-catalogo\arabes\MANDARIN SKY.webp" alt="Odyssey Mandarin Sky" loading="lazy" decoding="async">
                         <h3><strong>ARMAF</strong></h3>
                         <p>Odyssey Mandarin Sky</p>
                         <p data-sku="PERF-063-100">100 <strong>ml - </strong>95$</p>
+                    </div>
+                </div>
+                <!-- Controles de paginación (parte inferior del catálogo) -->
+                <div class="pagination-controls" id="pagination-bottom">
+                    <div class="page-size">
+                        <label for="page-size-input-bottom">Tarjetas por página:</label>
+                        <input id="page-size-input-bottom" type="number" min="1" step="1" value="20">
+                    </div>
+
+                    <div class="pager">
+                        <button id="page-prev-bottom" type="button" aria-label="Página anterior">&laquo;</button>
+                        <span id="page-status-bottom" aria-live="polite">Página 1 de 1</span>
+                        <button id="page-next-bottom" type="button" aria-label="Página siguiente">&raquo;</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <script>
-        function filterPerfumes(filter) {
-            const decantsContainer = document.getElementById('decants');
-            const stockFilter = document.getElementById('stock-filter').checked;
-            const newFilter = document.getElementById('new-filter').checked;
-            const searchQuery = document.getElementById('decant-search').value.toLowerCase();
-            const noResultsMessage = document.getElementById('no-results-message');
+        (function () {
+            'use strict';
 
-            decantsContainer.classList.add('fade-out');
+            class LazyImages {
+                constructor(selector = '.perfume-grid img') {
+                    this.selector = selector;
+                }
+                init() {
+                    const imgs = document.querySelectorAll(this.selector);
+                    imgs.forEach((img, i) => {
+                        if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+                        if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+                        if (i < 4 && !img.hasAttribute('fetchpriority')) {
+                            img.setAttribute('fetchpriority', 'high');
+                        }
+                    });
 
-            setTimeout(() => {
-                const decants = document.querySelectorAll('.decant');
-                let visibleCount = 0; // Contador de decants visibles
+                    if ('IntersectionObserver' in window) {
+                        const io = new IntersectionObserver((entries, obs) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('in-view');
+                                    obs.unobserve(entry.target);
+                                }
+                            });
+                        }, { rootMargin: '200px 0px' });
 
-                decants.forEach(decant => {
-                    const isOutOfStock = decant.querySelector('.etiqueta.fuera-de-stock') !== null;
-                    const isNew = decant.querySelector('.etiqueta.novedad') !== null;
-                    const matchesFilter = filter === 'all' || decant.getAttribute('data-tags').includes(filter);
-                    const name = decant.getAttribute('data-name').toLowerCase();
-
-                    const shouldShow = matchesFilter &&
-                        (!stockFilter || !isOutOfStock) &&
-                        (!newFilter || isNew) &&
-                        (searchQuery === '' || name.includes(searchQuery));
-
-                    decant.style.display = shouldShow ? 'block' : 'none';
-
-                    if (shouldShow) visibleCount++; // Aumenta el contador si el decant es visible
-                });
-
-                // Mostrar mensaje de "sin resultados" si no hay decants visibles
-                noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
-
-                decantsContainer.classList.remove('fade-out');
-            }, 500);
-        }
-
-        function sendToWhatsApp(name) {
-            const whatsappNumber = "78064327";
-            const message = `Hola!%20Quisiera%20saber%20si%20tienen%20disponible%20el%20perfume%20${name}!`;
-            const confirmation = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
-
-            if (confirmation) {
-                window.open(`https://wa.me/${whatsappNumber}/?text=${message}`, '_blank');
+                        imgs.forEach(img => io.observe(img));
+                    }
+                }
             }
-        }
 
-        const decants = document.querySelectorAll('.decant');
-        decants.forEach(decant => {
-            decant.addEventListener('click', () => {
-                const name = decant.getAttribute('data-name');
-                const price = decant.getAttribute('data-price');
-                sendToWhatsApp(name, price);
-            });
-        });
+            class Paginator {
+                constructor(opts) {
+                    this.grid = typeof opts.gridEl === 'string' ? document.querySelector(opts.gridEl) : opts.gridEl;
+                    this.selector = opts.itemSelector || '.decant';
+                    this.items = Array.from(this.grid ? this.grid.querySelectorAll(this.selector) : []);
+                    this.controls = [];
 
-        // Asocia el evento 'change' al checkbox directamente
-        document.getElementById('stock-filter').addEventListener('change', () => {
-            filterPerfumes(document.getElementById('decant-filter').value);
-        });
+                    if (Array.isArray(opts.controls)) {
+                        opts.controls.forEach(control => this._attachControls(control));
+                    } else {
+                        this._attachControls(opts);
+                    }
 
-        document.getElementById('new-filter').addEventListener('change', () => {
-            filterPerfumes(document.getElementById('decant-filter').value);
-        });
+                    this.pageSize = this._initialPageSize();
+                    this.page = 1;
+                    this._bind();
+                }
 
-        filterPerfumes(document.getElementById('decant-filter').value);
+                _qs(elOrSelector) {
+                    return typeof elOrSelector === 'string' ? document.querySelector(elOrSelector) : elOrSelector;
+                }
 
+                _attachControls(control) {
+                    const input = this._qs(control.inputEl);
+                    const prev = this._qs(control.prevEl);
+                    const next = this._qs(control.nextEl);
+                    const status = this._qs(control.statusEl);
+                    const wrapper = (input || prev || next || status) ? (input || prev || next || status).closest('.pagination-controls') : null;
+                    this.controls.push({ input, prev, next, status, wrapper });
+                }
+
+                _initialPageSize() {
+                    for (const control of this.controls) {
+                        if (control.input && control.input.value) {
+                            const value = parseInt(control.input.value, 10);
+                            if (Number.isFinite(value) && value > 0) return value;
+                        }
+                    }
+                    return 30;
+                }
+
+                _universe() {
+                    return this.items.filter(el => el.style.display !== 'none');
+                }
+
+                _totalPages() {
+                    const count = this._universe().length;
+                    return Math.max(1, Math.ceil(count / this.pageSize));
+                }
+
+                _syncInputs() {
+                    for (const control of this.controls) {
+                        if (control.input && control.input.value !== String(this.pageSize)) {
+                            control.input.value = String(this.pageSize);
+                        }
+                    }
+                }
+
+                _updateUI(total) {
+                    for (const control of this.controls) {
+                        if (control.status) control.status.textContent = `Página ${this.page} de ${total}`;
+                        if (control.prev) control.prev.disabled = this.page <= 1;
+                        if (control.next) control.next.disabled = this.page >= total;
+                        if (control.wrapper) control.wrapper.style.display = total > 1 ? '' : 'none';
+                    }
+                }
+
+                render() {
+                    if (!this.grid) return;
+                    const universe = this._universe();
+                    const total = Math.max(1, Math.ceil(universe.length / this.pageSize));
+                    this.page = Math.min(Math.max(1, this.page), total);
+
+                    const start = (this.page - 1) * this.pageSize;
+                    const end = start + this.pageSize;
+
+                    this.grid.classList.add('is-paging');
+                    this.items.forEach(el => el.classList.remove('pag-hidden'));
+                    universe.forEach((el, index) => {
+                        el.classList.toggle('pag-hidden', !(index >= start && index < end));
+                    });
+
+                    this._updateUI(total);
+                    this._syncInputs();
+                    requestAnimationFrame(() => setTimeout(() => this.grid.classList.remove('is-paging'), 100));
+                }
+
+                refresh() {
+                    const total = this._totalPages();
+                    if (this.page > total) this.page = total;
+                    this.render();
+                }
+
+                setPageSize(value) {
+                    const previous = this.pageSize;
+                    this.pageSize = Math.max(1, parseInt(value, 10) || 1);
+                    const startIndex = (this.page - 1) * previous;
+                    this.page = Math.floor(startIndex / this.pageSize) + 1;
+                    this._syncInputs();
+                    this.render();
+                }
+
+                _bind() {
+                    for (const control of this.controls) {
+                        if (control.prev) control.prev.addEventListener('click', () => { this.page = Math.max(1, this.page - 1); this.render(); });
+                        if (control.next) control.next.addEventListener('click', () => { this.page = Math.min(this._totalPages(), this.page + 1); this.render(); });
+                        if (control.input) control.input.addEventListener('change', () => {
+                            let value = parseInt(control.input.value, 10);
+                            if (!Number.isFinite(value) || value < 1) value = 1;
+                            this.setPageSize(value);
+                        });
+                    }
+                }
+            }
+
+            function filterPerfumes(filter) {
+                const container = document.getElementById('decants');
+                const stockEl = document.getElementById('stock-filter');
+                const newEl = document.getElementById('new-filter');
+                const searchEl = document.getElementById('decant-search');
+                const noMsg = document.getElementById('no-results-message');
+
+                const stockFilter = !!(stockEl && stockEl.checked);
+                const newFilter = !!(newEl && newEl.checked);
+                const searchQuery = (searchEl && searchEl.value || '').toLowerCase();
+                const currentTag = filter || (document.getElementById('decant-filter')?.value || 'all');
+
+                container && container.classList.add('fade-out');
+
+                setTimeout(() => {
+                    const cards = document.querySelectorAll('.decant');
+                    let visible = 0;
+
+                    cards.forEach(card => {
+                        const isOutOfStock = card.querySelector('.etiqueta.fuera-de-stock') !== null;
+                        const isNew = card.querySelector('.etiqueta.novedad') !== null;
+                        const tags = card.getAttribute('data-tags') || '';
+                        const name = (card.getAttribute('data-name') || '').toLowerCase();
+
+                        const matchesFilter = currentTag === 'all' || tags.includes(currentTag);
+                        const shouldShow = matchesFilter &&
+                            (!stockFilter || !isOutOfStock) &&
+                            (!newFilter || isNew) &&
+                            (searchQuery === '' || name.includes(searchQuery));
+
+                        card.style.display = shouldShow ? 'block' : 'none';
+                        if (shouldShow) visible++;
+                    });
+
+                    if (noMsg) noMsg.style.display = visible === 0 ? 'block' : 'none';
+
+                    if (window.perfumesPager) window.perfumesPager.refresh();
+
+                    container && container.classList.remove('fade-out');
+                }, 500);
+            }
+            window.filterPerfumes = filterPerfumes;
+
+            document.addEventListener('DOMContentLoaded', () => {
+                try { new LazyImages('.perfume-grid img').init(); } catch (_) { }
+
+                const grid = document.querySelector('.perfume-grid');
+                const controls = [];
+
+                if (document.querySelector('#page-size-input') &&
+                    document.querySelector('#page-prev') &&
+                    document.querySelector('#page-next') &&
+                    document.querySelector('#page-status')) {
+                    controls.push({
+                        inputEl: '#page-size-input',
+                        prevEl: '#page-prev',
+                        nextEl: '#page-next',
+                        statusEl: '#page-status'
+                    });
+                }
+
+                if (document.querySelector('#page-size-input-bottom') &&
+                    document.querySelector('#page-prev-bottom') &&
+                    document.querySelector('#page-next-bottom') &&
+                    document.querySelector('#page-status-bottom')) {
+                    controls.push({
+                        inputEl: '#page-size-input-bottom',
+                        prevEl: '#page-prev-bottom',
+                        nextEl: '#page-next-bottom',
+                        statusEl: '#page-status-bottom'
+                    });
+                }
+
+                if (grid && controls.length) {
+                    window.perfumesPager = new Paginator({
+                        gridEl: grid,
+                        itemSelector: '.decant',
+                        controls
+                    });
+                }
+
+                const gridContainer = document.querySelector('.perfume-grid');
+                if (gridContainer) {
+                    gridContainer.addEventListener('click', event => {
+                        const card = event.target.closest('.decant');
+                        if (!card) return;
+                        const name = card.getAttribute('data-name') || '';
+                        const whatsappNumber = '78064327';
+                        const message = encodeURIComponent(`Hola! Quisiera saber si tienen disponible el perfume ${name}!`);
+                        if (confirm('¿Desea continuar a WhatsApp para realizar su consulta?')) {
+                            window.open(`https://wa.me/${whatsappNumber}/?text=${message}`, '_blank', 'noopener');
+                        }
+                    });
+                }
+
+                document.getElementById('stock-filter')?.addEventListener('change', () => filterPerfumes());
+                document.getElementById('new-filter')?.addEventListener('change', () => filterPerfumes());
+
+                filterPerfumes();
+            }, { once: true });
+        })();
     </script>
     <div data-include="footer.html">
     </div>
     <script src="js/scripts.js"></script>
     <script src="js/include.js"></script>
+    <script src="js/lazy-images.js"></script>
+    <script src="js/grid-paginator.js"></script>
 </body>
 
 </html>
