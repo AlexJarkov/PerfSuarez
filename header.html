@@ -1,39 +1,43 @@
-<header>
-    <div class="header-container">
-        <a href="index.html">
-            <img src="imagenes/Suarez.png" alt="Perfumería Suárez" class="logo">
+<header class="site-header">
+    <div class="header-shell">
+        <a href="index.html" class="brand">
+            <img src="imagenes/Suarez.png" alt="Perfumería Suárez" class="brand-mark">
+            <span class="hidden">Perfumería Suárez</span>
         </a>
-        <nav>
-            <button class="menu-toggle" id="menu-toggle">☰</button>
-            <ul id="menu" class="menu">
-                <li class="menu-item">
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li class="menu-item">
-                    <a href="perfumes.html">Perfumes</a>
-                </li>
-                <li class="menu-item">
-                    <a href="mysterybox.html">Mystery Box</a>
-                </li>
-                <li class="menu-item">
-                    <a href="velas.html">Velas</a>
-                </li>
-                <li class="menu-item">
-                    <a href="armarcombo.html">Combos y Sets</a>
-                </li>
-                <li class="menu-item">
-                    <a href="decants.html">Decants</a>
-                </li>
-                <li class="menu-item search-item">
+        <nav class="primary-nav" aria-label="Navegación principal">
+            <a href="https://wa.link/wfehwk" class="header-cta header-cta-mobile">Asesoría</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-panel" id="menu">
+                <ul class="nav-links">
+                    <li class="nav-item"><a class="nav-link" href="perfumes.html">Perfumes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mysterybox.html">Mystery Box</a></li>
+                    <li class="nav-item"><a class="nav-link" href="velas.html">Velas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="armarcombo.html">Combos y Sets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="decants.html">Decants</a></li>
+                </ul>
+                <div class="nav-extra">
                     <form id="search-form" class="search-form" action="search.html" method="get">
-                        <input type="text" id="search-input" class="search-input" name="q" placeholder="Buscar productos..." aria-label="Buscar">
-                        <button type="submit" class="search-button">
-                            <img src="imagenes/fotos-botones/25313.png" alt="Buscar" class="search-icon" style="width: 20px; height: 20px;">
+                        <label for="search-input" class="hidden">Buscar productos</label>
+                        <input type="text" id="search-input" class="search-input" name="q" placeholder="Buscar productos" aria-label="Buscar productos">
+                        <button type="submit" id="search-icon" class="search-button" aria-label="Ejecutar búsqueda">
+                            <span class="search-icon" aria-hidden="true"></span>
                         </button>
                     </form>
-                </li>
-            </ul>
+                </div>
+                <div class="nav-meta">
+                    <p class="nav-meta-eyebrow">Experiencia personalizada</p>
+                    <p class="nav-meta-copy">Co-creamos combinaciones a tu medida y coordinamos envíos a todo el país.</p>
+                    <a class="nav-meta-link" href="https://wa.link/hqv4bq">Hablar con un asesor</a>
+                </div>
+            </div>
         </nav>
+        <div class="header-actions">
+            <a href="https://wa.link/wfehwk" class="header-cta">Asesoría</a>
+        </div>
     </div>
 </header>
 <script src="js/search.js"></script>
