@@ -417,6 +417,17 @@
                     </label>
                 </div>
             </div>
+            <div class="pagination-controls" id="pagination-top-velas">
+                <div class="page-size">
+                    <label for="page-size-input-velas">Tarjetas por página</label>
+                    <input id="page-size-input-velas" type="number" min="1" step="1" value="20">
+                </div>
+                <div class="pager">
+                    <button id="page-prev-velas" type="button" aria-label="Página anterior">&laquo;</button>
+                    <span id="page-status-velas" aria-live="polite">Página 1 de 1</span>
+                    <button id="page-next-velas" type="button" aria-label="Página siguiente">&raquo;</button>
+                </div>
+            </div>
             <div id="no-results-message" class="empty-state" aria-live="polite">
                 <p>Perdón pariente... No tenemos velas que coincidan con tu búsqueda :(</p>
             </div>
@@ -715,6 +726,17 @@
                         <p class="vela-price">Bs 150</p>
                     </div>
             </div>
+            <div class="pagination-controls pagination-bottom" id="pagination-bottom-velas">
+                <div class="page-size">
+                    <label for="page-size-input-bottom-velas">Tarjetas por página</label>
+                    <input id="page-size-input-bottom-velas" type="number" min="1" step="1" value="20">
+                </div>
+                <div class="pager">
+                    <button id="page-prev-bottom-velas" type="button" aria-label="Página anterior">&laquo;</button>
+                    <span id="page-status-bottom-velas" aria-live="polite">Página 1 de 1</span>
+                    <button id="page-next-bottom-velas" type="button" aria-label="Página siguiente">&raquo;</button>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -727,6 +749,21 @@
             const newFilter = document.getElementById('new-filter');
             const noResults = document.getElementById('no-results-message');
             const whatsappNumber = '78064327';
+            const grid = document.getElementById('vela-grid');
+
+            // Pagination controls (top)
+            const pageSizeTop = document.getElementById('page-size-input-velas');
+            const pagePrevTop = document.getElementById('page-prev-velas');
+            const pageNextTop = document.getElementById('page-next-velas');
+            const pageStatusTop = document.getElementById('page-status-velas');
+
+            // Pagination controls (bottom)
+            const pageSizeBottom = document.getElementById('page-size-input-bottom-velas');
+            const pagePrevBottom = document.getElementById('page-prev-bottom-velas');
+            const pageNextBottom = document.getElementById('page-next-bottom-velas');
+            const pageStatusBottom = document.getElementById('page-status-bottom-velas');
+
+            let currentPage = 1;
 
             const isOutOfStock = (card) => card.dataset.stock === 'out' || card.classList.contains('sin-stock') || card.querySelector('.badge.out-of-stock, .etiqueta.fuera-de-stock') !== null;
             const isNewArrival = (card) => card.dataset.new === 'true' || card.classList.contains('nueva') || card.querySelector('.badge.novedad, .etiqueta.novedad') !== null;
@@ -745,6 +782,8 @@
                     const shouldShow = matchesSearch && meetsStockRule && meetsNewRule;
 
                     card.classList.toggle('is-hidden', !shouldShow);
+                    // Reset pagination visibility before slicing
+                    card.classList.remove('pag-hidden');
                     if (shouldShow) {
                         visibleCount += 1;
                     }
@@ -753,7 +792,50 @@
                 if (noResults) {
                     noResults.classList.toggle('show', visibleCount === 0);
                 }
+
+                currentPage = 1;
+                renderPage();
             };
+
+            function pageSizeValue() {
+                const vTop = parseInt(pageSizeTop?.value || '20', 10);
+                const vBottom = parseInt(pageSizeBottom?.value || '20', 10);
+                const v = Number.isFinite(vTop) && vTop > 0 ? vTop : (Number.isFinite(vBottom) && vBottom > 0 ? vBottom : 20);
+                // keep inputs in sync
+                if (pageSizeTop) pageSizeTop.value = String(v);
+                if (pageSizeBottom) pageSizeBottom.value = String(v);
+                return v;
+            }
+
+            function updateStatus(totalPages) {
+                const text = `Página ${currentPage} de ${totalPages}`;
+                if (pageStatusTop) pageStatusTop.textContent = text;
+                if (pageStatusBottom) pageStatusBottom.textContent = text;
+                if (pagePrevTop) pagePrevTop.disabled = currentPage <= 1;
+                if (pagePrevBottom) pagePrevBottom.disabled = currentPage <= 1;
+                if (pageNextTop) pageNextTop.disabled = currentPage >= totalPages;
+                if (pageNextBottom) pageNextBottom.disabled = currentPage >= totalPages;
+                // hide pagination wrappers if only 1 page
+                const wrappers = [document.getElementById('pagination-top-velas'), document.getElementById('pagination-bottom-velas')];
+                wrappers.forEach(w => { if (w) w.style.display = totalPages > 1 ? '' : 'none'; });
+            }
+
+            function renderPage() {
+                if (!grid) return;
+                const pageSize = pageSizeValue();
+                const universe = cards.filter(c => !c.classList.contains('is-hidden'));
+                const totalPages = Math.max(1, Math.ceil(universe.length / pageSize));
+                currentPage = Math.min(Math.max(1, currentPage), totalPages);
+
+                grid.classList.add('is-paging');
+                requestAnimationFrame(() => {
+                    cards.forEach(c => c.classList.add('pag-hidden'));
+                    const start = (currentPage - 1) * pageSize;
+                    universe.slice(start, start + pageSize).forEach(c => c.classList.remove('pag-hidden'));
+                    updateStatus(totalPages);
+                    setTimeout(() => grid.classList.remove('is-paging'), 120);
+                });
+            }
 
             const openWhatsApp = (name) => {
                 const message = encodeURIComponent(`Hola! Quisiera saber si tienen disponible la vela ${name}.`);
@@ -782,6 +864,14 @@
             searchInput?.addEventListener('input', applyFilters);
             stockFilter?.addEventListener('change', applyFilters);
             newFilter?.addEventListener('change', applyFilters);
+
+            // Pagination bindings
+            pagePrevTop?.addEventListener('click', () => { currentPage -= 1; renderPage(); });
+            pageNextTop?.addEventListener('click', () => { currentPage += 1; renderPage(); });
+            pagePrevBottom?.addEventListener('click', () => { currentPage -= 1; renderPage(); });
+            pageNextBottom?.addEventListener('click', () => { currentPage += 1; renderPage(); });
+            pageSizeTop?.addEventListener('change', () => { currentPage = 1; renderPage(); });
+            pageSizeBottom?.addEventListener('change', () => { currentPage = 1; renderPage(); });
 
             applyFilters();
         });

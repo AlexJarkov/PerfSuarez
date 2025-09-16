@@ -2334,11 +2334,13 @@ main {
 
 /* Suaviza el cambio de página para ambas grillas */
 .perfume-grid,
-.decant-grid {
+.decant-grid,
+.vela-grid {
   transition: opacity .18s ease;
 }
 .perfume-grid.is-paging,
-.decant-grid.is-paging {
+.decant-grid.is-paging,
+.vela-grid.is-paging {
   opacity: .5;
 }
 
