@@ -178,6 +178,7 @@
             width: 100%;
             object-fit: cover;
             max-height: 420px;
+            transition: opacity 0.5s ease;
         }
 
         .hero-frame figcaption {
@@ -440,8 +441,8 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <span class="eyebrow">Casa de perfumería Suárez</span>
-                <h1>Fragancias que dejan huella</h1>
+                <span class="eyebrow">Perfumería Suárez</span>
+                <h1>Sólo cambas que huelan rico.</h1>
                 <p class="hero-lead">Seleccionamos piezas olfativas memorables para quienes buscan sofisticación auténtica. Déjate guiar por nuestro equipo y descubre tu nueva firma.</p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="perfumes.html">Explorar perfumes</a>
@@ -454,8 +455,8 @@
             </div>
             <div class="hero-visual">
                 <figure class="hero-frame">
-                    <img src="imagenes/image.webp" alt="Colección de frascos de perfume dispuestos sobre mármol.">
-                    <figcaption>Curaduría temporada 2024</figcaption>
+                    <img id="hero-img" src="imagenes/image.webp" alt="Colección de frascos de perfume dispuestos sobre mármol.">
+                    <figcaption id="hero-caption">Curaduría temporada 2024</figcaption>
                 </figure>
             </div>
         </section>
@@ -554,5 +555,60 @@
     <div data-include="footer.html"></div>
     <script src="js/scripts.js"></script>
     <script src="js/include.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = [
+                {
+                    name: 'Stronger With You Intensely',
+                    src: 'imagenes/fotos-catalogo/armani/SWY INTENSELY.webp',
+                    alt: 'Emporio Armani Stronger With You Intensely'
+                },
+                {
+                    name: 'Xerjoff Erba Pura',
+                    src: 'imagenes/fotos-catalogo/xerjoff/ERBA PURA.webp',
+                    alt: 'Xerjoff Erba Pura'
+                },
+                {
+                    name: 'Lattafa Khamrah',
+                    src: 'imagenes/fotos-catalogo/arabes/KHAMRAH-LATTAFA-.jpg',
+                    alt: 'Lattafa Khamrah'
+                },
+                {
+                    name: 'Jean Paul Gaultier Le Male Elixir',
+                    src: 'imagenes/fotos-catalogo/jpg/LE MALE ELIXIR.webp',
+                    alt: 'Jean Paul Gaultier Le Male Elixir'
+                }
+            ];
+
+            const img = document.getElementById('hero-img');
+            const caption = document.getElementById('hero-caption');
+            if (!img || !caption) return;
+
+            let index = 0;
+
+            function show(i) {
+                const slide = slides[i % slides.length];
+                // fade out
+                img.style.opacity = '0';
+                setTimeout(() => {
+                    img.src = slide.src;
+                    img.alt = slide.alt;
+                    caption.textContent = slide.name;
+                    // fade in
+                    img.style.opacity = '1';
+                }, 250);
+            }
+
+            // Immediately show first requested fragrance instead of placeholder text
+            show(index);
+            index = 1;
+
+            // Auto-advance every 5 seconds
+            setInterval(() => {
+                show(index);
+                index = (index + 1) % slides.length;
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
