@@ -465,7 +465,7 @@
 
 <body class="perfumes-page">
     <div data-include="header.html"></div>
-        <main>
+        <main class="page-shell">
         <section class="collection-hero">
             <div class="hero-copy">
                 <span class="eyebrow">Colección permanente</span>
@@ -1670,6 +1670,136 @@
     <script src="js/include.js"></script>
     <script src="js/lazy-images.js"></script>
     <script src="js/grid-paginator.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.querySelector('#perfume-grid');
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('.decant'));
+  const searchInput = document.querySelector('#perfume-search');
+  const categorySelect = document.querySelector('#perfume-category');
+  const brandSelect = document.querySelector('#perfume-brand');
+  const stockToggle = document.querySelector('#stock-filter');
+  const newToggle = document.querySelector('#new-filter');
+  const emptyState = document.querySelector('#no-results-message');
+  const pageSizeInput = document.querySelector('#page-size-input');
+  const pagePrevBtn = document.querySelector('#page-prev');
+  const pageNextBtn = document.querySelector('#page-next');
+  const pageStatus = document.querySelector('#page-status');
+
+  let currentPage = 1;
+  let filtered = cards.slice();
+
+  // Extract metadata per card (brand/name/tags/out-of-stock/new)
+  const meta = new Map();
+  function computeMeta(card) {
+    const name = (card.dataset.name || card.textContent || "").toLowerCase();
+    const tags = (card.dataset.tags || "").toLowerCase();
+    const brandText = (card.querySelector('h3')?.textContent || "").toLowerCase();
+    const hasOutBadge = !!card.querySelector('.etiqueta.fuera-de-stock, .badge.out-of-stock');
+    const hasNewBadge = !!card.querySelector('.etiqueta.novedad, .badge.novedad');
+
+    meta.set(card, { name, tags, brandText, hasOutBadge, hasNewBadge });
+  }
+  cards.forEach(computeMeta);
+
+  function normalizeBrandValue(v) {
+    if (!v) return "";
+    v = v.toLowerCase();
+    // handle odd values used in the select
+    if (v === 'd&g') return 'dolce'; // will match dolce & gabbana via dataset/name
+    if (v === 'mntblanc') return 'montblanc';
+    return v;
+  }
+
+  function applyFilters() {
+    const q = (searchInput?.value || "").trim().toLowerCase();
+    const cat = (categorySelect?.value || "all").toLowerCase();
+    const brand = normalizeBrandValue(brandSelect?.value || "all");
+    const hideOut = !!(stockToggle?.checked);
+    const onlyNew = !!(newToggle?.checked);
+
+    filtered = cards.filter(card => {
+      const m = meta.get(card);
+      if (!m) return true;
+
+      // search
+      if (q) {
+        const haystack = m.name + " " + m.tags + " " + m.brandText;
+        if (!haystack.includes(q)) return false;
+      }
+
+      // category
+      if (cat && cat !== 'all') {
+        if (!(m.tags.includes(cat))) return false;
+      }
+
+      // brand
+      if (brand && brand !== 'all') {
+        if (!(m.tags.includes(brand) || m.brandText.includes(brand) || m.name.includes(brand))) return false;
+      }
+
+      // stock
+      if (hideOut && m.hasOutBadge) return false;
+
+      // new
+      if (onlyNew && !m.hasNewBadge) return false;
+
+      return true;
+    });
+
+    // Toggle visibility for non-matching before pagination slicing
+    cards.forEach(c => c.classList.add('pag-hidden'));
+    if (filtered.length === 0) {
+      emptyState?.classList.add('show');
+    } else {
+      emptyState?.classList.remove('show');
+    }
+
+    currentPage = 1; // reset on new filter
+    renderPage();
+  }
+
+  function renderPage() {
+    const pageSize = Math.max(1, parseInt(pageSizeInput?.value || '20', 10) || 20);
+    const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+
+    currentPage = Math.min(Math.max(1, currentPage), totalPages);
+
+    // Smooth grid feedback
+    grid.classList.add('is-paging');
+    requestAnimationFrame(() => {
+      cards.forEach(c => c.classList.add('pag-hidden'));
+      const start = (currentPage - 1) * pageSize;
+      const slice = filtered.slice(start, start + pageSize);
+      slice.forEach(c => c.classList.remove('pag-hidden'));
+
+      pageStatus && (pageStatus.textContent = `Página ${currentPage} de ${totalPages}`);
+      if (pagePrevBtn) pagePrevBtn.disabled = currentPage <= 1;
+      if (pageNextBtn) pageNextBtn.disabled = currentPage >= totalPages;
+
+      // end feedback
+      setTimeout(() => grid.classList.remove('is-paging'), 150);
+    });
+  }
+
+  // Pagination controls
+  pagePrevBtn?.addEventListener('click', () => { currentPage--; renderPage(); });
+  pageNextBtn?.addEventListener('click', () => { currentPage++; renderPage(); });
+  pageSizeInput?.addEventListener('change', () => { currentPage = 1; renderPage(); });
+
+  // Filter bindings
+  searchInput?.addEventListener('input', () => applyFilters());
+  categorySelect?.addEventListener('change', () => applyFilters());
+  brandSelect?.addEventListener('change', () => applyFilters());
+  stockToggle?.addEventListener('change', () => applyFilters());
+  newToggle?.addEventListener('change', () => applyFilters());
+
+  // Kick things off
+  applyFilters();
+});
+</script>
 </body>
 
 </html>
