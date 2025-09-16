@@ -13,27 +13,462 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
     <meta property="og:title" content="Mystery Box">
-    <meta property="og:description" content="Una caja, 5 decants.">
-    <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
-    <meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/mysterybox.html">
-    <meta property="og:type" content="website">
+<meta property="og:description" content="Una caja, 5 decants.">
+<meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
+<meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/mysterybox.html">
+<meta property="og:type" content="website">
+    <style>
+        body.mysterybox-page {
+            background: var(--surface);
+            color: var(--ink);
+        }
+
+        body.mysterybox-page main.page-shell {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(56px, 8vw, 88px);
+            padding-block: clamp(48px, 8vw, 96px) 120px;
+        }
+
+        .experience-hero {
+            background: linear-gradient(135deg, rgba(26, 112, 64, 0.12), rgba(255, 255, 255, 0.9));
+            border-radius: 32px;
+            padding: clamp(36px, 6vw, 64px);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(32px, 6vw, 48px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-hero::after {
+            content: "";
+            position: absolute;
+            inset: clamp(16px, 4vw, 24px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(18px, 4vw, 32px);
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: var(--accent);
+        }
+
+        .experience-hero h1 {
+            margin: 0;
+            font-size: clamp(2.1rem, 4vw, 3.2rem);
+            line-height: 1.08;
+        }
+
+        .lead {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--muted-ink);
+        }
+
+        .hero-meta {
+            display: grid;
+            gap: 16px;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 18px;
+            padding: 16px 20px;
+            backdrop-filter: blur(12px);
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 0.82rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+            margin-bottom: 6px;
+        }
+
+        .meta-item p {
+            margin: 0;
+            color: var(--muted-ink);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--ink);
+            color: #fff;
+            box-shadow: 0 12px 28px rgba(17, 17, 17, 0.18);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 16px 36px rgba(17, 17, 17, 0.24);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--ink);
+            background: transparent;
+            color: var(--ink);
+        }
+
+        .btn-outline:hover {
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .btn-light {
+            background: #fff;
+            color: var(--ink);
+            box-shadow: none;
+        }
+
+        .experience-card {
+            position: relative;
+            z-index: 1;
+            background: var(--surface-strong);
+            border-radius: 28px;
+            padding: clamp(20px, 4vw, 28px);
+            box-shadow: 0 25px 55px rgba(17, 17, 17, 0.16);
+            border: 1px solid rgba(17, 17, 17, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(17, 17, 17, 0.2);
+        }
+
+        .experience-figure {
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .experience-figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .experience-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card-tag {
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+        }
+
+        .experience-card h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .experience-card ul {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted-ink);
+            line-height: 1.6;
+        }
+
+        .card-note {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--muted-ink);
+        }
+
+        .section-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 620px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--muted-ink);
+            line-height: 1.6;
+        }
+
+        .include-grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .include-card {
+            background: var(--surface-strong);
+            border-radius: 24px;
+            border: 1px solid var(--divider);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .include-card h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .include-card p {
+            margin: 0;
+            color: var(--muted-ink);
+            line-height: 1.5;
+        }
+
+        .experience-steps {
+            background: var(--surface-strong);
+            border-radius: 28px;
+            border: 1px solid var(--divider);
+            padding: clamp(28px, 6vw, 48px);
+            display: grid;
+            gap: 32px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .step-card {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 20px 24px;
+            border: 1px solid var(--divider);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .step-card span {
+            font-size: 0.75rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .step-card h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .step-card p {
+            margin: 0;
+            color: var(--muted-ink);
+            line-height: 1.5;
+        }
+
+        .experience-cta {
+            background: var(--ink);
+            color: #fff;
+            border-radius: 28px;
+            padding: clamp(32px, 6vw, 48px);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            align-items: center;
+        }
+
+        .experience-cta p {
+            margin: 0;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .experience-cta .btn-outline {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+        }
+
+        .experience-cta .btn-outline:hover {
+            background: #fff;
+            color: var(--ink);
+        }
+
+        .experience-cta .btn-light {
+            color: var(--ink);
+        }
+
+        @media (max-width: 700px) {
+            .experience-hero::after {
+                inset: 16px;
+            }
+
+            .cta-actions {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .experience-card {
+                padding: 24px;
+            }
+
+            .experience-card h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="mysterybox-page">
     <div data-include="header.html"></div>
     <main>
-        <section id="combos">
-            <div class="title">
-                <h2>Mystery Box</h2>
-            </div>
-            <div class="combo-grid">
-                <div class="combo" data-whatsapp="78064327" data-combo="Mystery%20Box">
-                    <img src="imagenes/Mystery Box.jpg" alt="Mystery Box" class="combo-image">
-                    <p><strong>TODO A 5ML</strong></p>
-                    <p>- 2 decants  de perfume de diseñador</p>
-                    <p>- 2 decants de perfume árabe</p>
-                    <p>- 1 decant de perfume nicho</p>
-                    <h2><strong>Bs</strong> 580</h2>
+        <section class="experience-hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Edición limitada</span>
+                <h1>Vive la experiencia Mystery Box</h1>
+                <p class="lead">Cinco decants seleccionados a mano para expandir tu colección sin compromisos. Cada caja se adapta a tus preferencias y a la temporada, asegurando descubrimientos memorables.</p>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <strong>Personalización guiada</strong>
+                        <p>Responde un breve cuestionario y afinamos la selección a tu estilo olfativo.</p>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Envíos a todo Bolivia</strong>
+                        <p>Coordina desde la comodidad de tu casa; entregamos con seguimiento en tiempo real.</p>
+                    </div>
                 </div>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#incluye">Ver qué incluye</a>
+                    <a class="btn btn-outline" href="https://wa.link/hqv4bq">Hablar con un asesor</a>
+                </div>
+            </div>
+            <aside class="experience-card combo" data-whatsapp="78064327" data-combo="Mystery%20Box" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
+                <figure class="experience-figure">
+                    <img src="imagenes/Mystery Box.jpg" alt="Mystery Box" loading="lazy">
+                </figure>
+                <div class="experience-info">
+                    <span class="card-tag">incluye 5 decants</span>
+                    <h2>Bs 580</h2>
+                    <ul>
+                        <li>2 fragancias de diseñador</li>
+                        <li>2 fragancias árabes</li>
+                        <li>1 fragancia de nicho</li>
+                    </ul>
+                    <p class="card-note">Haz clic para coordinar tu pedido vía WhatsApp.</p>
+                </div>
+            </aside>
+        </section>
+
+        <section id="incluye" class="experience-includes">
+            <div class="section-heading">
+                <span class="eyebrow">Qué llega a tu puerta</span>
+                <h2>Dentro de la Mystery Box</h2>
+                <p>Cada envío es único. Jugamos con acordes complementarios, estaciones y ocasiones para ofrecerte una panorámica completa del universo perfumero.</p>
+            </div>
+            <div class="include-grid">
+                <article class="include-card">
+                    <h3>Selección de diseñador</h3>
+                    <p>Iconos modernos reconocidos por su versatilidad. Perfectos para el día a día y para descubrir firmas que conquistan al mundo.</p>
+                </article>
+                <article class="include-card">
+                    <h3>Descubrimientos árabes</h3>
+                    <p>Notas especiadas y suntuosas que exploran el lujo oriental. Ideales para ocasiones especiales o noches memorables.</p>
+                </article>
+                <article class="include-card">
+                    <h3>Joyas nicho</h3>
+                    <p>Una fragancia de autor imposible de ignorar. Producciones limitadas que te permiten sentir la perfumería más exclusiva.</p>
+                </article>
+                <article class="include-card">
+                    <h3>Guía de aplicación</h3>
+                    <p>Recibe notas explicativas con recomendaciones de uso y combinaciones sugeridas para cada decant.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="experience-steps">
+            <div class="section-heading">
+                <span class="eyebrow">Cómo funciona</span>
+                <h2>Tu ritual en tres pasos</h2>
+                <p>Nos encargamos de todo el proceso para que solo te concentres en disfrutar nuevos aromas.</p>
+            </div>
+            <div class="steps-grid">
+                <article class="step-card">
+                    <span>Paso 1</span>
+                    <h3>Cuéntanos tu estilo</h3>
+                    <p>Completas un breve formulario o conversas con nuestro equipo para que podamos perfilar tus gustos olfativos.</p>
+                </article>
+                <article class="step-card">
+                    <span>Paso 2</span>
+                    <h3>Curamos la selección</h3>
+                    <p>Preparamos la combinación perfecta de diseñadores, árabes y nicho, cuidando armonía y contraste entre las propuestas.</p>
+                </article>
+                <article class="step-card">
+                    <span>Paso 3</span>
+                    <h3>Recibe y explora</h3>
+                    <p>Coordina el envío a donde estés. Abre tu caja y prueba cada decant con la guía incluida para sacarles el máximo provecho.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="experience-cta">
+            <div>
+                <span class="eyebrow">Listo para descubrir</span>
+                <h2>Tu siguiente firma puede estar aquí</h2>
+                <p>Reserva tu Mystery Box hoy y recibe acompañamiento continuo para elegir la fragancia que mejor represente tu historia.</p>
+            </div>
+            <div class="cta-actions">
+                <a class="btn btn-light" href="https://wa.link/wfehwk">Agendar asesoría</a>
+                <a class="btn btn-outline combo" href="#incluye" data-whatsapp="78064327" data-combo="Mystery%20Box">Solicitar Mystery Box</a>
             </div>
         </section>
     </main>

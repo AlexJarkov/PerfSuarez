@@ -14,405 +14,778 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
     <meta property="og:title" content="Velas Aromáticas">
-    <meta property="og:description" content="Descubre nuestro catálogo de velas aromáticas.">
-    <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
-    <meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/velas.html">
-    <meta property="og:type" content="website">
+<meta property="og:description" content="Descubre nuestro catálogo de velas aromáticas.">
+<meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
+<meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/velas.html">
+<meta property="og:type" content="website">
+    <style>
+        body.velas-page {
+            background: var(--surface);
+            color: var(--ink);
+        }
+
+        body.velas-page main.page-shell {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(56px, 8vw, 96px);
+            padding-block: clamp(48px, 8vw, 96px) 120px;
+        }
+
+        .collection-hero {
+            position: relative;
+            background: linear-gradient(150deg, rgba(26, 112, 64, 0.1), rgba(255, 255, 255, 0.92));
+            border-radius: 32px;
+            padding: clamp(36px, 6vw, 64px);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(32px, 6vw, 48px);
+            overflow: hidden;
+        }
+
+        .collection-hero::after {
+            content: "";
+            position: absolute;
+            inset: clamp(16px, 4vw, 24px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(18px, 4vw, 32px);
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: var(--accent);
+        }
+
+        .collection-hero h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 4vw, 3.3rem);
+            line-height: 1.05;
+        }
+
+        .lead {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--muted-ink);
+        }
+
+        .hero-actions {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--ink);
+            color: #fff;
+            box-shadow: 0 12px 28px rgba(17, 17, 17, 0.18);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 16px 36px rgba(17, 17, 17, 0.24);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--ink);
+            background: transparent;
+            color: var(--ink);
+        }
+
+        .btn-outline:hover {
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .collection-hero figure {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(17, 17, 17, 0.18);
+        }
+
+        .collection-hero img {
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .collection-section {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(28px, 5vw, 48px);
+            background: var(--surface-strong);
+            border-radius: 28px;
+            border: 1px solid var(--divider);
+            padding: clamp(28px, 6vw, 48px);
+        }
+
+        .section-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 640px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--muted-ink);
+            line-height: 1.6;
+        }
+
+        .collection-intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .collection-note {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--muted-ink);
+            max-width: 320px;
+        }
+
+        .collection-controls {
+            display: grid;
+            gap: 16px;
+        }
+
+        .search-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .search-field label {
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+        }
+
+        .search-field input {
+            padding: 14px 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(17, 17, 17, 0.16);
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-field input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12);
+        }
+
+        .toggle-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: var(--muted-ink);
+        }
+
+        .toggle input {
+            accent-color: var(--accent);
+            width: 18px;
+            height: 18px;
+        }
+
+        .empty-state {
+            display: none;
+            padding: 18px 24px;
+            border-radius: 18px;
+            background: rgba(26, 112, 64, 0.08);
+            border: 1px solid rgba(26, 112, 64, 0.18);
+            color: var(--accent-dark);
+            font-weight: 500;
+        }
+
+        .empty-state p {
+            margin: 0;
+        }
+
+        .empty-state.show {
+            display: block;
+        }
+
+        .vela-grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .decant {
+            background: var(--surface);
+            border-radius: 24px;
+            border: 1px solid var(--divider);
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .decant:hover,
+        .decant:focus-visible {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 48px rgba(17, 17, 17, 0.12);
+        }
+
+        .decant.is-hidden {
+            display: none;
+        }
+
+        .decant img {
+            width: 100%;
+            border-radius: 18px;
+            object-fit: cover;
+            aspect-ratio: 4 / 5;
+            background: #f4f4f4;
+        }
+
+        .decant h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .decant h3 strong {
+            font-weight: 600;
+        }
+
+        .decant p {
+            margin: 0;
+            color: var(--muted-ink);
+            line-height: 1.5;
+        }
+
+        .decant .vela-price {
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+        }
+
+        .badge {
+            align-self: flex-start;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .badge.novedad {
+            background: rgba(26, 112, 64, 0.12);
+            color: var(--accent-dark);
+        }
+
+        .badge.out-of-stock {
+            background: rgba(17, 17, 17, 0.08);
+            color: var(--muted-ink);
+        }
+
+        @media (min-width: 720px) {
+            .collection-controls {
+                grid-template-columns: minmax(260px, 1fr) 1fr;
+                align-items: end;
+            }
+
+            .toggle-group {
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .collection-hero::after {
+                inset: 16px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .toggle {
+                align-items: flex-start;
+            }
+
+            .vela-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="velas-page">
     <div data-include="header.html"></div>
     <main>
-        <section id="decants">
-            <div class="title">
-                <h2>Velas Aromáticas</h2>
-                <h3>Sabor Coco Vainilla con canela</h3>
-                <div class="search-filter">
-                    <label for="decant-search">Buscar velas:</label>
-                    <input type="text" id="decant-search" placeholder="Introduce el nombre del perfume"
-                        oninput="filterPerfumes(document.getElementById('decant-filter').value)">
+        <section class="collection-hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Ambiente sensorial</span>
+                <h1>Velas aromáticas</h1>
+                <p class="lead">Encendemos atmósferas cálidas con notas gourmand, maderas suaves y destellos especiados. Cada vela está vertida a mano y lista para transformar tu espacio.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#catalogo">Explorar catálogo</a>
+                    <a class="btn btn-outline" href="https://wa.link/wfehwk">Agendar asesoría</a>
                 </div>
-                <div class="stock-filter">
-                    <label for="stock-filter">Ocultar velas fuera de stock:</label>
-                    <input type="checkbox" id="stock-filter"
-                        onchange="filterPerfumes(document.getElementById('decant-filter').value)" checked>
+            </div>
+            <figure>
+                <img src="imagenes/vela.jpg" alt="Velas aromáticas encendidas sobre una mesa de mármol.">
+            </figure>
+        </section>
+
+        <section id="catalogo" class="collection-section">
+            <div class="collection-intro">
+                <div class="section-heading">
+                    <span class="eyebrow">Colección 2024</span>
+                    <h2>Curaduría para espacios con carácter</h2>
+                    <p>Combinamos coco cremoso, vainilla envolvente y canela especiada para crear velas que abrigan salones, estudios y rincones íntimos.</p>
                 </div>
-                <div class="new-filter">
-                    <label for="new-filter">Mostrar solo velas nuevas:</label>
-                    <input type="checkbox" id="new-filter"
-                        onchange="filterPerfumes(document.getElementById('decant-filter').value)">
+                <p class="collection-note">Coordinamos recargas y envíos a todo Bolivia con empaques listos para regalar.</p>
+            </div>
+            <div class="collection-controls">
+                <div class="search-field">
+                    <label for="vela-search">Buscar velas</label>
+                    <input type="text" id="vela-search" placeholder="Introduce el nombre o nota clave">
                 </div>
-                <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
-                    <p>Perdón pariente... No tenemos velas que coincidan con tu búsqueda :(</p>
+                <div class="toggle-group">
+                    <label class="toggle">
+                        <input type="checkbox" id="stock-filter" checked>
+                        <span>Ocultar velas fuera de stock</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="new-filter">
+                        <span>Mostrar solo velas nuevas</span>
+                    </label>
                 </div>
-                <div class="perfume-grid">
+            </div>
+            <div id="no-results-message" class="empty-state" aria-live="polite">
+                <p>Perdón pariente... No tenemos velas que coincidan con tu búsqueda :(</p>
+            </div>
+            <div class="vela-grid" id="vela-grid">
                     <div class="decant" data-name="Xerjoff Naxos">
                         <img src="imagenes\fotos-velas\NAXOS.png" alt="Naxos">
                         <h3><strong>Xerjoff</strong></h3>
                         <p>Vela "Naxos"</p>
-                        <p>300 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 300</p>
                     </div>
 
                     <div class="decant" data-name="Xerjoff Erba Pura">
                         <img src="imagenes\fotos-velas\ERBA PURA.png" alt="Erba Pura">
                         <h3><strong>Xerjoff</strong></h3>
                         <p>Vela "Erba Pura"</p>
-                        <p>300 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 300</p>
                     </div>
 
                     <div class="decant" data-name="Parfums de Marly Layton Exclusif">
                         <img src="imagenes\fotos-velas\LAYTON EXCLUSIF.png" alt="Layton Exclusif">
                         <h3><strong>Parfums de Marly</strong></h3>
                         <p>Vela "Layton Exclusif"</p>
-                        <p>300 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 300</p>
                     </div>
 
                     <div class="decant" data-name="Le Labo Santal 33">
                         <img src="imagenes\fotos-velas\SANTAL 33.png" alt="Santal 33">
                         <h3><strong>Le Labo</strong></h3>
                         <p>Vela "Santal 33"</p>
-                        <p>300 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 300</p>
                     </div>
 
                     <div class="decant" data-name="Tom Ford Ombré Leather">
                         <img src="imagenes\fotos-velas\OMBRE LEATHER.png" alt="Ombré Leather">
                         <h3><strong>Tom Ford</strong></h3>
                         <p>Vela "Ombré Leather"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Dior Homme Intense">
                         <img src="imagenes\fotos-velas\DIOR HOMME.png" alt="Dior Homme Intense">
                         <h3><strong>Dior</strong></h3>
                         <p>Vela "Homme Intense"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Viktor&Rolf Spicebomb Extreme">
                         <img src="imagenes\fotos-velas\SPICEBOMB EXTREME.png" alt="Spicebomb Extreme">
                         <h3><strong>Viktor&Rolf</strong></h3>
                         <p>Vela "Spicebomb Extreme"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Viktor&Rolf Spicebomb EDT">
                         <img src="imagenes\fotos-velas\SPICEBOMB EDT.png" alt="Spicebomb EDT">
                         <h3><strong>Viktor&Rolf</strong></h3>
                         <p>Vela "Spicebomb EDT"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Le Male Elixir">
                         <img src="imagenes\fotos-velas\LE MALE ELIXIR.png" alt="Le Male Elixir">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "Le Male Elixir"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Ultra Male">
                         <img src="imagenes\fotos-velas\ULTRA MALE.png" alt="Ultra Male">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "Ultra Male"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Le Beau Le Parfum">
                         <img src="imagenes\fotos-velas\LE BEAU LP.png" alt="Le Beau Le Parfum">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "Le Beau Le Parfum"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Le Beau Paradise Garden">
                         <img src="imagenes\fotos-velas\LE BEAU PG.png" alt="Le Beau Paradise Garden">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "Le Beau Paradise Garden"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier La Belle Paradise Garden">
                         <img src="imagenes\fotos-velas\LA BELLE PG.png" alt="La Belle Paradise Garden">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "La Belle Paradise Garden"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Scandal EDT">
                         <img src="imagenes\fotos-velas\SCANDAL EDT.png" alt="Scandal EDT">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "Scandal EDT"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Scandal Absolu">
                         <img src="imagenes\fotos-velas\SCANDAL ABSOLU.png" alt="Scandal Absolu">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "Scandal Absolu"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Jean Paul Gaultier Scandal Absolu de mujer">
                         <img src="imagenes\fotos-velas\SCANDAL MUJER.png" alt="Scandal Absolu de mujer">
                         <h3><strong>Jean Paul Gaultier</strong></h3>
                         <p>Vela "Scandal Absolu Pour Femme"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Carolina Herrera 212 VIP Rosé Elixir">
                         <img src="imagenes\fotos-velas\212 VIP ROSE ELIXIR.png" alt="212 VIP Rosé Elixir">
                         <h3><strong>Carolina Herrera</strong></h3>
                         <p>Vela "212 VIP Rosé Elixir"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Yves Saint Laurent Y EDP">
                         <img src="imagenes\fotos-velas\Y EDP.png" alt="Y EDP">
                         <h3><strong>Yves Saint Laurent</strong></h3>
                         <p>Vela "Y EDP"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Yves Saint Laurent Y EDT">
                         <img src="imagenes\fotos-velas\Y EDT.png" alt="Y EDT">
                         <h3><strong>Yves Saint Laurent</strong></h3>
                         <p>Vela "Y EDT"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Rabanne Phantom Parfum">
                         <img src="imagenes\fotos-velas\PHANTOM PARFUM.png" alt="Phantom Parfum">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Vela "Phantom Parfum"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Rabanne Fame Blooming Pink">
                         <img src="imagenes\fotos-velas\FAME BLOOMING PINK.png" alt="Fame Blooming Pink">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Vela "Fame Blooming Pink"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Rabanne One Million">
                         <img src="imagenes\fotos-velas\ONE MILLION.png" alt="One Million">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Vela "One Million"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Rabanne Invictus Victory">
                         <img src="imagenes\fotos-velas\INVICTUS VICTORY.png" alt="Invictus Victory">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Vela "Invictus Victory"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Rabanne Invictus Victory Elixir">
                         <img src="imagenes\fotos-velas\INVICTUS VICTORY ELIXIR.png" alt="Invictus Victory Elixir">
                         <h3><strong>Rabanne</strong></h3>
                         <p>Vela "Invictus Victory Elixir"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Dior Sauvage EDT">
                         <img src="imagenes\fotos-velas\SAUVAGE EDT.png" alt="SAUVAGE EDT">
                         <h3><strong>Dior</strong></h3>
                         <p>Vela "Sauvage EDT"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Emporio Armani Stronger With You Intensely">
                         <img src="imagenes\fotos-velas\SWY INTENSELY.png" alt="SWY Intensely">
                         <h3><strong>Emporio Armani</strong></h3>
                         <p>Vela "Stronger With You Intensely"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Bvlgari Man In Black">
                         <img src="imagenes\fotos-velas\MAN IN BLACK.png" alt="Man In Black">
                         <h3><strong>Bvlgari</strong></h3>
                         <p>Vela "Man In Black"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Givenchy Gentleman Society">
                         <img src="imagenes\fotos-velas\SOCIETY.png" alt="Gentleman Society">
                         <h3><strong>Givenchy</strong></h3>
                         <p>Vela "Gentleman Society"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Azzaro Wanted">
                         <img src="imagenes\fotos-velas\WANTED.png" alt="Wanted">
                         <h3><strong>Azzaro</strong></h3>
                         <p>Vela "Wanted"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Montblanc Explorer Ultra Blue">
                         <img src="imagenes\fotos-velas\ULTRA BLUE.png" alt="Explorer Ultra Blue">
                         <h3><strong>Montblanc</strong></h3>
                         <p>Vela "Explorer Ultra Blue"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Kenzo Homme EDP">
                         <img src="imagenes\fotos-velas\KENZO HOMME EDP.png" alt="Homme EDP">
                         <h3><strong>Kenzo</strong></h3>
                         <p>Vela "Homme EDP"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Dolce&Gabbana K EDT">
                         <img src="imagenes\fotos-velas\K.png" alt="K EDT">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>Vela "K EDT"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Dolce&Gabbana Light Blue de mujer">
                         <img src="imagenes\fotos-velas\LIGHT BLUE MUJER.png" alt="Light Blue Pour Femme">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>Vela "Light Blue Pour Femme"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Dolce&Gabbana The One">
                         <img src="imagenes\fotos-velas\THE ONE.png" alt="The One">
                         <h3><strong>Dolce&Gabbana</strong></h3>
                         <p>Vela "The One"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Super Dreams">
                         <img src="imagenes\fotos-velas\SUPER DREAMS.png" alt="Super Dreams">
                         <h3><strong>Super Dreams</strong></h3>
                         <p>Vela "Super Dreams"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Lattafa Khamrah">
                         <img src="imagenes\fotos-velas\KHAMRAH.png" alt="Khamrah">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Vela "Khamrah"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Lattafa Khamrah Qahwa">
                         <img src="imagenes\fotos-velas\KHAMRAH QAHWA.png" alt="Khamrah Qahwa">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Vela "Khamrah Qahwa"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Lattafa Bade'e Al Oud Honor and Glory">
                         <img src="imagenes\fotos-velas\HONOR GLORY.png" alt="Honor and Glory">
                         <h3><strong>Lattafa</strong></h3>
                         <p>Vela "Bade'e Al Oud Honor and Glory"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Bharara King">
                         <img src="imagenes\fotos-velas\BHARARA KING.png" alt="King">
                         <h3><strong>Bharara</strong></h3>
                         <p>Vela "King"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Bharara King Parfum">
                         <img src="imagenes\fotos-velas\BHARARA KING PARFUM.png" alt="King Parfum">
                         <h3><strong>Bharara</strong></h3>
                         <p>Vela "King Parfum"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Armaf Club de Nuit Intense">
                         <img src="imagenes\fotos-velas\CLUB DE NUIT.png" alt="Club de Nuit Intense">
                         <h3><strong>Armaf</strong></h3>
                         <p>Vela "Club de Nuit Intense"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
 
                     <div class="decant" data-name="Armaf Club de Nuit Urban Man Elixir">
                         <img src="imagenes\fotos-velas\CLUB DE NUIT URBAN.png" alt="Club de Nuit Urban Man Elixir">
                         <h3><strong>Armaf</strong></h3>
                         <p>Vela "Club de Nuit Urban Man elixir"</p>
-                        <p>150 <strong>Bs</strong></p>
+                        <p class="vela-price">Bs 150</p>
                     </div>
-                </div>
             </div>
         </section>
     </main>
+
+    <div data-include="footer.html"></div>
     <script>
-        function filterPerfumes(filter) {
-            const decantsContainer = document.getElementById('decants');
-            const stockFilter = document.getElementById('stock-filter').checked;
-            const newFilter = document.getElementById('new-filter').checked;
-            const searchQuery = document.getElementById('decant-search').value.toLowerCase();
-            const noResultsMessage = document.getElementById('no-results-message');
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = Array.from(document.querySelectorAll('.decant'));
+            const searchInput = document.getElementById('vela-search');
+            const stockFilter = document.getElementById('stock-filter');
+            const newFilter = document.getElementById('new-filter');
+            const noResults = document.getElementById('no-results-message');
+            const whatsappNumber = '78064327';
 
-            decantsContainer.classList.add('fade-out');
+            const isOutOfStock = (card) => card.dataset.stock === 'out' || card.classList.contains('sin-stock') || card.querySelector('.badge.out-of-stock, .etiqueta.fuera-de-stock') !== null;
+            const isNewArrival = (card) => card.dataset.new === 'true' || card.classList.contains('nueva') || card.querySelector('.badge.novedad, .etiqueta.novedad') !== null;
 
-            setTimeout(() => {
-                const decants = document.querySelectorAll('.decant');
-                let visibleCount = 0; // Contador de decants visibles
+            const applyFilters = () => {
+                const query = (searchInput?.value || '').trim().toLowerCase();
+                const hideOutOfStock = stockFilter?.checked ?? false;
+                const onlyNew = newFilter?.checked ?? false;
+                let visibleCount = 0;
 
-                decants.forEach(decant => {
-                    const isOutOfStock = decant.querySelector('.etiqueta.fuera-de-stock') !== null;
-                    const isNew = decant.querySelector('.etiqueta.novedad') !== null;
-                    const matchesFilter = filter === 'all' || decant.getAttribute('data-tags').includes(filter);
-                    const name = decant.getAttribute('data-name').toLowerCase();
+                cards.forEach(card => {
+                    const name = (card.dataset.name || '').toLowerCase();
+                    const matchesSearch = !query || name.includes(query);
+                    const meetsStockRule = !hideOutOfStock || !isOutOfStock(card);
+                    const meetsNewRule = !onlyNew || isNewArrival(card);
+                    const shouldShow = matchesSearch && meetsStockRule && meetsNewRule;
 
-                    const shouldShow = matchesFilter &&
-                        (!stockFilter || !isOutOfStock) &&
-                        (!newFilter || isNew) &&
-                        (searchQuery === '' || name.includes(searchQuery));
-
-                    decant.style.display = shouldShow ? 'block' : 'none';
-
-                    if (shouldShow) visibleCount++; // Aumenta el contador si el decant es visible
+                    card.classList.toggle('is-hidden', !shouldShow);
+                    if (shouldShow) {
+                        visibleCount += 1;
+                    }
                 });
 
-                // Mostrar mensaje de "sin resultados" si no hay decants visibles
-                noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+                if (noResults) {
+                    noResults.classList.toggle('show', visibleCount === 0);
+                }
+            };
 
-                decantsContainer.classList.remove('fade-out');
-            }, 500);
-        }
+            const openWhatsApp = (name) => {
+                const message = encodeURIComponent(`Hola! Quisiera saber si tienen disponible la vela ${name}.`);
+                const confirmation = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
 
-        function sendToWhatsApp(name) {
-            const whatsappNumber = "78064327";
-            const message = `Hola!%20Quisiera%20saber%20si%20tienen%20disponible%20el%20perfume%20${name}!`;
-            const confirmation = confirm('¿Desea continuar a WhatsApp para realizar su consulta?');
+                if (confirmation) {
+                    window.open(`https://wa.me/${whatsappNumber}/?text=${message}`, '_blank');
+                }
+            };
 
-            if (confirmation) {
-                window.open(`https://wa.me/${whatsappNumber}/?text=${message}`, '_blank');
-            }
-        }
+            cards.forEach(card => {
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.addEventListener('click', () => {
+                    openWhatsApp(card.dataset.name || '');
+                });
 
-        const decants = document.querySelectorAll('.decant');
-        decants.forEach(decant => {
-            decant.addEventListener('click', () => {
-                const name = decant.getAttribute('data-name');
-                const price = decant.getAttribute('data-price');
-                sendToWhatsApp(name, price);
+                card.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        card.click();
+                    }
+                });
             });
+
+            searchInput?.addEventListener('input', applyFilters);
+            stockFilter?.addEventListener('change', applyFilters);
+            newFilter?.addEventListener('change', applyFilters);
+
+            applyFilters();
         });
-
-        // Asocia el evento 'change' al checkbox directamente
-        document.getElementById('stock-filter').addEventListener('change', () => {
-            filterPerfumes(document.getElementById('decant-filter').value);
-        });
-
-        document.getElementById('new-filter').addEventListener('change', () => {
-            filterPerfumes(document.getElementById('decant-filter').value);
-        });
-
-        filterPerfumes(document.getElementById('decant-filter').value);
-
     </script>
-    <div data-include="footer.html">
-    </div>
     <script src="js/scripts.js"></script>
     <script src="js/include.js"></script>
 </body>
