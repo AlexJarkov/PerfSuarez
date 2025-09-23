@@ -1441,61 +1441,45 @@ footer {
 #decant-filter,
 #perfume-filter,
 #combo-type,
-#decant-quantity {
-    padding: 10px;
-    border-radius: 5px;
-    width: 300px;
-    text-overflow: none;
-    font-size: 16px;
-    border: 1px solid #ccc;
-}
-
-.search-filter {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
+#decant-quantity,
 #decant-search {
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    text-overflow: none;
-    width: 300px;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(17, 17, 17, 0.16);
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
-/* Estilos para el contenedor del filtro de stock */
+#decant-filter:focus,
+#perfume-filter:focus,
+#combo-type:focus,
+#decant-quantity:focus,
+#decant-search:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12);
+}
+
 .stock-filter,
 .new-filter {
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* Centra el contenido */
-    gap: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 16px;
+    gap: 10px;
+    font-size: 0.9rem;
     font-weight: 500;
+    color: var(--muted-ink);
 }
 
-/* Estilos para el checkbox tradicional */
 #stock-filter,
 #new-filter {
-    width: 24px;
-    /* Aumenta el tamaño del checkbox */
-    height: 24px;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
-    accent-color: #007bff;
-    /* Cambia el color del checkbox */
-}
-
-/* Estilos del texto */
-.stock-filter,
-.new-filter label {
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
+    accent-color: var(--accent);
 }
 
 .combo-builder-item {
