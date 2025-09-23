@@ -18,57 +18,562 @@
     <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
     <meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/decants.html">
     <meta property="og:type" content="website">
+    <style>
+        body.decants-page {
+            background: var(--surface);
+            color: var(--ink);
+        }
+
+        body.decants-page main.page-shell {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(56px, 8vw, 96px);
+            padding-block: clamp(48px, 8vw, 104px) 140px;
+        }
+
+        .collection-hero {
+            position: relative;
+            background: linear-gradient(145deg, rgba(26, 112, 64, 0.1), rgba(255, 255, 255, 0.94));
+            border-radius: 32px;
+            padding: clamp(36px, 6vw, 68px);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(32px, 6vw, 56px);
+            overflow: hidden;
+        }
+
+        .collection-hero::after {
+            content: "";
+            position: absolute;
+            inset: clamp(16px, 4vw, 24px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(18px, 4vw, 32px);
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: var(--accent);
+        }
+
+        .collection-hero h1 {
+            margin: 0;
+            font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+            line-height: 1.05;
+        }
+
+        .lead {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--muted-ink);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--ink);
+            color: #fff;
+            box-shadow: 0 15px 35px rgba(17, 17, 17, 0.2);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 18px 44px rgba(17, 17, 17, 0.26);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--ink);
+            background: transparent;
+            color: var(--ink);
+        }
+
+        .btn-outline:hover {
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .collection-hero figure {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(17, 17, 17, 0.18);
+        }
+
+        .collection-hero img {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .catalog-section {
+            background: var(--surface-strong);
+            border-radius: 28px;
+            border: 1px solid var(--divider);
+            padding: clamp(28px, 6vw, 52px);
+            display: flex;
+            flex-direction: column;
+            gap: clamp(28px, 5vw, 52px);
+        }
+
+        .section-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 680px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--muted-ink);
+            line-height: 1.6;
+        }
+
+        .catalog-intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 28px;
+        }
+
+        .collection-note {
+            margin: 0;
+            max-width: 360px;
+            font-size: 0.92rem;
+            color: var(--muted-ink);
+        }
+
+        .catalog-controls {
+            display: grid;
+            gap: 20px;
+        }
+
+        .search-field,
+        .select-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .search-field label,
+        .select-field label {
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+        }
+
+        .pagination-controls label {
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted-ink);
+        }
+
+        .search-field input,
+        .select-field select {
+            padding: 14px 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(17, 17, 17, 0.16);
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body.decants-page #decant-search,
+        body.decants-page #decant-filter,
+        body.decants-page #decant-brand {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(17, 17, 17, 0.16);
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body.decants-page #decant-search:focus,
+        body.decants-page #decant-filter:focus,
+        body.decants-page #decant-brand:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12);
+        }
+
+        .search-field input:focus,
+        .select-field select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12);
+        }
+
+        .select-row {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .toggle-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: var(--muted-ink);
+        }
+
+        .toggle input {
+            accent-color: var(--accent);
+            width: 18px;
+            height: 18px;
+        }
+
+        body.decants-page #stock-filter,
+        body.decants-page #new-filter {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+        }
+
+        .pagination-controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 20px;
+            border-radius: 18px;
+            border: 1px solid var(--divider);
+            background: var(--surface);
+        }
+
+        .pagination-controls .page-size {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pagination-controls input[type="number"] {
+            width: 88px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(17, 17, 17, 0.2);
+            font-size: 0.95rem;
+        }
+
+        .pagination-controls .pager {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pagination-controls .pager button {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(17, 17, 17, 0.16);
+            background: #fff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .pagination-controls .pager button:hover {
+            border-color: rgba(17, 17, 17, 0.4);
+            background: rgba(17, 17, 17, 0.05);
+        }
+
+        .pagination-controls .pager span {
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .empty-state {
+            display: none;
+            padding: 20px 24px;
+            border-radius: 18px;
+            background: rgba(26, 112, 64, 0.08);
+            border: 1px solid rgba(26, 112, 64, 0.18);
+            color: var(--accent-dark);
+            font-weight: 500;
+        }
+
+        .empty-state p {
+            margin: 0;
+        }
+
+        .empty-state.show {
+            display: block;
+        }
+
+        .fragrance-grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .decant {
+            background: var(--surface);
+            border-radius: 24px;
+            border: 1px solid var(--divider);
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .decant:hover,
+        .decant:focus-visible {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 52px rgba(17, 17, 17, 0.12);
+        }
+
+        .decant img {
+            width: 100%;
+            border-radius: 18px;
+            object-fit: cover;
+            aspect-ratio: 4 / 5;
+            background: #f4f4f4;
+        }
+
+        .decant h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+
+        .decant p {
+            margin: 0;
+            color: var(--muted-ink);
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+
+        .decant p[data-sku],
+        .decant .price-label {
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+        }
+
+        .etiquetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .etiqueta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+
+        .etiqueta.novedad {
+            background: rgba(26, 112, 64, 0.14);
+            color: var(--accent-dark);
+        }
+
+        .etiqueta.fuera-de-stock {
+            background: rgba(17, 17, 17, 0.08);
+            color: var(--muted-ink);
+        }
+
+        .etiqueta.a-pedido {
+            background: rgba(17, 17, 17, 0.16);
+            color: var(--ink);
+        }
+
+        .perfume-grid.is-paging {
+            opacity: 0.6;
+            transition: opacity 0.25s ease;
+        }
+
+        .pag-hidden {
+            display: none !important;
+        }
+
+        @media (min-width: 900px) {
+            .catalog-controls {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .toggle-group {
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .collection-hero::after {
+                inset: 16px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .pagination-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .pagination-controls .page-size {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .pagination-controls .pager {
+                justify-content: space-between;
+            }
+
+            .fragrance-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+        }
+    </style>
 </head>
-
-<body>
+ 
+<body class="decants-page">
     <div data-include="header.html"></div>
-    <main>
-        <section id="decants">
-            <div class="title">
-                <h2>Decants</h2>
-                <div class="search-filter">
-                    <label for="decant-search">Buscar decants:</label>
-                    <input type="text" id="decant-search" placeholder="Introduce el nombre del decant"
-                        oninput="filterPerfumes(document.getElementById('decant-filter').value)">
+    <main class="page-shell">
+        <section class="collection-hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Fragancias a tu medida</span>
+                <h1>Decants curados para probar y viajar</h1>
+                <p class="lead">Explora fracciones listas para acompañarte en el día a día, descubrir nuevas casas o llevar tus favoritos sin comprometer el frasco completo.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#catalogo">Explorar catálogo</a>
+                    <a class="btn btn-outline" href="https://wa.link/wfehwk">Solicitar recomendación</a>
                 </div>
-                <div class="filter-select">
-                    <label for="decant-filter">Filtrar decants:</label>
-                    <select id="decant-filter" onchange="filterPerfumes(this.value)">
-                        <option value="all">Mostrar todos los decants</option>
-                        <option value="hombre">Mostrar decants de hombre</option>
-                        <option value="mujer">Mostrar decants de mujer</option>
-                        <option value="unisex">Mostrar decants unisex</option>
-                        <option value="nicho">Mostrar decants de nicho</option>
-                        <option value="arabes">Mostrar decants de Árabes</option>
-                    </select>
-                </div>
-                <div class="stock-filter">
-                    <label for="stock-filter">Ocultar decants fuera de stock:</label>
-                    <input type="checkbox" id="stock-filter"
-                        onchange="filterPerfumes(document.getElementById('decant-filter').value)" checked>
-                </div>
-                <div class="new-filter">
-                    <label for="new-filter">Mostrar solo decants nuevos:</label>
-                    <input type="checkbox" id="new-filter"
-                        onchange="filterPerfumes(document.getElementById('decant-filter').value)">
-                </div>
-                <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px;">
-                    <p>Perdón pariente... No tenemos decants que coincidan con tu búsqueda :(</p>
-                </div>
-                <!-- Controles de paginación (añadir dentro de .title, debajo de tus filtros) -->
-                <div class="pagination-controls">
-                    <div class="page-size">
-                        <label for="page-size-input">Tarjetas por página:</label>
-                        <input id="page-size-input" type="number" min="1" step="1" value="20">
-                    </div>
+            </div>
+            <figure>
+                <img src="imagenes/decant.png" alt="Decants de perfumes listos para viajar.">
+            </figure>
+        </section>
 
-                    <div class="pager">
-                        <button id="page-prev" type="button" aria-label="Página anterior">&laquo;</button>
-                        <span id="page-status" aria-live="polite">Página 1 de 1</span>
-                        <button id="page-next" type="button" aria-label="Página siguiente">&raquo;</button>
+        <section id="catalogo" class="catalog-section">
+            <div class="catalog-intro">
+                <div class="section-heading">
+                    <span class="eyebrow">Selección flexible</span>
+                    <h2>Los favoritos en formatos de 5, 10 y 15 ml</h2>
+                    <p>Ideal para rotar aromas según la ocasión, regalar experiencias olfativas o probar antes de invertir en el frasco completo.</p>
+                </div>
+                <p class="collection-note">Preparamos cada decant bajo pedido con atomizadores seguros y envíos a todo Bolivia.</p>
+            </div>
+            <div class="catalog-controls">
+                <div class="search-field">
+                    <label for="decant-search">Buscar decants</label>
+                    <input type="text" id="decant-search" placeholder="Introduce nombre, nota o casa">
+                </div>
+                <div class="select-row">
+                    <div class="select-field">
+                        <label for="decant-filter">Filtrar por estilo</label>
+                        <select id="decant-filter">
+                            <option value="all">Todos los decants</option>
+                            <option value="hombre">Decants de hombre</option>
+                            <option value="mujer">Decants de mujer</option>
+                            <option value="unisex">Decants unisex</option>
+                            <option value="nicho">Decants nicho</option>
+                            <option value="arabes">Decants árabes</option>
+                        </select>
+                    </div>
+                    <div class="select-field">
+                        <label for="decant-brand">Marca</label>
+                        <select id="decant-brand">
+                            <option value="all">Todas las marcas</option>
+                        </select>
                     </div>
                 </div>
-                <div class="perfume-grid">
+                <div class="toggle-group">
+                    <label class="toggle">
+                        <input type="checkbox" id="stock-filter" checked>
+                        <span>Ocultar decants fuera de stock</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="new-filter">
+                        <span>Mostrar solo decants nuevos</span>
+                    </label>
+                </div>
+            </div>
+            <div class="pagination-controls" id="pagination-top">
+                <div class="page-size">
+                    <label for="page-size-input">Tarjetas por página</label>
+                    <input id="page-size-input" type="number" min="1" step="1" value="20">
+                </div>
+
+                <div class="pager">
+                    <button id="page-prev" type="button" aria-label="Página anterior">&laquo;</button>
+                    <span id="page-status" aria-live="polite">Página 1 de 1</span>
+                    <button id="page-next" type="button" aria-label="Página siguiente">&raquo;</button>
+                </div>
+            </div>
+            <div id="no-results-message" class="empty-state" aria-live="polite">
+                <p>Perdón pariente... No tenemos decants que coincidan con tu búsqueda :(</p>
+            </div>
+            <div class="fragrance-grid perfume-grid" id="decant-grid">
                     <div class="decant" data-name="Angel's Share By Kilian" data-tags="hombre mujer unisex nicho">
                         <img src="imagenes\fotos-decants\hombre\ANGELS SHARE.jpg" alt="Angel's Share" loading="lazy"
                             decoding="async">
@@ -2266,7 +2771,7 @@
                 <!-- Controles de paginación (parte inferior del catálogo) -->
                 <div class="pagination-controls" id="pagination-bottom">
                     <div class="page-size">
-                        <label for="page-size-input-bottom">Tarjetas por página:</label>
+                        <label for="page-size-input-bottom">Tarjetas por página</label>
                         <input id="page-size-input-bottom" type="number" min="1" step="1" value="20">
                     </div>
 
@@ -2276,7 +2781,6 @@
                         <button id="page-next-bottom" type="button" aria-label="Página siguiente">&raquo;</button>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
     <script>
@@ -2404,14 +2908,16 @@
 
             // ---------- Filtros (única definición) ----------
             function filterPerfumes(filter) {
-                const decantsContainer = document.getElementById('decants');
+                const decantsContainer = document.getElementById('catalogo');
                 const stockEl = document.getElementById('stock-filter');
                 const newEl = document.getElementById('new-filter');
+                const brandEl = document.getElementById('decant-brand');
                 const search = document.getElementById('decant-search');
                 const noMsg = document.getElementById('no-results-message');
 
                 const stockFilter = !!(stockEl && stockEl.checked);
                 const newFilter = !!(newEl && newEl.checked);
+                const brandFilter = (brandEl && brandEl.value) || 'all';
                 const searchQuery = (search && search.value || '').toLowerCase();
                 const currentTag = filter || (document.getElementById('decant-filter')?.value || 'all');
 
@@ -2426,9 +2932,17 @@
                         const isNew = card.querySelector('.etiqueta.novedad') !== null;
                         const tags = (card.getAttribute('data-tags') || '');
                         const name = (card.getAttribute('data-name') || '').toLowerCase();
+                        let brand = card.dataset.brand;
+                        if (!brand) {
+                            const brandText = card.querySelector('h3 strong')?.textContent || '';
+                            brand = brandText.trim().toLowerCase();
+                            if (brand) card.dataset.brand = brand;
+                        }
 
-                        const matchesFilter = currentTag === 'all' || tags.includes(currentTag);
-                        const shouldShow = matchesFilter &&
+                        const matchesCategory = currentTag === 'all' || tags.includes(currentTag);
+                        const matchesBrand = brandFilter === 'all' || brand === brandFilter;
+                        const shouldShow = matchesCategory &&
+                            matchesBrand &&
                             (!stockFilter || !isOutOfStock) &&
                             (!newFilter || isNew) &&
                             (searchQuery === '' || name.includes(searchQuery));
@@ -2453,7 +2967,7 @@
                 try { new LazyImages().init(); } catch (_) { }
 
                 // Delegación: click en tarjeta => WhatsApp
-                const gridContainer = document.querySelector('.perfume-grid, .decant-grid');
+                const gridContainer = document.querySelector('.perfume-grid') || document.querySelector('.decant-grid');
                 if (gridContainer) {
                     gridContainer.addEventListener('click', (e) => {
                         const card = e.target.closest('.decant');
@@ -2467,9 +2981,41 @@
                     });
                 }
 
+                const cards = Array.from(document.querySelectorAll('.decant'));
+                const brandSelect = document.getElementById('decant-brand');
+                const categorySelect = document.getElementById('decant-filter');
+                const searchInput = document.getElementById('decant-search');
+                if (brandSelect && cards.length) {
+                    const brandMap = new Map();
+                    cards.forEach(card => {
+                        const brandText = card.querySelector('h3 strong')?.textContent || '';
+                        const display = brandText.trim();
+                        if (!display) return;
+                        const slug = display.toLowerCase();
+                        card.dataset.brand = slug;
+                        if (!brandMap.has(slug)) {
+                            brandMap.set(slug, display);
+                        }
+                    });
+
+                    const brandEntries = Array.from(brandMap.entries()).sort((a, b) =>
+                        a[1].localeCompare(b[1], 'es', { sensitivity: 'base' })
+                    );
+
+                    brandEntries.forEach(([slug, label]) => {
+                        const option = document.createElement('option');
+                        option.value = slug;
+                        option.textContent = label;
+                        brandSelect.appendChild(option);
+                    });
+                }
+
                 // Listeners de checkboxes (una sola vez)
                 document.getElementById('stock-filter')?.addEventListener('change', () => filterPerfumes());
                 document.getElementById('new-filter')?.addEventListener('change', () => filterPerfumes());
+                brandSelect?.addEventListener('change', () => filterPerfumes());
+                categorySelect?.addEventListener('change', () => filterPerfumes(categorySelect.value));
+                searchInput?.addEventListener('input', () => filterPerfumes());
 
                 // Paginador con controles arriba y abajo (si existen)
                 const grid = document.querySelector('.perfume-grid') || document.querySelector('.decant-grid');
@@ -2517,14 +3063,16 @@
 
         // ---- Filtros (definición ÚNICA) ----
         function filterPerfumes(filter) {
-            const decantsContainer = document.getElementById('decants');
+            const decantsContainer = document.getElementById('catalogo');
             const stockEl = document.getElementById('stock-filter');
             const newEl = document.getElementById('new-filter');
+            const brandEl = document.getElementById('decant-brand');
             const search = document.getElementById('decant-search');
             const noMsg = document.getElementById('no-results-message');
 
             const stockFilter = !!(stockEl && stockEl.checked);
             const newFilter = !!(newEl && newEl.checked);
+            const brandFilter = (brandEl && brandEl.value) || 'all';
             const searchQuery = (search && search.value || '').toLowerCase();
             const currentTag = filter || (document.getElementById('decant-filter')?.value || 'all');
 
@@ -2539,9 +3087,17 @@
                     const isNew = card.querySelector('.etiqueta.novedad') !== null;
                     const tags = (card.getAttribute('data-tags') || '');
                     const name = (card.getAttribute('data-name') || '').toLowerCase();
+                    let brand = card.dataset.brand;
+                    if (!brand) {
+                        const brandText = card.querySelector('h3 strong')?.textContent || '';
+                        brand = brandText.trim().toLowerCase();
+                        if (brand) card.dataset.brand = brand;
+                    }
 
-                    const matchesFilter = currentTag === 'all' || tags.includes(currentTag);
-                    const shouldShow = matchesFilter &&
+                    const matchesCategory = currentTag === 'all' || tags.includes(currentTag);
+                    const matchesBrand = brandFilter === 'all' || brand === brandFilter;
+                    const shouldShow = matchesCategory &&
+                        matchesBrand &&
                         (!stockFilter || !isOutOfStock) &&
                         (!newFilter || isNew) &&
                         (searchQuery === '' || name.includes(searchQuery));
@@ -2558,7 +3114,7 @@
                 decantsContainer && decantsContainer.classList.remove('fade-out');
             }, 500); // coincide con tu transición CSS
         }
-        window.filterPerfumes = filterPerfumes; // tu HTML la usa en oninput/onchange
+        window.filterPerfumes = filterPerfumes; // se expone globalmente para integraciones compartidas
     </script>
     <div data-include="footer.html">
     </div>
