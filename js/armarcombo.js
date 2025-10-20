@@ -6,70 +6,77 @@ document.addEventListener('DOMContentLoaded', () => {
     const whatsappLink = document.getElementById('whatsapp-link');
 
     const SKUS_PERMITIDOS = [
-        "PERF-046",
-        "PERF-047",
-        "PERF-050",
-        "PERF-051",
+        "PERF-019",
+        "PERF-094",
+        "PERF-029",
         "PERF-052",
-        "PERF-054",
-        "PERF-055",
-        "PERF-056",
-        "PERF-058",
-        "PERF-060",
+        "PERF-053",
+        "PERF-076",
+        "PERF-061",
         "PERF-062",
-        "PERF-063",
-        "PERF-064",
-        "PERF-067",
-        "PERF-074",
+        "PERF-051",
         "PERF-075",
-        "PERF-078",
-        "PERF-080",
-
+        "PERF-050",
+        "PERF-022",
+        "PERF-104",
+        "PERF-101",
+        "PERF-100",
+        "PERF-065",
+        "PERF-018",
+        "PERF-017",
+        "PERF-096",
+        "PERF-045",
+        "PERF-037",
+        "PERF-039"
     ];
 
-    const TAMANOS_PERMITIDOS = {
-        "PERF-046": [150],
-        "PERF-047": [100, 150],
-        "PERF-050": [100],
-        "PERF-051": [100],
-        "PERF-052": [100],
-        "PERF-054": [100],
-        "PERF-055": [100],
-        "PERF-056": [100],
-        "PERF-058": [100],
-        "PERF-060": [100],
-        "PERF-062": [105],
-        "PERF-063": [100],
-        "PERF-064": [100],
-        "PERF-067": [100],
-        "PERF-074": [100],
-        "PERF-075": [100],
-        "PERF-078": [100],
-        "PERF-080": [100],
+    const NOMBRES_PERMITIDOS = {
+        "PERF-045": ["Kenzo Homme Intense"],
+        "PERF-050": ["Lattafa Asad"]
+    };
 
+    const TAMANOS_PERMITIDOS = {
+        "PERF-019": [125],
+        "PERF-094": [125],
+        "PERF-029": [100],
+        "PERF-052": [100],
+        "PERF-076": [100],
+        "PERF-051": [100],
+        "PERF-075": [100],
+        "PERF-050": [100],
+        "PERF-022": [100],
+        "PERF-104": [100],
+        "PERF-101": [100],
+        "PERF-100": [100],
+        "PERF-065": [100],
+        "PERF-018": [100],
+        "PERF-017": [100],
+        "PERF-096": [110],
+        "PERF-045": [110],
+        "PERF-037": [100],
+        "PERF-039": [100, 200]
     };
 
     const PRECIOS_COMBOS = {
-        "PERF-046-150": 203.00,
-        "PERF-047-100": 138.00,
-        "PERF-047-150": 203.00,
+        "PERF-019-125": 200.00,
+        "PERF-094-125": 187.00,
+        "PERF-029-100": 113.00,
+        "PERF-052-100": 81.00,
+        "PERF-076-100": 88.00,
+        "PERF-051-100": 79.00,
+        "PERF-075-100": 81.00,
         "PERF-050-100": 81.00,
-        "PERF-051-100": 81.00,
-        "PERF-052-100": 67.00,
-        "PERF-054-100": 62.00,
-        "PERF-055-100": 81.00,
-        "PERF-056-100": 56.00,
-        "PERF-058-100": 71.00,
-        "PERF-060-100": 104.00,
-        "PERF-062-105": 110.00,
-        "PERF-063-100": 95.00,
-        "PERF-064-100": 99.00,
-        "PERF-067-100": 85.00,
-        "PERF-074-100": 74.00,
-        "PERF-075-100": 75.00,
-        "PERF-078-100": 60.00,
-        "PERF-080-100": 80.00,
-        
+        "PERF-022-100": 159.00,
+        "PERF-104-110": 184.00,
+        "PERF-101-100": 106.00,
+        "PERF-100-100": 105.00,
+        "PERF-065-100": 91.00,
+        "PERF-018-100": 167.00,
+        "PERF-017-100": 161.00,
+        "PERF-096-110": 130.00,
+        "PERF-045-110": 127.00,
+        "PERF-037-100": 149.00,
+        "PERF-039-100": 140.00,
     };
 
     let productos = {
@@ -101,11 +108,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return Array.from(doc.querySelectorAll('.decant'))
                 .filter(elemento => {
                     const tieneStock = !elemento.querySelector('.etiquetas .fuera-de-stock');
+                    if (!tieneStock) {
+                        return false;
+                    }
+
                     if (tipo === 'perfumes') {
                         const skuDiv = elemento.dataset.sku;
-                        return tieneStock && SKUS_PERMITIDOS.includes(skuDiv);
+                        if (!SKUS_PERMITIDOS.includes(skuDiv)) {
+                            return false;
+                        }
+
+                        const nombresPermitidos = NOMBRES_PERMITIDOS[skuDiv];
+                        if (nombresPermitidos && !nombresPermitidos.includes(elemento.dataset.name)) {
+                            return false;
+                        }
                     }
-                    return tieneStock;
+
+                    return true;
                 })
                 .map(elemento => {
                     const esPerfume = tipo === 'perfumes';
@@ -405,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     const precioCombo = PRECIOS_COMBOS[precioData.sku];
 
-                    if (precioCombo) {
+                    if (typeof precioCombo === 'number') {
                         originalTotal += precioData.precio;
                         total += precioCombo;
                         productosSeleccionados++;
