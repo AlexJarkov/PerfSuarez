@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>Perfumería Suárez</title>
+    <title>Perfumería Suárez | Catálogo</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
@@ -12,603 +13,506 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
-    <meta property="og:title" content="Perfumería Suárez">
-    <meta property="og:description" content="Descubre nuestras experiencias olfativas curadas.">
-    <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
-    <meta property="og:url" content="https://perfumeriasuarez.com">
-    <meta property="og:type" content="website">
     <style>
         :root {
-            --ink: #111111;
-            --muted-ink: #5a5a5a;
-            --surface: #f6f7f8;
-            --surface-strong: #ffffff;
-            --accent: #1a7040;
-            --accent-dark: #0f4f2b;
-            --divider: rgba(17, 17, 17, 0.08);
+            color-scheme: light;
         }
 
-        body.index-home {
-            background: var(--surface);
+        body.swipe-hub {
+            margin: 0;
             color: var(--ink);
-        }
-
-        body.index-home main.page-shell {
-            align-items: stretch;
-            gap: 72px;
-            margin-bottom: 120px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, rgba(26, 112, 64, 0.12), rgba(255, 255, 255, 0.9));
-            border-radius: 32px;
-            padding: 64px;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 56px;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
             overflow: hidden;
-            position: relative;
+            background: var(--surface);
+            width: 100%;
+            max-width: 100%;
         }
 
-        .hero::after {
-            content: "";
+        .swipe-container {
+            width: 100vw;
+            max-width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            place-items: stretch;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swipe-stage {
+            width: 100vw;
+            max-width: 100vw;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            background: var(--surface);
+            display: grid;
+            place-items: stretch;
+        }
+
+        .swipe-track {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+            touch-action: pan-y;
+        }
+
+        .swipe-track.is-dragging {
+            transition: none !important;
+        }
+
+        .swipe-panel {
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+            max-height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            background: #fff;
+        }
+
+        .swipe-panel iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #fff;
+        }
+
+        .panel-loading {
             position: absolute;
-            inset: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            border-radius: 24px;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(17, 17, 17, 0.5);
             pointer-events: none;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .eyebrow {
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            font-size: 0.78rem;
-            color: var(--accent);
-        }
-
-        h1 {
-            font-size: clamp(2.4rem, 4vw, 3.4rem);
-            margin: 0;
-            line-height: 1.05;
-        }
-
-        .hero-lead {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: var(--muted-ink);
-            margin: 0;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .btn {
+        .swipe-progress {
+            position: fixed;
+            left: 50%;
+            bottom: clamp(18px, 4vw, 32px);
+            transform: translateX(-50%);
             display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 28px;
+            gap: 6px;
+            padding: 6px 14px;
             border-radius: 999px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(17, 17, 17, 0.1);
+            box-shadow: 0 12px 30px rgba(17, 17, 17, 0.12);
+            z-index: 20;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
+        .swipe-progress span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(17, 17, 17, 0.2);
         }
 
-        .btn-primary {
+        .swipe-progress span.is-active {
             background: var(--ink);
-            color: #fff;
-            box-shadow: 0 15px 35px rgba(20, 20, 20, 0.18);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 20px 45px rgba(20, 20, 20, 0.22);
-        }
-
-        .btn-outline {
-            border: 1px solid var(--ink);
-            color: var(--ink);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--ink);
-            color: #fff;
-        }
-
-        .btn-light {
-            background: #fff;
-            color: var(--ink);
-            box-shadow: none;
-        }
-
-        .btn-light:hover {
-            background: rgba(255, 255, 255, 0.88);
-        }
-
-        .hero-note {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.85rem;
-            color: var(--muted-ink);
-        }
-
-        .hero-note a {
-            color: var(--accent);
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .hero-note a:hover {
-            text-decoration: underline;
-        }
-
-        .hero-visual {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .hero-frame {
-            background: var(--surface-strong);
-            border-radius: 28px;
-            box-shadow: 0 25px 55px rgba(17, 17, 17, 0.18);
-            padding: 24px;
-            margin: 0;
-        }
-
-        .hero-frame img {
-            border-radius: 20px;
-            width: 100%;
-            object-fit: cover;
-            max-height: 420px;
-            transition: opacity 0.5s ease;
-        }
-
-        .hero-frame figcaption {
-            margin-top: 16px;
-            font-size: 0.8rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--muted-ink);
-        }
-
-        .section-heading {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(1.8rem, 3vw, 2.4rem);
-            margin: 0;
-        }
-
-        .section-heading p {
-            margin: 0;
-            color: var(--muted-ink);
-            max-width: 520px;
-            line-height: 1.6;
-        }
-
-        .curations {
-            display: grid;
-            gap: 36px;
-        }
-
-        .curations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
-        }
-
-        .curation-card {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            padding: 28px;
-            background: var(--surface-strong);
-            border-radius: 24px;
-            border: 1px solid var(--divider);
-            text-decoration: none;
-            color: inherit;
-            min-height: 220px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-        }
-
-        .curation-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(145deg, rgba(26, 112, 64, 0.16), transparent 60%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .curation-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 40px rgba(17, 17, 17, 0.12);
-        }
-
-        .curation-card:hover::before {
-            opacity: 1;
-        }
-
-        .card-tag {
-            font-size: 0.72rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--accent-dark);
-        }
-
-        .curation-card h3 {
-            margin: 0;
-            font-size: 1.35rem;
-        }
-
-        .curation-card p {
-            margin: 0;
-            color: var(--muted-ink);
-            line-height: 1.6;
-        }
-
-        .card-link {
-            margin-top: auto;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            color: var(--accent);
-        }
-
-        .signature {
-            background: radial-gradient(circle at top right, rgba(20, 20, 20, 0.08), transparent 55%), var(--surface-strong);
-            border-radius: 32px;
-            padding: 48px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 28px;
-            border: 1px solid var(--divider);
-        }
-
-        .signature article {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .signature h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        .signature p {
-            margin: 0;
-            color: var(--muted-ink);
-            line-height: 1.7;
-        }
-
-        .signature a {
-            color: var(--accent-dark);
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .signature a:hover {
-            text-decoration: underline;
-        }
-
-        .journal {
-            display: grid;
-            gap: 32px;
-        }
-
-        .journal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .journal-entry {
-            background: var(--surface-strong);
-            border-radius: 24px;
-            border: 1px solid var(--divider);
-            padding: 28px;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .journal-entry span {
-            font-size: 0.75rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--accent);
-        }
-
-        .journal-entry h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        .journal-entry p {
-            margin: 0;
-            color: var(--muted-ink);
-            line-height: 1.6;
-        }
-
-        .concierge {
-            background: var(--ink);
-            color: #fff;
-            border-radius: 28px;
-            padding: 48px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 32px;
-        }
-
-        .concierge .eyebrow {
-            color: rgba(255, 255, 255, 0.72);
-        }
-
-        .concierge h2 {
-            margin: 12px 0 18px;
-        }
-
-        .concierge p {
-            margin: 0;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.72);
-        }
-
-        .concierge-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-self: center;
-            justify-content: flex-start;
-        }
-
-        .concierge .btn-outline {
-            border-color: rgba(255, 255, 255, 0.4);
-            color: #fff;
-        }
-
-        .concierge .btn-outline:hover {
-            background: #fff;
-            color: var(--ink);
         }
 
         @media (max-width: 900px) {
-            .hero {
-                padding: 48px 32px;
-                grid-template-columns: 1fr;
-            }
-
-            .hero::after {
-                inset: 16px;
-            }
-
-            .hero-visual {
-                justify-content: center;
-            }
-
-            .hero-frame {
-                padding: 18px;
+            .swipe-stage {
+                height: 100vh;
             }
         }
 
-        @media (max-width: 640px) {
-            body.index-home main {
-                gap: 56px;
-            }
-
-            .hero {
-                padding: 36px 24px;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .signature,
-            .concierge {
-                padding: 36px;
+        @media (max-width: 768px) {
+            .swipe-progress {
+                display: none;
             }
         }
     </style>
 </head>
-<body class="index-home">
+
+<body class="swipe-hub">
     <div data-include="header.html"></div>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <span class="eyebrow">Perfumería Suárez</span>
-                <h1>Sólo cambas que huelan rico.</h1>
-                <p class="hero-lead">Seleccionamos piezas olfativas memorables para quienes buscan sofisticación auténtica. Déjate guiar por nuestro equipo y descubre tu nueva firma.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="perfumes.html">Explorar perfumes</a>
-                    <a class="btn btn-outline" href="decants.html">Descubrir decants</a>
-                </div>
-                <div class="hero-note">
-                    Consultoría personalizada disponible.
-                    <a href="https://wa.link/wfehwk">Agendar asesoramiento</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <figure class="hero-frame">
-                    <img id="hero-img" src="imagenes/image.webp" alt="Colección de frascos de perfume dispuestos sobre mármol.">
-                    <figcaption id="hero-caption">Curaduría temporada 2024</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section class="curations">
-            <div class="section-heading">
-                <span class="eyebrow">Colecciones destacadas</span>
-                <h2>Encuentra tu próxima firma</h2>
-                <p>Nuestro catálogo combina best sellers internacionales con rarezas cuidadosamente importadas. Explora por categoría y sumérgete en universos olfativos distintos.</p>
-            </div>
-            <div class="curations-grid">
-                <a class="curation-card" href="perfumes.html">
-                    <span class="card-tag">signature</span>
-                    <h3>Perfumes de autor</h3>
-                    <p>Fragancias icónicas y lanzamientos recientes listos para acompañarte a diario.</p>
-                    <span class="card-link">Ver catálogo completo →</span>
-                </a>
-                <a class="curation-card" href="mysterybox.html">
-                    <span class="card-tag">experiencia</span>
-                    <h3>Mystery Box</h3>
-                    <p>Cinco decants seleccionados a mano según las estaciones y tus preferencias.</p>
-                    <span class="card-link">Descubrir experiencia →</span>
-                </a>
-<!--                <a class="curation-card" href="velas.html">-->
-<!--                    <span class="card-tag">ambiente</span>-->
-<!--                    <h3>Velas y hogar</h3>-->
-<!--                    <p>Notas cálidas y envolventes que transforman cualquier espacio en un refugio.</p>-->
-<!--                    <span class="card-link">Encender atmósfera →</span>-->
-<!--                </a>-->
-                <a class="curation-card" href="armarcombo.html">
-                    <span class="card-tag">exclusivo</span>
-                    <h3>Combos a medida</h3>
-                    <p>Sets curados que combinan fragancia, cuidado personal y detalles de obsequio.</p>
-                    <span class="card-link">Armar mi set →</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="signature">
-            <article>
-                <span class="eyebrow">Atención dedicada</span>
-                <h3>Personal shoppers olfativos</h3>
-                <p>Cada recomendación nace de escuchar tu estilo de vida, ocasiones y carácter. Te guiamos para que cada acorde cuente tu historia.</p>
-                <a href="https://wa.link/hqv4bq">Hablar con el equipo</a>
-            </article>
-            <article>
-                <span class="eyebrow">Entregas ágiles</span>
-                <h3>Envíos a todo Bolivia</h3>
-                <p>Gestionamos logística segura con seguimiento en tiempo real y empaques listos para regalar.</p>
-                <a href="contacto.html">Consultar cobertura</a>
-            </article>
-            <article>
-                <span class="eyebrow">Detalles de lujo</span>
-                <h3>Obsequios y envoltorios</h3>
-                <p>Incluimos muestras sorpresa y envoltura premium para que cada entrega sea un ritual.</p>
-                <a href="decants.html">Ver nuestras muestras</a>
-            </article>
-        </section>
-
-        <section class="journal">
-            <div class="section-heading">
-                <span class="eyebrow">Notas de la casa</span>
-                <h2>Historias que inspiran</h2>
-            </div>
-            <div class="journal-grid">
-                <article class="journal-entry">
-                    <span>guía sensorial</span>
-                    <h3>Firmas amaderadas para noches invernales</h3>
-                    <p>Descubre mezclas de cedro, incienso y ámbar pensadas para dejar un aura envolvente. Pregúntanos por las recomendaciones disponibles hoy mismo.</p>
-                </article>
-                <article class="journal-entry">
-                    <span>editorial</span>
-                    <h3>Cómo elegir tu primera fragancia de nicho</h3>
-                    <p>Te acompañamos en la búsqueda de un aroma único con pruebas guiadas y decants de cortesía para decidir con calma.</p>
-                </article>
-                <article class="journal-entry">
-                    <span>inside suárez</span>
-                    <h3>Detrás de la curaduría</h3>
-                    <p>Trabajamos con casas perfumistas independientes y distribuidores oficiales para garantizar autenticidad en cada frasco.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="concierge">
-            <div>
-                <span class="eyebrow">Servicio concierge</span>
-                <h2>¿Listo para sentirlo en tu piel?</h2>
-                <p>Coordinamos pruebas, apartamos lanzamientos y diseñamos regalos corporativos con identidad olfativa. Escríbenos y coordinemos el siguiente paso.</p>
-            </div>
-            <div class="concierge-actions">
-                <a class="btn btn-light" href="https://wa.link/hqv4bq">Realizar pedido inmediato</a>
-                <a class="btn btn-outline" href="mysterybox.html">Probar Mystery Box</a>
-            </div>
-        </section>
+    <main class="swipe-container">
+        <div class="swipe-stage" role="region" aria-label="Catálogo deslizable">
+        <div class="swipe-track" id="swipe-track">
+            <section class="swipe-panel" data-src="catalogo.html" aria-label="Inicio">
+                <iframe title="Inicio" loading="lazy"></iframe>
+                <div class="panel-loading">Cargando Inicio…</div>
+            </section>
+            <section class="swipe-panel" data-src="perfumes.html" aria-label="Perfumes">
+                <iframe title="Perfumes" loading="lazy"></iframe>
+                <div class="panel-loading">Cargando Perfumes…</div>
+            </section>
+            <section class="swipe-panel" data-src="decants.html" aria-label="Decants">
+                <iframe title="Decants" loading="lazy"></iframe>
+                <div class="panel-loading">Cargando Decants…</div>
+            </section>
+            <section class="swipe-panel" data-src="armarcombo.html" aria-label="Arma tu combo">
+                <iframe title="Arma tu combo" loading="lazy"></iframe>
+                <div class="panel-loading">Cargando Combos…</div>
+            </section>
+            <section class="swipe-panel" data-src="mysterybox.html" aria-label="Mystery Box">
+                <iframe title="Mystery Box" loading="lazy"></iframe>
+                <div class="panel-loading">Cargando Mystery Box…</div>
+            </section>
+        </div>
+        <div class="swipe-progress" aria-hidden="true">
+            <span class="is-active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     </main>
-    <div data-include="footer.html"></div>
-    <script src="js/scripts.js"></script>
-    <script src="js/include.js"></script>
+    <div data-include="catalog-nav.html"></div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const slides = [
-                {
-                    name: 'Stronger With You Intensely',
-                    src: 'imagenes/fotos-catalogo/armani/SWY INTENSELY.webp',
-                    alt: 'Emporio Armani Stronger With You Intensely'
-                },
-                {
-                    name: 'Xerjoff Erba Pura',
-                    src: 'imagenes/fotos-catalogo/xerjoff/ERBA PURA.webp',
-                    alt: 'Xerjoff Erba Pura'
-                },
-                {
-                    name: 'Lattafa Khamrah',
-                    src: 'imagenes/fotos-catalogo/arabes/KHAMRAH-LATTAFA-.jpg',
-                    alt: 'Lattafa Khamrah'
-                },
-                {
-                    name: 'Jean Paul Gaultier Le Male Elixir',
-                    src: 'imagenes/fotos-catalogo/jpg/LE MALE ELIXIR.webp',
-                    alt: 'Jean Paul Gaultier Le Male Elixir'
+            const stage = document.querySelector('.swipe-stage');
+            const track = document.getElementById('swipe-track');
+            if (!stage || !track) return;
+
+            const panels = Array.from(track.querySelectorAll('.swipe-panel'));
+            const dots = Array.from(document.querySelectorAll('.swipe-progress span'));
+            const panelPaths = panels.map(panel => normalizePath(panel.dataset.src));
+            const dragState = { active: false, pending: false, startX: 0, startY: 0, prevTranslate: 0, currentTranslate: 0, pointerId: null };
+            let navController = null;
+            let headerLinks = [];
+            let currentIndex = 0;
+            const pointerShouldHandle = (event) => !event.pointerType || event.pointerType !== 'touch';
+            const horizontalDeadZone = 32;
+            const verticalAbortThreshold = 18;
+
+            function normalizePath(href) {
+                try {
+                    const url = new URL(href, window.location.href);
+                    let path = url.pathname.replace(/\/+/g, '/');
+                    if (!path.startsWith('/')) path = `/${path}`;
+                    if (path === '/' || path === '') path = '/index.html';
+                    if (path.endsWith('/')) path = `${path}index.html`;
+                    return path;
+                } catch (error) {
+                    return href;
                 }
-            ];
-
-            const img = document.getElementById('hero-img');
-            const caption = document.getElementById('hero-caption');
-            if (!img || !caption) return;
-
-            let index = 0;
-
-            function show(i) {
-                const slide = slides[i % slides.length];
-                // fade out
-                img.style.opacity = '0';
-                setTimeout(() => {
-                    img.src = slide.src;
-                    img.alt = slide.alt;
-                    caption.textContent = slide.name;
-                    // fade in
-                    img.style.opacity = '1';
-                }, 250);
             }
 
-            // Immediately show first requested fragrance instead of placeholder text
-            show(index);
-            index = 1;
+            const stageWidth = () => stage.getBoundingClientRect().width;
+            const applyTranslate = (value) => track.style.transform = `translateX(${value}px)`;
 
-            // Auto-advance every 5 seconds
-            setInterval(() => {
-                show(index);
-                index = (index + 1) % slides.length;
-            }, 5000);
+            const updateDots = () => {
+                dots.forEach((dot, idx) => dot.classList.toggle('is-active', idx === currentIndex));
+            };
+
+            const setHomeChrome = (isHome) => {
+                document.body.classList.toggle('is-home-panel', isHome);
+            };
+
+            const loadPanel = (index) => {
+                const panel = panels[index];
+                if (!panel) return;
+                const iframe = panel.querySelector('iframe');
+                if (!iframe || iframe.dataset.loaded === 'true') return;
+                iframe.src = panel.dataset.src;
+                iframe.dataset.loaded = 'true';
+                iframe.addEventListener('load', () => {
+                    panel.querySelector('.panel-loading')?.remove();
+                    bindFrameGestures(iframe);
+                }, { once: true });
+            };
+
+            const syncHeaderLinks = (href) => {
+                if (!headerLinks.length) return;
+                const normalized = normalizePath(href);
+                headerLinks.forEach(link => {
+                    const match = normalizePath(link.getAttribute('href')) === normalized;
+                    link.classList.toggle('is-active', match);
+                    if (match) {
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            };
+
+            const snapToIndex = (instant = false) => {
+                const target = -currentIndex * stageWidth();
+                if (instant) {
+                    track.classList.add('is-dragging');
+                    applyTranslate(target);
+                    requestAnimationFrame(() => track.classList.remove('is-dragging'));
+                } else {
+                    applyTranslate(target);
+                }
+                dragState.prevTranslate = target;
+                dragState.currentTranslate = target;
+            };
+
+            const updateActive = (index) => {
+                currentIndex = Math.max(0, Math.min(index, panels.length - 1));
+                snapToIndex();
+                updateDots();
+                loadPanel(currentIndex);
+                loadPanel(currentIndex + 1);
+                loadPanel(currentIndex - 1);
+                const activeSrc = panels[currentIndex]?.dataset.src;
+                navController?.setActiveByHref(activeSrc);
+                syncHeaderLinks(activeSrc);
+                setHomeChrome(currentIndex === 0);
+            };
+
+            const handleSwipe = (direction) => {
+                if (direction === 'next') {
+                    updateActive(currentIndex + 1);
+                } else if (direction === 'prev') {
+                    updateActive(currentIndex - 1);
+                }
+            };
+
+            const findIndexByHref = (href) => panelPaths.indexOf(normalizePath(href));
+
+            const goToHref = (href) => {
+                const idx = findIndexByHref(href);
+                if (idx >= 0) {
+                    updateActive(idx);
+                    return true;
+                }
+                return false;
+            };
+
+            window.catalogShellNavigate = (href) => {
+                if (!href) return false;
+                return goToHref(href);
+            };
+
+            const startDrag = (x, y = 0, pointerId = null, immediate = false) => {
+                if (dragState.active || dragState.pending) return;
+                dragState.pointerId = pointerId;
+                dragState.startX = x;
+                dragState.startY = y;
+                dragState.prevTranslate = -currentIndex * stageWidth();
+                dragState.currentTranslate = dragState.prevTranslate;
+                dragState.pending = !immediate;
+                dragState.active = immediate;
+                if (immediate) {
+                    track.classList.add('is-dragging');
+                }
+            };
+
+            const cancelPendingDrag = () => {
+                dragState.pending = false;
+                dragState.pointerId = null;
+            };
+
+            const activateDrag = () => {
+                if (dragState.active) return;
+                dragState.active = true;
+                dragState.pending = false;
+                track.classList.add('is-dragging');
+            };
+
+            const moveDrag = (x, y = null, pointerId = null) => {
+                if (!dragState.active && !dragState.pending) return;
+                if (dragState.pointerId !== null && pointerId !== null && pointerId !== dragState.pointerId) return;
+
+                if (dragState.pending) {
+                    if (y === null) {
+                        activateDrag();
+                    } else {
+                        const deltaX = x - dragState.startX;
+                        const deltaY = y - dragState.startY;
+                        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > verticalAbortThreshold) {
+                            cancelPendingDrag();
+                            return;
+                        }
+                        if (Math.abs(deltaX) >= horizontalDeadZone) {
+                            activateDrag();
+                        } else {
+                            return;
+                        }
+                    }
+                }
+
+                if (!dragState.active) return;
+                dragState.currentTranslate = dragState.prevTranslate + (x - dragState.startX);
+                applyTranslate(dragState.currentTranslate);
+            };
+
+            const endDrag = (pointerId = null) => {
+                if (!dragState.active && !dragState.pending) return;
+                if (dragState.pointerId !== null && pointerId !== null && pointerId !== dragState.pointerId) return;
+
+                if (dragState.pending && !dragState.active) {
+                    cancelPendingDrag();
+                    return;
+                }
+
+                dragState.active = false;
+                dragState.pending = false;
+                dragState.pointerId = null;
+                track.classList.remove('is-dragging');
+                const moved = dragState.currentTranslate - dragState.prevTranslate;
+                const snapThreshold = Math.min(stageWidth() * 0.18, 260);
+                if (Math.abs(moved) > snapThreshold) {
+                    handleSwipe(moved < 0 ? 'next' : 'prev');
+                } else {
+                    snapToIndex();
+                }
+            };
+
+            const bindFrameGestures = (iframe) => {
+                if (!iframe || iframe.dataset.gestureReady === 'true') return;
+                iframe.dataset.gestureReady = 'true';
+                try {
+                    const doc = iframe.contentWindow?.document;
+                    if (!doc) return;
+                    doc.addEventListener('touchstart', (event) => {
+                        if (event.touches.length !== 1) return;
+                        const touch = event.touches[0];
+                        startDrag(touch.clientX, touch.clientY);
+                    }, { passive: true });
+                    doc.addEventListener('touchmove', (event) => {
+                        if (event.touches.length !== 1) return;
+                        const touch = event.touches[0];
+                        moveDrag(touch.clientX, touch.clientY);
+                    }, { passive: true });
+                    doc.addEventListener('touchend', endDrag);
+                    doc.addEventListener('touchcancel', endDrag);
+                    doc.addEventListener('pointerdown', (event) => {
+                        if (!pointerShouldHandle(event) || event.button !== 0) return;
+                        startDrag(event.clientX, event.clientY, event.pointerId, true);
+                    });
+                    doc.addEventListener('pointermove', (event) => {
+                        if (!pointerShouldHandle(event)) return;
+                        if (event.buttons === 0) return;
+                        moveDrag(event.clientX, event.clientY, event.pointerId);
+                    });
+                    doc.addEventListener('pointerup', (event) => {
+                        if (!pointerShouldHandle(event)) return;
+                        endDrag(event.pointerId);
+                    });
+                    doc.addEventListener('pointercancel', (event) => {
+                        if (!pointerShouldHandle(event)) return;
+                        endDrag(event.pointerId);
+                    });
+                } catch (error) {
+                    // ignore frames blocked by policies (not expected here)
+                }
+            };
+
+            track.addEventListener('touchstart', (event) => {
+                if (event.touches.length !== 1) return;
+                const touch = event.touches[0];
+                startDrag(touch.clientX, touch.clientY);
+            }, { passive: true });
+
+            track.addEventListener('touchmove', (event) => {
+                if (event.touches.length !== 1) return;
+                const touch = event.touches[0];
+                moveDrag(touch.clientX, touch.clientY);
+            }, { passive: true });
+
+            track.addEventListener('touchend', () => endDrag());
+            track.addEventListener('touchcancel', () => endDrag());
+
+            track.addEventListener('pointerdown', (event) => {
+                if (!pointerShouldHandle(event) || event.button !== 0) return;
+                startDrag(event.clientX, event.clientY, event.pointerId, true);
+                if (track.setPointerCapture) {
+                    try {
+                        track.setPointerCapture(event.pointerId);
+                    } catch (error) {
+                        // ignore capture errors
+                    }
+                }
+                event.preventDefault();
+            });
+
+            track.addEventListener('pointermove', (event) => {
+                if (!pointerShouldHandle(event)) return;
+                if (!dragState.active) return;
+                event.preventDefault();
+                moveDrag(event.clientX, event.clientY, event.pointerId);
+            });
+
+            const releasePointer = (event) => {
+                if (!pointerShouldHandle(event)) return;
+                if (event.type === 'pointerleave' && track.hasPointerCapture && track.hasPointerCapture(event.pointerId)) {
+                    return;
+                }
+                if (track.releasePointerCapture) {
+                    try {
+                        track.releasePointerCapture(event.pointerId);
+                    } catch (error) {
+                        // ignore capture errors
+                    }
+                }
+                endDrag(event.pointerId);
+            };
+
+            track.addEventListener('pointerup', releasePointer);
+            track.addEventListener('pointercancel', releasePointer);
+            track.addEventListener('pointerleave', releasePointer);
+
+            window.addEventListener('resize', () => snapToIndex(true));
+
+            const initDockNav = (controller) => {
+                const dock = document.getElementById('catalog-dock');
+                if (!dock) return;
+                dock.addEventListener('click', (event) => {
+                    const link = event.target.closest('.catalog-dock__link');
+                    if (!link) return;
+                    const href = link.dataset.target || link.getAttribute('href');
+                    if (goToHref(href)) {
+                        event.preventDefault();
+                    }
+                });
+                controller?.setActiveByHref(panels[currentIndex]?.dataset.src);
+            };
+
+            document.addEventListener('catalogNavReady', (event) => {
+                navController = event.detail;
+                initDockNav(navController);
+            }, { once: true });
+
+            if (window.catalogNavController) {
+                navController = window.catalogNavController;
+                initDockNav(navController);
+            }
+
+            const initHeaderNav = () => {
+                const links = Array.from(document.querySelectorAll('.nav-link'));
+                if (!links.length) {
+                    setTimeout(initHeaderNav, 80);
+                    return;
+                }
+                headerLinks = links;
+                links.forEach(link => {
+                    const idx = findIndexByHref(link.getAttribute('href'));
+                    if (idx >= 0) {
+                        link.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            updateActive(idx);
+                        });
+                    }
+                });
+                syncHeaderLinks(panels[currentIndex]?.dataset.src);
+            };
+            initHeaderNav();
+
+            updateActive(0);
         });
     </script>
+    <script src="js/scripts.js"></script>
+    <script src="js/include.js"></script>
 </body>
+
 </html>

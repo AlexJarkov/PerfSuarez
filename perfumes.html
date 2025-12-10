@@ -31,113 +31,11 @@
             padding-block: clamp(48px, 8vw, 104px) 140px;
         }
 
-        .collection-hero {
-            position: relative;
-            background: linear-gradient(145deg, rgba(26, 112, 64, 0.1), rgba(255, 255, 255, 0.94));
-            border-radius: 32px;
-            padding: clamp(36px, 6vw, 68px);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: clamp(32px, 6vw, 56px);
-            overflow: hidden;
-        }
-
-        .collection-hero::after {
-            content: "";
-            position: absolute;
-            inset: clamp(16px, 4vw, 24px);
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            pointer-events: none;
-        }
-
-        .hero-copy {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            gap: clamp(18px, 4vw, 32px);
-        }
-
         .eyebrow {
             text-transform: uppercase;
             letter-spacing: 0.18em;
             font-size: 0.78rem;
             color: var(--accent);
-        }
-
-        .collection-hero h1 {
-            margin: 0;
-            font-size: clamp(2.3rem, 4.2vw, 3.4rem);
-            line-height: 1.05;
-        }
-
-        .lead {
-            margin: 0;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: var(--muted-ink);
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 28px;
-            border-radius: 999px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background: var(--ink);
-            color: #fff;
-            box-shadow: 0 15px 35px rgba(17, 17, 17, 0.2);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 18px 44px rgba(17, 17, 17, 0.26);
-        }
-
-        .btn-outline {
-            border: 1px solid var(--ink);
-            background: transparent;
-            color: var(--ink);
-        }
-
-        .btn-outline:hover {
-            background: var(--ink);
-            color: #fff;
-        }
-
-        .collection-hero figure {
-            position: relative;
-            z-index: 1;
-            margin: 0;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 24px 60px rgba(17, 17, 17, 0.18);
-        }
-
-        .collection-hero img {
-            width: 100%;
-            height: 100%;
-            min-height: 280px;
-            object-fit: cover;
-            display: block;
         }
 
         .catalog-section {
@@ -174,13 +72,6 @@
             justify-content: space-between;
             align-items: flex-start;
             gap: 28px;
-        }
-
-        .collection-note {
-            margin: 0;
-            max-width: 360px;
-            font-size: 0.92rem;
-            color: var(--muted-ink);
         }
 
         .catalog-controls {
@@ -438,15 +329,6 @@
         }
 
         @media (max-width: 700px) {
-            .collection-hero::after {
-                inset: 16px;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
             .pagination-controls {
                 flex-direction: column;
                 align-items: stretch;
@@ -470,20 +352,7 @@
 </head>
 
 <body class="perfumes-page">
-    <div data-include="header.html"></div>
-        <main class="page-shell">
-        <section class="collection-hero">
-            <div class="hero-copy">
-                <span class="eyebrow">Colección permanente</span>
-                <h1>Perfumes icónicos y hallazgos nicho</h1>
-                <p class="lead">Curamos lanzamientos recientes y firmas consagradas para que encuentres el aroma que represente tu estilo en cada ocasión.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="#catalogo">Explorar catálogo</a>
-                    <a class="btn btn-outline" href="https://wa.link/wfehwk">Solicitar asesoría</a>
-                </div>
-            </div>
-        </section>
-
+    <main class="page-shell">
         <section id="catalogo" class="catalog-section">
             <div class="catalog-intro">
                 <div class="section-heading">
@@ -491,7 +360,6 @@
                     <h2>Perfumes completos y exclusividades</h2>
                     <p>Desde best sellers urbanos hasta composiciones nicho difíciles de conseguir, cada pieza se prueba y valida antes de llegar a tus manos.</p>
                 </div>
-                <p class="collection-note">Coordinamos envíos a todo Bolivia y asesoramos combinaciones ideales para regalar o ampliar tu guardarropa olfativo.</p>
             </div>
             <div class="catalog-controls">
                 <div class="search-field">
@@ -1863,12 +1731,11 @@
             }, { once: true });
         })();
     </script>
-    <div data-include="footer.html">
     </div>
     <script src="js/scripts.js"></script>
     <script src="js/include.js"></script>
     <script src="js/lazy-images.js"></script>
-    <script src="js/grid-paginator.js"></script>
+<script src="js/grid-paginator.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -1999,6 +1866,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyFilters();
 });
 </script>
+
 </body>
 
 </html>
