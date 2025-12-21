@@ -5,87 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const comboItemsContainer = document.getElementById('combo-items');
     const whatsappLink = document.getElementById('whatsapp-link');
 
-    const SKUS_PERMITIDOS = [
-        "PERF-019",
-        "PERF-094",
-        "PERF-029",
-        "PERF-052",
-        "PERF-053",
-        "PERF-076",
-        "PERF-061",
-        "PERF-062",
-        "PERF-051",
-        "PERF-075",
-        "PERF-050",
-        "PERF-022",
-        "PERF-104",
-        "PERF-101",
-        "PERF-100",
-        "PERF-065",
-        "PERF-018",
-        "PERF-017",
-        "PERF-096",
-        "PERF-045",
-        "PERF-037",
-        "PERF-039"
-    ];
-
-    const NOMBRES_PERMITIDOS = {
-        "PERF-045": ["Kenzo Homme Intense"],
-        "PERF-050": ["Lattafa Asad"]
-    };
-
-    const TAMANOS_PERMITIDOS = {
-        "PERF-019": [125],
-        "PERF-094": [125],
-        "PERF-029": [100],
-        "PERF-052": [100],
-        "PERF-076": [100],
-        "PERF-051": [100],
-        "PERF-075": [100],
-        "PERF-050": [100],
-        "PERF-022": [100],
-        "PERF-104": [100],
-        "PERF-101": [100],
-        "PERF-100": [100],
-        "PERF-065": [100],
-        "PERF-018": [100],
-        "PERF-017": [100],
-        "PERF-096": [110],
-        "PERF-045": [110],
-        "PERF-037": [100],
-        "PERF-039": [100, 200]
-    };
-
-    const PRECIOS_COMBOS = {
-        "PERF-019-125": 200.00,
-        "PERF-094-125": 187.00,
-        "PERF-029-100": 113.00,
-        "PERF-052-100": 81.00,
-        "PERF-076-100": 88.00,
-        "PERF-051-100": 79.00,
-        "PERF-075-100": 81.00,
-        "PERF-050-100": 81.00,
-        "PERF-022-100": 159.00,
-        "PERF-104-110": 184.00,
-        "PERF-101-100": 106.00,
-        "PERF-100-100": 105.00,
-        "PERF-065-100": 91.00,
-        "PERF-018-100": 167.00,
-        "PERF-017-100": 161.00,
-        "PERF-096-110": 130.00,
-        "PERF-045-110": 127.00,
-        "PERF-037-100": 149.00,
-        "PERF-039-100": 140.00,
-    };
+    const MONEDA_LOCAL = 'Bs';
+    const PRECIO_REGEX = /(\d+)ml.*?(\d+\.?\d*)Bs/i;
+    const CSV_COMBOS_PATH = 'PRECIOS NUEVOS.csv';
 
     let productos = {
         perfumes: [],
         decants: []
     };
+    let configuracionCombos = {};
 
     // Cargar productos inicialmente
-    cargarProductos();
+    inicializarCombos();
+
+    async function inicializarCombos() {
+        try {
+            await cargarConfiguracionCombos();
+            await cargarProductos();
+        } catch (error) {
+            console.error('Error inicializando combos:', error);
+        }
+    }
 
     async function cargarProductos() {
         try {
@@ -95,6 +35,110 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error cargando productos:', error);
         }
+    }
+
+    function obtenerDatosPrecio(parrafo) {
+        if (!parrafo) {
+            return null;
+        }
+
+        const texto = parrafo.textContent.replace(/\s+/g, '');
+        const match = texto.match(PRECIO_REGEX);
+
+        if (!match) {
+            console.log('No se pudo leer el precio para:', texto);
+            return null;
+        }
+
+        return {
+            tamaño: parseInt(match[1], 10),
+            precio: parseFloat(match[2]),
+            moneda: MONEDA_LOCAL
+        };
+    }
+
+    async function cargarConfiguracionCombos() {
+        try {
+            const respuesta = await fetch(CSV_COMBOS_PATH);
+            const texto = await respuesta.text();
+            configuracionCombos = parsearConfiguracionCombos(texto);
+        } catch (error) {
+            console.error('No se pudo cargar PRECIOS NUEVOS.csv:', error);
+            configuracionCombos = {};
+        }
+    }
+
+    function parsearConfiguracionCombos(contenido) {
+        const resultado = {};
+        if (!contenido) {
+            return resultado;
+        }
+
+        const lineas = contenido.replace(/\r/g, '').split('\n').filter(linea => linea.trim().length > 0);
+        if (lineas.length === 0) {
+            return resultado;
+        }
+
+        const encabezados = lineas.shift().replace(/^\ufeff/, '').split(';').map(encabezado => encabezado.trim());
+
+        lineas.forEach(linea => {
+            const valores = linea.split(';');
+            const registro = {};
+            encabezados.forEach((encabezado, indice) => {
+                registro[encabezado] = (valores[indice] || '').trim();
+            });
+
+            const nombre = registro['Nombre'];
+            if (!nombre) {
+                return;
+            }
+
+            const entrada = resultado[nombre] || { tamanos: {}, precioPorDefecto: null };
+
+            [1, 2].forEach(idx => {
+                const aprobado = (registro[`Aprobado${idx}`] || '').toUpperCase() === 'APROBADO';
+                const ml = registro[`ML${idx}`];
+                const precioTexto = (registro[`Precio${idx}`] || '').replace(',', '.');
+                if (!aprobado) {
+                    return;
+                }
+
+                const precio = parseFloat(precioTexto);
+                if (Number.isNaN(precio)) {
+                    return;
+                }
+
+                if (ml) {
+                    const tamano = parseInt(ml, 10);
+                    if (!Number.isNaN(tamano)) {
+                        entrada.tamanos[tamano] = precio;
+                    }
+                } else if (entrada.precioPorDefecto === null) {
+                    entrada.precioPorDefecto = precio;
+                }
+            });
+
+            if (Object.keys(entrada.tamanos).length > 0 || entrada.precioPorDefecto !== null) {
+                resultado[nombre] = entrada;
+            }
+        });
+
+        return resultado;
+    }
+
+    function obtenerPrecioCombo(nombre, tamano) {
+        const entrada = configuracionCombos[nombre];
+        if (!entrada) {
+            return null;
+        }
+
+        if (typeof entrada.tamanos?.[tamano] === 'number') {
+            return entrada.tamanos[tamano];
+        }
+
+        return typeof entrada.precioPorDefecto === 'number'
+            ? entrada.precioPorDefecto
+            : null;
     }
 
     async function obtenerProductos(tipo) {
@@ -113,13 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     if (tipo === 'perfumes') {
-                        const skuDiv = elemento.dataset.sku;
-                        if (!SKUS_PERMITIDOS.includes(skuDiv)) {
-                            return false;
-                        }
-
-                        const nombresPermitidos = NOMBRES_PERMITIDOS[skuDiv];
-                        if (nombresPermitidos && !nombresPermitidos.includes(elemento.dataset.name)) {
+                        const configPerfume = configuracionCombos[elemento.dataset.name];
+                        if (!configPerfume) {
                             return false;
                         }
                     }
@@ -129,38 +168,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 .map(elemento => {
                     const esPerfume = tipo === 'perfumes';
                     const skuBase = esPerfume ? elemento.dataset.sku : null;
+                    const nombreProducto = elemento.dataset.name;
 
                     return {
                         skuBase: skuBase,
-                        nombre: elemento.dataset.name,
+                        nombre: nombreProducto,
                         imagen: elemento.querySelector('img').src,
                         precios: Array.from(elemento.querySelectorAll('p'))
-                            .filter(p => {
-                                // Limpiar texto y usar nueva regex
-                                const texto = p.textContent.replace(/\s|<[^>]+>/g, '');
-                                const match = texto.match(/(\d+)ml.*?(\d+\.?\d*)(Bs|\$)/i);
-
-                                if (!match) {
-                                    console.log('No match para:', texto);
-                                    return false;
+                            .map(p => {
+                                const datosPrecio = obtenerDatosPrecio(p);
+                                if (!datosPrecio) {
+                                    return null;
                                 }
 
-                                const tamaño = parseInt(match[1]);
-                                return esPerfume
-                                    ? TAMANOS_PERMITIDOS[skuBase]?.includes(tamaño)
-                                    : true;
-                            })
-                            .map(p => {
-                                const texto = p.textContent.replace(/\s|<[^>]+>/g, '');
-                                const match = texto.match(/(\d+)ml.*?(\d+\.?\d*)(Bs|\$)/i);
+                                const comboPrecio = esPerfume
+                                    ? obtenerPrecioCombo(nombreProducto, datosPrecio.tamaño)
+                                    : null;
+
+                                if (esPerfume && typeof comboPrecio !== 'number') {
+                                    return null;
+                                }
 
                                 return {
                                     sku: p.dataset.sku || 'DECANT',
-                                    tamaño: parseInt(match[1]),
-                                    precio: parseFloat(match[2]),
-                                    moneda: match[3].toUpperCase()
+                                    tamaño: datosPrecio.tamaño,
+                                    precio: datosPrecio.precio,
+                                    moneda: datosPrecio.moneda,
+                                    comboPrecio: comboPrecio
                                 };
                             })
+                            .filter(Boolean)
                             .sort((a, b) => a.tamaño - b.tamaño),
                         tipo: tipo
                     };
@@ -192,10 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < cantidad; i++) {
             comboItemsContainer.appendChild(crearItemCombo(tipo, i));
-        }
-
-        if (tipo === 'perfumes') {
-            comboItemsContainer.appendChild(crearSelectorRegalo());
         }
 
         manejarRedimension();
@@ -254,50 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function crearSelectorTamanos(producto) {
-        const contenedor = document.createElement('div');
-        contenedor.className = 'size-selector-container';
-
-        const selector = document.createElement('select');
-        selector.className = 'size-selector';
-
-        // Obtener tamaños permitidos para este SKU base
-        const tamanosPermitidos = TAMANOS_PERMITIDOS[producto.skuBase] || [];
-
-        producto.precios.forEach(precio => {
-            // Verificar si el tamaño está permitido
-            if (tamanosPermitidos.includes(precio.tamaño)) {
-                const opcion = document.createElement('option');
-                opcion.value = JSON.stringify({
-                    sku: precio.sku,
-                    precio: precio.precio,
-                    tamaño: precio.tamaño,
-                    moneda: precio.moneda
-                });
-                opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
-                selector.appendChild(opcion);
-            }
-        });
-
-        // Manejar caso donde no hay tamaños válidos
-        if (selector.options.length === 0) {
-            const opcion = document.createElement('option');
-            opcion.textContent = 'No disponible';
-            opcion.disabled = true;
-            selector.appendChild(opcion);
-        }
-
-        // Almacenar datos base del producto
-        selector.dataset.producto = JSON.stringify({
-            nombre: producto.nombre,
-            skuBase: producto.skuBase,
-            tipo: producto.tipo
-        });
-
-        contenedor.appendChild(selector);
-        return contenedor;
-    }
-
     function seleccionarProducto(tipo, indice, producto, contenedor) {
         contenedor.classList.add('selected');
         setTimeout(() => contenedor.classList.remove('selected'), 600);
@@ -317,9 +306,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 sku: precio.sku,
                 precio: precio.precio,
                 moneda: precio.moneda,
-                tamaño: precio.tamaño
+                tamaño: precio.tamaño,
+                comboPrecio: precio.comboPrecio ?? null
             });
-            opcion.textContent = `${precio.tamaño}ml - ${precio.moneda}${precio.precio}`;
+            opcion.textContent = `${precio.tamaño}ml - ${precio.moneda} ${precio.precio}`;
             selector.appendChild(opcion);
         });
 
@@ -327,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selector.dataset.producto = JSON.stringify({
             nombre: producto.nombre,
             tipo: producto.tipo,
-            baseSKU: producto.baseSKU
+            skuBase: producto.skuBase
         });
 
         const container = document.createElement('div');
@@ -339,44 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarTotal();
     }
 
-
-    function crearSelectorRegalo() {
-        const regalos = [
-            { nombre: 'Desodorante Khamrah', imagen: 'imagenes/fotos-catalogo/arabes/DESODORANTE KHAMRAH.jpg' },
-            { nombre: 'Desodorante Yara', imagen: 'imagenes/fotos-catalogo/arabes/DESODORANTE YARA.webp' },
-            { nombre: 'Vela aromática', imagen: 'imagenes/vela.jpg' }
-        ];
-
-        const item = document.createElement('div');
-        item.className = 'combo-item';
-        item.innerHTML = `
-            <div class="combo-selection">
-                <img src="imagenes/gift.jpg" alt="Regalo" id="regalo-imagen">
-                <h3>Regalo</h3>
-                <p id="regalo-nombre"></p>
-                <button class="dropdown-toggle">Seleccionar Regalo</button>
-                <div class="dropdown" id="regalo-dropdown"></div>
-            </div>
-        `;
-
-        const dropdown = item.querySelector('.dropdown');
-        regalos.forEach(regalo => {
-            const elementoRegalo = document.createElement('div');
-            elementoRegalo.className = 'dropdown-item';
-            elementoRegalo.innerHTML = `
-                <img src="${regalo.imagen}" alt="${regalo.nombre}">
-                <p>${regalo.nombre}</p>
-            `;
-            elementoRegalo.onclick = () => {
-                item.querySelector('#regalo-nombre').textContent = regalo.nombre;
-                item.querySelector('#regalo-imagen').src = regalo.imagen;
-            };
-            dropdown.appendChild(elementoRegalo);
-        });
-
-        configurarEventosDropdown(item);
-        return item;
-    }
 
     function configurarEventosDropdown(contenedor) {
         const boton = contenedor.querySelector('.dropdown-toggle');
@@ -422,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     total += precioDescontado;
                     productosSeleccionados++;
                 } else {
-                    const precioCombo = PRECIOS_COMBOS[precioData.sku];
+                    const precioCombo = precioData.comboPrecio;
 
                     if (typeof precioCombo === 'number') {
                         originalTotal += precioData.precio;
@@ -434,12 +386,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const ahorro = originalTotal - total;
-        const moneda = esDecants ? 'Bs' : '$';
+        const moneda = MONEDA_LOCAL;
 
         document.getElementById('total-price').textContent = total.toFixed(2);
         document.getElementById('total-price-currency').textContent = moneda;
         document.getElementById('savings').textContent =
-            `Estás ahorrando: ${moneda}${ahorro.toFixed(2)}`;
+            `Estás ahorrando: ${moneda} ${ahorro.toFixed(2)}`;
 
         actualizarBotonWhatsApp(productosSeleccionados);
         actualizarEnlaceWhatsApp(total, esDecants);
@@ -455,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function actualizarEnlaceWhatsApp(total, esDecants) {
-        const moneda = esDecants ? 'Bs' : '$';
+        const moneda = MONEDA_LOCAL;
         let mensaje = `¡Hola! Quiero armar mi combo de ${esDecants ? 'decants' : 'perfumes'}:\n\n`;
 
         document.querySelectorAll('.combo-item').forEach((item) => {
