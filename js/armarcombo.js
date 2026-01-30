@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return resultado;
         }
 
-        const lineas = contenido.replace(/\r/g, '').split('\n').filter(linea => linea.trim().length > 0);
+        // Normalizar saltos de linea para soportar CR, LF y CRLF
+        const lineas = contenido.replace(/\r\n?/g, '\n').split('\n').filter(linea => linea.trim().length > 0);
         if (lineas.length === 0) {
             return resultado;
         }

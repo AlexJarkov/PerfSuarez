@@ -1,85 +1,1 @@
-﻿Nombre;ML1;ML2;Precio1;Precio2;Aprobado1;Aprobado2
-Black Phantom Memento Mori By Kilian;50;;4400;;APROBADO;NO
-Xerjoff XJ 1861 Naxos;100;;3420;;NO;NO
-Xerjoff Erba Pura;100;;2770;;APROBADO;NO
-Xerjoff Erba Gold;100;;2900;;APROBADO;NO
-Parfums de Marly Layton;200;;5500;;NO;NO
-Orto Parisi Megamare;50;;2450;;APROBADO;NO
-Valentino Born In Roma Intense;100;;1720;;APROBADO;NO
-Valentino Born In Roma Coral Fantasy;100;;1710;;APROBADO;NO
-Viktor&Rolf Spicebomb EDT;90;;690;;APROBADO;NO
-Dior Homme Intense;100;;1920;;NO;NO
-Dior Sauvage EDT;200;;2550;;NO;NO
-Carolina Herrera Bad Boy Extreme;100;;1330;;NO;NO
-Carolina Herrera Bad Boy Cobalt Elixir;100;;1320;;NO;NO
-Carolina Herrera Bad Boy Le Parfum;;;1190;;NO;NO
-Carolina Herrera 212 VIP Men Black Elixir;100;;1290;;NO;NO
-Carolina Herrera Good Girl Blush Elixir;80;;1650;;NO;NO
-Carolina Herrera Good Girl Sparkling Ice;80;;1030;;APROBADO;NO
-Rabanne Phantom EDT;150;;1410;;NO;NO
-Rabanne Fame EDP;80;;1550;;NO;NO
-Rabanne One Million Royal;100;;1060;;NO;NO
-Rabanne Invictus Victory;100;;1130;;NO;NO
-Rabanne Invictus Victory Elixir;200;;1990;;NO;NO
-Rabanne Invictus Parfum;100;200;1290;1290;NO;APROBADO
-Jean Paul Gaultier Le Male Elixir;125;;1030;;APROBADO;NO
-Jean Paul Gaultier Le Beau Paradise Garden;75;125;740;1020;NO;APROBADO
-Jean Paul Gaultier La Belle EDP;100;;860;;APROBADO;NO
-Jean Paul Gaultier La Belle Paradise Garden;100;;1040;;NO;NO
-Jean Paul Gaultier Divine Le Parfum;100;200;1530;1790;NO;NO
-Jean Paul Gaultier Scandal Pour Homme EDT;50;100;640;950;APROBADO;APROBADO
-Dolce&Gabbana K EDT;100;200;740;950;APROBADO;APROBADO
-Dolce&Gabbana K EDP;200;;1040;;APROBADO;NO
-Dolce&Gabbana Devotion Intense;100;;1610;;NO;NO
-Dolce&Gabbana Pour Femme;100;;570;;APROBADO;NO
-Montblanc Explorer Ultra Blue;100;;590;;APROBADO;NO
-Givenchy Gentleman EDP;100;;1040;;NO;NO
-Givenchy Gentleman Boisée;100;;850;;NO;NO
-Givenchy Gentleman Society;100;;1040;;APROBADO;NO
-Givenchy Gentleman Society Extreme;200;;1670;;NO;NO
-Yves Saint Laurent MYSLF;100;;1070;;APROBADO;NO
-Kenzo Homme EDP;110;;980;;NO;NO
-Kenzo Homme Intense;110;;840;;APROBADO;NO
-Kenzo Homme Santal Marin;110;;910;;APROBADO;NO
-Lacoste Original;100;;750;;NO;NO
-Versace Crystal Noir;100;;1140;;APROBADO;NO
-Lancôme La Vie Est Belle L'Eau De Parfum;100;;1280;;NO;NO
-Rasasi Hawas;100;;500;;NO;NO
-Rasasi Hawas ICE;100;;550;;NO;NO
-Rasasi Hawas Black;100;;760;;NO;NO
-Rasasi Hawas Fire;100;;660;;NO;NO
-Rasasi Hawas Malibu;100;;710;;NO;NO
-Rasasi Hawas Kobra;100;;730;;NO;NO
-Al Haramain Amber Oud Gold Edition;120;;940;;NO;NO
-French Avenue Liquid Brun;100;;690;;NO;NO
-Lattafa Asad;100;;390;;APROBADO;NO
-Lattafa Asad Zanzibar;100;;400;;APROBADO;NO
-Lattafa Asad Bourbon;100;;440;;APROBADO;NO
-Lattafa Yara;100;;490;;NO;NO
-Lattafa Yara Elixir;100;;690;;NO;NO
-Lattafa Yara Candy;100;;530;;NO;NO
-Lattafa Yara Moi;100;;420;;APROBADO;NO
-Lattafa Yara Tous;100;;410;;APROBADO;NO
-Lattafa Vintage Radio;100;;660;;NO;NO
-Lattafa Fakhar Black;100;;440;;APROBADO;NO
-Lattafa Maahir Legacy;100;;540;;NO;NO
-Lattafa Khamrah;100;;410;;APROBADO;NO
-Lattafa Khamrah Qahwa;100;;600;;NO;NO
-Lattafa Khamrah Dukhan;100;;570;;NO;NO
-Lattafa Ishq Al Shuyukh;100;;560;;NO;NO
-Lattafa Bade'e Al Oud: Oud For Glory;100;;390;;APROBADO;NO
-Lattafa Bade'e Al Oud: Honor And Glory;100;;520;;NO;NO
-Lattafa Bade'e Al Oud: Amethyst;100;;520;;NO;NO
-Lattafa Bade'e Al Oud: Noble Blush;100;;550;;NO;NO
-Lattafa Eclaire;100;;410;;APROBADO;NO
-Lattafa Eclaire Banoffi;100;;720;;NO;NO
-Lattafa Eclaire Pistache;100;;700;;NO;NO
-Lattafa Qaed Al Fursan;100;;380;;NO;NO
-AFNAN 9AM Dive;100;;560;;NO;NO
-AFNAN 9PM;100;;490;;NO;NO
-AFNAN Turathi Blue;90;;470;;APROBADO;NO
-ARMAF Yum Yum;100;;810;;NO;NO
-ARMAF Club de Nuit Intense;105;;490;;APROBADO;NO
-ARMAF Club de Nuit Urban Man Elixir;105;;510;;APROBADO;NO
-ARMAF Odyssey Mandarin Sky;100;200;440;800;APROBADO;NO
-ARMAF Odyssey Candee;100;;450;;APROBADO;NO
+﻿Nombre;ML1;ML2;Precio1;Precio2;Aprobado1;Aprobado2Black Phantom Memento Mori By Kilian;50;;4400;;APROBADO;NOXerjoff Erba Pura;100;;2600;;APROBADO;NOXerjoff Erba Gold;100;;2900;;APROBADO;NOParfums de Marly Pegasus;125;;3030;;APROBADO;NOOrto Parisi Megamare;50;;2120;;APROBADO;NOParfums de Marly Althaïr;125;;3550;;APROBADO;NOMancera Instant Crush;120;;1510;;APROBADO;NOValentino Born In Roma Intense;100;;1750;;APROBADO;NOValentino Born In Roma Coral Fantasy;100;;1680;;APROBADO;NOEmporio Armani Stronger With You Intensely;100;;1380;;APROBADO;NOViktor&Rolf Spicebomb EDT;SET;;1040;;APROBADO;NODior Sauvage EDT;200;;;;NO;NODior Fahrenheit;100;;1250;;APROBADO;NOCarolina Herrera Bad Boy Extreme;100;;1330;;NO;NOCarolina Herrera Bad Boy Cobalt Elixir;100;;;;NO;NOCarolina Herrera Bad Boy Elixir;100;;;;NO;NOCarolina Herrera Bad Boy Le Parfum;100;;1190;;APROBADO;NOCarolina Herrera 212 VIP Men Black Elixir;100;;1290;;NO;NOCarolina Herrera CH Men Pasión;100;;;;NO;NOCarolina Herrera Very Good Girl Elixir;80;;1250;;APROBADO;NOCarolina Herrera Good Girl Blush Elixir;80;;1210;;APROBADO;NOCarolina Herrera Good Girl Sparkling Ice;80;;1030;;APROBADO;NOAzzaro Wanted EDP;SET;;810;;APROBADO;NORabanne Phantom EDT;150;;1410;;APROBADO;NORabanne Fame EDP;80;;;;NO;NORabanne Fame Intense;80;;1070;;APROBADO;NORabanne One Million Royal;100;200;770;1180;APROBADO;APROBADORabanne Invictus Victory;100;;1130;;NO;NORabanne Invictus Victory Elixir;200;;1990;;NO;NORabanne Invictus Parfum;100;200;1290;1310;NO;APROBADOJean Paul Gaultier Le Male Elixir;75;125;780;1060;APROBADO;APROBADOJean Paul Gaultier Le Male Elixir Absolu;125;;1050;;APROBADO;NOJean Paul Gaultier Le Beau Le Parfum;125;;1460;;APROBADO;NOJean Paul Gaultier Le Beau Paradise Garden;75;125;;1050;NO;APROBADOJean Paul Gaultier La Belle Le Parfum;100;;910;;APROBADO;NOJean Paul Gaultier La Belle Flower Edition;100;;1090;;APROBADO;NOJean Paul Gaultier La Belle Paradise Garden;100;;1130;;APROBADO;NOJean Paul Gaultier Divine Le Parfum;100;200;1050;;APROBADO;NOJean Paul Gaultier Scandal Pour Homme EDT;50;100;640;940;APROBADO;APROBADOJean Paul Gaultier Scandal Pour Homme Le Parfum;150;;1860;;APROBADO;NOGiorgio Armani Acqua Di Gio Profondo;100;;1640;;NO;NODolce&Gabbana K EDT;100;;550;;APROBADO;NODolce&Gabbana K EDP;200;;1040;;APROBADO;NODolce&Gabbana Light Blue Pour Homme;200;;780;;APROBADO;NODolce&Gabbana Light Blue;100;;770;;APROBADO;NOGivenchy Gentleman Boisée;SET;;510;;APROBADO;NOGivenchy Gentleman Society;100;;1040;;APROBADO;NOGivenchy Gentleman Society Extreme;100;;850;;APROBADO;NOYves Saint Laurent Libre Le Parfum;90;;1570;;NO;NOYves Saint Laurent MYSLF;100;;1060;;APROBADO;NOYves Saint Laurent MYSLF Le Parfum;100;;1320;;APROBADO;NOKenzo Homme Santal Marin;110;;910;;APROBADO;NOLacoste Original;100;;750;;NO;NOVersace Pour Homme Dylan Blue;200;;1600;;NO;NOVersace Crystal Noir;100;;1140;;APROBADO;NOLancôme La Vie Est Belle L'Eau De Parfum;100;;1480;;NO;NORasasi Hawas ICE;100;;;;NO;NORasasi Hawas Black;100;;;;NO;NORasasi Hawas Malibu;100;;680;;APROBADO;NORasasi Hawas Tropical;100;;;;NO;NORasasi Hawas Verde;100;;;;NO;NOFrench Avenue Liquid Brun;100;;560;;APROBADO;NOLattafa Asad;100;;390;;APROBADO;NOLattafa Asad Zanzibar;100;;400;;APROBADO;NOLattafa Asad Bourbon;100;;460;;APROBADO;NOLattafa Yara;100;;490;;APROBADO;NOLattafa Yara Candy;100;;530;;NO;NOLattafa Yara Tous;100;;;;NO;NOLattafa Atlas;100;;;;NO;NOLattafa Vintage Radio;100;;660;;NO;NOLattafa Fakhar Black;100;;440;;APROBADO;NOLattafa Khamrah;100;;430;;APROBADO;NOLattafa Khamrah Qahwa;100;;600;;NO;NOLattafa Khamrah Dukhan;100;;530;;APROBADO;NOLattafa Bade'e Al Oud: Oud For Glory;100;;390;;APROBADO;NOLattafa Bade'e Al Oud: Honor And Glory;100;;520;;NO;NOLattafa Bade'e Al Oud: Amethyst;100;;520;;NO;NOLattafa Bade'e Al Oud: Noble Blush;100;;550;;NO;NOLattafa Eclaire;100;;490;;APROBADO;NOLattafa Eclaire Banoffi;100;;720;;NO;NOLattafa Eclaire Pistache;100;;700;;NO;NOAFNAN 9AM Dive;100;;460;;APROBADO;NOAFNAN 9PM;100;;460;;APROBADO;NOAFNAN 9PM Rebel;100;;620;;NO;NOAFNAN Turathi Blue;90;SET;500;;APROBADO;NOBharara King;100;;760;;APROBADO;NOARMAF Yum Yum;100;;810;;NO;NOARMAF Club de Nuit Intense;105;;500;;APROBADO;NOARMAF Club de Nuit Urban Man Elixir;105;;510;;APROBADO;NOARMAF Odyssey Mandarin Sky;100;200;430;;APROBADO;NOARMAF Odyssey Mandarin Sky Elixir;100;;;;NO;NOARMAF Odyssey Candee;100;;450;;APROBADO;NOARMAF Odyssey Mega;100;;450;;APROBADO;NOARMAF Odyssey Spectra;100;;450;;APROBADO;NO
