@@ -1,11 +1,2 @@
-user-agent: *
-Disallow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebot
-Allow: /
-
-user-agent: ia_archiver
+User-agent: *
 Allow: /
