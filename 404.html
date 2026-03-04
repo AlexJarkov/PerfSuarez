@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumería Suárez</title>
+    <script>
+        // GitHub Pages SPA redirect trick:
+        // GitHub sirve este 404.html para cualquier ruta desconocida (ej: /perfumes).
+        // Guardamos la ruta en sessionStorage y redirigimos al root,
+        // donde index.html la lee y arranca en el panel correcto.
+        sessionStorage.setItem('spa-redirect', location.pathname + location.search);
+        location.replace('/');
+    </script>
+</head>
+<body></body>
+</html>
