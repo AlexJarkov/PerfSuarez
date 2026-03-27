@@ -511,7 +511,7 @@ header:focus-within {
         bottom: 0;
         width: 100vw;
         min-height: calc(100vh - (var(--header-height) + env(safe-area-inset-top)));
-        background: linear-gradient(160deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.75) 70%, rgba(26, 112, 64, 0.16) 120%);
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.96) 70%, rgba(26, 112, 64, 0.06) 100%);
         backdrop-filter: saturate(160%) blur(26px);
         border-top: 1px solid var(--divider);
         display: flex;

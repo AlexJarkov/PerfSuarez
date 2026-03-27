@@ -345,14 +345,74 @@
             display: none !important;
         }
 
+        .catalog-section {
+            scroll-margin-top: calc(var(--header-height, 96px) + 16px);
+        }
+
         @media (min-width: 900px) {
             .catalog-controls {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 12px;
+                align-items: flex-end;
+            }
+
+            .search-field {
+                flex: 2;
+                min-width: 200px;
+            }
+
+            .select-row {
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+                flex: 3;
+                min-width: 280px;
+            }
+
+            .select-field {
+                flex: 1;
             }
 
             .toggle-group {
-                justify-content: flex-end;
+                flex: 0 0 auto;
+                flex-wrap: wrap;
+                gap: 8px;
             }
+        }
+
+        .gender-chips {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .gender-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 999px;
+            border: 1.5px solid var(--divider);
+            background: var(--surface);
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--muted-ink);
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, color 0.2s;
+        }
+
+        .gender-chip:hover {
+            border-color: var(--accent);
+            color: var(--accent-dark);
+        }
+
+        .gender-chip.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
         }
 
         @media (max-width: 700px) {
@@ -388,6 +448,12 @@
                     <p>Ideal para rotar aromas según la ocasión, regalar experiencias olfativas o probar antes de invertir en el frasco completo.</p>
                 </div>
             </div>
+            <div class="gender-chips" id="gender-chips">
+                <button class="gender-chip active" data-gender="all" type="button">Todos</button>
+                <button class="gender-chip" data-gender="hombre" type="button">Hombre</button>
+                <button class="gender-chip" data-gender="mujer" type="button">Mujer</button>
+                <button class="gender-chip" data-gender="unisex" type="button">Unisex</button>
+            </div>
             <div class="catalog-controls">
                 <div class="search-field">
                     <label for="decant-search">Buscar decants</label>
@@ -415,7 +481,7 @@
                 <div class="toggle-group">
                     <label class="toggle">
                         <input type="checkbox" id="stock-filter" checked>
-                        <span>Ocultar decants fuera de stock</span>
+                        <span>Solo decants en stock</span>
                     </label>
                     <label class="toggle">
                         <input type="checkbox" id="new-filter">
@@ -4156,6 +4222,23 @@
     <script src="js/include.js"></script>
     <script src="js/lazy-images.js"></script>
     <script src="js/grid-paginator.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const chips = document.querySelectorAll('#gender-chips .gender-chip');
+            const filterSelect = document.getElementById('decant-filter');
+            chips.forEach(function (chip) {
+                chip.addEventListener('click', function () {
+                    chips.forEach(function (c) { c.classList.remove('active'); });
+                    chip.classList.add('active');
+                    const gender = chip.dataset.gender;
+                    if (filterSelect) {
+                        filterSelect.value = gender;
+                        filterSelect.dispatchEvent(new Event('change'));
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

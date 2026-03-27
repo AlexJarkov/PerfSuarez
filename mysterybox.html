@@ -348,6 +348,20 @@
             color: var(--ink);
         }
 
+        .experience-hero--solo {
+            display: block;
+        }
+
+        .experience-price {
+            display: flex;
+            justify-content: center;
+        }
+
+        .experience-price .experience-card {
+            max-width: 480px;
+            width: 100%;
+        }
+
         @media (max-width: 700px) {
             .experience-hero::after {
                 inset: 16px;
@@ -371,7 +385,8 @@
 </head>
 <body class="mysterybox-page">
     <main>
-        <section class="experience-hero">
+        <!-- 1. Hero: emoción primero, sin precio y sin botón de asesor -->
+        <section class="experience-hero experience-hero--solo">
             <div class="hero-copy">
                 <span class="eyebrow">Edición limitada</span>
                 <h1>Vive la experiencia Mystery Box</h1>
@@ -381,33 +396,41 @@
                         <strong>Personalización guiada</strong>
                         <p>Responde un breve cuestionario y afinamos la selección a tu estilo olfativo.</p>
                     </div>
-                    <div class="meta-item">
-                        <strong>Envíos a todo Bolivia</strong>
-                        <p>Coordina desde la comodidad de tu casa; entregamos con seguimiento en tiempo real.</p>
-                    </div>
                 </div>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#incluye">Ver qué incluye</a>
-                    <a class="btn btn-outline" href="https://wa.link/hqv4bq" target="_blank" rel="noopener noreferrer">Hablar con un asesor</a>
+                    <a class="btn btn-primary" href="#como-funciona">Cómo funciona</a>
+                    <a class="btn btn-outline" href="#incluye">Ver qué incluye</a>
                 </div>
             </div>
-            <aside class="experience-card combo" data-whatsapp="78064327" data-combo="Mystery%20Box" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
-                <figure class="experience-figure">
-                    <img src="imagenes/Mystery Box.jpg" alt="Mystery Box" loading="lazy">
-                </figure>
-                <div class="experience-info">
-                    <span class="card-tag">incluye 5 decants</span>
-                    <h2>Bs 580</h2>
-                    <ul>
-                        <li>2 fragancias de diseñador</li>
-                        <li>2 fragancias árabes</li>
-                        <li>1 fragancia de nicho</li>
-                    </ul>
-                    <p class="card-note">Haz clic para coordinar tu pedido vía WhatsApp.</p>
-                </div>
-            </aside>
         </section>
 
+        <!-- 2. Cómo funciona (antes de los detalles de contenido) -->
+        <section id="como-funciona" class="experience-steps">
+            <div class="section-heading">
+                <span class="eyebrow">Cómo funciona</span>
+                <h2>Tu ritual en tres pasos</h2>
+                <p>Nos encargamos de todo el proceso para que solo te concentres en disfrutar nuevos aromas.</p>
+            </div>
+            <div class="steps-grid">
+                <article class="step-card">
+                    <span>Paso 1</span>
+                    <h3>Cuéntanos tu estilo</h3>
+                    <p>Completas un breve formulario o conversas con nuestro equipo para que podamos perfilar tus gustos olfativos.</p>
+                </article>
+                <article class="step-card">
+                    <span>Paso 2</span>
+                    <h3>Curamos la selección</h3>
+                    <p>Preparamos la combinación perfecta de diseñadores, árabes y nicho, cuidando armonía y contraste entre las propuestas.</p>
+                </article>
+                <article class="step-card">
+                    <span>Paso 3</span>
+                    <h3>Recibe y explora</h3>
+                    <p>Coordina el envío a donde estés — hacemos entregas a todo Bolivia. Abre tu caja y prueba cada decant con la guía incluida para sacarles el máximo provecho.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. Qué incluye -->
         <section id="incluye" class="experience-includes">
             <div class="section-heading">
                 <span class="eyebrow">Qué llega a tu puerta</span>
@@ -434,31 +457,26 @@
             </div>
         </section>
 
-        <section class="experience-steps">
-            <div class="section-heading">
-                <span class="eyebrow">Cómo funciona</span>
-                <h2>Tu ritual en tres pasos</h2>
-                <p>Nos encargamos de todo el proceso para que solo te concentres en disfrutar nuevos aromas.</p>
-            </div>
-            <div class="steps-grid">
-                <article class="step-card">
-                    <span>Paso 1</span>
-                    <h3>Cuéntanos tu estilo</h3>
-                    <p>Completas un breve formulario o conversas con nuestro equipo para que podamos perfilar tus gustos olfativos.</p>
-                </article>
-                <article class="step-card">
-                    <span>Paso 2</span>
-                    <h3>Curamos la selección</h3>
-                    <p>Preparamos la combinación perfecta de diseñadores, árabes y nicho, cuidando armonía y contraste entre las propuestas.</p>
-                </article>
-                <article class="step-card">
-                    <span>Paso 3</span>
-                    <h3>Recibe y explora</h3>
-                    <p>Coordina el envío a donde estés. Abre tu caja y prueba cada decant con la guía incluida para sacarles el máximo provecho.</p>
-                </article>
-            </div>
+        <!-- 4. Precio (al final, una vez el usuario ya sabe qué es y cómo funciona) -->
+        <section class="experience-price">
+            <aside class="experience-card combo" data-whatsapp="78064327" data-combo="Mystery%20Box" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
+                <figure class="experience-figure">
+                    <img src="imagenes/Mystery Box.jpg" alt="Mystery Box" loading="lazy">
+                </figure>
+                <div class="experience-info">
+                    <span class="card-tag">incluye 5 decants</span>
+                    <h2>Bs 580</h2>
+                    <ul>
+                        <li>2 fragancias de diseñador</li>
+                        <li>2 fragancias árabes</li>
+                        <li>1 fragancia de nicho</li>
+                    </ul>
+                    <p class="card-note">Haz clic para coordinar tu pedido vía WhatsApp.</p>
+                </div>
+            </aside>
         </section>
 
+        <!-- 5. CTA final -->
         <section class="experience-cta">
             <div>
                 <span class="eyebrow">Listo para descubrir</span>
@@ -467,7 +485,7 @@
             </div>
             <div class="cta-actions">
                 <a class="btn btn-light" href="https://wa.link/wfehwk" target="_blank" rel="noopener noreferrer">Agendar asesoría</a>
-                <a class="btn btn-outline combo" href="#incluye" data-whatsapp="78064327" data-combo="Mystery%20Box">Solicitar Mystery Box</a>
+                <a class="btn btn-outline combo" href="#" data-whatsapp="78064327" data-combo="Mystery%20Box">Quiero mi caja</a>
             </div>
         </section>
     </main>
