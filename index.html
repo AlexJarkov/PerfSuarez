@@ -630,6 +630,20 @@
                 const idx = event.state?.index ?? slugToIndex(location.pathname);
                 updateActive(idx, false);
             });
+
+            // Listen for navbar hide/show from perfume detail page inside iframes
+            window.addEventListener('message', (event) => {
+                if (!event.data || typeof event.data.type !== 'string') return;
+                const header = document.querySelector('.site-header');
+                const dock = document.getElementById('catalog-dock');
+                if (event.data.type === 'hide-navbar') {
+                    if (header) header.style.display = 'none';
+                    if (dock) dock.style.display = 'none';
+                } else if (event.data.type === 'show-navbar') {
+                    if (header) header.style.display = '';
+                    if (dock) dock.style.display = '';
+                }
+            });
         });
     </script>
     <script src="js/core/app.js"></script>

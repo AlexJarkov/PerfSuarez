@@ -179,9 +179,10 @@
         App.models.combo.fetchComboConfig('PRECIOS NUEVOS.csv')
             .then(config => {
                 state.configuracionCombos = config;
+                const fetcher = App.models.combo.getProductsFromData || App.models.combo.fetchProducts;
                 return Promise.all([
-                    App.models.combo.fetchProducts('perfumes', state.configuracionCombos),
-                    App.models.combo.fetchProducts('decants', state.configuracionCombos)
+                    fetcher('perfumes', state.configuracionCombos),
+                    fetcher('decants', state.configuracionCombos)
                 ]);
             })
             .then(([perfumes, decants]) => {

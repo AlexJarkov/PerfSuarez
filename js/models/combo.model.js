@@ -153,9 +153,62 @@
             .filter(product => product.precios.length > 0);
     }
 
+    function getProductsFromData(type, comboConfig) {
+        if (!App.data || !App.data.perfumes) {
+            return fetchProducts(type, comboConfig);
+        }
+
+        var isPerfume = type === 'perfumes';
+        var products = App.data.perfumes
+            .filter(function (p) {
+                if (isPerfume) {
+                    if (!p.en_stock_completos || !p.precio_completo) return false;
+                    if (!comboConfig[p.nombre_interno]) return false;
+                    return true;
+                }
+                return p.en_stock_decants && p.precios_decants;
+            })
+            .map(function (p) {
+                var precios = [];
+                if (isPerfume && p.precio_completo) {
+                    var comboPrice = getComboPrice(comboConfig, p.nombre_interno, p.precio_completo.ml);
+                    if (typeof comboPrice === 'number') {
+                        precios.push({
+                            sku: 'PERFUME',
+                            tamano: p.precio_completo.ml,
+                            precio: p.precio_completo.precio,
+                            moneda: MONEDA_LOCAL,
+                            comboPrecio: comboPrice
+                        });
+                    }
+                } else if (!isPerfume && p.precios_decants) {
+                    Object.keys(p.precios_decants).map(Number).sort(function (a, b) { return a - b; }).forEach(function (size) {
+                        precios.push({
+                            sku: 'DECANT',
+                            tamano: size,
+                            precio: p.precios_decants[size],
+                            moneda: MONEDA_LOCAL,
+                            comboPrecio: null
+                        });
+                    });
+                }
+                return {
+                    tipo: type,
+                    skuBase: null,
+                    nombre: p.nombre_interno,
+                    imagen: (isPerfume ? p.image_miniatura : p.image_miniatura_decant) || 'imagenes/image.webp',
+                    precios: precios
+                };
+            })
+            .filter(function (product) { return product.precios.length > 0; });
+
+        return Promise.resolve(products);
+    }
+
     App.models.combo = {
         fetchComboConfig,
         fetchProducts,
+        getProductsFromData,
         parseComboConfig,
         getComboPrice,
         readPriceData,

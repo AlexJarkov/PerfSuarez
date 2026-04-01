@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Perfume</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="imagenes/applogo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <style>
+        body.detail-page {
+            background: var(--surface);
+            color: var(--ink);
+            padding-top: 0;
+        }
+
+        .detail-shell {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: clamp(24px, 5vw, 48px) clamp(16px, 4vw, 32px) 120px;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(32px, 5vw, 56px);
+        }
+
+        /* Back button */
+        .back-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 0;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 999px;
+            border: 1.5px solid var(--divider);
+            background: var(--surface-strong);
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: var(--muted-ink);
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent-dark);
+        }
+
+        /* Product layout */
+        .product-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(28px, 5vw, 56px);
+            align-items: start;
+        }
+
+        @media (max-width: 700px) {
+            .product-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .gallery-main {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            border-radius: 24px;
+            object-fit: cover;
+            background: #f4f4f4;
+            border: 1px solid var(--divider);
+        }
+
+        .gallery-thumbs {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .gallery-thumbs img {
+            width: 64px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: border-color 0.2s;
+            background: #f4f4f4;
+        }
+
+        .gallery-thumbs img.active,
+        .gallery-thumbs img:hover {
+            border-color: var(--accent);
+        }
+
+        /* Product info */
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-brand {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: var(--accent);
+            margin: 0;
+        }
+
+        .product-name {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .product-tags .etiqueta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .etiqueta.novedad {
+            background: rgba(26, 112, 64, 0.14);
+            color: var(--accent-dark);
+        }
+
+        .etiqueta.fuera-de-stock {
+            background: rgba(17, 17, 17, 0.08);
+            color: var(--muted-ink);
+        }
+
+        .etiqueta.a-pedido {
+            background: rgba(17, 17, 17, 0.16);
+            color: var(--ink);
+        }
+
+        .etiqueta.tag-cat {
+            background: rgba(17, 17, 17, 0.06);
+            color: var(--muted-ink);
+        }
+
+        /* Pricing */
+        .pricing-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .pricing-section h3 {
+            margin: 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted-ink);
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--surface);
+            border-radius: 16px;
+            border: 1px solid var(--divider);
+        }
+
+        .price-size {
+            font-weight: 700;
+            font-size: 0.95rem;
+            min-width: 56px;
+        }
+
+        .price-value {
+            font-weight: 600;
+            color: var(--accent-dark);
+            font-size: 1.05rem;
+        }
+
+        /* Notes */
+        .notes-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 24px;
+            background: var(--surface-strong);
+            border-radius: 24px;
+            border: 1px solid var(--divider);
+        }
+
+        .notes-section h3 {
+            margin: 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted-ink);
+        }
+
+        .note-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .note-group-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .note-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .note-chip {
+            display: inline-flex;
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            background: rgba(26, 112, 64, 0.08);
+            color: var(--accent-dark);
+            font-weight: 500;
+        }
+
+        .note-chip.heart {
+            background: rgba(180, 60, 80, 0.08);
+            color: #8b2040;
+        }
+
+        .note-chip.base {
+            background: rgba(100, 70, 40, 0.1);
+            color: #5a3a1a;
+        }
+
+        /* WhatsApp button */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 999px;
+            border: none;
+            background: #25d366;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe57;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        /* Not found */
+        .not-found {
+            text-align: center;
+            padding: 80px 24px;
+            color: var(--muted-ink);
+        }
+
+        .not-found h1 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body class="detail-page">
+    <main class="detail-shell" id="detail-root">
+        <div class="not-found" id="not-found" style="display:none;">
+            <h1>Perfume no encontrado</h1>
+            <p>El perfume que buscas no existe en nuestro catálogo.</p>
+            <a href="javascript:history.back()" class="back-btn" style="margin-top:24px;">Volver al catálogo</a>
+        </div>
+    </main>
+
+    <script src="js/core/app.js"></script>
+    <script src="js/data/perfumes-data.js"></script>
+    <script>
+    (function () {
+        'use strict';
+        var App = window.PerfSuarez;
+        var WHATSAPP_NUMBER = '78064327';
+
+        function getParam(name) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        function findPerfume(id) {
+            if (!App.data || !App.data.perfumes) return null;
+            return App.data.perfumes.find(function (p) { return p.id === id; }) || null;
+        }
+
+        function buildGalleryImages(perfume) {
+            var imgs = [];
+            if (perfume.image_miniatura) imgs.push(perfume.image_miniatura);
+            if (perfume.image_miniatura_decant && perfume.image_miniatura_decant !== perfume.image_miniatura) {
+                imgs.push(perfume.image_miniatura_decant);
+            }
+            if (perfume.images_gallery && perfume.images_gallery.length) {
+                perfume.images_gallery.forEach(function (url) {
+                    if (imgs.indexOf(url) === -1) imgs.push(url);
+                });
+            }
+            return imgs.length ? imgs : ['imagenes/image.webp'];
+        }
+
+        function renderNoteChips(notes, className) {
+            return notes.map(function (n) {
+                return '<span class="note-chip ' + className + '">' + n + '</span>';
+            }).join('');
+        }
+
+        function renderPricing(perfume) {
+            var html = '';
+
+            if (perfume.precio_completo && perfume.en_stock_completos) {
+                html += '<div class="pricing-section"><h3>Perfume completo</h3>';
+                html += '<div class="price-row"><span class="price-size">' + perfume.precio_completo.ml + ' ml</span>';
+                html += '<span class="price-value">' + perfume.precio_completo.precio + ' Bs</span></div></div>';
+            } else if (perfume.precio_completo && !perfume.en_stock_completos) {
+                html += '<div class="pricing-section"><h3>Perfume completo</h3>';
+                html += '<div class="price-row" style="opacity:0.5;"><span class="price-size">' + perfume.precio_completo.ml + ' ml</span>';
+                html += '<span class="price-value" style="text-decoration:line-through;">' + perfume.precio_completo.precio + ' Bs</span>';
+                html += '<span class="etiqueta fuera-de-stock" style="margin-left:auto;">Fuera de stock</span></div></div>';
+            }
+
+            if (perfume.precios_decants) {
+                var sizes = Object.keys(perfume.precios_decants).map(Number).sort(function (a, b) { return a - b; });
+                html += '<div class="pricing-section"><h3>Decants</h3>';
+                if (perfume.en_stock_decants) {
+                    sizes.forEach(function (s) {
+                        html += '<div class="price-row"><span class="price-size">' + s + ' ml</span>';
+                        html += '<span class="price-value">' + perfume.precios_decants[s] + ' Bs</span></div>';
+                    });
+                } else {
+                    sizes.forEach(function (s) {
+                        html += '<div class="price-row" style="opacity:0.5;"><span class="price-size">' + s + ' ml</span>';
+                        html += '<span class="price-value" style="text-decoration:line-through;">' + perfume.precios_decants[s] + ' Bs</span></div>';
+                    });
+                    html += '<div style="text-align:center;"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>';
+                }
+                html += '</div>';
+            }
+
+            return html;
+        }
+
+        function renderTags(perfume) {
+            var html = '';
+            if (perfume.etiqueta === 'novedad') html += '<span class="etiqueta novedad">Nuevo</span>';
+            if (perfume.etiqueta === 'a-pedido') html += '<span class="etiqueta a-pedido">A Pedido</span>';
+
+            var displayTags = ['hombre', 'mujer', 'unisex', 'nicho', 'arabes'];
+            perfume.tags.forEach(function (t) {
+                var lower = t.toLowerCase();
+                if (displayTags.indexOf(lower) !== -1) {
+                    var label = lower.charAt(0).toUpperCase() + lower.slice(1);
+                    if (lower === 'arabes') label = 'Árabes';
+                    html += '<span class="etiqueta tag-cat">' + label + '</span>';
+                }
+            });
+            return html;
+        }
+
+        function renderNotes(perfume) {
+            var n = perfume.notas;
+            var hasGeneralNotes = n.generales && n.generales.length;
+            var hasPyramidNotes = (n.salida && n.salida.length) || (n.corazon && n.corazon.length) || (n.fondo && n.fondo.length);
+            if (!hasGeneralNotes && !hasPyramidNotes) return '';
+
+            var html = '<div class="notes-section"><h3>Notas del perfume</h3>';
+            if (hasGeneralNotes && !hasPyramidNotes) {
+                html += '<div class="note-group"><span class="note-group-label">Notas</span>';
+                html += '<div class="note-chips">' + renderNoteChips(n.generales, '') + '</div></div>';
+                html += '</div>';
+                return html;
+            }
+            if (n.salida && n.salida.length) {
+                html += '<div class="note-group"><span class="note-group-label">Notas de salida</span>';
+                html += '<div class="note-chips">' + renderNoteChips(n.salida, '') + '</div></div>';
+            }
+            if (n.corazon && n.corazon.length) {
+                html += '<div class="note-group"><span class="note-group-label">Notas de corazón</span>';
+                html += '<div class="note-chips">' + renderNoteChips(n.corazon, 'heart') + '</div></div>';
+            }
+            if (n.fondo && n.fondo.length) {
+                html += '<div class="note-group"><span class="note-group-label">Notas de fondo</span>';
+                html += '<div class="note-chips">' + renderNoteChips(n.fondo, 'base') + '</div></div>';
+            }
+            html += '</div>';
+            return html;
+        }
+
+        function buildWhatsAppUrl(perfume) {
+            var msg = 'Hola! Quisiera saber si tienen disponible el perfume ' + perfume.nombre_interno + '!';
+            return 'https://wa.me/' + WHATSAPP_NUMBER + '/?text=' + encodeURIComponent(msg);
+        }
+
+        function render(perfume) {
+            var root = document.getElementById('detail-root');
+            var images = buildGalleryImages(perfume);
+
+            var thumbsHtml = images.length > 1
+                ? '<div class="gallery-thumbs">' + images.map(function (src, i) {
+                    return '<img src="' + src + '" alt="' + perfume.nombre + '" class="' + (i === 0 ? 'active' : '') + '" data-index="' + i + '">';
+                }).join('') + '</div>'
+                : '';
+
+            var waBtn = '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.38-1.576l-.376-.228-2.647.888.888-2.647-.228-.376A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>';
+
+            root.innerHTML = ''
+                + '<div class="back-bar"><a href="javascript:void(0)" class="back-btn" id="back-btn">&larr; Volver al catálogo</a></div>'
+                + '<div class="product-layout">'
+                +   '<div class="gallery">'
+                +     '<img class="gallery-main" id="gallery-main" src="' + images[0] + '" alt="' + perfume.nombre + '">'
+                +     thumbsHtml
+                +   '</div>'
+                +   '<div class="product-info">'
+                +     '<p class="product-brand">' + perfume.marca + '</p>'
+                +     '<h1 class="product-name">' + perfume.nombre + '</h1>'
+                +     '<div class="product-tags">' + renderTags(perfume) + '</div>'
+                +     renderPricing(perfume)
+                +     renderNotes(perfume)
+                +     '<a href="' + buildWhatsAppUrl(perfume) + '" target="_blank" rel="noopener" class="whatsapp-btn">' + waBtn + ' Pedir por WhatsApp</a>'
+                +   '</div>'
+                + '</div>';
+
+            document.title = perfume.nombre + ' - ' + perfume.marca + ' | Perfumería Suárez';
+
+            // Gallery thumbnail click
+            var thumbs = root.querySelectorAll('.gallery-thumbs img');
+            var mainImg = document.getElementById('gallery-main');
+            thumbs.forEach(function (thumb) {
+                thumb.addEventListener('click', function () {
+                    thumbs.forEach(function (t) { t.classList.remove('active'); });
+                    thumb.classList.add('active');
+                    mainImg.src = thumb.src;
+                });
+            });
+
+            // Back button
+            document.getElementById('back-btn').addEventListener('click', function (e) {
+                e.preventDefault();
+                // Tell parent iframe to show navbar
+                if (window.parent && window.parent !== window) {
+                    window.parent.postMessage({ type: 'show-navbar' }, '*');
+                }
+                history.back();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var id = getParam('id');
+            if (!id) {
+                document.getElementById('not-found').style.display = '';
+                return;
+            }
+
+            var perfume = findPerfume(id);
+            if (!perfume) {
+                document.getElementById('not-found').style.display = '';
+                return;
+            }
+
+            render(perfume);
+
+            // Tell parent iframe to hide navbar
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({ type: 'hide-navbar' }, '*');
+            }
+        });
+    })();
+    </script>
+
+</body>
+
+</html>
