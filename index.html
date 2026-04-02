@@ -507,6 +507,7 @@
                         if (!pointerShouldHandle(event)) return;
                         endDrag(event.pointerId);
                     });
+                    doc.addEventListener('wheel', makeWheelHandler(), { passive: false });
                 } catch (error) {
                     // ignore frames blocked by policies (not expected here)
                 }
@@ -565,6 +566,20 @@
             track.addEventListener('pointerup', releasePointer);
             track.addEventListener('pointercancel', releasePointer);
             track.addEventListener('pointerleave', releasePointer);
+
+            // Trackpad horizontal scroll
+            let lastWheelNav = 0;
+            const WHEEL_COOLDOWN = 600;
+            const makeWheelHandler = () => (event) => {
+                if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+                if (Math.abs(event.deltaX) < 30) return;
+                const now = Date.now();
+                if (now - lastWheelNav < WHEEL_COOLDOWN) { event.preventDefault(); return; }
+                lastWheelNav = now;
+                event.preventDefault();
+                handleSwipe(event.deltaX > 0 ? 'next' : 'prev');
+            };
+            track.addEventListener('wheel', makeWheelHandler(), { passive: false });
 
             window.addEventListener('resize', () => snapToIndex(true));
 

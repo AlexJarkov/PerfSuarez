@@ -22,7 +22,7 @@
         if (mode === 'perfumes') {
             const inStock = perfume.en_stock_completos;
             if (!inStock || !perfume.precio_completo) return '';
-            return `<p>${perfume.precio_completo.ml} <strong>ml - </strong>${perfume.precio_completo.precio} Bs</p>`;
+            return `<p class="price-label">${perfume.precio_completo.ml} <strong>ml - </strong>${perfume.precio_completo.precio} Bs</p>`;
         }
 
         // decants
@@ -34,7 +34,7 @@
             .sort((a, b) => a - b);
 
         return sizes
-            .map(s => `<p>${s} <strong>ml - </strong>${perfume.precios_decants[s]} Bs</p>`)
+            .map(s => `<p class="price-label">${s} <strong>ml - </strong>${perfume.precios_decants[s]} Bs</p>`)
             .join('');
     }
 

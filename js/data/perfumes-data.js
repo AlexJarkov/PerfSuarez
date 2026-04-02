@@ -2131,9 +2131,29 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Frutas tropicales",
+                "Bergamota",
+                "Pomelo",
+                "Limón de Amalfi",
+                "Notas acuáticas"
+            ],
+            "corazon": [
+                "Praliné",
+                "Canela",
+                "Flor de azahar africana",
+                "Jazmín",
+                "Tintura de rosa"
+            ],
+            "fondo": [
+                "Gamuza",
+                "Pachulí",
+                "Madera de cachemira",
+                "Sándalo",
+                "Almizcle",
+                "Cedro de Virginia",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -2154,9 +2174,29 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/CH.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Frutas tropicales",
+                "Bergamota",
+                "Pomelo",
+                "Limón de Amalfi",
+                "Notas acuáticas"
+            ],
+            "corazon": [
+                "Praliné",
+                "Canela",
+                "Flor de azahar africana",
+                "Jazmín",
+                "Tintura de rosa"
+            ],
+            "fondo": [
+                "Gamuza",
+                "Pachulí",
+                "Madera de cachemira",
+                "Sándalo",
+                "Almizcle",
+                "Cedro de Virginia",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -2177,9 +2217,29 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/CH MEN.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Hierba",
+                "Bergamota",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Notas amaderadas",
+                "Nuez moscada",
+                "Violeta",
+                "Azafrán",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Azúcar",
+                "Cuero",
+                "Vainilla",
+                "Gamuza",
+                "Ámbar",
+                "Madera de cachemira",
+                "Sándalo",
+                "Musgo de roble",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -2208,9 +2268,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/CH MEN PASION.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Olíbano",
+                "Neroli tunecino",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Iris",
+                "Mirra",
+                "Cedro de Texas"
+            ],
+            "fondo": [
+                "Sándalo australiano",
+                "Vainilla bourbon",
+                "Notas amaderadas oscuras",
+                "Haba tonka",
+                "Amberwood"
+            ]
         }
     },
     {
@@ -2239,9 +2313,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/GOOD GIRL BLUSH ELIXIR.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Ylang-ylang",
+                "Rosa"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -2262,9 +2345,32 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/GOOD GIRL EDP.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Almendra",
+                "Café",
+                "Bergamota",
+                "Limón"
+            ],
+            "corazon": [
+                "Nardo",
+                "Jazmín sambac",
+                "Flor de azahar",
+                "Rosa búlgara",
+                "Raíz de lirio"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Cacao",
+                "Vainilla",
+                "Praliné",
+                "Sándalo",
+                "Almizcle",
+                "Ámbar",
+                "Madera de cachemira",
+                "Pachulí",
+                "Canela",
+                "Cedro"
+            ]
         }
     },
     {
@@ -2293,9 +2399,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/GOOD GIRL SPARKLING ICE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Almendra"
+            ],
+            "corazon": [
+                "Jazmín sambac",
+                "Nardo"
+            ],
+            "fondo": [
+                "Cacao",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -2324,9 +2438,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BOMBA.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pitahaya"
+            ],
+            "corazon": [
+                "Frangipani",
+                "Peonía roja"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -2347,9 +2469,17 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lichi",
+                "Grosellas rojas"
+            ],
+            "corazon": [
+                "Rosa"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -2370,9 +2500,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/VERY GOOD GIRL.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lichi",
+                "Grosellas rojas"
+            ],
+            "corazon": [
+                "Rosa"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -2401,9 +2539,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/VERY GOOD GIRL ELIXIR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cereza ácida",
+                "Almendra amarga"
+            ],
+            "corazon": [
+                "Rosa",
+                "Lirio"
+            ],
+            "fondo": [
+                "Vainilla bourbon",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -2424,9 +2571,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/VERY GOOD GIRL GLAM.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cereza negra",
+                "Almendra amarga"
+            ],
+            "corazon": [
+                "Rosa",
+                "Nardo"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Cacao"
+            ]
         }
     },
     {
@@ -2451,9 +2607,32 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SANTOS DE CARTIER.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Albahaca",
+                "Bayas de enebro",
+                "Cedrón",
+                "Bergamota",
+                "Gálbano",
+                "Neroli"
+            ],
+            "corazon": [
+                "Pimienta",
+                "Nuez moscada",
+                "Vetiver",
+                "Romero",
+                "Geranio",
+                "Clavo de olor",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Ámbar",
+                "Coco",
+                "Pachulí",
+                "Cedro",
+                "Vainilla"
+            ]
         }
     },
     {
@@ -2474,9 +2653,27 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BLEU DE CHANEL EDT.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pomelo",
+                "Limón",
+                "Menta",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Jengibre",
+                "Nuez moscada",
+                "Jazmín",
+                "Iso E Super"
+            ],
+            "fondo": [
+                "Incienso",
+                "Cedro",
+                "Vetiver",
+                "Sándalo",
+                "Pachulí",
+                "Ládano",
+                "Almizcle blanco"
+            ]
         }
     },
     {
@@ -2501,9 +2698,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BLEU DE CHANEL PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Ralladura de limón",
+                "Bergamota",
+                "Menta",
+                "Artemisia"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Piña",
+                "Geranio",
+                "Notas verdes"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Cedro",
+                "Amberwood",
+                "Iso E Super",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -2528,9 +2741,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/AVENTUS.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Casis",
+                "Manzana",
+                "Limón",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Piña",
+                "Pachulí",
+                "Jazmín marroquí"
+            ],
+            "fondo": [
+                "Abedul",
+                "Almizcle",
+                "Musgo de roble",
+                "Cedro",
+                "Ambroxan"
+            ]
         }
     },
     {
@@ -2554,9 +2783,34 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Flor de nuez moscada",
+                "Lavanda",
+                "Cedro",
+                "Mandarina",
+                "Manzanilla",
+                "Bergamota",
+                "Espino blanco",
+                "Limón"
+            ],
+            "corazon": [
+                "Hoja de violeta",
+                "Nuez moscada",
+                "Cedro",
+                "Sándalo",
+                "Clavel",
+                "Madreselva",
+                "Jazmín",
+                "Lirio de los valles"
+            ],
+            "fondo": [
+                "Cuero",
+                "Vetiver",
+                "Almizcle",
+                "Ámbar",
+                "Pachulí",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -2578,9 +2832,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/DIOR HOMME INTENSE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Iris toscano"
+            ],
+            "corazon": [
+                "Ambreta"
+            ],
+            "fondo": [
+                "Cedro de Virginia"
+            ]
         }
     },
     {
@@ -2605,9 +2865,34 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/FAHRENHEIT.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Flor de nuez moscada",
+                "Lavanda",
+                "Cedro",
+                "Mandarina",
+                "Manzanilla",
+                "Bergamota",
+                "Espino blanco",
+                "Limón"
+            ],
+            "corazon": [
+                "Hoja de violeta",
+                "Nuez moscada",
+                "Cedro",
+                "Sándalo",
+                "Clavel",
+                "Madreselva",
+                "Jazmín",
+                "Lirio de los valles"
+            ],
+            "fondo": [
+                "Cuero",
+                "Vetiver",
+                "Almizcle",
+                "Ámbar",
+                "Pachulí",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -2632,9 +2917,30 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/JADORE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pera",
+                "Melón",
+                "Magnolia",
+                "Durazno",
+                "Mandarina",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Jazmín",
+                "Lirio de los valles",
+                "Nardo",
+                "Fresia",
+                "Rosa",
+                "Orquídea",
+                "Violeta",
+                "Ciruela"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Vainilla",
+                "Cedro",
+                "Zarzamora"
+            ]
         }
     },
     {
@@ -2656,9 +2962,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/MISS DIOR BLOOMING BOUQUET.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Guisante de olor"
+            ],
+            "corazon": [
+                "Peonía",
+                "Rosa de Damasco"
+            ],
+            "fondo": [
+                "Almizcle blanco"
+            ]
         }
     },
     {
@@ -2683,9 +2997,16 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/MISS DIOR.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Neroli"
+            ],
+            "corazon": [
+                "Rosa turca",
+                "Rosa búlgara"
+            ],
+            "fondo": [
+                "Pachulí"
+            ]
         }
     },
     {
@@ -2706,9 +3027,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE EDP.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Pimienta de Sichuan",
+                "Nuez moscada",
+                "Anís estrellado"
+            ],
+            "fondo": [
+                "Ambroxan",
+                "Vainilla"
+            ]
         }
     },
     {
@@ -2737,9 +3068,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE EDT.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota de Calabria",
+                "Pimienta"
+            ],
+            "corazon": [
+                "Geranio",
+                "Lavanda",
+                "Pimienta de Sichuan",
+                "Elemi",
+                "Pimienta rosa",
+                "Pachulí",
+                "Vetiver"
+            ],
+            "fondo": [
+                "Ambroxan",
+                "Ládano",
+                "Cedro"
+            ]
         }
     },
     {
@@ -2760,9 +3106,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE EAU FORTE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Especias",
+                "Resina de elemi"
+            ],
+            "corazon": [
+                "Lavanda"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -2791,9 +3145,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE ELIXIR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Nuez moscada",
+                "Canela",
+                "Cardamomo",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Lavanda"
+            ],
+            "fondo": [
+                "Regaliz",
+                "Sándalo",
+                "Ámbar",
+                "Pachulí",
+                "Vetiver haitiano"
+            ]
         }
     },
     {
@@ -2819,9 +3186,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE PARFUM.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Mandarina",
+                "Elemi"
+            ],
+            "corazon": [
+                "Sándalo"
+            ],
+            "fondo": [
+                "Olíbano",
+                "Haba tonka",
+                "Vainilla"
+            ]
         }
     },
     {
@@ -2842,9 +3219,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/DEVOTION.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón confitado"
+            ],
+            "corazon": [
+                "Panna cotta",
+                "Flor de azahar",
+                "Ron"
+            ],
+            "fondo": [
+                "Vainilla"
+            ]
         }
     },
     {
@@ -2869,9 +3254,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/DEVOTION INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Avellana"
+            ],
+            "corazon": [
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Vainilla"
+            ]
         }
     },
     {
@@ -2892,9 +3283,15 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Avellana"
+            ],
+            "corazon": [
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Vainilla"
+            ]
         }
     },
     {
@@ -2920,9 +3317,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/DEVOTION POUR HOMME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón"
+            ],
+            "corazon": [
+                "Café"
+            ],
+            "fondo": [
+                "Pachulí"
+            ]
         }
     },
     {
@@ -2947,9 +3350,26 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/K EDP.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja sanguina",
+                "Bayas de enebro",
+                "Pimiento",
+                "Limón",
+                "Limón siciliano",
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Néctar de higo",
+                "Lavanda",
+                "Geranio",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Cedro",
+                "Pachulí",
+                "Vetiver",
+                "Aceite de cipriol"
+            ]
         }
     },
     {
@@ -2970,9 +3390,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/K EDP INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja sanguina",
+                "Limón siciliano"
+            ],
+            "corazon": [
+                "Higo",
+                "Azafrán"
+            ],
+            "fondo": [
+                "Cuero",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -2997,9 +3426,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/DOLCE GABBANA K.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bayas de enebro",
+                "Cítricos",
+                "Naranja sanguina",
+                "Limón siciliano"
+            ],
+            "corazon": [
+                "Pimiento",
+                "Lavanda",
+                "Salvia esclarea",
+                "Geranio"
+            ],
+            "fondo": [
+                "Vetiver",
+                "Cedro",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3023,9 +3466,26 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja sanguina",
+                "Bayas de enebro",
+                "Pimiento",
+                "Limón",
+                "Limón siciliano",
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Néctar de higo",
+                "Lavanda",
+                "Geranio",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Cedro",
+                "Pachulí",
+                "Vetiver",
+                "Aceite de cipriol"
+            ]
         }
     },
     {
@@ -3046,9 +3506,18 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja sanguina",
+                "Limón siciliano"
+            ],
+            "corazon": [
+                "Higo",
+                "Azafrán"
+            ],
+            "fondo": [
+                "Cuero",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -3072,9 +3541,23 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bayas de enebro",
+                "Cítricos",
+                "Naranja sanguina",
+                "Limón siciliano"
+            ],
+            "corazon": [
+                "Pimiento",
+                "Lavanda",
+                "Salvia esclarea",
+                "Geranio"
+            ],
+            "fondo": [
+                "Vetiver",
+                "Cedro",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3103,9 +3586,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/POUR FEMME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón siciliano",
+                "Manzana",
+                "Cedro",
+                "Campanilla"
+            ],
+            "corazon": [
+                "Bambú",
+                "Jazmín",
+                "Rosa blanca"
+            ],
+            "fondo": [
+                "Cedro",
+                "Almizcle",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -3130,9 +3626,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LIGHT BLUE CAPRI IN LOVE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Té de jazmín"
+            ],
+            "corazon": [
+                "Manzana"
+            ],
+            "fondo": [
+                "Longoza"
+            ]
         }
     },
     {
@@ -3161,9 +3663,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LIGHT BLUE POUR HOMME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pomelo",
+                "Bergamota",
+                "Mandarina siciliana",
+                "Enebro"
+            ],
+            "corazon": [
+                "Pimienta",
+                "Romero",
+                "Palo de rosa brasileño"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Incienso",
+                "Musgo de roble"
+            ]
         }
     },
     {
@@ -3188,9 +3703,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LIGHT BLUE POUR HOMME CAPRI IN LOVE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta negra"
+            ],
+            "corazon": [
+                "Higo"
+            ],
+            "fondo": [
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3212,9 +3733,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LIGHT BLUE EAU INTENSE.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pomelo",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Agua de mar",
+                "Enebro"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Amberwood"
+            ]
         }
     },
     {
@@ -3237,9 +3767,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/DG POUR FEMME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Frambuesa",
+                "Neroli",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Flor de azahar",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Malvavisco",
+                "Vainilla",
+                "Sándalo",
+                "Heliotropo"
+            ]
         }
     },
     {
@@ -3260,9 +3802,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/D&G POUR HOMME.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cítricos",
+                "Bergamota",
+                "Neroli",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia",
+                "Pimienta"
+            ],
+            "fondo": [
+                "Tabaco",
+                "Haba tonka",
+                "Cedro"
+            ]
         }
     },
     {
@@ -3287,9 +3842,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/Q.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Durazno",
+                "Lichi",
+                "Mandarina",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Azucena",
+                "Ciruela",
+                "Jazmín",
+                "Lirio de los valles"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Ámbar",
+                "Almizcle",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -3310,9 +3880,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/Q INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón siciliano",
+                "Naranja",
+                "Jazmín"
+            ],
+            "corazon": [
+                "Cereza negra",
+                "Heliotropo"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -3333,9 +3913,15 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cereza"
+            ],
+            "corazon": [
+                "Jazmín sambac"
+            ],
+            "fondo": [
+                "Vainilla"
+            ]
         }
     },
     {
@@ -3356,9 +3942,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/THE ONE LADY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón siciliano",
+                "Naranja sanguina",
+                "Jazmín"
+            ],
+            "corazon": [
+                "Cereza",
+                "Heliotropo"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Cedro"
+            ]
         }
     },
     {
@@ -3379,9 +3975,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/D&G THE ONE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pomelo",
+                "Cilantro",
+                "Albahaca"
+            ],
+            "corazon": [
+                "Cardamomo",
+                "Jengibre",
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Tabaco",
+                "Cedro"
+            ]
         }
     },
     {
@@ -3402,9 +4010,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/THE ONE GOLD.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja sanguina",
+                "Jengibre",
+                "Bergamota siciliana"
+            ],
+            "corazon": [
+                "Salvia esclarea",
+                "Cardamomo",
+                "Geranio"
+            ],
+            "fondo": [
+                "Amberwood",
+                "Vetiver haitiano",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3433,9 +4053,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/STRONGER WITH YOU INTENSELY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Bayas de enebro",
+                "Violeta"
+            ],
+            "corazon": [
+                "Toffee",
+                "Canela",
+                "Lavanda",
+                "Salvia"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Ámbar",
+                "Haba tonka",
+                "Gamuza"
+            ]
         }
     },
     {
@@ -3456,9 +4090,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SWY PARFUM.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia",
+                "Canela"
+            ],
+            "fondo": [
+                "Castaña",
+                "Vainilla",
+                "Cuero"
+            ]
         }
     },
     {
@@ -3487,9 +4132,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SWY POWERFULLY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cereza",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Especias",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Castaña",
+                "Vainilla",
+                "Amberwood"
+            ]
         }
     },
     {
@@ -3514,9 +4169,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAYAATI BEAU.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Coco",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Madera de cedro",
+                "Vetiver",
+                "Madera de gaiac"
+            ]
         }
     },
     {
@@ -3546,9 +4212,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LIQUID BRUN.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Flor de azahar",
+                "Cardamomo",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Vainilla bourbon",
+                "Elemi"
+            ],
+            "fondo": [
+                "Praliné",
+                "Ambroxan",
+                "Madera de gaiac",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -3573,6 +4252,13 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BIANCO LATTE.png",
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Caramelo",
+                "Cumarina",
+                "Miel",
+                "Vainilla",
+                "Almizcle blanco"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -3596,9 +4282,26 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO ABSOLU.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Bergamota",
+                "Pera",
+                "Manzana",
+                "Pomelo",
+                "Limón"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Romero",
+                "Geranio"
+            ],
+            "fondo": [
+                "Notas amaderadas",
+                "Haba tonka",
+                "Amberwood",
+                "Pachulí",
+                "Ládano"
+            ]
         }
     },
     {
@@ -3619,9 +4322,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO EDP.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Mandarina verde"
+            ],
+            "corazon": [
+                "Salvia esclarea",
+                "Lavanda",
+                "Geranio"
+            ],
+            "fondo": [
+                "Notas minerales",
+                "Vetiver",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3642,9 +4356,37 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO EDT.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lima",
+                "Limón",
+                "Bergamota",
+                "Jazmín",
+                "Naranja",
+                "Mandarina",
+                "Neroli"
+            ],
+            "corazon": [
+                "Notas marinas",
+                "Jazmín",
+                "Calone",
+                "Romero",
+                "Durazno",
+                "Fresia",
+                "Jacinto",
+                "Ciclamen",
+                "Violeta",
+                "Cilantro",
+                "Rosa",
+                "Nuez moscada",
+                "Mignonette"
+            ],
+            "fondo": [
+                "Almizcle blanco",
+                "Cedro",
+                "Musgo de roble",
+                "Pachulí",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -3669,9 +4411,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Romero",
+                "Salvia",
+                "Geranio"
+            ],
+            "fondo": [
+                "Olíbano",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3696,9 +4448,26 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO PROFONDO.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Bergamota",
+                "Pera",
+                "Manzana",
+                "Pomelo",
+                "Limón"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Romero",
+                "Geranio"
+            ],
+            "fondo": [
+                "Notas amaderadas",
+                "Haba tonka",
+                "Amberwood",
+                "Pachulí",
+                "Ládano"
+            ]
         }
     },
     {
@@ -3723,9 +4492,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/PROFUMO.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Romero",
+                "Salvia esclarea",
+                "Geranio"
+            ],
+            "fondo": [
+                "Olíbano",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3746,9 +4525,26 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Bergamota",
+                "Pera",
+                "Manzana",
+                "Pomelo",
+                "Limón"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Romero",
+                "Geranio"
+            ],
+            "fondo": [
+                "Notas amaderadas",
+                "Haba tonka",
+                "Amberwood",
+                "Pachulí",
+                "Ládano"
+            ]
         }
     },
     {
@@ -3769,9 +4565,19 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Romero",
+                "Salvia",
+                "Geranio"
+            ],
+            "fondo": [
+                "Olíbano",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3795,9 +4601,27 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Bergamota"
+                ,
+                "Pera",
+                "Manzana",
+                "Pomelo",
+                "Limón"
+            ],
+            "corazon": [
+                "Romero",
+                "Lavanda",
+                "Geranio"
+            ],
+            "fondo": [
+                "Notas amaderadas",
+                "Haba tonka",
+                "Amberwood",
+                "Pachulí",
+                "Ládano"
+            ]
         }
     },
     {
@@ -3818,9 +4642,20 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Hoja de bergamota"
+            ],
+            "corazon": [
+                "Iris",
+                "Aldehídos",
+                "Salvia esclarea",
+                "Raíz de lirio"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Cedro"
+            ]
         }
     },
     {
@@ -3841,9 +4676,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/MY WAY EDP.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Flor de azahar",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Nardo",
+                "Jazmín de la India"
+            ],
+            "fondo": [
+                "Almizcle blanco",
+                "Vainilla de Madagascar",
+                "Cedro de Virginia"
+            ]
         }
     },
     {
@@ -3869,9 +4714,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/GENTLEMAN BOISEE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta negra",
+                "Geranio",
+                "Cilantro"
+            ],
+            "corazon": [
+                "Iris",
+                "Vaina de cacao",
+                "Cedro"
+            ],
+            "fondo": [
+                "Notas amaderadas",
+                "Sándalo",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3896,9 +4753,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/GENTLEMAN EDP.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta negra",
+                "Lavanda",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Orris",
+                "Clavo de olor",
+                "Canela"
+            ],
+            "fondo": [
+                "Vainilla negra",
+                "Bálsamo de Tolú",
+                "Haba tonka",
+                "Benjuí",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3919,9 +4790,23 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta negra",
+                "Lavanda",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Orris",
+                "Clavo de olor",
+                "Canela"
+            ],
+            "fondo": [
+                "Vainilla negra",
+                "Bálsamo de Tolú",
+                "Haba tonka",
+                "Benjuí",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -3950,9 +4835,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/GIVENCHY GENTLEMAN SOCIETY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo",
+                "Salvia"
+            ],
+            "corazon": [
+                "Narciso francés",
+                "Vetiver haitiano",
+                "Vetiver de Madagascar"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Palo santo",
+                "Cedro"
+            ]
         }
     },
     {
@@ -3977,9 +4873,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SOCIETY AMBREE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Nuez moscada",
+                "Salvia esclarea",
+                "Bayas de enebro"
+            ],
+            "corazon": [
+                "Orris",
+                "Narciso",
+                "Sándalo",
+                "Vetiver de Madagascar",
+                "Vetiver haitiano"
+            ],
+            "fondo": [
+                "Tabaco",
+                "Vainilla de Madagascar",
+                "Bálsamo del Perú"
+            ]
         }
     },
     {
@@ -4008,9 +4918,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/Givenchy society extreme.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Nuez moscada",
+                "Menta",
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Café",
+                "Raíz de lirio",
+                "Vetiver de Madagascar",
+                "Vetiver haitiano",
+                "Vetiver",
+                "Narciso francés"
+            ],
+            "fondo": [
+                "Vainilla de Madagascar",
+                "Sándalo australiano",
+                "Cedro del Himalaya"
+            ]
         }
     },
     {
@@ -4035,9 +4960,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/TERRE DHERMES EDT.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pomelo",
+                "Naranja"
+            ],
+            "corazon": [
+                "Geranio",
+                "Pimienta"
+            ],
+            "fondo": [
+                "Vetiver",
+                "Cedro",
+                "Pachulí",
+                "Benjuí"
+            ]
         }
     },
     {
@@ -4058,9 +4994,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/INITIO SIDE EFFECT.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cereza",
+                "Pimienta rosa",
+                "Pimienta negra"
+            ],
+            "corazon": [
+                "Coñac",
+                "Hedione",
+                "Rosa"
+            ],
+            "fondo": [
+                "Tabaco",
+                "Vainilla",
+                "Haba tonka",
+                "Cedro",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -4085,9 +5035,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/INITIO OUD FOR GREATNESS.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Azafrán",
+                "Nuez moscada",
+                "Lavanda"
+            ],
+            "corazon": [
+                "Oud"
+            ],
+            "fondo": [
+                "Pachulí",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -4109,9 +5068,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/JEAN PAUL DIVINE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Calypsone",
+                "Bergamota",
+                "Bayas rojas"
+            ],
+            "corazon": [
+                "Azucena",
+                "Ylang-ylang",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Merengue",
+                "Almizcle",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -4140,9 +5111,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/GAULTIER DIVINE LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas solares",
+                "Azucena"
+            ],
+            "corazon": [
+                "Frangipani",
+                "Sal marina"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Benjuí"
+            ]
         }
     },
     {
@@ -4168,9 +5148,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BELLE.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pera"
+            ],
+            "corazon": [
+                "Vetiver"
+            ],
+            "fondo": [
+                "Vainilla"
+            ]
         }
     },
     {
@@ -4199,9 +5185,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BELLE FLOWER.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Albaricoque"
+            ],
+            "corazon": [
+                "Magnolia",
+                "Osmanthus",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Vetiver",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -4230,9 +5226,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BELLE LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pera"
+            ],
+            "corazon": [
+                "Vainilla"
+            ],
+            "fondo": [
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -4261,9 +5263,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BELLE PARADISE GARDEN.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Loto azul"
+            ],
+            "corazon": [
+                "Iris"
+            ],
+            "fondo": [
+                "Vainilla"
+            ]
         }
     },
     {
@@ -4284,9 +5292,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE BEAU.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota"
+            ],
+            "corazon": [
+                "Coco"
+            ],
+            "fondo": [
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -4315,9 +5329,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE BEAU LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Piña",
+                "Iris",
+                "Jengibre",
+                "Ciprés"
+            ],
+            "corazon": [
+                "Coco",
+                "Notas amaderadas"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Sándalo",
+                "Ámbar",
+                "Ámbar gris"
+            ]
         }
     },
     {
@@ -4346,9 +5373,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE BEAU PARADISE GARDEN.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas verdes",
+                "Notas acuosas",
+                "Menta",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Coco",
+                "Higo",
+                "Sal"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -4377,9 +5416,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE MALE ELIXIR PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Menta"
+            ],
+            "corazon": [
+                "Vainilla",
+                "Benjuí"
+            ],
+            "fondo": [
+                "Miel",
+                "Haba tonka",
+                "Tabaco"
+            ]
         }
     },
     {
@@ -4408,9 +5457,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE MALE ELIXIR ABSOLU.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Ciruela",
+                "Canela",
+                "Cardamomo",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Davana",
+                "Artemisia"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Benjuí",
+                "Ambreta",
+                "Pachulí",
+                "Ládano"
+            ]
         }
     },
     {
@@ -4439,9 +5503,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE MALE LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Iris"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Notas orientales",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -4462,9 +5535,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE MALE LOVER.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta blanca",
+                "Lima dedo"
+            ],
+            "corazon": [
+                "Ámbar gris",
+                "Notas marinas",
+                "Almizcle"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -4490,9 +5573,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/SCANDAL ABSOLU.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Nardo"
+            ],
+            "corazon": [
+                "Higo negro"
+            ],
+            "fondo": [
+                "Sándalo"
+            ]
         }
     },
     {
@@ -4517,9 +5606,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/SCANDAL INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Ylang-ylang"
+            ],
+            "fondo": [
+                "Absoluto de vainilla"
+            ]
         }
     },
     {
@@ -4541,9 +5636,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SCANDAL ABSOLU.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mirabel"
+            ],
+            "corazon": [
+                "Castaña"
+            ],
+            "fondo": [
+                "Sándalo"
+            ]
         }
     },
     {
@@ -4568,9 +5669,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SCANDALL.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mandarina",
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Caramelo",
+                "Haba tonka"
+            ],
+            "fondo": [
+                "Vetiver"
+            ]
         }
     },
     {
@@ -4594,9 +5703,17 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mandarina",
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Caramelo",
+                "Haba tonka"
+            ],
+            "fondo": [
+                "Vetiver"
+            ]
         }
     },
     {
@@ -4621,9 +5738,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SCANDAL POUR HOMME INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Vetiver"
+            ],
+            "fondo": [
+                "Cuero"
+            ]
         }
     },
     {
@@ -4652,9 +5775,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SCANDAL LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Geranio"
+            ],
+            "corazon": [
+                "Haba tonka"
+            ],
+            "fondo": [
+                "Sándalo"
+            ]
         }
     },
     {
@@ -4680,9 +5809,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ULTRA MALE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pera",
+                "Lavanda",
+                "Menta",
+                "Bergamota",
+                "Limón"
+            ],
+            "corazon": [
+                "Canela",
+                "Salvia esclarea",
+                "Alcaravea"
+            ],
+            "fondo": [
+                "Vainilla negra",
+                "Ámbar",
+                "Pachulí",
+                "Cedro"
+            ]
         }
     },
     {
@@ -4707,9 +5851,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/KENZO HOMME EDP.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas"
+            ],
+            "corazon": [
+                "Cuero"
+            ],
+            "fondo": [
+                "Pachulí"
+            ]
         }
     },
     {
@@ -4730,9 +5880,15 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas"
+            ],
+            "corazon": [
+                "Cuero"
+            ],
+            "fondo": [
+                "Pachulí"
+            ]
         }
     },
     {
@@ -4756,9 +5912,16 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas"
+            ],
+            "corazon": [
+                "Lavanda"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Madera de gaiac"
+            ]
         }
     },
     {
@@ -4784,9 +5947,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/KENZO HOMME INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Calypsone",
+                "Pimienta rosa",
+                "Especias"
+            ],
+            "corazon": [
+                "Higo",
+                "Higuera",
+                "Vetiver"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Akigalawood",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -4811,9 +5987,16 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/KENZO SANTAL MARIN.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas"
+            ],
+            "corazon": [
+                "Lavanda"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Madera de gaiac"
+            ]
         }
     },
     {
@@ -4834,9 +6017,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ANGELS SHARE.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Coñac"
+            ],
+            "corazon": [
+                "Canela",
+                "Haba tonka",
+                "Roble",
+                "Hedione"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Praliné",
+                "Sándalo",
+                "Almendra confitada"
+            ]
         }
     },
     {
@@ -4866,9 +6061,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BLACK PHANTOM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Ron"
+            ],
+            "corazon": [
+                "Chocolate negro",
+                "Café",
+                "Almendra",
+                "Heliotropo"
+            ],
+            "fondo": [
+                "Caramelo",
+                "Caña de azúcar",
+                "Sándalo",
+                "Vainilla",
+                "Haba tonka",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -4889,9 +6098,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LACOSTE L12.12 BLANC.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas verdes",
+                "Lima dedo"
+            ],
+            "corazon": [
+                "Eucalipto",
+                "Cardamomo"
+            ],
+            "fondo": [
+                "Pino",
+                "Cedro"
+            ]
         }
     },
     {
@@ -4915,9 +6133,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Pimienta rosa",
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Salvia esclarea",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Amber Xtreme",
+                "Sándalo",
+                "Pachulí",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -4942,9 +6172,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LACOSTE ORIGINAL.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Pimienta rosa",
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Salvia esclarea",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Amber Xtreme",
+                "Sándalo",
+                "Pachulí",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -4965,9 +6207,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pera",
+                "Bergamota",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Rosa",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Almizcle blanco",
+                "Vainilla",
+                "Pachulí",
+                "Cedro"
+            ]
         }
     },
     {
@@ -4996,9 +6250,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA VIE EST BELLE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Casis",
+                "Pera"
+            ],
+            "corazon": [
+                "Iris",
+                "Jazmín",
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Praliné",
+                "Vainilla",
+                "Pachulí",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -5028,9 +6294,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ASAD.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta negra",
+                "Tabaco",
+                "Piña"
+            ],
+            "corazon": [
+                "Pachulí",
+                "Café",
+                "Iris"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Ámbar",
+                "Maderas secas",
+                "Benjuí",
+                "Ládano"
+            ]
         }
     },
     {
@@ -5060,9 +6340,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ASAD BOURBON.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Mirabel",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Cacao",
+                "Nuez moscada",
+                "Davana"
+            ],
+            "fondo": [
+                "Vainilla bourbon",
+                "Ámbar",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -5092,9 +6384,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ASAD ELIXIR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Azafrán",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Tabaco",
+                "Vainilla",
+                "Cedro"
+            ],
+            "fondo": [
+                "Olíbano",
+                "Ámbar claro",
+                "Pachulí",
+                "Cachemira"
+            ]
         }
     },
     {
@@ -5124,9 +6429,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ASAD ZANZIBAR.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Pimienta negra"
+            ],
+            "corazon": [
+                "Agua de coco",
+                "Iris",
+                "Sal"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Incienso"
+            ]
         }
     },
     {
@@ -5151,9 +6466,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/ATHEERI.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Flor de la pasión",
+                "Gota de rocío"
+            ],
+            "corazon": [
+                "Orquídea",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Amberwood"
+            ]
         }
     },
     {
@@ -5183,9 +6507,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ATLAS.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Sal",
+                "Limón"
+            ],
+            "corazon": [
+                "Davana",
+                "Iris"
+            ],
+            "fondo": [
+                "Ámbar gris",
+                "Musgo de roble",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -5218,9 +6553,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/BADEE AL OUD AMETHYST.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Rosa turca",
+                "Rosa búlgara",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Oud",
+                "Ámbar",
+                "Vainilla"
+            ]
         }
     },
     {
@@ -5250,9 +6596,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HONOR AND GLORY.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Piña",
+                "Crema brûlée"
+            ],
+            "corazon": [
+                "Canela",
+                "Cúrcuma",
+                "Pimienta negra",
+                "Benjuí"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Sándalo",
+                "Cachemira",
+                "Musgo"
+            ]
         }
     },
     {
@@ -5284,9 +6643,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/NOBLE BLUSH.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Leche de rosas"
+            ],
+            "corazon": [
+                "Merengue",
+                "Almendra"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Almizcle",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -5316,9 +6684,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/OUD FOR GLORY.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Azafrán",
+                "Nuez moscada",
+                "Lavanda"
+            ],
+            "corazon": [
+                "Oud",
+                "Pachulí"
+            ],
+            "fondo": [
+                "Oud",
+                "Pachulí",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -5347,9 +6726,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/SUBLIME.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Lichi",
+                "Rosa"
+            ],
+            "corazon": [
+                "Ciruela",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Musgo",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -5379,9 +6769,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/ECLAIRE.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Caramelo",
+                "Leche",
+                "Azúcar"
+            ],
+            "corazon": [
+                "Miel",
+                "Flores blancas"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Praliné",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -5411,9 +6812,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/ECLAIRE BANOFFI.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Banana",
+                "Dulce de leche"
+            ],
+            "corazon": [
+                "Vainilla",
+                "Crema batida"
+            ],
+            "fondo": [
+                "Praliné",
+                "Galleta",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -5443,9 +6854,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/ECLAIRE PISTACHE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Crema de pistacho",
+                "Pistacho"
+            ],
+            "corazon": [
+                "Cacao",
+                "Crema batida",
+                "Coco"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Leche",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -5475,9 +6897,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/FAKHAR BLACK.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Bergamota",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia",
+                "Bayas de enebro",
+                "Geranio"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Cedro",
+                "Amberwood",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -5506,9 +6942,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/FAKHAR EXTRAIT.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pomelo",
+                "Cardamomo",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Nardos",
+                "Notas solares",
+                "Artemisia"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Cachemira",
+                "Cuero",
+                "Ládano"
+            ]
         }
     },
     {
@@ -5533,9 +6982,27 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/FAKHAR ROSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Frutas",
+                "Azucena",
+                "Granada",
+                "Aldehídos"
+            ],
+            "corazon": [
+                "Nardos",
+                "Jazmín",
+                "Gardenia",
+                "Ylang-ylang",
+                "Madreselva",
+                "Rosa",
+                "Peonía"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Almizcle blanco",
+                "Sándalo",
+                "Ambroxan"
+            ]
         }
     },
     {
@@ -5556,9 +7023,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAYAATIM.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Canela",
+                "Notas amaderadas"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Vainilla"
+            ]
         }
     },
     {
@@ -5585,9 +7061,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/HER CONFESSION.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Místico"
+            ],
+            "corazon": [
+                "Nardos",
+                "Jazmín",
+                "Incienso",
+                "Mahonial"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Almizcle",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -5610,9 +7098,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HIS CONFESSION.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Canela",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Iris",
+                "Benjuí",
+                "Ciprés",
+                "Mahonial"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Ámbar",
+                "Incienso",
+                "Cedro",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -5633,9 +7137,20 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Piña",
+                "Pimienta negra"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Amberwood",
+                "Cedro",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -5667,9 +7182,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/KHAMRAH.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Nuez moscada",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Dátiles",
+                "Praliné",
+                "Nardos",
+                "Mahonial"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Amberwood",
+                "Mirra",
+                "Benjuí",
+                "Akigalawood"
+            ]
         }
     },
     {
@@ -5690,9 +7221,25 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Nuez moscada",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Dátiles",
+                "Praliné",
+                "Nardos",
+                "Mahonial"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Amberwood",
+                "Mirra",
+                "Benjuí",
+                "Akigalawood"
+            ]
         }
     },
     {
@@ -5724,9 +7271,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/KHAMRAH DUKHAN.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Especias",
+                "Pimiento",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Incienso",
+                "Ládano",
+                "Flor de azahar",
+                "Pachulí"
+            ],
+            "fondo": [
+                "Praliné",
+                "Tabaco",
+                "Haba tonka",
+                "Ámbar",
+                "Benjuí"
+            ]
         }
     },
     {
@@ -5758,9 +7320,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/KHAMRAH QAHWA.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Cardamomo",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Praliné",
+                "Frutas confitadas",
+                "Flores blancas"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Café",
+                "Haba tonka",
+                "Benjuí",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -5787,9 +7363,27 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MAAHIR LEGACY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lima",
+                "Menta",
+                "Pomelo",
+                "Lavanda",
+                "Piña"
+            ],
+            "corazon": [
+                "Pimienta negra",
+                "Romero",
+                "Bayas de enebro",
+                "Geranio",
+                "Olíbano"
+            ],
+            "fondo": [
+                "Ambroxan",
+                "Vetiver",
+                "Musgo de roble",
+                "Cachemira",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -5817,9 +7411,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/MAYAR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lichi",
+                "Frambuesa",
+                "Hoja de violeta"
+            ],
+            "corazon": [
+                "Rosa blanca",
+                "Peonía",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Vainilla"
+            ]
         }
     },
     {
@@ -5846,9 +7451,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/QAED AL FURSAN.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Piña",
+                "Azafrán"
+            ],
+            "corazon": [
+                "Abeto balsámico",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Cedro",
+                "Ámbar",
+                "Oud"
+            ]
         }
     },
     {
@@ -5873,9 +7488,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/QAED AL FURSAN UNLIMITED.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Coco",
+                "Piña",
+                "Cítricos"
+            ],
+            "corazon": [
+                "Ylang-ylang",
+                "Frangipani",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Almizcle",
+                "Sándalo",
+                "Notas dulces"
+            ]
         }
     },
     {
@@ -5900,9 +7528,26 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/QAED AL FURSAN UNTAMED.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Cardamomo",
+                "Mandarina",
+                "Nuez moscada"
+            ],
+            "corazon": [
+                "Caramelo",
+                "Lavanda",
+                "Salvia esclarea",
+                "Geranio",
+                "Ciprés"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Cedro",
+                "Olíbano",
+                "Ládano",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -5927,9 +7572,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/SEHR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Almendra amarga",
+                "Canela"
+            ],
+            "corazon": [
+                "Akigalawood",
+                "Pomarose",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Absoluto de vainilla",
+                "Haba tonka",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -5959,9 +7615,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/VINTAGE RADIO.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Salvia",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Ciruela",
+                "Palo santo",
+                "Pimienta negra"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Oud"
+            ]
         }
     },
     {
@@ -5991,9 +7658,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Orquídea",
+                "Heliotropo",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Acorde gourmand",
+                "Frutas tropicales"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Almizcle",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -6014,9 +7692,20 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Orquídea",
+                "Heliotropo",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Acorde gourmand",
+                "Frutas tropicales"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Almizcle",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -6046,9 +7735,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA CANDY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mandarina verde",
+                "Casis"
+            ],
+            "corazon": [
+                "Caramelo efervescente de fresa",
+                "Gardenia"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Sirope de vainilla",
+                "Almizcle",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -6075,9 +7775,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA ELIXIR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "S'mores de fresa",
+                "Casis"
+            ],
+            "corazon": [
+                "Flor de azahar",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Caramelo",
+                "Ámbar",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -6104,9 +7815,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA MOI.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Jazmín",
+                "Durazno"
+            ],
+            "corazon": [
+                "Caramelo",
+                "Ámbar"
+            ],
+            "fondo": [
+                "Pachulí",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -6136,9 +7856,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA TOUS.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mango",
+                "Coco",
+                "Maracuyá"
+            ],
+            "corazon": [
+                "Jazmín",
+                "Flor de azahar",
+                "Heliotropo"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Almizcle",
+                "Cachemira"
+            ]
         }
     },
     {
@@ -6163,6 +7895,16 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SANTAL 33.JPEG",
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Acorde de violeta",
+                "Cardamomo",
+                "Iris",
+                "Ambrox",
+                "Cedro",
+                "Cuero",
+                "Sándalo",
+                "Papiro"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -6190,9 +7932,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SUMMER HAMMER.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mango",
+                "Piña",
+                "Coco",
+                "Bergamota",
+                "Ron blanco"
+            ],
+            "corazon": [
+                "Leche de coco",
+                "Flores blancas",
+                "Notas marinas"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Sándalo",
+                "Ámbar",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -6213,9 +7970,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/CITY OF STARS.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lima",
+                "Naranja sanguina",
+                "Mandarina sanguina",
+                "Limón",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Flor de tiaré"
+            ],
+            "fondo": [
+                "Notas empolvadas",
+                "Almizcle",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -6240,9 +8009,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LV IMAGINATION.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cidra",
+                "Bergamota de Calabria",
+                "Naranja siciliana"
+            ],
+            "corazon": [
+                "Neroli tunecino",
+                "Jengibre nigeriano",
+                "Canela de Ceilán"
+            ],
+            "fondo": [
+                "Té negro chino",
+                "Ambroxan",
+                "Madera de gaiac",
+                "Olíbano"
+            ]
         }
     },
     {
@@ -6267,6 +8049,16 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LV OMBRE NOMADE.jpg",
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Oud",
+                "Incienso",
+                "Frambuesa",
+                "Rosa",
+                "Azafrán",
+                "Abedul",
+                "Benjuí",
+                "Amberwood"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -6294,9 +8086,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LV PACIFIC CHILL.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cidra",
+                "Naranja",
+                "Limón",
+                "Menta",
+                "Casis",
+                "Cilantro"
+            ],
+            "corazon": [
+                "Albaricoque",
+                "Albahaca",
+                "Semillas de zanahoria",
+                "Rosa de mayo"
+            ],
+            "fondo": [
+                "Higo",
+                "Dátil",
+                "Ambreta"
+            ]
         }
     },
     {
@@ -6321,9 +8129,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BY THE FIREPLACE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Clavo de olor",
+                "Pimienta rosa",
+                "Flor de azahar"
+            ],
+            "corazon": [
+                "Castaña",
+                "Madera de gaiac",
+                "Enebro"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Bálsamo del Perú",
+                "Cashmeran"
+            ]
         }
     },
     {
@@ -6344,9 +8164,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/JAZZ CLUB.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Neroli",
+                "Limón"
+            ],
+            "corazon": [
+                "Ron",
+                "Aceite de vetiver de Java",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Hoja de tabaco",
+                "Vaina de vainilla",
+                "Styrax"
+            ]
         }
     },
     {
@@ -6371,9 +8203,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/CEDRAT BOISE.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón siciliano",
+                "Bergamota",
+                "Casis",
+                "Notas especiadas"
+            ],
+            "corazon": [
+                "Notas frutales",
+                "Hoja de pachulí",
+                "Jazmín acuático"
+            ],
+            "fondo": [
+                "Cedro",
+                "Cuero",
+                "Sándalo",
+                "Vainilla",
+                "Almizcle blanco",
+                "Musgo"
+            ]
         }
     },
     {
@@ -6405,9 +8253,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/INSTANT CRUSH.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Azafrán",
+                "Jengibre",
+                "Mandarina siciliana",
+                "Bergamota siciliana"
+            ],
+            "corazon": [
+                "Amberwood",
+                "Rosa marroquí",
+                "Jazmín egipcio",
+                "Hoja de pachulí de Indonesia"
+            ],
+            "fondo": [
+                "Vainilla de Madagascar",
+                "Almizcle blanco",
+                "Sándalo",
+                "Musgo de roble"
+            ]
         }
     },
     {
@@ -6439,9 +8302,28 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/RED TOBACCO.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Oud",
+                "Incienso",
+                "Azafrán",
+                "Nuez moscada",
+                "Manzana verde",
+                "Pera blanca"
+            ],
+            "corazon": [
+                "Pachulí",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Tabaco",
+                "Vainilla de Madagascar",
+                "Ámbar",
+                "Sándalo",
+                "Madera de gaiac",
+                "Almizcle blanco",
+                "Vetiver haitiano"
+            ]
         }
     },
     {
@@ -6462,9 +8344,28 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MEMO ITALIAN LEATHER.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cuero",
+                "Hoja de tomate",
+                "Vainilla"
+            ],
+            "corazon": [
+                "Hoja de tomate",
+                "Gálbano",
+                "Ládano",
+                "Raíz de lirio",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Cuero",
+                "Absoluto de vainilla",
+                "Benjuí",
+                "Bálsamo de Tolú",
+                "Mirra",
+                "Opopónaco",
+                "Sándalo",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -6486,9 +8387,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/MONCLER POUR FEMME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas empolvadas",
+                "Nieve",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Heliotropo",
+                "Jazmín sambac"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Sándalo",
+                "Ámbar",
+                "Cedro"
+            ]
         }
     },
     {
@@ -6514,9 +8427,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MONCLER POUR HOMME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas verdes",
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Pino"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Cedro",
+                "Vetiver",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -6541,9 +8464,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ARABIANS TONKA.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Azafrán",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Oud",
+                "Rosa búlgara"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Caña de azúcar",
+                "Ámbar",
+                "Almizcle blanco",
+                "Musgo de roble"
+            ]
         }
     },
     {
@@ -6564,9 +8499,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/EXPLORER.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Pimienta rosa",
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Vetiver haitiano",
+                "Cuero"
+            ],
+            "fondo": [
+                "Ambroxan",
+                "Akigalawood",
+                "Hoja de pachulí de Indonesia",
+                "Vaina de cacao"
+            ]
         }
     },
     {
@@ -6591,9 +8538,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/EXPLORER PLATINUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Hoja de violeta"
+            ],
+            "corazon": [
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Madera de cedro"
+            ]
         }
     },
     {
@@ -6619,9 +8572,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/EXPLORER ULTRA BLUE.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota siciliana",
+                "Pimienta rosa",
+                "Frutas exóticas"
+            ],
+            "corazon": [
+                "Notas marinas",
+                "Ámbar gris"
+            ],
+            "fondo": [
+                "Notas amaderadas",
+                "Hoja de pachulí de Indonesia",
+                "Cuero"
+            ]
         }
     },
     {
@@ -6646,9 +8610,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LEGEND EDP.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Hoja de violeta",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Notas amaderadas",
+                "Jazmín",
+                "Magnolia"
+            ],
+            "fondo": [
+                "Musgo de roble",
+                "Cuero"
+            ]
         }
     },
     {
@@ -6673,9 +8647,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MONTBLANC LEGEND.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Piña",
+                "Bergamota",
+                "Cedrón"
+            ],
+            "corazon": [
+                "Manzana roja",
+                "Frutas secas",
+                "Musgo de roble",
+                "Geranio",
+                "Cumarina",
+                "Rosa"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -6696,9 +8685,19 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Hoja de violeta",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Notas amaderadas",
+                "Jazmín",
+                "Magnolia"
+            ],
+            "fondo": [
+                "Musgo de roble",
+                "Cuero"
+            ]
         }
     },
     {
@@ -6719,9 +8718,24 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Piña",
+                "Bergamota",
+                "Cedrón"
+            ],
+            "corazon": [
+                "Manzana roja",
+                "Frutas secas",
+                "Musgo de roble",
+                "Geranio",
+                "Cumarina",
+                "Rosa"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -6742,9 +8756,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MONTBLANC LEGEND SPIRIT.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Pimienta rosa",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Cardamomo",
+                "Lavanda",
+                "Notas acuáticas"
+            ],
+            "fondo": [
+                "Almizcle blanco",
+                "Cachemira",
+                "Musgo de roble",
+                "Maderas blancas"
+            ]
         }
     },
     {
@@ -6769,9 +8796,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/FRESH COUTURE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Mandarina",
+                "Ylang-ylang"
+            ],
+            "corazon": [
+                "Peonía",
+                "Frambuesa",
+                "Osmanthus"
+            ],
+            "fondo": [
+                "Ambroxan",
+                "Notas amaderadas",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -6796,9 +8835,26 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MOSCHINO TOY BOY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Pera",
+                "Nuez moscada de Indonesia",
+                "Elemi",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Rosa",
+                "Clavo de olor",
+                "Magnolia",
+                "Lino"
+            ],
+            "fondo": [
+                "Vetiver haitiano",
+                "Cashmeran",
+                "Sándalo",
+                "Sylkolide",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -6823,9 +8879,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/NAUTICA VOYAGE.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Hojas verdes",
+                "Manzana"
+            ],
+            "corazon": [
+                "Loto",
+                "Mimosa"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Cedro",
+                "Musgo de roble",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -6850,9 +8917,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/CUOIUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas animales",
+                "Notas amaderadas"
+            ],
+            "corazon": [
+                "Violeta"
+            ],
+            "fondo": [
+                "Cuero",
+                "Incienso",
+                "Aceite de cade",
+                "Cedro",
+                "Ládano",
+                "Pachulí",
+                "Vainilla"
+            ]
         }
     },
     {
@@ -6884,9 +8964,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MEGAMARE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Limón"
+            ],
+            "corazon": [
+                "Algas marinas",
+                "Calone",
+                "Hedione"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Ambroxan",
+                "Cedro"
+            ]
         }
     },
     {
@@ -6916,9 +9007,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ALTHAIR.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Flor de azahar",
+                "Cardamomo",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Vainilla bourbon",
+                "Elemi"
+            ],
+            "fondo": [
+                "Praliné",
+                "Ambroxan",
+                "Madera de gaiac",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -6939,9 +9043,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/GALLOWAY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cítricos",
+                "Pimienta"
+            ],
+            "corazon": [
+                "Flor de azahar",
+                "Iris"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -6962,9 +9075,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HEROD.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Pepperwood"
+            ],
+            "corazon": [
+                "Hoja de tabaco",
+                "Incienso",
+                "Osmanthus",
+                "Ládano"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Iso E Super",
+                "Cedro",
+                "Almizcle",
+                "Nagarmotha",
+                "Vetiver",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -6991,9 +9120,27 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LAYTON.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Lavanda",
+                "Bergamota",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Geranio",
+                "Violeta",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Cardamomo",
+                "Sándalo",
+                "Pimienta",
+                "Madera de gaiac",
+                "Pachulí",
+                "Cumarina",
+                "Ambermax"
+            ]
         }
     },
     {
@@ -7014,9 +9161,36 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LAYTON EXCLUSIF.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Almendra",
+                "Mandarina",
+                "Bergamota",
+                "Notas acuosas",
+                "Manzana",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Civet",
+                "Rosa",
+                "Geranio",
+                "Gardenia",
+                "Nenúfar",
+                "Lavanda",
+                "Canela"
+            ],
+            "fondo": [
+                "Oud laosiano",
+                "Madera de gaiac",
+                "Vainilla",
+                "Café",
+                "Sándalo",
+                "Ámbar",
+                "Hoja de pachulí de Indonesia",
+                "Pimienta rosa",
+                "Musgo de roble",
+                "Nagarmotha",
+                "Cuero"
+            ]
         }
     },
     {
@@ -7046,9 +9220,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/PEGASUS.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Heliotropo",
+                "Comino",
+                "Bergamota",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Almendra amarga",
+                "Lavanda",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Sándalo",
+                "Ámbar",
+                "Almizcle",
+                "Cedro"
+            ]
         }
     },
     {
@@ -7069,9 +9258,22 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mandarina",
+                "Pimienta rosa",
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia esclarea",
+                "Vetiver",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Roble",
+                "Olíbano",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -7096,9 +9298,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/PRADA LUNA ROSSA CARBON.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Pimienta"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Notas metálicas",
+                "Notas acuáticas",
+                "Carbón",
+                "Tintura de tierra"
+            ],
+            "fondo": [
+                "Ambroxan",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -7127,9 +9341,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/FAME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mango",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Jazmín",
+                "Olíbano"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -7154,9 +9377,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/FAME INTENSE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Agua de coco",
+                "Pimienta rosa",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Jazmín",
+                "Incienso",
+                "Ylang-ylang"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Almizcle",
+                "Cedro de Virginia"
+            ]
         }
     },
     {
@@ -7177,9 +9412,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/FAME PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mango",
+                "Bergamota",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Jazmín",
+                "Olíbano",
+                "Pachulí"
+            ],
+            "fondo": [
+                "Benjuí",
+                "Sándalo",
+                "Almizcle",
+                "Helvetolide"
+            ]
         }
     },
     {
@@ -7208,9 +9456,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/INVICTUS PARFUM.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas marinas",
+                "Lavanda",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Jabón",
+                "Hoja de violeta",
+                "Mirto"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Cashmeran",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -7239,9 +9499,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/INVICTUS VICTORY.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Limón"
+            ],
+            "corazon": [
+                "Olíbano",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -7270,9 +9540,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/INVICTUS VICTORY ELIXIR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Cardamomo",
+                "Pimienta negra"
+            ],
+            "corazon": [
+                "Incienso",
+                "Pachulí"
+            ],
+            "fondo": [
+                "Vaina de vainilla",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -7297,9 +9577,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LADY MILLION PRIVE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas amaderadas",
+                "Flor de azahar"
+            ],
+            "corazon": [
+                "Vainilla",
+                "Frambuesa",
+                "Heliotropo"
+            ],
+            "fondo": [
+                "Cacao",
+                "Miel",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -7325,6 +9616,12 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MILLION GOLD.JPEG",
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Sándalo",
+                "Especias",
+                "Mandarina",
+                "Cedro"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -7352,9 +9649,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ONE MILLION EDT.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mandarina sanguina",
+                "Pomelo",
+                "Menta"
+            ],
+            "corazon": [
+                "Canela",
+                "Notas especiadas",
+                "Rosa"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Cuero",
+                "Notas amaderadas",
+                "Pachulí hindú"
+            ]
         }
     },
     {
@@ -7375,9 +9685,22 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mandarina sanguina",
+                "Pomelo",
+                "Menta"
+            ],
+            "corazon": [
+                "Canela",
+                "Notas especiadas",
+                "Rosa"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Cuero",
+                "Notas amaderadas",
+                "Pachulí hindú"
+            ]
         }
     },
     {
@@ -7399,6 +9722,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/1 MILLION PARFUM.png",
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Nardos",
+                "Notas solares",
+                "Sal",
+                "Monoi",
+                "Ámbar gris",
+                "Cuero",
+                "Cashmeran",
+                "Ládano",
+                "Pino"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -7426,9 +9760,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/1MILLION PRIVE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Mandarina sanguina"
+            ],
+            "corazon": [
+                "Tabaco",
+                "Mirra"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -7457,9 +9800,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/1MILLION ROYAL.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo",
+                "Mandarina",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia",
+                "Hoja de violeta"
+            ],
+            "fondo": [
+                "Benjuí",
+                "Cedro",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -7483,9 +9838,23 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Ralladura de limón",
+                "Limón de Amalfi"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Notas terrosas",
+                "Manzana",
+                "Humo",
+                "Pachulí"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Lavanda",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -7510,9 +9879,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/PHANTOM INTENSE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo",
+                "Limón",
+                "Bergamota",
+                "Ruibarbo"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Cedro",
+                "Geranio",
+                "Pachulí"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Bálsamo de Tolú",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -7534,9 +9917,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/PHANTOM PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo",
+                "Bergamota",
+                "Ruibarbo",
+                "Limón"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Cedro",
+                "Pachulí",
+                "Geranio"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Bálsamo de Tolú",
+                "Vetiver haitiano"
+            ]
         }
     },
     {
@@ -7557,9 +9954,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/PURE XS NIGHT.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Ginseng",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Cacao",
+                "Vainilla",
+                "Canela"
+            ],
+            "fondo": [
+                "Caramelo",
+                "Mirra"
+            ]
         }
     },
     {
@@ -7583,9 +9990,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Piña",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Pachulí",
+                "Madera de cedro",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Musgo de roble",
+                "Notas amaderadas",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -7610,9 +10029,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS BLACK.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota",
+                "Piña",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Pachulí",
+                "Madera de cedro",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Musgo de roble",
+                "Notas amaderadas",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -7637,9 +10068,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS ELIXIR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Menta",
+                "Bergamota",
+                "Artemisa"
+            ],
+            "corazon": [
+                "Chocolate negro",
+                "Lavanda",
+                "Benjuí"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Almizcle blanco"
+            ]
         }
     },
     {
@@ -7660,9 +10103,18 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Notas marinas",
+                "Jazmín egipcio"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Notas minerales",
+                "Ámbar gris"
+            ]
         }
     },
     {
@@ -7687,9 +10139,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS FIRE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Salvia esclarea"
+            ],
+            "corazon": [
+                "Notas marinas",
+                "Jazmín egipcio"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Notas minerales",
+                "Ámbar gris"
+            ]
         }
     },
     {
@@ -7714,9 +10175,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/HAWAS FOR HER.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Granada",
+                "Manzana",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Iris",
+                "Jazmín sambac",
+                "Cítricos"
+            ],
+            "fondo": [
+                "Praliné",
+                "Pachulí",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -7743,9 +10216,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Bergamota",
+                "Limón",
+                "Canela"
+            ],
+            "corazon": [
+                "Notas acuáticas",
+                "Ciruela",
+                "Flor de azahar",
+                "Cardamomo"
+            ],
+            "fondo": [
+                "Ámbar gris",
+                "Almizcle",
+                "Pachulí",
+                "Madera a la deriva"
+            ]
         }
     },
     {
@@ -7769,9 +10257,23 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Limón italiano",
+                "Bergamota siciliana",
+                "Anís estrellado"
+            ],
+            "corazon": [
+                "Ciruela",
+                "Flor de azahar",
+                "Cardamomo"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Ámbar",
+                "Madera a la deriva",
+                "Musgo"
+            ]
         }
     },
     {
@@ -7796,9 +10298,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS ICE.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Limón italiano",
+                "Bergamota siciliana",
+                "Anís estrellado"
+            ],
+            "corazon": [
+                "Ciruela",
+                "Flor de azahar",
+                "Cardamomo"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Ámbar",
+                "Madera a la deriva",
+                "Musgo"
+            ]
         }
     },
     {
@@ -7819,9 +10335,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Jengibre",
+                "Bergamota",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Canela",
+                "Té verde",
+                "Neroli"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Notas amaderadas",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -7846,9 +10374,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS KOBRA.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Jengibre",
+                "Bergamota",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Canela",
+                "Té verde",
+                "Neroli"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Notas amaderadas",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -7872,9 +10412,22 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Piña",
+                "Naranja",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Ámbar",
+                "Raíz de lirio",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Almizcle",
+                "Cashmeran",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -7899,9 +10452,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS MALIBU.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Piña",
+                "Naranja",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Ámbar",
+                "Raíz de lirio",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Almizcle",
+                "Cashmeran",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -7925,9 +10491,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Agua de coco",
+                "Hoja de higo",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Coco",
+                "Higo",
+                "Menta"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Haba tonka",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -7952,9 +10530,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS TROPICAL.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Agua de coco",
+                "Hoja de higo",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Coco",
+                "Higo",
+                "Menta"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Haba tonka",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -7978,6 +10568,13 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Lima",
+                "Pachulí",
+                "Romero",
+                "Manzana verde",
+                "Ámbar"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -8005,6 +10602,13 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS VERDE.png",
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Lima",
+                "Pachulí",
+                "Romero",
+                "Manzana verde",
+                "Ámbar"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -8028,9 +10632,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/NO4 AMOUR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Ralladura de limón",
+                "Flor de azahar amarga"
+            ],
+            "corazon": [
+                "Especias aromáticas"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Ámbar",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -8055,9 +10668,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/NO4 NEON.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pomelo",
+                "Yuzu",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Mango",
+                "Melón",
+                "Gálbano"
+            ],
+            "fondo": [
+                "Notas ozónicas",
+                "Notas solares",
+                "Aldehídos"
+            ]
         }
     },
     {
@@ -8082,9 +10707,29 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/TOM FORD BITTER PEACH.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Durazno",
+                "Naranja sanguina",
+                "Cardamomo",
+                "Heliotropo"
+            ],
+            "corazon": [
+                "Ron",
+                "Coñac",
+                "Davana",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Hoja de pachulí de Indonesia",
+                "Haba tonka",
+                "Sándalo",
+                "Benjuí",
+                "Cashmeran",
+                "Ládano",
+                "Styrax",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -8111,9 +10756,35 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/TOM FORD BLACK ORCHID.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Trufa",
+                "Gardenia",
+                "Grosella negra",
+                "Ylang-ylang",
+                "Jazmín",
+                "Bergamota",
+                "Mandarina",
+                "Limón de Amalfi"
+            ],
+            "corazon": [
+                "Orquídea",
+                "Especias",
+                "Gardenia",
+                "Notas frutales",
+                "Ylang-ylang",
+                "Jazmín",
+                "Loto"
+            ],
+            "fondo": [
+                "Chocolate mexicano",
+                "Pachulí",
+                "Vainilla",
+                "Incienso",
+                "Ámbar",
+                "Sándalo",
+                "Vetiver",
+                "Almizcle blanco"
+            ]
         }
     },
     {
@@ -8134,9 +10805,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/TOM FORD CHERRY SMOKE.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cereza ácida",
+                "Azafrán"
+            ],
+            "corazon": [
+                "Cuero",
+                "Olivo",
+                "Osmanthus chino",
+                "Albaricoque"
+            ],
+            "fondo": [
+                "Humo",
+                "Notas amaderadas",
+                "Aceite de cipriol (nagarmotha)"
+            ]
         }
     },
     {
@@ -8157,9 +10840,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/TOM FORD COSTA AZZURRA PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón italiano"
+            ],
+            "corazon": [
+                "Ciprés",
+                "Roble"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Ládano"
+            ]
         }
     },
     {
@@ -8184,9 +10875,29 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/TOM FORD LOST CHERRY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Almendra amarga",
+                "Cereza negra",
+                "Licor de cereza"
+            ],
+            "corazon": [
+                "Cereza ácida",
+                "Ciruela",
+                "Rosa turca",
+                "Jazmín sambac"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Canela",
+                "Bálsamo del Perú",
+                "Sándalo",
+                "Benjuí",
+                "Clavo de olor",
+                "Cedro",
+                "Pachulí",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -8211,9 +10922,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/TOM FORD OMBRÉ LEATHER.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Cuero",
+                "Jazmín sambac"
+            ],
+            "fondo": [
+                "Ámbar",
+                "Musgo",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -8237,9 +10957,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana roja",
+                "Cardamomo",
+                "Bergamota de Calabria"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Geranio bourbon",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Hoja de tabaco",
+                "Pachulí",
+                "Vetiver haitiano"
+            ]
         }
     },
     {
@@ -8263,9 +10995,15 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Vainilla"
+            ],
+            "corazon": [
+                "Lavanda"
+            ],
+            "fondo": [
+                "Vetiver"
+            ]
         }
     },
     {
@@ -8289,9 +11027,16 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Coco",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Madera de ámbar"
+            ]
         }
     },
     {
@@ -8316,9 +11061,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/DONNA GREEN STRAVAGANZA.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Té lapsang souchong"
+            ],
+            "corazon": [
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla"
+            ]
         }
     },
     {
@@ -8348,9 +11099,16 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/DONNA BORN IN ROMA INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Vainilla bourbon",
+                "Ámbar"
+            ],
+            "corazon": [
+                "Jazmín"
+            ],
+            "fondo": [
+                "Benjuí"
+            ]
         }
     },
     {
@@ -8375,9 +11133,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA CORAL FANTASY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana roja",
+                "Cardamomo",
+                "Bergamota de Calabria"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Geranio bourbon",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Hoja de tabaco",
+                "Pachulí",
+                "Vetiver haitiano"
+            ]
         }
     },
     {
@@ -8398,9 +11168,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/VALENTINO BORN IN ROMA EDT.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas minerales",
+                "Hoja de violeta",
+                "Sal"
+            ],
+            "corazon": [
+                "Salvia",
+                "Jengibre"
+            ],
+            "fondo": [
+                "Notas amaderadas",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -8425,9 +11205,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA EXTRADOSE.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Notas especiadas"
+            ],
+            "corazon": [
+                "Lavanda silvestre"
+            ],
+            "fondo": [
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -8448,9 +11234,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/VALENTINO GREEN STRAVAGANZA.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota de Calabria"
+            ],
+            "corazon": [
+                "Café"
+            ],
+            "fondo": [
+                "Vetiver"
+            ]
         }
     },
     {
@@ -8475,9 +11267,15 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA INTENSE.jpeg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Vainilla"
+            ],
+            "corazon": [
+                "Lavanda"
+            ],
+            "fondo": [
+                "Vetiver"
+            ]
         }
     },
     {
@@ -8502,9 +11300,16 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA PURPLE MELANCHOLIA.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Coco",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Madera de ámbar"
+            ]
         }
     },
     {
@@ -8534,9 +11339,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/CRYSTAL NOIR.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta",
+                "Jengibre",
+                "Cardamomo"
+            ],
+            "corazon": [
+                "Coco",
+                "Gardenia",
+                "Flor de azahar",
+                "Peonía"
+            ],
+            "fondo": [
+                "Sándalo",
+                "Almizcle",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -8557,9 +11375,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/EROS EDP.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Menta",
+                "Manzana confitada",
+                "Limón",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Ambroxan",
+                "Geranio",
+                "Salvia esclarea"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Cedro",
+                "Sándalo",
+                "Naranja amarga",
+                "Pachulí",
+                "Cuero"
+            ]
         }
     },
     {
@@ -8584,9 +11418,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/EROS EDP.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Menta",
+                "Manzana verde",
+                "Limón"
+            ],
+            "corazon": [
+                "Haba tonka",
+                "Ambroxan",
+                "Geranio"
+            ],
+            "fondo": [
+                "Vainilla de Madagascar",
+                "Cedro de Virginia",
+                "Cedro Atlas",
+                "Vetiver",
+                "Musgo de roble"
+            ]
         }
     },
     {
@@ -8611,9 +11459,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/EROS ENERGY.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón",
+                "Lima",
+                "Pomelo",
+                "Naranja sanguina",
+                "Bergamota siciliana",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Pimienta rosa",
+                "Ámbar blanco",
+                "Grosella negra"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Musgo de roble",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -8638,9 +11501,26 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/EROS FLAME.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Mandarina",
+                "Pimienta de Madagascar",
+                "Limón",
+                "Chinotto",
+                "Romero"
+            ],
+            "corazon": [
+                "Geranio",
+                "Rosa",
+                "Pepperwood"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Sándalo",
+                "Cedro de Texas",
+                "Pachulí",
+                "Musgo de roble"
+            ]
         }
     },
     {
@@ -8661,9 +11541,23 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón",
+                "Bergamota",
+                "Neroli",
+                "Rosa de mayo"
+            ],
+            "corazon": [
+                "Jacinto",
+                "Cedro",
+                "Salvia esclarea",
+                "Geranio"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Haba tonka",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -8692,9 +11586,25 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/DYLAN BLUE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota de Calabria",
+                "Notas acuáticas",
+                "Pomelo",
+                "Hoja de higo"
+            ],
+            "corazon": [
+                "Ambroxan",
+                "Pimienta negra",
+                "Pachulí",
+                "Hoja de violeta",
+                "Papiro"
+            ],
+            "fondo": [
+                "Incienso",
+                "Almizcle",
+                "Haba tonka",
+                "Azafrán"
+            ]
         }
     },
     {
@@ -8715,9 +11625,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/VERSACE POUR HOMME.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Limón",
+                "Bergamota",
+                "Neroli",
+                "Rosa de mayo"
+            ],
+            "corazon": [
+                "Jacinto",
+                "Cedro",
+                "Salvia esclarea",
+                "Geranio"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Haba tonka",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -8743,9 +11667,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SPICEBOMB EDT.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta rosa",
+                "Elemi",
+                "Bergamota",
+                "Pomelo"
+            ],
+            "corazon": [
+                "Canela",
+                "Pimentón",
+                "Azafrán"
+            ],
+            "fondo": [
+                "Tabaco",
+                "Cuero",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -8770,6 +11707,14 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SPICEBOMB extreme.png",
         "images_gallery": [],
         "notas": {
+            "generales": [
+                "Vainilla",
+                "Tabaco",
+                "Canela",
+                "Comino",
+                "Whiskey bourbon",
+                "Azafrán"
+            ],
             "salida": [],
             "corazon": [],
             "fondo": []
@@ -8797,9 +11742,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/SPICEBOMB INFRARED.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Canela",
+                "Chile",
+                "Pimienta rosa"
+            ],
+            "corazon": [
+                "Chile",
+                "Cuero"
+            ],
+            "fondo": [
+                "Resinas",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -8824,9 +11779,24 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ALEXANDRIA II.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Palisandro",
+                "Lavanda",
+                "Canela",
+                "Manzana"
+            ],
+            "corazon": [
+                "Rosa",
+                "Cedro",
+                "Lirio de los valles"
+            ],
+            "fondo": [
+                "Oud",
+                "Sándalo",
+                "Ámbar",
+                "Vainilla",
+                "Almizcle"
+            ]
         }
     },
     {
@@ -8851,9 +11821,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/CORO.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Frutas tropicales"
+            ],
+            "corazon": [
+                "Mango",
+                "Piña",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Ámbar",
+                "Almizcle",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -8885,9 +11866,26 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ERBA GOLD.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja brasileña",
+                "Limón de Amalfi",
+                "Bergamota de Calabria",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Manzana verde",
+                "Melón",
+                "Pera",
+                "Clavo de olor",
+                "Cardamomo guatemalteco",
+                "Canela de Madagascar"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Ámbar",
+                "Vainilla de Madagascar",
+                "Notas amaderadas"
+            ]
         }
     },
     {
@@ -8919,9 +11917,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/ERBA PURA.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Naranja siciliana",
+                "Bergamota de Calabria",
+                "Limón siciliano"
+            ],
+            "corazon": [
+                "Frutas"
+            ],
+            "fondo": [
+                "Almizcle blanco",
+                "Vainilla de Madagascar",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -8946,9 +11954,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/TORINO21.jpg",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Menta",
+                "Limón",
+                "Tomillo",
+                "Albahaca"
+            ],
+            "corazon": [
+                "Jazmín",
+                "Romero",
+                "Casis",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Verbena"
+            ]
         }
     },
     {
@@ -8977,9 +11998,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/NAXOS.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Bergamota",
+                "Limón"
+            ],
+            "corazon": [
+                "Miel",
+                "Canela",
+                "Cashmeran",
+                "Jazmín sambac"
+            ],
+            "fondo": [
+                "Hoja de tabaco",
+                "Vainilla",
+                "Haba tonka"
+            ]
         }
     },
     {
@@ -9001,9 +12035,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/BLACK OPIUM INTENSE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Absenta",
+                "Zarzamora boysenberry"
+            ],
+            "corazon": [
+                "Café",
+                "Jazmín sambac",
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Regaliz",
+                "Sándalo"
+            ]
         }
     },
     {
@@ -9024,9 +12069,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YVES LIBRE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Bergamota",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Flor de azahar",
+                "Té de jazmín",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Vainilla",
+                "Ámbar gris"
+            ]
         }
     },
     {
@@ -9047,9 +12104,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Lavanda",
+                "Bergamota",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Flor de azahar",
+                "Té de jazmín",
+                "Jazmín"
+            ],
+            "fondo": [
+                "Almizcle",
+                "Vainilla",
+                "Ámbar gris"
+            ]
         }
     },
     {
@@ -9074,9 +12143,20 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LIBRE L'ABSOLU PLATINE.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Aldehídos",
+                "Bergamota",
+                "Mandarina"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Lavanda azul",
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Ámbar"
+            ]
         }
     },
     {
@@ -9105,9 +12185,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LIBRE LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Jengibre",
+                "Azafrán",
+                "Mandarina",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Flor de azahar",
+                "Lavanda"
+            ],
+            "fondo": [
+                "Vainilla bourbon",
+                "Miel",
+                "Haba tonka",
+                "Vetiver"
+            ]
         }
     },
     {
@@ -9132,9 +12225,31 @@
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/MON PARIS.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Fresa",
+                "Frambuesa",
+                "Pera",
+                "Naranja",
+                "Bergamota de Calabria",
+                "Mandarina",
+                "Calone"
+            ],
+            "corazon": [
+                "Peonía",
+                "Jazmín sambac",
+                "Jazmín chino",
+                "Datura",
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Hoja de pachulí de Indonesia",
+                "Pachulí",
+                "Almizcle blanco",
+                "Vainilla",
+                "Ambroxan",
+                "Musgo",
+                "Cedro"
+            ]
         }
     },
     {
@@ -9158,9 +12273,17 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota de Calabria",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Flor de azahar tunecina"
+            ],
+            "fondo": [
+                "Ambrofix",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -9185,9 +12308,17 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MYSLF.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Bergamota de Calabria",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Flor de azahar tunecina"
+            ],
+            "fondo": [
+                "Ambrofix",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -9216,9 +12347,18 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/MYSLF LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Pimienta negra"
+            ],
+            "corazon": [
+                "Flor de azahar"
+            ],
+            "fondo": [
+                "Vainilla bourbon",
+                "Ámbar",
+                "Notas amaderadas",
+                "Pachulí"
+            ]
         }
     },
     {
@@ -9243,9 +12383,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/YSL Y EDP.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Jengibre",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Salvia",
+                "Bayas de enebro",
+                "Geranio"
+            ],
+            "fondo": [
+                "Amberwood",
+                "Haba tonka",
+                "Cedro",
+                "Vetiver",
+                "Olíbano"
+            ]
         }
     },
     {
@@ -9270,9 +12424,21 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y EDP INTENSE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Jengibre",
+                "Bayas de enebro",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Salvia",
+                "Lavanda",
+                "Geranio"
+            ],
+            "fondo": [
+                "Vetiver",
+                "Pachulí",
+                "Cedro"
+            ]
         }
     },
     {
@@ -9293,9 +12459,22 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y EDT.JPEG",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Aldehídos",
+                "Bergamota",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia esclarea",
+                "Geranio"
+            ],
+            "fondo": [
+                "Ámbar gris",
+                "Vainilla",
+                "Cedro",
+                "Olíbano"
+            ]
         }
     },
     {
@@ -9319,9 +12498,23 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Jengibre",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Salvia",
+                "Bayas de enebro",
+                "Geranio"
+            ],
+            "fondo": [
+                "Amberwood",
+                "Haba tonka",
+                "Cedro",
+                "Vetiver",
+                "Olíbano"
+            ]
         }
     },
     {
@@ -9345,9 +12538,21 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Jengibre",
+                "Bayas de enebro",
+                "Bergamota"
+            ],
+            "corazon": [
+                "Salvia",
+                "Lavanda",
+                "Geranio"
+            ],
+            "fondo": [
+                "Vetiver",
+                "Pachulí",
+                "Cedro"
+            ]
         }
     },
     {
@@ -9368,9 +12573,22 @@
         "image_miniatura_decant": null,
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Aldehídos",
+                "Bergamota",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia esclarea",
+                "Geranio"
+            ],
+            "fondo": [
+                "Ámbar gris",
+                "Vainilla",
+                "Cedro",
+                "Olíbano"
+            ]
         }
     },
     {
@@ -9395,9 +12613,19 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y ICED COLOGNE.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Menta",
+                "Hielo"
+            ],
+            "corazon": [
+                "Té de menta",
+                "Menta",
+                "Salvia azul"
+            ],
+            "fondo": [
+                "Pachulí",
+                "Ambroxan"
+            ]
         }
     },
     {
@@ -9426,9 +12654,23 @@
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y LE PARFUM.png",
         "images_gallery": [],
         "notas": {
-            "salida": [],
-            "corazon": [],
-            "fondo": []
+            "salida": [
+                "Manzana",
+                "Aldehídos",
+                "Pomelo",
+                "Jengibre"
+            ],
+            "corazon": [
+                "Lavanda",
+                "Salvia",
+                "Geranio"
+            ],
+            "fondo": [
+                "Haba tonka",
+                "Cedro",
+                "Olíbano",
+                "Pachulí"
+            ]
         }
     }
 ];

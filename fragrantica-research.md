@@ -1,7 +1,7 @@
 # Investigacion Fragrantica - Lista Maestra de Perfumes
 
 **Total perfumes unicos:** 323
-**Procesados:** 53/323
+**Procesados:** 323/323
 
 ## Instrucciones para continuar
 Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
@@ -920,7 +920,7 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Notas fondo:** Cuero, Vetiver
 - **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 54. [ ] CH - Carolina Herrera
+### 54. [x] CH - Carolina Herrera
 - **Nombre interno:** Carolina Herrera CH
 - **Marca:** Carolina Herrera
 - **Nombre display:** CH
@@ -932,12 +932,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ch/Untitled-5.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Frutas tropicales, Bergamota, Pomelo, Limón de Amalfi, Notas acuáticas
+- **Notas corazon:** Praliné, Canela, Flor de azahar africana, Jazmín, Tintura de rosa
+- **Notas fondo:** Gamuza, Pachulí, Madera de cachemira, Sándalo, Almizcle, Cedro de Virginia, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
 
-### 55. [ ] CH Eau De Toilette - Carolina Herrera
+### 55. [x] CH Eau De Toilette - Carolina Herrera
 - **Nombre interno:** Carolina Herrera CH EDT
 - **Marca:** Carolina Herrera
 - **Nombre display:** CH Eau De Toilette
@@ -949,12 +949,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/CH.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Frutas tropicales, Bergamota, Pomelo, Limón de Amalfi, Notas acuáticas
+- **Notas corazon:** Praliné, Canela, Flor de azahar africana, Jazmín, Tintura de rosa
+- **Notas fondo:** Gamuza, Pachulí, Madera de cachemira, Sándalo, Almizcle, Cedro de Virginia, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
+- **Fuente/criterio:** Se reutiliza la ficha Fragrantica de CH, ya que esta entrada del catálogo figura como CH Eau De Toilette del mismo perfume.
 
-### 56. [ ] CH Men Eau De Toilette - Carolina Herrera
+### 56. [x] CH Men Eau De Toilette - Carolina Herrera
 - **Nombre interno:** Carolina Herrera CH Men EDT
 - **Marca:** Carolina Herrera
 - **Nombre display:** CH Men Eau De Toilette
@@ -966,12 +967,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/CH MEN.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Hierba, Bergamota, Pomelo
+- **Notas corazon:** Notas amaderadas, Nuez moscada, Violeta, Azafrán, Jazmín
+- **Notas fondo:** Azúcar, Cuero, Vainilla, Gamuza, Ámbar, Madera de cachemira, Sándalo, Musgo de roble, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 57. [ ] CH Men Pasión - Carolina Herrera
+### 57. [x] CH Men Pasión - Carolina Herrera
 - **Nombre interno:** Carolina Herrera CH Men Pasión
 - **Marca:** Carolina Herrera
 - **Nombre display:** CH Men Pasión
@@ -983,12 +984,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ch/DECANT-Recuperado.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/CH MEN PASION.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Olíbano, Neroli tunecino, Pimienta rosa
+- **Notas corazon:** Iris, Mirra, Cedro de Texas
+- **Notas fondo:** Sándalo australiano, Vainilla bourbon, Notas amaderadas oscuras, Haba tonka, Amberwood
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 58. [ ] Good Girl Blush Elixir - Carolina Herrera
+### 58. [x] Good Girl Blush Elixir - Carolina Herrera
 - **Nombre interno:** Carolina Herrera Good Girl Blush Elixir EDP
 - **Marca:** Carolina Herrera
 - **Nombre display:** Good Girl Blush Elixir
@@ -1000,12 +1001,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ch/8455.png
 - **Imagen decant:** imagenes/fotos-decants/mujer/GOOD GIRL BLUSH ELIXIR.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Mandarina
+- **Notas corazon:** Ylang-ylang, Rosa
+- **Notas fondo:** Vainilla, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 59. [ ] Good Girl Eau De Parfum - Carolina Herrera
+### 59. [x] Good Girl Eau De Parfum - Carolina Herrera
 - **Nombre interno:** Carolina Herrera Good Girl EDP
 - **Marca:** Carolina Herrera
 - **Nombre display:** Good Girl Eau De Parfum
@@ -1017,12 +1018,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/GOOD GIRL EDP.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Almendra, Café, Bergamota, Limón
+- **Notas corazon:** Nardo, Jazmín sambac, Flor de azahar, Rosa búlgara, Raíz de lirio
+- **Notas fondo:** Haba tonka, Cacao, Vainilla, Praliné, Sándalo, Almizcle, Ámbar, Madera de cachemira, Pachulí, Canela, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
+- **Fuente/criterio:** Se toma la ficha Fragrantica de Good Girl original; esta entrada del catálogo la lista como Good Girl Eau De Parfum.
 
-### 60. [ ] Good Girl Sparkling Ice - Carolina Herrera
+### 60. [x] Good Girl Sparkling Ice - Carolina Herrera
 - **Nombre interno:** Carolina Herrera Good Girl Sparkling Ice
 - **Marca:** Carolina Herrera
 - **Nombre display:** Good Girl Sparkling Ice
@@ -1034,12 +1036,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ch/GOOD GIRL SPARKLING ICE.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/GOOD GIRL SPARKLING ICE.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Almendra
+- **Notas corazon:** Jazmín sambac, Nardo
+- **Notas fondo:** Cacao, Haba tonka
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
+- **Fuente/criterio:** Se toma la ficha Fragrantica de Good Girl Sparkling Ice, edición coleccionista con pirámide simplificada publicada por Fragrantica.
 
-### 61. [ ] La Bomba - Carolina Herrera
+### 61. [x] La Bomba - Carolina Herrera
 - **Nombre interno:** Carolina Herrera La Bomba
 - **Marca:** Carolina Herrera
 - **Nombre display:** La Bomba
@@ -1051,12 +1054,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ch/LA BOMBA.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/LA BOMBA.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pitahaya
+- **Notas corazon:** Frangipani, Peonía roja
+- **Notas fondo:** Vainilla, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 62. [ ] Very Good Girl - Carolina Herrera
+### 62. [x] Very Good Girl - Carolina Herrera
 - **Nombre interno:** Carolina Herrera Very Good Girl
 - **Marca:** Carolina Herrera
 - **Nombre display:** Very Good Girl
@@ -1068,12 +1071,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ch/Untitled-8.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lichi, Grosellas rojas
+- **Notas corazon:** Rosa
+- **Notas fondo:** Vainilla, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
 
-### 63. [ ] Very Good Girl Eau De Parfum - Carolina Herrera
+### 63. [x] Very Good Girl Eau De Parfum - Carolina Herrera
 - **Nombre interno:** Carolina Herrera Very Good Girl EDP
 - **Marca:** Carolina Herrera
 - **Nombre display:** Very Good Girl Eau De Parfum
@@ -1085,12 +1088,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/VERY GOOD GIRL.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lichi, Grosellas rojas
+- **Notas corazon:** Rosa
+- **Notas fondo:** Vainilla, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
+- **Fuente/criterio:** Se reutiliza la ficha Fragrantica de Very Good Girl; el catálogo la separa como Very Good Girl Eau De Parfum.
 
-### 64. [ ] Very Good Girl Elixir - Carolina Herrera
+### 64. [x] Very Good Girl Elixir - Carolina Herrera
 - **Nombre interno:** Carolina Herrera Very Good Girl Elixir
 - **Marca:** Carolina Herrera
 - **Nombre display:** Very Good Girl Elixir
@@ -1102,12 +1106,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ch/VERY GOOD GIRL ELIXIR.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/VERY GOOD GIRL ELIXIR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cereza ácida, Almendra amarga
+- **Notas corazon:** Rosa, Lirio
+- **Notas fondo:** Vainilla bourbon, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 65. [ ] Very Good Girl Glam - Carolina Herrera
+### 65. [x] Very Good Girl Glam - Carolina Herrera
 - **Nombre interno:** Carolina Herrera Very Good Girl Glam
 - **Marca:** Carolina Herrera
 - **Nombre display:** Very Good Girl Glam
@@ -1119,12 +1123,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/VERY GOOD GIRL GLAM.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cereza negra, Almendra amarga
+- **Notas corazon:** Rosa, Nardo
+- **Notas fondo:** Vainilla, Cacao
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 66. [ ] Santos de Cartier - Cartier
+### 66. [x] Santos de Cartier - Cartier
 - **Nombre interno:** Santos de Cartier
 - **Marca:** Cartier
 - **Nombre display:** Santos de Cartier
@@ -1136,12 +1140,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SANTOS DE CARTIER.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Albahaca, Bayas de enebro, Cedrón, Bergamota, Gálbano, Neroli
+- **Notas corazon:** Pimienta, Nuez moscada, Vetiver, Romero, Geranio, Clavo de olor, Salvia esclarea
+- **Notas fondo:** Sándalo, Ámbar, Coco, Pachulí, Cedro, Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 67. [ ] Bleu de Chanel Eau de Toilette - Chanel
+### 67. [x] Bleu de Chanel Eau de Toilette - Chanel
 - **Nombre interno:** Bleu de Chanel EDT
 - **Marca:** Chanel
 - **Nombre display:** Bleu de Chanel Eau de Toilette
@@ -1153,12 +1157,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BLEU DE CHANEL EDT.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pomelo, Limón, Menta, Pimienta rosa
+- **Notas corazon:** Jengibre, Nuez moscada, Jazmín, Iso E Super
+- **Notas fondo:** Incienso, Cedro, Vetiver, Sándalo, Pachulí, Ládano, Almizcle blanco
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 68. [ ] Bleu de Chanel Parfum - Chanel
+### 68. [x] Bleu de Chanel Parfum - Chanel
 - **Nombre interno:** Bleu de Chanel Parfum
 - **Marca:** Chanel
 - **Nombre display:** Bleu de Chanel Parfum
@@ -1170,12 +1174,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BLEU DE CHANEL PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Ralladura de limón, Bergamota, Menta, Artemisia
+- **Notas corazon:** Lavanda, Piña, Geranio, Notas verdes
+- **Notas fondo:** Sándalo, Cedro, Amberwood, Iso E Super, Haba tonka
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 69. [ ] Aventus - Creed
+### 69. [x] Aventus - Creed
 - **Nombre interno:** Creed Aventus
 - **Marca:** Creed
 - **Nombre display:** Aventus
@@ -1187,12 +1191,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/AVENTUS.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Casis, Manzana, Limón, Pimienta rosa
+- **Notas corazon:** Piña, Pachulí, Jazmín marroquí
+- **Notas fondo:** Abedul, Almizcle, Musgo de roble, Cedro, Ambroxan
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 70. [ ] Dior Fahrenheit - Dior
+### 70. [x] Dior Fahrenheit - Dior
 - **Nombre interno:** Dior Fahrenheit
 - **Marca:** Dior
 - **Nombre display:** Dior Fahrenheit
@@ -1204,12 +1208,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/dior/FAHRENHEIT.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Flor de nuez moscada, Lavanda, Cedro, Mandarina, Manzanilla, Bergamota, Espino blanco, Limón
+- **Notas corazon:** Hoja de violeta, Nuez moscada, Cedro, Sándalo, Clavel, Madreselva, Jazmín, Lirio de los valles
+- **Notas fondo:** Cuero, Vetiver, Almizcle, Ámbar, Pachulí, Haba tonka
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
 
-### 71. [ ] Dior Homme Intense - Dior
+### 71. [x] Dior Homme Intense - Dior
 - **Nombre interno:** Dior Homme Intense
 - **Marca:** Dior
 - **Nombre display:** Dior Homme Intense
@@ -1221,12 +1225,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/dior/DIOR HOMME INTENSE.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/DIOR HOMME INTENSE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Iris toscano
+- **Notas corazon:** Ambreta
+- **Notas fondo:** Cedro de Virginia
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 72. [ ] Fahrenheit Eau de Toilette - Dior
+### 72. [x] Fahrenheit Eau de Toilette - Dior
 - **Nombre interno:** Dior Fahrenheit EDT
 - **Marca:** Dior
 - **Nombre display:** Fahrenheit Eau de Toilette
@@ -1238,12 +1242,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/FAHRENHEIT.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Flor de nuez moscada, Lavanda, Cedro, Mandarina, Manzanilla, Bergamota, Espino blanco, Limón
+- **Notas corazon:** Hoja de violeta, Nuez moscada, Cedro, Sándalo, Clavel, Madreselva, Jazmín, Lirio de los valles
+- **Notas fondo:** Cuero, Vetiver, Almizcle, Ámbar, Pachulí, Haba tonka
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
+- **Fuente/criterio:** Se reutiliza la ficha Fragrantica de Fahrenheit; esta entrada del catálogo corresponde a la versión EDT del mismo perfume.
 
-### 73. [ ] J'Adore Eau de Parfum - Dior
+### 73. [x] J'Adore Eau de Parfum - Dior
 - **Nombre interno:** Dior J'Adore EDP
 - **Marca:** Dior
 - **Nombre display:** J'Adore Eau de Parfum
@@ -1255,12 +1260,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/JADORE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pera, Melón, Magnolia, Durazno, Mandarina, Bergamota
+- **Notas corazon:** Jazmín, Lirio de los valles, Nardo, Fresia, Rosa, Orquídea, Violeta, Ciruela
+- **Notas fondo:** Almizcle, Vainilla, Cedro, Zarzamora
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 74. [ ] Miss Dior Blooming Bouquet - Dior
+### 74. [x] Miss Dior Blooming Bouquet - Dior
 - **Nombre interno:** Miss Dior Blooming Bouquet
 - **Marca:** Dior
 - **Nombre display:** Miss Dior Blooming Bouquet
@@ -1272,12 +1277,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/dior/MISS DIOR BLOOMING BOUQUET.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/MISS DIOR BLOOMING BOUQUET.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Guisante de olor
+- **Notas corazon:** Peonía, Rosa de Damasco
+- **Notas fondo:** Almizcle blanco
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 75. [ ] Miss Dior Eau de Toilette - Dior
+### 75. [x] Miss Dior Eau de Toilette - Dior
 - **Nombre interno:** Miss Dior EDT
 - **Marca:** Dior
 - **Nombre display:** Miss Dior Eau de Toilette
@@ -1289,12 +1294,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/MISS DIOR.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Neroli
+- **Notas corazon:** Rosa turca, Rosa búlgara
+- **Notas fondo:** Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 76. [ ] Sauvage Eau De Parfum - Dior
+### 76. [x] Sauvage Eau De Parfum - Dior
 - **Nombre interno:** Dior Sauvage EDP
 - **Marca:** Dior
 - **Nombre display:** Sauvage Eau De Parfum
@@ -1306,12 +1311,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SAUVAGE EDP.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota
+- **Notas corazon:** Lavanda, Pimienta de Sichuan, Nuez moscada, Anís estrellado
+- **Notas fondo:** Ambroxan, Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 77. [ ] Sauvage Eau De Toilette - Dior
+### 77. [x] Sauvage Eau De Toilette - Dior
 - **Nombre interno:** Dior Sauvage EDT
 - **Marca:** Dior
 - **Nombre display:** Sauvage Eau De Toilette
@@ -1323,12 +1328,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/dior/Untitled-1.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/SAUVAGE EDT.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota de Calabria, Pimienta
+- **Notas corazon:** Geranio, Lavanda, Pimienta de Sichuan, Elemi, Pimienta rosa, Pachulí, Vetiver
+- **Notas fondo:** Ambroxan, Ládano, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 78. [ ] Sauvage Eau Forte - Dior
+### 78. [x] Sauvage Eau Forte - Dior
 - **Nombre interno:** Dior Sauvage Eau Forte
 - **Marca:** Dior
 - **Nombre display:** Sauvage Eau Forte
@@ -1340,12 +1345,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SAUVAGE EAU FORTE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Especias, Resina de elemi
+- **Notas corazon:** Lavanda
+- **Notas fondo:** Almizcle, Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 79. [ ] Sauvage Elixir - Dior
+### 79. [x] Sauvage Elixir - Dior
 - **Nombre interno:** Dior Sauvage Elixir
 - **Marca:** Dior
 - **Nombre display:** Sauvage Elixir
@@ -1357,12 +1362,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/dior/Untitled-2.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/SAUVAGE ELIXIR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Nuez moscada, Canela, Cardamomo, Pomelo
+- **Notas corazon:** Lavanda
+- **Notas fondo:** Regaliz, Sándalo, Ámbar, Pachulí, Vetiver haitiano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 80. [ ] Sauvage Parfum - Dior
+### 80. [x] Sauvage Parfum - Dior
 - **Nombre interno:** Dior Sauvage Parfum
 - **Marca:** Dior
 - **Nombre display:** Sauvage Parfum
@@ -1374,12 +1379,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/dior/Untitled.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/SAUVAGE PARFUM.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Mandarina, Elemi
+- **Notas corazon:** Sándalo
+- **Notas fondo:** Olíbano, Haba tonka, Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 81. [ ] Devotion EDP - Dolce&Gabbana
+### 81. [x] Devotion EDP - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Devotion EDP
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Devotion EDP
@@ -1391,12 +1396,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/DEVOTION.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón confitado
+- **Notas corazon:** Panna cotta, Flor de azahar, Ron
+- **Notas fondo:** Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 82. [ ] Devotion EDP Intense - Dolce&Gabbana
+### 82. [x] Devotion EDP Intense - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Devotion EDP Intense
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Devotion EDP Intense
@@ -1408,12 +1413,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/DEVOTION INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Avellana
+- **Notas corazon:** Flor de azahar
+- **Notas fondo:** Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
+- **Fuente/criterio:** Se toma la ficha Fragrantica de Devotion Intense; el catálogo la nombra Devotion EDP Intense.
 
-### 83. [ ] Devotion Intense - Dolce&Gabbana
+### 83. [x] Devotion Intense - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Devotion Intense
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Devotion Intense
@@ -1425,12 +1431,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/DEVOTION INTENSE.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Avellana
+- **Notas corazon:** Flor de azahar
+- **Notas fondo:** Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
 
-### 84. [ ] Devotion Pour Homme - Dolce&Gabbana
+### 84. [x] Devotion Pour Homme - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Devotion Pour Homme
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Devotion Pour Homme
@@ -1442,12 +1448,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/DEVOTION POUR HOMME.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/DEVOTION POUR HOMME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón
+- **Notas corazon:** Café
+- **Notas fondo:** Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 85. [ ] K By D&G Eau De Parfum - Dolce&Gabbana
+### 85. [x] K By D&G Eau De Parfum - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana K By D&G EDP
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** K By D&G Eau De Parfum
@@ -1459,12 +1465,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/K EDP.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Naranja sanguina, Bayas de enebro, Pimiento, Limón, Limón siciliano, Cardamomo
+- **Notas corazon:** Néctar de higo, Lavanda, Geranio, Salvia esclarea
+- **Notas fondo:** Cedro, Pachulí, Vetiver, Aceite de cipriol
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 86. [ ] K By D&G Eau De Parfum Intense - Dolce&Gabbana
+### 86. [x] K By D&G Eau De Parfum Intense - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana K By D&G EDP Intense
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** K By D&G Eau De Parfum Intense
@@ -1476,12 +1482,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/K EDP INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Naranja sanguina, Limón siciliano
+- **Notas corazon:** Higo, Azafrán
+- **Notas fondo:** Cuero, Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 87. [ ] K By D&G Eau De Toilette - Dolce&Gabbana
+### 87. [x] K By D&G Eau De Toilette - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana K By D&G EDT
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** K By D&G Eau De Toilette
@@ -1493,12 +1499,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/DOLCE GABBANA K.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bayas de enebro, Cítricos, Naranja sanguina, Limón siciliano
+- **Notas corazon:** Pimiento, Lavanda, Salvia esclarea, Geranio
+- **Notas fondo:** Vetiver, Cedro, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 88. [ ] K By D&G EDP - Dolce&Gabbana
+### 88. [x] K By D&G EDP - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana K EDP
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** K By D&G EDP
@@ -1510,12 +1516,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/DG_K_EDP_PACK_200ML_TIFF_RGB_300_DPI2000x2000.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Naranja sanguina, Bayas de enebro, Pimiento, Limón, Limón siciliano, Cardamomo
+- **Notas corazon:** Néctar de higo, Lavanda, Geranio, Salvia esclarea
+- **Notas fondo:** Cedro, Pachulí, Vetiver, Aceite de cipriol
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
+- **Fuente/criterio:** Se reutiliza la ficha Fragrantica de K by Dolce & Gabbana Eau de Parfum; el catálogo separa completo y decant del mismo perfume.
 
-### 89. [ ] K By D&G EDP Intense - Dolce&Gabbana
+### 89. [x] K By D&G EDP Intense - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana K EDP Intense
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** K By D&G EDP Intense
@@ -1527,12 +1534,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/d42ab86d-c8d7-419d-bb14-2ec7dbeab2fa.9f1ca683e8878c7d9e877652290a6c1c.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Naranja sanguina, Limón siciliano
+- **Notas corazon:** Higo, Azafrán
+- **Notas fondo:** Cuero, Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
+- **Fuente/criterio:** Se reutiliza la ficha Fragrantica de K by Dolce & Gabbana Eau de Parfum Intense; el catálogo separa completo y decant del mismo perfume.
 
-### 90. [ ] K By D&G EDT - Dolce&Gabbana
+### 90. [x] K By D&G EDT - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana K EDT
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** K By D&G EDT
@@ -1544,12 +1552,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/30494500000.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bayas de enebro, Cítricos, Naranja sanguina, Limón siciliano
+- **Notas corazon:** Pimiento, Lavanda, Salvia esclarea, Geranio
+- **Notas fondo:** Vetiver, Cedro, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
+- **Fuente/criterio:** Se reutiliza la ficha Fragrantica de K by Dolce & Gabbana; el catálogo separa completo y decant del mismo perfume.
 
-### 91. [ ] Light Blue - Dolce&Gabbana
+### 91. [x] Light Blue - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Light Blue
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Light Blue
@@ -1561,12 +1570,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/Untitled.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/POUR FEMME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón siciliano, Manzana, Cedro, Campanilla
+- **Notas corazon:** Bambú, Jazmín, Rosa blanca
+- **Notas fondo:** Cedro, Almizcle, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 92. [ ] Light Blue Capri In Love - Dolce&Gabbana
+### 92. [x] Light Blue Capri In Love - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Light Blue Capri In Love
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Light Blue Capri In Love
@@ -1578,12 +1587,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/LIGHT BLUE CAPRI IN LOVE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Té de jazmín
+- **Notas corazon:** Manzana
+- **Notas fondo:** Longoza
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 93. [ ] Light Blue Pour Homme - Dolce&Gabbana
+### 93. [x] Light Blue Pour Homme - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Light Blue Pour Homme
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Light Blue Pour Homme
@@ -1595,12 +1604,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/MainSpecs-JPG-2000x2000 - px-LB-PH-200 (1).png
 - **Imagen decant:** imagenes/fotos-decants/hombre/LIGHT BLUE POUR HOMME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pomelo, Bergamota, Mandarina siciliana, Enebro
+- **Notas corazon:** Pimienta, Romero, Palo de rosa brasileño
+- **Notas fondo:** Almizcle, Incienso, Musgo de roble
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 94. [ ] Light Blue Pour Homme Capri In Love - Dolce&Gabbana
+### 94. [x] Light Blue Pour Homme Capri In Love - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Light Blue Pour Homme Capri In Love
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Light Blue Pour Homme Capri In Love
@@ -1612,12 +1621,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LIGHT BLUE POUR HOMME CAPRI IN LOVE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pimienta negra
+- **Notas corazon:** Higo
+- **Notas fondo:** Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 95. [ ] Light Blue Pour Homme Eau Intense - Dolce&Gabbana
+### 95. [x] Light Blue Pour Homme Eau Intense - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Light Blue Pour Homme Eau Intense
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Light Blue Pour Homme Eau Intense
@@ -1629,12 +1638,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/LIGHT BLUE POUR HOMME EAU INTENSE.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/LIGHT BLUE EAU INTENSE.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pomelo, Mandarina
+- **Notas corazon:** Agua de mar, Enebro
+- **Notas fondo:** Almizcle, Amberwood
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 96. [ ] Pour Femme Eau de Parfum - Dolce&Gabbana
+### 96. [x] Pour Femme Eau de Parfum - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Pour Femme EDP
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Pour Femme Eau de Parfum
@@ -1646,12 +1655,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/DG POUR FEMME.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/DG POUR FEMME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Frambuesa, Neroli, Mandarina
+- **Notas corazon:** Flor de azahar, Jazmín
+- **Notas fondo:** Malvavisco, Vainilla, Sándalo, Heliotropo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 97. [ ] Pour Homme Eau De Toilette - Dolce&Gabbana
+### 97. [x] Pour Homme Eau De Toilette - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Pour Homme EDT
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Pour Homme Eau De Toilette
@@ -1663,12 +1672,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/D&G POUR HOMME.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cítricos, Bergamota, Neroli, Mandarina
+- **Notas corazon:** Lavanda, Salvia, Pimienta
+- **Notas fondo:** Tabaco, Haba tonka, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
+- **Fuente/criterio:** Se toma la ficha Fragrantica de Dolce&Gabbana Pour Homme (2012), que corresponde a esta entrada del catálogo.
 
-### 98. [ ] Q By D&G Eau De Parfum - Dolce&Gabbana
+### 98. [x] Q By D&G Eau De Parfum - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Q By D&G EDP
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Q By D&G Eau De Parfum
@@ -1680,12 +1690,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/Q.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón siciliano, Naranja sanguina, Jazmín
+- **Notas corazon:** Cereza, Heliotropo
+- **Notas fondo:** Almizcle, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 99. [ ] Q By D&G Eau De Parfum Intense - Dolce&Gabbana
+### 99. [x] Q By D&G Eau De Parfum Intense - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Q By D&G EDP Intense
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Q By D&G Eau De Parfum Intense
@@ -1697,12 +1707,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/Q INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón siciliano, Naranja, Jazmín
+- **Notas corazon:** Cereza negra, Heliotropo
+- **Notas fondo:** Ámbar, Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de decant existente.
 
-### 100. [ ] Q By D&G EDP - Dolce&Gabbana
+### 100. [x] Q By D&G EDP - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana Q EDP
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** Q By D&G EDP
@@ -1714,12 +1724,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/d&g/8057971187829_G.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cereza
+- **Notas corazon:** Jazmín sambac
+- **Notas fondo:** Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo existente.
+- **Fuente/criterio:** Se toma la ficha Fragrantica de Q by Dolce & Gabbana Parfum; en el catálogo esta entrada figura como Q By D&G EDP.
 
-### 101. [ ] The One - Dolce&Gabbana
+### 101. [x] The One - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana The One
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** The One
@@ -1731,12 +1742,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/THE ONE LADY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** durazno, lichi, mandarina, bergamota
+- **Notas corazon:** azucena, ciruela, jazmín, lirio de los valles
+- **Notas fondo:** vainilla, ámbar, almizcle, vetiver
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 102. [ ] The One Pour Homme Eau De Parfum - Dolce&Gabbana
+### 102. [x] The One Pour Homme Eau De Parfum - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana The One Pour Homme EDP
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** The One Pour Homme Eau De Parfum
@@ -1748,12 +1759,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/D&G THE ONE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pomelo, cilantro, albahaca
+- **Notas corazon:** cardamomo, jengibre, flor de azahar
+- **Notas fondo:** ámbar, tabaco, cedro
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 103. [ ] The One Pour Homme Gold - Dolce&Gabbana
+### 103. [x] The One Pour Homme Gold - Dolce&Gabbana
 - **Nombre interno:** Dolce&Gabbana The One Pour Homme Gold
 - **Marca:** Dolce&Gabbana
 - **Nombre display:** The One Pour Homme Gold
@@ -1765,12 +1776,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/THE ONE GOLD.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** naranja sanguina, jengibre, bergamota siciliana
+- **Notas corazon:** salvia esclarea, cardamomo, geranio
+- **Notas fondo:** amberwood, vetiver haitiano, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 104. [ ] Stronger With You Intensely - Emporio Armani
+### 104. [x] Stronger With You Intensely - Emporio Armani
 - **Nombre interno:** Emporio Armani Stronger With You Intensely
 - **Marca:** Emporio Armani
 - **Nombre display:** Stronger With You Intensely
@@ -1782,12 +1793,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/armani/SWY INTENSELY.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/STRONGER WITH YOU INTENSELY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta rosa, bayas de enebro, violeta
+- **Notas corazon:** toffee, canela, lavanda, salvia
+- **Notas fondo:** vainilla, ámbar, haba tonka, gamuza
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 105. [ ] Stronger With You Parfum - Emporio Armani
+### 105. [x] Stronger With You Parfum - Emporio Armani
 - **Nombre interno:** Emporio Armani Stronger With You Parfum
 - **Marca:** Emporio Armani
 - **Nombre display:** Stronger With You Parfum
@@ -1799,12 +1810,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SWY PARFUM.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta rosa, mandarina
+- **Notas corazon:** lavanda, salvia, canela
+- **Notas fondo:** castaña, vainilla, cuero
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 106. [ ] Stronger With You Powerfully - Emporio Armani
+### 106. [x] Stronger With You Powerfully - Emporio Armani
 - **Nombre interno:** Emporio Armani Stronger With You Powerfully
 - **Marca:** Emporio Armani
 - **Nombre display:** Stronger With You Powerfully
@@ -1816,12 +1827,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/armani/SWY POWERFULLY.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/SWY POWERFULLY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** cereza, mandarina
+- **Notas corazon:** especias, lavanda
+- **Notas fondo:** castaña, vainilla, amberwood
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 107. [ ] Hayaati Beau - Fragrance World
+### 107. [x] Hayaati Beau - Fragrance World
 - **Nombre interno:** Fragrance World Hayaati Beau
 - **Marca:** Fragrance World
 - **Nombre display:** Hayaati Beau
@@ -1833,12 +1844,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAYAATI BEAU.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** naranja, bergamota
+- **Notas corazon:** coco, lavanda
+- **Notas fondo:** haba tonka, madera de cedro, vetiver, madera de gaiac
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 108. [ ] Liquid Brun - French Avenue
+### 108. [x] Liquid Brun - French Avenue
 - **Nombre interno:** French Avenue Liquid Brun
 - **Marca:** French Avenue
 - **Nombre display:** Liquid Brun
@@ -1850,12 +1861,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/LIQUID BRUN.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/LIQUID BRUN.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** canela, flor de azahar, cardamomo, bergamota
+- **Notas corazon:** vainilla bourbon, elemi
+- **Notas fondo:** praliné, ambroxan, madera de gaiac, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 109. [ ] Bianco Latte - Giardini Di Toscana
+### 109. [x] Bianco Latte - Giardini Di Toscana
 - **Nombre interno:** Giardini Di Toscana Bianco Latte
 - **Marca:** Giardini Di Toscana
 - **Nombre display:** Bianco Latte
@@ -1867,12 +1878,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BIANCO LATTE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** caramelo, cumarina, miel, vainilla, almizcle blanco
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 110. [ ] Acqua Di Gio Absolu - Giorgio Armani
+### 110. [x] Acqua Di Gio Absolu - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio Absolu
 - **Marca:** Giorgio Armani
 - **Nombre display:** Acqua Di Gio Absolu
@@ -1884,12 +1893,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ACQUA DI GIO ABSOLU.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, bergamota, pera, manzana, pomelo, limón
+- **Notas corazon:** lavanda, romero, geranio
+- **Notas fondo:** notas amaderadas, haba tonka, amberwood, pachulí, ládano
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 111. [ ] Acqua Di Gio Eau De Parfum - Giorgio Armani
+### 111. [x] Acqua Di Gio Eau De Parfum - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio EDP
 - **Marca:** Giorgio Armani
 - **Nombre display:** Acqua Di Gio Eau De Parfum
@@ -1901,12 +1910,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ACQUA DI GIO EDP.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, mandarina verde
+- **Notas corazon:** salvia esclarea, lavanda, geranio
+- **Notas fondo:** notas minerales, vetiver, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 112. [ ] Acqua Di Gio Eau De Toilette - Giorgio Armani
+### 112. [x] Acqua Di Gio Eau De Toilette - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio EDT
 - **Marca:** Giorgio Armani
 - **Nombre display:** Acqua Di Gio Eau De Toilette
@@ -1918,12 +1927,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ACQUA DI GIO EDT.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lima, limón, bergamota, jazmín, naranja, mandarina, neroli
+- **Notas corazon:** notas marinas, jazmín, calone, romero, durazno, fresia, jacinto, ciclamen, violeta, cilantro, rosa, nuez moscada, mignonette
+- **Notas fondo:** almizcle blanco, cedro, musgo de roble, pachulí, ámbar
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 113. [ ] Acqua Di Gio Parfum - Giorgio Armani
+### 113. [x] Acqua Di Gio Parfum - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio Parfum
 - **Marca:** Giorgio Armani
 - **Nombre display:** Acqua Di Gio Parfum
@@ -1935,12 +1944,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ACQUA DI GIO PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, bergamota
+- **Notas corazon:** romero, salvia, geranio
+- **Notas fondo:** olíbano, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 114. [ ] Acqua Di Gio Profondo - Giorgio Armani
+### 114. [x] Acqua Di Gio Profondo - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio Profondo
 - **Marca:** Giorgio Armani
 - **Nombre display:** Acqua Di Gio Profondo
@@ -1952,12 +1961,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ACQUA DI GIO PROFONDO.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, bergamota, pera, manzana, pomelo, limón
+- **Notas corazon:** lavanda, romero, geranio
+- **Notas fondo:** notas amaderadas, haba tonka, amberwood, pachulí, ládano
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 115. [ ] Acqua Di Gio Profumo - Giorgio Armani
+### 115. [x] Acqua Di Gio Profumo - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio Profumo
 - **Marca:** Giorgio Armani
 - **Nombre display:** Acqua Di Gio Profumo
@@ -1969,12 +1978,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/PROFUMO.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, bergamota
+- **Notas corazon:** romero, salvia esclarea, geranio
+- **Notas fondo:** olíbano, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 116. [ ] Aqcua Di Gio Absolu - Giorgio Armani
+### 116. [x] Aqcua Di Gio Absolu - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio Absolu
 - **Marca:** Giorgio Armani
 - **Nombre display:** Aqcua Di Gio Absolu
@@ -1986,12 +1995,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/armani/armani-absolu-EDP-pr.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, bergamota, pera, manzana, pomelo, limón
+- **Notas corazon:** lavanda, romero, geranio
+- **Notas fondo:** notas amaderadas, haba tonka, amberwood, pachulí, ládano
+- **Fuente / criterio:** misma ficha que Acqua Di Gio Absolu; el item del catalogo solo arrastra el typo "Aqcua"
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 117. [ ] Aqcua Di Gio Parfum - Giorgio Armani
+### 117. [x] Aqcua Di Gio Parfum - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio Parfum
 - **Marca:** Giorgio Armani
 - **Nombre display:** Aqcua Di Gio Parfum
@@ -2003,12 +2013,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/armani/ACQUA DI GIO PARFUM.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, bergamota
+- **Notas corazon:** romero, salvia, geranio
+- **Notas fondo:** olíbano, pachulí
+- **Fuente / criterio:** misma ficha que Acqua Di Gio Parfum; el item del catalogo solo arrastra el typo "Aqcua"
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 118. [ ] Aqcua Di Gio Profondo - Giorgio Armani
+### 118. [x] Aqcua Di Gio Profondo - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Acqua Di Gio Profondo
 - **Marca:** Giorgio Armani
 - **Nombre display:** Aqcua Di Gio Profondo
@@ -2020,12 +2031,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/armani/Untitled-1.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, bergamota, pera, manzana, pomelo, limón
+- **Notas corazon:** lavanda, romero, geranio
+- **Notas fondo:** notas amaderadas, haba tonka, amberwood, pachulí, ládano
+- **Fuente / criterio:** misma ficha que Acqua Di Gio Profondo; el item del catalogo solo arrastra el typo "Aqcua"
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 119. [ ] Armani Code Parfum - Giorgio Armani
+### 119. [x] Armani Code Parfum - Giorgio Armani
 - **Nombre interno:** Giorgio Armani Code Parfum
 - **Marca:** Giorgio Armani
 - **Nombre display:** Armani Code Parfum
@@ -2037,12 +2049,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/armani/ARMANI CODE PARFUM.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** bergamota, hoja de bergamota
+- **Notas corazon:** iris, aldehídos, salvia esclarea, raíz de lirio
+- **Notas fondo:** haba tonka, cedro
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 120. [ ] My Way Eau De Parfum - Giorgio Armani
+### 120. [x] My Way Eau De Parfum - Giorgio Armani
 - **Nombre interno:** Giorgio Armani My Way EDP
 - **Marca:** Giorgio Armani
 - **Nombre display:** My Way Eau De Parfum
@@ -2054,12 +2066,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/MY WAY EDP.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** flor de azahar, bergamota
+- **Notas corazon:** nardo, jazmín de la India
+- **Notas fondo:** almizcle blanco, vainilla de Madagascar, cedro de Virginia
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 121. [ ] Gentleman Boisée - Givenchy
+### 121. [x] Gentleman Boisée - Givenchy
 - **Nombre interno:** Givenchy Gentleman Boisée
 - **Marca:** Givenchy
 - **Nombre display:** Gentleman Boisée
@@ -2071,12 +2083,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/givenchy/Untitled-1.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/GENTLEMAN BOISEE.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta negra, geranio, cilantro
+- **Notas corazon:** iris, vaina de cacao, cedro
+- **Notas fondo:** notas amaderadas, sándalo, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 122. [ ] Gentleman Eau De Parfum - Givenchy
+### 122. [x] Gentleman Eau De Parfum - Givenchy
 - **Nombre interno:** Givenchy Gentleman Eau De Parfum
 - **Marca:** Givenchy
 - **Nombre display:** Gentleman Eau De Parfum
@@ -2088,12 +2100,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/GENTLEMAN EDP.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta negra, lavanda, bergamota
+- **Notas corazon:** orris, clavo de olor, canela
+- **Notas fondo:** vainilla negra, bálsamo de Tolú, haba tonka, benjuí, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 123. [ ] Gentleman EDP - Givenchy
+### 123. [x] Gentleman EDP - Givenchy
 - **Nombre interno:** Givenchy Gentleman EDP
 - **Marca:** Givenchy
 - **Nombre display:** Gentleman EDP
@@ -2105,12 +2117,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/givenchy/Untitled.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta negra, lavanda, bergamota
+- **Notas corazon:** orris, clavo de olor, canela
+- **Notas fondo:** vainilla negra, bálsamo de Tolú, haba tonka, benjuí, pachulí
+- **Fuente / criterio:** misma ficha que Gentleman Eau De Parfum; el catalogo separa la variante abreviada "EDP"
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 124. [ ] Gentleman Society - Givenchy
+### 124. [x] Gentleman Society - Givenchy
 - **Nombre interno:** Givenchy Gentleman Society
 - **Marca:** Givenchy
 - **Nombre display:** Gentleman Society
@@ -2122,12 +2135,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/givenchy/Untitled-2.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/GIVENCHY GENTLEMAN SOCIETY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** cardamomo, salvia
+- **Notas corazon:** narciso francés, vetiver haitiano, vetiver de Madagascar
+- **Notas fondo:** vainilla, palo santo, cedro
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 125. [ ] Gentleman Society Ambrée - Givenchy
+### 125. [x] Gentleman Society Ambrée - Givenchy
 - **Nombre interno:** Givenchy Gentleman Society Ambrée
 - **Marca:** Givenchy
 - **Nombre display:** Gentleman Society Ambrée
@@ -2139,12 +2152,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SOCIETY AMBREE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** nuez moscada, salvia esclarea, bayas de enebro
+- **Notas corazon:** orris, narciso, sándalo, vetiver de Madagascar, vetiver haitiano
+- **Notas fondo:** tabaco, vainilla de Madagascar, bálsamo del Perú
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 126. [ ] Gentleman Society Extreme - Givenchy
+### 126. [x] Gentleman Society Extreme - Givenchy
 - **Nombre interno:** Givenchy Gentleman Society Extreme
 - **Marca:** Givenchy
 - **Nombre display:** Gentleman Society Extreme
@@ -2156,12 +2169,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/givenchy/SOCI.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/Givenchy society extreme.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** nuez moscada, menta, salvia esclarea
+- **Notas corazon:** café, raíz de lirio, vetiver de Madagascar, vetiver haitiano, vetiver, narciso francés
+- **Notas fondo:** vainilla de Madagascar, sándalo australiano, cedro del Himalaya
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 127. [ ] Terre d'Hermès Eau de Toilette - Hermès
+### 127. [x] Terre d'Hermès Eau de Toilette - Hermès
 - **Nombre interno:** Terre d'Hermès EDT
 - **Marca:** Hermès
 - **Nombre display:** Terre d'Hermès Eau de Toilette
@@ -2173,12 +2186,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/TERRE DHERMES EDT.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pomelo, naranja
+- **Notas corazon:** geranio, pimienta
+- **Notas fondo:** vetiver, cedro, pachulí, benjuí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 128. [ ] Narcotic Delight - INITIO PARFUMS PRIVÉS
+### 128. [x] Narcotic Delight - INITIO PARFUMS PRIVÉS
 - **Nombre interno:** Initio Narcotic Delight
 - **Marca:** INITIO PARFUMS PRIVÉS
 - **Nombre display:** Narcotic Delight
@@ -2190,12 +2203,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/INITIO SIDE EFFECT.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** cereza, pimienta rosa, pimienta negra
+- **Notas corazon:** coñac, hedione, rosa
+- **Notas fondo:** tabaco, vainilla, haba tonka, cedro, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 129. [ ] Oud For Greatness - INITIO PARFUMS PRIVÉS
+### 129. [x] Oud For Greatness - INITIO PARFUMS PRIVÉS
 - **Nombre interno:** Initio Oud For Greatness
 - **Marca:** INITIO PARFUMS PRIVÉS
 - **Nombre display:** Oud For Greatness
@@ -2207,12 +2220,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/INITIO OUD FOR GREATNESS.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** azafrán, nuez moscada, lavanda
+- **Notas corazon:** oud
+- **Notas fondo:** pachulí, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 130. [ ] Gaultier Divine - Jean Paul Gaultier
+### 130. [x] Gaultier Divine - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Gaultier Divine
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Gaultier Divine
@@ -2224,12 +2237,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/dasdasdsa.png
 - **Imagen decant:** imagenes/fotos-decants/mujer/JEAN PAUL DIVINE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** calypsone, bergamota, bayas rojas
+- **Notas corazon:** azucena, ylang-ylang, jazmín
+- **Notas fondo:** merengue, almizcle, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 131. [ ] Gaultier Divine Le Parfum - Jean Paul Gaultier
+### 131. [x] Gaultier Divine Le Parfum - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Gaultier Divine Le Parfum
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Gaultier Divine Le Parfum
@@ -2241,12 +2254,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/GAULTIER DIVINE LE PARFUM.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/GAULTIER DIVINE LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas solares, azucena
+- **Notas corazon:** frangipani, sal marina
+- **Notas fondo:** ámbar, benjuí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 132. [ ] La Belle Eau de Parfum - Jean Paul Gaultier
+### 132. [x] La Belle Eau de Parfum - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier La Belle EDP
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** La Belle Eau de Parfum
@@ -2258,12 +2271,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/Untitled-2.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/LA BELLE.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pera
+- **Notas corazon:** vetiver
+- **Notas fondo:** vainilla
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 133. [ ] La Belle Flower Edition - Jean Paul Gaultier
+### 133. [x] La Belle Flower Edition - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier La Belle Flower Edition
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** La Belle Flower Edition
@@ -2275,12 +2288,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/LA BELLE FLOWER.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/LA BELLE FLOWER.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** albaricoque
+- **Notas corazon:** magnolia, osmanthus, jazmín
+- **Notas fondo:** vainilla, vetiver, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 134. [ ] La Belle Le Parfum - Jean Paul Gaultier
+### 134. [x] La Belle Le Parfum - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier La Belle Le Parfum
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** La Belle Le Parfum
@@ -2292,12 +2305,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/Untitled-1.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/LA BELLE LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pera
+- **Notas corazon:** vainilla
+- **Notas fondo:** haba tonka
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 135. [ ] La Belle Paradise Garden - Jean Paul Gaultier
+### 135. [x] La Belle Paradise Garden - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier La Belle Paradise Garden
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** La Belle Paradise Garden
@@ -2309,12 +2322,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/IMG_3238.WEBP
 - **Imagen decant:** imagenes/fotos-decants/mujer/LA BELLE PARADISE GARDEN.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** loto azul
+- **Notas corazon:** iris
+- **Notas fondo:** vainilla
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 136. [ ] Le Beau Eau De Toilette - Jean Paul Gaultier
+### 136. [x] Le Beau Eau De Toilette - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Le Beau EDT
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Le Beau Eau De Toilette
@@ -2326,12 +2339,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LE BEAU.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** bergamota
+- **Notas corazon:** coco
+- **Notas fondo:** haba tonka
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 137. [ ] Le Beau Le Parfum - Jean Paul Gaultier
+### 137. [x] Le Beau Le Parfum - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Le Beau Le Parfum
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Le Beau Le Parfum
@@ -2343,12 +2356,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/LE BEAU LE PARFUM.avif
 - **Imagen decant:** imagenes/fotos-decants/hombre/LE BEAU LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** piña, iris, jengibre, ciprés
+- **Notas corazon:** coco, notas amaderadas
+- **Notas fondo:** haba tonka, sándalo, ámbar, ámbar gris
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 138. [ ] Le Beau Paradise Garden - Jean Paul Gaultier
+### 138. [x] Le Beau Paradise Garden - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Le Beau Paradise Garden
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Le Beau Paradise Garden
@@ -2360,12 +2373,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/1708093208.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/LE BEAU PARADISE GARDEN.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas verdes, notas acuosas, menta, jengibre
+- **Notas corazon:** coco, higo, sal
+- **Notas fondo:** haba tonka, sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 139. [ ] Le Male Elixir - Jean Paul Gaultier
+### 139. [x] Le Male Elixir - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Le Male Elixir
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Le Male Elixir
@@ -2377,12 +2390,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/LE MALE ELIXIR.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/LE MALE ELIXIR PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lavanda, menta
+- **Notas corazon:** vainilla, benjuí
+- **Notas fondo:** miel, haba tonka, tabaco
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 140. [ ] Le Male Elixir Absolu - Jean Paul Gaultier
+### 140. [x] Le Male Elixir Absolu - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Le Male Elixir Absolu
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Le Male Elixir Absolu
@@ -2394,12 +2407,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/LE MALE ELIXIR ABSOLU.avif
 - **Imagen decant:** imagenes/fotos-decants/hombre/LE MALE ELIXIR ABSOLU.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** ciruela, canela, cardamomo, bergamota
+- **Notas corazon:** lavanda, davana, artemisia
+- **Notas fondo:** haba tonka, benjuí, ambreta, pachulí, ládano
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 141. [ ] Le Male Le Parfum - Jean Paul Gaultier
+### 141. [x] Le Male Le Parfum - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Le Male Le Parfum
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Le Male Le Parfum
@@ -2411,12 +2424,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/LE MALE LE PARFUM.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/LE MALE LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** cardamomo
+- **Notas corazon:** lavanda, iris
+- **Notas fondo:** vainilla, notas orientales, notas amaderadas
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 142. [ ] Le Male Lover - Jean Paul Gaultier
+### 142. [x] Le Male Lover - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Le Male Lover
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Le Male Lover
@@ -2428,12 +2441,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LE MALE LOVER.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta blanca, lima dedo
+- **Notas corazon:** ámbar gris, notas marinas, almizcle
+- **Notas fondo:** vainilla, notas amaderadas
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 143. [ ] Scandal Absolu - Jean Paul Gaultier
+### 143. [x] Scandal Absolu - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Scandal Absolu
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Scandal Absolu
@@ -2445,12 +2458,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/Scandal Absolu.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/SCANDAL ABSOLU.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** nardo
+- **Notas corazon:** higo negro
+- **Notas fondo:** sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 144. [ ] Scandal Intense - Jean Paul Gaultier
+### 144. [x] Scandal Intense - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Scandal Intense
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Scandal Intense
@@ -2462,12 +2475,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/SCANDAL INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** cardamomo
+- **Notas corazon:** ylang-ylang
+- **Notas fondo:** absoluto de vainilla
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 145. [ ] Scandal Pour Homme Absolu - Jean Paul Gaultier
+### 145. [x] Scandal Pour Homme Absolu - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Scandal Pour Homme Absolu
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Scandal Pour Homme Absolu
@@ -2479,12 +2492,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/Scandal Absolu Pour Homme.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/SCANDAL ABSOLU.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** mirabel
+- **Notas corazon:** castaña
+- **Notas fondo:** sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 146. [ ] Scandal Pour Homme Eau De Toilette - Jean Paul Gaultier
+### 146. [x] Scandal Pour Homme Eau De Toilette - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Scandal Pour Homme EDT
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Scandal Pour Homme Eau De Toilette
@@ -2496,12 +2509,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SCANDALL.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** mandarina, salvia esclarea
+- **Notas corazon:** caramelo, haba tonka
+- **Notas fondo:** vetiver
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 147. [ ] Scandal Pour Homme EDT - Jean Paul Gaultier
+### 147. [x] Scandal Pour Homme EDT - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Scandal Pour Homme EDT
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Scandal Pour Homme EDT
@@ -2513,12 +2526,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/Untitled.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** mandarina, salvia esclarea
+- **Notas corazon:** caramelo, haba tonka
+- **Notas fondo:** vetiver
+- **Fuente / criterio:** misma ficha que Scandal Pour Homme Eau De Toilette; el catalogo separa completo y variante abreviada
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 148. [ ] Scandal Pour Homme Intense - Jean Paul Gaultier
+### 148. [x] Scandal Pour Homme Intense - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Scandal Pour Homme Intense
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Scandal Pour Homme Intense
@@ -2530,12 +2544,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SCANDAL POUR HOMME INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** salvia esclarea
+- **Notas corazon:** vetiver
+- **Notas fondo:** cuero
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 149. [ ] Scandal Pour Homme Le Parfum - Jean Paul Gaultier
+### 149. [x] Scandal Pour Homme Le Parfum - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Scandal Pour Homme Le Parfum
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Scandal Pour Homme Le Parfum
@@ -2547,12 +2561,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/jean-paul-scandsal-leparfum-pr-oficial.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/SCANDAL LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** geranio
+- **Notas corazon:** haba tonka
+- **Notas fondo:** sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 150. [ ] Ultra Male - Jean Paul Gaultier
+### 150. [x] Ultra Male - Jean Paul Gaultier
 - **Nombre interno:** Jean Paul Gaultier Ultra Male
 - **Marca:** Jean Paul Gaultier
 - **Nombre display:** Ultra Male
@@ -2564,12 +2578,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/jpg/ULTRA MALE.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/ULTRA MALE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pera, lavanda, menta, bergamota, limón
+- **Notas corazon:** canela, salvia esclarea, alcaravea
+- **Notas fondo:** vainilla negra, ámbar, pachulí, cedro
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 151. [ ] Homme Eau De Parfum - Kenzo
+### 151. [x] Homme Eau De Parfum - Kenzo
 - **Nombre interno:** Kenzo Homme EDP
 - **Marca:** Kenzo
 - **Nombre display:** Homme Eau De Parfum
@@ -2581,12 +2595,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/KENZO HOMME EDP.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas
+- **Notas corazon:** cuero
+- **Notas fondo:** pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 152. [ ] Homme EDP - Kenzo
+### 152. [x] Homme EDP - Kenzo
 - **Nombre interno:** Kenzo Homme EDP
 - **Marca:** Kenzo
 - **Nombre display:** Homme EDP
@@ -2598,12 +2612,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/kenzo/Untitled.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas
+- **Notas corazon:** cuero
+- **Notas fondo:** pachulí
+- **Fuente / criterio:** misma ficha que Homme Eau De Parfum; el catalogo separa la variante abreviada EDP
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 153. [ ] Homme Homme Santal Marin - Kenzo
+### 153. [x] Homme Homme Santal Marin - Kenzo
 - **Nombre interno:** Kenzo Homme Santal Marin
 - **Marca:** Kenzo
 - **Nombre display:** Homme Homme Santal Marin
@@ -2615,12 +2630,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/kenzo/KENZO SANTAL MARIN.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas
+- **Notas corazon:** lavanda
+- **Notas fondo:** sándalo, madera de gaiac
+- **Fuente / criterio:** misma ficha que Homme Santal Marin; el display del catálogo repite "Homme" por error
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 154. [ ] Homme Intense - Kenzo
+### 154. [x] Homme Intense - Kenzo
 - **Nombre interno:** Kenzo Homme Intense
 - **Marca:** Kenzo
 - **Nombre display:** Homme Intense
@@ -2632,12 +2648,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/kenzo/Untitled.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/KENZO HOMME INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, calypsone, pimienta rosa, especias
+- **Notas corazon:** higo, higuera, vetiver
+- **Notas fondo:** sándalo, akigalawood, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 155. [ ] Homme Santal Marin - Kenzo
+### 155. [x] Homme Santal Marin - Kenzo
 - **Nombre interno:** Kenzo Homme Santal Marin
 - **Marca:** Kenzo
 - **Nombre display:** Homme Santal Marin
@@ -2649,12 +2665,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/KENZO SANTAL MARIN.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas
+- **Notas corazon:** lavanda
+- **Notas fondo:** sándalo, madera de gaiac
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 156. [ ] Angel's Share - Kilian
+### 156. [x] Angel's Share - Kilian
 - **Nombre interno:** Angel's Share By Kilian
 - **Marca:** Kilian
 - **Nombre display:** Angel's Share
@@ -2666,12 +2682,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ANGELS SHARE.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** coñac
+- **Notas corazon:** canela, haba tonka, roble, hedione
+- **Notas fondo:** vainilla, praliné, sándalo, almendra confitada
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 157. [ ] Black Phantom "Memento Mori" - Kilian
+### 157. [x] Black Phantom "Memento Mori" - Kilian
 - **Nombre interno:** Black Phantom 'Memento Mori' By Kilian
 - **Marca:** Kilian
 - **Nombre display:** Black Phantom "Memento Mori"
@@ -2683,12 +2699,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/kilian/BLACK PHANTOM.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/BLACK PHANTOM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** ron
+- **Notas corazon:** chocolate negro, café, almendra, heliotropo
+- **Notas fondo:** caramelo, caña de azúcar, sándalo, vainilla, haba tonka, vetiver
+- **Fuente / criterio:** se toma la ficha Fragrantica de Black Phantom original; el catálogo usa el subtítulo comercial "Memento Mori"
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 158. [ ] L12.12 Blanc - Lacoste
+### 158. [x] L12.12 Blanc - Lacoste
 - **Nombre interno:** Lacoste L12.12 Blanc
 - **Marca:** Lacoste
 - **Nombre display:** L12.12 Blanc
@@ -2700,12 +2717,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LACOSTE L12.12 BLANC.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas verdes, lima dedo
+- **Notas corazon:** eucalipto, cardamomo
+- **Notas fondo:** pino, cedro
+- **Fuente / criterio:** se usa la ficha masculina moderna de L.12.12 Blanc en Fragrantica; el catálogo no especifica flanker adicional
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 159. [ ] Original - Lacoste
+### 159. [x] Original - Lacoste
 - **Nombre interno:** Lacoste Original
 - **Marca:** Lacoste
 - **Nombre display:** Original
@@ -2717,12 +2735,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/lacoste/LACOSTE ORIGINAL.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** bergamota, pimienta rosa, cardamomo
+- **Notas corazon:** salvia esclarea, lavanda
+- **Notas fondo:** amber xtreme, sándalo, pachulí, haba tonka
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 160. [ ] Original Eau de Parfum - Lacoste
+### 160. [x] Original Eau de Parfum - Lacoste
 - **Nombre interno:** Lacoste Original
 - **Marca:** Lacoste
 - **Nombre display:** Original Eau de Parfum
@@ -2734,12 +2752,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LACOSTE ORIGINAL.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** bergamota, pimienta rosa, cardamomo
+- **Notas corazon:** salvia esclarea, lavanda
+- **Notas fondo:** amber xtreme, sándalo, pachulí, haba tonka
+- **Fuente / criterio:** misma ficha que Original; el catálogo separa completo y decant
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 161. [ ] Ídole - Lancôme
+### 161. [x] Ídole - Lancôme
 - **Nombre interno:** Lancôme Ídole
 - **Marca:** Lancôme
 - **Nombre display:** Ídole
@@ -2751,12 +2770,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/lancome/IDOLE.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pera, bergamota, pimienta rosa
+- **Notas corazon:** rosa, jazmín
+- **Notas fondo:** almizcle blanco, vainilla, pachulí, cedro
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 162. [ ] La Vie Est Belle L'Eau De Parfum - Lancôme
+### 162. [x] La Vie Est Belle L'Eau De Parfum - Lancôme
 - **Nombre interno:** Lancôme La Vie Est Belle L'Eau De Parfum
 - **Marca:** Lancôme
 - **Nombre display:** La Vie Est Belle L'Eau De Parfum
@@ -2768,12 +2787,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/lancome/LA VIE EST BELLE EDP.png
 - **Imagen decant:** imagenes/fotos-decants/mujer/LA VIE EST BELLE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** casis, pera
+- **Notas corazon:** iris, jazmín, flor de azahar
+- **Notas fondo:** praliné, vainilla, pachulí, haba tonka
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 163. [ ] Asad - Lattafa
+### 163. [x] Asad - Lattafa
 - **Nombre interno:** Lattafa Asad
 - **Marca:** Lattafa
 - **Nombre display:** Asad
@@ -2785,12 +2804,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/777571_3_lattafa-asad-man-eau-de-parfum-100ml.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/ASAD.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta negra, tabaco, piña
+- **Notas corazon:** pachulí, café, iris
+- **Notas fondo:** vainilla, ámbar, maderas secas, benjuí, ládano
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 164. [ ] Asad Bourbon - Lattafa
+### 164. [x] Asad Bourbon - Lattafa
 - **Nombre interno:** Lattafa Asad Bourbon
 - **Marca:** Lattafa
 - **Nombre display:** Asad Bourbon
@@ -2802,12 +2821,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/ASAD BOURBON.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/ASAD BOURBON.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lavanda, mirabel, pimienta rosa
+- **Notas corazon:** cacao, nuez moscada, davana
+- **Notas fondo:** vainilla bourbon, ámbar, vetiver
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 165. [ ] Asad Elixir - Lattafa
+### 165. [x] Asad Elixir - Lattafa
 - **Nombre interno:** Lattafa Asad Elixir
 - **Marca:** Lattafa
 - **Nombre display:** Asad Elixir
@@ -2819,12 +2838,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/ASAD ELIXIR.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/ASAD ELIXIR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta rosa, azafrán, pomelo
+- **Notas corazon:** tabaco, vainilla, cedro
+- **Notas fondo:** olíbano, ámbar claro, pachulí, cachemira
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 166. [ ] Asad Zanzibar - Lattafa
+### 166. [x] Asad Zanzibar - Lattafa
 - **Nombre interno:** Lattafa Asad Zanzibar
 - **Marca:** Lattafa
 - **Nombre display:** Asad Zanzibar
@@ -2836,12 +2855,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/ASAD-ZANZIBAR-1.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/ASAD ZANZIBAR.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lavanda, pimienta negra
+- **Notas corazon:** agua de coco, iris, sal
+- **Notas fondo:** vainilla, incienso
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 167. [ ] Atheeri - Lattafa
+### 167. [x] Atheeri - Lattafa
 - **Nombre interno:** Lattafa Atheeri
 - **Marca:** Lattafa
 - **Nombre display:** Atheeri
@@ -2853,12 +2872,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/ATHEERI.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** flor de la pasión, gota de rocío
+- **Notas corazon:** orquídea, jazmín
+- **Notas fondo:** vainilla, amberwood
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 168. [ ] Atlas - Lattafa
+### 168. [x] Atlas - Lattafa
 - **Nombre interno:** Lattafa Atlas
 - **Marca:** Lattafa
 - **Nombre display:** Atlas
@@ -2870,12 +2889,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/ATLAS.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/ATLAS.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** notas marinas, sal, limón
+- **Notas corazon:** davana, iris
+- **Notas fondo:** ámbar gris, musgo de roble, sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 169. [ ] Bade'e Al Oud: Amethyst - Lattafa
+### 169. [x] Bade'e Al Oud: Amethyst - Lattafa
 - **Nombre interno:** Lattafa Bade'e Al Oud: Amethyst
 - **Marca:** Lattafa
 - **Nombre display:** Bade'e Al Oud: Amethyst
@@ -2887,12 +2906,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/AMETHYST.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/BADEE AL OUD AMETHYST.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pimienta rosa, bergamota
+- **Notas corazon:** rosa turca, rosa búlgara, jazmín
+- **Notas fondo:** oud, ámbar, vainilla
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 170. [ ] Bade'e Al Oud: Honor And Glory - Lattafa
+### 170. [x] Bade'e Al Oud: Honor And Glory - Lattafa
 - **Nombre interno:** Lattafa Bade'e Al Oud: Honor And Glory
 - **Marca:** Lattafa
 - **Nombre display:** Bade'e Al Oud: Honor And Glory
@@ -2904,12 +2923,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HONOR AND GLORY.WEBP
 - **Imagen decant:** imagenes/fotos-decants/hombre/HONOR AND GLORY.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** piña, crema brûlée
+- **Notas corazon:** canela, cúrcuma, pimienta negra, benjuí
+- **Notas fondo:** vainilla, sándalo, cachemira, musgo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 171. [ ] Bade'e Al Oud: Noble Blush - Lattafa
+### 171. [x] Bade'e Al Oud: Noble Blush - Lattafa
 - **Nombre interno:** Lattafa Bade'e Al Oud: Noble Blush
 - **Marca:** Lattafa
 - **Nombre display:** Bade'e Al Oud: Noble Blush
@@ -2921,12 +2940,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/NOBLE BLUSH.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/NOBLE BLUSH.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** leche de rosas
+- **Notas corazon:** merengue, almendra
+- **Notas fondo:** vainilla, almizcle, sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 172. [ ] Bade'e Al Oud: Oud For Glory - Lattafa
+### 172. [x] Bade'e Al Oud: Oud For Glory - Lattafa
 - **Nombre interno:** Lattafa Bade'e Al Oud: Oud For Glory
 - **Marca:** Lattafa
 - **Nombre display:** Bade'e Al Oud: Oud For Glory
@@ -2938,12 +2957,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/OUD FOR GLORY.JPG
 - **Imagen decant:** imagenes/fotos-decants/hombre/OUD FOR GLORY.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** azafrán, nuez moscada, lavanda
+- **Notas corazon:** oud, pachulí
+- **Notas fondo:** oud, pachulí, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 173. [ ] Bade'e Al Oud: Sublime - Lattafa
+### 173. [x] Bade'e Al Oud: Sublime - Lattafa
 - **Nombre interno:** Lattafa Bade'e Al Oud: Sublime
 - **Marca:** Lattafa
 - **Nombre display:** Bade'e Al Oud: Sublime
@@ -2955,12 +2974,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/SUBLIME.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/SUBLIME.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** manzana, lichi, rosa
+- **Notas corazon:** ciruela, jazmín
+- **Notas fondo:** vainilla, musgo, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 174. [ ] Eclaire - Lattafa
+### 174. [x] Eclaire - Lattafa
 - **Nombre interno:** Lattafa Eclaire
 - **Marca:** Lattafa
 - **Nombre display:** Eclaire
@@ -2972,12 +2991,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/ECLAIRE.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/ECLAIRE.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** caramelo, leche, azúcar
+- **Notas corazon:** miel, flores blancas
+- **Notas fondo:** vainilla, praliné, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 175. [ ] Eclaire Banoffi - Lattafa
+### 175. [x] Eclaire Banoffi - Lattafa
 - **Nombre interno:** Lattafa Eclaire Banoffi
 - **Marca:** Lattafa
 - **Nombre display:** Eclaire Banoffi
@@ -2989,12 +3008,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/ECLAIRE BANOFFI.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/ECLAIRE BANOFFI.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** banana, dulce de leche
+- **Notas corazon:** vainilla, crema batida
+- **Notas fondo:** praliné, galleta, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 176. [ ] Eclaire Pistache - Lattafa
+### 176. [x] Eclaire Pistache - Lattafa
 - **Nombre interno:** Lattafa Eclaire Pistache
 - **Marca:** Lattafa
 - **Nombre display:** Eclaire Pistache
@@ -3006,12 +3025,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/ECLAIRE PISTACHE.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/ECLAIRE PISTACHE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** crema de pistacho, pistacho
+- **Notas corazon:** cacao, crema batida, coco
+- **Notas fondo:** vainilla, leche, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 177. [ ] Fakhar Black - Lattafa
+### 177. [x] Fakhar Black - Lattafa
 - **Nombre interno:** Lattafa Fakhar Black
 - **Marca:** Lattafa
 - **Nombre display:** Fakhar Black
@@ -3023,12 +3042,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/FAKHAR BLACK.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/FAKHAR BLACK.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** manzana, bergamota, jengibre
+- **Notas corazon:** lavanda, salvia, bayas de enebro, geranio
+- **Notas fondo:** haba tonka, cedro, amberwood, vetiver
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 178. [ ] Fakhar Extrait - Lattafa
+### 178. [x] Fakhar Extrait - Lattafa
 - **Nombre interno:** Lattafa Fakhar Extrait
 - **Marca:** Lattafa
 - **Nombre display:** Fakhar Extrait
@@ -3040,12 +3059,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/FAKHAR EXTRAIT.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/FAKHAR EXTRAIT.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** pomelo, cardamomo, pimienta rosa
+- **Notas corazon:** nardos, notas solares, artemisia
+- **Notas fondo:** ámbar, cachemira, cuero, ládano
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 179. [ ] Fakhar Rosé - Lattafa
+### 179. [x] Fakhar Rosé - Lattafa
 - **Nombre interno:** Lattafa Fakhar Rosé
 - **Marca:** Lattafa
 - **Nombre display:** Fakhar Rosé
@@ -3057,12 +3076,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/FAKHAR ROSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** frutas, azucena, granada, aldehídos
+- **Notas corazon:** nardos, jazmín, gardenia, ylang-ylang, madreselva, rosa, peonía
+- **Notas fondo:** vainilla, almizcle blanco, sándalo, ambroxan
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 180. [ ] Hayaatim - Lattafa
+### 180. [x] Hayaatim - Lattafa
 - **Nombre interno:** Lattafa Hayaatim
 - **Marca:** Lattafa
 - **Nombre display:** Hayaatim
@@ -3074,12 +3093,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAYAATIM.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** manzana, bergamota
+- **Notas corazon:** canela, notas amaderadas
+- **Notas fondo:** almizcle, vainilla
+- **Fuente / criterio:** se toma como variante/typo de Hayaati en Fragrantica; el catálogo no muestra ficha mejor identificada
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 181. [ ] Her Confession - Lattafa
+### 181. [x] Her Confession - Lattafa
 - **Nombre interno:** Lattafa Her Confession
 - **Marca:** Lattafa
 - **Nombre display:** Her Confession
@@ -3091,12 +3111,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HER CONFESSION.png
 - **Imagen decant:** imagenes/fotos-decants/mujer/HER CONFESSION.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** canela, místico
+- **Notas corazon:** nardos, jazmín, incienso, mahonial
+- **Notas fondo:** vainilla, almizcle, haba tonka
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 182. [ ] His Confession - Lattafa
+### 182. [x] His Confession - Lattafa
 - **Nombre interno:** Lattafa His Confession
 - **Marca:** Lattafa
 - **Nombre display:** His Confession
@@ -3108,12 +3128,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HIS CONFESSION.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/HIS CONFESSION.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lavanda, canela, mandarina
+- **Notas corazon:** iris, benjuí, ciprés, mahonial
+- **Notas fondo:** vainilla, haba tonka, ámbar, incienso, cedro, pachulí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 183. [ ] Ishq Al Shuyukh - Lattafa
+### 183. [x] Ishq Al Shuyukh - Lattafa
 - **Nombre interno:** Lattafa Ishq Al Shuyukh
 - **Marca:** Lattafa
 - **Nombre display:** Ishq Al Shuyukh
@@ -3125,12 +3145,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/OUD FOR GLORY.JPG
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** limón, bergamota
+- **Notas corazon:** piña, pimienta negra
+- **Notas fondo:** vainilla, amberwood, cedro, pachulí
+- **Fuente / criterio:** se usa la ficha masculina de Ishq Al Shuyukh Silver por falta de especificación adicional en el catálogo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 184. [ ] Khamrah - Lattafa
+### 184. [x] Khamrah - Lattafa
 - **Nombre interno:** Lattafa Khamrah
 - **Marca:** Lattafa
 - **Nombre display:** Khamrah
@@ -3142,12 +3163,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/KHAMRAH-LATTAFA-.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/KHAMRAH.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** canela, nuez moscada, bergamota
+- **Notas corazon:** dátiles, praliné, nardos, mahonial
+- **Notas fondo:** vainilla, haba tonka, amberwood, mirra, benjuí, akigalawood
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 185. [ ] Khamrah (Desodorante) - Lattafa
+### 185. [x] Khamrah (Desodorante) - Lattafa
 - **Nombre interno:** Lattafa Desodorante Khamrah
 - **Marca:** Lattafa
 - **Nombre display:** Khamrah (Desodorante)
@@ -3159,12 +3180,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/DESODORANTE KHAMRAH.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** canela, nuez moscada, bergamota
+- **Notas corazon:** dátiles, praliné, nardos, mahonial
+- **Notas fondo:** vainilla, haba tonka, amberwood, mirra, benjuí, akigalawood
+- **Fuente / criterio:** se reutiliza la ficha de Khamrah; el item del catálogo es el desodorante de la misma línea aromática
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 186. [ ] Khamrah Dukhan - Lattafa
+### 186. [x] Khamrah Dukhan - Lattafa
 - **Nombre interno:** Lattafa Khamrah Dukhan
 - **Marca:** Lattafa
 - **Nombre display:** Khamrah Dukhan
@@ -3176,12 +3198,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/KHAMRAH DUKHAN.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/KHAMRAH DUKHAN.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** especias, pimiento, mandarina
+- **Notas corazon:** incienso, ládano, flor de azahar, pachulí
+- **Notas fondo:** praliné, tabaco, haba tonka, ámbar, benjuí
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 187. [ ] Khamrah Qahwa - Lattafa
+### 187. [x] Khamrah Qahwa - Lattafa
 - **Nombre interno:** Lattafa Khamrah Qahwa
 - **Marca:** Lattafa
 - **Nombre display:** Khamrah Qahwa
@@ -3193,12 +3215,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/1149057834.avif
 - **Imagen decant:** imagenes/fotos-decants/hombre/KHAMRAH QAHWA.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** canela, cardamomo, jengibre
+- **Notas corazon:** praliné, frutas confitadas, flores blancas
+- **Notas fondo:** vainilla, café, haba tonka, benjuí, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 188. [ ] Maahir Legacy - Lattafa
+### 188. [x] Maahir Legacy - Lattafa
 - **Nombre interno:** Lattafa Maahir Legacy
 - **Marca:** Lattafa
 - **Nombre display:** Maahir Legacy
@@ -3210,12 +3232,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/MAAHIR LEGACY.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/MAAHIR LEGACY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lima, menta, pomelo, lavanda, piña
+- **Notas corazon:** pimienta negra, romero, bayas de enebro, geranio, olíbano
+- **Notas fondo:** ambroxan, vetiver, musgo de roble, cachemira, haba tonka
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 189. [ ] Mayar - Lattafa
+### 189. [x] Mayar - Lattafa
 - **Nombre interno:** Lattafa Mayar
 - **Marca:** Lattafa
 - **Nombre display:** Mayar
@@ -3227,12 +3249,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/MAYAR.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/MAYAR.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lichi, frambuesa, hoja de violeta
+- **Notas corazon:** rosa blanca, peonía, jazmín
+- **Notas fondo:** almizcle, vainilla
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 190. [ ] Qaed Al Fursan - Lattafa
+### 190. [x] Qaed Al Fursan - Lattafa
 - **Nombre interno:** Lattafa Qaed Al Fursan
 - **Marca:** Lattafa
 - **Nombre display:** Qaed Al Fursan
@@ -3244,12 +3266,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/QAED AL FURSAN.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/QAED AL FURSAN.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** piña, azafrán
+- **Notas corazon:** abeto balsámico, jazmín
+- **Notas fondo:** cedro, ámbar, oud
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 191. [ ] Qaed Al Fursan Unlimited - Lattafa
+### 191. [x] Qaed Al Fursan Unlimited - Lattafa
 - **Nombre interno:** Lattafa Qaed Al Fursan Unlimited
 - **Marca:** Lattafa
 - **Nombre display:** Qaed Al Fursan Unlimited
@@ -3261,12 +3283,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/QAED AL FURSAN UNLIMITED.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** coco, piña, cítricos
+- **Notas corazon:** ylang-ylang, frangipani, jazmín
+- **Notas fondo:** vainilla, almizcle, sándalo, notas dulces
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 192. [ ] Qaed Al Fursan Untamed - Lattafa
+### 192. [x] Qaed Al Fursan Untamed - Lattafa
 - **Nombre interno:** Lattafa Qaed Al Fursan Untamed
 - **Marca:** Lattafa
 - **Nombre display:** Qaed Al Fursan Untamed
@@ -3278,12 +3300,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/QAED AL FURSAN UNTAMED.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** canela, cardamomo, mandarina, nuez moscada
+- **Notas corazon:** caramelo, lavanda, salvia esclarea, geranio, ciprés
+- **Notas fondo:** ámbar, cedro, olíbano, ládano, vetiver
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 193. [ ] Sehr - Lattafa
+### 193. [x] Sehr - Lattafa
 - **Nombre interno:** Lattafa Sehr
 - **Marca:** Lattafa
 - **Nombre display:** Sehr
@@ -3295,12 +3317,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/SEHR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** almendra amarga, canela
+- **Notas corazon:** akigalawood, pomarose, jazmín
+- **Notas fondo:** absoluto de vainilla, haba tonka, ámbar
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 194. [ ] Vintage Radio - Lattafa
+### 194. [x] Vintage Radio - Lattafa
 - **Nombre interno:** Lattafa Vintage Radio
 - **Marca:** Lattafa
 - **Nombre display:** Vintage Radio
@@ -3312,12 +3334,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/VINTAGE RADIO.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/VINTAGE RADIO.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** lavanda, salvia, bergamota
+- **Notas corazon:** ciruela, palo santo, pimienta negra
+- **Notas fondo:** sándalo, oud
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 195. [ ] Yara - Lattafa
+### 195. [x] Yara - Lattafa
 - **Nombre interno:** Lattafa Yara
 - **Marca:** Lattafa
 - **Nombre display:** Yara
@@ -3329,12 +3351,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/Yara.JPG
 - **Imagen decant:** imagenes/fotos-decants/mujer/YARA.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** orquídea, heliotropo, mandarina
+- **Notas corazon:** acorde gourmand, frutas tropicales
+- **Notas fondo:** vainilla, almizcle, sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 196. [ ] Yara (Desodorante) - Lattafa
+### 196. [x] Yara (Desodorante) - Lattafa
 - **Nombre interno:** Lattafa Desodorante Yara
 - **Marca:** Lattafa
 - **Nombre display:** Yara (Desodorante)
@@ -3346,12 +3368,13 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/DESODORANTE YARA.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** orquídea, heliotropo, mandarina
+- **Notas corazon:** acorde gourmand, frutas tropicales
+- **Notas fondo:** vainilla, almizcle, sándalo
+- **Fuente / criterio:** se reutiliza la ficha de Yara; el item del catálogo es el desodorante de la misma línea aromática
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 197. [ ] Yara Candy - Lattafa
+### 197. [x] Yara Candy - Lattafa
 - **Nombre interno:** Lattafa Yara Candy
 - **Marca:** Lattafa
 - **Nombre display:** Yara Candy
@@ -3363,12 +3386,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/YARA CANDY.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/YARA CANDY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** mandarina verde, casis
+- **Notas corazon:** caramelo efervescente de fresa, gardenia
+- **Notas fondo:** sándalo, sirope de vainilla, almizcle, ámbar
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 198. [ ] Yara Elixir - Lattafa
+### 198. [x] Yara Elixir - Lattafa
 - **Nombre interno:** Lattafa Yara Elixir
 - **Marca:** Lattafa
 - **Nombre display:** Yara Elixir
@@ -3380,12 +3403,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/YARA ELIXIR.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/YARA ELIXIR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** s'mores de fresa, casis
+- **Notas corazon:** flor de azahar, jazmín
+- **Notas fondo:** vainilla, caramelo, ámbar, almizcle
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 199. [ ] Yara Moi - Lattafa
+### 199. [x] Yara Moi - Lattafa
 - **Nombre interno:** Lattafa Yara Moi
 - **Marca:** Lattafa
 - **Nombre display:** Yara Moi
@@ -3397,12 +3420,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/YARA MOI.WEBP
 - **Imagen decant:** imagenes/fotos-decants/mujer/YARA MOI.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** jazmín, durazno
+- **Notas corazon:** caramelo, ámbar
+- **Notas fondo:** pachulí, sándalo
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 200. [ ] Yara Tous - Lattafa
+### 200. [x] Yara Tous - Lattafa
 - **Nombre interno:** Lattafa Yara Tous
 - **Marca:** Lattafa
 - **Nombre display:** Yara Tous
@@ -3414,12 +3437,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/YARA TOUS.WEBP
 - **Imagen decant:** imagenes/fotos-decants/mujer/YARA TOUS.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** mango, coco, maracuyá
+- **Notas corazon:** jazmín, flor de azahar, heliotropo
+- **Notas fondo:** vainilla, almizcle, cachemira
+- **Imagenes galeria:** no se agrega galeria extra; se mantiene sin infografias/resumenes de Fragrantica
 
-### 201. [ ] Santal 33 - Le Labo
+### 201. [x] Santal 33 - Le Labo
 - **Nombre interno:** Le Labo Santal 33
 - **Marca:** Le Labo
 - **Nombre display:** Santal 33
@@ -3431,12 +3454,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/lelabo/SANTAL 33.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/SANTAL 33.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** Acorde de violeta, Cardamomo, Iris, Ambrox, Cedro, Cuero, Sándalo, Papiro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se toma el listado general de notas porque Fragrantica no publica evolución por salida/corazón/fondo.
 
-### 202. [ ] Summer Hammer - Lorenzo Pazzaglia
+### 202. [x] Summer Hammer - Lorenzo Pazzaglia
 - **Nombre interno:** Lorenzo Pazzaglia Summer Hammer
 - **Marca:** Lorenzo Pazzaglia
 - **Nombre display:** Summer Hammer
@@ -3448,12 +3469,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SUMMER HAMMER.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Mango, Piña, Coco, Bergamota, Ron blanco
+- **Notas corazon:** Leche de coco, Flores blancas, Notas marinas
+- **Notas fondo:** Almizcle, Sándalo, Ámbar, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 203. [ ] City Of Stars - Louis Vuitton
+### 203. [x] City Of Stars - Louis Vuitton
 - **Nombre interno:** Louis Vuitton City Of Stars
 - **Marca:** Louis Vuitton
 - **Nombre display:** City Of Stars
@@ -3465,12 +3486,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/CITY OF STARS.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lima, Naranja sanguina, Mandarina sanguina, Limón, Bergamota
+- **Notas corazon:** Flor de tiaré
+- **Notas fondo:** Notas empolvadas, Almizcle, Sándalo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 204. [ ] Imagination - Louis Vuitton
+### 204. [x] Imagination - Louis Vuitton
 - **Nombre interno:** Louis Vuitton Imagination
 - **Marca:** Louis Vuitton
 - **Nombre display:** Imagination
@@ -3482,12 +3503,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LV IMAGINATION.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cidra, Bergamota de Calabria, Naranja siciliana
+- **Notas corazon:** Neroli tunecino, Jengibre nigeriano, Canela de Ceilán
+- **Notas fondo:** Té negro chino, Ambroxan, Madera de gaiac, Olíbano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 205. [ ] Ombré Nomade - Louis Vuitton
+### 205. [x] Ombré Nomade - Louis Vuitton
 - **Nombre interno:** Louis Vuitton Ombré Nomade
 - **Marca:** Louis Vuitton
 - **Nombre display:** Ombré Nomade
@@ -3499,12 +3520,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LV OMBRE NOMADE.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** Oud, Incienso, Frambuesa, Rosa, Azafrán, Abedul, Benjuí, Amberwood
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se toma el listado general de notas porque Fragrantica no publica evolución por salida/corazón/fondo.
 
-### 206. [ ] Pacific Chill - Louis Vuitton
+### 206. [x] Pacific Chill - Louis Vuitton
 - **Nombre interno:** Louis Vuitton Pacific Chill
 - **Marca:** Louis Vuitton
 - **Nombre display:** Pacific Chill
@@ -3516,12 +3535,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LV PACIFIC CHILL.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cidra, Naranja, Limón, Menta, Casis, Cilantro
+- **Notas corazon:** Albaricoque, Albahaca, Semillas de zanahoria, Rosa de mayo
+- **Notas fondo:** Higo, Dátil, Ambreta
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 207. [ ] By The Fireplace - Maison Margiela
+### 207. [x] By The Fireplace - Maison Margiela
 - **Nombre interno:** Maison Margiela By The Fireplace
 - **Marca:** Maison Margiela
 - **Nombre display:** By The Fireplace
@@ -3533,12 +3552,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BY THE FIREPLACE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Clavo de olor, Pimienta rosa, Flor de azahar
+- **Notas corazon:** Castaña, Madera de gaiac, Enebro
+- **Notas fondo:** Vainilla, Bálsamo del Perú, Cashmeran
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 208. [ ] Jazz Club - Maison Margiela
+### 208. [x] Jazz Club - Maison Margiela
 - **Nombre interno:** Maison Margiela Jazz Club
 - **Marca:** Maison Margiela
 - **Nombre display:** Jazz Club
@@ -3550,12 +3569,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/JAZZ CLUB.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pimienta rosa, Neroli, Limón
+- **Notas corazon:** Ron, Aceite de vetiver de Java, Salvia esclarea
+- **Notas fondo:** Hoja de tabaco, Vaina de vainilla, Styrax
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 209. [ ] Cedrat Boise - Mancera
+### 209. [x] Cedrat Boise - Mancera
 - **Nombre interno:** Mancera Cedrat Boise
 - **Marca:** Mancera
 - **Nombre display:** Cedrat Boise
@@ -3567,12 +3586,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/CEDRAT BOISE.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón siciliano, Bergamota, Casis, Notas especiadas
+- **Notas corazon:** Notas frutales, Hoja de pachulí, Jazmín acuático
+- **Notas fondo:** Cedro, Cuero, Sándalo, Vainilla, Almizcle blanco, Musgo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 210. [ ] Instant Crush - Mancera
+### 210. [x] Instant Crush - Mancera
 - **Nombre interno:** Mancera Instant Crush
 - **Marca:** Mancera
 - **Nombre display:** Instant Crush
@@ -3584,12 +3603,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/mancera/INSTANT CRUSH.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/INSTANT CRUSH.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Azafrán, Jengibre, Mandarina siciliana, Bergamota siciliana
+- **Notas corazon:** Amberwood, Rosa marroquí, Jazmín egipcio, Hoja de pachulí de Indonesia
+- **Notas fondo:** Vainilla de Madagascar, Almizcle blanco, Sándalo, Musgo de roble
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 211. [ ] Red Tobacco - Mancera
+### 211. [x] Red Tobacco - Mancera
 - **Nombre interno:** Mancera Red Tobacco
 - **Marca:** Mancera
 - **Nombre display:** Red Tobacco
@@ -3601,12 +3620,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/mancera/RED TOBACCO.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/RED TOBACCO.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Canela, Oud, Incienso, Azafrán, Nuez moscada, Manzana verde, Pera blanca
+- **Notas corazon:** Pachulí, Jazmín
+- **Notas fondo:** Tabaco, Vainilla de Madagascar, Ámbar, Sándalo, Madera de gaiac, Almizcle blanco, Vetiver haitiano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 212. [ ] Italian Leather - Memo
+### 212. [x] Italian Leather - Memo
 - **Nombre interno:** Memo Italian Leather
 - **Marca:** Memo
 - **Nombre display:** Italian Leather
@@ -3618,12 +3637,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/MEMO ITALIAN LEATHER.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cuero, Hoja de tomate, Vainilla
+- **Notas corazon:** Hoja de tomate, Gálbano, Ládano, Raíz de lirio, Salvia esclarea
+- **Notas fondo:** Cuero, Absoluto de vainilla, Benjuí, Bálsamo de Tolú, Mirra, Opopónaco, Sándalo, Almizcle
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 213. [ ] Pour Femme - Moncler
+### 213. [x] Pour Femme - Moncler
 - **Nombre interno:** Moncler Pour Femme
 - **Marca:** Moncler
 - **Nombre display:** Pour Femme
@@ -3635,12 +3654,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/moncler/Untitled.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/MONCLER POUR FEMME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Notas empolvadas, Nieve, Bergamota
+- **Notas corazon:** Heliotropo, Jazmín sambac
+- **Notas fondo:** Vainilla, Sándalo, Ámbar, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 214. [ ] Pour Homme - Moncler
+### 214. [x] Pour Homme - Moncler
 - **Nombre interno:** Moncler Pour Homme
 - **Marca:** Moncler
 - **Nombre display:** Pour Homme
@@ -3652,12 +3671,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/moncler/Untitled-1.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/MONCLER POUR HOMME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Notas verdes, Salvia esclarea
+- **Notas corazon:** Pino
+- **Notas fondo:** Sándalo, Cedro, Vetiver, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 215. [ ] Arabians Tonka - Montale
+### 215. [x] Arabians Tonka - Montale
 - **Nombre interno:** Montale Arabians Tonka
 - **Marca:** Montale
 - **Nombre display:** Arabians Tonka
@@ -3669,12 +3688,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ARABIANS TONKA.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Azafrán, Bergamota
+- **Notas corazon:** Oud, Rosa búlgara
+- **Notas fondo:** Haba tonka, Caña de azúcar, Ámbar, Almizcle blanco, Musgo de roble
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 216. [ ] Explorer - Montblanc
+### 216. [x] Explorer - Montblanc
 - **Nombre interno:** Montblanc Explorer
 - **Marca:** Montblanc
 - **Nombre display:** Explorer
@@ -3686,12 +3705,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/EXPLORER.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Pimienta rosa, Salvia esclarea
+- **Notas corazon:** Vetiver haitiano, Cuero
+- **Notas fondo:** Ambroxan, Akigalawood, Hoja de pachulí de Indonesia, Vaina de cacao
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 217. [ ] Explorer Platinum - Montblanc
+### 217. [x] Explorer Platinum - Montblanc
 - **Nombre interno:** Montblanc Explorer Platinum
 - **Marca:** Montblanc
 - **Nombre display:** Explorer Platinum
@@ -3703,12 +3722,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/EXPLORER PLATINUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Hoja de violeta
+- **Notas corazon:** Salvia esclarea
+- **Notas fondo:** Madera de cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 218. [ ] Explorer Ultra Blue - Montblanc
+### 218. [x] Explorer Ultra Blue - Montblanc
 - **Nombre interno:** Montblanc Explorer Ultra Blue
 - **Marca:** Montblanc
 - **Nombre display:** Explorer Ultra Blue
@@ -3720,12 +3739,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/mntblanc/DECANdasdas.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/EXPLORER ULTRA BLUE.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota siciliana, Pimienta rosa, Frutas exóticas
+- **Notas corazon:** Notas marinas, Ámbar gris
+- **Notas fondo:** Notas amaderadas, Hoja de pachulí de Indonesia, Cuero
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 219. [ ] Legend Eau de Parfum - Montblanc
+### 219. [x] Legend Eau de Parfum - Montblanc
 - **Nombre interno:** Montblanc Legend EDP
 - **Marca:** Montblanc
 - **Nombre display:** Legend Eau de Parfum
@@ -3737,12 +3756,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LEGEND EDP.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Hoja de violeta, Bergamota
+- **Notas corazon:** Notas amaderadas, Jazmín, Magnolia
+- **Notas fondo:** Musgo de roble, Cuero
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 220. [ ] Legend Eau de Toilette - Montblanc
+### 220. [x] Legend Eau de Toilette - Montblanc
 - **Nombre interno:** Montblanc Legend EDT
 - **Marca:** Montblanc
 - **Nombre display:** Legend Eau de Toilette
@@ -3754,12 +3773,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/MONTBLANC LEGEND.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Piña, Bergamota, Cedrón
+- **Notas corazon:** Manzana roja, Frutas secas, Musgo de roble, Geranio, Cumarina, Rosa
+- **Notas fondo:** Haba tonka, Sándalo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 221. [ ] Legend EDP - Montblanc
+### 221. [x] Legend EDP - Montblanc
 - **Nombre interno:** Montblanc Legend EDP
 - **Marca:** Montblanc
 - **Nombre display:** Legend EDP
@@ -3771,12 +3790,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/mntblanc/LEGEND EDP.WEBP
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Hoja de violeta, Bergamota
+- **Notas corazon:** Notas amaderadas, Jazmín, Magnolia
+- **Notas fondo:** Musgo de roble, Cuero
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Legend Eau de Parfum".
 
-### 222. [ ] Legend EDT - Montblanc
+### 222. [x] Legend EDT - Montblanc
 - **Nombre interno:** Montblanc Legend EDT
 - **Marca:** Montblanc
 - **Nombre display:** Legend EDT
@@ -3788,12 +3807,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/mntblanc/MPONT.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Piña, Bergamota, Cedrón
+- **Notas corazon:** Manzana roja, Frutas secas, Musgo de roble, Geranio, Cumarina, Rosa
+- **Notas fondo:** Haba tonka, Sándalo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Legend Eau de Toilette".
 
-### 223. [ ] Legend Spirit - Montblanc
+### 223. [x] Legend Spirit - Montblanc
 - **Nombre interno:** Montblanc Legend Spirit
 - **Marca:** Montblanc
 - **Nombre display:** Legend Spirit
@@ -3805,12 +3824,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/MONTBLANC LEGEND SPIRIT.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Pimienta rosa, Pomelo
+- **Notas corazon:** Cardamomo, Lavanda, Notas acuáticas
+- **Notas fondo:** Almizcle blanco, Cachemira, Musgo de roble, Maderas blancas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 224. [ ] Fresh Couture - Moschino
+### 224. [x] Fresh Couture - Moschino
 - **Nombre interno:** Moschino Fresh Couture
 - **Marca:** Moschino
 - **Nombre display:** Fresh Couture
@@ -3822,12 +3841,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/FRESH COUTURE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Mandarina, Ylang-ylang
+- **Notas corazon:** Peonía, Frambuesa, Osmanthus
+- **Notas fondo:** Ambroxan, Notas amaderadas, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 225. [ ] Toy Boy - Moschino
+### 225. [x] Toy Boy - Moschino
 - **Nombre interno:** Moschino Toy Boy
 - **Marca:** Moschino
 - **Nombre display:** Toy Boy
@@ -3839,12 +3858,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/MOSCHINO TOY BOY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pimienta rosa, Pera, Nuez moscada de Indonesia, Elemi, Bergamota
+- **Notas corazon:** Rosa, Clavo de olor, Magnolia, Lino
+- **Notas fondo:** Vetiver haitiano, Cashmeran, Sándalo, Sylkolide, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 226. [ ] Voyage - Nautica
+### 226. [x] Voyage - Nautica
 - **Nombre interno:** Nautica Voyage
 - **Marca:** Nautica
 - **Nombre display:** Voyage
@@ -3856,12 +3875,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/NAUTICA VOYAGE.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Hojas verdes, Manzana
+- **Notas corazon:** Loto, Mimosa
+- **Notas fondo:** Almizcle, Cedro, Musgo de roble, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 227. [ ] Cuoium - Orto Parisi
+### 227. [x] Cuoium - Orto Parisi
 - **Nombre interno:** Orto Parisi Cuoium
 - **Marca:** Orto Parisi
 - **Nombre display:** Cuoium
@@ -3873,12 +3892,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/CUOIUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Notas animales, Notas amaderadas
+- **Notas corazon:** Violeta
+- **Notas fondo:** Cuero, Incienso, Aceite de cade, Cedro, Ládano, Pachulí, Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 228. [ ] Megamare - Orto Parisi
+### 228. [x] Megamare - Orto Parisi
 - **Nombre interno:** Orto Parisi Megamare
 - **Marca:** Orto Parisi
 - **Nombre display:** Megamare
@@ -3890,12 +3909,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ortoparisi/MEGAMARE.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/MEGAMARE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Limón
+- **Notas corazon:** Algas marinas, Calone, Hedione
+- **Notas fondo:** Almizcle, Ambroxan, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 229. [ ] Althaïr - Parfums de Marly
+### 229. [x] Althaïr - Parfums de Marly
 - **Nombre interno:** Parfums de Marly Althaïr
 - **Marca:** Parfums de Marly
 - **Nombre display:** Althaïr
@@ -3907,12 +3926,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/marly/ALTHAIR.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/ALTHAIR.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Canela, Flor de azahar, Cardamomo, Bergamota
+- **Notas corazon:** Vainilla bourbon, Elemi
+- **Notas fondo:** Praliné, Ambroxan, Madera de gaiac, Almizcle
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 230. [ ] Galloway - Parfums de Marly
+### 230. [x] Galloway - Parfums de Marly
 - **Nombre interno:** Parfums de Marly Galloway
 - **Marca:** Parfums de Marly
 - **Nombre display:** Galloway
@@ -3924,12 +3943,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/GALLOWAY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cítricos, Pimienta
+- **Notas corazon:** Flor de azahar, Iris
+- **Notas fondo:** Almizcle, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 231. [ ] Herod - Parfums de Marly
+### 231. [x] Herod - Parfums de Marly
 - **Nombre interno:** Parfums de Marly Herod
 - **Marca:** Parfums de Marly
 - **Nombre display:** Herod
@@ -3941,12 +3960,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HEROD.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Canela, Pepperwood
+- **Notas corazon:** Hoja de tabaco, Incienso, Osmanthus, Ládano
+- **Notas fondo:** Vainilla, Iso E Super, Cedro, Almizcle, Nagarmotha, Vetiver, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 232. [ ] Layton - Parfums de Marly
+### 232. [x] Layton - Parfums de Marly
 - **Nombre interno:** Parfums de Marly Layton
 - **Marca:** Parfums de Marly
 - **Nombre display:** Layton
@@ -3958,12 +3977,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/marly/LAYTON.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/LAYTON.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana, Lavanda, Bergamota, Mandarina
+- **Notas corazon:** Geranio, Violeta, Jazmín
+- **Notas fondo:** Vainilla, Cardamomo, Sándalo, Pimienta, Madera de gaiac, Pachulí, Cumarina, Ambermax
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 233. [ ] Layton Exclusif - Parfums de Marly
+### 233. [x] Layton Exclusif - Parfums de Marly
 - **Nombre interno:** Parfums de Marly Layton Exclusif
 - **Marca:** Parfums de Marly
 - **Nombre display:** Layton Exclusif
@@ -3975,12 +3994,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/LAYTON EXCLUSIF.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Almendra, Mandarina, Bergamota, Notas acuosas, Manzana, Pomelo
+- **Notas corazon:** Civet, Rosa, Geranio, Gardenia, Nenúfar, Lavanda, Canela
+- **Notas fondo:** Oud laosiano, Madera de gaiac, Vainilla, Café, Sándalo, Ámbar, Hoja de pachulí de Indonesia, Pimienta rosa, Musgo de roble, Nagarmotha, Cuero
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 234. [ ] Pegasus - Parfums de Marly
+### 234. [x] Pegasus - Parfums de Marly
 - **Nombre interno:** Parfums de Marly Pegasus
 - **Marca:** Parfums de Marly
 - **Nombre display:** Pegasus
@@ -3992,12 +4011,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/marly/PEGASUS.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/PEGASUS.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Heliotropo, Comino, Bergamota, Pimienta rosa
+- **Notas corazon:** Almendra amarga, Lavanda, Jazmín
+- **Notas fondo:** Vainilla, Sándalo, Ámbar, Almizcle, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 235. [ ] Set Polo Blue - Polo Ralph Lauren
+### 235. [x] Set Polo Blue - Polo Ralph Lauren
 - **Nombre interno:** Polo Ralph Lauren Set Polo Blue
 - **Marca:** Polo Ralph Lauren
 - **Nombre display:** Set Polo Blue
@@ -4009,12 +4028,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/prl/Polo Blue Parfum.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Mandarina, Cardamomo, Bergamota
+- **Notas corazon:** Lavanda, Salvia, Hoja de violeta
+- **Notas fondo:** Benjuí, Cedro, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se toma la ficha de "Polo Blue Parfum" porque el set del catálogo usa esa presentación.
 
-### 236. [ ] Luna Rossa Carbon EDT - Prada
+### 236. [x] Luna Rossa Carbon EDT - Prada
 - **Nombre interno:** Prada Luna Rossa Carbon EDT
 - **Marca:** Prada
 - **Nombre display:** Luna Rossa Carbon EDT
@@ -4026,12 +4045,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/PRADA LUNA ROSSA CARBON.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Pimienta
+- **Notas corazon:** Lavanda, Notas metálicas, Notas acuáticas, Carbón, Tintura de tierra
+- **Notas fondo:** Ambroxan, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 237. [ ] Fame Eau de Parfum - Rabanne
+### 237. [x] Fame Eau de Parfum - Rabanne
 - **Nombre interno:** Rabanne Fame EDP
 - **Marca:** Rabanne
 - **Nombre display:** Fame Eau de Parfum
@@ -4043,12 +4062,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/Untitled-8.png
 - **Imagen decant:** imagenes/fotos-decants/mujer/FAME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Mango, Bergamota
+- **Notas corazon:** Jazmín, Olíbano
+- **Notas fondo:** Vainilla, Sándalo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 238. [ ] Fame Intense - Rabanne
+### 238. [x] Fame Intense - Rabanne
 - **Nombre interno:** Rabanne Fame Intense
 - **Marca:** Rabanne
 - **Nombre display:** Fame Intense
@@ -4060,12 +4079,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/FAME INTENSE.WEBP
 - **Imagen decant:** imagenes/fotos-decants/mujer/FAME INTENSE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Agua de coco, Pimienta rosa, Bergamota
+- **Notas corazon:** Jazmín, Incienso, Ylang-ylang
+- **Notas fondo:** Sándalo, Almizcle, Cedro de Virginia
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 239. [ ] Fame Parfum - Rabanne
+### 239. [x] Fame Parfum - Rabanne
 - **Nombre interno:** Rabanne Fame Parfum
 - **Marca:** Rabanne
 - **Nombre display:** Fame Parfum
@@ -4077,12 +4096,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/FAME PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Mango, Bergamota, Pimienta rosa
+- **Notas corazon:** Jazmín, Olíbano, Pachulí
+- **Notas fondo:** Benjuí, Sándalo, Almizcle, Helvetolide
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 240. [ ] Invictus Parfum - Rabanne
+### 240. [x] Invictus Parfum - Rabanne
 - **Nombre interno:** Rabanne Invictus Parfum
 - **Marca:** Rabanne
 - **Nombre display:** Invictus Parfum
@@ -4094,12 +4113,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/Invictus Parfum.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/INVICTUS PARFUM.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Notas marinas, Lavanda, Pimienta rosa
+- **Notas corazon:** Jabón, Hoja de violeta, Mirto
+- **Notas fondo:** Almizcle, Cashmeran, Sándalo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 241. [ ] Invictus Victory - Rabanne
+### 241. [x] Invictus Victory - Rabanne
 - **Nombre interno:** Rabanne Invictus Victory
 - **Marca:** Rabanne
 - **Nombre display:** Invictus Victory
@@ -4111,12 +4130,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/paco-rabanne-invictus-victory-pr.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/INVICTUS VICTORY.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pimienta rosa, Limón
+- **Notas corazon:** Olíbano, Lavanda
+- **Notas fondo:** Vainilla, Haba tonka, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 242. [ ] Invictus Victory Elixir - Rabanne
+### 242. [x] Invictus Victory Elixir - Rabanne
 - **Nombre interno:** Rabanne Invictus Victory Elixir
 - **Marca:** Rabanne
 - **Nombre display:** Invictus Victory Elixir
@@ -4128,12 +4147,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/Untitled-4.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/INVICTUS VICTORY ELIXIR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Cardamomo, Pimienta negra
+- **Notas corazon:** Incienso, Pachulí
+- **Notas fondo:** Vaina de vainilla, Haba tonka
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 243. [ ] Lady Million Privé - Rabanne
+### 243. [x] Lady Million Privé - Rabanne
 - **Nombre interno:** Rabanne Lady Million Privé
 - **Marca:** Rabanne
 - **Nombre display:** Lady Million Privé
@@ -4145,12 +4164,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/LADY MILLION PRIVE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Notas amaderadas, Flor de azahar
+- **Notas corazon:** Vainilla, Frambuesa, Heliotropo
+- **Notas fondo:** Cacao, Miel, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 244. [ ] Million Gold - Rabanne
+### 244. [x] Million Gold - Rabanne
 - **Nombre interno:** Rabanne Million Gold
 - **Marca:** Rabanne
 - **Nombre display:** Million Gold
@@ -4162,12 +4181,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/3349668630356_Million_Gold_Eau_de_Parfum_Intense_200_ml_Product_Left_1.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/MILLION GOLD.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** Sándalo, Especias, Mandarina, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se toma el listado general de notas porque Fragrantica no publica evolución por salida/corazón/fondo.
 
-### 245. [ ] One Million Eau de Toilette - Rabanne
+### 245. [x] One Million Eau de Toilette - Rabanne
 - **Nombre interno:** Rabanne One Million EDT
 - **Marca:** Rabanne
 - **Nombre display:** One Million Eau de Toilette
@@ -4179,12 +4196,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ONE MILLION EDT.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Mandarina sanguina, Pomelo, Menta
+- **Notas corazon:** Canela, Notas especiadas, Rosa
+- **Notas fondo:** Ámbar, Cuero, Notas amaderadas, Pachulí hindú
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 246. [ ] One Million EDT - Rabanne
+### 246. [x] One Million EDT - Rabanne
 - **Nombre interno:** Rabanne One Million EDT
 - **Marca:** Rabanne
 - **Nombre display:** One Million EDT
@@ -4196,12 +4213,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/Untitled-2.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Mandarina sanguina, Pomelo, Menta
+- **Notas corazon:** Canela, Notas especiadas, Rosa
+- **Notas fondo:** Ámbar, Cuero, Notas amaderadas, Pachulí hindú
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "One Million Eau de Toilette".
 
-### 247. [ ] One Million Parfum - Rabanne
+### 247. [x] One Million Parfum - Rabanne
 - **Nombre interno:** Rabanne One Million Parfum
 - **Marca:** Rabanne
 - **Nombre display:** One Million Parfum
@@ -4213,12 +4230,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/Untitled-3.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/1 MILLION PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** Nardos, Notas solares, Sal, Monoi, Ámbar gris, Cuero, Cashmeran, Ládano, Pino
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se toma el listado general de notas porque Fragrantica no publica evolución por salida/corazón/fondo.
 
-### 248. [ ] One Million Privé - Rabanne
+### 248. [x] One Million Privé - Rabanne
 - **Nombre interno:** Rabanne One Million Privé
 - **Marca:** Rabanne
 - **Nombre display:** One Million Privé
@@ -4230,12 +4245,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/1MILLION PRIVE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Canela, Mandarina sanguina
+- **Notas corazon:** Tabaco, Mirra
+- **Notas fondo:** Haba tonka, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 249. [ ] One Million Royal - Rabanne
+### 249. [x] One Million Royal - Rabanne
 - **Nombre interno:** Rabanne One Million Royal
 - **Marca:** Rabanne
 - **Nombre display:** One Million Royal
@@ -4247,12 +4262,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/65190440_00.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/1MILLION ROYAL.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cardamomo, Mandarina, Bergamota
+- **Notas corazon:** Lavanda, Salvia, Hoja de violeta
+- **Notas fondo:** Benjuí, Cedro, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 250. [ ] Phantom Eau de Toilette - Rabanne
+### 250. [x] Phantom Eau de Toilette - Rabanne
 - **Nombre interno:** Rabanne Phantom EDT
 - **Marca:** Rabanne
 - **Nombre display:** Phantom Eau de Toilette
@@ -4264,12 +4279,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/PHANTOM.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Ralladura de limón, Limón de Amalfi
+- **Notas corazon:** Lavanda, Notas terrosas, Manzana, Humo, Pachulí
+- **Notas fondo:** Vainilla, Lavanda, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 251. [ ] Phantom Intense - Rabanne
+### 251. [x] Phantom Intense - Rabanne
 - **Nombre interno:** Rabanne Phantom Intense
 - **Marca:** Rabanne
 - **Nombre display:** Phantom Intense
@@ -4281,12 +4296,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/PHANTOM INTENSE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cardamomo, Limón, Bergamota, Ruibarbo
+- **Notas corazon:** Lavanda, Cedro, Geranio, Pachulí
+- **Notas fondo:** Vainilla, Bálsamo de Tolú, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 252. [ ] Phantom Parfum - Rabanne
+### 252. [x] Phantom Parfum - Rabanne
 - **Nombre interno:** Rabanne Phantom Parfum
 - **Marca:** Rabanne
 - **Nombre display:** Phantom Parfum
@@ -4298,12 +4313,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/paco/Untitled-1.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/PHANTOM PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cardamomo, Bergamota, Ruibarbo, Limón
+- **Notas corazon:** Lavanda, Cedro, Pachulí, Geranio
+- **Notas fondo:** Vainilla, Bálsamo de Tolú, Vetiver haitiano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 253. [ ] Pure XS Night Eau De Parfum - Rabanne
+### 253. [x] Pure XS Night Eau De Parfum - Rabanne
 - **Nombre interno:** Rabanne Pure XS Night
 - **Marca:** Rabanne
 - **Nombre display:** Pure XS Night Eau De Parfum
@@ -4315,12 +4330,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/PURE XS NIGHT.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Ginseng, Jengibre
+- **Notas corazon:** Cacao, Vainilla, Canela
+- **Notas fondo:** Caramelo, Mirra
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 254. [ ] Hawas Black - Rasasi
+### 254. [x] Hawas Black - Rasasi
 - **Nombre interno:** Rasasi Hawas Black
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Black
@@ -4332,12 +4347,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HAWAS BLACK.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Piña, Pomelo
+- **Notas corazon:** Pachulí, Madera de cedro, Jazmín
+- **Notas fondo:** Musgo de roble, Notas amaderadas, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 255. [ ] Hawas Black For Him - Rasasi
+### 255. [x] Hawas Black For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas Black For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Black For Him
@@ -4349,12 +4364,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS BLACK.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota, Piña, Pomelo
+- **Notas corazon:** Pachulí, Madera de cedro, Jazmín
+- **Notas fondo:** Musgo de roble, Notas amaderadas, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Hawas Black".
 
-### 256. [ ] Hawas Elixir For Him - Rasasi
+### 256. [x] Hawas Elixir For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas Elixir For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Elixir For Him
@@ -4366,12 +4381,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS ELIXIR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Menta, Bergamota, Artemisa
+- **Notas corazon:** Chocolate negro, Lavanda, Benjuí
+- **Notas fondo:** Vainilla, Haba tonka, Almizcle blanco
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 257. [ ] Hawas Fire - Rasasi
+### 257. [x] Hawas Fire - Rasasi
 - **Nombre interno:** Rasasi Hawas Fire
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Fire
@@ -4383,12 +4398,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HAWAS FIRE.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Salvia esclarea
+- **Notas corazon:** Notas marinas, Jazmín egipcio
+- **Notas fondo:** Ámbar, Notas minerales, Ámbar gris
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 258. [ ] Hawas Fire For Him - Rasasi
+### 258. [x] Hawas Fire For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas Fire For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Fire For Him
@@ -4400,12 +4415,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS FIRE.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Salvia esclarea
+- **Notas corazon:** Notas marinas, Jazmín egipcio
+- **Notas fondo:** Ámbar, Notas minerales, Ámbar gris
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Hawas Fire".
 
-### 259. [ ] Hawas For Her - Rasasi
+### 259. [x] Hawas For Her - Rasasi
 - **Nombre interno:** Rasasi Hawas For Her
 - **Marca:** Rasasi
 - **Nombre display:** Hawas For Her
@@ -4417,12 +4432,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/HAWAS FOR HER.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Granada, Manzana, Pomelo
+- **Notas corazon:** Iris, Jazmín sambac, Cítricos
+- **Notas fondo:** Praliné, Pachulí, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 260. [ ] Hawas For Him - Rasasi
+### 260. [x] Hawas For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas For Him
@@ -4434,12 +4449,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/hawas-pr-of.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana, Bergamota, Limón, Canela
+- **Notas corazon:** Notas acuáticas, Ciruela, Flor de azahar, Cardamomo
+- **Notas fondo:** Ámbar gris, Almizcle, Pachulí, Madera a la deriva
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 261. [ ] Hawas ICE - Rasasi
+### 261. [x] Hawas ICE - Rasasi
 - **Nombre interno:** Rasasi Hawas ICE
 - **Marca:** Rasasi
 - **Nombre display:** Hawas ICE
@@ -4451,12 +4466,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HAWAS ICE.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana, Limón italiano, Bergamota siciliana, Anís estrellado
+- **Notas corazon:** Ciruela, Flor de azahar, Cardamomo
+- **Notas fondo:** Almizcle, Ámbar, Madera a la deriva, Musgo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 262. [ ] Hawas ICE For Him - Rasasi
+### 262. [x] Hawas ICE For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas ICE For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas ICE For Him
@@ -4468,12 +4483,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS ICE.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana, Limón italiano, Bergamota siciliana, Anís estrellado
+- **Notas corazon:** Ciruela, Flor de azahar, Cardamomo
+- **Notas fondo:** Almizcle, Ámbar, Madera a la deriva, Musgo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Hawas ICE".
 
-### 263. [ ] Hawas Kobra - Rasasi
+### 263. [x] Hawas Kobra - Rasasi
 - **Nombre interno:** Rasasi Hawas Kobra
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Kobra
@@ -4485,12 +4500,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HAWAS KOBRA.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Jengibre, Bergamota, Mandarina
+- **Notas corazon:** Canela, Té verde, Neroli
+- **Notas fondo:** Almizcle, Notas amaderadas, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 264. [ ] Hawas Kobra For Him - Rasasi
+### 264. [x] Hawas Kobra For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas Kobra For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Kobra For Him
@@ -4502,12 +4517,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS KOBRA.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Jengibre, Bergamota, Mandarina
+- **Notas corazon:** Canela, Té verde, Neroli
+- **Notas fondo:** Almizcle, Notas amaderadas, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Hawas Kobra".
 
-### 265. [ ] Hawas Malibu - Rasasi
+### 265. [x] Hawas Malibu - Rasasi
 - **Nombre interno:** Rasasi Hawas Malibu
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Malibu
@@ -4519,12 +4534,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HAWAS MALIBU.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Piña, Naranja, Pomelo
+- **Notas corazon:** Ámbar, Raíz de lirio, Lavanda
+- **Notas fondo:** Haba tonka, Almizcle, Cashmeran, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 266. [ ] Hawas Malibu For Him - Rasasi
+### 266. [x] Hawas Malibu For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas Malibu For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Malibu For Him
@@ -4536,12 +4551,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS MALIBU.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Piña, Naranja, Pomelo
+- **Notas corazon:** Ámbar, Raíz de lirio, Lavanda
+- **Notas fondo:** Haba tonka, Almizcle, Cashmeran, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Hawas Malibu".
 
-### 267. [ ] Hawas Tropical - Rasasi
+### 267. [x] Hawas Tropical - Rasasi
 - **Nombre interno:** Rasasi Hawas Tropical
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Tropical
@@ -4553,12 +4568,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HAWAS TROPICAL.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Agua de coco, Hoja de higo, Jengibre
+- **Notas corazon:** Coco, Higo, Menta
+- **Notas fondo:** Sándalo, Haba tonka, Almizcle
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 268. [ ] Hawas Tropical For Him - Rasasi
+### 268. [x] Hawas Tropical For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas Tropical For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Tropical For Him
@@ -4570,12 +4585,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS TROPICAL.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Agua de coco, Hoja de higo, Jengibre
+- **Notas corazon:** Coco, Higo, Menta
+- **Notas fondo:** Sándalo, Haba tonka, Almizcle
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Hawas Tropical".
 
-### 269. [ ] Hawas Verde - Rasasi
+### 269. [x] Hawas Verde - Rasasi
 - **Nombre interno:** Rasasi Hawas Verde
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Verde
@@ -4587,12 +4602,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/arabes/HAWAS VERDE.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** Lima, Pachulí, Romero, Manzana verde, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se toma el listado general de notas porque Fragrantica no publica evolución por salida/corazón/fondo.
 
-### 270. [ ] Hawas Verde For Him - Rasasi
+### 270. [x] Hawas Verde For Him - Rasasi
 - **Nombre interno:** Rasasi Hawas Verde For Him
 - **Marca:** Rasasi
 - **Nombre display:** Hawas Verde For Him
@@ -4604,12 +4617,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/HAWAS VERDE.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** Lima, Pachulí, Romero, Manzana verde, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Hawas Verde" y solo publica listado general de notas.
 
-### 271. [ ] N°4 Aprés l'Amour Eau de Parfum - Thomas Kosmala
+### 271. [x] N°4 Aprés l'Amour Eau de Parfum - Thomas Kosmala
 - **Nombre interno:** Thomas Kosmala N°4 Aprés l'Amour EDP
 - **Marca:** Thomas Kosmala
 - **Nombre display:** N°4 Aprés l'Amour Eau de Parfum
@@ -4621,12 +4632,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/NO4 AMOUR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Ralladura de limón, Flor de azahar amarga
+- **Notas corazon:** Especias aromáticas
+- **Notas fondo:** Almizcle, Ámbar, Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 272. [ ] N°4 Neon - Thomas Kosmala
+### 272. [x] N°4 Neon - Thomas Kosmala
 - **Nombre interno:** Thomas Kosmala N°4 Neon
 - **Marca:** Thomas Kosmala
 - **Nombre display:** N°4 Neon
@@ -4638,12 +4649,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/NO4 NEON.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pomelo, Yuzu, Mandarina
+- **Notas corazon:** Mango, Melón, Gálbano
+- **Notas fondo:** Notas ozónicas, Notas solares, Aldehídos
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 273. [ ] Bitter Peach - Tom Ford
+### 273. [x] Bitter Peach - Tom Ford
 - **Nombre interno:** Tom Ford Bitter Peach
 - **Marca:** Tom Ford
 - **Nombre display:** Bitter Peach
@@ -4655,12 +4666,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/TOM FORD BITTER PEACH.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Durazno, Naranja sanguina, Cardamomo, Heliotropo
+- **Notas corazon:** Ron, Coñac, Davana, Jazmín
+- **Notas fondo:** Vainilla, Hoja de pachulí de Indonesia, Haba tonka, Sándalo, Benjuí, Cashmeran, Ládano, Styrax, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 274. [ ] Black Orchid - Tom Ford
+### 274. [x] Black Orchid - Tom Ford
 - **Nombre interno:** Tom Ford Black Orchid
 - **Marca:** Tom Ford
 - **Nombre display:** Black Orchid
@@ -4672,12 +4683,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/tomford/Tom Ford Black Orchid.webp
 - **Imagen decant:** imagenes/fotos-decants/mujer/TOM FORD BLACK ORCHID.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Trufa, Gardenia, Grosella negra, Ylang-ylang, Jazmín, Bergamota, Mandarina, Limón de Amalfi
+- **Notas corazon:** Orquídea, Especias, Gardenia, Notas frutales, Ylang-ylang, Jazmín, Loto
+- **Notas fondo:** Chocolate mexicano, Pachulí, Vainilla, Incienso, Ámbar, Sándalo, Vetiver, Almizcle blanco
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 275. [ ] Cherry Smoke - Tom Ford
+### 275. [x] Cherry Smoke - Tom Ford
 - **Nombre interno:** Tom Ford Cherry Smoke
 - **Marca:** Tom Ford
 - **Nombre display:** Cherry Smoke
@@ -4689,12 +4700,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/TOM FORD CHERRY SMOKE.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cereza ácida, Azafrán
+- **Notas corazon:** Cuero, Olivo, Osmanthus chino, Albaricoque
+- **Notas fondo:** Humo, Notas amaderadas, Aceite de cipriol (nagarmotha)
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 276. [ ] Costa Azzurra Parfum - Tom Ford
+### 276. [x] Costa Azzurra Parfum - Tom Ford
 - **Nombre interno:** Tom Ford Costa Azzurra Parfum
 - **Marca:** Tom Ford
 - **Nombre display:** Costa Azzurra Parfum
@@ -4706,12 +4717,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/TOM FORD COSTA AZZURRA PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón italiano
+- **Notas corazon:** Ciprés, Roble
+- **Notas fondo:** Ámbar, Ládano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 277. [ ] Lost Cherry - Tom Ford
+### 277. [x] Lost Cherry - Tom Ford
 - **Nombre interno:** Tom Ford Lost Cherry
 - **Marca:** Tom Ford
 - **Nombre display:** Lost Cherry
@@ -4723,12 +4734,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/TOM FORD LOST CHERRY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Almendra amarga, Cereza negra, Licor de cereza
+- **Notas corazon:** Cereza ácida, Ciruela, Rosa turca, Jazmín sambac
+- **Notas fondo:** Vainilla, Haba tonka, Canela, Bálsamo del Perú, Sándalo, Benjuí, Clavo de olor, Cedro, Pachulí, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 278. [ ] Ombré Leather - Tom Ford
+### 278. [x] Ombré Leather - Tom Ford
 - **Nombre interno:** Tom Ford Ombré Leather
 - **Marca:** Tom Ford
 - **Nombre display:** Ombré Leather
@@ -4740,12 +4751,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/TOM FORD OMBRÉ LEATHER.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cardamomo
+- **Notas corazon:** Cuero, Jazmín sambac
+- **Notas fondo:** Ámbar, Musgo, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se toma la ficha de "Ombré Leather (2018)".
 
-### 279. [ ] Born In Roma Coral Fantasy - Valentino
+### 279. [x] Born In Roma Coral Fantasy - Valentino
 - **Nombre interno:** Valentino Born In Roma Coral Fantasy
 - **Marca:** Valentino
 - **Nombre display:** Born In Roma Coral Fantasy
@@ -4757,12 +4768,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/valentino/BORN IN ROMA CORAL FANTASY.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana roja, Cardamomo, Bergamota de Calabria
+- **Notas corazon:** Lavanda, Geranio bourbon, Salvia esclarea
+- **Notas fondo:** Hoja de tabaco, Pachulí, Vetiver haitiano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la ficha de Fragrantica de "Uomo Born In Roma Coral Fantasy".
 
-### 280. [ ] Born In Roma Intense - Valentino
+### 280. [x] Born In Roma Intense - Valentino
 - **Nombre interno:** Valentino Born In Roma Intense
 - **Marca:** Valentino
 - **Nombre display:** Born In Roma Intense
@@ -4774,12 +4785,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/valentino/BORN IN ROMA INTENSE.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Vainilla
+- **Notas corazon:** Lavanda
+- **Notas fondo:** Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la ficha de Fragrantica de "Uomo Born In Roma Intense".
 
-### 281. [ ] Born In Roma Purple Melancholia - Valentino
+### 281. [x] Born In Roma Purple Melancholia - Valentino
 - **Nombre interno:** Valentino Born In Roma Purple Melancholia
 - **Marca:** Valentino
 - **Nombre display:** Born In Roma Purple Melancholia
@@ -4791,12 +4802,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/valentino/BORN IN ROMA PURPLE MELANCHOLIA.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cardamomo
+- **Notas corazon:** Coco, Lavanda
+- **Notas fondo:** Madera de ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la ficha de Fragrantica de "Uomo Born In Roma Purple Melancholia".
 
-### 282. [ ] Donna Born In Roma Green Stravaganza - Valentino
+### 282. [x] Donna Born In Roma Green Stravaganza - Valentino
 - **Nombre interno:** Valentino Donna Born In Roma Green Stravaganza
 - **Marca:** Valentino
 - **Nombre display:** Donna Born In Roma Green Stravaganza
@@ -4808,12 +4819,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/DONNA GREEN STRAVAGANZA.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Té lapsang souchong
+- **Notas corazon:** Jazmín
+- **Notas fondo:** Vainilla
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 283. [ ] Donna Born In Roma Intense - Valentino
+### 283. [x] Donna Born In Roma Intense - Valentino
 - **Nombre interno:** Valentino Donna Born In Roma Intense
 - **Marca:** Valentino
 - **Nombre display:** Donna Born In Roma Intense
@@ -4825,12 +4836,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/valentino/DONNA BORN IN ROMA INTENSE.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/DONNA BORN IN ROMA INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Vainilla bourbon, Ámbar
+- **Notas corazon:** Jazmín
+- **Notas fondo:** Benjuí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 284. [ ] Uomo Born In Roma Coral Fantasy - Valentino
+### 284. [x] Uomo Born In Roma Coral Fantasy - Valentino
 - **Nombre interno:** Valentino Uomo Born In Roma Coral Fantasy
 - **Marca:** Valentino
 - **Nombre display:** Uomo Born In Roma Coral Fantasy
@@ -4842,12 +4853,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BORN IN ROMA CORAL FANTASY.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana roja, Cardamomo, Bergamota de Calabria
+- **Notas corazon:** Lavanda, Geranio bourbon, Salvia esclarea
+- **Notas fondo:** Hoja de tabaco, Pachulí, Vetiver haitiano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 285. [ ] Uomo Born In Roma EDT - Valentino
+### 285. [x] Uomo Born In Roma EDT - Valentino
 - **Nombre interno:** Valentino Uomo Born In Roma EDT
 - **Marca:** Valentino
 - **Nombre display:** Uomo Born In Roma EDT
@@ -4859,12 +4870,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/VALENTINO BORN IN ROMA EDT.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Notas minerales, Hoja de violeta, Sal
+- **Notas corazon:** Salvia, Jengibre
+- **Notas fondo:** Notas amaderadas, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la ficha de Fragrantica de "Valentino Uomo Born in Roma".
 
-### 286. [ ] Uomo Born In Roma Extradose - Valentino
+### 286. [x] Uomo Born In Roma Extradose - Valentino
 - **Nombre interno:** Valentino Uomo Born In Roma Extradose
 - **Marca:** Valentino
 - **Nombre display:** Uomo Born In Roma Extradose
@@ -4876,12 +4887,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BORN IN ROMA EXTRADOSE.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Notas especiadas
+- **Notas corazon:** Lavanda silvestre
+- **Notas fondo:** Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 287. [ ] Uomo Born In Roma Green Stravaganza - Valentino
+### 287. [x] Uomo Born In Roma Green Stravaganza - Valentino
 - **Nombre interno:** Valentino Uomo Born In Roma Green Stravaganza
 - **Marca:** Valentino
 - **Nombre display:** Uomo Born In Roma Green Stravaganza
@@ -4893,12 +4904,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/VALENTINO GREEN STRAVAGANZA.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota de Calabria
+- **Notas corazon:** Café
+- **Notas fondo:** Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 288. [ ] Uomo Born In Roma Intense - Valentino
+### 288. [x] Uomo Born In Roma Intense - Valentino
 - **Nombre interno:** Valentino Uomo Born In Roma Intense
 - **Marca:** Valentino
 - **Nombre display:** Uomo Born In Roma Intense
@@ -4910,12 +4921,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BORN IN ROMA INTENSE.jpeg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Vainilla
+- **Notas corazon:** Lavanda
+- **Notas fondo:** Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 289. [ ] Uomo Born In Roma Purple Melancholia - Valentino
+### 289. [x] Uomo Born In Roma Purple Melancholia - Valentino
 - **Nombre interno:** Valentino Uomo Born In Roma Purple Melancholia
 - **Marca:** Valentino
 - **Nombre display:** Uomo Born In Roma Purple Melancholia
@@ -4927,12 +4938,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/BORN IN ROMA PURPLE MELANCHOLIA.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Cardamomo
+- **Notas corazon:** Coco, Lavanda
+- **Notas fondo:** Madera de ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 290. [ ] Crystal Noir - Versace
+### 290. [x] Crystal Noir - Versace
 - **Nombre interno:** Versace Crystal Noir
 - **Marca:** Versace
 - **Nombre display:** Crystal Noir
@@ -4944,12 +4955,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/versace/CRYSTAL NOIR.jpg
 - **Imagen decant:** imagenes/fotos-decants/mujer/CRYSTAL NOIR.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pimienta, Jengibre, Cardamomo
+- **Notas corazon:** Coco, Gardenia, Flor de azahar, Peonía
+- **Notas fondo:** Sándalo, Almizcle, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 291. [ ] Eros Eau De Parfum - Versace
+### 291. [x] Eros Eau De Parfum - Versace
 - **Nombre interno:** Versace Eros EDP
 - **Marca:** Versace
 - **Nombre display:** Eros Eau De Parfum
@@ -4961,12 +4972,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/EROS EDP.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Menta, Manzana confitada, Limón, Mandarina
+- **Notas corazon:** Ambroxan, Geranio, Salvia esclarea
+- **Notas fondo:** Vainilla, Cedro, Sándalo, Naranja amarga, Pachulí, Cuero
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 292. [ ] Eros Eau De Toilette - Versace
+### 292. [x] Eros Eau De Toilette - Versace
 - **Nombre interno:** Versace Eros EDT
 - **Marca:** Versace
 - **Nombre display:** Eros Eau De Toilette
@@ -4978,12 +4989,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/EROS EDP.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Menta, Manzana verde, Limón
+- **Notas corazon:** Haba tonka, Ambroxan, Geranio
+- **Notas fondo:** Vainilla de Madagascar, Cedro de Virginia, Cedro Atlas, Vetiver, Musgo de roble
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la ficha de Fragrantica de "Eros".
 
-### 293. [ ] Eros Energy - Versace
+### 293. [x] Eros Energy - Versace
 - **Nombre interno:** Versace Eros Energy
 - **Marca:** Versace
 - **Nombre display:** Eros Energy
@@ -4995,12 +5006,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/EROS ENERGY.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón, Lima, Pomelo, Naranja sanguina, Bergamota siciliana, Mandarina
+- **Notas corazon:** Pimienta rosa, Ámbar blanco, Grosella negra
+- **Notas fondo:** Almizcle, Musgo de roble, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 294. [ ] Eros Flame - Versace
+### 294. [x] Eros Flame - Versace
 - **Nombre interno:** Versace Eros Flame
 - **Marca:** Versace
 - **Nombre display:** Eros Flame
@@ -5012,12 +5023,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/EROS FLAME.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Mandarina, Pimienta de Madagascar, Limón, Chinotto, Romero
+- **Notas corazon:** Geranio, Rosa, Pepperwood
+- **Notas fondo:** Vainilla, Haba tonka, Sándalo, Cedro de Texas, Pachulí, Musgo de roble
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 295. [ ] Pour Homme - Versace
+### 295. [x] Pour Homme - Versace
 - **Nombre interno:** Versace Pour Homme
 - **Marca:** Versace
 - **Nombre display:** Pour Homme
@@ -5029,12 +5040,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/versace/Untitled-2.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón, Bergamota, Neroli, Rosa de mayo
+- **Notas corazon:** Jacinto, Cedro, Salvia esclarea, Geranio
+- **Notas fondo:** Almizcle, Haba tonka, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 296. [ ] Pour Homme Dylan Blue - Versace
+### 296. [x] Pour Homme Dylan Blue - Versace
 - **Nombre interno:** Versace Pour Homme Dylan Blue
 - **Marca:** Versace
 - **Nombre display:** Pour Homme Dylan Blue
@@ -5046,12 +5057,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/versace/Untitled.png
 - **Imagen decant:** imagenes/fotos-decants/hombre/DYLAN BLUE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota de Calabria, Notas acuáticas, Pomelo, Hoja de higo
+- **Notas corazon:** Ambroxan, Pimienta negra, Pachulí, Hoja de violeta, Papiro
+- **Notas fondo:** Incienso, Almizcle, Haba tonka, Azafrán
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 297. [ ] Pour Homme Eau de Toilette - Versace
+### 297. [x] Pour Homme Eau de Toilette - Versace
 - **Nombre interno:** Versace Pour Homme EDT
 - **Marca:** Versace
 - **Nombre display:** Pour Homme Eau de Toilette
@@ -5063,12 +5074,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/VERSACE POUR HOMME.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Limón, Bergamota, Neroli, Rosa de mayo
+- **Notas corazon:** Jacinto, Cedro, Salvia esclarea, Geranio
+- **Notas fondo:** Almizcle, Haba tonka, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Versace Pour Homme".
 
-### 298. [ ] Spicebomb Eau de Toilette - Viktor&Rolf
+### 298. [x] Spicebomb Eau de Toilette - Viktor&Rolf
 - **Nombre interno:** Viktor&Rolf Spicebomb EDT
 - **Marca:** Viktor&Rolf
 - **Nombre display:** Spicebomb Eau de Toilette
@@ -5080,12 +5091,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/v&r/SPICEBOMB EDT SET.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/SPICEBOMB EDT.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pimienta rosa, Elemi, Bergamota, Pomelo
+- **Notas corazon:** Canela, Pimentón, Azafrán
+- **Notas fondo:** Tabaco, Cuero, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 299. [ ] Spicebomb Extreme - Viktor&Rolf
+### 299. [x] Spicebomb Extreme - Viktor&Rolf
 - **Nombre interno:** Viktor&Rolf Spicebomb Extreme
 - **Marca:** Viktor&Rolf
 - **Nombre display:** Spicebomb Extreme
@@ -5097,12 +5108,10 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SPICEBOMB extreme.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas:** Vainilla, Tabaco, Canela, Comino, Whiskey bourbon, Azafrán
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Fragrantica publica el listado principal de notas y la descripción, sin una pirámide clásica visible en esta ficha.
 
-### 300. [ ] Spicebomb Infrared Eau de Parfum - Viktor&Rolf
+### 300. [x] Spicebomb Infrared Eau de Parfum - Viktor&Rolf
 - **Nombre interno:** Viktor&Rolf Spicebomb Infrared EDP
 - **Marca:** Viktor&Rolf
 - **Nombre display:** Spicebomb Infrared Eau de Parfum
@@ -5114,12 +5123,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/SPICEBOMB INFRARED.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Canela, Chile, Pimienta rosa
+- **Notas corazon:** Chile, Cuero
+- **Notas fondo:** Resinas, Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 301. [ ] Alexandria II - Xerjoff
+### 301. [x] Alexandria II - Xerjoff
 - **Nombre interno:** Xerjoff Alexandria II
 - **Marca:** Xerjoff
 - **Nombre display:** Alexandria II
@@ -5131,12 +5140,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/ALEXANDRIA II.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Palisandro, Lavanda, Canela, Manzana
+- **Notas corazon:** Rosa, Cedro, Lirio de los valles
+- **Notas fondo:** Oud, Sándalo, Ámbar, Vainilla, Almizcle
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 302. [ ] Coro - Xerjoff
+### 302. [x] Coro - Xerjoff
 - **Nombre interno:** Xerjoff Coro
 - **Marca:** Xerjoff
 - **Nombre display:** Coro
@@ -5148,12 +5157,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/CORO.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Frutas tropicales
+- **Notas corazon:** Mango, Piña, Jazmín
+- **Notas fondo:** Vainilla, Ámbar, Almizcle, Sándalo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 303. [ ] Erba Gold - Xerjoff
+### 303. [x] Erba Gold - Xerjoff
 - **Nombre interno:** Xerjoff Erba Gold
 - **Marca:** Xerjoff
 - **Nombre display:** Erba Gold
@@ -5165,12 +5174,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/xerjoff/ERBA GOLD.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/ERBA GOLD.png
 - **Etiqueta:** Nuevo
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Naranja brasileña, Limón de Amalfi, Bergamota de Calabria, Jengibre
+- **Notas corazon:** Manzana verde, Melón, Pera, Clavo de olor, Cardamomo guatemalteco, Canela de Madagascar
+- **Notas fondo:** Almizcle, Ámbar, Vainilla de Madagascar, Notas amaderadas
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 304. [ ] Erba Pura - Xerjoff
+### 304. [x] Erba Pura - Xerjoff
 - **Nombre interno:** Xerjoff Erba Pura
 - **Marca:** Xerjoff
 - **Nombre display:** Erba Pura
@@ -5182,12 +5191,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/xerjoff/ERBA PURA.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/ERBA PURA.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Naranja siciliana, Bergamota de Calabria, Limón siciliano
+- **Notas corazon:** Frutas
+- **Notas fondo:** Almizcle blanco, Vainilla de Madagascar, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 305. [ ] Torino21 - Xerjoff
+### 305. [x] Torino21 - Xerjoff
 - **Nombre interno:** Xerjoff Torino21
 - **Marca:** Xerjoff
 - **Nombre display:** Torino21
@@ -5199,12 +5208,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/TORINO21.jpg
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Menta, Limón, Tomillo, Albahaca
+- **Notas corazon:** Jazmín, Romero, Casis, Lavanda
+- **Notas fondo:** Almizcle, Verbena
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 306. [ ] XJ 1861 Naxos - Xerjoff
+### 306. [x] XJ 1861 Naxos - Xerjoff
 - **Nombre interno:** Xerjoff XJ 1861 Naxos
 - **Marca:** Xerjoff
 - **Nombre display:** XJ 1861 Naxos
@@ -5216,12 +5225,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/xerjoff/NAXOS.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/NAXOS.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Bergamota, Limón
+- **Notas corazon:** Miel, Canela, Cashmeran, Jazmín sambac
+- **Notas fondo:** Hoja de tabaco, Vainilla, Haba tonka
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 307. [ ] Black Opium Intense - Yves Saint Laurent
+### 307. [x] Black Opium Intense - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Black Opium Intense
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Black Opium Intense
@@ -5233,12 +5242,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/Untitled-4.png
 - **Imagen decant:** imagenes/fotos-decants/mujer/BLACK OPIUM INTENSE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Absenta, Zarzamora boysenberry
+- **Notas corazon:** Café, Jazmín sambac, Flor de azahar
+- **Notas fondo:** Vainilla, Regaliz, Sándalo
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 308. [ ] Libre Eau De Toilette - Yves Saint Laurent
+### 308. [x] Libre Eau De Toilette - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Libre EDT
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Libre Eau De Toilette
@@ -5250,12 +5259,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/YVES LIBRE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Bergamota, Mandarina
+- **Notas corazon:** Flor de azahar, Té de jazmín, Jazmín
+- **Notas fondo:** Almizcle, Vainilla, Ámbar gris
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 309. [ ] Libre EDT - Yves Saint Laurent
+### 309. [x] Libre EDT - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Libre EDT
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Libre EDT
@@ -5267,12 +5276,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/LIBRE EDT.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Lavanda, Bergamota, Mandarina
+- **Notas corazon:** Flor de azahar, Té de jazmín, Jazmín
+- **Notas fondo:** Almizcle, Vainilla, Ámbar gris
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Libre Eau De Toilette".
 
-### 310. [ ] Libre L'Absolu Platine Parfum - Yves Saint Laurent
+### 310. [x] Libre L'Absolu Platine Parfum - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Libre L'Absolu Platine
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Libre L'Absolu Platine Parfum
@@ -5284,12 +5293,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/LIBRE L'ABSOLU PLATINE.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Aldehídos, Bergamota, Mandarina
+- **Notas corazon:** Lavanda, Lavanda azul, Flor de azahar
+- **Notas fondo:** Vainilla, Ámbar
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 311. [ ] Libre Le Parfum - Yves Saint Laurent
+### 311. [x] Libre Le Parfum - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Libre Le Parfum
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Libre Le Parfum
@@ -5301,12 +5310,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/LIBRE LE PARFUM.png
 - **Imagen decant:** imagenes/fotos-decants/mujer/LIBRE LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Jengibre, Azafrán, Mandarina, Bergamota
+- **Notas corazon:** Flor de azahar, Lavanda
+- **Notas fondo:** Vainilla bourbon, Miel, Haba tonka, Vetiver
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 312. [ ] Mon Paris - Yves Saint Laurent
+### 312. [x] Mon Paris - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Mon Paris
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Mon Paris
@@ -5318,12 +5327,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/mujer/MON PARIS.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Fresa, Frambuesa, Pera, Naranja, Bergamota de Calabria, Mandarina, Calone
+- **Notas corazon:** Peonía, Jazmín sambac, Jazmín chino, Datura, Flor de azahar
+- **Notas fondo:** Hoja de pachulí de Indonesia, Pachulí, Almizcle blanco, Vainilla, Ambroxan, Musgo, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 313. [ ] MYSLF - Yves Saint Laurent
+### 313. [x] MYSLF - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent MYSLF
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** MYSLF
@@ -5335,12 +5344,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/ysl-myslf-240415062511.webp
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota de Calabria, Bergamota
+- **Notas corazon:** Flor de azahar tunecina
+- **Notas fondo:** Ambrofix, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 314. [ ] MYSLF Eau De Parfum - Yves Saint Laurent
+### 314. [x] MYSLF Eau De Parfum - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent MYSLF EDP
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** MYSLF Eau De Parfum
@@ -5352,12 +5361,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/MYSLF.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Bergamota de Calabria, Bergamota
+- **Notas corazon:** Flor de azahar tunecina
+- **Notas fondo:** Ambrofix, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "MYSLF".
 
-### 315. [ ] MYSLF Le Parfum - Yves Saint Laurent
+### 315. [x] MYSLF Le Parfum - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent MYSLF Le Parfum
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** MYSLF Le Parfum
@@ -5369,12 +5378,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/MYSLF LE PARFUM.webp
 - **Imagen decant:** imagenes/fotos-decants/hombre/MYSLF LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Pimienta negra
+- **Notas corazon:** Flor de azahar
+- **Notas fondo:** Vainilla bourbon, Ámbar, Notas amaderadas, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 316. [ ] Y Eau de Parfum - Yves Saint Laurent
+### 316. [x] Y Eau de Parfum - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y EDP
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y Eau de Parfum
@@ -5386,12 +5395,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/YSL Y EDP.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana, Jengibre, Bergamota
+- **Notas corazon:** Salvia, Bayas de enebro, Geranio
+- **Notas fondo:** Amberwood, Haba tonka, Cedro, Vetiver, Olíbano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 317. [ ] Y Eau de Parfum Intense - Yves Saint Laurent
+### 317. [x] Y Eau de Parfum Intense - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y EDP Intense
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y Eau de Parfum Intense
@@ -5403,12 +5412,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/Y EDP INTENSE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Jengibre, Bayas de enebro, Bergamota
+- **Notas corazon:** Salvia, Lavanda, Geranio
+- **Notas fondo:** Vetiver, Pachulí, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 318. [ ] Y Eau de Toilette - Yves Saint Laurent
+### 318. [x] Y Eau de Toilette - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y EDT
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y Eau de Toilette
@@ -5420,12 +5429,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/Y EDT.JPEG
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Aldehídos, Bergamota, Jengibre
+- **Notas corazon:** Lavanda, Salvia esclarea, Geranio
+- **Notas fondo:** Ámbar gris, Vainilla, Cedro, Olíbano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 319. [ ] Y EDP - Yves Saint Laurent
+### 319. [x] Y EDP - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y EDP
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y EDP
@@ -5437,12 +5446,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/Untitled.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana, Jengibre, Bergamota
+- **Notas corazon:** Salvia, Bayas de enebro, Geranio
+- **Notas fondo:** Amberwood, Haba tonka, Cedro, Vetiver, Olíbano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Y Eau de Parfum".
 
-### 320. [ ] Y EDP Intense - Yves Saint Laurent
+### 320. [x] Y EDP Intense - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y EDP Intense
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y EDP Intense
@@ -5454,12 +5463,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/Y EDP INTENSE.jpg
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Jengibre, Bayas de enebro, Bergamota
+- **Notas corazon:** Salvia, Lavanda, Geranio
+- **Notas fondo:** Vetiver, Pachulí, Cedro
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Y Eau de Parfum Intense".
 
-### 321. [ ] Y EDT - Yves Saint Laurent
+### 321. [x] Y EDT - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y EDT
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y EDT
@@ -5471,12 +5480,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/Untitled-1.png
 - **Imagen decant:** N/A
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Aldehídos, Bergamota, Jengibre
+- **Notas corazon:** Lavanda, Salvia esclarea, Geranio
+- **Notas fondo:** Ámbar gris, Vainilla, Cedro, Olíbano
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes. Se reutiliza la misma ficha de Fragrantica que "Y Eau de Toilette".
 
-### 322. [ ] Y Iced Cologne - Yves Saint Laurent
+### 322. [x] Y Iced Cologne - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y Iced Cologne
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y Iced Cologne
@@ -5488,12 +5497,12 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** N/A
 - **Imagen decant:** imagenes/fotos-decants/hombre/Y ICED COLOGNE.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Menta, Hielo
+- **Notas corazon:** Té de menta, Menta, Salvia azul
+- **Notas fondo:** Pachulí, Ambroxan
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.
 
-### 323. [ ] Y Le Parfum - Yves Saint Laurent
+### 323. [x] Y Le Parfum - Yves Saint Laurent
 - **Nombre interno:** Yves Saint Laurent Y Le Parfum
 - **Marca:** Yves Saint Laurent
 - **Nombre display:** Y Le Parfum
@@ -5505,7 +5514,7 @@ Si la sesion se agota, busca el primer [ ] sin marcar y continua desde ahi.
 - **Imagen catalogo:** imagenes/fotos-catalogo/ysl/Y LE PARFUM.jpg
 - **Imagen decant:** imagenes/fotos-decants/hombre/Y LE PARFUM.png
 - **Etiqueta:** ninguna
-- **Notas salida:** (pendiente)
-- **Notas corazon:** (pendiente)
-- **Notas fondo:** (pendiente)
-- **Imagenes galeria:** (pendiente)
+- **Notas salida:** Manzana, Aldehídos, Pomelo, Jengibre
+- **Notas corazon:** Lavanda, Salvia, Geranio
+- **Notas fondo:** Haba tonka, Cedro, Olíbano, Pachulí
+- **Imagenes galeria:** No se agrega galeria extra; usar imagen de catalogo y decant existentes.

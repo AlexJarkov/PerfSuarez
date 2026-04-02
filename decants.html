@@ -128,6 +128,7 @@
         }
 
         .toggle {
+            flex: 1;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -273,10 +274,7 @@
 
         .decant p[data-sku],
         .decant .price-label {
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--accent-dark);
+            display: none;
         }
 
         .etiquetas {
@@ -355,13 +353,41 @@
             }
         }
 
-        .gender-chips {
+        .filter-groups {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .filter-groups {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .filter-group-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted-ink);
+        }
+
+        .gender-chips,
+        .style-chips {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
 
-        .gender-chip {
+        .gender-chip,
+        .style-chip {
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -369,6 +395,7 @@
             border-radius: 999px;
             border: 1.5px solid var(--divider);
             background: var(--surface);
+            font-family: inherit;
             font-size: 0.88rem;
             font-weight: 600;
             letter-spacing: 0.08em;
@@ -385,6 +412,17 @@
         .gender-chip.active {
             background: var(--accent);
             border-color: var(--accent);
+            color: #fff;
+        }
+
+        .style-chip:hover {
+            border-color: var(--ink);
+            color: var(--ink);
+        }
+
+        .style-chip.active {
+            background: var(--ink);
+            border-color: var(--ink);
             color: #fff;
         }
 
@@ -421,35 +459,36 @@
                     <p>Ideal para rotar aromas según la ocasión, regalar experiencias olfativas o probar antes de invertir en el frasco completo.</p>
                 </div>
             </div>
-            <div class="gender-chips" id="gender-chips">
-                <button class="gender-chip active" data-gender="all" type="button">Todos</button>
-                <button class="gender-chip" data-gender="hombre" type="button">Hombre</button>
-                <button class="gender-chip" data-gender="mujer" type="button">Mujer</button>
-                <button class="gender-chip" data-gender="unisex" type="button">Unisex</button>
+            <div class="filter-groups">
+                <div class="filter-group">
+                    <span class="filter-group-label">Género</span>
+                    <div class="gender-chips" id="gender-chips">
+                        <button class="gender-chip active" data-gender="all" type="button">Todos</button>
+                        <button class="gender-chip" data-gender="hombre" type="button">Hombre</button>
+                        <button class="gender-chip" data-gender="mujer" type="button">Mujer</button>
+                        <button class="gender-chip" data-gender="unisex" type="button">Unisex</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-group-label">Tipo</span>
+                    <div class="style-chips" id="style-chips">
+                        <button class="style-chip active" data-style="all" type="button">Todos</button>
+                        <button class="style-chip" data-style="nicho" type="button">Nicho</button>
+                        <button class="style-chip" data-style="diseñador" type="button">Diseñador</button>
+                        <button class="style-chip" data-style="arabes" type="button">Árabe</button>
+                    </div>
+                </div>
             </div>
             <div class="catalog-controls">
                 <div class="search-field">
                     <label for="decant-search">Buscar decants</label>
                     <input type="text" id="decant-search" placeholder="Introduce nombre, nota o casa">
                 </div>
-                <div class="select-row">
-                    <div class="select-field">
-                        <label for="decant-filter">Filtrar por estilo</label>
-                        <select id="decant-filter">
-                            <option value="all">Todos los decants</option>
-                            <option value="hombre">Decants de hombre</option>
-                            <option value="mujer">Decants de mujer</option>
-                            <option value="unisex">Decants unisex</option>
-                            <option value="nicho">Decants nicho</option>
-                            <option value="arabes">Decants árabes</option>
-                        </select>
-                    </div>
-                    <div class="select-field">
-                        <label for="decant-brand">Marca</label>
-                        <select id="decant-brand">
-                            <option value="all">Todas las marcas</option>
-                        </select>
-                    </div>
+                <div class="select-field">
+                    <label for="decant-brand">Marca</label>
+                    <select id="decant-brand">
+                        <option value="all">Todas las marcas</option>
+                    </select>
                 </div>
                 <div class="toggle-group">
                     <label class="toggle">
@@ -464,7 +503,7 @@
             </div>
             <div class="pagination-controls" id="pagination-top">
                 <div class="page-size">
-                    <label for="page-size-input">Tarjetas por página</label>
+                    <label for="page-size-input">Perfumes por página</label>
                     <input id="page-size-input" type="number" min="1" step="1" value="20">
                 </div>
                 <div class="pager">
@@ -479,7 +518,7 @@
             <div class="fragrance-grid perfume-grid" id="decant-grid"></div>
             <div class="pagination-controls" id="pagination-bottom">
                 <div class="page-size">
-                    <label for="page-size-input-bottom">Tarjetas por página</label>
+                    <label for="page-size-input-bottom">Perfumes por página</label>
                     <input id="page-size-input-bottom" type="number" min="1" step="1" value="20">
                 </div>
                 <div class="pager">
@@ -641,14 +680,14 @@
 
             // Filters
             var searchInput = document.getElementById('decant-search');
-            var categorySelect = document.getElementById('decant-filter');
             var stockToggle = document.getElementById('stock-filter');
             var newToggle = document.getElementById('new-filter');
             var emptyState = document.getElementById('no-results-message');
+            var activeGender = 'all';
+            var activeStyle = 'all';
 
-            function applyFilters(filterOverride) {
+            function applyFilters() {
                 var q = (searchInput ? searchInput.value : '').trim().toLowerCase();
-                var cat = (filterOverride || (categorySelect ? categorySelect.value : 'all')).toLowerCase();
                 var brand = (brandSelect ? brandSelect.value : 'all').toLowerCase();
                 var hideOut = !!(stockToggle && stockToggle.checked);
                 var onlyNew = !!(newToggle && newToggle.checked);
@@ -662,12 +701,14 @@
                     var hasNewBadge = !!card.querySelector('.etiqueta.novedad');
 
                     var matchesSearch = !q || name.includes(q) || tags.includes(q) || card.textContent.toLowerCase().includes(q);
-                    var matchesCat = cat === 'all' || tags.includes(cat);
+                    var matchesGender = activeGender === 'all' || tags.includes(activeGender);
+                    var matchesStyle = activeStyle === 'all'
+                    || (activeStyle === 'diseñador' ? (!tags.includes('nicho') && !tags.includes('arabes')) : tags.includes(activeStyle));
                     var matchesBrand = brand === 'all' || brandText === brand;
                     var matchesStock = !hideOut || !hasOutBadge;
                     var matchesNew = !onlyNew || hasNewBadge;
 
-                    var show = matchesSearch && matchesCat && matchesBrand && matchesStock && matchesNew;
+                    var show = matchesSearch && matchesGender && matchesStyle && matchesBrand && matchesStock && matchesNew;
                     card.style.display = show ? '' : 'none';
                     if (show) visible++;
                 });
@@ -677,23 +718,30 @@
             }
             window.filterPerfumes = applyFilters;
 
-            if (searchInput) searchInput.addEventListener('input', function () { applyFilters(); });
-            if (categorySelect) categorySelect.addEventListener('change', function () { applyFilters(categorySelect.value); });
-            if (brandSelect) brandSelect.addEventListener('change', function () { applyFilters(); });
-            if (stockToggle) stockToggle.addEventListener('change', function () { applyFilters(); });
-            if (newToggle) newToggle.addEventListener('change', function () { applyFilters(); });
+            if (searchInput) searchInput.addEventListener('input', applyFilters);
+            if (brandSelect) brandSelect.addEventListener('change', applyFilters);
+            if (stockToggle) stockToggle.addEventListener('change', applyFilters);
+            if (newToggle) newToggle.addEventListener('change', applyFilters);
 
             // Gender chips
-            var chips = document.querySelectorAll('#gender-chips .gender-chip');
-            chips.forEach(function (chip) {
+            var genderChips = document.querySelectorAll('#gender-chips .gender-chip');
+            genderChips.forEach(function (chip) {
                 chip.addEventListener('click', function () {
-                    chips.forEach(function (c) { c.classList.remove('active'); });
+                    genderChips.forEach(function (c) { c.classList.remove('active'); });
                     chip.classList.add('active');
-                    var gender = chip.dataset.gender;
-                    if (categorySelect) {
-                        categorySelect.value = gender;
-                        categorySelect.dispatchEvent(new Event('change'));
-                    }
+                    activeGender = chip.dataset.gender;
+                    applyFilters();
+                });
+            });
+
+            // Style chips
+            var styleChips = document.querySelectorAll('#style-chips .style-chip');
+            styleChips.forEach(function (chip) {
+                chip.addEventListener('click', function () {
+                    styleChips.forEach(function (c) { c.classList.remove('active'); });
+                    chip.classList.add('active');
+                    activeStyle = chip.dataset.style;
+                    applyFilters();
                 });
             });
 

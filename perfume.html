@@ -17,13 +17,12 @@
         body.detail-page {
             background: var(--surface);
             color: var(--ink);
-            padding-top: 0;
         }
 
         .detail-shell {
             max-width: 960px;
             margin: 0 auto;
-            padding: clamp(24px, 5vw, 48px) clamp(16px, 4vw, 32px) 120px;
+            padding: clamp(16px, 3vw, 32px) clamp(16px, 4vw, 32px) 120px;
             display: flex;
             flex-direction: column;
             gap: clamp(32px, 5vw, 56px);
@@ -321,6 +320,20 @@
 
     <script src="js/core/app.js"></script>
     <script src="js/data/perfumes-data.js"></script>
+    <script>
+    (function () {
+        function applyHeaderOffset() {
+            var raw = getComputedStyle(document.documentElement).getPropertyValue('--header-height').trim();
+            var h = parseInt(raw, 10);
+            if (!h || isNaN(h)) h = 96;
+            document.documentElement.style.scrollPaddingTop = h + 'px';
+            var shell = document.getElementById('detail-root');
+            if (shell) shell.style.paddingTop = h + 'px';
+        }
+        applyHeaderOffset();
+        window.addEventListener('resize', applyHeaderOffset);
+    })();
+    </script>
     <script>
     (function () {
         'use strict';
