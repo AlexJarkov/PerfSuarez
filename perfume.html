@@ -7,314 +7,21 @@
     <meta name="robots" content="noindex">
     <title>Perfume</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/perfume-detail.css">
     <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="imagenes/applogo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
-    <style>
-        body.detail-page {
-            background: var(--surface);
-            color: var(--ink);
-        }
-
-        .detail-shell {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: clamp(16px, 3vw, 32px) clamp(16px, 4vw, 32px) 120px;
-            display: flex;
-            flex-direction: column;
-            gap: clamp(32px, 5vw, 56px);
-        }
-
-        /* Back button */
-        .back-bar {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 0;
-        }
-
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 999px;
-            border: 1.5px solid var(--divider);
-            background: var(--surface-strong);
-            font-size: 0.88rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            color: var(--muted-ink);
-            cursor: pointer;
-            transition: border-color 0.2s, color 0.2s;
-            text-decoration: none;
-        }
-
-        .back-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent-dark);
-        }
-
-        /* Product layout */
-        .product-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: clamp(28px, 5vw, 56px);
-            align-items: start;
-        }
-
-        @media (max-width: 700px) {
-            .product-layout {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Gallery */
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .gallery-main {
-            width: 100%;
-            aspect-ratio: 4 / 5;
-            border-radius: 24px;
-            object-fit: cover;
-            background: #f4f4f4;
-            border: 1px solid var(--divider);
-        }
-
-        .gallery-thumbs {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding-bottom: 4px;
-        }
-
-        .gallery-thumbs img {
-            width: 64px;
-            height: 80px;
-            border-radius: 12px;
-            object-fit: cover;
-            border: 2px solid transparent;
-            cursor: pointer;
-            transition: border-color 0.2s;
-            background: #f4f4f4;
-        }
-
-        .gallery-thumbs img.active,
-        .gallery-thumbs img:hover {
-            border-color: var(--accent);
-        }
-
-        /* Product info */
-        .product-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .product-brand {
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            font-size: 0.78rem;
-            color: var(--accent);
-            margin: 0;
-        }
-
-        .product-name {
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .product-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .product-tags .etiqueta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-size: 0.72rem;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        .etiqueta.novedad {
-            background: rgba(26, 112, 64, 0.14);
-            color: var(--accent-dark);
-        }
-
-        .etiqueta.fuera-de-stock {
-            background: rgba(17, 17, 17, 0.08);
-            color: var(--muted-ink);
-        }
-
-        .etiqueta.a-pedido {
-            background: rgba(17, 17, 17, 0.16);
-            color: var(--ink);
-        }
-
-        .etiqueta.tag-cat {
-            background: rgba(17, 17, 17, 0.06);
-            color: var(--muted-ink);
-        }
-
-        /* Pricing */
-        .pricing-section {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .pricing-section h3 {
-            margin: 0;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--muted-ink);
-        }
-
-        .price-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            background: var(--surface);
-            border-radius: 16px;
-            border: 1px solid var(--divider);
-        }
-
-        .price-size {
-            font-weight: 700;
-            font-size: 0.95rem;
-            min-width: 56px;
-        }
-
-        .price-value {
-            font-weight: 600;
-            color: var(--accent-dark);
-            font-size: 1.05rem;
-        }
-
-        /* Notes */
-        .notes-section {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding: 24px;
-            background: var(--surface-strong);
-            border-radius: 24px;
-            border: 1px solid var(--divider);
-        }
-
-        .notes-section h3 {
-            margin: 0;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--muted-ink);
-        }
-
-        .note-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .note-group-label {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .note-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .note-chip {
-            display: inline-flex;
-            padding: 5px 14px;
-            border-radius: 999px;
-            font-size: 0.82rem;
-            background: rgba(26, 112, 64, 0.08);
-            color: var(--accent-dark);
-            font-weight: 500;
-        }
-
-        .note-chip.heart {
-            background: rgba(180, 60, 80, 0.08);
-            color: #8b2040;
-        }
-
-        .note-chip.base {
-            background: rgba(100, 70, 40, 0.1);
-            color: #5a3a1a;
-        }
-
-        /* WhatsApp button */
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 32px;
-            border-radius: 999px;
-            border: none;
-            background: #25d366;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.15s;
-            text-decoration: none;
-        }
-
-        .whatsapp-btn:hover {
-            background: #1ebe57;
-            transform: translateY(-2px);
-        }
-
-        .whatsapp-btn svg {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-        }
-
-        /* Not found */
-        .not-found {
-            text-align: center;
-            padding: 80px 24px;
-            color: var(--muted-ink);
-        }
-
-        .not-found h1 {
-            font-size: 1.6rem;
-            margin-bottom: 12px;
-        }
-    </style>
 </head>
 
 <body class="detail-page">
     <main class="detail-shell" id="detail-root">
-        <div class="not-found" id="not-found" style="display:none;">
+        <div class="not-found hidden" id="not-found">
             <h1>Perfume no encontrado</h1>
             <p>El perfume que buscas no existe en nuestro catálogo.</p>
-            <a href="javascript:history.back()" class="back-btn" style="margin-top:24px;">Volver al catálogo</a>
+            <a href="javascript:history.back()" class="back-btn back-btn--spaced">Volver al catálogo</a>
         </div>
     </main>
 
@@ -379,9 +86,9 @@
                 html += '<span class="price-value">' + perfume.precio_completo.precio + ' Bs</span></div></div>';
             } else if (perfume.precio_completo && !perfume.en_stock_completos) {
                 html += '<div class="pricing-section"><h3>Perfume completo</h3>';
-                html += '<div class="price-row" style="opacity:0.5;"><span class="price-size">' + perfume.precio_completo.ml + ' ml</span>';
-                html += '<span class="price-value" style="text-decoration:line-through;">' + perfume.precio_completo.precio + ' Bs</span>';
-                html += '<span class="etiqueta fuera-de-stock" style="margin-left:auto;">Fuera de stock</span></div></div>';
+                html += '<div class="price-row price-row--unavailable"><span class="price-size">' + perfume.precio_completo.ml + ' ml</span>';
+                html += '<span class="price-value price-value--old">' + perfume.precio_completo.precio + ' Bs</span>';
+                html += '<span class="etiqueta fuera-de-stock price-row__badge">Fuera de stock</span></div></div>';
             }
 
             if (perfume.precios_decants) {
@@ -394,10 +101,10 @@
                     });
                 } else {
                     sizes.forEach(function (s) {
-                        html += '<div class="price-row" style="opacity:0.5;"><span class="price-size">' + s + ' ml</span>';
-                        html += '<span class="price-value" style="text-decoration:line-through;">' + perfume.precios_decants[s] + ' Bs</span></div>';
+                        html += '<div class="price-row price-row--unavailable"><span class="price-size">' + s + ' ml</span>';
+                        html += '<span class="price-value price-value--old">' + perfume.precios_decants[s] + ' Bs</span></div>';
                     });
-                    html += '<div style="text-align:center;"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>';
+                    html += '<div class="pricing-stock-note"><span class="etiqueta fuera-de-stock">Fuera de stock</span></div>';
                 }
                 html += '</div>';
             }
@@ -512,13 +219,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             var id = getParam('id');
             if (!id) {
-                document.getElementById('not-found').style.display = '';
+                document.getElementById('not-found').classList.remove('hidden');
                 return;
             }
 
             var perfume = findPerfume(id);
             if (!perfume) {
-                document.getElementById('not-found').style.display = '';
+                document.getElementById('not-found').classList.remove('hidden');
                 return;
             }
 

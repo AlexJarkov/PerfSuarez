@@ -1,0 +1,10 @@
+:root {
+    --ink: #111111;
+    --muted-ink: #5a5a5a;
+    --surface: #f6f7f8;
+    --surface-strong: #ffffff;
+    --accent: #1a7040;
+    --accent-dark: #0f4f2b;
+    --divider: rgba(17, 17, 17, 0.08);
+    --header-height: 96px;
+}

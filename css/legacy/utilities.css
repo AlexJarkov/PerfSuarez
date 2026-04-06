@@ -1,0 +1,125 @@
+.decant .precios {
+    margin-top: 0.25rem;
+}
+
+.decant .precio {
+    margin: 0.1rem 0;
+    line-height: 1.15;
+}
+
+.decant .label-antes,
+.decant .precio-antes {
+    font-size: 0.8em;
+}
+
+.decant .precio-antes {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.decant .label-antes,
+.decant .label-ahora {
+    font-weight: 600;
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+.decant .label-ahora {
+    margin-bottom: 0;
+    margin-top: 0.7rem;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 8px;
+}
+
+.pagination-controls .page-size {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#page-size-input,
+#page-size-input-bottom,
+.pagination-controls .page-size input[type="number"] {
+    width: 90px;
+    max-width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.pagination-controls .pager {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.pagination-controls .pager button {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font: inherit;
+    transition: transform 0.06s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.pagination-controls .pager button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-color: #ccc;
+}
+
+.pagination-controls .pager button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#page-status,
+#page-status-bottom,
+.pagination-controls .pager span {
+    min-width: 120px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.pag-hidden {
+    display: none !important;
+}
+
+.perfume-grid,
+.decant-grid,
+.vela-grid {
+    transition: opacity 0.18s ease;
+}
+
+.perfume-grid.is-paging,
+.decant-grid.is-paging,
+.vela-grid.is-paging {
+    opacity: 0.5;
+}
+
+img[loading="lazy"] {
+    background: #f6f6f6;
+}
+
+@media (max-width: 640px) {
+    .pagination-controls {
+        gap: 0.75rem;
+    }
+
+    #page-size-input,
+    #page-size-input-bottom,
+    .pagination-controls .page-size input[type="number"] {
+        width: 80px;
+        padding: 6px 8px;
+    }
+}
