@@ -48,6 +48,8 @@
             return;
         }
 
+        document.documentElement.classList.add('swipe-shell-lock');
+
         const panels = Array.from(track.querySelectorAll('.swipe-panel'));
         const dots = Array.from(document.querySelectorAll('.swipe-progress span'));
         const dragState = { active: false, pending: false, startX: 0, startY: 0, prevTranslate: 0, currentTranslate: 0, pointerId: null };
@@ -250,6 +252,50 @@
             }
         }
 
+        function resetEmbeddedViewport(iframe) {
+            try {
+                const frameWindow = iframe.contentWindow;
+                const doc = frameWindow?.document;
+                if (!frameWindow || !doc) {
+                    return;
+                }
+
+                if ('scrollRestoration' in frameWindow.history) {
+                    frameWindow.history.scrollRestoration = 'manual';
+                }
+
+                const { documentElement, body } = doc;
+                const scrollingElement = doc.scrollingElement || documentElement || body;
+                if (documentElement) {
+                    documentElement.style.scrollBehavior = 'auto';
+                    documentElement.style.marginTop = '0';
+                    documentElement.style.paddingTop = '0';
+                    documentElement.scrollTop = 0;
+                }
+                if (body) {
+                    body.style.scrollBehavior = 'auto';
+                    body.style.marginTop = '0';
+                    body.style.paddingTop = '0';
+                    body.scrollTop = 0;
+                }
+
+                doc.querySelector('main')?.style.setProperty('margin-top', '0');
+                frameWindow.scrollTo(0, 0);
+                if (scrollingElement) {
+                    scrollingElement.scrollTop = 0;
+                }
+
+                requestAnimationFrame(() => {
+                    frameWindow.scrollTo(0, 0);
+                    if (scrollingElement) {
+                        scrollingElement.scrollTop = 0;
+                    }
+                });
+            } catch (error) {
+                // ignore inaccessible frames
+            }
+        }
+
         function loadPanel(index, route) {
             const panel = panels[index];
             const iframe = panel?.querySelector('iframe');
@@ -269,6 +315,7 @@
             iframe.src = targetSrc;
             iframe.dataset.loadedSrc = targetSrc;
             iframe.addEventListener('load', () => {
+                resetEmbeddedViewport(iframe);
                 panel.querySelector('.panel-loading')?.remove();
                 bindFrameGestures(iframe);
             }, { once: true });

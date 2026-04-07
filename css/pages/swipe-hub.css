@@ -14,15 +14,17 @@ body.swipe-hub {
 }
 
 .swipe-container {
+    position: fixed;
+    inset: 0;
     width: 100vw;
     max-width: 100vw;
     height: var(--app-height);
-    position: relative;
     overflow: hidden;
     display: grid;
     place-items: stretch;
     margin: 0;
     padding: 0;
+    overscroll-behavior: none;
 }
 
 .swipe-stage {
@@ -35,6 +37,7 @@ body.swipe-hub {
     background: var(--surface);
     display: grid;
     place-items: stretch;
+    overscroll-behavior: none;
 }
 
 .swipe-track {
