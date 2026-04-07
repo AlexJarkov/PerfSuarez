@@ -2,30 +2,44 @@
     const PANEL_META = [
         {
             slug: '',
+            src: 'catalogo.html',
             title: 'Perfumería Suárez | Perfumes Originales en Bolivia',
             description: 'Perfumería Suárez: tu perfumería de confianza en Bolivia. Catálogo completo de perfumes originales para mujer y hombre. Envíos a todo el país.'
         },
         {
             slug: 'perfumes',
+            src: 'perfumes.html',
             title: 'Catálogo de Perfumes Originales | Perfumería Suárez Bolivia',
             description: 'Explorá el catálogo completo de perfumes de Perfumería Suárez. Marcas internacionales para mujer y hombre: Xerjoff, Dior, Carolina Herrera, Rabanne y más.'
         },
         {
             slug: 'decants',
+            src: 'decants.html',
             title: 'Decants de Perfumes Nicho | Perfumería Suárez Bolivia',
             description: 'Decants de perfumes nicho y de diseñador en formatos de 5, 10 y 15 ml. Probá antes de invertir en el frasco completo.'
         },
         {
             slug: 'armarcombo',
+            src: 'armarcombo.html',
             title: 'Combos y Sets Personalizados | Perfumería Suárez Bolivia',
             description: 'Armá tu combo de perfumes a medida en Perfumería Suárez. Combinaciones personalizadas para regalar o para vos.'
         },
         {
             slug: 'mysterybox',
+            src: 'mysterybox.html',
             title: 'Mystery Box de Perfumes | Perfumería Suárez Bolivia',
             description: 'La Mystery Box de Perfumería Suárez: una selección sorpresa de perfumes nicho y de diseñador curada especialmente para vos.'
+        },
+        {
+            slug: 'aux',
+            src: 'search.html',
+            title: 'Perfumería Suárez',
+            description: 'Explora el catálogo de Perfumería Suárez.'
         }
     ];
+
+    const PRIMARY_PANEL_COUNT = 5;
+    const AUX_PANEL_INDEX = PANEL_META.length - 1;
 
     function initCatalogShell() {
         const stage = document.querySelector('.swipe-stage');
@@ -36,32 +50,138 @@
 
         const panels = Array.from(track.querySelectorAll('.swipe-panel'));
         const dots = Array.from(document.querySelectorAll('.swipe-progress span'));
-        const panelPaths = panels.map(panel => App.core.normalizeRoutePath(panel.dataset.src));
         const dragState = { active: false, pending: false, startX: 0, startY: 0, prevTranslate: 0, currentTranslate: 0, pointerId: null };
         const horizontalDeadZone = 32;
         const verticalAbortThreshold = 18;
         let currentIndex = 0;
+        let currentRoute = null;
         let navController = null;
         let headerLinks = [];
+        const useDirectHtmlRoutes = App.core.isShellRedirectDisabled();
 
         const stageWidth = () => stage.getBoundingClientRect().width;
         const applyTranslate = value => { track.style.transform = `translateX(${value}px)`; };
         const pointerShouldHandle = event => !event.pointerType || event.pointerType !== 'touch';
-        const slugToIndex = pathname => {
-            const slug = pathname.replace(/^\//, '').replace(/\/$/, '');
-            const index = PANEL_META.findIndex(item => item.slug === slug);
-            return index >= 0 ? index : 0;
-        };
+
+        function makeHistoryUrl(src, slug, search, hash) {
+            if (useDirectHtmlRoutes) {
+                if (!src || src === 'catalogo.html') {
+                    return '/';
+                }
+                return `/${src}${search || ''}${hash || ''}`;
+            }
+            return slug ? `/${slug}${search || ''}${hash || ''}` : `/${search || ''}${hash || ''}`;
+        }
+
+        function getRouteForPath(pathname, search, hash) {
+            const cleanPath = pathname
+                .replace(/(\.html)\/+$/i, '$1')
+                .replace(/\/+$/, '') || '/';
+            const metaBySlug = Object.fromEntries(PANEL_META.map((item, index) => [item.slug, { item, index }]));
+
+            if (cleanPath === '/' || cleanPath === '/index.html' || cleanPath === '/catalogo' || cleanPath === '/catalogo.html') {
+                return {
+                    index: 0,
+                    panelSrc: 'catalogo.html',
+                    historyUrl: makeHistoryUrl('catalogo.html', '', search, hash),
+                    navHref: 'catalogo.html',
+                    meta: PANEL_META[0]
+                };
+            }
+
+            const slug = cleanPath.replace(/^\//, '').replace(/\.html$/, '');
+            if (metaBySlug[slug] && metaBySlug[slug].index < PRIMARY_PANEL_COUNT) {
+                const panel = metaBySlug[slug];
+                return {
+                    index: panel.index,
+                    panelSrc: panel.item.src,
+                    historyUrl: makeHistoryUrl(panel.item.src, panel.item.slug, search, hash),
+                    navHref: panel.item.src,
+                    meta: panel.item
+                };
+            }
+
+            if (slug === 'search') {
+                return {
+                    index: AUX_PANEL_INDEX,
+                    panelSrc: `search.html${search || ''}`,
+                    historyUrl: makeHistoryUrl('search.html', 'search', search, hash),
+                    navHref: null,
+                    meta: {
+                        slug: 'search',
+                        title: 'Resultados de búsqueda | Perfumería Suárez',
+                        description: 'Resultados de búsqueda dentro del catálogo de Perfumería Suárez.'
+                    }
+                };
+            }
+
+            if (slug === 'perfume') {
+                return {
+                    index: AUX_PANEL_INDEX,
+                    panelSrc: `perfume.html${search || ''}`,
+                    historyUrl: makeHistoryUrl('perfume.html', 'perfume', search, hash),
+                    navHref: null,
+                    meta: {
+                        slug: 'perfume',
+                        title: 'Perfume | Perfumería Suárez',
+                        description: 'Detalle de producto dentro del catálogo de Perfumería Suárez.'
+                    }
+                };
+            }
+
+            if (slug === 'velas') {
+                return {
+                    index: AUX_PANEL_INDEX,
+                    panelSrc: 'velas.html',
+                    historyUrl: makeHistoryUrl('velas.html', 'velas', search, hash),
+                    navHref: null,
+                    meta: {
+                        slug: 'velas',
+                        title: 'Velas Aromáticas | Perfumería Suárez',
+                        description: 'Colección de velas aromáticas de Perfumería Suárez.'
+                    }
+                };
+            }
+
+            if (slug === 'contacto') {
+                return {
+                    index: AUX_PANEL_INDEX,
+                    panelSrc: 'contacto.html',
+                    historyUrl: makeHistoryUrl('contacto.html', 'contacto', search, hash),
+                    navHref: null,
+                    meta: {
+                        slug: 'contacto',
+                        title: 'Contacto | Perfumería Suárez',
+                        description: 'Canales de contacto y asesoría de Perfumería Suárez.'
+                    }
+                };
+            }
+
+            return {
+                index: 0,
+                panelSrc: 'catalogo.html',
+                historyUrl: '/',
+                navHref: 'catalogo.html',
+                meta: PANEL_META[0]
+            };
+        }
+
+        function resolveRoute(target) {
+            const url = new URL(target, window.location.origin);
+            return getRouteForPath(url.pathname, url.search, url.hash);
+        }
 
         function updateDots() {
-            dots.forEach((dot, index) => dot.classList.toggle('is-active', index === currentIndex));
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('is-active', index === currentIndex && index < PRIMARY_PANEL_COUNT);
+            });
         }
 
         function syncHeaderLinks(href) {
-            const normalized = App.core.normalizeRoutePath(href);
+            const normalized = href ? App.core.normalizeRoutePath(href) : null;
             headerLinks.forEach(link => {
-                const match = App.core.normalizeRoutePath(link.getAttribute('href')) === normalized;
-                link.classList.toggle('is-active', match);
+                const match = normalized && App.core.normalizeRoutePath(link.getAttribute('href')) === normalized;
+                link.classList.toggle('is-active', !!match);
                 if (match) {
                     link.setAttribute('aria-current', 'page');
                 } else {
@@ -130,43 +250,54 @@
             }
         }
 
-        function loadPanel(index) {
+        function loadPanel(index, route) {
             const panel = panels[index];
             const iframe = panel?.querySelector('iframe');
-            if (!iframe || iframe.dataset.loaded === 'true') {
+            if (!panel || !iframe) {
                 return;
             }
 
-            iframe.src = panel.dataset.src;
-            iframe.dataset.loaded = 'true';
+            const targetSrc = route?.panelSrc || panel.dataset.src;
+            if (!targetSrc) {
+                return;
+            }
+
+            if (iframe.dataset.loadedSrc === targetSrc) {
+                return;
+            }
+
+            iframe.src = targetSrc;
+            iframe.dataset.loadedSrc = targetSrc;
             iframe.addEventListener('load', () => {
                 panel.querySelector('.panel-loading')?.remove();
                 bindFrameGestures(iframe);
             }, { once: true });
         }
 
-        function updateActive(index, pushHistory) {
-            currentIndex = Math.max(0, Math.min(index, panels.length - 1));
+        function updateActive(route, pushHistory) {
+            currentRoute = route;
+            currentIndex = Math.max(0, Math.min(route.index, panels.length - 1));
+
             snapToIndex(false);
             updateDots();
-            loadPanel(currentIndex);
-            loadPanel(currentIndex + 1);
-            loadPanel(currentIndex - 1);
+            loadPanel(currentIndex, route);
+            if (currentIndex < PRIMARY_PANEL_COUNT) {
+                loadPanel(currentIndex + 1);
+                loadPanel(currentIndex - 1);
+            }
 
-            const activeSrc = panels[currentIndex]?.dataset.src;
-            navController?.setActiveByHref(activeSrc);
-            syncHeaderLinks(activeSrc);
+            navController?.setActiveByHref(route.navHref);
+            syncHeaderLinks(route.navHref);
             document.body.classList.toggle('is-home-panel', currentIndex === 0);
 
-            const meta = PANEL_META[currentIndex];
-            if (pushHistory && meta) {
-                history.pushState({ index: currentIndex }, '', `/${meta.slug}`);
+            if (pushHistory) {
+                history.pushState({ route: route.historyUrl }, '', route.historyUrl);
             }
-            App.views.shell.updateMeta(meta);
+            App.views.shell.updateMeta(route.meta);
         }
 
         function startDrag(x, y, pointerId, immediate) {
-            if (dragState.active || dragState.pending) {
+            if (dragState.active || dragState.pending || currentIndex >= PRIMARY_PANEL_COUNT) {
                 return;
             }
 
@@ -253,19 +384,26 @@
             const moved = dragState.currentTranslate - dragState.prevTranslate;
             const snapThreshold = Math.min(stageWidth() * 0.18, 260);
             if (Math.abs(moved) > snapThreshold) {
-                updateActive(currentIndex + (moved < 0 ? 1 : -1), true);
+                const nextIndex = Math.max(0, Math.min(PRIMARY_PANEL_COUNT - 1, currentIndex + (moved < 0 ? 1 : -1)));
+                updateActive({
+                    index: nextIndex,
+                    panelSrc: PANEL_META[nextIndex].src,
+                    historyUrl: makeHistoryUrl(PANEL_META[nextIndex].src, PANEL_META[nextIndex].slug, '', ''),
+                    navHref: PANEL_META[nextIndex].src,
+                    meta: PANEL_META[nextIndex]
+                }, true);
             } else {
                 snapToIndex(false);
             }
         }
 
         function goToHref(href) {
-            const index = panelPaths.indexOf(App.core.normalizeRoutePath(href));
-            if (index < 0) {
+            const route = resolveRoute(href);
+            if (!route) {
                 return false;
             }
 
-            updateActive(index, true);
+            updateActive(route, true);
             return true;
         }
 
@@ -273,12 +411,12 @@
 
         document.addEventListener('catalogNavReady', event => {
             navController = event.detail;
-            navController?.setActiveByHref(panels[currentIndex]?.dataset.src);
+            navController?.setActiveByHref(currentRoute?.navHref);
         });
 
         document.addEventListener('headerReady', () => {
             headerLinks = Array.from(document.querySelectorAll('.nav-link'));
-            syncHeaderLinks(panels[currentIndex]?.dataset.src);
+            syncHeaderLinks(currentRoute?.navHref);
         });
 
         track.addEventListener('touchstart', event => {
@@ -314,27 +452,29 @@
 
         window.addEventListener('resize', () => snapToIndex(true));
         window.addEventListener('popstate', event => {
-            const index = typeof event.state?.index === 'number'
-                ? event.state.index
-                : slugToIndex(window.location.pathname);
-            updateActive(index, false);
+            const routeTarget = typeof event.state?.route === 'string'
+                ? event.state.route
+                : window.location.pathname + window.location.search + window.location.hash;
+            updateActive(resolveRoute(routeTarget), false);
         });
 
         const redirect = sessionStorage.getItem('spa-redirect');
         if (redirect) {
             sessionStorage.removeItem('spa-redirect');
-            const redirectedIndex = slugToIndex(new URL(redirect, window.location.origin).pathname);
-            currentIndex = redirectedIndex;
-            history.replaceState({ index: redirectedIndex }, '', `/${PANEL_META[redirectedIndex]?.slug || ''}`);
-        } else {
-            currentIndex = slugToIndex(window.location.pathname);
-            history.replaceState({ index: currentIndex }, '', window.location.pathname);
+            const route = resolveRoute(redirect);
+            history.replaceState({ route: route.historyUrl }, '', route.historyUrl);
+            updateActive(route, false);
+            return;
         }
 
-        updateActive(currentIndex, false);
+        const initialRoute = resolveRoute(window.location.pathname + window.location.search + window.location.hash);
+        history.replaceState({ route: initialRoute.historyUrl }, '', initialRoute.historyUrl);
+        updateActive(initialRoute, false);
     }
 
     App.viewmodels.shell = {
         initCatalogShell
     };
+
+    App.core.onReady(initCatalogShell);
 })(window.PerfSuarez);

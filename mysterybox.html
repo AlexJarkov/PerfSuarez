@@ -14,6 +14,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
     <meta property="og:title" content="Mystery Box">
 <meta property="og:description" content="Una caja, 5 decants.">
 <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
@@ -21,8 +23,8 @@
 <meta property="og:type" content="website">
 </head>
 <body class="mysterybox-page">
-    <main>
-        <!-- 1. Hero: emoción primero, sin precio y sin botón de asesor -->
+    <div data-include="header.html"></div>
+    <main class="page-shell">
         <section class="experience-hero experience-hero--solo">
             <div class="hero-copy">
                 <span class="eyebrow">Edición limitada</span>
@@ -41,7 +43,28 @@
             </div>
         </section>
 
-        <!-- 2. Cómo funciona (antes de los detalles de contenido) -->
+        <section class="experience-price">
+            <aside class="experience-card combo" data-whatsapp="78064327" data-combo="Mystery%20Box" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
+                <figure class="experience-figure">
+                    <img src="imagenes/Mystery Box.jpg" alt="Mystery Box" loading="lazy">
+                </figure>
+                <div class="experience-info">
+                    <span class="card-tag">incluye 5 decants</span>
+                    <h2>Bs 580</h2>
+                    <ul>
+                        <li>2 fragancias de diseñador</li>
+                        <li>2 fragancias árabes</li>
+                        <li>1 fragancia de nicho</li>
+                    </ul>
+                    <p class="card-note">El pedido se confirma por WhatsApp o desde el carrito con la selección randomizada.</p>
+                    <div class="mystery-actions">
+                        <a class="btn btn-outline combo" href="#" data-whatsapp="78064327" data-combo="Mystery%20Box">Pedir caja directa</a>
+                        <button class="btn btn-primary mystery-cart-btn" id="mystery-cart-btn" type="button">Añadir al carrito</button>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
         <section id="como-funciona" class="experience-steps">
             <div class="section-heading">
                 <span class="eyebrow">Cómo funciona</span>
@@ -67,7 +90,6 @@
             </div>
         </section>
 
-        <!-- 3. Qué incluye -->
         <section id="incluye" class="experience-includes">
             <div class="section-heading">
                 <span class="eyebrow">Qué llega a tu puerta</span>
@@ -94,26 +116,6 @@
             </div>
         </section>
 
-        <!-- 4. Precio (al final, una vez el usuario ya sabe qué es y cómo funciona) -->
-        <section class="experience-price">
-            <aside class="experience-card combo" data-whatsapp="78064327" data-combo="Mystery%20Box" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); this.click();}">
-                <figure class="experience-figure">
-                    <img src="imagenes/Mystery Box.jpg" alt="Mystery Box" loading="lazy">
-                </figure>
-                <div class="experience-info">
-                    <span class="card-tag">incluye 5 decants</span>
-                    <h2>Bs 580</h2>
-                    <ul>
-                        <li>2 fragancias de diseñador</li>
-                        <li>2 fragancias árabes</li>
-                        <li>1 fragancia de nicho</li>
-                    </ul>
-                    <p class="card-note">Haz clic para coordinar tu pedido vía WhatsApp.</p>
-                </div>
-            </aside>
-        </section>
-
-        <!-- 5. CTA final -->
         <section class="experience-cta">
             <div>
                 <span class="eyebrow">Listo para descubrir</span>
@@ -127,6 +129,7 @@
         </section>
     </main>
     <script src="js/core/app.js"></script>
+    <script src="js/data/perfumes-data.js"></script>
     <script src="js/models/catalog.model.js"></script>
     <script src="js/models/search.model.js"></script>
     <script src="js/models/combo.model.js"></script>
@@ -146,5 +149,29 @@
     <script src="js/viewmodels/shell.viewmodel.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/include.js"></script>
+    <script>
+    (function () {
+        function initMysteryCart() {
+            var button = document.getElementById('mystery-cart-btn');
+            var App = window.PerfSuarez;
+            if (!button || !App.models.cart) {
+                return;
+            }
+
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                var item = App.models.cart.createMysteryBoxItem();
+                if (!item) {
+                    return;
+                }
+                App.models.cart.addItem(item);
+                App.viewmodels.cart && App.viewmodels.cart.openCart();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initMysteryCart);
+    })();
+    </script>
 </body>
 </html>

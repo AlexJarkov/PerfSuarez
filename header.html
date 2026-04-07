@@ -2,10 +2,8 @@
     <div class="header-shell">
         <a href="index.html" class="brand">
             <img src="imagenes/Suarez.png" alt="Perfumería Suárez" class="brand-mark" width="742" height="320">
-            <span class="hidden">Perfumería Suárez</span>
         </a>
         <nav class="primary-nav" aria-label="Navegación principal">
-            <a href="https://wa.link/wfehwk" class="header-cta header-cta-mobile">Asesoría</a>
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -19,15 +17,6 @@
                     <li class="nav-item"><a class="nav-link" href="armarcombo.html">Combos y Sets</a></li>
                     <li class="nav-item"><a class="nav-link" href="mysterybox.html">Mystery Box</a></li>
                 </ul>
-                <div class="nav-extra">
-                    <form id="search-form" class="search-form" action="search.html" method="get">
-                        <label for="search-input" class="hidden">Buscar productos</label>
-                        <input type="text" id="search-input" class="search-input" name="q" placeholder="Buscar productos" aria-label="Buscar productos">
-                        <button type="submit" id="search-icon" class="search-button" aria-label="Ejecutar búsqueda">
-                            <span class="search-icon" aria-hidden="true"></span>
-                        </button>
-                    </form>
-                </div>
                 <div class="nav-meta">
                     <p class="nav-meta-eyebrow">Experiencia personalizada</p>
                     <p class="nav-meta-copy">Co-creamos combinaciones a tu medida y coordinamos envíos a todo el país.</p>
@@ -36,9 +25,63 @@
             </div>
         </nav>
         <div class="header-actions">
+            <button class="header-search-toggle" id="mobile-search-trigger" type="button" aria-label="Buscar" aria-expanded="false" aria-controls="mobile-search-panel">
+                <span class="search-icon" aria-hidden="true"></span>
+                <span class="header-search-toggle__label">Buscar</span>
+            </button>
+            <button class="header-cart-toggle" id="cart-toggle" type="button" aria-label="Abrir carrito" aria-expanded="false" aria-controls="cart-panel">
+                <span class="header-cart-toggle__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M7 7V6a5 5 0 0 1 10 0v1h2a1 1 0 0 1 1 1l-1 11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 8a1 1 0 0 1 1-1zm2 0h6V6a3 3 0 0 0-6 0zm1 4a1 1 0 0 0-2 0v2a1 1 0 1 0 2 0zm6 0a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0z"></path>
+                    </svg>
+                </span>
+                <span class="header-cart-toggle__label">Carrito</span>
+                <span class="header-cart-toggle__count" id="cart-count">0</span>
+            </button>
             <a href="https://wa.link/wfehwk" class="header-cta">Asesoría</a>
         </div>
     </div>
 </header>
+<section class="header-search-float">
+    <form id="search-form" class="search-form search-form--desktop" action="search.html" method="get">
+        <label for="search-input" class="hidden">Buscar productos</label>
+        <input type="text" id="search-input" class="search-input" name="q" placeholder="Buscar perfumes, marcas o notas" aria-label="Buscar productos">
+        <button type="submit" id="search-icon" class="search-button" aria-label="Buscar">
+            <span class="search-icon" aria-hidden="true"></span>
+        </button>
+    </form>
+    <section class="mobile-search-panel" id="mobile-search-panel" aria-hidden="true">
+        <form class="mobile-search-form" action="search.html" method="get">
+            <label for="mobile-search-input" class="hidden">Buscar productos</label>
+            <input type="text" id="mobile-search-input" name="q" placeholder="Buscar perfumes, marcas o notas" aria-label="Buscar productos">
+            <div class="mobile-search-actions">
+                <button type="submit" class="mobile-search-submit">Buscar</button>
+                <button type="button" class="mobile-search-close" id="mobile-search-close">Cerrar</button>
+            </div>
+        </form>
+    </section>
+</section>
+<button class="cart-backdrop" id="cart-backdrop" type="button" aria-label="Cerrar carrito"></button>
+<aside class="cart-panel" id="cart-panel" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-panel__header">
+        <div>
+            <p class="cart-panel__eyebrow">Pedido rápido</p>
+            <h2 id="cart-title">Tu carrito</h2>
+        </div>
+        <button class="cart-panel__close" id="cart-close" type="button" aria-label="Cerrar carrito">×</button>
+    </div>
+    <p class="cart-panel__empty" id="cart-empty">Todavía no añadiste productos.</p>
+    <div class="cart-panel__items" id="cart-items"></div>
+    <div class="cart-panel__footer">
+        <div class="cart-panel__total">
+            <span>Total</span>
+            <strong id="cart-total">Bs 0</strong>
+        </div>
+        <div class="cart-panel__actions">
+            <button class="cart-panel__secondary" id="cart-clear" type="button">Vaciar</button>
+            <a class="cart-panel__primary" id="cart-send" href="javascript:void(0);" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        </div>
+    </div>
+</aside>
 <script src="js/search.js"></script>
 <div id="overlay"></div>

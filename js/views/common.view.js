@@ -65,6 +65,22 @@
             links[nextIndex]?.focus();
         });
 
+        navEl.addEventListener('click', event => {
+            const link = event.target.closest('.catalog-dock__link');
+            if (!link) {
+                return;
+            }
+
+            const targetValue = link.dataset.target || link.getAttribute('href');
+            if (!targetValue || typeof window.catalogShellNavigate !== 'function') {
+                return;
+            }
+
+            if (window.catalogShellNavigate(targetValue)) {
+                event.preventDefault();
+            }
+        });
+
         setActiveByPath(window.location.pathname);
 
         const api = {

@@ -50,6 +50,9 @@
         const tags = perfume.tags.join(' ');
         const priceHtml = buildPriceHtml(perfume, mode);
         const tagsHtml = buildTagsHtml(perfume, mode);
+        const viewButtonHtml = mode === 'perfumes' || mode === 'decants'
+            ? '<button class="card-view-btn" type="button">Ver</button>'
+            : '';
 
         return `<div class="decant" data-name="${perfume.nombre_interno}" data-tags="${tags}" data-id="${perfume.id}">
             <img src="${img}" alt="${perfume.nombre}" loading="lazy" decoding="async">
@@ -57,6 +60,7 @@
             <p>${perfume.nombre}</p>
             ${priceHtml}
             ${tagsHtml}
+            ${viewButtonHtml}
         </div>`;
     }
 
@@ -86,7 +90,7 @@
             if (!card) return;
             var id = card.getAttribute('data-id');
             if (id) {
-                window.location.href = 'perfume.html?id=' + encodeURIComponent(id);
+                App.core.navigateToProductDetail(id);
             }
         });
     }

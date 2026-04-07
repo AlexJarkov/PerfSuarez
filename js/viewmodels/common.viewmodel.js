@@ -54,6 +54,7 @@
         }
 
         const navLinks = document.querySelectorAll('.nav-link');
+        const brandLinks = document.querySelectorAll('.brand');
         const currentPath = App.core.normalizeRoutePath(window.location.pathname);
         navLinks.forEach(link => {
             try {
@@ -67,6 +68,27 @@
             }
         });
 
+        function bindShellLink(link) {
+            if (!link || link.dataset.shellReady === 'true') {
+                return;
+            }
+
+            link.dataset.shellReady = 'true';
+            link.addEventListener('click', event => {
+                const href = link.getAttribute('href');
+                if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) {
+                    return;
+                }
+
+                if (App.core.navigateToShell(href)) {
+                    event.preventDefault();
+                }
+            });
+        }
+
+        navLinks.forEach(bindShellLink);
+        brandLinks.forEach(bindShellLink);
+
         const shouldAutoShell = !document.body.classList.contains('home-hub') && !document.body.classList.contains('swipe-hub');
         if (shouldAutoShell) {
             document.querySelectorAll('main').forEach(main => {
@@ -75,6 +97,8 @@
                 }
             });
         }
+
+        App.viewmodels.cart?.initCartUi();
     }
 
     App.viewmodels.common = {

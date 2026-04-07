@@ -4,14 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfumería Suárez</title>
+    <script src="/js/runtime-config.js"></script>
     <script>
         // GitHub Pages SPA redirect trick:
         // GitHub sirve este 404.html para cualquier ruta desconocida (ej: /perfumes).
         // Guardamos la ruta en sessionStorage y redirigimos al root,
         // donde index.html la lee y arranca en el panel correcto.
-        sessionStorage.setItem('spa-redirect', location.pathname + location.search);
-        location.replace('/');
+        if (window.DISABLE_SHELL_REDIRECT) {
+            document.documentElement.classList.add('shell-redirect-disabled');
+        } else {
+            sessionStorage.setItem('spa-redirect', location.pathname + location.search);
+            location.replace('/');
+        }
     </script>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: sans-serif;
+            background: #f5f6f7;
+            color: #111;
+        }
+        .fallback-404 {
+            display: none;
+            max-width: 560px;
+            padding: 24px;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 20px 50px rgba(0,0,0,.08);
+        }
+        .shell-redirect-disabled .fallback-404 {
+            display: block;
+        }
+        .fallback-404 h1,
+        .fallback-404 p {
+            margin: 0 0 12px;
+        }
+    </style>
 </head>
-<body></body>
+<body>
+    <main class="fallback-404">
+        <h1>404</h1>
+        <p>La redirección del compositor está desactivada.</p>
+        <p>Activa de nuevo `window.DISABLE_SHELL_REDIRECT = false` en `js/runtime-config.js` si quieres usar rutas SPA.</p>
+    </main>
+</body>
 </html>

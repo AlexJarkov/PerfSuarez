@@ -98,7 +98,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 460 },
         "tags": [
             "hombre",
             "afnan",
@@ -144,7 +144,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 460 },
         "tags": [
             "hombre",
             "afnan",
@@ -306,7 +306,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 620 },
         "tags": [
             "hombre",
             "afnan",
@@ -387,7 +387,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "90": 500 },
         "tags": [
             "hombre",
             "afnan",
@@ -513,7 +513,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "105": 500 },
         "tags": [
             "hombre",
             "armaf",
@@ -599,7 +599,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "105": 510 },
         "tags": [
             "hombre",
             "armaf",
@@ -692,7 +692,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 450 },
         "tags": [
             "mujer",
             "armaf",
@@ -850,7 +850,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 430 },
         "tags": [
             "hombre",
             "armaf",
@@ -941,7 +941,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 450 },
         "tags": [
             "hombre",
             "armaf",
@@ -989,7 +989,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 450 },
         "tags": [
             "hombre",
             "armaf",
@@ -1081,7 +1081,7 @@
             "10": 120,
             "15": 170
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 810 },
         "tags": [
             "mujer",
             "armaf",
@@ -1333,7 +1333,7 @@
             "10": 140,
             "15": 190
         },
-        "precio_combo": null,
+        "precio_combo": { "SET": 810 },
         "tags": [
             "hombre",
             "azzaro"
@@ -1439,7 +1439,7 @@
             "10": 120,
             "15": 170
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 760 },
         "tags": [
             "hombre unisex arabes"
         ],
@@ -1788,7 +1788,7 @@
             "10": 210,
             "15": 300
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1290 },
         "tags": [
             "hombre",
             "carolina"
@@ -2041,7 +2041,7 @@
             "10": 190,
             "15": 270
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1330 },
         "tags": [
             "hombre",
             "carolina"
@@ -2087,7 +2087,7 @@
             "10": 230,
             "15": 330
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1190 },
         "tags": [
             "hombre",
             "carolina"
@@ -2301,7 +2301,7 @@
             "10": 250,
             "15": 360
         },
-        "precio_combo": null,
+        "precio_combo": { "80": 1210 },
         "tags": [
             "mujer",
             "carolina"
@@ -2387,7 +2387,7 @@
             "10": 190,
             "15": 270
         },
-        "precio_combo": null,
+        "precio_combo": { "80": 1030 },
         "tags": [
             "mujer",
             "carolina"
@@ -2527,7 +2527,7 @@
             "10": 250,
             "15": 350
         },
-        "precio_combo": null,
+        "precio_combo": { "80": 1250 },
         "tags": [
             "mujer",
             "carolina"
@@ -2772,7 +2772,7 @@
             "precio": 1400
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "100": 1250 },
         "tags": [
             "hombre dior"
         ],
@@ -3455,7 +3455,7 @@
             "precio": 1278
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "200": 1040 },
         "tags": [
             "hombre d&g"
         ],
@@ -3530,7 +3530,7 @@
             "precio": 990
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "100": 550 },
         "tags": [
             "hombre d&g"
         ],
@@ -3574,7 +3574,7 @@
             "10": 170,
             "15": 240
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 770 },
         "tags": [
             "mujer",
             "d&g"
@@ -3651,7 +3651,7 @@
             "10": 120,
             "15": 160
         },
-        "precio_combo": null,
+        "precio_combo": { "200": 780 },
         "tags": [
             "hombre",
             "d&g"
@@ -4041,7 +4041,7 @@
             "10": 230,
             "15": 330
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1380 },
         "tags": [
             "hombre",
             "armani"
@@ -4199,7 +4199,7 @@
             "10": 120,
             "15": 170
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 560 },
         "tags": [
             "hombre",
             "rasasi",
@@ -4590,7 +4590,7 @@
             "precio": 1400
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "100": 1640 },
         "tags": [
             "hombre armani"
         ],
@@ -4702,7 +4702,7 @@
             "10": 130,
             "15": 190
         },
-        "precio_combo": null,
+        "precio_combo": { "SET": 510 },
         "tags": [
             "hombre",
             "givenchy"
@@ -4823,7 +4823,7 @@
             "10": 170,
             "15": 240
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1040 },
         "tags": [
             "hombre",
             "givenchy"
@@ -4906,7 +4906,7 @@
             "10": 190,
             "15": 270
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 850 },
         "tags": [
             "hombre",
             "givenchy"
@@ -5099,7 +5099,7 @@
             "10": 190,
             "15": 270
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1050 },
         "tags": [
             "mujer",
             "jpg"
@@ -5173,7 +5173,7 @@
             "10": 210,
             "15": 300
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1090 },
         "tags": [
             "mujer",
             "jpg"
@@ -5214,7 +5214,7 @@
             "10": 210,
             "15": 300
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 910 },
         "tags": [
             "mujer",
             "jpg"
@@ -5251,7 +5251,7 @@
             "10": 190,
             "15": 270
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1130 },
         "tags": [
             "mujer",
             "jpg"
@@ -5317,7 +5317,7 @@
             "10": 250,
             "15": 360
         },
-        "precio_combo": null,
+        "precio_combo": { "125": 1460 },
         "tags": [
             "hombre",
             "jpg"
@@ -5361,7 +5361,7 @@
             "10": 210,
             "15": 300
         },
-        "precio_combo": null,
+        "precio_combo": { "125": 1050 },
         "tags": [
             "hombre",
             "jpg"
@@ -5404,7 +5404,7 @@
             "10": 210,
             "15": 300
         },
-        "precio_combo": null,
+        "precio_combo": { "75": 780, "125": 1060 },
         "tags": [
             "hombre",
             "jpg"
@@ -5445,7 +5445,7 @@
             "10": 290,
             "15": 410
         },
-        "precio_combo": null,
+        "precio_combo": { "125": 1050 },
         "tags": [
             "hombre",
             "jpg"
@@ -5692,7 +5692,7 @@
             "precio": 680
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "50": 640, "100": 940 },
         "tags": [
             "hombre jpg"
         ],
@@ -5763,7 +5763,7 @@
             "10": 230,
             "15": 320
         },
-        "precio_combo": null,
+        "precio_combo": { "150": 1860 },
         "tags": [
             "hombre",
             "jpg"
@@ -5976,7 +5976,7 @@
             "10": 130,
             "15": 190
         },
-        "precio_combo": null,
+        "precio_combo": { "110": 910 },
         "tags": [
             "hombre"
         ],
@@ -6048,7 +6048,7 @@
             "10": 950,
             "15": 1350
         },
-        "precio_combo": null,
+        "precio_combo": { "50": 4400 },
         "tags": [
             "hombre",
             "kilian",
@@ -6161,7 +6161,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 750 },
         "tags": [
             "hombre"
         ],
@@ -6238,7 +6238,7 @@
             "10": 190,
             "15": 270
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1480 },
         "tags": [
             "mujer",
             "lancome"
@@ -6281,7 +6281,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 390 },
         "tags": [
             "hombre",
             "lattafa",
@@ -6327,7 +6327,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 460 },
         "tags": [
             "hombre",
             "lattafa",
@@ -6416,7 +6416,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 400 },
         "tags": [
             "hombre",
             "lattafa",
@@ -6537,7 +6537,7 @@
             "10": 80,
             "15": 120
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 520 },
         "tags": [
             "unisex",
             "hombre",
@@ -6583,7 +6583,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 520 },
         "tags": [
             "hombre",
             "lattafa",
@@ -6628,7 +6628,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 550 },
         "tags": [
             "unisex",
             "hombre",
@@ -6671,7 +6671,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 390 },
         "tags": [
             "hombre",
             "lattafa",
@@ -6756,7 +6756,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 490 },
         "tags": [
             "mujer",
             "lattafa",
@@ -6799,7 +6799,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 720 },
         "tags": [
             "mujer",
             "lattafa",
@@ -6841,7 +6841,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 700 },
         "tags": [
             "mujer",
             "lattafa",
@@ -6884,7 +6884,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 440 },
         "tags": [
             "hombre",
             "lattafa",
@@ -7167,7 +7167,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 430 },
         "tags": [
             "hombre",
             "mujer",
@@ -7256,7 +7256,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 530 },
         "tags": [
             "hombre",
             "mujer",
@@ -7305,7 +7305,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 600 },
         "tags": [
             "hombre",
             "mujer",
@@ -7602,7 +7602,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 660 },
         "tags": [
             "hombre",
             "lattafa",
@@ -7645,7 +7645,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 490 },
         "tags": [
             "mujer",
             "lattafa",
@@ -7722,7 +7722,7 @@
             "10": 100,
             "15": 140
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 530 },
         "tags": [
             "mujer",
             "lattafa",
@@ -8238,7 +8238,7 @@
             "10": 280,
             "15": 380
         },
-        "precio_combo": null,
+        "precio_combo": { "120": 1510 },
         "tags": [
             "hombre",
             "mancera",
@@ -8949,7 +8949,7 @@
             "10": 560,
             "15": 790
         },
-        "precio_combo": null,
+        "precio_combo": { "50": 2120 },
         "tags": [
             "hombre",
             "mujer",
@@ -8994,7 +8994,7 @@
             "10": 380,
             "15": 540
         },
-        "precio_combo": null,
+        "precio_combo": { "125": 3550 },
         "tags": [
             "hombre",
             "marly",
@@ -9207,7 +9207,7 @@
             "10": 380,
             "15": 540
         },
-        "precio_combo": null,
+        "precio_combo": { "125": 3030 },
         "tags": [
             "hombre",
             "marly",
@@ -9365,7 +9365,7 @@
             "precio": 1220
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "80": 1070 },
         "tags": [
             "mujer",
             "rabanne"
@@ -9444,7 +9444,7 @@
             "10": 170,
             "15": 240
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1290, "200": 1310 },
         "tags": [
             "hombre",
             "rabanne"
@@ -9487,7 +9487,7 @@
             "10": 170,
             "15": 240
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1130 },
         "tags": [
             "hombre",
             "rabanne"
@@ -9528,7 +9528,7 @@
             "10": 270,
             "15": 380
         },
-        "precio_combo": null,
+        "precio_combo": { "200": 1990 },
         "tags": [
             "hombre",
             "rabanne"
@@ -9788,7 +9788,7 @@
             "10": 150,
             "15": 220
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 770, "200": 1180 },
         "tags": [
             "hombre",
             "rabanne"
@@ -9827,7 +9827,7 @@
             "precio": 1310
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "150": 1410 },
         "tags": [
             "hombre rabanne"
         ],
@@ -10401,7 +10401,7 @@
             "precio": 630
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "100": 680 },
         "tags": [
             "hombre rasasi arabes"
         ],
@@ -10946,7 +10946,7 @@
             "precio": 1780
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "100": 1680 },
         "tags": [
             "hombre valentino"
         ],
@@ -10984,7 +10984,7 @@
             "precio": 1780
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "100": 1750 },
         "tags": [
             "hombre valentino"
         ],
@@ -11326,7 +11326,7 @@
             "10": 140,
             "15": 190
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1140 },
         "tags": [
             "hombre",
             "versace",
@@ -11574,7 +11574,7 @@
             "10": 130,
             "15": 190
         },
-        "precio_combo": null,
+        "precio_combo": { "200": 1600 },
         "tags": [
             "hombre",
             "versace"
@@ -11655,7 +11655,7 @@
             "10": 170,
             "15": 240
         },
-        "precio_combo": null,
+        "precio_combo": { "SET": 1040 },
         "tags": [
             "hombre",
             "v&r"
@@ -11851,7 +11851,7 @@
             "10": 570,
             "15": 810
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 2900 },
         "tags": [
             "hombre",
             "mujer",
@@ -11902,7 +11902,7 @@
             "10": 460,
             "15": 650
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 2600 },
         "tags": [
             "hombre",
             "mujer",
@@ -12173,7 +12173,7 @@
             "10": 250,
             "15": 350
         },
-        "precio_combo": null,
+        "precio_combo": { "90": 1570 },
         "tags": [
             "mujer",
             "ysl"
@@ -12262,7 +12262,7 @@
             "precio": 1220
         },
         "precios_decants": null,
-        "precio_combo": null,
+        "precio_combo": { "100": 1060 },
         "tags": [
             "hombre ysl"
         ],
@@ -12335,7 +12335,7 @@
             "10": 230,
             "15": 320
         },
-        "precio_combo": null,
+        "precio_combo": { "100": 1320 },
         "tags": [
             "hombre",
             "ysl"

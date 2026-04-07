@@ -14,9 +14,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
 </head>
 
 <body class="detail-page">
+    <div data-include="header.html"></div>
     <main class="detail-shell" id="detail-root">
         <div class="not-found hidden" id="not-found">
             <h1>Perfume no encontrado</h1>
@@ -26,21 +29,13 @@
     </main>
 
     <script src="js/core/app.js"></script>
+    <script src="js/views/common.view.js"></script>
+    <script src="js/views/include.view.js"></script>
+    <script src="js/viewmodels/common.viewmodel.js"></script>
+    <script src="js/viewmodels/include.viewmodel.js"></script>
     <script src="js/data/perfumes-data.js"></script>
-    <script>
-    (function () {
-        function applyHeaderOffset() {
-            var raw = getComputedStyle(document.documentElement).getPropertyValue('--header-height').trim();
-            var h = parseInt(raw, 10);
-            if (!h || isNaN(h)) h = 96;
-            document.documentElement.style.scrollPaddingTop = h + 'px';
-            var shell = document.getElementById('detail-root');
-            if (shell) shell.style.paddingTop = h + 'px';
-        }
-        applyHeaderOffset();
-        window.addEventListener('resize', applyHeaderOffset);
-    })();
-    </script>
+    <script src="js/scripts.js"></script>
+    <script src="js/include.js"></script>
     <script>
     (function () {
         'use strict';
@@ -109,6 +104,23 @@
                 html += '</div>';
             }
 
+            if (perfume.precio_combo) {
+                var comboPrices = perfume.precio_combo;
+                Object.keys(comboPrices).forEach(function(mlStr) {
+                    var ml = parseInt(mlStr, 10);
+                    var comboPrecio = comboPrices[mlStr];
+                    var ahorro = (perfume.precio_completo && perfume.precio_completo.ml === ml)
+                        ? (perfume.precio_completo.precio - comboPrecio) : null;
+                    html += '<div class="pricing-section">';
+                    if (ahorro !== null && ahorro > 0) {
+                        html += '<p class="combo-savings-note">Ahorras ' + ahorro + ' Bs</p>';
+                    }
+                    html += '<h3>Precio de Arma Tu Combo</h3>';
+                    html += '<div class="price-row"><span class="price-size">' + ml + ' ml</span>';
+                    html += '<span class="price-value" style="color:#1a7040">' + comboPrecio + ' Bs</span></div></div>';
+                });
+            }
+
             return html;
         }
 
@@ -163,6 +175,55 @@
             return 'https://wa.me/' + WHATSAPP_NUMBER + '/?text=' + encodeURIComponent(msg);
         }
 
+        function getAvailablePurchaseOptions(perfume) {
+            var options = [];
+
+            if (perfume.precio_completo && perfume.en_stock_completos) {
+                options.push({
+                    kind: 'perfume',
+                    label: 'Perfume completo',
+                    size: perfume.precio_completo.ml,
+                    price: perfume.precio_completo.precio
+                });
+            }
+
+            if (perfume.precios_decants && perfume.en_stock_decants) {
+                Object.keys(perfume.precios_decants)
+                    .map(Number)
+                    .sort(function (a, b) { return a - b; })
+                    .forEach(function (size) {
+                        options.push({
+                            kind: 'decant',
+                            label: 'Decant',
+                            size: size,
+                            price: perfume.precios_decants[size]
+                        });
+                    });
+            }
+
+            return options;
+        }
+
+        function renderCartComposer(perfume) {
+            var options = getAvailablePurchaseOptions(perfume);
+            if (!options.length) {
+                return '';
+            }
+
+            return ''
+                + '<div class="purchase-section">'
+                +   '<h3>Elegí el tamaño para el carrito</h3>'
+                +   '<label class="purchase-label" for="cart-size-select">Presentación disponible</label>'
+                +   '<select class="cart-size-select" id="cart-size-select">'
+                +     options.map(function (option) {
+                    var value = encodeURIComponent(JSON.stringify(option));
+                    return '<option value="' + value + '">' + option.label + ' ' + option.size + ' ml - ' + option.price + ' Bs</option>';
+                }).join('')
+                +   '</select>'
+                +   '<button type="button" class="cart-add-btn" id="cart-add-btn">Añadir al carrito</button>'
+                + '</div>';
+        }
+
         function render(perfume) {
             var root = document.getElementById('detail-root');
             var images = buildGalleryImages(perfume);
@@ -186,9 +247,11 @@
                 +     '<p class="product-brand">' + perfume.marca + '</p>'
                 +     '<h1 class="product-name">' + perfume.nombre + '</h1>'
                 +     '<div class="product-tags">' + renderTags(perfume) + '</div>'
+                +     renderCartComposer(perfume)
+                +     '<a href="' + buildWhatsAppUrl(perfume) + '" target="_blank" rel="noopener" class="whatsapp-btn">' + waBtn + ' Pedir perfume directo</a>'
+                +     (perfume.precio_combo ? '<a href="javascript:void(0)" class="combo-nav-btn" id="combo-nav-btn">Arma Tu Combo</a>' : '')
                 +     renderPricing(perfume)
                 +     renderNotes(perfume)
-                +     '<a href="' + buildWhatsAppUrl(perfume) + '" target="_blank" rel="noopener" class="whatsapp-btn">' + waBtn + ' Pedir por WhatsApp</a>'
                 +   '</div>'
                 + '</div>';
 
@@ -204,6 +267,29 @@
                     mainImg.src = thumb.src;
                 });
             });
+
+            // Arma Tu Combo button
+            var comboNavBtn = document.getElementById('combo-nav-btn');
+            if (comboNavBtn) {
+                comboNavBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    App.core.navigateToShell('armarcombo.html');
+                });
+            }
+
+            var cartAddBtn = document.getElementById('cart-add-btn');
+            var cartSizeSelect = document.getElementById('cart-size-select');
+            if (cartAddBtn && cartSizeSelect && App.models.cart) {
+                cartAddBtn.addEventListener('click', function () {
+                    var selected = cartSizeSelect.value ? JSON.parse(decodeURIComponent(cartSizeSelect.value)) : null;
+                    if (!selected) {
+                        return;
+                    }
+
+                    App.models.cart.addItem(App.models.cart.createPerfumeItem(perfume, selected));
+                    App.viewmodels.cart && App.viewmodels.cart.openCart();
+                });
+            }
 
             // Back button
             document.getElementById('back-btn').addEventListener('click', function (e) {

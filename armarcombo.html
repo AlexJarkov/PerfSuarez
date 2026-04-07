@@ -7,12 +7,15 @@
     <meta name="robots" content="noindex">
         <title>ARMA TU COMBO!!!</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/armarcombo.css">
     <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="imagenes/applogo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
     <meta property="og:title" content="Arma Tu Combo">
     <meta property="og:description" content="Nuestra más reciente novedad: Arma Tu Combo!!.">
     <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
@@ -20,43 +23,62 @@
     <meta property="og:type" content="website">
 </head>
 
-<body>
-    <main id="combos-personalizados">
-        <section class="container">
-            <h1 class="title">Combos y Sets Personalizados</h1>
-            
-            <div class="combo-controls">
-                <div id="combo-type-selection">
-                    <label for="combo-type">Tipo de combo:</label>
-                    <select id="combo-type">
-                        <option value="perfumes">Combo de Perfumes</option>
-                        <option value="decants">Set de Decants</option>
-                    </select>
+<body class="armarcombo-page">
+    <div data-include="header.html"></div>
+    <main class="page-shell">
+        <section class="catalog-section">
+
+            <div class="catalog-intro">
+                <div class="section-heading">
+                    <span class="eyebrow">Personalización</span>
+                    <h1>Armá tu combo</h1>
+                    <p>Elegí entre perfumes completos o decants y construí tu set personalizado. Cada combo incluye descuento automático.</p>
                 </div>
-                
-                <div id="decant-quantity-container" class="hidden">
-                    <label for="decant-quantity">Cantidad de decants:</label>
-                    <select id="decant-quantity">
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
+            </div>
+
+            <div class="combo-type-tabs" id="combo-type-tabs">
+                <button class="combo-type-tab active" data-value="perfumes" type="button">Perfumes completos</button>
+                <button class="combo-type-tab" data-value="decants" type="button">Set de Decants</button>
+            </div>
+            <select id="combo-type" style="display:none">
+                <option value="perfumes">Combo de Perfumes</option>
+                <option value="decants">Set de Decants</option>
+            </select>
+
+            <div id="decant-quantity-container" class="quantity-chip-row hidden">
+                <span class="filter-group-label">Cantidad de decants</span>
+                <div class="quantity-chips" id="quantity-chips">
+                    <button class="quantity-chip active" data-value="5" type="button">5</button>
+                    <button class="quantity-chip" data-value="6" type="button">6</button>
+                    <button class="quantity-chip" data-value="7" type="button">7</button>
+                    <button class="quantity-chip" data-value="8" type="button">8</button>
+                    <button class="quantity-chip" data-value="9" type="button">9</button>
+                    <button class="quantity-chip" data-value="10" type="button">10</button>
                 </div>
+            </div>
+            <select id="decant-quantity" style="display:none">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <div class="combo-total-card">
+                <p id="savings" class="combo-savings-text">Estás ahorrando: Bs 0.00</p>
+                <p class="combo-total-label">Total</p>
+                <p class="combo-total-amount"><span id="total-price-currency">Bs</span> <span id="total-price">0.00</span></p>
+                <a id="whatsapp-link" class="combo-wa-btn disabled" href="javascript:void(0);" target="_blank" rel="noopener noreferrer">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.38-1.576l-.376-.228-2.647.888.888-2.647-.228-.376A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    Confirmar combo por WhatsApp
+                </a>
+                <button id="cart-link" class="combo-cart-btn disabled" type="button">Añadir combo al carrito</button>
+                <p class="combo-wa-hint" id="combo-wa-hint">Seleccioná todos los elementos para continuar</p>
             </div>
 
             <div class="combo-builder-grid" id="combo-items"></div>
 
-            <div class="total-container-combo">
-                <p id="savings">Estás ahorrando: Bs0.00</p>
-                <h3>Total: <span id="total-price-currency">Bs</span><span id="total-price">0.00</span></h3>
-            </div>
-
-            <div class="whatsapp-button">
-                <a id="whatsapp-link" class="disabled" href="javascript:void(0);" target="_blank" rel="noopener noreferrer">Selecciona todos los elementos para continuar</a>
-            </div>
         </section>
     </main>
     <script src="js/core/app.js"></script>
@@ -81,6 +103,31 @@
     <script src="js/armarcombo.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/include.js"></script>
+    <script>
+    (function () {
+        var typeSelect = document.getElementById('combo-type');
+        var typeTabs = document.querySelectorAll('.combo-type-tab');
+        typeTabs.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                typeTabs.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                typeSelect.value = btn.dataset.value;
+                typeSelect.dispatchEvent(new Event('change'));
+            });
+        });
+
+        var qtySelect = document.getElementById('decant-quantity');
+        var qtyChips = document.querySelectorAll('.quantity-chip');
+        qtyChips.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                qtyChips.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                qtySelect.value = btn.dataset.value;
+                qtySelect.dispatchEvent(new Event('change'));
+            });
+        });
+    })();
+    </script>
 </body>
 
 </html>

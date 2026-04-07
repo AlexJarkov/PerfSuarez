@@ -153,9 +153,9 @@
             .filter(product => product.precios.length > 0);
     }
 
-    function getProductsFromData(type, comboConfig) {
+    function getProductsFromData(type) {
         if (!App.data || !App.data.perfumes) {
-            return fetchProducts(type, comboConfig);
+            return Promise.reject(new Error('No hay datos de perfumes disponibles'));
         }
 
         var isPerfume = type === 'perfumes';
@@ -163,19 +163,20 @@
             .filter(function (p) {
                 if (isPerfume) {
                     if (!p.en_stock_completos || !p.precio_completo) return false;
-                    if (!comboConfig[p.nombre_interno]) return false;
+                    if (!p.precio_combo) return false;
                     return true;
                 }
                 return p.en_stock_decants && p.precios_decants;
             })
             .map(function (p) {
                 var precios = [];
-                if (isPerfume && p.precio_completo) {
-                    var comboPrice = getComboPrice(comboConfig, p.nombre_interno, p.precio_completo.ml);
+                if (isPerfume && p.precio_completo && p.precio_combo) {
+                    var ml = p.precio_completo.ml;
+                    var comboPrice = p.precio_combo[String(ml)] ?? null;
                     if (typeof comboPrice === 'number') {
                         precios.push({
                             sku: 'PERFUME',
-                            tamano: p.precio_completo.ml,
+                            tamano: ml,
                             precio: p.precio_completo.precio,
                             moneda: MONEDA_LOCAL,
                             comboPrecio: comboPrice

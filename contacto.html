@@ -12,28 +12,49 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
     <meta property="og:title" content="Contacto">
     <meta property="og:description" content="¡Contáctanos en nuestras redes sociales!.">
     <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
     <meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/contacto.html">
     <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/pages/contacto.css">
 </head>
-<body>
+<body class="contacto-page">
     <div data-include="header.html"></div>
-    <main>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <div class="contacto-info">
-                <p>Puedes encontrarnos en nuestras redes sociales:</p>
-                <a href="https://www.instagram.com/perfumeria.suarez?igsh=ano2ZTkzdHlnamJ3" class="boton-red-social" target="_blank">
-                    <img src="imagenes/fotos-botones/instagram.png" alt="Instagram"> Instagram
-                </a>
-                <a href="https://www.tiktok.com/@perfumeria_suarez?_t=8nwhj86o35q&_r=1" class="boton-red-social" target="_blank">
-                    <img src="imagenes/fotos-botones/tiktok.jpg" alt="TikTok"> TikTok
-                </a>
-                <p>O contáctanos a través de WhatsApp:</p>
-                <p><a href="https://wa.me/78064327" class="whatsapp-link">78064327</a></p>
+    <main class="page-shell">
+        <section id="contacto" class="contact-hero">
+            <div class="section-heading">
+                <span class="eyebrow">Contacto</span>
+                <h1>Hablemos de tu próximo perfume</h1>
+                <p>Escríbenos por la red que te quede más cómoda. Te ayudamos a elegir, armar regalos o coordinar pedidos directos y envíos.</p>
             </div>
+        </section>
+
+        <section class="contact-grid">
+            <article class="contact-card">
+                <span class="contact-card__label">Redes sociales</span>
+                <h2>Encuéntranos donde más te guste</h2>
+                <p>Mantenemos novedades, recomendaciones y atención continua por Instagram y TikTok.</p>
+                <div class="contact-actions">
+                    <a href="https://www.instagram.com/perfumeria.suarez?igsh=ano2ZTkzdHlnamJ3" class="social-button" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/fotos-botones/instagram.png" alt="Instagram">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@perfumeria_suarez?_t=8nwhj86o35q&_r=1" class="social-button" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/fotos-botones/tiktok.jpg" alt="TikTok">
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="contact-card contact-card--accent">
+                <span class="contact-card__label">WhatsApp</span>
+                <h2>Atención directa</h2>
+                <p>Si ya sabes qué quieres pedir o necesitas asesoría rápida, escríbenos directamente y coordinamos contigo.</p>
+                <a href="https://wa.me/78064327" class="whatsapp-link" target="_blank" rel="noopener noreferrer">Hablar al 78064327</a>
+            </article>
         </section>
     </main>
     <div data-include="footer.html"></div>

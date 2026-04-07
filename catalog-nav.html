@@ -51,12 +51,3 @@
         <span>Mystery Box</span>
     </a>
 </nav>
-<script>
-(function () {
-    if (typeof window.initCatalogNav === 'function') {
-        const api = window.initCatalogNav(document.getElementById('catalog-dock'));
-        window.catalogNavController = api;
-        document.dispatchEvent(new CustomEvent('catalogNavReady', { detail: api }));
-    }
-})();
-</script>

@@ -14,11 +14,26 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
 </head>
 
 <body class="home-hub">
     <main class="home-launcher" aria-label="Accesos principales">
         <img src="imagenes/Suarez.png" alt="Perfumería Suárez" class="home-logo" width="742" height="320" fetchpriority="high">
+        <form class="home-search" action="search.html" method="get" role="search" aria-label="Buscar en todo el catálogo">
+            <div class="home-search__control">
+                <input
+                    id="home-search-input"
+                    class="home-search__input"
+                    type="search"
+                    name="q"
+                    placeholder="Buscar perfumes o marcas"
+                    aria-label="Buscar en todo el catálogo"
+                    autocomplete="off">
+                <button class="home-search__button" type="submit">Buscar</button>
+            </div>
+        </form>
         <div class="home-actions">
             <a class="home-action home-action--primary" href="https://wa.link/hqv4bq" target="_blank" rel="noopener noreferrer">
                 <span class="home-action__icon" aria-hidden="true">
@@ -104,11 +119,6 @@
     <script src="js/viewmodels/home.viewmodel.js"></script>
     <script src="js/viewmodels/shell.viewmodel.js"></script>
     <script src="js/scripts.js"></script>
-    <script>
-        window.PerfSuarez.core.onReady(() => {
-            window.PerfSuarez.viewmodels.home.initHomeActions();
-        });
-    </script>
 </body>
 
 </html>

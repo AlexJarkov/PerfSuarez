@@ -5,38 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-        <title>Resultados</title>
+    <title>Resultados de búsqueda</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/catalog-shared.css">
+    <link rel="stylesheet" href="css/pages/search.css">
     <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="imagenes/applogo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
-    <meta property="og:title" content="Resultados">
-    <meta property="og:description" content="Resultados de Búsqueda.">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
+    <meta property="og:title" content="Resultados de búsqueda">
+    <meta property="og:description" content="Resultados de Búsqueda en Perfumería Suárez.">
     <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
     <meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/search.html">
     <meta property="og:type" content="website">
-    <script async src="https://www.tiktok.com/embed.js"></script>
 </head>
 
-<body>
+<body class="search-page">
     <div data-include="header.html"></div>
 
-    <main>
-        <div class="title">
-            <h2>Resultados de búsqueda para: <span id="search-query"></span></h2>
-            <div class="title">
-                <div id="decants" class="perfume-grid"></div>
-            </div>
-        </div>
+    <main class="page-shell">
+        <section id="search-results" class="catalog-section">
 
+            <div class="catalog-intro">
+                <div class="section-heading">
+                    <span class="eyebrow">Búsqueda</span>
+                    <h1>Resultados para: <span id="search-query" class="search-query-term"></span></h1>
+                    <p id="search-count" class="search-count"></p>
+                </div>
+            </div>
+
+            <div class="filter-groups">
+                <div class="filter-group">
+                    <span class="filter-group-label">Género</span>
+                    <div class="gender-chips" id="gender-chips">
+                        <button class="gender-chip active" data-gender="all" type="button">Todos</button>
+                        <button class="gender-chip" data-gender="hombre" type="button">Hombre</button>
+                        <button class="gender-chip" data-gender="mujer" type="button">Mujer</button>
+                        <button class="gender-chip" data-gender="unisex" type="button">Unisex</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-group-label">Tipo</span>
+                    <div class="style-chips" id="style-chips">
+                        <button class="style-chip active" data-style="all" type="button">Todos</button>
+                        <button class="style-chip" data-style="nicho" type="button">Nicho</button>
+                        <button class="style-chip" data-style="diseñador" type="button">Diseñador</button>
+                        <button class="style-chip" data-style="arabes" type="button">Árabe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-controls">
+                <div class="select-row">
+                    <div class="select-field">
+                        <label for="search-brand">Marca</label>
+                        <select id="search-brand">
+                            <option value="all">Todas las marcas</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="toggle-group">
+                    <label class="toggle">
+                        <input type="checkbox" id="stock-filter" checked>
+                        <span>Solo en stock</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="new-filter">
+                        <span>Solo novedades</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="combo-filter">
+                        <span>Solo con combo</span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="no-results-message" class="empty-state" aria-live="polite">
+                <p>Perdón pariente... No tenemos resultados que coincidan con tu búsqueda :(.</p>
+            </div>
+
+            <div class="fragrance-grid search-grid" id="search-grid"></div>
+
+        </section>
     </main>
 
 </body>
 <div data-include="footer.html"></div>
 <script src="js/core/app.js"></script>
+<script src="js/data/perfumes-data.js"></script>
 <script src="js/models/catalog.model.js"></script>
 <script src="js/models/search.model.js"></script>
 <script src="js/models/combo.model.js"></script>

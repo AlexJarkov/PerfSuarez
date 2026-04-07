@@ -8,14 +8,15 @@ body.home-hub {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    height: 100vh;
+    height: auto;
     width: 100%;
     max-width: 100%;
     background: var(--surface);
     color: var(--ink);
     display: grid;
     place-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -36,6 +37,74 @@ body.home-hub {
     height: auto;
     object-fit: contain;
     transition: width 0.3s ease;
+}
+
+.home-search {
+    width: 100%;
+    display: block;
+}
+
+.home-search__control {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    box-shadow: 0 18px 44px rgba(17, 17, 17, 0.08);
+    box-sizing: border-box;
+}
+
+.home-search__input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font: inherit;
+    font-size: 0.98rem;
+    color: var(--ink);
+}
+
+.home-search__input::placeholder {
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.home-search__input:focus {
+    outline: none;
+}
+
+.home-search__control:focus-within {
+    border-color: rgba(26, 112, 64, 0.45);
+    box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12), 0 18px 44px rgba(17, 17, 17, 0.08);
+}
+
+.home-search__button {
+    border: 0;
+    border-radius: 18px;
+    padding: 0 20px;
+    min-height: 52px;
+    background: var(--ink);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.home-search__button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(17, 17, 17, 0.16);
+}
+
+.home-search__button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 112, 64, 0.22);
 }
 
 .home-actions {
@@ -127,6 +196,10 @@ body.home-hub {
         gap: clamp(14px, 4vh, 22px);
     }
 
+    .home-search__control {
+        padding: 8px;
+    }
+
     .home-action {
         min-height: 80px;
     }
@@ -137,6 +210,19 @@ body.home-hub {
 }
 
 @media (max-width: 420px) {
+    .home-launcher {
+        width: min(640px, calc(100vw - 20px));
+        padding-inline: 12px;
+    }
+
+    .home-search__control {
+        grid-template-columns: 1fr;
+    }
+
+    .home-search__button {
+        width: 100%;
+    }
+
     .home-action {
         font-size: 0.62rem;
         letter-spacing: 0.06em;

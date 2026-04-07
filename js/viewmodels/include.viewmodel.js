@@ -32,6 +32,13 @@
                         App.viewmodels.common.initGlobalUi();
                         App.viewmodels.search.initHeaderSearchToggle();
                         document.dispatchEvent(new CustomEvent('headerReady'));
+                    } else if (includePath.endsWith('catalog-nav.html')) {
+                        const navEl = container.querySelector('#catalog-dock');
+                        if (navEl) {
+                            const api = App.viewmodels.common.initCatalogNav(navEl);
+                            window.catalogNavController = api;
+                            document.dispatchEvent(new CustomEvent('catalogNavReady', { detail: api }));
+                        }
                     }
                 })
                 .catch(error => console.error('Error loading include:', error));

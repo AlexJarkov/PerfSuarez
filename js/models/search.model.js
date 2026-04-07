@@ -1,38 +1,19 @@
 (function (App) {
-    async function fetchHtmlDocument(path) {
-        const response = await fetch(path);
-        const html = await response.text();
-        const parser = new DOMParser();
-        return parser.parseFromString(html, 'text/html');
-    }
-
-    async function searchPages(files, query) {
-        const results = [];
-
-        await Promise.all(files.map(async (file) => {
-            try {
-                const doc = await fetchHtmlDocument(file);
-                const items = Array.from(doc.querySelectorAll('.perfume, .decant'));
-
-                items.forEach(item => {
-                    const name = item.getAttribute('data-name') || '';
-                    const brand = (item.getAttribute('data-brand') || '').toLowerCase();
-                    if (name.toLowerCase().includes(query) || brand.includes(query)) {
-                        results.push({
-                            type: item.classList.contains('perfume') ? 'perfume' : 'decant',
-                            node: item.cloneNode(true)
-                        });
-                    }
-                });
-            } catch (error) {
-                console.error(`Error al cargar el archivo: ${file}`, error);
-            }
-        }));
-
-        return results;
+    function searchPerfumes(query) {
+        if (!App.data || !App.data.perfumes) return [];
+        var q = query.toLowerCase().trim();
+        if (!q) return [];
+        return App.data.perfumes.filter(function (p) {
+            if (p.nombre_interno && p.nombre_interno.toLowerCase().includes(q)) return true;
+            if (p.marca && p.marca.toLowerCase().includes(q)) return true;
+            if (p.nombre && p.nombre.toLowerCase().includes(q)) return true;
+            if (p.tags && p.tags.some(function (t) { return t.toLowerCase().includes(q); })) return true;
+            if (p.notas && p.notas.generales && p.notas.generales.some(function (n) { return n.toLowerCase().includes(q); })) return true;
+            return false;
+        });
     }
 
     App.models.search = {
-        searchPages
+        searchPerfumes
     };
 })(window.PerfSuarez);

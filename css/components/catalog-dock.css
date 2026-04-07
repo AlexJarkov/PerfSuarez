@@ -85,3 +85,9 @@ body.is-home-panel .catalog-dock {
     opacity: 0;
     pointer-events: none;
 }
+
+.catalog-dock--detail-hidden {
+    transform: translate(-50%, 160%);
+    opacity: 0;
+    pointer-events: none;
+}
