@@ -1,9 +1,20 @@
 (function (App) {
+    function syncViewportHeight() {
+        const viewport = window.visualViewport;
+        const nextHeight = Math.round(viewport?.height || window.innerHeight || document.documentElement.clientHeight || 0);
+        if (!nextHeight) {
+            return;
+        }
+
+        document.documentElement.style.setProperty('--app-height', `${nextHeight}px`);
+    }
+
     function initCatalogNav(navEl) {
         return App.views.common.setupCatalogNav(navEl);
     }
 
     function initGlobalUi() {
+        syncViewportHeight();
         document.body.classList.toggle('is-shell-embed', window.parent && window.parent !== window);
 
         const combos = document.querySelectorAll('.combo');
@@ -103,8 +114,14 @@
         App.viewmodels.cart?.initCartUi();
     }
 
+    window.addEventListener('resize', syncViewportHeight);
+    window.addEventListener('orientationchange', syncViewportHeight);
+    window.visualViewport?.addEventListener('resize', syncViewportHeight);
+    window.visualViewport?.addEventListener('scroll', syncViewportHeight);
+
     App.viewmodels.common = {
         initCatalogNav,
-        initGlobalUi
+        initGlobalUi,
+        syncViewportHeight
     };
 })(window.PerfSuarez);

@@ -1,3 +1,7 @@
+:root {
+    --app-height: 100vh;
+}
+
 html {
     width: 100%;
     max-width: 100%;
@@ -11,7 +15,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: var(--app-height);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -26,12 +30,18 @@ body {
 body.swipe-hub {
     padding-top: 0;
     padding-bottom: 0;
-    min-height: 100vh;
+    min-height: var(--app-height);
     background: #fff;
 }
 
 body.is-shell-embed {
     padding-top: 0;
+    padding-bottom: 0;
+    min-height: var(--app-height);
+}
+
+body.is-shell-embed.catalog-nav-visible {
+    padding-bottom: 0;
 }
 
 body.catalog-nav-visible {
