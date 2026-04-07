@@ -264,22 +264,28 @@
                     frameWindow.history.scrollRestoration = 'manual';
                 }
 
+                const parentHeader = document.querySelector('.header-shell') || document.querySelector('header.site-header');
+                const parentHeaderBottom = Math.max(0, Math.round(parentHeader?.getBoundingClientRect().bottom || 0));
                 const { documentElement, body } = doc;
                 const scrollingElement = doc.scrollingElement || documentElement || body;
                 if (documentElement) {
                     documentElement.style.scrollBehavior = 'auto';
                     documentElement.style.marginTop = '0';
-                    documentElement.style.paddingTop = '0';
+                    if (parentHeaderBottom) {
+                        documentElement.style.setProperty('--shell-embed-top-offset', `${parentHeaderBottom + 12}px`);
+                    } else {
+                        documentElement.style.removeProperty('--shell-embed-top-offset');
+                    }
                     documentElement.scrollTop = 0;
                 }
                 if (body) {
                     body.style.scrollBehavior = 'auto';
                     body.style.marginTop = '0';
-                    body.style.paddingTop = '0';
+                    body.style.removeProperty('padding-top');
                     body.scrollTop = 0;
                 }
 
-                doc.querySelector('main')?.style.setProperty('margin-top', '0');
+                doc.querySelector('main')?.style.removeProperty('margin-top');
                 frameWindow.scrollTo(0, 0);
                 if (scrollingElement) {
                     scrollingElement.scrollTop = 0;
