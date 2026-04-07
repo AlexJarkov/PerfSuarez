@@ -4,6 +4,8 @@
     }
 
     function initGlobalUi() {
+        document.body.classList.toggle('is-shell-embed', window.parent && window.parent !== window);
+
         const combos = document.querySelectorAll('.combo');
         combos.forEach(combo => {
             if (combo.dataset.comboReady === 'true') {

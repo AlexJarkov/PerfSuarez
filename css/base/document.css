@@ -30,6 +30,10 @@ body.swipe-hub {
     background: #fff;
 }
 
+body.is-shell-embed {
+    padding-top: 0;
+}
+
 body.catalog-nav-visible {
     padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
 }
