@@ -8,6 +8,14 @@ html {
     overflow-x: hidden;
 }
 
+html.swipe-shell-lock,
+html.swipe-shell-lock body {
+    width: 100%;
+    height: var(--app-height);
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
 .hidden {
     display: none;
 }
@@ -32,6 +40,8 @@ body.swipe-hub {
     padding-bottom: 0;
     min-height: var(--app-height);
     background: #fff;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 body.is-shell-embed {

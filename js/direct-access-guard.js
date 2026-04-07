@@ -8,14 +8,23 @@
         '0.0.0.0': true
     };
     var routeMap = {
+        '/catalogo': '/',
         '/catalogo.html': '/',
+        '/perfumes': '/perfumes',
         '/perfumes.html': '/perfumes',
+        '/decants': '/decants',
         '/decants.html': '/decants',
+        '/armarcombo': '/armarcombo',
         '/armarcombo.html': '/armarcombo',
+        '/mysterybox': '/mysterybox',
         '/mysterybox.html': '/mysterybox',
+        '/velas': '/velas',
         '/velas.html': '/velas',
+        '/contacto': '/contacto',
         '/contacto.html': '/contacto',
+        '/search': '/search',
         '/search.html': '/search',
+        '/perfume': '/perfume',
         '/perfume.html': '/perfume'
     };
 
