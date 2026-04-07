@@ -9,12 +9,37 @@
         document.documentElement.style.setProperty('--app-height', `${nextHeight}px`);
     }
 
+    function syncEmbeddedHeaderOffset() {
+        if (!(window.parent && window.parent !== window)) {
+            document.documentElement.style.removeProperty('--shell-embed-top-offset');
+            return;
+        }
+
+        try {
+            const parentDoc = window.parent.document;
+            const headerShell = parentDoc.querySelector('.header-shell');
+            const siteHeader = parentDoc.querySelector('header.site-header');
+            const headerRect = headerShell?.getBoundingClientRect() || siteHeader?.getBoundingClientRect();
+            const headerBottom = Math.max(0, Math.round(headerRect?.bottom || 0));
+            const offset = headerBottom ? headerBottom + 12 : 0;
+
+            if (offset) {
+                document.documentElement.style.setProperty('--shell-embed-top-offset', `${offset}px`);
+            } else {
+                document.documentElement.style.removeProperty('--shell-embed-top-offset');
+            }
+        } catch (error) {
+            document.documentElement.style.removeProperty('--shell-embed-top-offset');
+        }
+    }
+
     function initCatalogNav(navEl) {
         return App.views.common.setupCatalogNav(navEl);
     }
 
     function initGlobalUi() {
         syncViewportHeight();
+        syncEmbeddedHeaderOffset();
         document.body.classList.toggle('is-shell-embed', window.parent && window.parent !== window);
 
         const combos = document.querySelectorAll('.combo');
@@ -118,10 +143,14 @@
     window.addEventListener('orientationchange', syncViewportHeight);
     window.visualViewport?.addEventListener('resize', syncViewportHeight);
     window.visualViewport?.addEventListener('scroll', syncViewportHeight);
+    window.addEventListener('resize', syncEmbeddedHeaderOffset);
+    window.addEventListener('orientationchange', syncEmbeddedHeaderOffset);
+    window.visualViewport?.addEventListener('resize', syncEmbeddedHeaderOffset);
 
     App.viewmodels.common = {
         initCatalogNav,
         initGlobalUi,
-        syncViewportHeight
+        syncViewportHeight,
+        syncEmbeddedHeaderOffset
     };
 })(window.PerfSuarez);

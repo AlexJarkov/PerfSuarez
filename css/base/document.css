@@ -1,5 +1,6 @@
 :root {
     --app-height: 100vh;
+    --shell-embed-top-offset: calc(var(--header-height) + env(safe-area-inset-top) + 24px);
 }
 
 html {
@@ -45,7 +46,7 @@ body.swipe-hub {
 }
 
 body.is-shell-embed {
-    padding-top: 0;
+    padding-top: var(--shell-embed-top-offset);
     padding-bottom: 0;
     min-height: var(--app-height);
 }
