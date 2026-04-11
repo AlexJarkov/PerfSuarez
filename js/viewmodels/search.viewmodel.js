@@ -1,6 +1,7 @@
 (function (App) {
     function initHeaderSearchToggle() {
         var searchTrigger = document.getElementById('mobile-search-trigger');
+        var searchLayer = document.querySelector('.header-search-layer');
         var searchPanel = document.getElementById('header-search-panel');
         var searchClose = document.getElementById('header-search-close');
         var searchInput = document.getElementById('search-input');
@@ -14,10 +15,12 @@
         }
 
         function setSearchState(isOpen) {
+            var mobileOpen = isOpen && isMobileViewport();
             searchPanel.classList.toggle('is-open', isOpen);
+            searchLayer && searchLayer.classList.toggle('is-open', mobileOpen);
             searchPanel.setAttribute('aria-hidden', String(!isOpen));
             searchTrigger.setAttribute('aria-expanded', String(isOpen));
-            document.body.classList.toggle('mobile-search-open', isOpen && isMobileViewport());
+            document.body.classList.toggle('mobile-search-open', mobileOpen);
 
             if (isOpen && searchInput) {
                 window.requestAnimationFrame(function () {
@@ -34,14 +37,8 @@
             setSearchState(false);
         });
 
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && searchPanel.classList.contains('is-open')) {
-                setSearchState(false);
-            }
-        });
-
-        document.addEventListener('click', function (event) {
-            if (!searchPanel.classList.contains('is-open') || isMobileViewport()) {
+        searchLayer && searchLayer.addEventListener('click', function (event) {
+            if (!searchPanel.classList.contains('is-open')) {
                 return;
             }
 
@@ -52,8 +49,32 @@
             setSearchState(false);
         });
 
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && searchPanel.classList.contains('is-open')) {
+                setSearchState(false);
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!searchPanel.classList.contains('is-open')) {
+                return;
+            }
+
+            if (searchPanel.contains(event.target) || searchTrigger.contains(event.target)) {
+                return;
+            }
+
+            if (searchLayer && searchLayer.contains(event.target)) {
+                return;
+            }
+
+            setSearchState(false);
+        });
+
         window.addEventListener('resize', function () {
-            document.body.classList.toggle('mobile-search-open', searchPanel.classList.contains('is-open') && isMobileViewport());
+            var mobileOpen = searchPanel.classList.contains('is-open') && isMobileViewport();
+            searchLayer && searchLayer.classList.toggle('is-open', mobileOpen);
+            document.body.classList.toggle('mobile-search-open', mobileOpen);
         });
 
         if (!searchForm || searchForm.dataset.searchShellReady === 'true') {
