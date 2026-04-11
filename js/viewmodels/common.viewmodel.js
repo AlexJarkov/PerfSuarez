@@ -142,7 +142,6 @@
     window.addEventListener('resize', syncViewportHeight);
     window.addEventListener('orientationchange', syncViewportHeight);
     window.visualViewport?.addEventListener('resize', syncViewportHeight);
-    window.visualViewport?.addEventListener('scroll', syncViewportHeight);
     window.addEventListener('resize', syncEmbeddedHeaderOffset);
     window.addEventListener('orientationchange', syncEmbeddedHeaderOffset);
     window.visualViewport?.addEventListener('resize', syncEmbeddedHeaderOffset);
