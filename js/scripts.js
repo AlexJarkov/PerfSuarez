@@ -95,6 +95,11 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
         notify();
     }
 
+    function getLatestState() {
+        cartState = readStorage();
+        return cartState;
+    }
+
     function getState() {
         return {
             items: cartState.items.slice()
@@ -130,27 +135,30 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
             return null;
         }
 
+        const latestState = getLatestState();
         const nextItem = Object.assign({
             id: createId('cart'),
             currency: 'Bs'
         }, item);
 
         setState({
-            items: cartState.items.concat(nextItem)
+            items: latestState.items.concat(nextItem)
         });
 
         return nextItem;
     }
 
     function removeItem(itemId) {
+        const latestState = getLatestState();
         setState({
-            items: cartState.items.filter(function (item) {
+            items: latestState.items.filter(function (item) {
                 return item.id !== itemId;
             })
         });
     }
 
     function clear() {
+        getLatestState();
         setState({ items: [] });
     }
 
