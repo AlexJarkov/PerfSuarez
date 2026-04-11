@@ -38,6 +38,50 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
         return Number.isInteger(amount) ? String(amount) : amount.toFixed(2);
     }
 
+    function getItemCurrency(item) {
+        const currency = item && typeof item.currency === 'string' ? item.currency.trim() : '';
+        return currency || 'Bs';
+    }
+
+    function formatCurrencyAmount(currency, value) {
+        return `${currency} ${formatPrice(value)}`;
+    }
+
+    function getTotalsByCurrency(items) {
+        return (Array.isArray(items) ? items : cartState.items).reduce(function (totals, item) {
+            const currency = getItemCurrency(item);
+            totals[currency] = (totals[currency] || 0) + (Number(item && item.totalPrice) || 0);
+            return totals;
+        }, {});
+    }
+
+    function formatTotalsByCurrency(totals) {
+        const preferredOrder = ['Bs', '$'];
+        const currencies = Object.keys(totals || {});
+        if (!currencies.length) {
+            return formatCurrencyAmount('Bs', 0);
+        }
+
+        currencies.sort(function (left, right) {
+            const leftIndex = preferredOrder.indexOf(left);
+            const rightIndex = preferredOrder.indexOf(right);
+            if (leftIndex === -1 && rightIndex === -1) {
+                return left.localeCompare(right);
+            }
+            if (leftIndex === -1) {
+                return 1;
+            }
+            if (rightIndex === -1) {
+                return -1;
+            }
+            return leftIndex - rightIndex;
+        });
+
+        return currencies.map(function (currency) {
+            return formatCurrencyAmount(currency, totals[currency]);
+        }).join(' + ');
+    }
+
     function buildWhatsAppUrl(message) {
         return `https://wa.me/${WHATSAPP_NUMBER}/?text=${encodeURIComponent(message)}`;
     }
@@ -140,6 +184,7 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
             id: createId('cart'),
             currency: 'Bs'
         }, item);
+        nextItem.currency = getItemCurrency(nextItem);
 
         setState({
             items: latestState.items.concat(nextItem)
@@ -334,11 +379,11 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
                     lines.push(`   ${item.subtitle}`);
                 }
             }
-            lines.push(`   Subtotal: Bs ${formatPrice(item.totalPrice)}`);
+            lines.push(`   Subtotal: ${formatCurrencyAmount(getItemCurrency(item), item.totalPrice)}`);
             lines.push('');
         });
 
-        lines.push(`Total del carrito: Bs ${formatPrice(getTotal())}`);
+        lines.push(`Total del carrito: ${formatTotalsByCurrency(getTotalsByCurrency())}`);
         return lines.join('\n');
     }
 
@@ -350,10 +395,13 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
         createComboItem,
         createMysteryBoxItem,
         createPerfumeItem,
+        formatCurrencyAmount,
         formatPrice,
+        formatTotalsByCurrency,
         getItemCount,
         getState,
         getTotal,
+        getTotalsByCurrency,
         removeItem,
         subscribe
     };
@@ -413,7 +461,9 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
             elements.count.classList.toggle('is-empty', itemCount === 0);
 
             if (elements.total) {
-                elements.total.textContent = `Bs ${App.models.cart.formatPrice(total)}`;
+                elements.total.textContent = App.models.cart.formatTotalsByCurrency
+                    ? App.models.cart.formatTotalsByCurrency(App.models.cart.getTotalsByCurrency(state.items))
+                    : `Bs ${App.models.cart.formatPrice(total)}`;
             }
 
             if (elements.send) {
@@ -441,7 +491,7 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
                         +     `<button type="button" class="cart-item__remove" data-remove-cart-item="${item.id}" aria-label="Eliminar producto">×</button>`
                         +   '</div>'
                         +   (lines ? `<ul class="cart-item__details">${lines}</ul>` : '')
-                        +   `<p class="cart-item__price">Bs ${App.models.cart.formatPrice(item.totalPrice)}</p>`
+                        +   `<p class="cart-item__price">${App.models.cart.formatCurrencyAmount ? App.models.cart.formatCurrencyAmount(getItemCurrency(item), item.totalPrice) : `Bs ${App.models.cart.formatPrice(item.totalPrice)}`}</p>`
                         + '</article>';
                 }).join('');
             }

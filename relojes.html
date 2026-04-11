@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Armá tu Reloj | Perfumería Suárez</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/relojes.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="imagenes/applogo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
+</head>
+
+<body class="relojes-page">
+    <main class="page-shell">
+        <section class="watch-room">
+            <section class="watch-room__board" id="watch-navigator" tabindex="0" aria-label="Selector direccional de reloj">
+                <button class="btn-watch btn-watch--ghost btn-watch--small watch-exit-button" id="btn-exit-catalog" type="button">Volver al Catálogo</button>
+
+                <div class="watch-guide-card" id="watch-guide-card" aria-hidden="true">
+                    <p>Desliza arriba o abajo para cambiar categoría, y hacia los lados para elegir la pieza.</p>
+                </div>
+
+                <button class="watch-nav-button watch-nav-button--up" id="watch-up" type="button" aria-label="Categoría anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 15 6-6 6 6"></path>
+                    </svg>
+                </button>
+                <button class="watch-nav-button watch-nav-button--down" id="watch-down" type="button" aria-label="Categoría siguiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                </button>
+                <button class="watch-nav-button watch-nav-button--left" id="watch-left" type="button" aria-label="Pieza anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 6-6 6 6 6"></path>
+                    </svg>
+                </button>
+                <button class="watch-nav-button watch-nav-button--right" id="watch-right" type="button" aria-label="Pieza siguiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 6 6 6-6 6"></path>
+                    </svg>
+                </button>
+
+                <div class="watch-axis watch-axis--vertical">
+                    <p class="watch-axis__ghost" id="watch-category-prev"></p>
+                    <div class="watch-axis__current">
+                        <h1 id="watch-category-current"></h1>
+                    </div>
+                    <p class="watch-axis__ghost" id="watch-category-next"></p>
+                </div>
+
+                <div class="watch-stage" id="watch-stage">
+                    <section class="watch-screen watch-screen--builder is-active" id="watch-builder-screen" aria-label="Construcción del reloj">
+                        <div class="watch-composer" id="watch-composer" aria-label="Vista previa del reloj configurado">
+                            <img class="watch-placeholder" id="watch-placeholder" src="imagenes/fotos-relojes/placeholder-reloj.png" alt="Reloj vacío" aria-hidden="true">
+                            <img class="watch-layer" data-layer="brazaletes" src="" alt="" aria-hidden="true">
+                            <img class="watch-layer" data-layer="cajas" src="" alt="" aria-hidden="true">
+                            <img class="watch-layer" data-layer="diales" src="" alt="" aria-hidden="true">
+                            <img class="watch-layer" data-layer="manecillas" src="" alt="" aria-hidden="true">
+                            <img class="watch-layer" data-layer="logos" src="" alt="" aria-hidden="true">
+                        </div>
+
+                        <div class="watch-piece-panel">
+                            <p class="watch-piece-panel__eyebrow">Pieza actual</p>
+                            <h2 class="watch-piece-panel__name" id="watch-piece-current"></h2>
+                            <p class="watch-piece-panel__meta" id="watch-piece-meta"></p>
+                        </div>
+
+                        <div class="watch-piece-side-row">
+                            <div class="watch-piece-side">
+                                <p class="watch-piece-side__label">Anterior</p>
+                                <p class="watch-piece-side__name" id="watch-piece-prev"></p>
+                            </div>
+                            <div class="watch-piece-side watch-piece-side--next">
+                                <p class="watch-piece-side__label">Siguiente</p>
+                                <p class="watch-piece-side__name" id="watch-piece-next"></p>
+                            </div>
+                        </div>
+
+                        <div class="watch-builder-actions">
+                            <button class="btn-watch btn-watch--accent" id="btn-continue" type="button">Continuar</button>
+                            <div class="watch-builder-feedback" id="watch-feedback" aria-live="polite"></div>
+                        </div>
+                    </section>
+
+                    <section class="watch-screen watch-screen--invoice" id="watch-invoice-screen" hidden aria-label="Resumen del reloj">
+                        <div class="watch-invoice">
+                            <div class="watch-invoice__header">
+                                <div>
+                                    <p class="watch-invoice__eyebrow">Resumen final</p>
+                                    <h2>Tu reloj</h2>
+                                </div>
+                                <button class="btn-watch btn-watch--ghost btn-watch--small" id="btn-back" type="button">Volver</button>
+                            </div>
+
+                            <div class="watch-invoice__list" id="watch-invoice-lines"></div>
+
+                            <div class="watch-invoice__footer">
+                                <div class="watch-invoice__total">
+                                    <span>Total</span>
+                                    <strong>$<span id="watch-total">0.00</span> USD</strong>
+                                </div>
+
+                                <div class="watch-invoice__actions">
+                                    <button class="btn-watch btn-watch--ghost" id="btn-whatsapp" type="button" disabled>Pedir directo</button>
+                                    <button class="btn-watch btn-watch--accent" id="btn-cart" type="button" disabled>Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="js/core/app.js"></script>
+    <script src="js/views/common.view.js"></script>
+    <script src="js/viewmodels/common.viewmodel.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/data/relojes-data.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        var data = window.PerfSuarez && window.PerfSuarez.data && window.PerfSuarez.data.relojes;
+        if (!data) {
+            return;
+        }
+
+        var dom = {
+            navigator: document.getElementById('watch-navigator'),
+            stage: document.getElementById('watch-stage'),
+            builderScreen: document.getElementById('watch-builder-screen'),
+            invoiceScreen: document.getElementById('watch-invoice-screen'),
+            composer: document.getElementById('watch-composer'),
+            guideCard: document.getElementById('watch-guide-card'),
+            placeholder: document.getElementById('watch-placeholder'),
+            categoryPrev: document.getElementById('watch-category-prev'),
+            categoryCurrent: document.getElementById('watch-category-current'),
+            categoryNext: document.getElementById('watch-category-next'),
+            piecePrev: document.getElementById('watch-piece-prev'),
+            pieceCurrent: document.getElementById('watch-piece-current'),
+            pieceNext: document.getElementById('watch-piece-next'),
+            pieceMeta: document.getElementById('watch-piece-meta'),
+            feedback: document.getElementById('watch-feedback'),
+            invoiceLines: document.getElementById('watch-invoice-lines'),
+            total: document.getElementById('watch-total'),
+            layers: document.querySelectorAll('.watch-layer'),
+            buttons: {
+                exit: document.getElementById('btn-exit-catalog'),
+                up: document.getElementById('watch-up'),
+                down: document.getElementById('watch-down'),
+                left: document.getElementById('watch-left'),
+                right: document.getElementById('watch-right'),
+                continue: document.getElementById('btn-continue'),
+                back: document.getElementById('btn-back'),
+                whatsapp: document.getElementById('btn-whatsapp'),
+                cart: document.getElementById('btn-cart')
+            }
+        };
+
+        var emptyLabels = {
+            movimientos: 'Sin movimiento',
+            diales: 'Sin dial',
+            manecillas: 'Sin manecillas',
+            logos: 'Sin logo',
+            cajas: 'Sin caja',
+            brazaletes: 'Sin brazalete'
+        };
+
+        var categoryOptions = data.categorias.map(function (cat) {
+            var emptyLabel = emptyLabels[cat.id] || 'Sin selección';
+            var options = [{
+                sku: 'NONE-' + cat.id,
+                nombre: emptyLabel,
+                categoria: cat.id,
+                precio: 0,
+                imagen: null,
+                disponible: true,
+                isEmpty: true
+            }].concat(data.piezas.filter(function (pieza) {
+                return pieza.categoria === cat.id && pieza.disponible;
+            }));
+
+            return {
+                id: cat.id,
+                label: cat.label,
+                options: options
+            };
+        });
+
+        var state = {
+            activeCategoryIndex: 0,
+            selectedByCategory: {},
+            optionIndexByCategory: {},
+            screen: 'builder'
+        };
+
+        var interactionTimers = {
+            x: null,
+            y: null
+        };
+
+        categoryOptions.forEach(function (cat) {
+            state.selectedByCategory[cat.id] = null;
+            state.optionIndexByCategory[cat.id] = 0;
+        });
+
+        function getAppContext() {
+            try {
+                if (window.parent && window.parent !== window && window.parent.PerfSuarez) {
+                    return window.parent.PerfSuarez;
+                }
+            } catch (error) {
+                // ignore access issues
+            }
+
+            return window.PerfSuarez;
+        }
+
+        function exitToCatalog() {
+            var appContext = getAppContext();
+            if (appContext && appContext.core && typeof appContext.core.navigateToShell === 'function') {
+                appContext.core.navigateToShell('catalogo.html');
+                return;
+            }
+
+            window.location.href = 'catalogo.html';
+        }
+
+        function formatUSD(amount) {
+            var value = Number(amount) || 0;
+            return Number.isInteger(value) ? String(value) : value.toFixed(2);
+        }
+
+        function getActiveCategory() {
+            return categoryOptions[state.activeCategoryIndex];
+        }
+
+        function getOptionIndex(categoryId) {
+            return state.optionIndexByCategory[categoryId] || 0;
+        }
+
+        function getCurrentOption(cat) {
+            return cat.options[getOptionIndex(cat.id)] || cat.options[0];
+        }
+
+        function getWrappedIndex(index, total) {
+            return (index + total) % total;
+        }
+
+        function clamp(value, min, max) {
+            return Math.max(min, Math.min(max, value));
+        }
+
+        function getCaseLayout() {
+            var selectedCase = state.selectedByCategory.cajas;
+            if (selectedCase && selectedCase.layout) {
+                return selectedCase.layout;
+            }
+
+            var currentCase = categoryOptions.find(function (cat) {
+                return cat.id === 'cajas';
+            });
+            var option = currentCase ? getCurrentOption(currentCase) : null;
+            if (option && option.layout) {
+                return option.layout;
+            }
+
+            return {
+                caseScale: 0.70,
+                braceletScale: 0.76,
+                dialScale: 1.08,
+                handsScale: 0.88,
+                logoScale: 0.54
+            };
+        }
+
+        function applyCaseMetrics() {
+            var layout = getCaseLayout();
+
+            dom.composer.style.setProperty('--scale-case', Number(layout.caseScale || 0.70).toFixed(4));
+            dom.composer.style.setProperty('--scale-bracelet', Number(layout.braceletScale || 0.76).toFixed(4));
+            dom.composer.style.setProperty('--scale-dial', Number(layout.dialScale || 1.08).toFixed(4));
+            dom.composer.style.setProperty('--scale-hands', Number(layout.handsScale || 0.88).toFixed(4));
+            dom.composer.style.setProperty('--scale-logo', Number(layout.logoScale || 0.54).toFixed(4));
+        }
+
+        function updateLayer(categoryId, pieza) {
+            dom.layers.forEach(function (img) {
+                if (img.dataset.layer !== categoryId) {
+                    return;
+                }
+
+                img.onload = null;
+                img.onerror = null;
+
+                if (!pieza || !pieza.imagen) {
+                    img.classList.remove('is-visible');
+                    img.removeAttribute('src');
+                    img.alt = '';
+                    return;
+                }
+
+                img.classList.remove('is-visible');
+                img.onload = function () {
+                    img.classList.add('is-visible');
+                };
+                img.onerror = function () {
+                    img.classList.remove('is-visible');
+                };
+                img.src = pieza.imagen;
+                img.alt = pieza.nombre;
+                window.requestAnimationFrame(function () {
+                    img.classList.add('is-visible');
+                });
+            });
+        }
+
+        function setGestureOffset(axis, value) {
+            var limit = axis === 'y' ? 64 : 78;
+            var safeValue = clamp(value, -limit, limit);
+
+            if (axis === 'y') {
+                dom.navigator.style.setProperty('--category-drag-y', safeValue.toFixed(2) + 'px');
+                dom.navigator.style.setProperty('--composer-drag-y', (safeValue * 0.18).toFixed(2) + 'px');
+                return;
+            }
+
+            dom.navigator.style.setProperty('--piece-drag-x', safeValue.toFixed(2) + 'px');
+            dom.navigator.style.setProperty('--composer-drag-x', (safeValue * 0.24).toFixed(2) + 'px');
+        }
+
+        function resetGestureOffset(axis) {
+            setGestureOffset(axis, 0);
+        }
+
+        function scheduleGestureReset(axis, delay) {
+            window.clearTimeout(interactionTimers[axis]);
+            interactionTimers[axis] = window.setTimeout(function () {
+                resetGestureOffset(axis);
+            }, delay || 160);
+        }
+
+        function triggerDirectionalStep(axis, direction, displayOffset) {
+            var offset = typeof displayOffset === 'number'
+                ? displayOffset
+                : (axis === 'y' ? -direction * 24 : -direction * 30);
+
+            setGestureOffset(axis, offset);
+
+            if (axis === 'y') {
+                state.activeCategoryIndex = getWrappedIndex(state.activeCategoryIndex + direction, categoryOptions.length);
+                renderAll();
+            } else {
+                var cat = getActiveCategory();
+                state.optionIndexByCategory[cat.id] = getWrappedIndex(getOptionIndex(cat.id) + direction, cat.options.length);
+                applyCurrentOption(cat);
+            }
+
+            scheduleGestureReset(axis, 190);
+        }
+
+        function updatePlaceholder() {
+            var hasVisibleLayer = Object.keys(state.selectedByCategory).some(function (categoryId) {
+                var pieza = state.selectedByCategory[categoryId];
+                return pieza && pieza.imagen;
+            });
+
+            dom.placeholder.style.opacity = hasVisibleLayer ? '0' : '';
+            dom.guideCard.classList.toggle('is-visible', !hasVisibleLayer && state.screen === 'builder');
+        }
+
+        function buildResumen() {
+            var lineas = data.categorias.map(function (cat) {
+                var pieza = state.selectedByCategory[cat.id];
+                return pieza ? { categoria: cat.label, pieza: pieza } : null;
+            }).filter(Boolean);
+
+            return {
+                lineas: lineas,
+                total: lineas.reduce(function (sum, item) {
+                    return sum + (Number(item.pieza.precio) || 0);
+                }, 0)
+            };
+        }
+
+        function updateTotal() {
+            dom.total.textContent = formatUSD(buildResumen().total);
+        }
+
+        function updateActionButtons() {
+            var isComplete = !getMissingCategories().length;
+            dom.buttons.whatsapp.disabled = !isComplete;
+            dom.buttons.cart.disabled = !isComplete;
+        }
+
+        function renderDirections() {
+            var activeCategory = getActiveCategory();
+            var activeOptionIndex = getOptionIndex(activeCategory.id);
+            var previousCategory = categoryOptions[getWrappedIndex(state.activeCategoryIndex - 1, categoryOptions.length)];
+            var nextCategory = categoryOptions[getWrappedIndex(state.activeCategoryIndex + 1, categoryOptions.length)];
+            var previousOption = activeCategory.options[getWrappedIndex(activeOptionIndex - 1, activeCategory.options.length)];
+            var nextOption = activeCategory.options[getWrappedIndex(activeOptionIndex + 1, activeCategory.options.length)];
+            var currentOption = getCurrentOption(activeCategory);
+
+            dom.categoryPrev.textContent = previousCategory.label;
+            dom.categoryCurrent.textContent = activeCategory.label;
+            dom.categoryNext.textContent = nextCategory.label;
+            dom.piecePrev.textContent = previousOption.nombre;
+            dom.pieceNext.textContent = nextOption.nombre;
+            dom.pieceCurrent.textContent = currentOption.nombre;
+            dom.pieceMeta.textContent = currentOption.isEmpty
+                ? 'Elegí una pieza para esta categoría.'
+                : '$' + formatUSD(currentOption.precio) + ' USD';
+        }
+
+        function renderInvoice() {
+            var resumen = buildResumen();
+
+            dom.invoiceLines.innerHTML = resumen.lineas.map(function (linea) {
+                return ''
+                    + '<div class="watch-invoice__line">'
+                    +   '<div class="watch-invoice__line-copy">'
+                    +     '<span>' + linea.categoria + '</span>'
+                    +     '<strong>' + linea.pieza.nombre + '</strong>'
+                    +   '</div>'
+                    +   '<div class="watch-invoice__price">$' + formatUSD(linea.pieza.precio) + '</div>'
+                    + '</div>';
+            }).join('');
+        }
+
+        function renderScreenState() {
+            var isInvoice = state.screen === 'invoice';
+
+            dom.builderScreen.hidden = isInvoice;
+            dom.invoiceScreen.hidden = !isInvoice;
+            dom.builderScreen.classList.toggle('is-active', !isInvoice);
+            dom.invoiceScreen.classList.toggle('is-active', isInvoice);
+            dom.navigator.classList.toggle('is-invoice-mode', isInvoice);
+
+            if (isInvoice) {
+                resetGestureOffset('x');
+                resetGestureOffset('y');
+            }
+        }
+
+        function renderAll() {
+            applyCaseMetrics();
+            renderDirections();
+            updatePlaceholder();
+            updateTotal();
+            renderInvoice();
+            updateActionButtons();
+            renderScreenState();
+        }
+
+        function applyCurrentOption(cat) {
+            var option = getCurrentOption(cat);
+            var nextSelection = option && !option.isEmpty ? option : null;
+            state.selectedByCategory[cat.id] = nextSelection;
+            clearFeedback();
+            updateLayer(cat.id, nextSelection);
+            renderAll();
+        }
+
+        function stepCategory(direction) {
+            if (state.screen !== 'builder') {
+                return;
+            }
+
+            triggerDirectionalStep('y', direction);
+        }
+
+        function stepPiece(direction) {
+            if (state.screen !== 'builder') {
+                return;
+            }
+
+            triggerDirectionalStep('x', direction);
+        }
+
+        function getMissingCategories() {
+            return data.categorias.filter(function (cat) {
+                return !state.selectedByCategory[cat.id];
+            });
+        }
+
+        function showFeedback(message, items) {
+            var list = Array.isArray(items) && items.length
+                ? '<span class="watch-builder-feedback__list">' + items.map(function (item) {
+                    return '<span>' + item + '</span>';
+                }).join('') + '</span>'
+                : '';
+
+            dom.feedback.innerHTML = '<p>' + message + '</p>' + list;
+            dom.feedback.classList.add('is-visible');
+        }
+
+        function clearFeedback() {
+            dom.feedback.innerHTML = '';
+            dom.feedback.classList.remove('is-visible');
+        }
+
+        function openInvoice() {
+            var missing = getMissingCategories();
+            if (missing.length) {
+                showFeedback('Perdón Pariente! Pero te faltan estas piezas en tu reloj:', missing.map(function (cat) {
+                    return cat.label;
+                }));
+                return;
+            }
+
+            clearFeedback();
+            state.screen = 'invoice';
+            renderAll();
+        }
+
+        function closeInvoice() {
+            state.screen = 'builder';
+            renderAll();
+            dom.navigator.focus({ preventScroll: true });
+        }
+
+        dom.buttons.up.addEventListener('click', function () {
+            stepCategory(-1);
+        });
+        dom.buttons.down.addEventListener('click', function () {
+            stepCategory(1);
+        });
+        dom.buttons.left.addEventListener('click', function () {
+            stepPiece(-1);
+        });
+        dom.buttons.right.addEventListener('click', function () {
+            stepPiece(1);
+        });
+        dom.buttons.continue.addEventListener('click', openInvoice);
+        dom.buttons.back.addEventListener('click', closeInvoice);
+        dom.buttons.exit.addEventListener('click', exitToCatalog);
+
+        dom.navigator.addEventListener('keydown', function (event) {
+            if (state.screen === 'invoice' && event.key === 'Escape') {
+                event.preventDefault();
+                closeInvoice();
+                return;
+            }
+
+            if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                stepCategory(-1);
+            } else if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                stepCategory(1);
+            } else if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                stepPiece(-1);
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                stepPiece(1);
+            } else if (event.key === 'Enter' && state.screen === 'builder') {
+                event.preventDefault();
+                openInvoice();
+            }
+        });
+
+        var wheelState = {
+            axis: null,
+            amount: 0,
+            lastTime: 0
+        };
+
+        dom.navigator.addEventListener('wheel', function (event) {
+            if (state.screen !== 'builder') {
+                return;
+            }
+
+            event.preventDefault();
+
+            var now = Date.now();
+            if (now - wheelState.lastTime > 220) {
+                wheelState.axis = null;
+                wheelState.amount = 0;
+                resetGestureOffset('x');
+                resetGestureOffset('y');
+            }
+
+            var axis = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? 'x' : 'y';
+            var delta = axis === 'x' ? event.deltaX : event.deltaY;
+
+            if (wheelState.axis && wheelState.axis !== axis) {
+                wheelState.amount = 0;
+                resetGestureOffset(wheelState.axis);
+            }
+
+            wheelState.axis = axis;
+            wheelState.amount += delta;
+            wheelState.lastTime = now;
+
+            setGestureOffset(axis, -wheelState.amount * (axis === 'x' ? 0.72 : 0.68));
+            scheduleGestureReset(axis, 120);
+
+            if (Math.abs(wheelState.amount) < 30) {
+                return;
+            }
+
+            if (axis === 'x') {
+                triggerDirectionalStep('x', wheelState.amount > 0 ? 1 : -1, clamp(-wheelState.amount * 0.72, -78, 78));
+            } else {
+                triggerDirectionalStep('y', wheelState.amount > 0 ? 1 : -1, clamp(-wheelState.amount * 0.68, -64, 64));
+            }
+
+            wheelState.amount = 0;
+        }, { passive: false });
+
+        var touchState = null;
+
+        dom.navigator.addEventListener('touchstart', function (event) {
+            if (state.screen !== 'builder' || !event.touches || event.touches.length !== 1) {
+                return;
+            }
+
+            touchState = {
+                startX: event.touches[0].clientX,
+                startY: event.touches[0].clientY,
+                axis: null,
+                lastDx: 0,
+                lastDy: 0
+            };
+        }, { passive: true });
+
+        dom.navigator.addEventListener('touchmove', function (event) {
+            if (state.screen !== 'builder' || !touchState || !event.touches || event.touches.length !== 1) {
+                return;
+            }
+
+            var currentX = event.touches[0].clientX;
+            var currentY = event.touches[0].clientY;
+            var dx = currentX - touchState.startX;
+            var dy = currentY - touchState.startY;
+
+            touchState.lastDx = dx;
+            touchState.lastDy = dy;
+
+            if (!touchState.axis) {
+                if (Math.max(Math.abs(dx), Math.abs(dy)) < 8) {
+                    return;
+                }
+
+                touchState.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+            }
+
+            event.preventDefault();
+
+            if (touchState.axis === 'x') {
+                setGestureOffset('x', dx * 0.82);
+
+                if (Math.abs(dx) >= 42) {
+                    triggerDirectionalStep('x', dx < 0 ? 1 : -1, dx * 0.36);
+                    touchState.startX = currentX;
+                    touchState.startY = currentY;
+                    touchState.lastDx = 0;
+                    touchState.lastDy = 0;
+                }
+
+                return;
+            }
+
+            setGestureOffset('y', dy * 0.82);
+
+            if (Math.abs(dy) >= 40) {
+                triggerDirectionalStep('y', dy < 0 ? 1 : -1, dy * 0.34);
+                touchState.startX = currentX;
+                touchState.startY = currentY;
+                touchState.lastDx = 0;
+                touchState.lastDy = 0;
+            }
+        }, { passive: false });
+
+        dom.navigator.addEventListener('touchend', function (event) {
+            if (state.screen !== 'builder' || !touchState) {
+                touchState = null;
+                return;
+            }
+
+            var dx = touchState.lastDx;
+            var dy = touchState.lastDy;
+            touchState = null;
+
+            if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) {
+                scheduleGestureReset('x', 120);
+                scheduleGestureReset('y', 120);
+                return;
+            }
+
+            if (Math.abs(dx) > Math.abs(dy)) {
+                triggerDirectionalStep('x', dx < 0 ? 1 : -1, dx * 0.32);
+            } else {
+                triggerDirectionalStep('y', dy < 0 ? 1 : -1, dy * 0.3);
+            }
+        }, { passive: true });
+
+        dom.navigator.addEventListener('touchcancel', function () {
+            touchState = null;
+            scheduleGestureReset('x', 120);
+            scheduleGestureReset('y', 120);
+        }, { passive: true });
+
+        function buildWhatsAppMessage() {
+            var resumen = buildResumen();
+            var iconos = {
+                movimientos: '⚙️',
+                diales: '🕘',
+                manecillas: '🕑',
+                logos: '✨',
+                cajas: '🔲',
+                brazaletes: '⌚'
+            };
+            var message = '¡Hola! Quiero armar mi reloj Suarez\n\n';
+
+            resumen.lineas.forEach(function (linea) {
+                var icono = iconos[linea.pieza.categoria] || '•';
+                message += icono + ' ' + linea.categoria + ': ' + linea.pieza.nombre + ' ($' + formatUSD(linea.pieza.precio) + ')\n';
+            });
+
+            message += '\nTotal: $' + formatUSD(resumen.total) + ' USD';
+            return message;
+        }
+
+        dom.buttons.whatsapp.addEventListener('click', function () {
+            if (getMissingCategories().length) {
+                return;
+            }
+
+            window.open('https://wa.me/78064327/?text=' + encodeURIComponent(buildWhatsAppMessage()), '_blank', 'noopener');
+        });
+
+        dom.buttons.cart.addEventListener('click', function () {
+            var resumen = buildResumen();
+            var appContext = getAppContext();
+            var cart = appContext && appContext.models && appContext.models.cart;
+            var cartVm = appContext && appContext.viewmodels && appContext.viewmodels.cart;
+            var image = 'imagenes/fotos-relojes/placeholder-reloj.png';
+
+            if (getMissingCategories().length || !cart || typeof cart.addItem !== 'function') {
+                return;
+            }
+
+            if (state.selectedByCategory.cajas && state.selectedByCategory.cajas.imagen) {
+                image = state.selectedByCategory.cajas.imagen;
+            } else {
+                resumen.lineas.some(function (linea) {
+                    if (!linea.pieza.imagen) {
+                        return false;
+                    }
+                    image = linea.pieza.imagen;
+                    return true;
+                });
+            }
+
+            cart.addItem({
+                type: 'reloj',
+                title: 'Suarez Watch',
+                subtitle: 'Configuración personalizada',
+                totalPrice: resumen.total,
+                currency: '$',
+                image: image,
+                detailLines: resumen.lineas.map(function (linea) {
+                    return linea.categoria + ': ' + linea.pieza.nombre;
+                }),
+                whatsappLines: resumen.lineas.map(function (linea) {
+                    return '- ' + linea.categoria + ': ' + linea.pieza.nombre + ' ($' + formatUSD(linea.pieza.precio) + ')';
+                })
+            });
+
+            if (cartVm && typeof cartVm.openCart === 'function') {
+                cartVm.openCart();
+            }
+        });
+
+        renderAll();
+        dom.navigator.focus({ preventScroll: true });
+    })();
+    </script>
+</body>
+
+</html>

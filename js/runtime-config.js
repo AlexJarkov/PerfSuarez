@@ -1,1 +1,1 @@
-window.DISABLE_SHELL_REDIRECT = false;
+window.DISABLE_SHELL_REDIRECT = true;
