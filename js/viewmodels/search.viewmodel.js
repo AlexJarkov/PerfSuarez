@@ -1,64 +1,78 @@
 (function (App) {
     function initHeaderSearchToggle() {
-        var mobileTrigger = document.getElementById('mobile-search-trigger');
-        var mobilePanel = document.getElementById('mobile-search-panel');
-        var mobileClose = document.getElementById('mobile-search-close');
-        var mobileInput = document.getElementById('mobile-search-input');
+        var searchTrigger = document.getElementById('mobile-search-trigger');
+        var searchPanel = document.getElementById('header-search-panel');
+        var searchClose = document.getElementById('header-search-close');
+        var searchInput = document.getElementById('search-input');
+        var searchForm = document.getElementById('search-form');
 
-        if (!mobileTrigger || !mobilePanel || mobileTrigger.dataset.searchReady === 'true') return;
-        mobileTrigger.dataset.searchReady = 'true';
+        if (!searchTrigger || !searchPanel || searchTrigger.dataset.searchReady === 'true') return;
+        searchTrigger.dataset.searchReady = 'true';
 
-        function setMobileSearchState(isOpen) {
-            mobilePanel.classList.toggle('is-open', isOpen);
-            mobilePanel.setAttribute('aria-hidden', String(!isOpen));
-            mobileTrigger.setAttribute('aria-expanded', String(isOpen));
-            document.body.classList.toggle('mobile-search-open', isOpen);
-            if (isOpen && mobileInput) {
+        function isMobileViewport() {
+            return window.innerWidth <= 960;
+        }
+
+        function setSearchState(isOpen) {
+            searchPanel.classList.toggle('is-open', isOpen);
+            searchPanel.setAttribute('aria-hidden', String(!isOpen));
+            searchTrigger.setAttribute('aria-expanded', String(isOpen));
+            document.body.classList.toggle('mobile-search-open', isOpen && isMobileViewport());
+
+            if (isOpen && searchInput) {
                 window.requestAnimationFrame(function () {
-                    mobileInput.focus();
+                    searchInput.focus();
                 });
             }
         }
 
-        mobileTrigger.addEventListener('click', function () {
-            setMobileSearchState(!mobilePanel.classList.contains('is-open'));
+        searchTrigger.addEventListener('click', function () {
+            setSearchState(!searchPanel.classList.contains('is-open'));
         });
 
-        mobileClose && mobileClose.addEventListener('click', function () {
-            setMobileSearchState(false);
+        searchClose && searchClose.addEventListener('click', function () {
+            setSearchState(false);
         });
 
         document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && mobilePanel.classList.contains('is-open')) {
-                setMobileSearchState(false);
+            if (event.key === 'Escape' && searchPanel.classList.contains('is-open')) {
+                setSearchState(false);
             }
         });
 
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > 960 && mobilePanel.classList.contains('is-open')) {
-                setMobileSearchState(false);
-            }
-        });
-
-        [document.getElementById('search-form'), mobilePanel.querySelector('form')].forEach(function (form) {
-            if (!form || form.dataset.searchShellReady === 'true') {
+        document.addEventListener('click', function (event) {
+            if (!searchPanel.classList.contains('is-open') || isMobileViewport()) {
                 return;
             }
 
-            form.dataset.searchShellReady = 'true';
-            form.addEventListener('submit', function (event) {
-                var input = form.querySelector('input[name="q"]');
-                var query = input ? input.value.trim() : '';
-                if (!query) {
-                    event.preventDefault();
-                    input && input.focus();
-                    return;
-                }
+            if (searchPanel.contains(event.target) || searchTrigger.contains(event.target)) {
+                return;
+            }
 
+            setSearchState(false);
+        });
+
+        window.addEventListener('resize', function () {
+            document.body.classList.toggle('mobile-search-open', searchPanel.classList.contains('is-open') && isMobileViewport());
+        });
+
+        if (!searchForm || searchForm.dataset.searchShellReady === 'true') {
+            return;
+        }
+
+        searchForm.dataset.searchShellReady = 'true';
+        searchForm.addEventListener('submit', function (event) {
+            var input = searchForm.querySelector('input[name="q"]');
+            var query = input ? input.value.trim() : '';
+            if (!query) {
                 event.preventDefault();
-                setMobileSearchState(false);
-                App.core.navigateToSearch(query);
-            });
+                input && input.focus();
+                return;
+            }
+
+            event.preventDefault();
+            setSearchState(false);
+            App.core.navigateToSearch(query);
         });
     }
 

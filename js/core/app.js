@@ -146,7 +146,55 @@
         return true;
     };
 
+    const RETURN_ROUTE_KEY = 'perf-suarez-return-route';
+
+    PerfSuarez.core.getCurrentShellRoute = function getCurrentShellRoute() {
+        try {
+            const sourceWindow = window.parent && window.parent !== window ? window.parent : window;
+            return `${sourceWindow.location.pathname}${sourceWindow.location.search}${sourceWindow.location.hash}`;
+        } catch (error) {
+            return `${window.location.pathname}${window.location.search}${window.location.hash}`;
+        }
+    };
+
+    PerfSuarez.core.rememberReturnRoute = function rememberReturnRoute(route) {
+        if (!route) {
+            return;
+        }
+
+        try {
+            const url = new URL(route, window.location.origin);
+            const normalized = PerfSuarez.core.normalizeRoutePath(url.pathname);
+            if (normalized === '/perfume.html') {
+                return;
+            }
+            window.sessionStorage.setItem(RETURN_ROUTE_KEY, `${url.pathname}${url.search}${url.hash}`);
+        } catch (error) {
+            // ignore malformed routes
+        }
+    };
+
+    PerfSuarez.core.getRememberedReturnRoute = function getRememberedReturnRoute() {
+        try {
+            const route = window.sessionStorage.getItem(RETURN_ROUTE_KEY);
+            if (!route) {
+                return 'catalogo.html';
+            }
+
+            const url = new URL(route, window.location.origin);
+            const normalized = PerfSuarez.core.normalizeRoutePath(url.pathname);
+            return normalized === '/perfume.html' ? 'catalogo.html' : `${url.pathname.replace(/^\//, '')}${url.search}${url.hash}`;
+        } catch (error) {
+            return 'catalogo.html';
+        }
+    };
+
+    PerfSuarez.core.navigateBackToCatalog = function navigateBackToCatalog() {
+        return PerfSuarez.core.navigateToShell(PerfSuarez.core.getRememberedReturnRoute());
+    };
+
     PerfSuarez.core.navigateToProductDetail = function navigateToProductDetail(id) {
+        PerfSuarez.core.rememberReturnRoute(PerfSuarez.core.getCurrentShellRoute());
         return PerfSuarez.core.navigateToShell('perfume.html?id=' + encodeURIComponent(id));
     };
 

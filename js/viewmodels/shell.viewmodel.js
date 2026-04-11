@@ -64,6 +64,7 @@
         const stageWidth = () => stage.getBoundingClientRect().width;
         const applyTranslate = value => { track.style.transform = `translateX(${value}px)`; };
         const pointerShouldHandle = event => !event.pointerType || event.pointerType !== 'touch';
+        const frameDragDisabled = doc => doc?.body?.dataset?.disableShellDrag === 'true';
 
         function makeHistoryUrl(src, slug, search, hash) {
             if (useDirectHtmlRoutes) {
@@ -218,11 +219,13 @@
                 }
 
                 doc.addEventListener('touchstart', event => {
+                    if (frameDragDisabled(doc)) return;
                     if (event.touches.length !== 1) return;
                     const touch = event.touches[0];
                     startDrag(touch.clientX, touch.clientY);
                 }, { passive: true });
                 doc.addEventListener('touchmove', event => {
+                    if (frameDragDisabled(doc)) return;
                     if (event.touches.length !== 1) return;
                     const touch = event.touches[0];
                     moveDrag(touch.clientX, touch.clientY);
@@ -230,10 +233,12 @@
                 doc.addEventListener('touchend', () => endDrag());
                 doc.addEventListener('touchcancel', () => endDrag());
                 doc.addEventListener('pointerdown', event => {
+                    if (frameDragDisabled(doc)) return;
                     if (!pointerShouldHandle(event) || event.button !== 0) return;
                     startDrag(event.clientX, event.clientY, event.pointerId, true);
                 });
                 doc.addEventListener('pointermove', event => {
+                    if (frameDragDisabled(doc)) return;
                     if (!pointerShouldHandle(event) || event.buttons === 0) return;
                     moveDrag(event.clientX, event.clientY, event.pointerId);
                 });
