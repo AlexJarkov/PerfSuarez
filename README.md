@@ -1,174 +1,372 @@
-# Catálogo HTML — Perfumería Suárez
+# PerfSuarez-Catalogo
 
-README específico para el **módulo de Catálogo (HTML/CSS/JS)** del proyecto. Este catálogo es una **landing navegable** que lista perfumes completos, decants, combos y “Arma tu Combo / Arma tu Combo de Decants”, con **búsqueda, filtros y grilla responsive**. No requiere backend para funcionar en modo estático, y puede integrarse al sistema PHP/MySQL cuando sea necesario.
+Catálogo estático de Perfumería Suárez construido en HTML, CSS y JavaScript vanilla.
 
----
+La versión actual ya no es una simple landing con una sola grilla. El proyecto funciona como una mini app estática con:
 
-## ✨ Features
-- **Grilla responsive** (cards) con imágenes, nombre, marca, ml, precio y badges (nuevo, oferta, agotado).
-- **Búsqueda** por texto (nombre, marca, notas, etiquetas).
-- **Filtros** por tipo (Perfume, Decant, Combo), marca, rango de precio, disponibilidad.
-- **Ordenamiento** por precio, nombre, más vendidos (si se provee el dato).
-- **Combos**: tarjetas especiales para “Combos Personalizados” y **“Arma tu Combo de Decants”**.
-- **Lazy loading** de imágenes y soporte **WebP/AVIF** con fallback.
-- **Accesible** (HTML semántico, labels, contraste, focus visible) y **SEO-ready** (microdatos Product).
-- **Sin dependencias** obligatorias; funciona en HTML/CSS/JS puro. (Opcional: Tailwind, Alpine/Vanilla).
+- shell principal tipo SPA en `index.html`
+- navegación horizontal por paneles embebidos en `iframe`
+- rutas amigables (`/perfumes`, `/decants`, `/armarcombo`, etc.)
+- includes dinámicos para `header`, `footer` y dock de navegación
+- búsqueda interna
+- detalle de perfume
+- carrito persistido en `localStorage`
+- páginas promocionales como `Mystery Box`, `Velas` y `Contacto`
 
----
+## Estado actual
 
-## 🗂️ Estructura sugerida
+- Stack: HTML + CSS + JS sin framework
+- Build step: no existe
+- Backend: no requerido para operar el catálogo
+- Datos de producto: `js/data/perfumes-data.js`
+- Persistencia local: `localStorage` y `sessionStorage`
+- Producción: sitio estático con soporte a rutas shell
+
+## Arquitectura
+
+### 1. Shell principal
+
+La entrada principal es [index.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/index.html). Esa página monta:
+
+- `header.html` por include
+- un `swipe-track` con paneles embebidos
+- `catalog-nav.html` por include
+
+Paneles principales:
+
+- `catalogo.html`
+- `perfumes.html`
+- `decants.html`
+- `armarcombo.html`
+- `mysterybox.html`
+
+Panel auxiliar:
+
+- `search.html`
+- `perfume.html`
+- también se soportan `velas.html` y `contacto.html` como rutas auxiliares
+
+La shell y el ruteo viven principalmente en:
+
+- [js/core/app.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/core/app.js)
+- [js/viewmodels/shell.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/shell.viewmodel.js)
+- [js/views/shell.view.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/views/shell.view.js)
+- [js/direct-access-guard.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/direct-access-guard.js)
+
+### 2. Includes dinámicos
+
+El header, footer y dock inferior no están hardcodeados en cada página. Se cargan con fetch desde:
+
+- [js/include.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/include.js)
+- [js/viewmodels/include.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/include.viewmodel.js)
+- [js/views/include.view.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/views/include.view.js)
+
+Esto además reescribe rutas relativas de `src`, `href` y `form[action]` para que funcionen tanto dentro de la shell como fuera de ella.
+
+### 3. Navegación
+
+Hay dos modos de navegación:
+
+- dentro de la shell, usando `catalogShellNavigate`
+- acceso directo a páginas HTML, que luego redirige a la shell en producción
+
+El comportamiento está gobernado por:
+
+- `window.DISABLE_SHELL_REDIRECT` en [js/runtime-config.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/runtime-config.js)
+- [js/direct-access-guard.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/direct-access-guard.js)
+
+En local (`localhost`, `127.0.0.1`, `0.0.0.0`) la shell redirect se desactiva automáticamente para facilitar desarrollo.
+
+## Páginas principales
+
+### Inicio
+
+- archivo: [catalogo.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/catalogo.html)
+- propósito: home del catálogo dentro de la shell
+- contiene buscador principal y accesos rápidos a secciones
+
+Lógica:
+
+- [js/viewmodels/home.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/home.viewmodel.js)
+
+### Perfumes
+
+- archivo: [perfumes.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/perfumes.html)
+- muestra catálogo de perfumes completos
+- usa render dinámico desde el dataset
+
+Lógica compartida:
+
+- [js/viewmodels/catalog-renderer.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/catalog-renderer.js)
+- [js/viewmodels/catalog.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/catalog.viewmodel.js)
+- [js/models/catalog.model.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/models/catalog.model.js)
+
+### Decants
+
+- archivo: [decants.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/decants.html)
+- similar a perfumes, pero usando imágenes y precios de decants
+
+### Búsqueda
+
+- archivo: [search.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/search.html)
+- muestra resultados a partir del parámetro `?q=`
+- soporta filtros por marca, género, estilo, stock y novedad
+
+Lógica:
+
+- [js/models/search.model.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/models/search.model.js)
+- [js/viewmodels/search.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/search.viewmodel.js)
+- [js/search.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/search.js)
+
+### Detalle de perfume
+
+- archivo: [perfume.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/perfume.html)
+- usa `?id=` para resolver un perfume del dataset
+- renderiza galería, notas, precios, tamaños y CTA de carrito / WhatsApp
+- el botón de volver usa la ruta recordada por la shell, no `history.back()` del iframe
+
+### Arma Tu Combo
+
+- archivo: [armarcombo.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/armarcombo.html)
+- permite construir:
+  - combo de perfumes completos
+  - set de decants
+- calcula ahorro, total y CTA a WhatsApp
+- puede añadir el combo armado al carrito
+
+Lógica:
+
+- [js/models/combo.model.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/models/combo.model.js)
+- [js/views/combo.view.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/views/combo.view.js)
+- [js/viewmodels/combo.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/combo.viewmodel.js)
+- [js/armarcombo.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/armarcombo.js)
+
+Nota:
+
+- el builder actual usa `css/pages/armarcombo.css`
+- `css/legacy/combo-builder.css` quedó como legado y no debe reintroducirse al bundle global salvo que se migre explícitamente
+
+### Mystery Box
+
+- archivo: [mysterybox.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/mysterybox.html)
+- landing promocional con CTA directo y alta al carrito
+- la selección randomizada se genera desde el modelo del carrito
+
+### Velas y Contacto
+
+- archivos:
+  - [velas.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/velas.html)
+  - [contacto.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/contacto.html)
+- son vistas auxiliares fuera del set principal de paneles
+
+## Header, búsqueda global y carrito
+
+El header se define en [header.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/header.html) e incluye:
+
+- navegación superior
+- buscador global
+- acceso al carrito
+- CTA de asesoría
+
+Lógica relevante:
+
+- [js/viewmodels/common.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/common.viewmodel.js)
+- [js/viewmodels/search.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/search.viewmodel.js)
+- [js/scripts.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/scripts.js)
+
+El carrito:
+
+- persiste en `localStorage`
+- comparte estado entre shell y páginas embebidas
+- construye mensajes de WhatsApp
+- soporta items de perfume, combo y mystery box
+
+Storage actual:
+
+- `perf-suarez-cart-v1`
+- `perf-suarez-return-route`
+- `spa-redirect`
+
+## Estructura del proyecto
+
+```text
+PerfSuarez-Catalogo/
+├── index.html
+├── catalogo.html
+├── perfumes.html
+├── decants.html
+├── armarcombo.html
+├── mysterybox.html
+├── search.html
+├── perfume.html
+├── velas.html
+├── contacto.html
+├── header.html
+├── footer.html
+├── catalog-nav.html
+├── css/
+│   ├── base/
+│   ├── components/
+│   ├── layout/
+│   ├── legacy/
+│   ├── pages/
+│   └── styles.css
+├── js/
+│   ├── core/
+│   ├── data/
+│   ├── models/
+│   ├── views/
+│   ├── viewmodels/
+│   └── *.js
+├── imagenes/
+├── manifest.json
+├── robots.txt
+├── sitemap.xml
+└── 404.html
 ```
-catalogo/
-├─ index.html            # Catálogo principal
-├─ assets/
-│  ├─ css/
-│  │  └─ catalogo.css    # Estilos propios
-│  ├─ img/               # Imágenes en .webp + fallback .jpg/.png
-│  └─ icons/             # SVG/ico
-└─ js/
-   ├─ catalogo.js        # Lógica de filtros, búsqueda, ordenamiento
-   └─ data/
-      └─ productos.json  # (Opcional) Fuente de datos en JSON
-```
 
-> También podés incrustar el catálogo como sección dentro de tu `index.php` del sitio principal.
+## CSS
 
----
+Entrada principal:
 
-## ▶️ Uso local
-1. Colocá la carpeta `catalogo/` en tu servidor o abrí **`catalogo/index.html`** directamente en el navegador.
-2. Si usás `productos.json`, levantá un server local (Live Server, `php -S localhost:8000`, etc.) para evitar restricciones CORS.
+- [css/styles.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/styles.css)
 
----
+Capas:
 
-## 🧱 Estructura de una tarjeta de producto (HTML)
-```html
-<article class="card" data-tipo="decant" data-marca="Dior" data-precio="120" data-stock="true">
-  <picture>
-    <source srcset="assets/img/dior-homme-intense.webp" type="image/webp">
-    <img src="assets/img/dior-homme-intense.jpg" alt="Dior Homme Intense 10 ml" loading="lazy">
-  </picture>
-  <header>
-    <h3 class="nombre">Dior Homme Intense</h3>
-    <span class="marca">Dior</span>
-  </header>
-  <p class="ml">10 ml</p>
-  <p class="precio">120 Bs</p>
-  <ul class="badges">
-    <li class="badge nuevo">Nuevo</li>
-    <li class="badge oferta">-10%</li>
-  </ul>
-  <footer>
-    <button class="btn-add" aria-label="Agregar al combo">Agregar</button>
-  </footer>
-</article>
-```
+- base: tokens, documento, tipografía
+- layout: header y footer
+- components: dock del catálogo
+- pages: estilos específicos por vista
+- legacy: utilidades y estilos heredados que todavía existen en repo
 
-> Recomendado: usar `data-*` para que `catalogo.js` pueda filtrar/ordenar sin recalcular texto.
+Archivos importantes:
 
----
+- [css/base/document.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/base/document.css)
+- [css/layout/header.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/layout/header.css)
+- [css/pages/swipe-hub.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/pages/swipe-hub.css)
+- [css/pages/catalog-home.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/pages/catalog-home.css)
+- [css/pages/catalog-shared.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/pages/catalog-shared.css)
+- [css/pages/armarcombo.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/pages/armarcombo.css)
+- [css/pages/perfume-detail.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/pages/perfume-detail.css)
 
-## 🔎 Barra de búsqueda y filtros
-- **Búsqueda**: coincide con `nombre`, `marca`, `notas`, `etiquetas`.
-- **Filtros**:
-  - `tipo`: `perfume | decant | combo`
-  - `marca`: lista dinámica según datos
-  - `precio`: slider o min/max
-  - `stock`: solo disponibles
-- **Orden**: `precio ASC/DSC`, `nombre A–Z/Z–A`, `popularidad` (si hay campo `ventas`).
+## JS
 
-El `catalogo.js` debería:
-1. Leer los controles (input/checkbox/select).
-2. Filtrar la **colección en memoria**.
-3. Re-pintar la grilla con resultados (con `DocumentFragment` para performance).
+### Core
 
----
+- [js/core/app.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/core/app.js)
+  centraliza navegación, normalización de rutas, acceso a shell y helpers de WhatsApp
 
-## 🧩 JSON de productos (opcional)
-Si preferís datos desacoplados, usá `js/data/productos.json` con este esquema:
+### Models
 
-```json
-[
-  {
-    "id": 101,
-    "nombre": "Dior Homme Intense",
-    "marca": "Dior",
-    "tipo": "decant",
-    "ml": 10,
-    "precio": 120,
-    "stock": true,
-    "notas": ["iris", "lavanda", "ámbar"],
-    "etiquetas": ["elegante", "nocturno"],
-    "imagenes": {
-      "webp": "assets/img/dhi-10.webp",
-      "fallback": "assets/img/dhi-10.jpg"
-    },
-    "popularidad": 87
-  }
-]
-```
+- `catalog.model.js`: filtros y metadata de cards
+- `search.model.js`: búsqueda textual sobre dataset
+- `combo.model.js`: armado de productos para combos
 
-> Campos mínimos: `id`, `nombre`, `marca`, `tipo`, `precio`, `stock`.  
-> Campos útiles para filtros: `ml`, `notas`, `etiquetas`, `popularidad`.
+### Views / Viewmodels
 
----
+- `shell.viewmodel.js`: navegación horizontal, history API, iframes, meta tags
+- `common.viewmodel.js`: UI común, menú, estado de include, offset en embed
+- `search.viewmodel.js`: dropdown de búsqueda del header y página de resultados
+- `combo.viewmodel.js`: builder de combos
+- `catalog.viewmodel.js`: filtros y paginación en grillas
+- `catalog-renderer.js`: render inicial de cards desde `perfumes-data.js`
 
-## 🧠 Arma tu Combo / Arma tu Combo de Decants
-- Usa una **lista temporal (estado)** en `catalogo.js` para ir acumulando productos.
-- Mostrar **contador** de ítems seleccionados y **suma parcial**.
-- Validar reglas de negocio (p. ej., set de 3 o de 5 decants).
-- Exportar selección como:
-  - **QueryString** (`?combo=101x2,205x1,310x1`)
-  - **`localStorage`** para retomarlo en `ventas/index.php`
-  - **Payload JSON** listo para enviar a un endpoint PHP.
+### Script transversal
 
----
+- [js/scripts.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/scripts.js)
+  contiene el modelo y la UI del carrito
 
-## 🧩 Integración con el backend (PHP)
-- Para sincronizar stock/precios en vivo, exponer endpoint(s) JSON:
-  - `GET /api/productos` → listado con cache-control
-  - `GET /api/productos?tipo=decant&marca=Dior`
-  - `POST /api/combo` → recibe la selección y retorna resumen/precio final
-- Capa de seguridad: sanitizar parámetros, **CSRF** en POST, y límites de tasa si se publica.
+## Dataset
 
----
+El catálogo se alimenta desde:
 
-## ♿ Accesibilidad
-- HTML semántico (`<main>`, `<section>`, `<article>`, `<header>`, `<footer>`).
-- `alt` descriptivo en imágenes y `aria-label` en botones/iconos.
-- Focus visible y **contraste AA**.
-- Tamaño de toque mínimo **44×44 px** en móviles.
+- [js/data/perfumes-data.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/data/perfumes-data.js)
 
----
+Ese archivo contiene:
 
-## 🔍 SEO y Open Graph
-- `<title>` + `<meta name="description">` por categoría/página.
-- **Microdatos** Schema.org `Product` en cada card (precio, disponibilidad).
-- Metas **OG/Twitter** para buena vista previa al compartir.
+- identificador del perfume
+- nombre visible e interno
+- marca
+- tags
+- imágenes de frasco y decant
+- stock
+- precios de completos
+- precios de decants
+- precios de combo cuando aplican
+- notas olfativas
 
----
+## Desarrollo local
 
-## ⚡ Performance
-- **Imágenes** en WebP/AVIF, `loading="lazy"` y tamaños adecuados.
-- `preconnect`/`dns-prefetch` si hay CDNs.
-- Minificar CSS/JS (puede ser manual o script simple de build).
+Opciones simples:
 
----
+1. abrir con Live Server en VS Code
+2. usar un server estático
+3. levantar `python3 -m http.server`
+4. levantar `php -S localhost:8000`
 
-## 🧪 Pruebas rápidas
-- Probar búsqueda/filtros con **>200** ítems para medir fluidez.
-- Test en Safari iOS (WebKit) y Chrome/Edge (Chromium) para asegurar **paridad visual**.
+Se recomienda usar servidor local en vez de abrir archivos con `file://` porque:
 
----
+- hay includes por `fetch`
+- hay reescritura de rutas
+- hay assets y formularios internos
 
-## 🔧 Personalización rápida
-- Colores y tipografías en `:root { --color-... }` dentro de `catalogo.css`.
-- Cards modulares: clases `badge`, `agotado`, `oferta`.
-- Toggle de **grid/lista** si se desea (añadir botón y CSS alterno).
+## Rutas y comportamiento en desarrollo
 
----
+En local:
 
-## 🚀 Deploy
-- Estático: subir `catalogo/` al hosting (InfinityFree) o a `/public` del proyecto.
-- Con backend: montar endpoints bajo `/api` y apuntar `catalogo.js` a la URL base.
+- puedes abrir `index.html` para probar la shell completa
+- también puedes abrir páginas internas directamente sin redirección a `/`
+
+En producción:
+
+- páginas como `/perfumes.html` o `/armarcombo.html` redirigen a la shell principal
+- el destino real se guarda en `sessionStorage` con `spa-redirect`
+
+## Convenciones prácticas para tocar el repo
+
+- mantener nuevas páginas dentro del patrón actual de `views` + `viewmodels` cuando aplique
+- no mezclar CSS nuevo con CSS legacy si no es estrictamente necesario
+- si una vista moderna ya tiene CSS propio en `css/pages/`, evitar redefinir sus selectores desde `css/legacy/`
+- si agregas una nueva ruta shell, actualizar:
+  - `js/core/app.js`
+  - `js/direct-access-guard.js`
+  - `js/viewmodels/shell.viewmodel.js`
+  - metadatos SEO si corresponde
+
+## Problemas recientes ya corregidos
+
+Los fixes más recientes incorporados al repo incluyen:
+
+- buscador web del header convertido a dropdown real
+- eliminación del widget de búsqueda flotante permanente
+- retorno correcto desde detalle de perfume al catálogo previo
+- sincronización robusta del carrito entre shell e iframes
+- limpieza del conflicto de scroll duplicado en `Arma Tu Combo` provocado por CSS legacy superpuesto
+
+## Archivos que conviene revisar antes de cambios grandes
+
+- [index.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/index.html)
+- [header.html](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/header.html)
+- [css/styles.css](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/css/styles.css)
+- [js/core/app.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/core/app.js)
+- [js/scripts.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/scripts.js)
+- [js/viewmodels/shell.viewmodel.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/viewmodels/shell.viewmodel.js)
+- [js/data/perfumes-data.js](/Users/alexjarkov/Documents/GitHub/PerfSuarez-Catalogo/js/data/perfumes-data.js)
+
+## Git
+
+Ramas que se han estado usando operativamente:
+
+- `test`
+- `master`
+
+Si haces cambios que afecten shell, rutas, carrito o includes, conviene probar al menos:
+
+- navegación entre paneles
+- búsqueda global
+- apertura de detalle
+- volver al catálogo
+- añadir al carrito desde perfume
+- añadir combo
+- añadir mystery box
 

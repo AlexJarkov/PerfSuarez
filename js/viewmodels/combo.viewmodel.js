@@ -1,7 +1,5 @@
 (function (App) {
     function initComboBuilder() {
-        document.body.dataset.disableShellDrag = 'true';
-
         const comboTypeSelect = document.getElementById('combo-type');
         const decantQuantitySelect = document.getElementById('decant-quantity');
         const decantQuantityContainer = document.getElementById('decant-quantity-container');
