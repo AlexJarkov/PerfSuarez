@@ -33,8 +33,8 @@
         {
             slug: 'relojes',
             src: 'relojes.html',
-            title: 'Suarez Watches | Armá Tu Reloj',
-            description: 'Construí tu reloj pieza por pieza en Suarez Watches. Elegí movimiento, dial, manecillas, logo, caja y brazalete en una experiencia visual interactiva.'
+            title: 'Suarez Watches | Perfumería Suárez',
+            description: 'Conocé la experiencia de Suárez Watches y abrí el configurador dedicado para armar tu reloj pieza por pieza.'
         },
         {
             slug: 'aux',
@@ -46,7 +46,6 @@
 
     const PRIMARY_PANEL_COUNT = 6;
     const AUX_PANEL_INDEX = PANEL_META.length - 1;
-    const ISOLATED_PANEL_SLUG = 'relojes';
 
     function initCatalogShell() {
         const stage = document.querySelector('.swipe-stage');
@@ -71,7 +70,6 @@
         const stageWidth = () => stage.getBoundingClientRect().width;
         const applyTranslate = value => { track.style.transform = `translateX(${value}px)`; };
         const pointerShouldHandle = event => !event.pointerType || event.pointerType !== 'touch';
-        const isIsolatedRoute = route => route?.meta?.slug === ISOLATED_PANEL_SLUG;
 
         function makeHistoryUrl(src, slug, search, hash) {
             if (useDirectHtmlRoutes) {
@@ -218,12 +216,6 @@
                 return;
             }
 
-            const frameSrc = iframe.dataset.loadedSrc || iframe.getAttribute('src') || '';
-            if (frameSrc.indexOf('relojes.html') !== -1) {
-                iframe.dataset.gestureReady = 'isolated';
-                return;
-            }
-
             iframe.dataset.gestureReady = 'true';
             try {
                 const doc = iframe.contentWindow?.document;
@@ -356,7 +348,6 @@
             navController?.setActiveByHref(route.navHref);
             syncHeaderLinks(route.navHref);
             document.body.classList.toggle('is-home-panel', currentIndex === 0);
-            document.body.classList.toggle('is-watch-panel', isIsolatedRoute(route));
 
             if (pushHistory) {
                 history.pushState({ route: route.historyUrl }, '', route.historyUrl);
@@ -365,7 +356,7 @@
         }
 
         function startDrag(x, y, pointerId, immediate) {
-            if (dragState.active || dragState.pending || currentIndex >= PRIMARY_PANEL_COUNT || isIsolatedRoute(currentRoute)) {
+            if (dragState.active || dragState.pending || currentIndex >= PRIMARY_PANEL_COUNT) {
                 return;
             }
 

@@ -27,6 +27,89 @@ body.relojes-page.is-shell-embed {
     padding-top: var(--shell-embed-top-offset);
 }
 
+body.armatureloj-page.relojes-page {
+    --relojes-top-offset: calc(var(--header-height) + env(safe-area-inset-top) + 32px);
+    --relojes-bottom-offset: env(safe-area-inset-bottom, 0px);
+    padding-top: var(--relojes-top-offset);
+    padding-bottom: var(--relojes-bottom-offset);
+}
+
+body.watch-intro-page {
+    background:
+        radial-gradient(circle at top, rgba(26, 112, 64, 0.1), transparent 30%),
+        linear-gradient(180deg, #eef4ef 0%, var(--surface) 22%, var(--surface) 100%);
+}
+
+body.watch-intro-page main.page-shell {
+    min-height: calc(var(--app-height) - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: calc(clamp(28px, 7vw, 48px) + var(--shell-embed-top-offset, 0px));
+    padding-bottom: clamp(28px, 7vw, 48px);
+}
+
+.watch-intro-card {
+    width: min(720px, 100%);
+    display: grid;
+    gap: 22px;
+    padding: clamp(24px, 5vw, 42px);
+    border-radius: 36px;
+    border: 1px solid rgba(17, 17, 17, 0.08);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 22px 56px rgba(17, 17, 17, 0.08);
+}
+
+.watch-intro-card__eyebrow {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+}
+
+.watch-intro-card h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 0.96;
+    letter-spacing: -0.06em;
+}
+
+.watch-intro-card > p {
+    margin: 0;
+    max-width: 58ch;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--muted-ink);
+}
+
+.watch-intro-card__steps {
+    display: grid;
+    gap: 12px;
+}
+
+.watch-intro-step {
+    display: grid;
+    gap: 6px;
+    padding: 14px 16px;
+    border-radius: 22px;
+    background: rgba(17, 17, 17, 0.03);
+}
+
+.watch-intro-step strong,
+.watch-intro-step p {
+    margin: 0;
+}
+
+.watch-intro-step p {
+    color: var(--muted-ink);
+    line-height: 1.5;
+}
+
+.watch-intro-card__cta {
+    justify-self: start;
+}
+
 .watch-room {
     width: 100%;
     height: 100%;
@@ -39,56 +122,30 @@ body.relojes-page.is-shell-embed {
     overflow: hidden;
 }
 
+
 .watch-room__board {
-    --category-drag-y: 0px;
-    --piece-drag-x: 0px;
     --composer-drag-x: 0px;
     --composer-drag-y: 0px;
+    --piece-stack-drag-y: 0px;
     position: relative;
     min-height: 0;
     display: grid;
-    grid-template-columns: minmax(60px, 1fr) minmax(260px, 460px) minmax(60px, 1fr);
-    grid-template-rows: auto minmax(260px, 1fr);
+    grid-template-columns: minmax(60px, 1fr) minmax(280px, 520px) minmax(60px, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
     align-items: center;
     justify-items: center;
     gap: 18px;
     padding: 26px clamp(14px, 2.8vw, 28px) 10px;
+    margin-top: -5px;
     touch-action: none;
 }
+
 
 .watch-exit-button {
     position: absolute;
     top: 8px;
     left: 8px;
     z-index: 8;
-}
-
-.watch-axis {
-    grid-column: 2;
-    grid-row: 1;
-    display: grid;
-    justify-items: center;
-    gap: 6px;
-    text-align: center;
-    pointer-events: none;
-}
-
-.watch-axis__current h1 {
-    margin: 0;
-    font-size: clamp(1.8rem, 4.2vw, 2.8rem);
-    line-height: 0.94;
-    letter-spacing: -0.05em;
-    transform: translate3d(0, var(--category-drag-y), 0);
-    transition: transform 0.18s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.2s ease, filter 0.2s ease;
-}
-
-.watch-axis__ghost {
-    margin: 0;
-    font-size: clamp(0.8rem, 1.4vw, 0.92rem);
-    color: rgba(17, 17, 17, 0.34);
-    line-height: 1.3;
-    transform: translate3d(0, calc(var(--category-drag-y) * 0.68), 0);
-    transition: transform 0.18s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.2s ease, filter 0.2s ease;
 }
 
 .watch-guide-card {
@@ -121,20 +178,59 @@ body.relojes-page.is-shell-embed {
     color: var(--muted-ink);
 }
 
+.watch-category-carousel {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    width: min(100%, 420px);
+    height: 176px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.watch-category-carousel__item {
+    position: absolute;
+    inset: 50% 0 auto;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(0.82rem, 1.5vw, 0.94rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: rgba(17, 17, 17, 0.42);
+    transform: translate3d(0, calc(-50% + var(--translate-y)), 0) scale(var(--scale));
+    opacity: var(--opacity);
+    filter: blur(var(--blur));
+    transition: transform 0.14s linear, opacity 0.14s linear, filter 0.14s linear, color 0.18s ease, text-shadow 0.22s ease;
+    will-change: transform, opacity, filter;
+}
+
+.watch-category-carousel__item.is-current {
+    font-size: clamp(1.7rem, 4.1vw, 2.7rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: var(--ink);
+    text-shadow: 0 8px 18px rgba(17, 17, 17, 0.08);
+}
+
 .watch-stage {
     grid-column: 2;
     grid-row: 2;
     width: 100%;
+    height: 100%;
     min-height: 0;
     display: grid;
     justify-items: center;
-    align-items: center;
+    align-items: stretch;
 }
 
+
 .watch-screen {
-    width: min(100%, 460px);
+    width: min(100%, 520px);
+    height: 100%;
+    min-height: 0;
     display: none;
     justify-items: center;
+    align-self: stretch;
 }
 
 .watch-screen.is-active {
@@ -142,16 +238,26 @@ body.relojes-page.is-shell-embed {
 }
 
 .watch-screen--builder {
-    gap: 14px;
+    gap: 12px;
+    align-self: center;
+    height: auto;
 }
 
 .watch-screen--invoice {
     width: min(100%, 520px);
-    max-height: 100%;
+    height: auto;
+    max-height: none;
+    min-height: 0;
     align-self: stretch;
-    overflow-y: auto;
+    align-items: stretch;
+    overflow: visible;
     padding-right: 4px;
     box-sizing: border-box;
+}
+
+body.armatureloj-page.relojes-page .watch-screen--invoice {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .watch-composer {
@@ -167,7 +273,8 @@ body.relojes-page.is-shell-embed {
     width: min(100%, clamp(230px, 34vw, 350px));
     aspect-ratio: 1 / 1;
     transform: translate3d(var(--composer-drag-x), var(--composer-drag-y), 0);
-    transition: transform 0.18s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: transform 0.14s linear, filter 0.28s ease;
+    will-change: transform, filter;
 }
 
 .watch-layer,
@@ -219,15 +326,17 @@ body.relojes-page.is-shell-embed {
     transform: translateY(var(--offset-logo-y)) scale(var(--scale-logo));
 }
 
-.watch-piece-panel {
-    width: min(100%, 420px);
+.watch-piece-carousel-stack {
+    width: min(100%, 520px);
     display: grid;
-    gap: 5px;
+    gap: 8px;
     justify-items: center;
     text-align: center;
+    transform: translate3d(0, var(--piece-stack-drag-y), 0);
+    transition: transform 0.14s linear;
 }
 
-.watch-piece-panel__eyebrow {
+.watch-piece-carousel__eyebrow {
     margin: 0;
     font-size: 0.72rem;
     font-weight: 700;
@@ -236,22 +345,55 @@ body.relojes-page.is-shell-embed {
     color: var(--accent-dark);
 }
 
-.watch-piece-panel__name {
-    margin: 0;
-    font-size: clamp(1.12rem, 2.4vw, 1.52rem);
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    transform: translate3d(var(--piece-drag-x), 0, 0);
-    transition: transform 0.18s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.2s ease, filter 0.2s ease;
+.watch-piece-carousel {
+    position: relative;
+    width: min(100%, 520px);
+    height: 74px;
+    overflow: hidden;
+    pointer-events: none;
 }
 
-.watch-piece-panel__meta {
+.watch-piece-carousel__item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 96px;
+    max-width: 160px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(17, 17, 17, 0.08);
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 10px 24px rgba(17, 17, 17, 0.04);
+    box-sizing: border-box;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: rgba(17, 17, 17, 0.58);
+    text-align: center;
+    transform: translate3d(calc(-50% + var(--translate-x)), calc(-50% + var(--translate-y)), 0) scale(var(--scale));
+    opacity: var(--opacity);
+    filter: blur(var(--blur));
+    transition: transform 0.14s linear, opacity 0.14s linear, filter 0.14s linear, background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.22s ease;
+    will-change: transform, opacity, filter;
+}
+
+.watch-piece-carousel__item.is-current {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(17, 17, 17, 0.14);
+    color: var(--ink);
+    box-shadow: 0 18px 38px rgba(17, 17, 17, 0.08);
+}
+
+.watch-piece-carousel__item.is-empty {
+    color: rgba(17, 17, 17, 0.42);
+}
+
+.watch-piece-carousel__meta {
     margin: 0;
+    min-height: 1.4em;
     color: var(--muted-ink);
     font-size: 0.94rem;
     line-height: 1.45;
-    transform: translate3d(calc(var(--piece-drag-x) * 0.78), 0, 0);
-    transition: transform 0.18s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.2s ease, filter 0.2s ease;
 }
 
 .watch-builder-actions {
@@ -259,42 +401,6 @@ body.relojes-page.is-shell-embed {
     display: grid;
     gap: 10px;
     justify-items: center;
-}
-
-.watch-piece-side-row {
-    width: min(100%, 320px);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    align-items: start;
-}
-
-.watch-piece-side {
-    display: grid;
-    gap: 4px;
-    text-align: left;
-}
-
-.watch-piece-side--next {
-    text-align: right;
-}
-
-.watch-piece-side__label {
-    margin: 0;
-    font-size: 0.64rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(17, 17, 17, 0.34);
-}
-
-.watch-piece-side__name {
-    margin: 0;
-    font-size: 0.82rem;
-    line-height: 1.35;
-    color: rgba(17, 17, 17, 0.48);
-    transform: translate3d(calc(var(--piece-drag-x) * 0.62), 0, 0);
-    transition: transform 0.18s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.2s ease, filter 0.2s ease;
 }
 
 .watch-builder-feedback {
@@ -342,13 +448,14 @@ body.relojes-page.is-shell-embed {
     width: 100%;
     display: grid;
     gap: 18px;
+    height: auto;
+    min-height: min-content;
     padding: 20px;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.96);
     border: 1px solid rgba(17, 17, 17, 0.08);
     box-shadow: 0 22px 52px rgba(17, 17, 17, 0.08);
     box-sizing: border-box;
-    min-height: min-content;
 }
 
 .watch-invoice__header,
@@ -434,6 +541,19 @@ body.relojes-page.is-shell-embed {
 .watch-invoice__actions {
     display: inline-flex;
     gap: 10px;
+}
+
+body.armatureloj-page.relojes-page .watch-invoice__footer {
+    position: sticky;
+    bottom: 12px;
+    z-index: 3;
+    margin-top: 8px;
+    padding: 14px 16px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(17, 17, 17, 0.08);
+    box-shadow: 0 18px 38px rgba(17, 17, 17, 0.08);
+    backdrop-filter: blur(18px);
 }
 
 .watch-nav-button {
@@ -543,117 +663,104 @@ body.relojes-page.is-shell-embed {
     pointer-events: none;
 }
 
-.watch-axis__ghost,
-.watch-axis__current h1,
-.watch-piece-side__name,
-.watch-piece-panel__name,
-.watch-piece-panel__meta {
-    will-change: transform, opacity, filter;
-}
-
-.watch-room__board.is-animating-vertical-up .watch-axis__ghost,
-.watch-room__board.is-animating-vertical-up .watch-axis__current h1 {
-    animation: watchVerticalUp 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.watch-room__board.is-animating-vertical-down .watch-axis__ghost,
-.watch-room__board.is-animating-vertical-down .watch-axis__current h1 {
-    animation: watchVerticalDown 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.watch-room__board.is-animating-horizontal-left .watch-piece-side__name,
-.watch-room__board.is-animating-horizontal-left .watch-piece-panel__name,
-.watch-room__board.is-animating-horizontal-left .watch-piece-panel__meta {
-    animation: watchHorizontalLeft 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.watch-room__board.is-animating-horizontal-right .watch-piece-side__name,
-.watch-room__board.is-animating-horizontal-right .watch-piece-panel__name,
-.watch-room__board.is-animating-horizontal-right .watch-piece-panel__meta {
-    animation: watchHorizontalRight 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.watch-room__board.is-animating-horizontal-left .watch-composer {
-    animation: watchComposerLeft 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.watch-room__board.is-animating-horizontal-right .watch-composer {
-    animation: watchComposerRight 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.watch-room__board.is-invoice-mode .watch-axis,
+.watch-room__board.is-invoice-mode .watch-category-carousel,
 .watch-room__board.is-invoice-mode .watch-nav-button {
     opacity: 0;
     pointer-events: none;
 }
 
-@keyframes watchVerticalUp {
+.watch-room__board.is-settling-y .watch-category-carousel__item,
+.watch-room__board.is-settling-y .watch-piece-carousel-stack,
+.watch-room__board.is-settling-y .watch-composer {
+    transition-duration: 0.38s;
+    transition-timing-function: cubic-bezier(0.18, 0.88, 0.22, 1.18);
+}
+
+.watch-room__board.is-settling-x .watch-piece-carousel__item,
+.watch-room__board.is-settling-x .watch-composer {
+    transition-duration: 0.42s;
+    transition-timing-function: cubic-bezier(0.16, 0.9, 0.2, 1.2);
+}
+
+.watch-room__board.is-settling-y .watch-category-carousel__item.is-current {
+    animation: watchCategorySettle 0.42s cubic-bezier(0.18, 0.88, 0.22, 1.18);
+}
+
+.watch-room__board.is-settling-x .watch-piece-carousel__item.is-current {
+    animation: watchPieceSettle 0.46s cubic-bezier(0.16, 0.9, 0.2, 1.2);
+}
+
+.watch-room__board.is-settling-x .watch-composer {
+    animation: watchComposerSettleX 0.42s cubic-bezier(0.16, 0.9, 0.2, 1.18);
+}
+
+.watch-room__board.is-settling-y .watch-composer {
+    animation: watchComposerSettleY 0.4s cubic-bezier(0.18, 0.88, 0.22, 1.16);
+}
+
+@keyframes watchCategorySettle {
     0% {
-        opacity: 0;
-        transform: translateY(18px) scale(0.98);
-        filter: blur(8px);
+        transform: translate3d(0, calc(-50% + var(--translate-y)), 0) scale(calc(var(--scale) * 0.94));
+        opacity: calc(var(--opacity) * 0.86);
+        filter: blur(calc(var(--blur) + 1.2px));
     }
-    100% {
+    62% {
+        transform: translate3d(0, calc(-50% + var(--translate-y) - 5px), 0) scale(calc(var(--scale) * 1.035));
         opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
+        filter: blur(calc(var(--blur) * 0.2));
+    }
+    100% {
+        transform: translate3d(0, calc(-50% + var(--translate-y)), 0) scale(var(--scale));
+        opacity: var(--opacity);
+        filter: blur(var(--blur));
     }
 }
 
-@keyframes watchVerticalDown {
+@keyframes watchPieceSettle {
     0% {
-        opacity: 0;
-        transform: translateY(-18px) scale(0.98);
-        filter: blur(8px);
+        transform: translate3d(calc(-50% + var(--translate-x)), calc(-50% + var(--translate-y)), 0) scale(calc(var(--scale) * 0.92));
+        opacity: calc(var(--opacity) * 0.84);
+        filter: blur(calc(var(--blur) + 1.4px));
     }
-    100% {
+    58% {
+        transform: translate3d(calc(-50% + var(--translate-x)), calc(-50% + var(--translate-y) - 4px), 0) scale(calc(var(--scale) * 1.045));
         opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
+        filter: blur(calc(var(--blur) * 0.16));
+    }
+    100% {
+        transform: translate3d(calc(-50% + var(--translate-x)), calc(-50% + var(--translate-y)), 0) scale(var(--scale));
+        opacity: var(--opacity);
+        filter: blur(var(--blur));
     }
 }
 
-@keyframes watchHorizontalLeft {
+@keyframes watchComposerSettleX {
     0% {
-        opacity: 0;
-        transform: translateX(18px);
-        filter: blur(8px);
+        transform: translate3d(var(--composer-drag-x), var(--composer-drag-y), 0) scale(0.985);
+        filter: saturate(0.96);
+    }
+    52% {
+        transform: translate3d(calc(var(--composer-drag-x) * 0.24), var(--composer-drag-y), 0) scale(1.012);
+        filter: saturate(1.03);
     }
     100% {
-        opacity: 1;
-        transform: translateX(0);
-        filter: blur(0);
+        transform: translate3d(var(--composer-drag-x), var(--composer-drag-y), 0) scale(1);
+        filter: saturate(1);
     }
 }
 
-@keyframes watchHorizontalRight {
+@keyframes watchComposerSettleY {
     0% {
-        opacity: 0;
-        transform: translateX(-18px);
-        filter: blur(8px);
+        transform: translate3d(var(--composer-drag-x), var(--composer-drag-y), 0) scale(0.988);
+        filter: saturate(0.97);
+    }
+    55% {
+        transform: translate3d(var(--composer-drag-x), calc(var(--composer-drag-y) * 0.2), 0) scale(1.01);
+        filter: saturate(1.02);
     }
     100% {
-        opacity: 1;
-        transform: translateX(0);
-        filter: blur(0);
-    }
-}
-
-@keyframes watchComposerLeft {
-    0% {
-        transform: translateX(14px) scale(0.992);
-    }
-    100% {
-        transform: translateX(0) scale(1);
-    }
-}
-
-@keyframes watchComposerRight {
-    0% {
-        transform: translateX(-14px) scale(0.992);
-    }
-    100% {
-        transform: translateX(0) scale(1);
+        transform: translate3d(var(--composer-drag-x), var(--composer-drag-y), 0) scale(1);
+        filter: saturate(1);
     }
 }
 
@@ -671,13 +778,14 @@ body.relojes-page.is-shell-embed {
         gap: 16px;
     }
 
-    .watch-axis,
+    .watch-category-carousel,
     .watch-stage {
         grid-column: 1;
     }
 
-    .watch-axis {
+    .watch-category-carousel {
         grid-row: 1;
+        height: 148px;
     }
 
     .watch-stage {
@@ -705,6 +813,10 @@ body.relojes-page.is-shell-embed {
     body.relojes-page {
         --relojes-bottom-offset: calc(110px + env(safe-area-inset-bottom, 0px));
     }
+
+    body.watch-intro-page main.page-shell {
+        padding-bottom: calc(clamp(28px, 7vw, 48px) + 110px + env(safe-area-inset-bottom, 0px));
+    }
 }
 
 @media (max-width: 620px) {
@@ -712,12 +824,36 @@ body.relojes-page.is-shell-embed {
         padding: 10px;
     }
 
+    .watch-category-carousel {
+        height: 118px;
+    }
+
+    .watch-category-carousel__item.is-current {
+        font-size: clamp(1.42rem, 7.2vw, 2.02rem);
+    }
+
+    .watch-stage {
+        margin-top: -10px;
+    }
+
+    .watch-screen--builder {
+        gap: 8px;
+    }
+
     .watch-composer {
         width: min(100%, 248px);
     }
 
-    .watch-piece-side-row {
+    .watch-piece-carousel {
         width: 100%;
+        height: 78px;
+    }
+
+    .watch-piece-carousel__item {
+        min-width: 82px;
+        max-width: 124px;
+        padding: 9px 12px;
+        font-size: 0.74rem;
     }
 
     .watch-builder-actions,

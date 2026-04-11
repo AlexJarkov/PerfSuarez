@@ -9,12 +9,6 @@ header.site-header {
     pointer-events: none;
 }
 
-body.is-watch-panel header.site-header {
-    transform: translateY(-120%);
-    opacity: 0;
-    pointer-events: none;
-}
-
 .header-shell {
     width: min(1180px, 92vw);
     height: var(--header-height);

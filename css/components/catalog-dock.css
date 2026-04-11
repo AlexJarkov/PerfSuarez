@@ -86,12 +86,6 @@ body.is-home-panel .catalog-dock {
     pointer-events: none;
 }
 
-body.is-watch-panel .catalog-dock {
-    transform: translate(-50%, 160%);
-    opacity: 0;
-    pointer-events: none;
-}
-
 .catalog-dock--detail-hidden {
     transform: translate(-50%, 160%);
     opacity: 0;
