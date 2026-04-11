@@ -285,7 +285,7 @@ header.site-header {
 
 .header-search-float {
     width: min(1180px, 92vw);
-    margin: calc(var(--header-height) + 26px) auto 0;
+    margin: calc(var(--header-height) + 34px) auto 0;
     display: flex;
     justify-content: flex-end;
     position: relative;
@@ -724,27 +724,27 @@ body.mobile-search-open {
     }
 
     .header-search-layer {
-        position: static;
+        top: calc(var(--header-height) + 20px + env(safe-area-inset-top));
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-inline: 12px;
+        z-index: 1002;
+        pointer-events: none;
+    }
+
+    .header-search-layer.is-open {
         pointer-events: auto;
     }
 
     .header-search-float {
         width: min(94vw, 560px);
-        margin: 0 auto 10px;
+        margin: 0 auto;
         display: block;
     }
 
     .header-search-panel {
-        margin-top: 10px;
-        max-height: 0;
-        overflow: hidden;
-        transition: opacity 0.24s ease, max-height 0.24s ease, padding 0.24s ease;
-    }
-
-    .header-search-panel.is-open {
-        opacity: 1;
-        max-height: 220px;
-        padding: 18px;
+        width: 100%;
     }
 }
 
