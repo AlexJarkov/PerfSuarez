@@ -84,8 +84,6 @@
                                 <button class="btn-watch btn-watch--ghost btn-watch--small" id="btn-back" type="button">Volver</button>
                             </div>
 
-                            <div class="watch-invoice__list" id="watch-invoice-lines"></div>
-
                             <div class="watch-invoice__footer">
                                 <div class="watch-invoice__total">
                                     <span>Total</span>
@@ -144,7 +142,6 @@
             pieceCarousel: document.getElementById('watch-piece-carousel'),
             pieceMeta: document.getElementById('watch-piece-meta'),
             feedback: document.getElementById('watch-feedback'),
-            invoiceLines: document.getElementById('watch-invoice-lines'),
             total: document.getElementById('watch-total'),
             layers: document.querySelectorAll('.watch-layer'),
             buttons: {
@@ -161,10 +158,8 @@
         };
 
         var emptyLabels = {
-            movimientos: 'Sin movimiento',
             diales: 'Sin dial',
             manecillas: 'Sin manecillas',
-            logos: 'Sin logo',
             cajas: 'Sin caja',
             brazaletes: 'Sin brazalete'
         };
@@ -453,7 +448,7 @@
             var currentOption = getCurrentOption(activeCategory);
             dom.pieceMeta.textContent = currentOption.isEmpty
                 ? 'Elegí una pieza para esta categoría.'
-                : '$' + formatUSD(currentOption.precio) + ' USD';
+                : '';
         }
 
         function syncMotionVars() {
@@ -575,16 +570,11 @@
                 return pieza ? { categoria: cat.label, pieza: pieza } : null;
             }).filter(Boolean);
 
-            return {
-                lineas: lineas,
-                total: lineas.reduce(function (sum, item) {
-                    return sum + (Number(item.pieza.precio) || 0);
-                }, 0)
-            };
+            return { lineas: lineas };
         }
 
         function updateTotal() {
-            dom.total.textContent = formatUSD(buildResumen().total);
+            dom.total.textContent = '500';
         }
 
         function updateActionButtons() {
@@ -593,20 +583,7 @@
             dom.buttons.cart.disabled = !isComplete;
         }
 
-        function renderInvoice() {
-            var resumen = buildResumen();
-
-            dom.invoiceLines.innerHTML = resumen.lineas.map(function (linea) {
-                return ''
-                    + '<div class="watch-invoice__line">'
-                    +   '<div class="watch-invoice__line-copy">'
-                    +     '<span>' + linea.categoria + '</span>'
-                    +     '<strong>' + linea.pieza.nombre + '</strong>'
-                    +   '</div>'
-                    +   '<div class="watch-invoice__price">$' + formatUSD(linea.pieza.precio) + '</div>'
-                    + '</div>';
-            }).join('');
-        }
+        function renderInvoice() {}
 
         function renderScreenState() {
             var isInvoice = state.screen === 'invoice';
@@ -622,10 +599,6 @@
                 resetGestureOffset('x');
                 resetGestureOffset('y');
                 dom.invoiceScreen.scrollTop = 0;
-                dom.invoiceLines.scrollTop = 0;
-                window.requestAnimationFrame(function () {
-                    dom.invoiceLines.scrollTop = 0;
-                });
             }
         }
 
@@ -870,10 +843,8 @@
         function buildWhatsAppMessage() {
             var resumen = buildResumen();
             var iconos = {
-                movimientos: '⚙️',
                 diales: '🕘',
                 manecillas: '🕑',
-                logos: '✨',
                 cajas: '🔲',
                 brazaletes: '⌚'
             };
@@ -881,10 +852,10 @@
 
             resumen.lineas.forEach(function (linea) {
                 var icono = iconos[linea.pieza.categoria] || '•';
-                message += icono + ' ' + linea.categoria + ': ' + linea.pieza.nombre + ' ($' + formatUSD(linea.pieza.precio) + ')\n';
+                message += icono + ' ' + linea.categoria + ': ' + linea.pieza.nombre + '\n';
             });
 
-            message += '\nTotal: $' + formatUSD(resumen.total) + ' USD';
+            message += '\nTotal: $500 USD';
             return message;
         }
 
@@ -923,14 +894,14 @@
                 type: 'reloj',
                 title: 'Suarez Watch',
                 subtitle: 'Configuración personalizada',
-                totalPrice: resumen.total,
+                totalPrice: 500,
                 currency: '$',
                 image: image,
                 detailLines: resumen.lineas.map(function (linea) {
                     return linea.categoria + ': ' + linea.pieza.nombre;
                 }),
                 whatsappLines: resumen.lineas.map(function (linea) {
-                    return '- ' + linea.categoria + ': ' + linea.pieza.nombre + ' ($' + formatUSD(linea.pieza.precio) + ')';
+                    return '- ' + linea.categoria + ': ' + linea.pieza.nombre;
                 })
             });
 
