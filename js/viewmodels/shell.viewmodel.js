@@ -16,7 +16,7 @@
             slug: 'decants',
             src: 'decants.html',
             title: 'Decants de Perfumes Nicho | Perfumería Suárez Bolivia',
-            description: 'Decants de perfumes nicho y de diseñador en formatos de 5, 10 y 15 ml. Probá antes de invertir en el frasco completo.'
+            description: 'Decants de perfumes nicho y de diseñador en formatos de 5, 10, 15 y 30 ml. Probá antes de invertir en el frasco completo.'
         },
         {
             slug: 'armarcombo',
