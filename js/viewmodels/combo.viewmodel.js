@@ -259,8 +259,7 @@
             App.models.cart.addItem(item);
             App.viewmodels.cart?.openCart();
         });
-        window.addEventListener('resize', handleViewportChange);
-        window.addEventListener('scroll', handleViewportChange, { passive: true });
+        window.addEventListener('orientationchange', handleViewportChange);
         document.addEventListener('keydown', event => {
             if (event.key === 'Escape') {
                 closeOtherDropdowns(null);
