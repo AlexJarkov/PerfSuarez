@@ -22,7 +22,8 @@
         if (mode === 'perfumes') {
             const inStock = perfume.en_stock_completos;
             if (!inStock || !perfume.precio_completo) return '';
-            return `<p class="price-label">${perfume.precio_completo.ml} <strong>ml - </strong>${perfume.precio_completo.precio} Bs</p>`;
+            const mlPart = perfume.precio_completo.ml != null ? `${perfume.precio_completo.ml} <strong>ml - </strong>` : '';
+            return `<p class="price-label">${mlPart}${perfume.precio_completo.precio} Bs</p>`;
         }
 
         // decants
