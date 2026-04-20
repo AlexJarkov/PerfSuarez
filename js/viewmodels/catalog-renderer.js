@@ -1,107 +1,107 @@
 (function (App) {
     'use strict';
 
-    const BEST_SELLER_RANKS = {
-        'sauvage-eau-de-parfum-dior': 1,
-        'myslf-yves-saint-laurent': 2,
-        'myslf-eau-de-parfum-yves-saint-laurent': 3,
-        'khamrah-lattafa': 4,
-        'liquid-brun-french-avenue': 5,
-        'bleu-de-chanel-eau-de-toilette-chanel': 6,
-        'bleu-de-chanel-parfum-chanel': 7,
-        'donna-born-in-roma-intense-valentino': 8,
-        'stronger-with-you-intensely-emporio-armani': 9,
-        'khamrah-qahwa-lattafa': 10,
-        'imagination-louis-vuitton': 11,
-        'le-male-elixir-jean-paul-gaultier': 12,
-        'le-male-le-parfum-jean-paul-gaultier': 13,
-        'angel-s-share-kilian': 14,
-        'y-eau-de-parfum-yves-saint-laurent': 15,
-        'y-edp-yves-saint-laurent': 16,
-        'xj-1861-naxos-xerjoff': 17,
-        'club-de-nuit-intense-armaf': 18,
-        'by-the-fireplace-maison-margiela': 19,
-        'le-beau-le-parfum-jean-paul-gaultier': 20,
-        'myslf-le-parfum-yves-saint-laurent': 21,
-        'jazz-club-maison-margiela': 22,
-        'althair-parfums-de-marly': 23,
-        'bianco-latte-giardini-di-toscana': 24,
-        'uomo-born-in-roma-intense-valentino': 25,
-        'eclaire-lattafa': 26,
-        'aventus-creed': 27,
-        '9pm-afnan': 28,
-        'baccarat-rouge-540-extrait-maison-francis-kurkdjian': 29,
-        'sauvage-eau-de-toilette-dior': 30,
-        'sauvage-elixir-dior': 31,
-        'sauvage-parfum-dior': 32,
-        'sauvage-eau-forte-dior': 33,
-        'good-girl-eau-de-parfum-carolina-herrera': 34,
-        'la-bomba-carolina-herrera': 35,
-        'libre-le-parfum-yves-saint-laurent': 36,
-        'libre-l-absolu-platine-parfum-yves-saint-laurent': 37,
-        'libre-eau-de-toilette-yves-saint-laurent': 38,
-        'libre-edt-yves-saint-laurent': 39,
-        'dior-homme-intense-dior': 40,
-        'le-male-elixir-absolu-jean-paul-gaultier': 41,
-        'ombre-leather-tom-ford': 42,
-        'cherry-smoke-tom-ford': 43,
-        'narcotic-delight-initio-parfums-prives': 44,
-        'layton-parfums-de-marly': 45,
-        'erba-pura-xerjoff': 46,
-        'erba-gold-xerjoff': 47,
-        'khamrah-desodorante-lattafa': 48,
-        'asad-lattafa': 49,
-        'yara-lattafa': 50,
-        'bade-e-al-oud-oud-for-glory-lattafa': 51,
-        'asad-bourbon-lattafa': 52,
-        'asad-elixir-lattafa': 53,
-        'eclaire-banoffi-lattafa': 54,
-        'eclaire-pistache-lattafa': 55,
-        'yara-candy-lattafa': 56,
-        'yara-elixir-lattafa': 57,
-        'yara-moi-lattafa': 58,
-        'yara-tous-lattafa': 59,
-        'fakhar-black-lattafa': 60,
-        'turathi-blue-afnan': 61,
-        '9pm-elixir-afnan': 62,
-        '9pm-rebel-afnan': 63,
-        'hawas-for-him-rasasi': 64,
-        'hawas-ice-rasasi': 65,
-        'hawas-ice-for-him-rasasi': 66,
-        'hawas-black-rasasi': 67,
-        'hawas-fire-rasasi': 68,
-        'hawas-tropical-rasasi': 69,
-        'le-beau-paradise-garden-jean-paul-gaultier': 70,
-        'ultra-male-jean-paul-gaultier': 71,
-        'invictus-victory-elixir-rabanne': 72,
-        'one-million-eau-de-toilette-rabanne': 73,
-        'one-million-edt-rabanne': 74,
-        'one-million-parfum-rabanne': 75,
-        'phantom-parfum-rabanne': 76,
-        'acqua-di-gio-parfum-giorgio-armani': 77,
-        'aqcua-di-gio-parfum-giorgio-armani': 78,
-        'acqua-di-gio-profondo-giorgio-armani': 79,
-        'aqcua-di-gio-profondo-giorgio-armani': 80,
-        'acqua-di-gio-eau-de-parfum-giorgio-armani': 81,
-        'my-way-eau-de-parfum-giorgio-armani': 82,
-        'gentleman-society-givenchy': 83,
-        'gentleman-society-ambree-givenchy': 84,
-        'gentleman-society-extreme-givenchy': 85,
-        'gentleman-reserve-privee-givenchy': 86,
-        'terre-d-hermes-eau-de-toilette-hermes': 87,
-        'santal-33-le-labo': 88,
-        'light-blue-dolce-gabbana': 89,
-        'light-blue-pour-homme-dolce-gabbana': 90,
-        'the-one-dolce-gabbana': 91,
-        'the-one-pour-homme-eau-de-parfum-dolce-gabbana': 92,
-        'spicebomb-extreme-viktor-rolf': 93,
-        'spicebomb-eau-de-toilette-viktor-rolf': 94,
-        'eros-eau-de-parfum-versace': 95,
-        'eros-eau-de-toilette-versace': 96,
-        'pour-homme-dylan-blue-versace': 97,
-        'black-orchid-tom-ford': 98,
-        'lost-cherry-tom-ford': 99,
-        'bitter-peach-tom-ford': 100
+    const HYPE_RANKS = {
+        'uomo-born-in-roma-intense-valentino': 1,
+        'donna-born-in-roma-intense-valentino': 2,
+        'born-in-roma-intense-valentino': 3,
+        'uomo-born-in-roma-coral-fantasy-valentino': 4,
+        'born-in-roma-coral-fantasy-valentino': 5,
+        'uomo-born-in-roma-extradose-valentino': 6,
+        'donna-born-in-roma-extradose-valentino': 7,
+        'uomo-born-in-roma-green-stravaganza-valentino': 8,
+        'donna-born-in-roma-green-stravaganza-valentino': 9,
+        'uomo-born-in-roma-purple-melancholia-valentino': 10,
+        'donna-born-in-roma-purple-melancholia-valentino': 11,
+        'born-in-roma-purple-melancholia-valentino': 12,
+        'uomo-born-in-roma-edt-valentino': 13,
+        'odyssey-mandarin-sky-armaf': 14,
+        'odyssey-mandarin-sky-elixir-armaf': 15,
+        'hawas-ice-rasasi': 16,
+        'hawas-ice-for-him-rasasi': 17,
+        'megamare-orto-parisi': 18,
+        'liquid-brun-french-avenue': 19,
+        'khamrah-lattafa': 20,
+        'khamrah-qahwa-lattafa': 21,
+        'eclaire-lattafa': 22,
+        'eclaire-banoffi-lattafa': 23,
+        'eclaire-pistache-lattafa': 24,
+        'yara-lattafa': 25,
+        'yara-candy-lattafa': 26,
+        'yara-elixir-lattafa': 27,
+        'yara-moi-lattafa': 28,
+        'yara-tous-lattafa': 29,
+        'asad-lattafa': 30,
+        'asad-bourbon-lattafa': 31,
+        'asad-elixir-lattafa': 32,
+        'bade-e-al-oud-oud-for-glory-lattafa': 33,
+        'bade-e-al-oud-amethyst-lattafa': 34,
+        'bade-e-al-oud-honor-and-glory-lattafa': 35,
+        'bade-e-al-oud-noble-blush-lattafa': 36,
+        'bade-e-al-oud-sublime-lattafa': 37,
+        'fakhar-black-lattafa': 38,
+        'fakhar-rose-lattafa': 39,
+        'fakhar-extrait-lattafa': 40,
+        'turathi-blue-afnan': 41,
+        '9pm-afnan': 42,
+        '9pm-elixir-afnan': 43,
+        '9pm-rebel-afnan': 44,
+        '9pm-night-out-afnan': 45,
+        'amber-oud-gold-edition-al-haramain': 46,
+        'amber-oud-acqua-dubai-al-haramain': 47,
+        'hawas-for-him-rasasi': 48,
+        'hawas-fire-rasasi': 49,
+        'hawas-fire-for-him-rasasi': 50,
+        'hawas-black-rasasi': 51,
+        'hawas-black-for-him-rasasi': 52,
+        'hawas-elixir-for-him-rasasi': 53,
+        'hawas-tropical-rasasi': 54,
+        'hawas-tropical-for-him-rasasi': 55,
+        'hawas-kobra-rasasi': 56,
+        'hawas-kobra-for-him-rasasi': 57,
+        'hawas-malibu-rasasi': 58,
+        'hawas-malibu-for-him-rasasi': 59,
+        'hawas-verde-rasasi': 60,
+        'hawas-verde-for-him-rasasi': 61,
+        'le-male-elixir-jean-paul-gaultier': 62,
+        'le-male-elixir-absolu-jean-paul-gaultier': 63,
+        'le-male-le-parfum-jean-paul-gaultier': 64,
+        'le-beau-le-parfum-jean-paul-gaultier': 65,
+        'le-beau-paradise-garden-jean-paul-gaultier': 66,
+        'ultra-male-jean-paul-gaultier': 67,
+        'scandal-pour-homme-absolu-jean-paul-gaultier': 68,
+        'scandal-absolu-jean-paul-gaultier': 69,
+        'sauvage-elixir-dior': 70,
+        'sauvage-eau-de-parfum-dior': 71,
+        'sauvage-parfum-dior': 72,
+        'sauvage-eau-de-toilette-dior': 73,
+        'dior-homme-intense-dior': 74,
+        'myslf-yves-saint-laurent': 75,
+        'myslf-eau-de-parfum-yves-saint-laurent': 76,
+        'myslf-le-parfum-yves-saint-laurent': 77,
+        'y-eau-de-parfum-yves-saint-laurent': 78,
+        'y-edp-yves-saint-laurent': 79,
+        'y-edt-yves-saint-laurent': 80,
+        'libre-le-parfum-yves-saint-laurent': 81,
+        'libre-l-absolu-platine-parfum-yves-saint-laurent': 82,
+        'ombre-leather-tom-ford': 83,
+        'cherry-smoke-tom-ford': 84,
+        'black-orchid-tom-ford': 85,
+        'lost-cherry-tom-ford': 86,
+        'angel-s-share-kilian': 87,
+        'baccarat-rouge-540-extrait-maison-francis-kurkdjian': 88,
+        'imagination-louis-vuitton': 89,
+        'ombre-nomade-louis-vuitton': 90,
+        'pacific-chill-louis-vuitton': 91,
+        'santal-33-le-labo': 92,
+        'erba-pura-xerjoff': 93,
+        'erba-gold-xerjoff': 94,
+        'xj-1861-naxos-xerjoff': 95,
+        'narcotic-delight-initio-parfums-prives': 96,
+        'layton-parfums-de-marly': 97,
+        'althair-parfums-de-marly': 98,
+        'by-the-fireplace-maison-margiela': 99,
+        'jazz-club-maison-margiela': 100
     };
 
     function buildTagsHtml(perfume, mode) {
@@ -169,10 +169,10 @@
         return prices.length ? Math.min(...prices) : Number.NaN;
     }
 
-    function getBestSellerRank(perfume, hypeIndex) {
-        return Object.prototype.hasOwnProperty.call(BEST_SELLER_RANKS, perfume.id)
-            ? BEST_SELLER_RANKS[perfume.id]
-            : 1000 + hypeIndex;
+    function getHypeRank(perfume, fallbackIndex) {
+        return Object.prototype.hasOwnProperty.call(HYPE_RANKS, perfume.id)
+            ? HYPE_RANKS[perfume.id]
+            : 1000 + fallbackIndex;
     }
 
     function compareCardsByName(a, b, direction) {
@@ -180,8 +180,8 @@
         return direction === 'desc' ? -result : result;
     }
 
-    function compareCardsByBestSeller(a, b) {
-        const rankDiff = Number(a.dataset.bestSellerRank) - Number(b.dataset.bestSellerRank);
+    function compareCardsByHype(a, b) {
+        const rankDiff = Number(a.dataset.hypeRank) - Number(b.dataset.hypeRank);
         if (rankDiff !== 0) return rankDiff;
         return Number(a.dataset.hypeIndex) - Number(b.dataset.hypeIndex);
     }
@@ -206,7 +206,7 @@
             if (sortValue === 'name-desc') return compareCardsByName(a, b, 'desc');
             if (sortValue === 'price-asc') return compareCardsByPrice(a, b, 'asc');
             if (sortValue === 'price-desc') return compareCardsByPrice(a, b, 'desc');
-            return compareCardsByBestSeller(a, b);
+            return compareCardsByHype(a, b);
         });
 
         if (gridEl) {
@@ -226,9 +226,9 @@
             : '';
         const sortPrice = getSortPrice(perfume, mode);
         const priceAttr = Number.isFinite(sortPrice) ? String(sortPrice) : '';
-        const bestSellerRank = getBestSellerRank(perfume, hypeIndex);
+        const hypeRank = getHypeRank(perfume, hypeIndex);
 
-        return `<div class="decant" data-name="${perfume.nombre_interno}" data-tags="${tags}" data-id="${perfume.id}" data-hype-index="${hypeIndex}" data-best-seller-rank="${bestSellerRank}" data-sort-name="${getSortName(perfume)}" data-sort-price="${priceAttr}">
+        return `<div class="decant" data-name="${perfume.nombre_interno}" data-tags="${tags}" data-id="${perfume.id}" data-hype-index="${hypeIndex}" data-hype-rank="${hypeRank}" data-sort-name="${getSortName(perfume)}" data-sort-price="${priceAttr}">
             <img src="${img}" alt="${perfume.nombre}" loading="lazy" decoding="async">
             <h3><strong>${perfume.marca}</strong></h3>
             <p>${perfume.nombre}</p>

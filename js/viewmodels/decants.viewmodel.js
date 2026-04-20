@@ -55,7 +55,7 @@
             const brand = (brandSelect ? brandSelect.value : 'all').toLowerCase();
             const hideOut = !!(stockToggle && stockToggle.checked);
             const onlyNew = !!(newToggle && newToggle.checked);
-            orderedCards = App.viewmodels.catalogRenderer.sortCards(orderedCards, sortSelect ? sortSelect.value : 'best-selling', grid);
+            orderedCards = App.viewmodels.catalogRenderer.sortCards(orderedCards, sortSelect ? sortSelect.value : 'hype', grid);
             let visible = 0;
 
             orderedCards.forEach(card => {
