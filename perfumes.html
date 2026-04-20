@@ -65,6 +65,16 @@
                         <option value="all">Todas las marcas</option>
                     </select>
                 </div>
+                <div class="select-field">
+                    <label for="perfume-sort">Orden</label>
+                    <select id="perfume-sort">
+                        <option value="best-selling">Más vendidos</option>
+                        <option value="name-asc">Alfabético A-Z</option>
+                        <option value="name-desc">Alfabético Z-A</option>
+                        <option value="price-asc">Precio (Menor a mayor)</option>
+                        <option value="price-desc">Precio (Mayor a menor)</option>
+                    </select>
+                </div>
                 <div class="toggle-group">
                     <label class="toggle">
                         <input type="checkbox" id="stock-filter" checked>
@@ -267,6 +277,7 @@
 
         // Filters
         var searchInput = document.getElementById('perfume-search');
+        var sortSelect = document.getElementById('perfume-sort');
         var stockToggle = document.getElementById('stock-filter');
         var newToggle = document.getElementById('new-filter');
         var emptyState = document.getElementById('no-results-message');
@@ -278,6 +289,7 @@
             var brand = normalizeBrandValue(brandSelect ? brandSelect.value : 'all');
             var hideOut = !!(stockToggle && stockToggle.checked);
             var onlyNew = !!(newToggle && newToggle.checked);
+            cards = App.viewmodels.catalogRenderer.sortCards(cards, sortSelect ? sortSelect.value : 'best-selling', grid);
 
             var visible = 0;
             cards.forEach(function (card) {
@@ -307,6 +319,10 @@
 
         if (searchInput) searchInput.addEventListener('input', applyFilters);
         if (brandSelect) brandSelect.addEventListener('change', applyFilters);
+        if (sortSelect) sortSelect.addEventListener('change', function () {
+            if (pager) pager.page = 1;
+            applyFilters();
+        });
         if (stockToggle) stockToggle.addEventListener('change', applyFilters);
         if (newToggle) newToggle.addEventListener('change', applyFilters);
 

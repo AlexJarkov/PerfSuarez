@@ -3187,8 +3187,8 @@
         "marca": "Dior",
         "nombre": "Sauvage Elixir",
         "precio_completo": {
-            "ml": 100,
-            "precio": 2500
+            "ml": 150,
+            "precio": 4000
         },
         "precios_decants": {
             "5": 260,
@@ -5384,7 +5384,7 @@
             "jpg"
         ],
         "etiqueta": null,
-        "en_stock_completos": true,
+        "en_stock_completos": false,
         "en_stock_decants": true,
         "image_miniatura": "imagenes/fotos-catalogo/jpg/Untitled-1.jpg",
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BELLE LE PARFUM.png",
@@ -8447,7 +8447,7 @@
         "marca": "Maison Francis Kurkdjian",
         "nombre": "Baccarat Rouge 540 Extrait de Parfum",
         "precio_completo": {
-            "ml": null,
+            "ml": 200,
             "precio": 10000
         },
         "precios_decants": {
@@ -8523,19 +8523,22 @@
     },
     {
         "id": "jazz-club-maison-margiela",
-        "nombre_interno": "Maison Margiela Jazz Club",
+        "nombre_interno": "Maison Margiela Replica Jazz Club",
         "marca": "Maison Margiela",
-        "nombre": "Jazz Club",
-        "precio_completo": null,
+        "nombre": "Replica Jazz Club",
+        "precio_completo": {
+            "ml": 120,
+            "precio": 1550
+        },
         "precios_decants": null,
         "precio_combo": null,
         "tags": [
             "hombre"
         ],
         "etiqueta": null,
-        "en_stock_completos": false,
+        "en_stock_completos": true,
         "en_stock_decants": false,
-        "image_miniatura": null,
+        "image_miniatura": "imagenes/fotos-decants/hombre/JAZZ CLUB.jpg",
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/JAZZ CLUB.jpg",
         "images_gallery": [],
         "notas": {
@@ -13551,14 +13554,17 @@
         "nombre_interno": "Yves Saint Laurent Y EDT",
         "marca": "Yves Saint Laurent",
         "nombre": "Y EDT",
-        "precio_completo": null,
+        "precio_completo": {
+            "ml": 100,
+            "precio": 1350
+        },
         "precios_decants": null,
         "precio_combo": null,
         "tags": [
             "hombre ysl"
         ],
         "etiqueta": null,
-        "en_stock_completos": false,
+        "en_stock_completos": true,
         "en_stock_decants": false,
         "image_miniatura": "imagenes/fotos-catalogo/ysl/Untitled-1.png",
         "image_miniatura_decant": null,
