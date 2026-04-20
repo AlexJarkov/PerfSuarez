@@ -68,7 +68,7 @@
                 <div class="select-field">
                     <label for="perfume-sort">Orden</label>
                     <select id="perfume-sort">
-                        <option value="best-selling">Más vendidos</option>
+                        <option value="hype">Más hypeado</option>
                         <option value="name-asc">Alfabético A-Z</option>
                         <option value="name-desc">Alfabético Z-A</option>
                         <option value="price-asc">Precio (Menor a mayor)</option>
@@ -289,7 +289,7 @@
             var brand = normalizeBrandValue(brandSelect ? brandSelect.value : 'all');
             var hideOut = !!(stockToggle && stockToggle.checked);
             var onlyNew = !!(newToggle && newToggle.checked);
-            cards = App.viewmodels.catalogRenderer.sortCards(cards, sortSelect ? sortSelect.value : 'best-selling', grid);
+            cards = App.viewmodels.catalogRenderer.sortCards(cards, sortSelect ? sortSelect.value : 'hype', grid);
 
             var visible = 0;
             cards.forEach(function (card) {
