@@ -100,6 +100,7 @@
         }
 
         refresh() {
+            this.items = Array.from(this.grid ? this.grid.querySelectorAll(this.itemSelector) : []);
             const totalPages = this.getTotalPages();
             if (this.page > totalPages) {
                 this.page = totalPages;

@@ -42,20 +42,23 @@
         if (pager) window.decantsPager = pager;
 
         const searchInput = document.getElementById('decant-search');
+        const sortSelect = document.getElementById('decant-sort');
         const stockToggle = document.getElementById('stock-filter');
         const newToggle = document.getElementById('new-filter');
         const emptyState = document.getElementById('no-results-message');
         let activeGender = 'all';
         let activeStyle = 'all';
+        let orderedCards = cards;
 
         function applyFilters() {
             const q = (searchInput ? searchInput.value : '').trim().toLowerCase();
             const brand = (brandSelect ? brandSelect.value : 'all').toLowerCase();
             const hideOut = !!(stockToggle && stockToggle.checked);
             const onlyNew = !!(newToggle && newToggle.checked);
+            orderedCards = App.viewmodels.catalogRenderer.sortCards(orderedCards, sortSelect ? sortSelect.value : 'best-selling', grid);
             let visible = 0;
 
-            cards.forEach(card => {
+            orderedCards.forEach(card => {
                 const name = (card.dataset.name || card.textContent || '').toLowerCase();
                 const tags = (card.dataset.tags || '').toLowerCase();
                 const brandText = (card.dataset.brand || card.querySelector('h3')?.textContent || '').toLowerCase();
@@ -83,6 +86,10 @@
 
         searchInput?.addEventListener('input', applyFilters);
         brandSelect?.addEventListener('change', applyFilters);
+        sortSelect?.addEventListener('change', () => {
+            if (pager) pager.page = 1;
+            applyFilters();
+        });
         stockToggle?.addEventListener('change', applyFilters);
         newToggle?.addEventListener('change', applyFilters);
 
