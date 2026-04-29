@@ -171,17 +171,20 @@
             .map(function (p) {
                 var precios = [];
                 if (isPerfume && p.precio_completo && p.precio_combo) {
-                    var ml = p.precio_completo.ml;
-                    var comboPrice = p.precio_combo[String(ml)] ?? null;
-                    if (typeof comboPrice === 'number') {
-                        precios.push({
-                            sku: 'PERFUME',
-                            tamano: ml,
-                            precio: p.precio_completo.precio,
-                            moneda: MONEDA_LOCAL,
-                            comboPrecio: comboPrice
-                        });
-                    }
+                    var entries = Array.isArray(p.precio_completo) ? p.precio_completo : [p.precio_completo];
+                    entries.forEach(function (entry) {
+                        var ml = entry.ml;
+                        var comboPrice = p.precio_combo[String(ml)] ?? null;
+                        if (typeof comboPrice === 'number') {
+                            precios.push({
+                                sku: 'PERFUME',
+                                tamano: ml,
+                                precio: entry.precio,
+                                moneda: MONEDA_LOCAL,
+                                comboPrecio: comboPrice
+                            });
+                        }
+                    });
                 } else if (!isPerfume && p.precios_decants) {
                     Object.keys(p.precios_decants).map(Number).sort(function (a, b) { return a - b; }).forEach(function (size) {
                         precios.push({

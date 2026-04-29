@@ -166,6 +166,7 @@
 
             const searchInput = dropdown.querySelector('.dropdown-search');
             searchInput.addEventListener('click', event => event.stopPropagation());
+            searchInput.addEventListener('touchstart', event => event.stopPropagation());
             searchInput.addEventListener('input', () => {
                 const query = searchInput.value.toLowerCase();
                 dropdown.querySelectorAll('.dropdown-item-combo').forEach(item => {
@@ -202,7 +203,7 @@
                     if (searchInput) {
                         searchInput.value = '';
                         dropdown.querySelectorAll('.dropdown-item-combo').forEach(el => el.style.display = '');
-                        window.requestAnimationFrame(() => searchInput.focus());
+                        searchInput.focus();
                     }
                 } else {
                     item.style.zIndex = '';
@@ -265,7 +266,10 @@
                 closeOtherDropdowns(null);
             }
         });
-        document.addEventListener('click', () => closeOtherDropdowns(null));
+        document.addEventListener('click', () => {
+            if (document.activeElement && document.activeElement.classList.contains('dropdown-search')) return;
+            closeOtherDropdowns(null);
+        });
     }
 
     App.viewmodels.combo = {

@@ -909,10 +909,10 @@
         "nombre_interno": "ARMAF Odyssey Mandarin Sky",
         "marca": "ARMAF",
         "nombre": "Odyssey Mandarin Sky",
-        "precio_completo": {
-            "ml": 100,
-            "precio": 470
-        },
+        "precio_completo": [
+            {"ml": 100, "precio": 470},
+            {"ml": 200, "precio": 720}
+        ],
         "precios_decants": {
             "5": 50,
             "10": 100,
@@ -3645,10 +3645,10 @@
         "nombre_interno": "Dolce&Gabbana Light Blue",
         "marca": "Dolce&Gabbana",
         "nombre": "Light Blue",
-        "precio_completo": {
-            "ml": 100,
-            "precio": 780
-        },
+        "precio_completo": [
+            {"ml": 100, "precio": 780},
+            {"ml": 200, "precio": 1110}
+        ],
         "precios_decants": {
             "5": 90,
             "10": 170,
@@ -5524,10 +5524,10 @@
         "nombre_interno": "Jean Paul Gaultier Le Beau Paradise Garden",
         "marca": "Jean Paul Gaultier",
         "nombre": "Le Beau Paradise Garden",
-        "precio_completo": {
-            "ml": 75,
-            "precio": 720
-        },
+        "precio_completo": [
+            {"ml": 75, "precio": 720},
+            {"ml": 125, "precio": 1100}
+        ],
         "precios_decants": {
             "5": 110,
             "10": 210,
@@ -5570,10 +5570,11 @@
         "nombre_interno": "Jean Paul Gaultier Le Male Elixir",
         "marca": "Jean Paul Gaultier",
         "nombre": "Le Male Elixir",
-        "precio_completo": {
-            "ml": 75,
-            "precio": 860
-        },
+        "precio_completo": [
+            {"ml": 75, "precio": 860},
+            {"ml": 125, "precio": 1140},
+            {"ml": 200, "precio": 1450}
+        ],
         "precios_decants": {
             "5": 110,
             "10": 210,
@@ -5582,7 +5583,8 @@
         },
         "precio_combo": {
             "75": 778,
-            "125": 1042
+            "125": 1042,
+            "200": 1450
         },
         "tags": [
             "hombre",
@@ -12489,17 +12491,25 @@
         "nombre_interno": "Versace Pour Homme",
         "marca": "Versace",
         "nombre": "Pour Homme",
-        "precio_completo": null,
-        "precios_decants": null,
+        "precio_completo": {
+            "ml": 100,
+            "precio": 800
+        },
+        "precios_decants": {
+            "5": 80,
+            "10": 150,
+            "15": 220,
+            "30": 410
+        },
         "precio_combo": null,
         "tags": [
             "hombre versace"
         ],
         "etiqueta": null,
-        "en_stock_completos": false,
-        "en_stock_decants": false,
-        "image_miniatura": "imagenes/fotos-catalogo/versace/Untitled-2.png",
-        "image_miniatura_decant": null,
+        "en_stock_completos": true,
+        "en_stock_decants": true,
+        "image_miniatura": "imagenes/fotos-catalogo/versace/VERSACE POUR HOMME.png",
+        "image_miniatura_decant": "imagenes/fotos-decants/hombre/VERSACE POUR HOMME.JPEG",
         "images_gallery": [],
         "notas": {
             "salida": [
@@ -13667,6 +13677,68 @@
                 "Olíbano",
                 "Pachulí"
             ]
+        }
+    },
+    {
+        "id": "art-of-universe-lattafa",
+        "nombre_interno": "Lattafa Art Of Universe",
+        "marca": "Lattafa",
+        "nombre": "Art Of Universe",
+        "precio_completo": null,
+        "precios_decants": {
+            "5": 50,
+            "10": 100,
+            "15": 140,
+            "30": 260
+        },
+        "precio_combo": null,
+        "tags": [
+            "unisex",
+            "lattafa",
+            "arabes"
+        ],
+        "etiqueta": "novedad",
+        "en_stock_completos": false,
+        "en_stock_decants": true,
+        "image_miniatura": null,
+        "image_miniatura_decant": null,
+        "images_gallery": [],
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        }
+    },
+    {
+        "id": "divine-elixir-jean-paul-gaultier",
+        "nombre_interno": "Jean Paul Gaultier Divine Elixir",
+        "marca": "Jean Paul Gaultier",
+        "nombre": "Divine Elixir",
+        "precio_completo": {
+            "ml": 100,
+            "precio": 1350
+        },
+        "precios_decants": {
+            "5": 110,
+            "10": 220,
+            "15": 300,
+            "30": 570
+        },
+        "precio_combo": null,
+        "tags": [
+            "mujer",
+            "jpg"
+        ],
+        "etiqueta": "novedad",
+        "en_stock_completos": true,
+        "en_stock_decants": true,
+        "image_miniatura": null,
+        "image_miniatura_decant": null,
+        "images_gallery": [],
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
         }
     }
 ];
