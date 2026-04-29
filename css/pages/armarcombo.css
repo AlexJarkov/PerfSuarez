@@ -6,6 +6,7 @@ body.armarcombo-page {
 }
 
 body.armarcombo-page main.page-shell {
+    touch-action: pan-y;
     display: flex;
     flex-direction: column;
     gap: clamp(28px, 5vw, 56px);
@@ -203,6 +204,7 @@ body.armarcombo-page .combo-item {
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     overflow: visible;
     box-sizing: border-box;
+    touch-action: pan-y;
 }
 
 body.armarcombo-page .combo-item:hover {
@@ -348,8 +350,7 @@ body.armarcombo-page .dropdown {
     visibility: hidden;
     transform: translate(-50%, -8px);
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-    overflow-y: auto;
-    overscroll-behavior: contain;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -361,6 +362,8 @@ body.armarcombo-page .dropdown.show {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, 0);
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 body.armarcombo-page .dropdown-backdrop {

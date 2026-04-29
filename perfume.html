@@ -74,15 +74,22 @@
         function renderPricing(perfume) {
             var html = '';
 
-            if (perfume.precio_completo && perfume.en_stock_completos) {
+            if (perfume.precio_completo) {
+                var pcEntries = Array.isArray(perfume.precio_completo) ? perfume.precio_completo : [perfume.precio_completo];
                 html += '<div class="pricing-section"><h3>Perfume completo</h3>';
-                html += '<div class="price-row"><span class="price-size">' + perfume.precio_completo.ml + ' ml</span>';
-                html += '<span class="price-value">' + perfume.precio_completo.precio + ' Bs</span></div></div>';
-            } else if (perfume.precio_completo && !perfume.en_stock_completos) {
-                html += '<div class="pricing-section"><h3>Perfume completo</h3>';
-                html += '<div class="price-row price-row--unavailable"><span class="price-size">' + perfume.precio_completo.ml + ' ml</span>';
-                html += '<span class="price-value price-value--old">' + perfume.precio_completo.precio + ' Bs</span>';
-                html += '<span class="etiqueta fuera-de-stock price-row__badge">Fuera de stock</span></div></div>';
+                if (perfume.en_stock_completos) {
+                    pcEntries.forEach(function(e) {
+                        html += '<div class="price-row"><span class="price-size">' + e.ml + ' ml</span>';
+                        html += '<span class="price-value">' + e.precio + ' Bs</span></div>';
+                    });
+                } else {
+                    pcEntries.forEach(function(e) {
+                        html += '<div class="price-row price-row--unavailable"><span class="price-size">' + e.ml + ' ml</span>';
+                        html += '<span class="price-value price-value--old">' + e.precio + ' Bs</span>';
+                        html += '<span class="etiqueta fuera-de-stock price-row__badge">Fuera de stock</span></div>';
+                    });
+                }
+                html += '</div>';
             }
 
             if (perfume.precios_decants) {
@@ -108,8 +115,13 @@
                 Object.keys(comboPrices).forEach(function(mlStr) {
                     var ml = parseInt(mlStr, 10);
                     var comboPrecio = comboPrices[mlStr];
-                    var ahorro = (perfume.precio_completo && perfume.precio_completo.ml === ml)
-                        ? (perfume.precio_completo.precio - comboPrecio) : null;
+                    var precioCompleto = null;
+                    if (perfume.precio_completo) {
+                        var pcArr = Array.isArray(perfume.precio_completo) ? perfume.precio_completo : [perfume.precio_completo];
+                        var pcMatch = pcArr.find(function(e) { return e.ml === ml; });
+                        if (pcMatch) precioCompleto = pcMatch.precio;
+                    }
+                    var ahorro = precioCompleto !== null ? (precioCompleto - comboPrecio) : null;
                     html += '<div class="pricing-section">';
                     if (ahorro !== null && ahorro > 0) {
                         html += '<p class="combo-savings-note">Ahorras ' + ahorro + ' Bs</p>';
@@ -178,11 +190,14 @@
             var options = [];
 
             if (perfume.precio_completo && perfume.en_stock_completos) {
-                options.push({
-                    kind: 'perfume',
-                    label: 'Perfume completo',
-                    size: perfume.precio_completo.ml,
-                    price: perfume.precio_completo.precio
+                var pcOpts = Array.isArray(perfume.precio_completo) ? perfume.precio_completo : [perfume.precio_completo];
+                pcOpts.forEach(function(e) {
+                    options.push({
+                        kind: 'perfume',
+                        label: 'Perfume completo',
+                        size: e.ml,
+                        price: e.precio
+                    });
                 });
             }
 

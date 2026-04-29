@@ -166,6 +166,7 @@
 
             const searchInput = dropdown.querySelector('.dropdown-search');
             searchInput.addEventListener('click', event => event.stopPropagation());
+            searchInput.addEventListener('touchstart', event => event.stopPropagation());
             searchInput.addEventListener('input', () => {
                 const query = searchInput.value.toLowerCase();
                 dropdown.querySelectorAll('.dropdown-item-combo').forEach(item => {
@@ -202,7 +203,7 @@
                     if (searchInput) {
                         searchInput.value = '';
                         dropdown.querySelectorAll('.dropdown-item-combo').forEach(el => el.style.display = '');
-                        window.requestAnimationFrame(() => searchInput.focus());
+                        searchInput.focus();
                     }
                 } else {
                     item.style.zIndex = '';
@@ -259,14 +260,16 @@
             App.models.cart.addItem(item);
             App.viewmodels.cart?.openCart();
         });
-        window.addEventListener('resize', handleViewportChange);
-        window.addEventListener('scroll', handleViewportChange, { passive: true });
+        window.addEventListener('orientationchange', handleViewportChange);
         document.addEventListener('keydown', event => {
             if (event.key === 'Escape') {
                 closeOtherDropdowns(null);
             }
         });
-        document.addEventListener('click', () => closeOtherDropdowns(null));
+        document.addEventListener('click', () => {
+            if (document.activeElement && document.activeElement.classList.contains('dropdown-search')) return;
+            closeOtherDropdowns(null);
+        });
     }
 
     App.viewmodels.combo = {

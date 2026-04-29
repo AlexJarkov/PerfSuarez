@@ -54,7 +54,7 @@
         const dots = Array.from(document.querySelectorAll('.swipe-progress span'));
         const dragState = { active: false, pending: false, startX: 0, startY: 0, prevTranslate: 0, currentTranslate: 0, pointerId: null };
         const horizontalDeadZone = 32;
-        const verticalAbortThreshold = 18;
+        const verticalAbortThreshold = 12;
         let currentIndex = 0;
         let currentRoute = null;
         let navController = null;
@@ -396,7 +396,7 @@
                 } else {
                     const deltaX = x - dragState.startX;
                     const deltaY = y - dragState.startY;
-                    if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > verticalAbortThreshold) {
+                    if (Math.abs(deltaY) > verticalAbortThreshold) {
                         cancelPendingDrag();
                         return;
                     }
