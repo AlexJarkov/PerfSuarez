@@ -8077,7 +8077,7 @@
         "nombre_interno": "Lattafa Yara Elixir",
         "marca": "Lattafa",
         "nombre": "Yara Elixir",
-        "precio_completo": null,
+        "precio_completo": {"ml": 100, "precio": 470},
         "precios_decants": {
             "5": 50,
             "10": 100,
@@ -8091,7 +8091,7 @@
             "arabes"
         ],
         "etiqueta": null,
-        "en_stock_completos": false,
+        "en_stock_completos": true,
         "en_stock_decants": true,
         "image_miniatura": "imagenes/fotos-catalogo/arabes/YARA ELIXIR.jpg",
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA ELIXIR.png",
@@ -8118,7 +8118,7 @@
         "nombre_interno": "Lattafa Yara Moi",
         "marca": "Lattafa",
         "nombre": "Yara Moi",
-        "precio_completo": null,
+        "precio_completo": {"ml": 100, "precio": 470},
         "precios_decants": {
             "5": 50,
             "10": 100,
@@ -8132,7 +8132,7 @@
             "arabes"
         ],
         "etiqueta": null,
-        "en_stock_completos": false,
+        "en_stock_completos": true,
         "en_stock_decants": true,
         "image_miniatura": "imagenes/fotos-catalogo/arabes/YARA MOI.WEBP",
         "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA MOI.JPEG",
@@ -10960,7 +10960,7 @@
         "nombre_interno": "Rasasi Hawas For Him",
         "marca": "Rasasi",
         "nombre": "Hawas For Him",
-        "precio_completo": null,
+        "precio_completo": {"ml": 100, "precio": 470},
         "precios_decants": {
             "5": 50,
             "10": 100,
@@ -10974,7 +10974,7 @@
             "arabes"
         ],
         "etiqueta": null,
-        "en_stock_completos": false,
+        "en_stock_completos": true,
         "en_stock_decants": true,
         "image_miniatura": "imagenes/fotos-catalogo/arabes/hawas-pr-of.webp",
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS.JPEG",
