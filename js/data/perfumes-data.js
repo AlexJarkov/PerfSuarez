@@ -5449,14 +5449,20 @@
         "marca": "Jean Paul Gaultier",
         "nombre": "Le Beau Eau De Toilette",
         "precio_completo": null,
-        "precios_decants": null,
+        "precios_decants": {
+            "5": 130,
+            "10": 250,
+            "15": 350,
+            "30": 670
+        },
         "precio_combo": null,
         "tags": [
-            "hombre"
+            "hombre",
+            "jpg"
         ],
         "etiqueta": null,
         "en_stock_completos": false,
-        "en_stock_decants": false,
+        "en_stock_decants": true,
         "image_miniatura": null,
         "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE BEAU.JPEG",
         "images_gallery": [],
@@ -13702,6 +13708,39 @@
         "en_stock_decants": true,
         "image_miniatura": null,
         "image_miniatura_decant": null,
+        "images_gallery": [],
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        }
+    },
+    {
+        "id": "island-khadlaj",
+        "nombre_interno": "Khadlaj Island",
+        "marca": "Khadlaj",
+        "nombre": "Island",
+        "precio_completo": {
+            "ml": 100,
+            "precio": 580
+        },
+        "precios_decants": {
+            "5": 50,
+            "10": 100,
+            "15": 140,
+            "30": 260
+        },
+        "precio_combo": null,
+        "tags": [
+            "unisex",
+            "khadlaj",
+            "arabes"
+        ],
+        "etiqueta": "novedad",
+        "en_stock_completos": true,
+        "en_stock_decants": true,
+        "image_miniatura": "imagenes/fotos-decants/Plantilla.jpeg",
+        "image_miniatura_decant": "imagenes/fotos-decants/Plantilla.jpeg",
         "images_gallery": [],
         "notas": {
             "salida": [],
