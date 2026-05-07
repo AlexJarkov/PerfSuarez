@@ -1563,13 +1563,13 @@
         "nombre": "Black Phantom \"Memento Mori\"",
         "precio_completo": {
             "ml": 50,
-            "precio": 5130
+            "precio": 4500
         },
         "precios_decants": {
-            "5": 500,
-            "10": 950,
+            "5": 450,
+            "10": 900,
             "15": 1350,
-            "30": 2550
+            "30": 2700
         },
         "precio_combo": {
             "50": 4394
@@ -9487,10 +9487,10 @@
         "nombre": "Cuoium",
         "precio_completo": null,
         "precios_decants": {
-            "5": 290,
-            "10": 560,
-            "15": 790,
-            "30": 1480
+            "5": 300,
+            "10": 600,
+            "15": 900,
+            "30": 1800
         },
         "precio_combo": null,
         "tags": [
@@ -9531,10 +9531,10 @@
             "precio": 3000
         },
         "precios_decants": {
-            "5": 290,
-            "10": 560,
-            "15": 790,
-            "30": 1480
+            "5": 300,
+            "10": 600,
+            "15": 900,
+            "30": 1800
         },
         "precio_combo": {
             "50": 2249
