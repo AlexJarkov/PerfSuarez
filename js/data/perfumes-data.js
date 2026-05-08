@@ -1691,6 +1691,38 @@
         }
     },
     {
+        "id": "bleu-de-chanel-l-exclusif-chanel",
+        "nombre_interno": "Bleu de Chanel L'Exclusif",
+        "marca": "Chanel",
+        "nombre": "Bleu de Chanel L'Exclusif",
+        "precio_completo": {
+            "ml": 100,
+            "precio": 2350
+        },
+        "precios_decants": {
+            "5": 230,
+            "10": 440,
+            "15": 620,
+            "30": 1130
+        },
+        "precio_combo": null,
+        "tags": [
+            "hombre",
+            "chanel"
+        ],
+        "etiqueta": null,
+        "en_stock_completos": true,
+        "en_stock_decants": true,
+        "image_miniatura": "imagenes/image.webp",
+        "image_miniatura_decant": "imagenes/image.webp",
+        "images_gallery": [],
+        "notas": {
+            "salida": [],
+            "corazon": [],
+            "fondo": []
+        }
+    },
+    {
         "id": "chez-bond-bond-no-9",
         "nombre_interno": "Bond No. 9 Chez Bond",
         "marca": "Bond No. 9",
@@ -8532,16 +8564,21 @@
             "ml": 120,
             "precio": 1550
         },
-        "precios_decants": null,
+        "precios_decants": {
+            "5": 140,
+            "10": 280,
+            "15": 380,
+            "30": 720
+        },
         "precio_combo": null,
         "tags": [
             "hombre"
         ],
         "etiqueta": null,
         "en_stock_completos": true,
-        "en_stock_decants": false,
-        "image_miniatura": "imagenes/fotos-decants/hombre/JAZZ CLUB.jpg",
-        "image_miniatura_decant": "imagenes/fotos-decants/hombre/JAZZ CLUB.jpg",
+        "en_stock_decants": true,
+        "image_miniatura": "imagenes/image.webp",
+        "image_miniatura_decant": "imagenes/image.webp",
         "images_gallery": [],
         "notas": {
             "salida": [
@@ -9570,6 +9607,56 @@
         }
     },
     {
+        "id": "terroni-orto-parisi",
+        "nombre_interno": "Orto Parisi Terroni",
+        "marca": "Orto Parisi",
+        "nombre": "Terroni",
+        "precio_completo": {
+            "ml": 50,
+            "precio": 3000
+        },
+        "precios_decants": {
+            "5": 300,
+            "10": 600,
+            "15": 900,
+            "30": 1800
+        },
+        "precio_combo": {
+            "50": 2249
+        },
+        "tags": [
+            "hombre",
+            "mujer",
+            "unisex",
+            "ortoparisi",
+            "nicho"
+        ],
+        "etiqueta": null,
+        "en_stock_completos": true,
+        "en_stock_decants": true,
+        "image_miniatura": "imagenes/image.webp",
+        "image_miniatura_decant": "imagenes/image.webp",
+        "images_gallery": [],
+        "notas": {
+            "salida": [
+                "Frambuesa",
+                "Notas terrosas"
+            ],
+            "corazon": [
+                "Abedul",
+                "Benjuí"
+            ],
+            "fondo": [
+                "Oud",
+                "Vetiver",
+                "Cedro",
+                "Ámbar gris",
+                "Almizcle",
+                "Haba tonka"
+            ]
+        }
+    },
+    {
         "id": "althair-parfums-de-marly",
         "nombre_interno": "Parfums de Marly Althaïr",
         "marca": "Parfums de Marly",
@@ -10377,6 +10464,49 @@
                 "Cuero",
                 "Notas amaderadas",
                 "Pachulí hindú"
+            ]
+        }
+    },
+    {
+        "id": "one-million-elixir-rabanne",
+        "nombre_interno": "Rabanne One Million Elixir",
+        "marca": "Rabanne",
+        "nombre": "One Million Elixir",
+        "precio_completo": {
+            "ml": 200,
+            "precio": 1600
+        },
+        "precios_decants": {
+            "5": 80,
+            "10": 150,
+            "15": 220,
+            "30": 410
+        },
+        "precio_combo": null,
+        "tags": [
+            "hombre",
+            "rabanne"
+        ],
+        "etiqueta": null,
+        "en_stock_completos": true,
+        "en_stock_decants": true,
+        "image_miniatura": "imagenes/image.webp",
+        "image_miniatura_decant": "imagenes/image.webp",
+        "images_gallery": [],
+        "notas": {
+            "salida": [
+                "Manzana",
+                "Davana"
+            ],
+            "corazon": [
+                "Rosa de Damasco",
+                "Cedro",
+                "Osmanto"
+            ],
+            "fondo": [
+                "Vainilla",
+                "Haba tonka",
+                "Pachulí"
             ]
         }
     },
