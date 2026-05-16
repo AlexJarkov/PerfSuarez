@@ -37,11 +37,22 @@
     }
 
     PerfSuarez.core.onReady = function onReady(callback) {
+        function runWhenDataReady() {
+            const dataReady = PerfSuarez.data && PerfSuarez.data.perfumesReady;
+            if (dataReady && typeof dataReady.then === 'function') {
+                dataReady.then(callback, callback);
+                return;
+            }
+
+            callback();
+        }
+
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', callback, { once: true });
+            document.addEventListener('DOMContentLoaded', runWhenDataReady, { once: true });
             return;
         }
-        callback();
+
+        runWhenDataReady();
     };
 
     PerfSuarez.core.normalizeRoutePath = function normalizeRoutePath(path) {
@@ -83,6 +94,170 @@
         const url = `https://wa.me/${number}/?text=${encodeURIComponent(message)}`;
         window.open(url, target || '_blank', 'noopener');
         return url;
+    };
+
+    const SEARCH_ALIASES = [
+        [/\bj\s*p\s*g\b/g, ' jean paul gaultier '],
+        [/\bjpg\b/g, ' jean paul gaultier '],
+        [/\bysl\b/g, ' yves saint laurent '],
+        [/\bd\s*&\s*g\b/g, ' dolce gabbana '],
+        [/\bd\s+y\s+g\b/g, ' dolce gabbana '],
+        [/\bd\s+g\b/g, ' dolce gabbana '],
+        [/\bdg\b/g, ' dolce gabbana '],
+        [/\bch\b/g, ' carolina herrera '],
+        [/\bmnt\s*blanc\b/g, ' montblanc '],
+        [/\bmont\s+blanc\b/g, ' montblanc '],
+        [/\bpaco\s+rabane\b/g, ' rabanne '],
+        [/\bpaco\b/g, ' rabanne '],
+        [/\bswy\b/g, ' stronger with you ']
+    ];
+
+    function normalizeSearchText(value) {
+        let text = String(value || '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/&/g, ' y ');
+
+        SEARCH_ALIASES.forEach(([pattern, replacement]) => {
+            text = text.replace(pattern, replacement);
+        });
+
+        return text
+            .replace(/[^a-z0-9]+/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    function tokenizeSearchText(value) {
+        const normalized = normalizeSearchText(value);
+        return normalized ? normalized.split(' ').filter(Boolean) : [];
+    }
+
+    function levenshteinDistance(a, b) {
+        if (a === b) {
+            return 0;
+        }
+        if (!a) {
+            return b.length;
+        }
+        if (!b) {
+            return a.length;
+        }
+
+        const previous = new Array(b.length + 1);
+        const current = new Array(b.length + 1);
+
+        for (let i = 0; i <= b.length; i += 1) {
+            previous[i] = i;
+        }
+
+        for (let i = 1; i <= a.length; i += 1) {
+            current[0] = i;
+            for (let j = 1; j <= b.length; j += 1) {
+                const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+                current[j] = Math.min(
+                    current[j - 1] + 1,
+                    previous[j] + 1,
+                    previous[j - 1] + cost
+                );
+            }
+
+            for (let j = 0; j <= b.length; j += 1) {
+                previous[j] = current[j];
+            }
+        }
+
+        return previous[b.length];
+    }
+
+    function maxTokenDistance(token) {
+        if (token.length <= 2) {
+            return 0;
+        }
+        if (token.length <= 5) {
+            return 1;
+        }
+        return 2;
+    }
+
+    function scoreToken(token, targetText, targetTokens) {
+        if (!token) {
+            return 0;
+        }
+
+        if (targetTokens.indexOf(token) >= 0) {
+            return 12 + token.length;
+        }
+        if (targetText.indexOf(token) >= 0) {
+            return 9 + token.length;
+        }
+        if (token.length >= 4 && targetTokens.some(targetToken => targetToken.indexOf(token) >= 0 || token.indexOf(targetToken) >= 0)) {
+            return 6 + token.length;
+        }
+
+        const maxDistance = maxTokenDistance(token);
+        if (!maxDistance) {
+            return 0;
+        }
+
+        let bestDistance = Infinity;
+        targetTokens.forEach(targetToken => {
+            if (Math.abs(targetToken.length - token.length) > maxDistance) {
+                return;
+            }
+            bestDistance = Math.min(bestDistance, levenshteinDistance(token, targetToken));
+        });
+
+        if (bestDistance <= maxDistance) {
+            return 5 + token.length - bestDistance;
+        }
+
+        return 0;
+    }
+
+    function scoreSearchMatch(query, target) {
+        const queryText = normalizeSearchText(query);
+        if (!queryText) {
+            return 0;
+        }
+
+        const targetText = normalizeSearchText(target);
+        if (!targetText) {
+            return 0;
+        }
+
+        if (targetText.indexOf(queryText) >= 0) {
+            return 100 + queryText.length;
+        }
+
+        const queryTokens = tokenizeSearchText(queryText);
+        const targetTokens = tokenizeSearchText(targetText);
+        let matched = 0;
+        let score = 0;
+
+        queryTokens.forEach(token => {
+            const tokenScore = scoreToken(token, targetText, targetTokens);
+            if (tokenScore > 0) {
+                matched += 1;
+                score += tokenScore;
+            }
+        });
+
+        if (!matched) {
+            return 0;
+        }
+
+        const requiredMatches = queryTokens.length <= 2 ? queryTokens.length : Math.ceil(queryTokens.length * 0.65);
+        return matched >= requiredMatches ? score + (matched * 3) : 0;
+    }
+
+    PerfSuarez.core.search = {
+        normalizeText: normalizeSearchText,
+        scoreMatch: scoreSearchMatch,
+        matches: function matches(query, target) {
+            return scoreSearchMatch(query, target) > 0;
+        }
     };
 
     PerfSuarez.core.confirmAndOpenWhatsApp = function confirmAndOpenWhatsApp(options) {

@@ -51,25 +51,32 @@
         let orderedCards = cards;
 
         function applyFilters() {
-            const q = (searchInput ? searchInput.value : '').trim().toLowerCase();
-            const brand = (brandSelect ? brandSelect.value : 'all').toLowerCase();
+            const q = App.core.search.normalizeText(searchInput ? searchInput.value : '');
+            const brand = App.core.search.normalizeText(brandSelect ? brandSelect.value : 'all');
             const hideOut = !!(stockToggle && stockToggle.checked);
             const onlyNew = !!(newToggle && newToggle.checked);
             orderedCards = App.viewmodels.catalogRenderer.sortCards(orderedCards, sortSelect ? sortSelect.value : 'hype', grid);
             let visible = 0;
 
             orderedCards.forEach(card => {
-                const name = (card.dataset.name || card.textContent || '').toLowerCase();
-                const tags = (card.dataset.tags || '').toLowerCase();
-                const brandText = (card.dataset.brand || card.querySelector('h3')?.textContent || '').toLowerCase();
+                const tags = App.core.search.normalizeText(card.dataset.tags || '');
+                const brandText = App.core.search.normalizeText(card.dataset.brand || card.querySelector('h3')?.textContent || '');
+                const searchText = [
+                    card.dataset.name,
+                    card.dataset.tags,
+                    card.dataset.brand,
+                    card.textContent
+                ].join(' ');
                 const hasOutBadge = !!card.querySelector('.etiqueta.fuera-de-stock');
                 const hasNewBadge = !!card.querySelector('.etiqueta.novedad');
+                const normalizedGender = App.core.search.normalizeText(activeGender);
+                const normalizedStyle = App.core.search.normalizeText(activeStyle);
 
-                const matchesSearch = !q || name.includes(q) || tags.includes(q) || card.textContent.toLowerCase().includes(q);
-                const matchesGender = activeGender === 'all' || tags.includes(activeGender);
+                const matchesSearch = !q || App.core.search.matches(q, searchText);
+                const matchesGender = activeGender === 'all' || tags.includes(normalizedGender);
                 const matchesStyle = activeStyle === 'all'
-                    || (activeStyle === 'diseñador' ? (!tags.includes('nicho') && !tags.includes('arabes')) : tags.includes(activeStyle));
-                const matchesBrand = brand === 'all' || brandText === brand;
+                    || (normalizedStyle === 'disenador' ? (!tags.includes('nicho') && !tags.includes('arabes')) : tags.includes(normalizedStyle));
+                const matchesBrand = brand === 'all' || brandText === brand || App.core.search.matches(brand, searchText);
                 const matchesStock = !hideOut || !hasOutBadge;
                 const matchesNew = !onlyNew || hasNewBadge;
 
