@@ -183,20 +183,22 @@
         var activeStyle = 'all';
 
         function applyFilters() {
-            var brand = brandSelect ? brandSelect.value : 'all';
+            var brand = App.core.search.normalizeText(brandSelect ? brandSelect.value : 'all');
             var hideOut = !!(document.getElementById('stock-filter') && document.getElementById('stock-filter').checked);
             var onlyNew = !!(document.getElementById('new-filter') && document.getElementById('new-filter').checked);
             var onlyCombo = !!(document.getElementById('combo-filter') && document.getElementById('combo-filter').checked);
 
             var visible = 0;
             cards.forEach(function (card) {
-                var tags = (card.dataset.tags || '').toLowerCase();
-                var cardBrand = (card.dataset.brand || '').toLowerCase();
+                var tags = App.core.search.normalizeText(card.dataset.tags || '');
+                var cardBrand = App.core.search.normalizeText(card.dataset.brand || '');
                 var hasOutBadge = !!card.querySelector('.etiqueta.fuera-de-stock');
                 var hasNewBadge = !!card.querySelector('.etiqueta.novedad');
-                var matchesGender = activeGender === 'all' || tags.includes(activeGender);
+                var normalizedGender = App.core.search.normalizeText(activeGender);
+                var normalizedStyle = App.core.search.normalizeText(activeStyle);
+                var matchesGender = activeGender === 'all' || tags.includes(normalizedGender);
                 var matchesStyle = activeStyle === 'all'
-                    || (activeStyle === 'diseñador' ? (!tags.includes('nicho') && !tags.includes('arabes')) : tags.includes(activeStyle));
+                    || (normalizedStyle === 'disenador' ? (!tags.includes('nicho') && !tags.includes('arabes')) : tags.includes(normalizedStyle));
                 var matchesBrand = brand === 'all' || cardBrand.includes(brand);
                 var matchesStock = !hideOut || !hasOutBadge;
                 var matchesNew = !onlyNew || hasNewBadge;

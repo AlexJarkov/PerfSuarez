@@ -4,7 +4,7 @@
             return '';
         }
 
-        const normalized = value.toLowerCase();
+        const normalized = App.core.search.normalizeText(value);
         if (normalized === 'd&g') {
             return 'dolce';
         }
@@ -15,10 +15,16 @@
     }
 
     function getCardMeta(card) {
-        const name = (card.dataset.name || card.textContent || '').toLowerCase();
-        const tags = (card.dataset.tags || '').toLowerCase();
+        const name = App.core.search.normalizeText(card.dataset.name || card.textContent || '');
+        const tags = App.core.search.normalizeText(card.dataset.tags || '');
         const brandStrong = card.querySelector('h3 strong')?.textContent || '';
-        const brandText = (card.dataset.brand || brandStrong || card.querySelector('h3')?.textContent || '').trim().toLowerCase();
+        const brandText = App.core.search.normalizeText((card.dataset.brand || brandStrong || card.querySelector('h3')?.textContent || '').trim());
+        const searchText = [
+            card.dataset.name,
+            card.dataset.tags,
+            card.dataset.brand,
+            card.textContent
+        ].join(' ');
 
         if (brandText && !card.dataset.brand) {
             card.dataset.brand = brandText;
@@ -28,6 +34,7 @@
             name,
             tags,
             brandText,
+            searchText,
             hasOutBadge: !!card.querySelector('.etiqueta.fuera-de-stock, .badge.out-of-stock'),
             hasNewBadge: !!card.querySelector('.etiqueta.novedad, .badge.novedad')
         };
@@ -60,10 +67,10 @@
 
         cards.forEach(card => {
             const meta = getCardMeta(card);
-            const matchesSearch = !options.query || meta.name.includes(options.query) || meta.tags.includes(options.query) || card.textContent.toLowerCase().includes(options.query);
+            const matchesSearch = !options.query || App.core.search.matches(options.query, meta.searchText);
             const matchesCategory = options.category === 'all' || meta.tags.split(/\s+/).includes(options.category) || meta.tags.includes(options.category);
             const normalizedBrand = normalizeBrandValue(options.brand);
-            const matchesBrand = normalizedBrand === 'all' || meta.brandText === normalizedBrand || meta.name.includes(normalizedBrand) || meta.tags.includes(normalizedBrand);
+            const matchesBrand = normalizedBrand === 'all' || meta.brandText === normalizedBrand || App.core.search.matches(normalizedBrand, meta.searchText);
             const matchesStock = !options.hideOutOfStock || !meta.hasOutBadge;
             const matchesNew = !options.onlyNew || meta.hasNewBadge;
             const shouldShow = matchesSearch && matchesCategory && matchesBrand && matchesStock && matchesNew;

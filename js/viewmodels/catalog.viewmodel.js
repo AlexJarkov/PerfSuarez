@@ -48,7 +48,7 @@
 
         const applyFilters = (categoryOverride) => {
             const visible = App.models.catalog.filterCards(cards, {
-                query: (searchInput?.value || '').trim().toLowerCase(),
+                query: App.core.search.normalizeText(searchInput?.value || ''),
                 category: categoryOverride || (categorySelect?.value || 'all'),
                 brand: brandSelect?.value || 'all',
                 hideOutOfStock: !!stockToggle?.checked,
