@@ -223,13 +223,13 @@
 
     function normalizeBrandValue(v) {
         if (!v) return '';
-        v = v.toLowerCase();
+        v = App.core.search.normalizeText(v);
         if (v === 'd&g') return 'dolce';
         if (v === 'mntblanc') return 'montblanc';
         return v;
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    App.core.onReady(function () {
         var grid = document.getElementById('perfume-grid');
         if (!grid) return;
 
@@ -285,7 +285,7 @@
         var activeStyle = 'all';
 
         function applyFilters() {
-            var q = (searchInput ? searchInput.value : '').trim().toLowerCase();
+            var q = App.core.search.normalizeText(searchInput ? searchInput.value : '');
             var brand = normalizeBrandValue(brandSelect ? brandSelect.value : 'all');
             var hideOut = !!(stockToggle && stockToggle.checked);
             var onlyNew = !!(newToggle && newToggle.checked);
@@ -293,17 +293,25 @@
 
             var visible = 0;
             cards.forEach(function (card) {
-                var name = (card.dataset.name || card.textContent || '').toLowerCase();
-                var tags = (card.dataset.tags || '').toLowerCase();
-                var brandText = (card.dataset.brand || (card.querySelector('h3') ? card.querySelector('h3').textContent : '') || '').toLowerCase();
+                var name = App.core.search.normalizeText(card.dataset.name || card.textContent || '');
+                var tags = App.core.search.normalizeText(card.dataset.tags || '');
+                var brandText = App.core.search.normalizeText(card.dataset.brand || (card.querySelector('h3') ? card.querySelector('h3').textContent : '') || '');
+                var searchText = [
+                    card.dataset.name,
+                    card.dataset.tags,
+                    card.dataset.brand,
+                    card.textContent
+                ].join(' ');
                 var hasOutBadge = !!card.querySelector('.etiqueta.fuera-de-stock');
                 var hasNewBadge = !!card.querySelector('.etiqueta.novedad');
 
-                var matchesSearch = !q || name.includes(q) || tags.includes(q) || card.textContent.toLowerCase().includes(q);
-                var matchesGender = activeGender === 'all' || tags.includes(activeGender);
+                var normalizedGender = App.core.search.normalizeText(activeGender);
+                var normalizedStyle = App.core.search.normalizeText(activeStyle);
+                var matchesSearch = !q || App.core.search.matches(q, searchText);
+                var matchesGender = activeGender === 'all' || tags.includes(normalizedGender);
                 var matchesStyle = activeStyle === 'all'
-                    || (activeStyle === 'diseñador' ? (!tags.includes('nicho') && !tags.includes('arabes')) : tags.includes(activeStyle));
-                var matchesBrand = brand === 'all' || tags.includes(brand) || brandText.includes(brand) || name.includes(brand);
+                    || (normalizedStyle === 'disenador' ? (!tags.includes('nicho') && !tags.includes('arabes')) : tags.includes(normalizedStyle));
+                var matchesBrand = brand === 'all' || tags.includes(brand) || brandText.includes(brand) || name.includes(brand) || App.core.search.matches(brand, searchText);
                 var matchesStock = !hideOut || !hasOutBadge;
                 var matchesNew = !onlyNew || hasNewBadge;
 
@@ -349,7 +357,7 @@
         });
 
         applyFilters();
-    }, { once: true });
+    });
 })();
 </script>
 

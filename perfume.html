@@ -132,6 +132,12 @@
                 });
             }
 
+            if (typeof perfume.precio_cuadro === 'number' && perfume.precio_cuadro > 0) {
+                html += '<div class="pricing-section"><h3>Cuadro</h3>';
+                html += '<div class="price-row"><span class="price-size">Decorativo</span>';
+                html += '<span class="price-value">' + perfume.precio_cuadro + ' Bs</span></div></div>';
+            }
+
             return html;
         }
 
@@ -316,7 +322,7 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
+        App.core.onReady(function () {
             var id = getParam('id');
             if (!id) {
                 document.getElementById('not-found').classList.remove('hidden');

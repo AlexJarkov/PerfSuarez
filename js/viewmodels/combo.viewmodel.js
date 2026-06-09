@@ -168,10 +168,15 @@
             searchInput.addEventListener('click', event => event.stopPropagation());
             searchInput.addEventListener('touchstart', event => event.stopPropagation());
             searchInput.addEventListener('input', () => {
-                const query = searchInput.value.toLowerCase();
+                const query = App.core.search.normalizeText(searchInput.value);
                 dropdown.querySelectorAll('.dropdown-item-combo').forEach(item => {
-                    const name = item.querySelector('.dropdown-product-name').textContent.toLowerCase();
-                    item.style.display = name.includes(query) ? '' : 'none';
+                    const product = products[item.dataset.index];
+                    const text = [
+                        product?.nombre,
+                        product?.tipo,
+                        product?.skuBase
+                    ].join(' ');
+                    item.style.display = !query || App.core.search.matches(query, text) ? '' : 'none';
                 });
             });
 

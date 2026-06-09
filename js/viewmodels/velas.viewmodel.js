@@ -24,12 +24,16 @@
         const isNewArrival = card => card.dataset.new === 'true' || card.classList.contains('nueva') || card.querySelector('.badge.novedad, .etiqueta.novedad');
 
         const applyFilters = () => {
-            const query = (searchInput?.value || '').trim().toLowerCase();
+            const query = App.core.search.normalizeText(searchInput?.value || '');
             let visibleCount = 0;
 
             cards.forEach(card => {
-                const name = (card.dataset.name || '').toLowerCase();
-                const shouldShow = (!query || name.includes(query)) &&
+                const searchText = [
+                    card.dataset.name,
+                    card.dataset.tags,
+                    card.textContent
+                ].join(' ');
+                const shouldShow = (!query || App.core.search.matches(query, searchText)) &&
                     (!(stockFilter?.checked) || !isOutOfStock(card)) &&
                     (!(newFilter?.checked) || isNewArrival(card));
 

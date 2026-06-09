@@ -390,6 +390,7 @@
     </main>
 
     <div data-include="footer.html"></div>
+    <script src="js/core/app.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cards = Array.from(document.querySelectorAll('.decant'));
@@ -418,14 +419,18 @@
             const isNewArrival = (card) => card.dataset.new === 'true' || card.classList.contains('nueva') || card.querySelector('.badge.novedad, .etiqueta.novedad') !== null;
 
             const applyFilters = () => {
-                const query = (searchInput?.value || '').trim().toLowerCase();
+                const query = window.PerfSuarez.core.search.normalizeText(searchInput?.value || '');
                 const hideOutOfStock = stockFilter?.checked ?? false;
                 const onlyNew = newFilter?.checked ?? false;
                 let visibleCount = 0;
 
                 cards.forEach(card => {
-                    const name = (card.dataset.name || '').toLowerCase();
-                    const matchesSearch = !query || name.includes(query);
+                    const searchText = [
+                        card.dataset.name,
+                        card.dataset.tags,
+                        card.textContent
+                    ].join(' ');
+                    const matchesSearch = !query || window.PerfSuarez.core.search.matches(query, searchText);
                     const meetsStockRule = !hideOutOfStock || !isOutOfStock(card);
                     const meetsNewRule = !onlyNew || isNewArrival(card);
                     const shouldShow = matchesSearch && meetsStockRule && meetsNewRule;
@@ -525,7 +530,6 @@
             applyFilters();
         });
     </script>
-    <script src="js/core/app.js"></script>
     <script src="js/models/catalog.model.js"></script>
     <script src="js/models/search.model.js"></script>
     <script src="js/models/combo.model.js"></script>
