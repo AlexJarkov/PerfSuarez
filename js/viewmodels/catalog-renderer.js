@@ -3,8 +3,10 @@
 
     const HYPE_RANKS = {
         // ─── NICHO ──────────────────────────────────────────────────────────────────
+        'god-of-fire-stephane-humbert-lucas-777': 0.5,
         'baccarat-rouge-540-extrait-maison-francis-kurkdjian': 1,
         'instant-crush-mancera': 2,
+        'amore-caffe-mancera': 2.5,
         'erba-pura-xerjoff': 3,
         'layton-parfums-de-marly': 4,
         'xj-1861-naxos-xerjoff': 5,
@@ -34,6 +36,7 @@
         'alexandria-ii-xerjoff': 28,
         'herod-parfums-de-marly': 29,
         'cedrat-boise-mancera': 30,
+        'french-riviera-mancera': 30.5,
         'layton-exclusif-parfums-de-marly': 31,
         'galloway-parfums-de-marly': 32,
         'narcotic-delight-initio-parfums-prives': 33,
@@ -70,6 +73,7 @@
         'ultra-male-jean-paul-gaultier': 218,
         'by-the-fireplace-maison-margiela': 219,
         'ombre-leather-tom-ford': 220,
+        'eau-d-ombre-leather-tom-ford': 220.5,
         'the-one-pour-homme-eau-de-parfum-dolce-gabbana': 221,
         'invictus-victory-rabanne': 222,
         '212-vip-men-carolina-herrera': 223,
@@ -108,6 +112,7 @@
         'black-opium-intense-yves-saint-laurent': 254,
         'lost-cherry-tom-ford': 254,
         'black-orchid-tom-ford': 255,
+        'tobacco-vanille-tom-ford': 255.5,
         'cherry-smoke-tom-ford': 256,
         'jazz-club-maison-margiela': 219.5,
         'luna-rossa-carbon-edt-prada': 258,
@@ -142,6 +147,7 @@
         'la-vie-est-belle-l-eau-de-parfum-lancome': 286,
         'idole-lancome': 287,
         'my-way-eau-de-parfum-giorgio-armani': 288,
+        'prada-paradoxe-prada': 288.5,
         'miss-dior-blooming-bouquet-dior': 289,
         'miss-dior-eau-de-toilette-dior': 290,
         'libre-eau-de-toilette-yves-saint-laurent': 291,
@@ -215,6 +221,7 @@
         'acqua-di-gio-absolu-giorgio-armani': 352,
         'aqcua-di-gio-absolu-giorgio-armani': 352,
         'stronger-with-you-powerfully-emporio-armani': 353,
+        'power-of-you-emporio-armani': 353.5,
         'eros-energy-versace': 354,
         'pour-homme-eau-de-toilette-versace': 355,
         'spicebomb-infrared-eau-de-parfum-viktor-rolf': 356,
@@ -255,6 +262,7 @@
         'very-good-girl-glam-carolina-herrera': 384,
         'set-polo-blue-polo-ralph-lauren': 385,
         'aguafresca-citrus-cedro-adolfo-dominguez': 386,
+        'the-icon-antonio-banderas': 387,
 
         // ─── ÁRABES ─────────────────────────────────────────────────────────────────
         'khamrah-lattafa': 600,
