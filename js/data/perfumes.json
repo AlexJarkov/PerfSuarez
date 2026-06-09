@@ -1717,8 +1717,8 @@
     "etiqueta": null,
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": "imagenes/image.webp",
-    "image_miniatura_decant": "imagenes/image.webp",
+    "image_miniatura": "imagenes/fotos-catalogo/chanel/BLEU DE CHANEL L'EXCLUSIF.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/BLEU DE CHANEL L'EXCLUSIF.jpeg",
     "images_gallery": [],
     "notas": {
       "salida": [],
@@ -5536,7 +5536,7 @@
       "30": 670
     },
     "precio_combo": {
-      "125": 1512
+      "125": 1088
     },
     "tags": [
       "hombre",
@@ -5645,10 +5645,11 @@
       "30": 570
     },
     "precio_combo": {
-      "75": 778,
-      "125": 1042,
-      "200": 1450
+      "75": 768,
+      "125": 986,
+      "200": 1307
     },
+    "precio_cuadro": 350,
     "tags": [
       "hombre",
       "jpg"
@@ -5729,17 +5730,27 @@
     "nombre_interno": "Jean Paul Gaultier Le Male Le Parfum",
     "marca": "Jean Paul Gaultier",
     "nombre": "Le Male Le Parfum",
-    "precio_completo": {
-      "ml": 125,
-      "precio": 1230
-    },
+    "precio_completo": [
+      {
+        "ml": 125,
+        "precio": 1230
+      },
+      {
+        "ml": 200,
+        "precio": 2600
+      }
+    ],
     "precios_decants": {
       "5": 110,
       "10": 210,
       "15": 300,
       "30": 570
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 1183,
+      "200": 1885
+    },
+    "precio_cuadro": 350,
     "tags": [
       "hombre",
       "jpg"
@@ -8552,19 +8563,24 @@
     "nombre_interno": "Maison Margiela By The Fireplace",
     "marca": "Maison Margiela",
     "nombre": "By The Fireplace",
-    "precio_completo": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1550
+    },
     "precios_decants": {
       "5": 140,
       "10": 280,
       "15": 380,
       "30": 720
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1534
+    },
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": null,
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/BY THE FIREPLACE.png",
@@ -8609,8 +8625,8 @@
     "etiqueta": null,
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": "imagenes/image.webp",
-    "image_miniatura_decant": "imagenes/image.webp",
+    "image_miniatura": "imagenes/fotos-catalogo/margiela/JAZZ CLUB.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/JAZZ CLUB.jpeg",
     "images_gallery": [],
     "notas": {
       "salida": [
@@ -9606,8 +9622,9 @@
       "30": 1800
     },
     "precio_combo": {
-      "50": 2249
+      "50": 2574
     },
+    "precio_cuadro": 350,
     "tags": [
       "hombre",
       "mujer",
@@ -9666,8 +9683,8 @@
     "etiqueta": null,
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": "imagenes/image.webp",
-    "image_miniatura_decant": "imagenes/image.webp",
+    "image_miniatura": "imagenes/fotos-catalogo/ortoparisi/TERRONI.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/TERRONI.jpeg",
     "images_gallery": [],
     "notas": {
       "salida": [
@@ -9820,10 +9837,16 @@
     "nombre_interno": "Parfums de Marly Layton",
     "marca": "Parfums de Marly",
     "nombre": "Layton",
-    "precio_completo": {
-      "ml": 125,
-      "precio": 3500
-    },
+    "precio_completo": [
+      {
+        "ml": 125,
+        "precio": 3500
+      },
+      {
+        "ml": 200,
+        "precio": 4170
+      }
+    ],
     "precios_decants": {
       "5": 200,
       "10": 380,
@@ -9831,8 +9854,9 @@
       "30": 1020
     },
     "precio_combo": {
-      "125": 3176
+      "125": 3224
     },
+    "precio_cuadro": 350,
     "tags": [
       "hombre",
       "marly",
@@ -10522,8 +10546,8 @@
     "etiqueta": null,
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": "imagenes/image.webp",
-    "image_miniatura_decant": "imagenes/image.webp",
+    "image_miniatura": "imagenes/fotos-catalogo/paco/1 MILLION ELIXIR.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/1 MILLION ELIXIR.jpeg",
     "images_gallery": [],
     "notas": {
       "salida": [
@@ -10748,12 +10772,21 @@
     "nombre_interno": "Rabanne Phantom EDT",
     "marca": "Rabanne",
     "nombre": "Phantom Eau de Toilette",
-    "precio_completo": {
-      "ml": 150,
-      "precio": 1310
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 900
+      },
+      {
+        "ml": 150,
+        "precio": 1310
+      }
+    ],
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 617,
+      "150": 689
+    },
     "tags": [
       "hombre rabanne"
     ],
@@ -11951,6 +11984,7 @@
       "30": 970
     },
     "precio_combo": null,
+    "precio_cuadro": 350,
     "tags": [
       "hombre"
     ],
@@ -12625,6 +12659,7 @@
       "30": 510
     },
     "precio_combo": null,
+    "precio_cuadro": 350,
     "tags": [
       "hombre"
     ],
@@ -13005,6 +13040,7 @@
     "precio_combo": {
       "100": 2899
     },
+    "precio_cuadro": 350,
     "tags": [
       "hombre",
       "mujer",
@@ -13057,8 +13093,9 @@
       "30": 1230
     },
     "precio_combo": {
-      "100": 2329
+      "100": 2282
     },
+    "precio_cuadro": 350,
     "tags": [
       "hombre",
       "mujer",
@@ -13429,6 +13466,7 @@
     "precio_combo": {
       "100": 1145
     },
+    "precio_cuadro": 350,
     "tags": [
       "hombre ysl"
     ],
@@ -13530,66 +13568,38 @@
     }
   },
   {
-    "id": "y-eau-de-parfum-yves-saint-laurent",
+    "id": "y-edp-yves-saint-laurent",
     "nombre_interno": "Yves Saint Laurent Y EDP",
     "marca": "Yves Saint Laurent",
-    "nombre": "Y Eau de Parfum",
-    "precio_completo": null,
+    "nombre": "Y EDP",
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1800
+      },
+      {
+        "ml": 200,
+        "precio": 2030
+      }
+    ],
     "precios_decants": {
       "5": 130,
       "10": 250,
       "15": 360,
       "30": 670
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1612
+    },
+    "precio_cuadro": 350,
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/YSL Y EDP.JPEG",
-    "images_gallery": [],
-    "notas": {
-      "salida": [
-        "Manzana",
-        "Jengibre",
-        "Bergamota"
-      ],
-      "corazon": [
-        "Salvia",
-        "Bayas de enebro",
-        "Geranio"
-      ],
-      "fondo": [
-        "Amberwood",
-        "Haba tonka",
-        "Cedro",
-        "Vetiver",
-        "Olíbano"
-      ]
-    }
-  },
-  {
-    "id": "y-edp-yves-saint-laurent",
-    "nombre_interno": "Yves Saint Laurent Y EDP",
-    "marca": "Yves Saint Laurent",
-    "nombre": "Y EDP",
-    "precio_completo": {
-      "ml": 200,
-      "precio": 2030
-    },
-    "precios_decants": null,
-    "precio_combo": null,
-    "tags": [
-      "hombre ysl"
-    ],
-    "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/ysl/Untitled.png",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/YSL Y EDP.JPEG",
     "images_gallery": [],
     "notas": {
       "salida": [
@@ -13871,8 +13881,8 @@
     "etiqueta": "novedad",
     "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": null,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/ART OF UNIVERSE.png",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ART OF UNIVERSE.jpeg",
     "images_gallery": [],
     "notas": {
       "salida": [],
@@ -13936,13 +13946,371 @@
     "etiqueta": "novedad",
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": null,
+    "image_miniatura": "imagenes/fotos-catalogo/jpg/DIVINE ELIXIR.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/DIVINE ELIXIR.jpeg",
     "images_gallery": [],
     "notas": {
       "salida": [],
       "corazon": [],
       "fondo": []
+    }
+  },
+  {
+    "id": "amore-caffe-mancera",
+    "nombre_interno": "Mancera Amore Caffè",
+    "marca": "Mancera",
+    "nombre": "Amore Caffè",
+    "precio_completo": {
+      "ml": 120,
+      "precio": 1500
+    },
+    "precios_decants": {
+      "5": 140,
+      "10": 280,
+      "15": 380,
+      "30": 720
+    },
+    "precio_combo": {
+      "120": 1028
+    },
+    "tags": [
+      "hombre",
+      "mujer",
+      "unisex",
+      "mancera",
+      "nicho"
+    ],
+    "etiqueta": null,
+    "en_stock_completos": true,
+    "en_stock_decants": false,
+    "image_miniatura": "imagenes/fotos-catalogo/mancera/AMORE CAFFE.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/AMORE CAFFE.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Café",
+        "Amaretto"
+      ],
+      "corazon": [
+        "Helado",
+        "Speculoos"
+      ],
+      "fondo": [
+        "Azúcar morena",
+        "Vainilla",
+        "Ámbar gris"
+      ]
+    }
+  },
+  {
+    "id": "french-riviera-mancera",
+    "nombre_interno": "Mancera French Riviera",
+    "marca": "Mancera",
+    "nombre": "French Riviera",
+    "precio_completo": {
+      "ml": 120,
+      "precio": 1500
+    },
+    "precios_decants": {
+      "5": 140,
+      "10": 280,
+      "15": 380,
+      "30": 730
+    },
+    "precio_combo": null,
+    "tags": [
+      "hombre",
+      "mujer",
+      "unisex",
+      "mancera",
+      "nicho"
+    ],
+    "etiqueta": null,
+    "en_stock_completos": false,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/mancera/FRENCH RIVIERA.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/FRENCH RIVIERA.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Limón",
+        "Naranja",
+        "Mandarina",
+        "Jengibre",
+        "Pimienta"
+      ],
+      "corazon": [
+        "Notas marinas",
+        "Flor de tiaré",
+        "Pino",
+        "Mimosa",
+        "Vetiver"
+      ],
+      "fondo": [
+        "Sal marina",
+        "Almizcle blanco",
+        "Ámbar"
+      ]
+    }
+  },
+  {
+    "id": "god-of-fire-stephane-humbert-lucas-777",
+    "nombre_interno": "Stéphane Humbert Lucas 777 God Of Fire",
+    "marca": "Stéphane Humbert Lucas 777",
+    "nombre": "God Of Fire",
+    "precio_completo": {
+      "ml": 50,
+      "precio": 4300
+    },
+    "precios_decants": {
+      "5": 290,
+      "10": 560,
+      "15": 790,
+      "30": 1480
+    },
+    "precio_combo": {
+      "50": 2834
+    },
+    "tags": [
+      "hombre",
+      "mujer",
+      "unisex",
+      "nicho"
+    ],
+    "etiqueta": null,
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/nicho/GOD OF FIRE.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/GOD OF FIRE.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Mango",
+        "Limón",
+        "Jengibre",
+        "Bayas rojas"
+      ],
+      "corazon": [
+        "Cumarina",
+        "Jazmín",
+        "Cedro"
+      ],
+      "fondo": [
+        "Almizcle",
+        "Oud",
+        "Ámbar",
+        "Aceite de cipriol"
+      ]
+    }
+  },
+  {
+    "id": "the-icon-antonio-banderas",
+    "nombre_interno": "Antonio Banderas The Icon",
+    "marca": "Antonio Banderas",
+    "nombre": "The Icon",
+    "precio_completo": {
+      "ml": 150,
+      "precio": 400
+    },
+    "precios_decants": {
+      "5": 60,
+      "10": 110,
+      "15": 160,
+      "30": 0
+    },
+    "precio_combo": null,
+    "tags": [
+      "hombre"
+    ],
+    "etiqueta": null,
+    "en_stock_completos": true,
+    "en_stock_decants": false,
+    "image_miniatura": "imagenes/fotos-catalogo/banderas/THE ICON EDT.png",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/THE ICON EDT.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Pomelo",
+        "Pimienta negra"
+      ],
+      "corazon": [
+        "Lavanda",
+        "Salvia"
+      ],
+      "fondo": [
+        "Sándalo",
+        "Musgo de roble"
+      ]
+    }
+  },
+  {
+    "id": "power-of-you-emporio-armani",
+    "nombre_interno": "Emporio Armani Power Of You",
+    "marca": "Emporio Armani",
+    "nombre": "Power Of You",
+    "precio_completo": {
+      "ml": 90,
+      "precio": 1650
+    },
+    "precios_decants": {
+      "5": 140,
+      "10": 270,
+      "15": 380,
+      "30": 710
+    },
+    "precio_combo": null,
+    "tags": [
+      "mujer"
+    ],
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/armani/POWER OF YOU.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/POWER OF YOU.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Maracuyá",
+        "Naranja amarga",
+        "Limón"
+      ],
+      "corazon": [
+        "Frangipani",
+        "Notas solares"
+      ],
+      "fondo": [
+        "Vainilla de Madagascar",
+        "Benjuí",
+        "Ládano"
+      ]
+    }
+  },
+  {
+    "id": "prada-paradoxe-prada",
+    "nombre_interno": "Prada Paradoxe",
+    "marca": "Prada",
+    "nombre": "Prada Paradoxe",
+    "precio_completo": null,
+    "precios_decants": {
+      "5": 180,
+      "10": 340,
+      "15": 490,
+      "30": 920
+    },
+    "precio_combo": null,
+    "tags": [
+      "mujer"
+    ],
+    "etiqueta": null,
+    "en_stock_completos": false,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/prada/PRADA PARADOXE.png",
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/PRADA PARADOXE.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Pera",
+        "Mandarina",
+        "Bergamota"
+      ],
+      "corazon": [
+        "Flor de azahar",
+        "Esencia de neroli",
+        "Neroli",
+        "Jazmín sambac"
+      ],
+      "fondo": [
+        "Vainilla bourbon",
+        "Ámbar",
+        "Almizcle blanco",
+        "Benjuí"
+      ]
+    }
+  },
+  {
+    "id": "tobacco-vanille-tom-ford",
+    "nombre_interno": "Tom Ford Tobacco Vanille",
+    "marca": "Tom Ford",
+    "nombre": "Tobacco Vanille",
+    "precio_completo": {
+      "ml": 100,
+      "precio": 4800
+    },
+    "precios_decants": {
+      "5": 360,
+      "10": 680,
+      "15": 970,
+      "30": 0
+    },
+    "precio_combo": null,
+    "tags": [
+      "hombre",
+      "mujer",
+      "unisex"
+    ],
+    "etiqueta": null,
+    "en_stock_completos": false,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/tomford/TOBACCO VANILLE.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/TOBACCO VANILLE.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Hoja de tabaco",
+        "Notas especiadas"
+      ],
+      "corazon": [
+        "Vainilla",
+        "Cacao",
+        "Haba tonka",
+        "Flor de tabaco"
+      ],
+      "fondo": [
+        "Frutos secos",
+        "Notas amaderadas"
+      ]
+    }
+  },
+  {
+    "id": "eau-d-ombre-leather-tom-ford",
+    "nombre_interno": "Tom Ford Eau d'Ombré Leather",
+    "marca": "Tom Ford",
+    "nombre": "Eau d'Ombré Leather",
+    "precio_completo": {
+      "ml": 100,
+      "precio": 2600
+    },
+    "precios_decants": {
+      "5": 190,
+      "10": 360,
+      "15": 510,
+      "30": 970
+    },
+    "precio_combo": {
+      "100": 2115
+    },
+    "tags": [
+      "hombre"
+    ],
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/tomford/EAU D'OMBRE LEATHER.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/EAU D'OMBRE LEATHER.jpeg",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Cardamomo",
+        "Jengibre",
+        "Cilantro"
+      ],
+      "corazon": [
+        "Vainilla",
+        "Cuero"
+      ],
+      "fondo": [
+        "Ambrofix"
+      ]
     }
   }
 ]
