@@ -366,6 +366,17 @@ body.armarcombo-page .dropdown.show {
     overscroll-behavior: contain;
 }
 
+/* Closed dropdowns are position:absolute but still occupy layout, which
+   extends the page's scrollable area and creates a second scrollbar inside
+   the shell iframe (double scroll). Collapse them while hidden so only the
+   open dropdown contributes height. */
+body.armarcombo-page .dropdown:not(.show) {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-width: 0;
+}
+
 body.armarcombo-page .dropdown-backdrop {
     display: none !important;
 }

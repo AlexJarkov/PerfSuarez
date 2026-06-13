@@ -217,6 +217,32 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
         };
     }
 
+    function createCuadroItem(perfume) {
+        if (!perfume || typeof perfume.precio_cuadro !== 'number' || perfume.precio_cuadro <= 0) {
+            return null;
+        }
+
+        const image = perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp';
+
+        return {
+            id: createId('cuadro'),
+            type: 'cuadro',
+            title: 'Cuadro ' + perfume.nombre_interno,
+            subtitle: 'Cuadro decorativo',
+            totalPrice: Number(perfume.precio_cuadro) || 0,
+            image: image,
+            detailLines: [
+                'Cuadro decorativo',
+                `Precio: Bs ${formatPrice(perfume.precio_cuadro)}`
+            ],
+            whatsappLines: [
+                `- Cuadro ${perfume.nombre_interno}`,
+                '  Cuadro decorativo',
+                `  Bs ${formatPrice(perfume.precio_cuadro)}`
+            ]
+        };
+    }
+
     function createComboItem(summary) {
         if (!summary || !Array.isArray(summary.items) || !summary.items.length) {
             return null;
@@ -348,6 +374,7 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
         buildWhatsAppUrl,
         clear,
         createComboItem,
+        createCuadroItem,
         createMysteryBoxItem,
         createPerfumeItem,
         formatPrice,

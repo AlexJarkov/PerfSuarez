@@ -278,6 +278,7 @@
         'yara-candy-lattafa': 610,
         '9am-dive-afnan': 611,
         'turathi-blue-afnan': 612,
+        'turathi-electric-afnan': 612.5,
         'liquid-brun-french-avenue': 613,
         'amber-oud-gold-edition-al-haramain': 614,
         'amber-oud-acqua-dubai-al-haramain': 615,
@@ -356,7 +357,11 @@
 
     function buildTagsHtml(perfume, mode) {
         const parts = [];
-        const inStock = mode === 'perfumes' ? perfume.en_stock_completos : perfume.en_stock_decants;
+        const inStock = mode === 'perfumes'
+            ? perfume.en_stock_completos
+            : mode === 'cuadros'
+                ? true
+                : perfume.en_stock_decants;
 
         if (!inStock) {
             parts.push('<span class="etiqueta fuera-de-stock">Fuera de stock</span>');
@@ -372,6 +377,11 @@
     }
 
     function buildPriceHtml(perfume, mode) {
+        if (mode === 'cuadros') {
+            if (perfume.precio_cuadro == null) return '';
+            return `<p class="price-label">Cuadro - ${perfume.precio_cuadro} Bs</p>`;
+        }
+
         if (mode === 'perfumes') {
             const inStock = perfume.en_stock_completos;
             if (!inStock || !perfume.precio_completo) return '';
@@ -396,7 +406,8 @@
     }
 
     function getImage(perfume, mode) {
-        if (mode === 'perfumes') {
+        if (mode === 'perfumes' || mode === 'cuadros') {
+            // Cuadros reuse the full-bottle catalog photo of the perfume.
             return perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp';
         }
         return perfume.image_miniatura_decant || perfume.image_miniatura || 'imagenes/image.webp';
@@ -407,6 +418,11 @@
     }
 
     function getSortPrice(perfume, mode) {
+        if (mode === 'cuadros') {
+            const value = Number(perfume.precio_cuadro);
+            return Number.isFinite(value) ? value : Number.NaN;
+        }
+
         if (mode === 'perfumes') {
             if (!perfume.precio_completo) return Number.NaN;
             const entries = Array.isArray(perfume.precio_completo) ? perfume.precio_completo : [perfume.precio_completo];
@@ -477,7 +493,7 @@
         const tags = perfume.tags.join(' ');
         const priceHtml = buildPriceHtml(perfume, mode);
         const tagsHtml = buildTagsHtml(perfume, mode);
-        const viewButtonHtml = mode === 'perfumes' || mode === 'decants'
+        const viewButtonHtml = mode === 'perfumes' || mode === 'decants' || mode === 'cuadros'
             ? '<button class="card-view-btn" type="button">Ver</button>'
             : '';
         const sortPrice = getSortPrice(perfume, mode);
@@ -500,6 +516,7 @@
         const perfumes = App.data.perfumes.filter(p => {
             if (mode === 'perfumes') return p.precio_completo !== null || p.en_stock_completos === false;
             if (mode === 'decants') return p.precios_decants !== null || p.en_stock_decants === false;
+            if (mode === 'cuadros') return p.precio_cuadro != null;
             return true;
         });
 
@@ -507,6 +524,7 @@
         const filtered = perfumes.filter(p => {
             if (mode === 'perfumes') return p.image_miniatura !== null;
             if (mode === 'decants') return p.image_miniatura_decant !== null || p.precios_decants !== null;
+            if (mode === 'cuadros') return p.precio_cuadro != null;
             return true;
         });
 

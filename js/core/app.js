@@ -373,6 +373,11 @@
         return PerfSuarez.core.navigateToShell('perfume.html?id=' + encodeURIComponent(id));
     };
 
+    PerfSuarez.core.navigateToCuadroDetail = function navigateToCuadroDetail(id) {
+        PerfSuarez.core.rememberReturnRoute(PerfSuarez.core.getCurrentShellRoute());
+        return PerfSuarez.core.navigateToShell('perfume.html?id=' + encodeURIComponent(id) + '&tipo=cuadro');
+    };
+
     PerfSuarez.core.navigateToSearch = function navigateToSearch(query) {
         return PerfSuarez.core.navigateToShell('search.html?q=' + encodeURIComponent(query));
     };
