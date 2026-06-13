@@ -31,6 +31,12 @@
             description: 'La Mystery Box de Perfumería Suárez: una selección sorpresa de perfumes nicho y de diseñador curada especialmente para vos.'
         },
         {
+            slug: 'cuadros',
+            src: 'cuadros.html',
+            title: 'Cuadros de Perfumes | Perfumería Suárez Bolivia',
+            description: 'Cuadros decorativos inspirados en los frascos más icónicos del catálogo de Perfumería Suárez.'
+        },
+        {
             slug: 'aux',
             src: 'search.html',
             title: 'Perfumería Suárez',
@@ -38,7 +44,7 @@
         }
     ];
 
-    const PRIMARY_PANEL_COUNT = 5;
+    const PRIMARY_PANEL_COUNT = 6;
     const AUX_PANEL_INDEX = PANEL_META.length - 1;
 
     function initCatalogShell() {

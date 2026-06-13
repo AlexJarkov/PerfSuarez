@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+        <title>Cuadros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/catalog-shared.css">
+    <link rel="stylesheet" href="css/pages/cuadros.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="imagenes/applogo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
+    <meta property="og:title" content="Cuadros">
+    <meta property="og:description" content="Cuadros decorativos inspirados en tus perfumes favoritos.">
+    <meta property="og:image" content="https://alexjarkov.github.io/PerfSuarez/imagenes/miniatura.JPEG">
+    <meta property="og:url" content="http://alexjarkov.github.io/PerfSuarez/cuadros.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="cuadros-page">
+    <main class="page-shell">
+        <section id="catalogo" class="catalog-section">
+            <div class="catalog-intro">
+                <div class="section-heading">
+                    <span class="eyebrow">Decoración olfativa</span>
+                    <h1>Cuadros de tus perfumes favoritos</h1>
+                    <p>Láminas decorativas inspiradas en los frascos más icónicos del catálogo. Perfectas para vestir tu espacio con tu fragancia preferida.</p>
+                </div>
+            </div>
+            <div class="catalog-controls">
+                <div class="search-field">
+                    <label for="cuadro-search">Buscar cuadros</label>
+                    <input type="text" id="cuadro-search" placeholder="Introduce nombre o casa">
+                </div>
+                <div class="select-field">
+                    <label for="cuadro-brand">Marca</label>
+                    <select id="cuadro-brand">
+                        <option value="all">Todas las marcas</option>
+                    </select>
+                </div>
+                <div class="select-field">
+                    <label for="cuadro-sort">Orden</label>
+                    <select id="cuadro-sort">
+                        <option value="hype">Más hypeado</option>
+                        <option value="name-asc">Alfabético A-Z</option>
+                        <option value="name-desc">Alfabético Z-A</option>
+                        <option value="price-asc">Precio (Menor a mayor)</option>
+                        <option value="price-desc">Precio (Mayor a menor)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="no-results-message" class="empty-state" aria-live="polite">
+                <p>Perdón pariente... No tenemos cuadros que coincidan con tu búsqueda :(</p>
+            </div>
+            <div class="fragrance-grid cuadro-grid" id="cuadro-grid"></div>
+        </section>
+    </main>
+
+    <script src="js/core/app.js"></script>
+    <script src="js/data/perfumes-data.js"></script>
+    <script src="js/views/catalog.view.js"></script>
+    <script src="js/viewmodels/catalog-renderer.js"></script>
+    <script src="js/viewmodels/cuadros.viewmodel.js"></script>
+
+</body>
+
+</html>

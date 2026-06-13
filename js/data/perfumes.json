@@ -429,6 +429,55 @@
     }
   },
   {
+    "id": "turathi-electric-afnan",
+    "nombre_interno": "AFNAN Turathi Electric",
+    "marca": "AFNAN",
+    "nombre": "Turathi Electric",
+    "precio_completo": {
+      "ml": 90,
+      "precio": 530
+    },
+    "precios_decants": {
+      "5": 50,
+      "10": 100,
+      "15": 140,
+      "30": 360
+    },
+    "precio_combo": {
+      "90": 451
+    },
+    "tags": [
+      "hombre",
+      "afnan",
+      "arabes"
+    ],
+    "etiqueta": null,
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/TURATHI ELECTRIC.jpeg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/TURATHI ELECTRIC.png",
+    "images_gallery": [],
+    "notas": {
+      "salida": [
+        "Bergamota",
+        "Pomelo rosa",
+        "Pera",
+        "Mandarina"
+      ],
+      "corazon": [
+        "Manzana",
+        "Cedro",
+        "Flor de azahar"
+      ],
+      "fondo": [
+        "Vainilla",
+        "Ámbar seco",
+        "Almizcle",
+        "Ambroxan"
+      ]
+    }
+  },
+  {
     "id": "amber-oud-acqua-dubai-al-haramain",
     "nombre_interno": "Al Haramain Amber Oud Acqua Dubai",
     "marca": "Al Haramain",
@@ -14116,7 +14165,7 @@
       "5": 60,
       "10": 110,
       "15": 160,
-      "30": 0
+      "30": 310
     },
     "precio_combo": null,
     "tags": [
@@ -14240,7 +14289,7 @@
       "5": 360,
       "10": 680,
       "15": 970,
-      "30": 0
+      "30": 1840
     },
     "precio_combo": null,
     "tags": [

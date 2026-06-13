@@ -27,7 +27,11 @@
         }
 
         Object.keys(DECANT_PRICE_RULES).forEach(function (size) {
-            if (Object.prototype.hasOwnProperty.call(normalizedPrices, size)) {
+            var current = Number(normalizedPrices[size]);
+            // Auto-calculate when the size is missing OR holds a non-positive
+            // / invalid value (e.g. a placeholder 0), so a stray 0 in the data
+            // never reaches the UI.
+            if (Number.isFinite(current) && current > 0) {
                 return;
             }
 

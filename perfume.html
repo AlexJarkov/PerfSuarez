@@ -187,9 +187,21 @@
             return html;
         }
 
-        function buildWhatsAppUrl(perfume) {
-            var msg = 'Hola! Quisiera saber si tienen disponible el perfume ' + perfume.nombre_interno + '!';
+        function buildWhatsAppUrl(perfume, mode) {
+            var msg = mode === 'cuadro'
+                ? 'Hola! Quisiera pedir el cuadro de ' + perfume.nombre_interno + '!'
+                : 'Hola! Quisiera saber si tienen disponible el perfume ' + perfume.nombre_interno + '!';
             return 'https://wa.me/' + WHATSAPP_NUMBER + '/?text=' + encodeURIComponent(msg);
+        }
+
+        function renderCuadroComposer(perfume) {
+            return ''
+                + '<div class="purchase-section">'
+                +   '<h3>Cuadro decorativo</h3>'
+                +   '<div class="price-row"><span class="price-size">Cuadro</span>'
+                +     '<span class="price-value">' + perfume.precio_cuadro + ' Bs</span></div>'
+                +   '<button type="button" class="cart-add-btn" id="cart-add-btn">Añadir al carrito</button>'
+                + '</div>';
         }
 
         function getAvailablePurchaseOptions(perfume) {
@@ -244,9 +256,12 @@
                 + '</div>';
         }
 
-        function render(perfume) {
+        function render(perfume, mode) {
+            var isCuadro = mode === 'cuadro';
             var root = document.getElementById('detail-root');
-            var images = buildGalleryImages(perfume);
+            var images = isCuadro
+                ? [perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp']
+                : buildGalleryImages(perfume);
 
             var thumbsHtml = images.length > 1
                 ? '<div class="gallery-thumbs">' + images.map(function (src, i) {
@@ -266,16 +281,16 @@
                 +   '<div class="product-info">'
                 +     '<p class="product-brand">' + perfume.marca + '</p>'
                 +     '<h1 class="product-name">' + perfume.nombre + '</h1>'
-                +     '<div class="product-tags">' + renderTags(perfume) + '</div>'
-                +     renderCartComposer(perfume)
-                +     '<a href="' + buildWhatsAppUrl(perfume) + '" target="_blank" rel="noopener" class="whatsapp-btn">' + waBtn + ' Pedir perfume directo</a>'
-                +     (perfume.precio_combo ? '<a href="javascript:void(0)" class="combo-nav-btn" id="combo-nav-btn">Arma Tu Combo</a>' : '')
-                +     renderPricing(perfume)
-                +     renderNotes(perfume)
+                +     '<div class="product-tags">' + (isCuadro ? '<span class="etiqueta tag-cat">Cuadro decorativo</span>' : renderTags(perfume)) + '</div>'
+                +     (isCuadro ? renderCuadroComposer(perfume) : renderCartComposer(perfume))
+                +     '<a href="' + buildWhatsAppUrl(perfume, mode) + '" target="_blank" rel="noopener" class="whatsapp-btn">' + waBtn + (isCuadro ? ' Pedir cuadro directo' : ' Pedir perfume directo') + '</a>'
+                +     (!isCuadro && perfume.precio_combo ? '<a href="javascript:void(0)" class="combo-nav-btn" id="combo-nav-btn">Arma Tu Combo</a>' : '')
+                +     (isCuadro ? '' : renderPricing(perfume))
+                +     (isCuadro ? '' : renderNotes(perfume))
                 +   '</div>'
                 + '</div>';
 
-            document.title = perfume.nombre + ' - ' + perfume.marca + ' | Perfumería Suárez';
+            document.title = (isCuadro ? 'Cuadro ' : '') + perfume.nombre + ' - ' + perfume.marca + ' | Perfumería Suárez';
 
             // Gallery thumbnail click
             var thumbs = root.querySelectorAll('.gallery-thumbs img');
@@ -299,7 +314,12 @@
 
             var cartAddBtn = document.getElementById('cart-add-btn');
             var cartSizeSelect = document.getElementById('cart-size-select');
-            if (cartAddBtn && cartSizeSelect && App.models.cart) {
+            if (isCuadro && cartAddBtn && App.models.cart) {
+                cartAddBtn.addEventListener('click', function () {
+                    App.models.cart.addItem(App.models.cart.createCuadroItem(perfume));
+                    App.viewmodels.cart && App.viewmodels.cart.openCart();
+                });
+            } else if (cartAddBtn && cartSizeSelect && App.models.cart) {
                 cartAddBtn.addEventListener('click', function () {
                     var selected = cartSizeSelect.value ? JSON.parse(decodeURIComponent(cartSizeSelect.value)) : null;
                     if (!selected) {
@@ -335,7 +355,10 @@
                 return;
             }
 
-            render(perfume);
+            var mode = (getParam('tipo') === 'cuadro' && typeof perfume.precio_cuadro === 'number' && perfume.precio_cuadro > 0)
+                ? 'cuadro'
+                : 'perfume';
+            render(perfume, mode);
 
             // Tell parent iframe to hide navbar
             if (window.parent && window.parent !== window) {

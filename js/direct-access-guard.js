@@ -18,6 +18,8 @@
         '/armarcombo.html': '/armarcombo',
         '/mysterybox': '/mysterybox',
         '/mysterybox.html': '/mysterybox',
+        '/cuadros': '/cuadros',
+        '/cuadros.html': '/cuadros',
         '/velas': '/velas',
         '/velas.html': '/velas',
         '/contacto': '/contacto',
