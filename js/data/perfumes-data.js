@@ -56,6 +56,11 @@
         });
     }
 
+    var MANIFEST_JSON = "js/data/images-manifest.json";
+    // Set con las rutas de imagen que el catálogo YA tiene en su CDN.
+    // null = manifiesto no disponible (se asume CDN para todo).
+    var imageManifest = null;
+
     function apiUrl(page) {
         return BASE_URL + API_PATH + "?page=" + page + "&limit=" + PAGE_SIZE;
     }
@@ -67,6 +72,44 @@
             }
             return response.json();
         });
+    }
+
+    // Carga el manifiesto de imágenes del CDN del catálogo. Si falla, devuelve
+    // null (se asume que toda imagen está en el CDN -> ruta relativa).
+    function loadManifest() {
+        return fetchJson(MANIFEST_JSON)
+            .then(function (arr) { return Array.isArray(arr) ? new Set(arr) : null; })
+            .catch(function () { return null; });
+    }
+
+    function erpImageUrl(rel) {
+        return BASE_URL + "/acciones/catalogo_imagen.php?path=" +
+            encodeURIComponent(rel.replace(/^imagenes\//, ""));
+    }
+
+    // Enfoque mixto: si la imagen está en el manifiesto del CDN, se usa su ruta
+    // relativa (la sirve GitHub Pages); si NO está, se pide al ERP.
+    function resolveImagePath(path) {
+        if (!path || typeof path !== "string") return path;       // preserva null
+        if (/^https?:\/\//i.test(path)) return path;              // ya es absoluta
+        // NFC para que coincidan nombres acentuados con el manifiesto.
+        var rel = path.replace(/^\/+/, "").normalize("NFC");
+        if (!BASE_URL || !imageManifest || imageManifest.has(rel)) {
+            return rel;                                            // está en el CDN
+        }
+        return erpImageUrl(rel);                                  // sólo lo nuevo va al ERP
+    }
+
+    function resolveImages(perfumes) {
+        perfumes.forEach(function (p) {
+            if (!p) return;
+            if ("image_miniatura" in p) p.image_miniatura = resolveImagePath(p.image_miniatura);
+            if ("image_miniatura_decant" in p) p.image_miniatura_decant = resolveImagePath(p.image_miniatura_decant);
+            if (Array.isArray(p.images_gallery)) {
+                p.images_gallery = p.images_gallery.map(resolveImagePath);
+            }
+        });
+        return perfumes;
     }
 
     // Carga progresiva (lazy) desde el endpoint del ERP: trae la primera página y
@@ -121,9 +164,13 @@
             })
             : loadStatic();
 
-        return source
-            .then(function (perfumes) {
+        // El manifiesto se carga en paralelo (sólo se necesita si hay ERP).
+        return Promise.all([source, BASE_URL ? loadManifest() : Promise.resolve(null)])
+            .then(function (results) {
+                var perfumes = results[0];
+                imageManifest = results[1];
                 ensureDecantPrices(perfumes);
+                resolveImages(perfumes);
                 App.data.perfumes = perfumes;
                 return perfumes;
             })
@@ -153,6 +200,7 @@
         return fetchJson(url).then(function (payload) {
             var data = (payload && Array.isArray(payload.data)) ? payload.data : [];
             ensureDecantPrices(data);
+            resolveImages(data);
             return data;
         });
     };

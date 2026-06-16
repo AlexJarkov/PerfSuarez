@@ -14,6 +14,15 @@ OUT_FILE="$ROOT_DIR/js/runtime-config.js"
 BASE_URL=""
 DISABLE_SHELL_REDIRECT="false"
 
+# Sin .env: preserva los valores actuales de runtime-config.js (no los borra).
+if [ ! -f "$ENV_FILE" ] && [ -f "$OUT_FILE" ]; then
+  existing="$(sed -n 's/.*CATALOG_BASE_URL = "\(.*\)".*/\1/p' "$OUT_FILE")"
+  BASE_URL="$existing"
+  existingDsr="$(sed -n 's/.*DISABLE_SHELL_REDIRECT = \([a-z]*\).*/\1/p' "$OUT_FILE")"
+  [ -n "$existingDsr" ] && DISABLE_SHELL_REDIRECT="$existingDsr"
+  echo "AVISO: no hay .env; se conservan los valores actuales de runtime-config.js."
+fi
+
 if [ -f "$ENV_FILE" ]; then
   while IFS= read -r line || [ -n "$line" ]; do
     case "$line" in
@@ -45,3 +54,10 @@ window.DISABLE_SHELL_REDIRECT = ${DISABLE_SHELL_REDIRECT};
 EOF
 
 echo "Generado $OUT_FILE (BASE_URL='${BASE_URL}', DISABLE_SHELL_REDIRECT=${DISABLE_SHELL_REDIRECT})"
+
+# Regenera también el manifiesto de imágenes del CDN (enfoque mixto).
+if command -v node >/dev/null 2>&1; then
+  node "$ROOT_DIR/scripts/build-images-manifest.js"
+else
+  echo "AVISO: node no disponible; ejecuta 'node scripts/build-images-manifest.js' para regenerar el manifiesto de imágenes."
+fi
