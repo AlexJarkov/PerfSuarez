@@ -406,8 +406,11 @@
     }
 
     function getImage(perfume, mode) {
-        if (mode === 'perfumes' || mode === 'cuadros') {
-            // Cuadros reuse the full-bottle catalog photo of the perfume.
+        if (mode === 'cuadros') {
+            // Prefer the dedicated cuadro photo; fall back to the full-bottle catalog photo.
+            return perfume.image_cuadro || perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp';
+        }
+        if (mode === 'perfumes') {
             return perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp';
         }
         return perfume.image_miniatura_decant || perfume.image_miniatura || 'imagenes/image.webp';
@@ -442,6 +445,11 @@
     }
 
     function getHypeRank(perfume, fallbackIndex) {
+        // El ERP es la fuente de verdad del orden: si el API envía `orden`, se usa.
+        if (perfume.orden != null && Number.isFinite(Number(perfume.orden))) {
+            return Number(perfume.orden);
+        }
+        // Fallback (modo estático sin ERP): mapa curado y, por último, orden de aparición.
         return Object.prototype.hasOwnProperty.call(HYPE_RANKS, perfume.id)
             ? HYPE_RANKS[perfume.id]
             : 1000 + fallbackIndex;

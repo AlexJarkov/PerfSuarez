@@ -105,6 +105,7 @@
             if (!p) return;
             if ("image_miniatura" in p) p.image_miniatura = resolveImagePath(p.image_miniatura);
             if ("image_miniatura_decant" in p) p.image_miniatura_decant = resolveImagePath(p.image_miniatura_decant);
+            if ("image_cuadro" in p) p.image_cuadro = resolveImagePath(p.image_cuadro);
             if (Array.isArray(p.images_gallery)) {
                 p.images_gallery = p.images_gallery.map(resolveImagePath);
             }

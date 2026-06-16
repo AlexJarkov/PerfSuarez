@@ -260,7 +260,7 @@
             var isCuadro = mode === 'cuadro';
             var root = document.getElementById('detail-root');
             var images = isCuadro
-                ? [perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp']
+                ? [perfume.image_cuadro || perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp']
                 : buildGalleryImages(perfume);
 
             var thumbsHtml = images.length > 1
