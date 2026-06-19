@@ -11,12 +11,15 @@ body.home-hub {
     height: var(--app-height);
     width: 100%;
     max-width: 100%;
-    background: var(--surface);
+    background-color: var(--surface);
+    background-image: var(--marble-image);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--ink);
     display: grid;
     place-items: center;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-body);
 }
 
 .home-launcher {
@@ -38,72 +41,100 @@ body.home-hub {
     transition: width 0.3s ease;
 }
 
-.home-search {
+/* ---- Novedades (reemplaza al buscador principal de inicio) ---- */
+.home-novedades {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(10px, 1.6vh, 16px);
+}
+
+.home-novedades__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: none;
+    letter-spacing: 0.28em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gold-deep);
+}
+
+.home-novedades__eyebrow::before,
+.home-novedades__eyebrow::after {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--gold-border);
+}
+
+.home-novedades__viewport {
+    width: min(82%, calc(34vh * 0.8));
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--gold-border);
+    background: var(--bg-secondary);
+    box-shadow: 0 22px 50px rgba(17, 16, 14, 0.16);
+}
+
+.home-novedades__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    /* El gesto horizontal lo consume el carrusel; el shell lo ignora
+       (ver data-shell-swipe-ignore en el recuadro). */
+    touch-action: pan-x;
+}
+
+.home-novedades__track::-webkit-scrollbar {
+    display: none;
+}
+
+.home-novedades__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
     display: block;
 }
 
-.home-search__control {
+.home-novedades__slide img {
     width: 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 12px;
-    padding: 10px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(17, 17, 17, 0.12);
-    box-shadow: 0 18px 44px rgba(17, 17, 17, 0.08);
-    box-sizing: border-box;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.home-search__input {
-    width: 100%;
-    min-width: 0;
-    border: 0;
+.home-novedades__dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 16px;
+}
+
+.home-novedades__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 1px solid var(--gold-border);
+    border-radius: 999px;
     background: transparent;
-    padding: 12px 16px;
-    border-radius: 16px;
-    font: inherit;
-    font-size: 0.98rem;
-    color: var(--ink);
-}
-
-.home-search__input::placeholder {
-    color: rgba(17, 17, 17, 0.5);
-}
-
-.home-search__input:focus {
-    outline: none;
-}
-
-.home-search__control:focus-within {
-    border-color: rgba(26, 112, 64, 0.45);
-    box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12), 0 18px 44px rgba(17, 17, 17, 0.08);
-}
-
-.home-search__button {
-    border: 0;
-    border-radius: 18px;
-    padding: 0 20px;
-    min-height: 52px;
-    background: var(--ink);
-    color: #fff;
-    font: inherit;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 }
 
-.home-search__button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(17, 17, 17, 0.16);
-}
-
-.home-search__button:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(26, 112, 64, 0.22);
+.home-novedades__dot.is-active {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: scale(1.15);
 }
 
 .home-actions {
@@ -116,7 +147,8 @@ body.home-hub {
 
 .home-action {
     border-radius: 24px;
-    border: 1px solid rgba(17, 17, 17, 0.12);
+    border: 1px solid var(--gold-border);
+    background: var(--bg-secondary);
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -125,7 +157,7 @@ body.home-hub {
     gap: 8px;
     min-height: clamp(90px, 14vh, 140px);
     color: var(--ink);
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.08em;
     font-weight: 600;
     font-size: 0.68rem;
@@ -135,7 +167,7 @@ body.home-hub {
 
 .home-action:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(26, 112, 64, 0.4);
+    box-shadow: 0 0 0 2px rgba(183, 146, 76, 0.4);
 }
 
 .home-action:hover {
@@ -195,8 +227,8 @@ body.home-hub {
         gap: clamp(14px, 4vh, 22px);
     }
 
-    .home-search__control {
-        padding: 8px;
+    .home-novedades__viewport {
+        width: min(70%, calc(30vh * 0.8));
     }
 
     .home-action {
@@ -214,14 +246,6 @@ body.home-hub {
         padding-inline: 12px;
     }
 
-    .home-search__control {
-        grid-template-columns: 1fr;
-    }
-
-    .home-search__button {
-        width: 100%;
-    }
-
     .home-action {
         font-size: 0.62rem;
         letter-spacing: 0.06em;
@@ -230,5 +254,55 @@ body.home-hub {
     .home-action__icon {
         width: 28px;
         height: 28px;
+    }
+}
+
+/* ---- Escritorio: Novedades a la izquierda de los botones (más grandes).
+   Solo aplica desde 900px; la vista Mobile no se altera. ---- */
+@media (min-width: 900px) {
+    .home-launcher {
+        width: min(1120px, 94vw);
+        display: grid;
+        grid-template-columns: minmax(300px, 380px) 1fr;
+        grid-template-areas:
+            "logo logo"
+            "novedades actions";
+        column-gap: clamp(32px, 4vw, 64px);
+        row-gap: clamp(24px, 4vh, 44px);
+    }
+
+    .home-logo {
+        grid-area: logo;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .home-novedades {
+        grid-area: novedades;
+        align-self: center;
+    }
+
+    .home-novedades__viewport {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .home-actions {
+        grid-area: actions;
+        grid-template-rows: repeat(2, 1fr);
+        gap: clamp(18px, 1.8vw, 26px);
+    }
+
+    .home-action {
+        min-height: clamp(180px, 24vh, 240px);
+        gap: 12px;
+        border-radius: 28px;
+        font-size: 0.84rem;
+        letter-spacing: 0.1em;
+    }
+
+    .home-action__icon {
+        width: 44px;
+        height: 44px;
     }
 }

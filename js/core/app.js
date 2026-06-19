@@ -192,7 +192,7 @@
         if (targetText.indexOf(token) >= 0) {
             return 9 + token.length;
         }
-        if (token.length >= 4 && targetTokens.some(targetToken => targetToken.indexOf(token) >= 0 || token.indexOf(targetToken) >= 0)) {
+        if (token.length >= 4 && targetTokens.some(targetToken => targetToken.length >= 4 && (targetToken.indexOf(token) >= 0 || token.indexOf(targetToken) >= 0))) {
             return 6 + token.length;
         }
 

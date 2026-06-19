@@ -1,7 +1,8 @@
 body.armarcombo-page {
-    background:
-        radial-gradient(circle at top, rgba(26, 112, 64, 0.12), transparent 28%),
-        linear-gradient(180deg, #eef4ef 0%, var(--surface) 18%, var(--surface) 100%);
+    background-color: var(--surface);
+    background-image: var(--marble-image);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--ink);
 }
 
@@ -46,7 +47,7 @@ body.armarcombo-page .catalog-intro::before {
     height: 240px;
     top: -120px;
     right: -90px;
-    background: radial-gradient(circle, rgba(26, 112, 64, 0.16), transparent 68%);
+    background: radial-gradient(circle, rgba(183, 146, 76, 0.16), transparent 68%);
 }
 
 body.armarcombo-page .catalog-intro::after {
@@ -73,12 +74,12 @@ body.armarcombo-page .eyebrow {
     min-height: 34px;
     padding: 0 16px;
     border-radius: 999px;
-    background: rgba(26, 112, 64, 0.1);
+    background: rgba(183, 146, 76, 0.1);
     color: var(--accent-dark);
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.16em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 body.armarcombo-page .section-heading h1 {
@@ -128,16 +129,16 @@ body.armarcombo-page .combo-type-tab {
 }
 
 body.armarcombo-page .combo-type-tab:hover {
-    border-color: rgba(26, 112, 64, 0.22);
+    border-color: rgba(183, 146, 76, 0.22);
     color: var(--accent-dark);
     transform: translateY(-1px);
 }
 
 body.armarcombo-page .combo-type-tab.active {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
-    box-shadow: 0 14px 28px rgba(26, 112, 64, 0.18);
+    background: var(--black-strong);
+    border-color: var(--gold-border);
+    color: var(--gold-light);
+    box-shadow: 0 14px 28px rgba(17, 16, 14, 0.22);
 }
 
 body.armarcombo-page .quantity-chip-row {
@@ -151,7 +152,7 @@ body.armarcombo-page .filter-group-label {
     font-size: 0.76rem;
     font-weight: 800;
     letter-spacing: 0.18em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--muted-ink, #777);
 }
 
@@ -213,8 +214,8 @@ body.armarcombo-page .combo-item:hover {
 }
 
 body.armarcombo-page .combo-item.selected {
-    border-color: rgba(26, 112, 64, 0.36);
-    box-shadow: 0 10px 28px rgba(26, 112, 64, 0.16);
+    border-color: rgba(183, 146, 76, 0.36);
+    box-shadow: 0 10px 28px rgba(183, 146, 76, 0.16);
 }
 
 body.armarcombo-page .combo-item--empty .combo-card-img {
@@ -266,7 +267,7 @@ body.armarcombo-page .combo-selection .combo-card-img {
 body.armarcombo-page .combo-card-label {
     font-size: 0.72rem;
     font-weight: 800;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.16em;
     color: var(--muted-ink);
 }
@@ -287,8 +288,8 @@ body.armarcombo-page .dropdown-toggle {
     min-height: 50px;
     padding: 14px 18px;
     border-radius: 18px;
-    border: 1.5px solid rgba(26, 112, 64, 0.18);
-    background: rgba(26, 112, 64, 0.06);
+    border: 1.5px solid rgba(183, 146, 76, 0.18);
+    background: rgba(183, 146, 76, 0.06);
     color: var(--accent-dark);
     font-family: inherit;
     font-size: 0.92rem;
@@ -299,9 +300,9 @@ body.armarcombo-page .dropdown-toggle {
 }
 
 body.armarcombo-page .dropdown-toggle:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
+    background: var(--black-strong);
+    border-color: var(--gold-border);
+    color: var(--gold-light);
     transform: translateY(-1px);
 }
 
@@ -331,7 +332,7 @@ body.armarcombo-page .size-selector {
 body.armarcombo-page .size-selector:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(26, 112, 64, 0.1);
+    box-shadow: 0 0 0 3px rgba(183, 146, 76, 0.1);
 }
 
 body.armarcombo-page .dropdown {
@@ -399,7 +400,7 @@ body.armarcombo-page .dropdown-search {
 
 body.armarcombo-page .dropdown-search:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(26, 112, 64, 0.1);
+    box-shadow: 0 0 0 3px rgba(183, 146, 76, 0.1);
 }
 
 body.armarcombo-page .dropdown-items-grid {
@@ -427,8 +428,8 @@ body.armarcombo-page .dropdown-item-combo {
 }
 
 body.armarcombo-page .dropdown-item-combo:hover {
-    border-color: rgba(26, 112, 64, 0.26);
-    background: rgba(26, 112, 64, 0.06);
+    border-color: rgba(183, 146, 76, 0.26);
+    background: rgba(183, 146, 76, 0.06);
     transform: translateY(-1px);
 }
 
@@ -475,7 +476,7 @@ body.armarcombo-page .combo-savings-text {
 body.armarcombo-page .combo-total-label {
     margin: 0;
     font-size: 0.78rem;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.18em;
     color: var(--muted-ink);
 }

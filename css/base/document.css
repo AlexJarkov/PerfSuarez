@@ -25,15 +25,31 @@ body {
     display: flex;
     flex-direction: column;
     min-height: var(--app-height);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-body);
     margin: 0;
     padding: 0;
     padding-top: calc(var(--header-height) + env(safe-area-inset-top) + 32px);
     box-sizing: border-box;
     background-color: var(--surface);
+    background-image: var(--marble-image);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--ink);
     overflow-x: hidden;
     max-width: 100vw;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Encabezados editoriales: serif con espaciado generoso */
+.section-heading h1,
+.section-heading h2,
+.home-hero__title,
+.home-novedades__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    line-height: 1.02;
 }
 
 body.swipe-hub {

@@ -1,7 +1,8 @@
 body.detail-page {
-    background:
-        radial-gradient(circle at top, rgba(26, 112, 64, 0.12), transparent 28%),
-        linear-gradient(180deg, #eef4ef 0%, var(--surface) 18%, var(--surface) 100%);
+    background-color: var(--surface);
+    background-image: var(--marble-image);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--ink);
 }
 
@@ -42,7 +43,7 @@ body.detail-page .back-btn {
 }
 
 body.detail-page .back-btn:hover {
-    border-color: rgba(26, 112, 64, 0.24);
+    border-color: rgba(183, 146, 76, 0.24);
     background: #fff;
     color: var(--accent-dark);
     transform: translateY(-1px);
@@ -111,7 +112,7 @@ body.detail-page .gallery-thumbs img.active,
 body.detail-page .gallery-thumbs img:hover {
     border-color: var(--accent);
     transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(26, 112, 64, 0.12);
+    box-shadow: 0 10px 20px rgba(183, 146, 76, 0.12);
 }
 
 body.detail-page .product-info {
@@ -129,8 +130,8 @@ body.detail-page .product-brand {
     min-height: 34px;
     padding: 0 14px;
     border-radius: 999px;
-    background: rgba(26, 112, 64, 0.1);
-    text-transform: uppercase;
+    background: rgba(183, 146, 76, 0.1);
+    text-transform: none;
     letter-spacing: 0.18em;
     font-size: 0.76rem;
     color: var(--accent-dark);
@@ -139,9 +140,11 @@ body.detail-page .product-brand {
 
 body.detail-page .product-name {
     margin: 0;
-    font-size: clamp(2rem, 4vw, 3.3rem);
-    line-height: 0.98;
-    letter-spacing: -0.05em;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    line-height: 1.0;
+    letter-spacing: 0.005em;
     text-wrap: balance;
 }
 
@@ -160,12 +163,12 @@ body.detail-page .product-tags .etiqueta {
     border-radius: 999px;
     font-size: 0.72rem;
     letter-spacing: 0.14em;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 700;
 }
 
 body.detail-page .etiqueta.novedad {
-    background: rgba(26, 112, 64, 0.14);
+    background: rgba(183, 146, 76, 0.14);
     color: var(--accent-dark);
 }
 
@@ -201,7 +204,7 @@ body.detail-page .purchase-section h3,
 body.detail-page .notes-section h3 {
     margin: 0;
     font-size: 0.8rem;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.18em;
     color: var(--muted-ink);
 }
@@ -256,7 +259,7 @@ body.detail-page .combo-savings-note {
     font-size: 0.8rem;
     font-weight: 800;
     color: var(--accent-dark);
-    background: rgba(26, 112, 64, 0.12);
+    background: rgba(183, 146, 76, 0.12);
 }
 
 body.detail-page .note-group {
@@ -267,7 +270,7 @@ body.detail-page .note-group {
 
 body.detail-page .note-group-label {
     font-size: 0.76rem;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.16em;
     color: var(--accent);
     font-weight: 800;
@@ -286,7 +289,7 @@ body.detail-page .note-chip {
     padding: 0 14px;
     border-radius: 999px;
     font-size: 0.82rem;
-    background: rgba(26, 112, 64, 0.08);
+    background: rgba(183, 146, 76, 0.08);
     color: var(--accent-dark);
     font-weight: 600;
 }
@@ -319,7 +322,7 @@ body.detail-page .cart-size-select {
 }
 
 body.detail-page .cart-size-select:focus {
-    outline: 2px solid rgba(26, 112, 64, 0.16);
+    outline: 2px solid rgba(183, 146, 76, 0.16);
     border-color: var(--accent);
 }
 
@@ -372,15 +375,15 @@ body.detail-page .cart-add-btn:hover {
 }
 
 body.detail-page .combo-nav-btn {
-    border: 1.5px solid rgba(26, 112, 64, 0.24);
-    background: rgba(26, 112, 64, 0.06);
+    border: 1.5px solid rgba(183, 146, 76, 0.24);
+    background: rgba(183, 146, 76, 0.06);
     color: var(--accent-dark);
 }
 
 body.detail-page .combo-nav-btn:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
+    background: var(--black-strong);
+    border-color: var(--gold-border);
+    color: var(--gold-light);
     transform: translateY(-2px);
 }
 

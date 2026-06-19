@@ -45,7 +45,7 @@
         function applyFilters() {
             const q = App.core.search.normalizeText(searchInput ? searchInput.value : '');
             const brand = App.core.search.normalizeText(brandSelect ? brandSelect.value : 'all');
-            orderedCards = App.viewmodels.catalogRenderer.sortCards(orderedCards, sortSelect ? sortSelect.value : 'hype', grid);
+            orderedCards = App.viewmodels.catalogRenderer.sortCardsForQuery(orderedCards, q, sortSelect ? sortSelect.value : 'hype', grid);
             let visible = 0;
 
             orderedCards.forEach(card => {

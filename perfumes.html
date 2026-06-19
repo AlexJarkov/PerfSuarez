@@ -287,7 +287,7 @@
             var brand = normalizeBrandValue(brandSelect ? brandSelect.value : 'all');
             var hideOut = !!(stockToggle && stockToggle.checked);
             var onlyNew = !!(newToggle && newToggle.checked);
-            cards = App.viewmodels.catalogRenderer.sortCards(cards, sortSelect ? sortSelect.value : 'hype', grid);
+            cards = App.viewmodels.catalogRenderer.sortCardsForQuery(cards, q, sortSelect ? sortSelect.value : 'hype', grid);
 
             var visible = 0;
             cards.forEach(function (card) {

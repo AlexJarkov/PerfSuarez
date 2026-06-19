@@ -23,7 +23,7 @@
     }
 
     function initHomeActions() {
-        const actions = document.querySelectorAll('.home-action[data-shell-target]');
+        const actions = document.querySelectorAll('.home-action[data-shell-target], .home-novedades__slide[data-shell-target]');
         if (!actions.length) {
             return;
         }

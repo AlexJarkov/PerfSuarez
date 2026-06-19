@@ -69,7 +69,17 @@
 
         const stageWidth = () => stage.getBoundingClientRect().width;
         const applyTranslate = value => { track.style.transform = `translateX(${value}px)`; };
-        const pointerShouldHandle = event => !event.pointerType || event.pointerType !== 'touch';
+        // Escritorio: el arrastre con mouse/lápiz queda DESHABILITADO (era incómodo);
+        // en su lugar se navega con swipe de trackpad (evento wheel horizontal, más abajo).
+        // El touch de mobile sigue por los listeners touch*, no por pointer*.
+        const pointerShouldHandle = () => false;
+        // El gesto que nace dentro de un elemento marcado (p.ej. el carrusel de
+        // Novedades) NO debe iniciar el swipe lateral de paneles: o scrollea el
+        // recuadro o scrollea el shell, nunca ambos.
+        const isSwipeIgnored = event => {
+            const target = event.target;
+            return !!(target && typeof target.closest === 'function' && target.closest('[data-shell-swipe-ignore]'));
+        };
 
         function makeHistoryUrl(src, slug, search, hash) {
             if (useDirectHtmlRoutes) {
@@ -225,6 +235,7 @@
 
                 doc.addEventListener('touchstart', event => {
                     if (event.touches.length !== 1) return;
+                    if (isSwipeIgnored(event)) return;
                     const touch = event.touches[0];
                     startDrag(touch.clientX, touch.clientY);
                 }, { passive: true });
@@ -237,6 +248,7 @@
                 doc.addEventListener('touchcancel', () => endDrag());
                 doc.addEventListener('pointerdown', event => {
                     if (!pointerShouldHandle(event) || event.button !== 0) return;
+                    if (isSwipeIgnored(event)) return;
                     startDrag(event.clientX, event.clientY, event.pointerId, true);
                 });
                 doc.addEventListener('pointermove', event => {
@@ -253,6 +265,7 @@
                         endDrag(event.pointerId);
                     }
                 });
+                doc.addEventListener('wheel', handleWheelNav, { passive: false });
             } catch (error) {
                 // ignore inaccessible frames
             }
@@ -453,6 +466,53 @@
                 }, true);
             } else {
                 snapToIndex(false);
+            }
+        }
+
+        // ---- Swipe de trackpad: navega paneles con gesto horizontal (wheel deltaX) ----
+        const wheelState = { accum: 0, locked: false, timer: null };
+        const wheelTrigger = 60;
+
+        function goToPanelIndex(targetIndex) {
+            const idx = Math.max(0, Math.min(PRIMARY_PANEL_COUNT - 1, targetIndex));
+            if (idx === currentIndex) {
+                return;
+            }
+            updateActive({
+                index: idx,
+                panelSrc: PANEL_META[idx].src,
+                historyUrl: makeHistoryUrl(PANEL_META[idx].src, PANEL_META[idx].slug, '', ''),
+                navHref: PANEL_META[idx].src,
+                meta: PANEL_META[idx]
+            }, true);
+        }
+
+        function handleWheelNav(event) {
+            if (currentIndex >= PRIMARY_PANEL_COUNT || isSwipeIgnored(event)) {
+                return;
+            }
+            // Solo gesto horizontal; el vertical deja pasar el scroll normal de la página.
+            if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) {
+                return;
+            }
+
+            event.preventDefault(); // evita el back/forward del navegador por overscroll
+
+            clearTimeout(wheelState.timer);
+            wheelState.timer = setTimeout(() => {
+                wheelState.locked = false;
+                wheelState.accum = 0;
+            }, 220);
+
+            if (wheelState.locked) {
+                return; // un swipe = un panel; ignora el resto del impulso/momentum
+            }
+
+            wheelState.accum += event.deltaX;
+            if (Math.abs(wheelState.accum) >= wheelTrigger) {
+                goToPanelIndex(currentIndex + (wheelState.accum > 0 ? 1 : -1));
+                wheelState.locked = true;
+                wheelState.accum = 0;
             }
         }
 

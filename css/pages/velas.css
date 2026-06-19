@@ -1,7 +1,8 @@
 body.velas-page {
-    background:
-        radial-gradient(circle at top, rgba(26, 112, 64, 0.12), transparent 28%),
-        linear-gradient(180deg, #eef4ef 0%, var(--surface) 18%, var(--surface) 100%);
+    background-color: var(--surface);
+    background-image: var(--marble-image);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--ink);
 }
 
@@ -42,7 +43,7 @@ body.velas-page main.page-shell {
     height: 240px;
     top: -120px;
     right: -90px;
-    background: radial-gradient(circle, rgba(26, 112, 64, 0.16), transparent 68%);
+    background: radial-gradient(circle, rgba(183, 146, 76, 0.16), transparent 68%);
 }
 
 .collection-hero::after {
@@ -128,7 +129,7 @@ body.velas-page main.page-shell {
 .search-field label {
     font-size: 0.85rem;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--accent-dark);
 }
 
@@ -146,7 +147,7 @@ body.velas-page main.page-shell {
 .pagination-controls input[type="number"]:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12);
+    box-shadow: 0 0 0 4px rgba(183, 146, 76, 0.12);
 }
 
 .toggle-group {
@@ -194,7 +195,7 @@ body.velas-page main.page-shell {
 .pagination-controls label {
     font-size: 0.85rem;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--muted-ink);
 }
 
@@ -271,7 +272,7 @@ body.velas-page main.page-shell {
 .decant:hover,
 .decant:focus-visible {
     transform: translateY(-4px);
-    border-color: rgba(26, 112, 64, 0.18);
+    border-color: rgba(183, 146, 76, 0.18);
     box-shadow: 0 24px 52px rgba(17, 17, 17, 0.1);
 }
 
@@ -294,7 +295,7 @@ body.velas-page main.page-shell {
     margin: 0;
     font-size: 1.05rem;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
+    text-transform: none;
     overflow-wrap: anywhere;
     hyphens: auto;
 }
@@ -314,7 +315,7 @@ body.velas-page main.page-shell {
 .decant .vela-price {
     font-weight: 700;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--accent-dark);
 }
 
@@ -324,13 +325,13 @@ body.velas-page main.page-shell {
     border-radius: 999px;
     font-size: 0.72rem;
     letter-spacing: 0.18em;
-    text-transform: uppercase;
+    text-transform: none;
     overflow-wrap: anywhere;
     hyphens: auto;
 }
 
 .badge.novedad {
-    background: rgba(26, 112, 64, 0.12);
+    background: rgba(183, 146, 76, 0.12);
     color: var(--accent-dark);
 }
 

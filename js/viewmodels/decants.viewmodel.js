@@ -55,7 +55,7 @@
             const brand = App.core.search.normalizeText(brandSelect ? brandSelect.value : 'all');
             const hideOut = !!(stockToggle && stockToggle.checked);
             const onlyNew = !!(newToggle && newToggle.checked);
-            orderedCards = App.viewmodels.catalogRenderer.sortCards(orderedCards, sortSelect ? sortSelect.value : 'hype', grid);
+            orderedCards = App.viewmodels.catalogRenderer.sortCardsForQuery(orderedCards, q, sortSelect ? sortSelect.value : 'hype', grid);
             let visible = 0;
 
             orderedCards.forEach(card => {

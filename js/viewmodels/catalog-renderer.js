@@ -496,6 +496,41 @@
         return sorted;
     }
 
+    function getCardSearchText(card) {
+        return [
+            card.dataset.name,
+            card.dataset.tags,
+            card.dataset.brand,
+            card.textContent
+        ].join(' ');
+    }
+
+    // Ordena por relevancia de búsqueda cuando hay término y el orden activo es
+    // el predeterminado ("Más deseados"). Las mejores coincidencias (marca/nombre
+    // exactos) quedan arriba; ante empate se respeta el orden del ERP (hype/orden).
+    // Con un orden explícito (nombre/precio) o sin término, delega en sortCards.
+    function sortCardsForQuery(cards, query, sortValue, gridEl) {
+        const q = App.core.search.normalizeText(query || '');
+        const useRelevance = q && (!sortValue || sortValue === 'hype');
+        if (!useRelevance) {
+            return sortCards(cards, sortValue, gridEl);
+        }
+
+        const sorted = cards.slice()
+            .map((card, index) => ({ card, index, score: App.core.search.scoreMatch(q, getCardSearchText(card)) }))
+            .sort((a, b) => {
+                if (b.score !== a.score) return b.score - a.score;
+                return compareCardsByHype(a.card, b.card);
+            })
+            .map(entry => entry.card);
+
+        if (gridEl) {
+            sorted.forEach(card => gridEl.appendChild(card));
+        }
+
+        return sorted;
+    }
+
     function renderCard(perfume, mode, hypeIndex) {
         const img = getImage(perfume, mode);
         const tags = perfume.tags.join(' ');
@@ -555,6 +590,7 @@
     App.viewmodels.catalogRenderer = {
         renderCatalog: renderCatalog,
         bindCardNavigation: bindCardNavigation,
-        sortCards: sortCards
+        sortCards: sortCards,
+        sortCardsForQuery: sortCardsForQuery
     };
 })(window.PerfSuarez);

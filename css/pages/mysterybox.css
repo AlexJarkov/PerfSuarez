@@ -1,7 +1,8 @@
 body.mysterybox-page {
-    background:
-        radial-gradient(circle at top, rgba(26, 112, 64, 0.12), transparent 28%),
-        linear-gradient(180deg, #eef4ef 0%, var(--surface) 18%, var(--surface) 100%);
+    background-color: var(--surface);
+    background-image: var(--marble-image);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--ink);
 }
 
@@ -46,7 +47,7 @@ body.mysterybox-page main.page-shell {
     height: 240px;
     top: -120px;
     right: -90px;
-    background: radial-gradient(circle, rgba(26, 112, 64, 0.16), transparent 68%);
+    background: radial-gradient(circle, rgba(183, 146, 76, 0.16), transparent 68%);
 }
 
 .experience-hero::after {
@@ -81,7 +82,7 @@ body.mysterybox-page main.page-shell {
     margin-bottom: 8px;
     font-size: 0.82rem;
     letter-spacing: 0.14em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--accent-dark);
 }
 
@@ -143,10 +144,10 @@ body.mysterybox-page main.page-shell {
     min-height: 32px;
     padding: 0 12px;
     border-radius: 999px;
-    background: rgba(26, 112, 64, 0.1);
+    background: rgba(183, 146, 76, 0.1);
     font-size: 0.72rem;
     letter-spacing: 0.18em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--accent-dark);
     font-weight: 700;
 }
@@ -215,7 +216,7 @@ body.mysterybox-page main.page-shell {
 .step-card span {
     font-size: 0.75rem;
     letter-spacing: 0.22em;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--accent);
     font-weight: 700;
 }

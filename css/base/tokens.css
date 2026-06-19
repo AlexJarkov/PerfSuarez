@@ -1,10 +1,49 @@
 :root {
-    --ink: #111111;
-    --muted-ink: #5a5a5a;
-    --surface: #f6f7f8;
-    --surface-strong: #ffffff;
-    --accent: #1a7040;
-    --accent-dark: #0f4f2b;
-    --divider: rgba(17, 17, 17, 0.08);
+    /* ---- Paleta de marca ---- */
+    --bg-main: #FAF8F3;              /* Fondo principal (crema marmolado) */
+    --bg-secondary: #FFFFFF;         /* Fondo secundario */
+    --black-strong: #11100E;         /* Negro principal */
+    --black-soft: #282622;           /* Negro suave */
+    --gold: #B7924C;                 /* Dorado principal */
+    --gold-light: #D8C08C;           /* Dorado claro */
+    --gold-deep: #8A6E37;            /* Dorado oscuro (texto sobre claro) */
+    --gold-border: rgba(183, 146, 76, 0.45);   /* Dorado tenue para bordes */
+    --gold-tint: rgba(183, 146, 76, 0.10);      /* Lavado dorado muy sutil */
+    --text-gray: #6F6B64;            /* Gris de texto */
+    --marble-vein: rgba(145, 145, 145, 0.08);   /* Mármol / vetas */
+    --state-error: #8E2B2B;          /* Rojo oscuro y sobrio */
+    --state-success: #5E6B3A;        /* Verde oliva elegante y apagado */
+
+    /* ---- Tipografía ---- */
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+    /* ---- Compatibilidad con variables previas (remapeo a la nueva paleta) ---- */
+    --ink: var(--black-strong);
+    --muted-ink: var(--text-gray);
+    --surface: var(--bg-main);
+    --surface-strong: var(--bg-secondary);
+    --accent: var(--gold);
+    --accent-dark: var(--gold-deep);
+    --divider: var(--gold-border);
     --header-height: 96px;
+
+    /* ---- Fondo marmolado (gráfico, sin imagen) ---- */
+    --marble-image:
+        radial-gradient(135% 100% at 6% -8%, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0) 52%),
+        radial-gradient(120% 90% at 96% 4%, rgba(216, 192, 140, 0.07), rgba(216, 192, 140, 0) 56%),
+        radial-gradient(120% 120% at 78% 108%, rgba(216, 192, 140, 0.05), rgba(216, 192, 140, 0) 55%),
+        linear-gradient(122deg,
+            transparent 14%, var(--marble-vein) 17%, transparent 19%,
+            transparent 43%, var(--marble-vein) 47%, transparent 49.5%,
+            transparent 70%, var(--marble-vein) 74%, transparent 76%),
+        linear-gradient(58deg,
+            transparent 28%, rgba(145, 145, 145, 0.05) 31%, transparent 33%,
+            transparent 62%, rgba(145, 145, 145, 0.05) 66%, transparent 68%);
+}
+
+@media (max-width: 540px) {
+    :root {
+        --header-height: 72px;
+    }
 }

@@ -543,7 +543,7 @@
 #decant-search:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(26, 112, 64, 0.12);
+    box-shadow: 0 0 0 4px rgba(183, 146, 76, 0.12);
 }
 
 .stock-filter,
