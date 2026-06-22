@@ -84,6 +84,10 @@
                         <input type="checkbox" id="new-filter">
                         <span>Mostrar solo perfumes nuevos</span>
                     </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="sale-filter">
+                        <span>Solo ofertas</span>
+                    </label>
                 </div>
             </div>
             <div class="pagination-controls" id="pagination-top">
@@ -278,6 +282,7 @@
         var sortSelect = document.getElementById('perfume-sort');
         var stockToggle = document.getElementById('stock-filter');
         var newToggle = document.getElementById('new-filter');
+        var saleToggle = document.getElementById('sale-filter');
         var emptyState = document.getElementById('no-results-message');
         var activeGender = 'all';
         var activeStyle = 'all';
@@ -287,6 +292,7 @@
             var brand = normalizeBrandValue(brandSelect ? brandSelect.value : 'all');
             var hideOut = !!(stockToggle && stockToggle.checked);
             var onlyNew = !!(newToggle && newToggle.checked);
+            var onlySale = !!(saleToggle && saleToggle.checked);
             cards = App.viewmodels.catalogRenderer.sortCardsForQuery(cards, q, sortSelect ? sortSelect.value : 'hype', grid);
 
             var visible = 0;
@@ -302,6 +308,7 @@
                 ].join(' ');
                 var hasOutBadge = !!card.querySelector('.etiqueta.fuera-de-stock');
                 var hasNewBadge = !!card.querySelector('.etiqueta.novedad');
+                var onSale = card.dataset.onSale === '1';
 
                 var normalizedGender = App.core.search.normalizeText(activeGender);
                 var normalizedStyle = App.core.search.normalizeText(activeStyle);
@@ -312,8 +319,9 @@
                 var matchesBrand = brand === 'all' || tags.includes(brand) || brandText.includes(brand) || name.includes(brand) || App.core.search.matches(brand, searchText);
                 var matchesStock = !hideOut || !hasOutBadge;
                 var matchesNew = !onlyNew || hasNewBadge;
+                var matchesSale = !onlySale || onSale;
 
-                var show = matchesSearch && matchesGender && matchesStyle && matchesBrand && matchesStock && matchesNew;
+                var show = matchesSearch && matchesGender && matchesStyle && matchesBrand && matchesStock && matchesNew && matchesSale;
                 card.style.display = show ? '' : 'none';
                 if (show) visible++;
             });
@@ -331,6 +339,7 @@
         });
         if (stockToggle) stockToggle.addEventListener('change', applyFilters);
         if (newToggle) newToggle.addEventListener('change', applyFilters);
+        if (saleToggle) saleToggle.addEventListener('change', applyFilters);
 
         // Gender chips
         var genderChips = document.querySelectorAll('#gender-chips .gender-chip');

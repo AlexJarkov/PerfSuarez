@@ -366,6 +366,9 @@
         if (!inStock) {
             parts.push('<span class="etiqueta fuera-de-stock">Fuera de stock</span>');
         }
+        if (isOnSale(perfume, mode)) {
+            parts.push('<span class="etiqueta oferta">Oferta</span>');
+        }
         if (perfume.etiqueta === 'novedad') {
             parts.push('<span class="etiqueta novedad">Nuevo</span>');
         }
@@ -374,6 +377,22 @@
         }
 
         return parts.length ? `<div class="etiquetas">${parts.join('')}</div>` : '';
+    }
+
+    // Una entrada de precio en oferta válida: bandera activa, precio de oferta
+    // presente y estrictamente menor que el original.
+    function ofertaValida(perfume, original, oferta) {
+        return !!perfume.oferta
+            && oferta != null && oferta !== ''
+            && Number(oferta) > 0 && Number(oferta) < Number(original);
+    }
+
+    // Renderiza un precio: si está en oferta, original tachado + precio rebajado.
+    function priceValueHtml(perfume, original, oferta) {
+        if (ofertaValida(perfume, original, oferta)) {
+            return `<span class="price-old">${original} Bs</span> <span class="price-sale">${oferta} Bs</span>`;
+        }
+        return `${original} Bs`;
     }
 
     function buildPriceHtml(perfume, mode) {
@@ -388,7 +407,8 @@
             const entries = Array.isArray(perfume.precio_completo) ? perfume.precio_completo : [perfume.precio_completo];
             return entries.map(e => {
                 const mlPart = e.ml != null ? `${e.ml} <strong>ml - </strong>` : '';
-                return `<p class="price-label">${mlPart}${e.precio} Bs</p>`;
+                const cls = ofertaValida(perfume, e.precio, e.precio_oferta) ? 'price-label price-label--oferta' : 'price-label';
+                return `<p class="${cls}">${mlPart}${priceValueHtml(perfume, e.precio, e.precio_oferta)}</p>`;
             }).join('');
         }
 
@@ -396,13 +416,36 @@
         const inStock = perfume.en_stock_decants;
         if (!inStock || !perfume.precios_decants) return '';
 
+        const ofertas = perfume.precios_decants_oferta || {};
         const sizes = Object.keys(perfume.precios_decants)
             .map(Number)
             .sort((a, b) => a - b);
 
         return sizes
-            .map(s => `<p class="price-label">${s} <strong>ml - </strong>${perfume.precios_decants[s]} Bs</p>`)
+            .map(s => {
+                const original = perfume.precios_decants[s];
+                const oferta = ofertas[s];
+                const cls = ofertaValida(perfume, original, oferta) ? 'price-label price-label--oferta' : 'price-label';
+                return `<p class="${cls}">${s} <strong>ml - </strong>${priceValueHtml(perfume, original, oferta)}</p>`;
+            })
             .join('');
+    }
+
+    // ¿La entrada está en oferta para el modo actual? (perfumes => completos;
+    // decants => decants; cuadros => nunca).
+    function isOnSale(perfume, mode) {
+        if (!perfume.oferta) return false;
+        if (mode === 'decants') {
+            const o = perfume.precios_decants_oferta;
+            const dec = perfume.precios_decants || {};
+            return !!o && Object.keys(o).some(s => ofertaValida(perfume, dec[s], o[s]));
+        }
+        if (mode === 'perfumes') {
+            if (!perfume.precio_completo) return false;
+            const entries = Array.isArray(perfume.precio_completo) ? perfume.precio_completo : [perfume.precio_completo];
+            return entries.some(e => e && ofertaValida(perfume, e.precio, e.precio_oferta));
+        }
+        return false;
     }
 
     function getImage(perfume, mode) {
@@ -542,8 +585,9 @@
         const sortPrice = getSortPrice(perfume, mode);
         const priceAttr = Number.isFinite(sortPrice) ? String(sortPrice) : '';
         const hypeRank = getHypeRank(perfume, hypeIndex);
+        const onSale = isOnSale(perfume, mode) ? '1' : '0';
 
-        return `<div class="decant" data-name="${perfume.nombre_interno}" data-tags="${tags}" data-id="${perfume.id}" data-hype-index="${hypeIndex}" data-hype-rank="${hypeRank}" data-sort-name="${getSortName(perfume)}" data-sort-price="${priceAttr}">
+        return `<div class="decant" data-name="${perfume.nombre_interno}" data-tags="${tags}" data-id="${perfume.id}" data-hype-index="${hypeIndex}" data-hype-rank="${hypeRank}" data-sort-name="${getSortName(perfume)}" data-sort-price="${priceAttr}" data-on-sale="${onSale}">
             <img src="${img}" alt="${perfume.nombre}" loading="lazy" decoding="async">
             <h3><strong>${perfume.marca}</strong></h3>
             <p>${perfume.nombre}</p>

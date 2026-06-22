@@ -71,6 +71,19 @@
             }).join('');
         }
 
+        // Precio en stock: si está en oferta (bandera activa + precio_oferta menor),
+        // muestra el original tachado y el rebajado; si no, el precio normal.
+        function priceValueHtml(perfume, original, oferta) {
+            var enOferta = perfume.oferta && oferta != null && oferta !== '' &&
+                Number(oferta) > 0 && Number(oferta) < Number(original);
+            if (enOferta) {
+                return '<span class="price-value price-value--sale">' +
+                    '<span class="price-value--old">' + original + ' Bs</span> ' +
+                    oferta + ' Bs</span>';
+            }
+            return '<span class="price-value">' + original + ' Bs</span>';
+        }
+
         function renderPricing(perfume) {
             var html = '';
 
@@ -80,7 +93,7 @@
                 if (perfume.en_stock_completos) {
                     pcEntries.forEach(function(e) {
                         html += '<div class="price-row"><span class="price-size">' + e.ml + ' ml</span>';
-                        html += '<span class="price-value">' + e.precio + ' Bs</span></div>';
+                        html += priceValueHtml(perfume, e.precio, e.precio_oferta) + '</div>';
                     });
                 } else {
                     pcEntries.forEach(function(e) {
@@ -96,9 +109,10 @@
                 var sizes = Object.keys(perfume.precios_decants).map(Number).sort(function (a, b) { return a - b; });
                 html += '<div class="pricing-section"><h3>Decants</h3>';
                 if (perfume.en_stock_decants) {
+                    var decOf = (perfume.oferta && perfume.precios_decants_oferta) || {};
                     sizes.forEach(function (s) {
                         html += '<div class="price-row"><span class="price-size">' + s + ' ml</span>';
-                        html += '<span class="price-value">' + perfume.precios_decants[s] + ' Bs</span></div>';
+                        html += priceValueHtml(perfume, perfume.precios_decants[s], decOf[s]) + '</div>';
                     });
                 } else {
                     sizes.forEach(function (s) {

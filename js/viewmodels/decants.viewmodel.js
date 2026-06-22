@@ -45,6 +45,7 @@
         const sortSelect = document.getElementById('decant-sort');
         const stockToggle = document.getElementById('stock-filter');
         const newToggle = document.getElementById('new-filter');
+        const saleToggle = document.getElementById('sale-filter');
         const emptyState = document.getElementById('no-results-message');
         let activeGender = 'all';
         let activeStyle = 'all';
@@ -55,6 +56,7 @@
             const brand = App.core.search.normalizeText(brandSelect ? brandSelect.value : 'all');
             const hideOut = !!(stockToggle && stockToggle.checked);
             const onlyNew = !!(newToggle && newToggle.checked);
+            const onlySale = !!(saleToggle && saleToggle.checked);
             orderedCards = App.viewmodels.catalogRenderer.sortCardsForQuery(orderedCards, q, sortSelect ? sortSelect.value : 'hype', grid);
             let visible = 0;
 
@@ -69,6 +71,7 @@
                 ].join(' ');
                 const hasOutBadge = !!card.querySelector('.etiqueta.fuera-de-stock');
                 const hasNewBadge = !!card.querySelector('.etiqueta.novedad');
+                const onSale = card.dataset.onSale === '1';
                 const normalizedGender = App.core.search.normalizeText(activeGender);
                 const normalizedStyle = App.core.search.normalizeText(activeStyle);
 
@@ -79,8 +82,9 @@
                 const matchesBrand = brand === 'all' || brandText === brand || App.core.search.matches(brand, searchText);
                 const matchesStock = !hideOut || !hasOutBadge;
                 const matchesNew = !onlyNew || hasNewBadge;
+                const matchesSale = !onlySale || onSale;
 
-                const show = matchesSearch && matchesGender && matchesStyle && matchesBrand && matchesStock && matchesNew;
+                const show = matchesSearch && matchesGender && matchesStyle && matchesBrand && matchesStock && matchesNew && matchesSale;
                 card.style.display = show ? '' : 'none';
                 if (show) visible++;
             });
@@ -99,6 +103,7 @@
         });
         stockToggle?.addEventListener('change', applyFilters);
         newToggle?.addEventListener('change', applyFilters);
+        saleToggle?.addEventListener('change', applyFilters);
 
         document.querySelectorAll('#gender-chips .gender-chip').forEach(chip => {
             chip.addEventListener('click', () => {

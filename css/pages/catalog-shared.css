@@ -379,6 +379,24 @@ body.search-page main.page-shell {
     color: var(--ink);
 }
 
+.etiqueta.oferta {
+    background: rgba(200, 30, 30, 0.12);
+    color: #b3261e;
+    font-weight: 600;
+}
+
+/* Precio en oferta (donde se muestren las price-label, p.ej. cuadros). */
+.price-label--oferta .price-old {
+    text-decoration: line-through;
+    color: var(--muted-ink);
+    margin-right: 0.25rem;
+}
+
+.price-label--oferta .price-sale {
+    color: #b3261e;
+    font-weight: 700;
+}
+
 .perfume-grid.is-paging {
     opacity: 0.6;
     transition: opacity 0.25s ease;

@@ -36,7 +36,8 @@
             brandText,
             searchText,
             hasOutBadge: !!card.querySelector('.etiqueta.fuera-de-stock, .badge.out-of-stock'),
-            hasNewBadge: !!card.querySelector('.etiqueta.novedad, .badge.novedad')
+            hasNewBadge: !!card.querySelector('.etiqueta.novedad, .badge.novedad'),
+            onSale: card.dataset.onSale === '1'
         };
     }
 
@@ -73,7 +74,8 @@
             const matchesBrand = normalizedBrand === 'all' || meta.brandText === normalizedBrand || App.core.search.matches(normalizedBrand, meta.searchText);
             const matchesStock = !options.hideOutOfStock || !meta.hasOutBadge;
             const matchesNew = !options.onlyNew || meta.hasNewBadge;
-            const shouldShow = matchesSearch && matchesCategory && matchesBrand && matchesStock && matchesNew;
+            const matchesSale = !options.onlySale || meta.onSale;
+            const shouldShow = matchesSearch && matchesCategory && matchesBrand && matchesStock && matchesNew && matchesSale;
 
             card.style.display = shouldShow ? options.visibleDisplay || '' : 'none';
             if (shouldShow) {

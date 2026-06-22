@@ -20,6 +20,7 @@
         const brandSelect = options.brandSelector ? document.querySelector(options.brandSelector) : null;
         const stockToggle = options.stockSelector ? document.querySelector(options.stockSelector) : null;
         const newToggle = options.newSelector ? document.querySelector(options.newSelector) : null;
+        const saleToggle = options.saleSelector ? document.querySelector(options.saleSelector) : null;
         const emptyState = options.emptySelector ? document.querySelector(options.emptySelector) : null;
         const controls = buildControls(options.paginationControls || []);
 
@@ -53,6 +54,7 @@
                 brand: brandSelect?.value || 'all',
                 hideOutOfStock: !!stockToggle?.checked,
                 onlyNew: !!newToggle?.checked,
+                onlySale: !!saleToggle?.checked,
                 visibleDisplay: options.visibleDisplay || ''
             });
 
@@ -91,6 +93,7 @@
         brandSelect?.addEventListener('change', () => applyFilters());
         stockToggle?.addEventListener('change', () => applyFilters());
         newToggle?.addEventListener('change', () => applyFilters());
+        saleToggle?.addEventListener('change', () => applyFilters());
 
         applyFilters();
     }
