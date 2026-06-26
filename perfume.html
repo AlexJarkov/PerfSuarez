@@ -218,31 +218,50 @@
                 + '</div>';
         }
 
+        // Info de precio para el carrito: detecta oferta válida (misma regla que
+        // priceValueHtml) y devuelve el precio efectivo, el original y la bandera.
+        function precioInfo(perfume, original, oferta) {
+            var enOferta = perfume.oferta && oferta != null && oferta !== '' &&
+                Number(oferta) > 0 && Number(oferta) < Number(original);
+            return {
+                price: enOferta ? Number(oferta) : Number(original),
+                originalPrice: Number(original),
+                onSale: enOferta
+            };
+        }
+
         function getAvailablePurchaseOptions(perfume) {
             var options = [];
 
             if (perfume.precio_completo && perfume.en_stock_completos) {
                 var pcOpts = Array.isArray(perfume.precio_completo) ? perfume.precio_completo : [perfume.precio_completo];
                 pcOpts.forEach(function(e) {
+                    var info = precioInfo(perfume, e.precio, e.precio_oferta);
                     options.push({
                         kind: 'perfume',
                         label: 'Perfume completo',
                         size: e.ml,
-                        price: e.precio
+                        price: info.price,
+                        originalPrice: info.originalPrice,
+                        onSale: info.onSale
                     });
                 });
             }
 
             if (perfume.precios_decants && perfume.en_stock_decants) {
+                var decOf = (perfume.oferta && perfume.precios_decants_oferta) || {};
                 Object.keys(perfume.precios_decants)
                     .map(Number)
                     .sort(function (a, b) { return a - b; })
                     .forEach(function (size) {
+                        var info = precioInfo(perfume, perfume.precios_decants[size], decOf[size]);
                         options.push({
                             kind: 'decant',
                             label: 'Decant',
                             size: size,
-                            price: perfume.precios_decants[size]
+                            price: info.price,
+                            originalPrice: info.originalPrice,
+                            onSale: info.onSale
                         });
                     });
             }

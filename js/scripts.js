@@ -198,6 +198,11 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
             ? (perfume.image_miniatura || perfume.image_miniatura_decant || 'imagenes/image.webp')
             : (perfume.image_miniatura_decant || perfume.image_miniatura || 'imagenes/image.webp');
 
+        const onSale = !!selection.onSale && Number(selection.originalPrice) > Number(selection.price);
+        const priceText = onSale
+            ? `Bs ${formatPrice(selection.price)} (oferta, antes Bs ${formatPrice(selection.originalPrice)})`
+            : `Bs ${formatPrice(selection.price)}`;
+
         return {
             id: createId('perfume'),
             type: 'perfume',
@@ -207,12 +212,12 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
             image: image,
             detailLines: [
                 `${typeLabel}: ${selection.size} ml`,
-                `Precio: Bs ${formatPrice(selection.price)}`
+                `Precio: ${priceText}`
             ],
             whatsappLines: [
                 `- ${perfume.nombre_interno}`,
                 `  ${typeLabel} ${selection.size} ml`,
-                `  Bs ${formatPrice(selection.price)}`
+                `  ${priceText}`
             ]
         };
     }
