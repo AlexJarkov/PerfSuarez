@@ -17,6 +17,12 @@
     var STATIC_JSON = "js/data/perfumes.json";
     var PAGE_SIZE = 100;
 
+    // Caché de catálogo compartida entre los iframes del carrusel (todos
+    // same-origin, así que sessionStorage se comparte dentro de la pestaña).
+    // Evita que cada panel repita el fetch paginado completo del catálogo.
+    var CACHE_KEY = "ps_catalog_cache_v1";
+    var CACHE_TTL_MS = 60000;
+
     function roundDecantPriceUp(value) {
         return Math.ceil(value / 10) * 10;
     }
@@ -63,6 +69,49 @@
 
     function apiUrl(page) {
         return BASE_URL + API_PATH + "?page=" + page + "&limit=" + PAGE_SIZE;
+    }
+
+    function apiUrlById(id) {
+        return BASE_URL + API_PATH + "?id=" + encodeURIComponent(id) + "&limit=1";
+    }
+
+    // perfume.html sólo necesita UN producto: si la URL trae ?id=, evitamos
+    // bajar el catálogo completo para mostrar uno solo.
+    function getRequestedPerfumeId() {
+        if (!/\/perfume\.html$/.test(window.location.pathname)) {
+            return null;
+        }
+        try {
+            var id = new URLSearchParams(window.location.search).get("id");
+            return id || null;
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function readCatalogCache() {
+        try {
+            var raw = window.sessionStorage.getItem(CACHE_KEY);
+            if (!raw) return null;
+            var parsed = JSON.parse(raw);
+            if (!parsed || !Array.isArray(parsed.perfumes) || typeof parsed.ts !== "number") {
+                return null;
+            }
+            if (Date.now() - parsed.ts >= CACHE_TTL_MS) {
+                return null;
+            }
+            return parsed.perfumes;
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function writeCatalogCache(perfumes) {
+        try {
+            window.sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), perfumes: perfumes }));
+        } catch (error) {
+            // Cuota llena / modo privado: seguimos sin cachear.
+        }
     }
 
     function fetchJson(url) {
@@ -113,9 +162,19 @@
         return perfumes;
     }
 
+    // Trae SOLO un producto por id (perfume.html), sin paginar el catálogo.
+    function fetchSingleById(id) {
+        return fetchJson(apiUrlById(id)).then(function (payload) {
+            if (!payload || !Array.isArray(payload.data)) {
+                throw new Error("Respuesta inválida del endpoint");
+            }
+            return payload.data;
+        });
+    }
+
     // Carga progresiva (lazy) desde el endpoint del ERP: trae la primera página y
     // luego el resto en paralelo. Acumula todo en App.data.perfumes.
-    function loadFromEndpoint() {
+    function fetchAllPages() {
         return fetchJson(apiUrl(1)).then(function (first) {
             if (!first || !Array.isArray(first.data)) {
                 throw new Error("Respuesta inválida del endpoint");
@@ -141,7 +200,26 @@
                 });
                 return all;
             });
-        }).then(function (all) {
+        });
+    }
+
+    function loadFromEndpoint() {
+        var singleId = getRequestedPerfumeId();
+        if (singleId) {
+            return fetchSingleById(singleId).then(function (all) {
+                App.data.source = "erp";
+                return all;
+            });
+        }
+
+        var cached = readCatalogCache();
+        if (cached) {
+            App.data.source = "erp";
+            return Promise.resolve(cached);
+        }
+
+        return fetchAllPages().then(function (all) {
+            writeCatalogCache(all);
             App.data.source = "erp";
             return all;
         });

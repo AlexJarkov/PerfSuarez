@@ -354,8 +354,14 @@
             updateDots();
             loadPanel(currentIndex, route);
             if (currentIndex < PRIMARY_PANEL_COUNT) {
-                loadPanel(currentIndex + 1);
-                loadPanel(currentIndex - 1);
+                // Diferido: no compite por red/CPU con la carga del panel activo.
+                // Junto con la caché de sessionStorage del catálogo, este preload
+                // normalmente no genera tráfico real hacia el ERP.
+                const neighborBase = currentIndex;
+                App.views.shell.schedulePreload(() => {
+                    loadPanel(neighborBase + 1);
+                    loadPanel(neighborBase - 1);
+                });
             }
 
             navController?.setActiveByHref(route.navHref);

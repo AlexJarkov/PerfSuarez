@@ -14,7 +14,18 @@
         document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', meta.description);
     }
 
+    // Corre `fn` cuando el navegador esté libre (o tras un timeout corto como
+    // fallback), para no competir por red/CPU con la carga del panel activo.
+    function schedulePreload(fn) {
+        if (typeof window.requestIdleCallback === 'function') {
+            window.requestIdleCallback(fn, { timeout: 1500 });
+        } else {
+            window.setTimeout(fn, 300);
+        }
+    }
+
     App.views.shell = {
-        updateMeta
+        updateMeta,
+        schedulePreload
     };
 })(window.PerfSuarez);
