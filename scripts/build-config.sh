@@ -13,6 +13,7 @@ OUT_FILE="$ROOT_DIR/js/runtime-config.js"
 
 BASE_URL=""
 DISABLE_SHELL_REDIRECT="false"
+CATALOG_API_ENABLED="true"
 
 # Sin .env: preserva los valores actuales de runtime-config.js (no los borra).
 if [ ! -f "$ENV_FILE" ] && [ -f "$OUT_FILE" ]; then
@@ -20,6 +21,8 @@ if [ ! -f "$ENV_FILE" ] && [ -f "$OUT_FILE" ]; then
   BASE_URL="$existing"
   existingDsr="$(sed -n 's/.*DISABLE_SHELL_REDIRECT = \([a-z]*\).*/\1/p' "$OUT_FILE")"
   [ -n "$existingDsr" ] && DISABLE_SHELL_REDIRECT="$existingDsr"
+  existingApi="$(sed -n 's/.*CATALOG_API_ENABLED = \([a-z]*\).*/\1/p' "$OUT_FILE")"
+  [ -n "$existingApi" ] && CATALOG_API_ENABLED="$existingApi"
   echo "AVISO: no hay .env; se conservan los valores actuales de runtime-config.js."
 fi
 
@@ -35,6 +38,7 @@ if [ -f "$ENV_FILE" ]; then
     case "$key" in
       BASE_URL) BASE_URL="$value" ;;
       DISABLE_SHELL_REDIRECT) DISABLE_SHELL_REDIRECT="$value" ;;
+      CATALOG_API_ENABLED) CATALOG_API_ENABLED="$value" ;;
     esac
   done < "$ENV_FILE"
 fi
@@ -42,18 +46,26 @@ fi
 # Normaliza: quita slash final de BASE_URL y espacios.
 BASE_URL="$(printf '%s' "$BASE_URL" | sed -e 's/[[:space:]]*$//' -e 's#/*$##')"
 DISABLE_SHELL_REDIRECT="$(printf '%s' "$DISABLE_SHELL_REDIRECT" | tr -d '[:space:]')"
+CATALOG_API_ENABLED="$(printf '%s' "$CATALOG_API_ENABLED" | tr -d '[:space:]')"
 
 if [ "$DISABLE_SHELL_REDIRECT" != "true" ]; then
   DISABLE_SHELL_REDIRECT="false"
 fi
 
+# Interruptor de la funcionalidad API (ver acciones/catalogo_api.php del ERP):
+# cualquier valor distinto de "false" se toma como habilitado.
+if [ "$CATALOG_API_ENABLED" != "false" ]; then
+  CATALOG_API_ENABLED="true"
+fi
+
 cat > "$OUT_FILE" <<EOF
 // Generado por scripts/build-config.sh a partir de .env. No editar a mano.
 window.CATALOG_BASE_URL = "${BASE_URL}";
+window.CATALOG_API_ENABLED = ${CATALOG_API_ENABLED};
 window.DISABLE_SHELL_REDIRECT = ${DISABLE_SHELL_REDIRECT};
 EOF
 
-echo "Generado $OUT_FILE (BASE_URL='${BASE_URL}', DISABLE_SHELL_REDIRECT=${DISABLE_SHELL_REDIRECT})"
+echo "Generado $OUT_FILE (BASE_URL='${BASE_URL}', CATALOG_API_ENABLED=${CATALOG_API_ENABLED}, DISABLE_SHELL_REDIRECT=${DISABLE_SHELL_REDIRECT})"
 
 # Regenera también el manifiesto de imágenes del CDN (enfoque mixto).
 if command -v node >/dev/null 2>&1; then

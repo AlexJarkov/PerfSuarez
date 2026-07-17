@@ -10,9 +10,16 @@
         "30": 6 * 0.85
     };
 
+    // Interruptor de la funcionalidad API (ver acciones/catalogo_api.php del
+    // ERP): en false, se ignora CATALOG_BASE_URL por completo y el catálogo
+    // usa siempre su JSON estático, sin llamar al ERP (ni por datos ni por
+    // imágenes vía catalogo_imagen.php).
+    var API_ENABLED = typeof window.CATALOG_API_ENABLED === "boolean" ? window.CATALOG_API_ENABLED : true;
+
     // URL base del ERP (fuente de verdad del catálogo). Vacío => fallback estático.
-    var BASE_URL = (typeof window.CATALOG_BASE_URL === "string" ? window.CATALOG_BASE_URL : "")
-        .trim().replace(/\/+$/, "");
+    var BASE_URL = API_ENABLED
+        ? (typeof window.CATALOG_BASE_URL === "string" ? window.CATALOG_BASE_URL : "").trim().replace(/\/+$/, "")
+        : "";
     var API_PATH = "/acciones/catalogo_api.php";
     var STATIC_JSON = "js/data/perfumes.json";
     var PAGE_SIZE = 100;
