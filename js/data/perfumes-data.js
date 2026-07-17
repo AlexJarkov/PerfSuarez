@@ -138,6 +138,17 @@
             .catch(function () { return null; });
     }
 
+    var HYPE_RANKS_JSON = "js/data/hype-ranks.json";
+
+    // Mapa curado id -> rank, usado por catalog-renderer.js como fallback de
+    // orden en modo estático (sin ERP, donde perfumes.json no trae `orden`).
+    // Se sirve siempre desde el catálogo estático (no depende de BASE_URL).
+    function loadHypeRanks() {
+        return fetchJson(HYPE_RANKS_JSON)
+            .then(function (obj) { return (obj && typeof obj === "object") ? obj : {}; })
+            .catch(function () { return {}; });
+    }
+
     function erpImageUrl(rel) {
         return BASE_URL + "/acciones/catalogo_imagen.php?path=" +
             encodeURIComponent(rel.replace(/^imagenes\//, ""));
@@ -251,10 +262,13 @@
             : loadStatic();
 
         // El manifiesto se carga en paralelo (sólo se necesita si hay ERP).
-        return Promise.all([source, BASE_URL ? loadManifest() : Promise.resolve(null)])
+        // Los hype ranks se cargan siempre: son estáticos y sirven de fallback
+        // de orden con o sin ERP.
+        return Promise.all([source, BASE_URL ? loadManifest() : Promise.resolve(null), loadHypeRanks()])
             .then(function (results) {
                 var perfumes = results[0];
                 imageManifest = results[1];
+                App.data.hypeRanks = results[2];
                 ensureDecantPrices(perfumes);
                 resolveImages(perfumes);
                 App.data.perfumes = perfumes;
