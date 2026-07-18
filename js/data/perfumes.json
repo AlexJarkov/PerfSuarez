@@ -69,9 +69,7 @@
       "15": 1080,
       "30": 2040
     },
-    "precio_combo": {
-      "200": 9295
-    },
+    "precio_combo": null,
     "tags": [
       "unisex",
       "nicho"
@@ -83,6 +81,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/BACCARAT ROUGE 540 EXTRAIT.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Jazmín",
         "Azafrán"
@@ -95,7 +94,11 @@
         "Madera de ámbar",
         "Almizcle"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "instant-crush-mancera",
@@ -173,7 +176,7 @@
       "30": 720
     },
     "precio_combo": {
-      "120": 1028
+      "120": 1058
     },
     "tags": [
       "hombre",
@@ -225,7 +228,7 @@
       "30": 1180
     },
     "precio_combo": {
-      "100": 2282
+      "100": 2314
     },
     "precio_cuadro": 350,
     "tags": [
@@ -282,7 +285,7 @@
       "30": 1020
     },
     "precio_combo": {
-      "125": 3224
+      "125": 3448
     },
     "precio_cuadro": 350,
     "tags": [
@@ -404,9 +407,7 @@
       "15": 540,
       "30": 1020
     },
-    "precio_combo": {
-      "125": 3116
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "marly",
@@ -549,7 +550,7 @@
       "30": 510
     },
     "precio_combo": {
-      "120": 1339
+      "120": 1187
     },
     "tags": [
       "hombre",
@@ -565,6 +566,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/RED TOBACCO.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Canela",
         "Oud",
@@ -587,7 +589,11 @@
         "Almizcle blanco",
         "Vetiver haitiano"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "erba-gold-xerjoff",
@@ -605,7 +611,7 @@
       "30": 1530
     },
     "precio_combo": {
-      "100": 2899
+      "100": 1989
     },
     "precio_cuadro": null,
     "tags": [
@@ -669,7 +675,7 @@
       "30": 1800
     },
     "precio_combo": {
-      "50": 2249
+      "50": 2542
     },
     "tags": [
       "hombre nicho"
@@ -720,7 +726,7 @@
       "30": 1800
     },
     "precio_combo": {
-      "50": 2574
+      "50": 2563
     },
     "precio_cuadro": 350,
     "tags": [
@@ -753,7 +759,9 @@
         "Cedro"
       ]
     },
-    "image_cuadro": "imagenes/fotos-cuadros/MEGAMARE.jpeg"
+    "image_cuadro": "imagenes/fotos-cuadros/MEGAMARE.jpeg",
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "terroni-orto-parisi",
@@ -771,7 +779,7 @@
       "30": 1800
     },
     "precio_combo": {
-      "50": 2249
+      "50": 2542
     },
     "tags": [
       "hombre",
@@ -891,7 +899,7 @@
       "30": 1020
     },
     "precio_combo": {
-      "125": 3029
+      "125": 3153
     },
     "tags": [
       "hombre",
@@ -900,7 +908,7 @@
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/marly/PEGASUS.webp",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/PEGASUS.JPEG",
     "images_gallery": [],
@@ -926,7 +934,9 @@
       ]
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "nombre": "Pegasus Exclusif",
@@ -935,8 +945,8 @@
     "etiqueta": "novedad",
     "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": "imagenes/fotos-catalogo/marly/PEGASUS-EXCLUSIF.jpg",
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/PEGASUS-EXCLUSIF.png",
+    "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Fmarly%2FPEGASUS-EXCLUSIF.jpg",
+    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FPEGASUS-EXCLUSIF.png",
     "image_cuadro": null,
     "tags": [
       "hombre",
@@ -973,7 +983,10 @@
         "Ámbar"
       ]
     },
-    "id": "pegasus-exclusif-parfums-de-marly"
+    "id": "pegasus-exclusif-parfums-de-marly",
+    "oferta": false,
+    "precios_decants_oferta": null,
+    "precio_combo": null
   },
   {
     "nombre": "Lafayette Street",
@@ -1444,7 +1457,9 @@
       "15": 350,
       "30": 670
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2314
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -1467,7 +1482,9 @@
       "fondo": []
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "arabians-tonka-montale",
@@ -1717,7 +1734,7 @@
     "nombre": "Herod",
     "precio_completo": {
       "ml": 125,
-      "precio": 2700
+      "precio": 3240
     },
     "precios_decants": {
       "5": 230,
@@ -1725,7 +1742,9 @@
       "15": 620,
       "30": 1180
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 2704
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -1736,6 +1755,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/HEROD.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Canela",
         "Pepperwood"
@@ -1755,7 +1775,11 @@
         "Vetiver",
         "Ámbar"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "cedrat-boise-mancera",
@@ -2161,9 +2185,7 @@
       "15": 780,
       "30": 1480
     },
-    "precio_combo": {
-      "50": 2487
-    },
+    "precio_combo": null,
     "tags": [
       "hombre nicho"
     ],
@@ -2220,7 +2242,9 @@
       "15": 700,
       "30": 1330
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "150": 3600
+    },
     "tags": [
       "hombre",
       "dior"
@@ -2502,10 +2526,16 @@
     "nombre_interno": "Rabanne Invictus Parfum",
     "marca": "Rabanne",
     "nombre": "Invictus Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1010
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1010
+      },
+      {
+        "ml": 200,
+        "precio": 1530
+      }
+    ],
     "precios_decants": {
       "5": 90,
       "10": 170,
@@ -2513,7 +2543,7 @@
       "30": 460
     },
     "precio_combo": {
-      "200": 1302
+      "200": 1357
     },
     "tags": [
       "hombre",
@@ -2621,9 +2651,7 @@
       "15": 300,
       "30": 570
     },
-    "precio_combo": {
-      "125": 1183
-    },
+    "precio_combo": null,
     "precio_cuadro": 350,
     "tags": [
       "hombre",
@@ -3238,7 +3266,7 @@
       "30": 670
     },
     "precio_combo": {
-      "125": 1088
+      "125": 1573
     },
     "tags": [
       "hombre",
@@ -3270,7 +3298,9 @@
       ]
     },
     "image_cuadro": "imagenes/fotos-cuadros/LE-BEAU-LE-PARFUM.jpeg",
-    "precio_cuadro": 350
+    "precio_cuadro": 350,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "ultra-male-jean-paul-gaultier",
@@ -3332,7 +3362,7 @@
       "30": 720
     },
     "precio_combo": {
-      "100": 1534
+      "100": 1489
     },
     "tags": [
       "hombre"
@@ -3377,7 +3407,7 @@
     "marca": "Maison Margiela",
     "nombre": "Replica Jazz Club",
     "precio_completo": {
-      "ml": 120,
+      "ml": 100,
       "precio": 1550
     },
     "precios_decants": {
@@ -3386,7 +3416,9 @@
       "15": 380,
       "30": 720
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1469
+    },
     "tags": [
       "hombre"
     ],
@@ -3480,7 +3512,7 @@
       "30": 970
     },
     "precio_combo": {
-      "100": 2115
+      "100": 2085
     },
     "tags": [
       "hombre"
@@ -3886,7 +3918,7 @@
       "30": 570
     },
     "precio_combo": {
-      "200": 1758
+      "200": 1974
     },
     "tags": [
       "hombre",
@@ -4043,7 +4075,7 @@
       "30": 570
     },
     "precio_combo": {
-      "125": 1074
+      "125": 1090
     },
     "tags": [
       "hombre",
@@ -4172,7 +4204,7 @@
     "nombre": "One Million Lucky",
     "precio_completo": {
       "ml": 200,
-      "precio": 1600
+      "precio": 2200
     },
     "precios_decants": {
       "5": 130,
@@ -4180,7 +4212,9 @@
       "15": 350,
       "30": 670
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 2119
+    },
     "tags": [
       "hombre",
       "rabanne"
@@ -4246,8 +4280,8 @@
       "30": 410
     },
     "precio_combo": {
-      "100": 764,
-      "200": 1226
+      "100": 978,
+      "200": 1287
     },
     "tags": [
       "hombre",
@@ -4380,7 +4414,7 @@
       "30": 510
     },
     "precio_combo": {
-      "100": 981
+      "100": 1089
     },
     "tags": [
       "hombre",
@@ -4411,17 +4445,27 @@
       "salida": [],
       "corazon": [],
       "fondo": []
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "bad-boy-elixir-carolina-herrera",
     "nombre_interno": "Carolina Herrera Bad Boy Elixir",
     "marca": "Carolina Herrera",
     "nombre": "Bad Boy Elixir",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1130
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1130
+      },
+      {
+        "ml": 150,
+        "precio": 1600
+      }
+    ],
     "precios_decants": {
       "5": 100,
       "10": 190,
@@ -4429,7 +4473,7 @@
       "30": 510
     },
     "precio_combo": {
-      "100": 1093
+      "100": 1090
     },
     "tags": [
       "hombre",
@@ -4504,7 +4548,9 @@
       "precio": 1030
     },
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "80": 767
+    },
     "tags": [
       "mujer carolina"
     ],
@@ -4575,7 +4621,7 @@
     },
     "precios_decants": null,
     "precio_combo": {
-      "100": 1718
+      "100": 1535
     },
     "tags": [
       "hombre valentino"
@@ -4587,6 +4633,7 @@
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Vainilla"
       ],
@@ -4596,7 +4643,11 @@
       "fondo": [
         "Vetiver"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "donna-born-in-roma-intense-valentino",
@@ -4614,7 +4665,7 @@
       "30": 620
     },
     "precio_combo": {
-      "100": 1924
+      "100": 1877
     },
     "tags": [
       "mujer",
@@ -4628,6 +4679,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/DONNA BORN IN ROMA INTENSE.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Vainilla bourbon",
         "Ámbar"
@@ -4638,7 +4690,11 @@
       "fondo": [
         "Benjuí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "uomo-born-in-roma-coral-fantasy-valentino",
@@ -4826,7 +4882,7 @@
     },
     "precios_decants": null,
     "precio_combo": {
-      "100": 1145
+      "100": 1204
     },
     "precio_cuadro": 350,
     "tags": [
@@ -4852,7 +4908,9 @@
         "Pachulí"
       ]
     },
-    "image_cuadro": "imagenes/fotos-cuadros/MYSLF.jpeg"
+    "image_cuadro": "imagenes/fotos-cuadros/MYSLF.jpeg",
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "y-le-parfum-yves-saint-laurent",
@@ -5489,7 +5547,8 @@
       "30": 310
     },
     "precio_combo": {
-      "200": 813
+      "75": 500,
+      "200": 828
     },
     "tags": [
       "hombre",
@@ -5521,7 +5580,9 @@
       ]
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "acqua-di-gio-eau-de-toilette-giorgio-armani",
@@ -5743,7 +5804,9 @@
       "15": 220,
       "30": 410
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 618
+    },
     "tags": [
       "hombre versace"
     ],
@@ -5754,6 +5817,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/VERSACE POUR HOMME.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Limón",
         "Bergamota",
@@ -5771,7 +5835,11 @@
         "Haba tonka",
         "Ámbar"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "eros-flame-versace",
@@ -5980,7 +6048,7 @@
       "30": 360
     },
     "precio_combo": {
-      "100": 694
+      "100": 684
     },
     "tags": [
       "hombre"
@@ -6030,7 +6098,7 @@
       "carolina"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/ch/212 VIP MEN BLACK ELIXIR.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/212 VIP MEN BLACK ELIXIR.png",
@@ -6151,17 +6219,25 @@
     "nombre_interno": "Rabanne One Million Parfum",
     "marca": "Rabanne",
     "nombre": "One Million Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1120
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 800
+      },
+      {
+        "ml": 200,
+        "precio": 1120
+      }
+    ],
     "precios_decants": {
       "5": 70,
       "10": 130,
       "15": 190,
       "30": 360
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 949
+    },
     "tags": [
       "hombre",
       "rabanne"
@@ -6333,10 +6409,16 @@
     "nombre_interno": "Rabanne Fame EDP",
     "marca": "Rabanne",
     "nombre": "Fame Eau de Parfum",
-    "precio_completo": {
-      "ml": 80,
-      "precio": 1220
-    },
+    "precio_completo": [
+      {
+        "ml": 80,
+        "precio": 1220
+      },
+      {
+        "ml": 150,
+        "precio": 1490
+      }
+    ],
     "precios_decants": {
       "5": 100,
       "10": 190,
@@ -6344,7 +6426,8 @@
       "30": 510
     },
     "precio_combo": {
-      "80": 1152
+      "80": 1152,
+      "150": 1160
     },
     "tags": [
       "mujer",
@@ -6397,7 +6480,7 @@
       "30": 570
     },
     "precio_combo": {
-      "80": 1116
+      "80": 1154
     },
     "tags": [
       "mujer",
@@ -6410,6 +6493,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/FAME INTENSE.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Agua de coco",
         "Pimienta rosa",
@@ -6425,7 +6509,11 @@
         "Almizcle",
         "Cedro de Virginia"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "good-girl-blush-elixir-carolina-herrera",
@@ -6442,9 +6530,7 @@
       "15": 360,
       "30": 670
     },
-    "precio_combo": {
-      "80": 1231
-    },
+    "precio_combo": null,
     "tags": [
       "mujer",
       "carolina"
@@ -6496,7 +6582,7 @@
       "30": 670
     },
     "precio_combo": {
-      "80": 1175
+      "80": 1298
     },
     "tags": [
       "mujer",
@@ -6911,7 +6997,10 @@
         "Cedro del Atlas"
       ]
     },
-    "id": "miss-dior-parfum-dior"
+    "id": "miss-dior-parfum-dior",
+    "precio_combo": {
+      "80": 1276
+    }
   },
   {
     "id": "libre-eau-de-toilette-yves-saint-laurent",
@@ -6998,7 +7087,9 @@
       "15": 380,
       "30": 720
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 1587
+    },
     "tags": [
       "mujer"
     ],
@@ -7100,9 +7191,7 @@
       "15": 300,
       "30": 570
     },
-    "precio_combo": {
-      "100": 901
-    },
+    "precio_combo": null,
     "tags": [
       "mujer",
       "jpg"
@@ -7154,11 +7243,12 @@
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/jpg/Untitled-2.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BELLE.jpeg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pera"
       ],
@@ -7168,7 +7258,11 @@
       "fondo": [
         "Vainilla"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "gaultier-divine-le-parfum-jean-paul-gaultier",
@@ -7186,7 +7280,7 @@
       "30": 510
     },
     "precio_combo": {
-      "100": 1099
+      "100": 1085
     },
     "tags": [
       "mujer",
@@ -7366,7 +7460,9 @@
       "15": 300,
       "30": 570
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1132
+    },
     "tags": [
       "mujer",
       "jpg"
@@ -7378,10 +7474,15 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/DIVINE ELIXIR.jpeg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [],
       "corazon": [],
       "fondo": []
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "fame-parfum-rabanne",
@@ -7654,9 +7755,7 @@
       "15": 240,
       "30": 460
     },
-    "precio_combo": {
-      "100": 770
-    },
+    "precio_combo": null,
     "tags": [
       "mujer",
       "d&g"
@@ -7824,7 +7923,9 @@
       "precio": 1200
     },
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 700
+    },
     "tags": [
       "mujer d&g"
     ],
@@ -7847,7 +7948,9 @@
       ]
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "q-by-d-g-eau-de-parfum-intense-dolce-gabbana",
@@ -8206,7 +8309,7 @@
       "30": 460
     },
     "precio_combo": {
-      "100": 844
+      "100": 934
     },
     "tags": [
       "hombre",
@@ -8367,7 +8470,7 @@
       "30": 360
     },
     "precio_combo": {
-      "110": 659
+      "110": 733
     },
     "tags": [
       "hombre"
@@ -8983,7 +9086,7 @@
       "30": 620
     },
     "precio_combo": {
-      "100": 1147
+      "100": 1390
     },
     "tags": [
       "mujer",
@@ -9008,7 +9111,9 @@
       ]
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "uomo-born-in-roma-purple-melancholia-valentino",
@@ -9489,7 +9594,7 @@
     "precios_decants": null,
     "precio_combo": {
       "50": 632,
-      "100": 968.23
+      "100": 896
     },
     "tags": [
       "hombre jpg"
@@ -9501,6 +9606,7 @@
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Mandarina",
         "Salvia esclarea"
@@ -9512,7 +9618,11 @@
       "fondo": [
         "Vetiver"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "pure-xs-night-eau-de-parfum-rabanne",
@@ -9605,7 +9715,7 @@
       "30": 620
     },
     "precio_combo": {
-      "100": 1000
+      "100": 921
     },
     "tags": [
       "hombre",
@@ -9726,7 +9836,7 @@
       "30": 570
     },
     "precio_combo": {
-      "80": 1031
+      "80": 1184
     },
     "tags": [
       "mujer",
@@ -9739,6 +9849,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BOMBA.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pitahaya"
       ],
@@ -9750,7 +9861,11 @@
         "Vainilla",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "acqua-di-gio-absolu-giorgio-armani",
@@ -9839,7 +9954,7 @@
     "nombre": "Stronger With You Powerfully",
     "precio_completo": {
       "ml": 100,
-      "precio": 1700
+      "precio": 1800
     },
     "precios_decants": {
       "5": 140,
@@ -9847,7 +9962,9 @@
       "15": 380,
       "30": 720
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1703
+    },
     "tags": [
       "hombre",
       "armani"
@@ -10051,7 +10168,7 @@
     "nombre": "Light Blue Pour Homme Capri In Love",
     "precio_completo": {
       "ml": 100,
-      "precio": 950
+      "precio": 880
     },
     "precios_decants": {
       "5": 70,
@@ -10060,7 +10177,7 @@
       "30": 360
     },
     "precio_combo": {
-      "100": 923
+      "100": 777
     },
     "tags": [
       "hombre"
@@ -10095,7 +10212,7 @@
     "nombre": "Light Blue Capri In Love",
     "precio_completo": {
       "ml": 100,
-      "precio": 880
+      "precio": 950
     },
     "precios_decants": {
       "5": 70,
@@ -10104,7 +10221,7 @@
       "30": 360
     },
     "precio_combo": {
-      "100": 777
+      "100": 922
     },
     "tags": [
       "mujer"
@@ -10184,11 +10301,11 @@
     "nombre": "K By D&G EDP",
     "precio_completo": {
       "ml": 200,
-      "precio": 1278
+      "precio": 1280
     },
     "precios_decants": null,
     "precio_combo": {
-      "200": 1036
+      "200": 981
     },
     "tags": [
       "hombre d&g"
@@ -10200,6 +10317,7 @@
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Naranja sanguina",
         "Bayas de enebro",
@@ -10220,7 +10338,11 @@
         "Vetiver",
         "Aceite de cipriol"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "k-by-d-g-eau-de-toilette-dolce-gabbana",
@@ -10281,7 +10403,8 @@
     ],
     "precios_decants": null,
     "precio_combo": {
-      "100": 722
+      "100": 724,
+      "200": 907
     },
     "tags": [
       "hombre d&g"
@@ -10293,6 +10416,7 @@
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Bayas de enebro",
         "Cítricos",
@@ -10310,7 +10434,11 @@
         "Cedro",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "k-by-d-g-eau-de-parfum-intense-dolce-gabbana",
@@ -11143,20 +11271,19 @@
       "precio": 850
     },
     "precios_decants": null,
-    "precio_combo": {
-      "100": 777
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "moncler"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
+    "en_stock_completos": false,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/moncler/MONCLER SUNRISE POUR HOMME.webp",
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Bergamota",
         "Pimienta rosa",
@@ -11172,7 +11299,11 @@
         "Olíbano",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "fresh-couture-moschino",
@@ -11621,7 +11752,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 404
+      "100": 415
     },
     "tags": [
       "hombre",
@@ -11659,7 +11790,9 @@
       ]
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "yara-lattafa",
@@ -11676,7 +11809,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 390
+    },
     "tags": [
       "mujer",
       "lattafa",
@@ -11689,6 +11824,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Orquídea",
         "Heliotropo",
@@ -11703,7 +11839,11 @@
         "Almizcle",
         "Sándalo"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "9pm-afnan",
@@ -11721,7 +11861,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 429
+      "100": 424
     },
     "tags": [
       "hombre",
@@ -11735,6 +11875,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/9PM.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Manzana",
         "Canela",
@@ -11751,7 +11892,11 @@
         "Ámbar",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "hawas-for-him-rasasi",
@@ -11768,7 +11913,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 409
+    },
     "tags": [
       "hombre",
       "rasasi",
@@ -11781,6 +11928,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Manzana",
         "Bergamota",
@@ -11799,7 +11947,11 @@
         "Pachulí",
         "Madera a la deriva"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "club-de-nuit-intense-armaf",
@@ -11817,7 +11969,7 @@
       "30": 260
     },
     "precio_combo": {
-      "105": 435
+      "105": 481
     },
     "tags": [
       "hombre",
@@ -11831,6 +11983,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/CLUB DE LA NUIT.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Limón",
         "Piña",
@@ -11849,7 +12002,11 @@
         "Pachulí",
         "Vainilla"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "club-de-nuit-milestone-armaf",
@@ -11906,7 +12063,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 448
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -11954,7 +12113,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 415
+      "100": 410
     },
     "tags": [
       "hombre",
@@ -11990,7 +12149,9 @@
       ]
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null
   },
   {
     "id": "asad-lattafa",
@@ -12008,7 +12169,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 333
+      "100": 336
     },
     "tags": [
       "hombre",
@@ -12022,6 +12183,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/ASAD.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pimienta negra",
         "Tabaco",
@@ -12039,7 +12201,11 @@
         "Benjuí",
         "Ládano"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "eclaire-lattafa",
@@ -12057,7 +12223,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 488
+      "100": 455
     },
     "tags": [
       "mujer",
@@ -12071,6 +12237,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/ECLAIRE.jpeg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Caramelo",
         "Leche",
@@ -12085,7 +12252,11 @@
         "Praliné",
         "Almizcle"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "yara-candy-lattafa",
@@ -12147,7 +12318,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 437
+      "100": 430
     },
     "tags": [
       "hombre",
@@ -12161,6 +12332,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/9AM DIVE.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Limón",
         "Menta",
@@ -12178,7 +12350,11 @@
         "Pachulí",
         "Jazmín"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "turathi-blue-afnan",
@@ -12289,7 +12465,7 @@
       "30": 310
     },
     "precio_combo": {
-      "100": 540
+      "100": 496
     },
     "tags": [
       "hombre",
@@ -12303,6 +12479,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/LIQUID BRUN.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Canela",
         "Flor de azahar",
@@ -12319,7 +12496,11 @@
         "Madera de gaiac",
         "Almizcle"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "amber-oud-gold-edition-al-haramain",
@@ -12337,7 +12518,7 @@
       "30": 360
     },
     "precio_combo": {
-      "120": 663
+      "120": 728
     },
     "tags": [
       "hombre",
@@ -12351,6 +12532,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/AMBER OUD GOLD.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Bergamota",
         "Notas verdes"
@@ -12366,7 +12548,11 @@
         "Almizcle",
         "Notas amaderadas"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "amber-oud-acqua-dubai-al-haramain",
@@ -12434,7 +12620,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 351
+      "100": 367
     },
     "tags": [
       "hombre",
@@ -12448,6 +12634,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/OUD FOR GLORY.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Azafrán",
         "Nuez moscada",
@@ -12462,7 +12649,11 @@
         "Pachulí",
         "Almizcle"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "bade-e-al-oud-honor-and-glory-lattafa",
@@ -12479,19 +12670,22 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 455
+    },
     "tags": [
       "hombre",
       "lattafa",
       "arabes"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/arabes/HONOR AND GLORY.WEBP",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/HONOR AND GLORY.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Piña",
         "Crema brûlée"
@@ -12508,7 +12702,11 @@
         "Cachemira",
         "Musgo"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "fakhar-black-lattafa",
@@ -12526,7 +12724,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 343
+      "100": 393
     },
     "tags": [
       "hombre",
@@ -12540,6 +12738,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/FAKHAR BLACK.jpeg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Manzana",
         "Bergamota",
@@ -12557,7 +12756,11 @@
         "Amberwood",
         "Vetiver"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "fakhar-rose-lattafa",
@@ -12667,7 +12870,9 @@
       "15": 170,
       "30": 310
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 845
+    },
     "tags": [
       "hombre",
       "nicho"
@@ -12716,7 +12921,9 @@
       "15": 170,
       "30": 310
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 845
+    },
     "tags": [
       "hombre",
       "nicho"
@@ -12763,7 +12970,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 338
+    },
     "tags": [
       "mujer",
       "lattafa",
@@ -12776,6 +12985,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA TOUS.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Mango",
         "Coco",
@@ -12791,7 +13001,11 @@
         "Almizcle",
         "Cachemira"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "asad-bourbon-lattafa",
@@ -12809,7 +13023,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 468
+      "100": 466
     },
     "tags": [
       "hombre",
@@ -12823,6 +13037,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/ASAD BOURBON.jpeg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Lavanda",
         "Mirabel",
@@ -12838,7 +13053,11 @@
         "Ámbar",
         "Vetiver"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "asad-elixir-lattafa",
@@ -12855,9 +13074,7 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": {
-      "100": 481
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "lattafa",
@@ -12870,6 +13087,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/ASAD ELIXIR.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pimienta rosa",
         "Azafrán",
@@ -12886,7 +13104,11 @@
         "Pachulí",
         "Cachemira"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "club-de-nuit-urban-man-elixir-armaf",
@@ -12904,7 +13126,7 @@
       "30": 260
     },
     "precio_combo": {
-      "105": 482
+      "105": 486
     },
     "tags": [
       "hombre",
@@ -12961,7 +13183,9 @@
       "15": 120,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 325
+    },
     "tags": [
       "unisex",
       "hombre",
@@ -12977,6 +13201,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/BADEE AL OUD AMETHYST.jpg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pimienta rosa",
         "Bergamota"
@@ -12991,7 +13216,11 @@
         "Ámbar",
         "Vainilla"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "yara-moi-lattafa",
@@ -13008,19 +13237,22 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 377
+    },
     "tags": [
       "mujer",
       "lattafa",
       "arabes"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/arabes/YARA MOI.WEBP",
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/YARA MOI.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Jazmín",
         "Durazno"
@@ -13033,7 +13265,11 @@
         "Pachulí",
         "Sándalo"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "yara-elixir-lattafa",
@@ -13145,7 +13381,8 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 403
+      "100": 403,
+      "200": 715
     },
     "tags": [
       "hombre",
@@ -13159,6 +13396,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/ODYSSEY MANDARIN SKY.jpg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Mandarina",
         "Naranja",
@@ -13175,7 +13413,11 @@
         "Cedro",
         "Vetiver"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "hawas-ice-rasasi",
@@ -13269,7 +13511,9 @@
       "precio": 630
     },
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 615
+    },
     "tags": [
       "hombre rasasi arabes"
     ],
@@ -13351,7 +13595,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 494
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -13477,7 +13723,9 @@
       "15": 160,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 429
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -13520,7 +13768,9 @@
       "precio": 630
     },
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 611
+    },
     "tags": [
       "hombre rasasi arabes"
     ],
@@ -13531,6 +13781,7 @@
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Agua de coco",
         "Hoja de higo",
@@ -13546,7 +13797,11 @@
         "Haba tonka",
         "Almizcle"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "hawas-tropical-for-him-rasasi",
@@ -13682,7 +13937,7 @@
     },
     "precios_decants": null,
     "precio_combo": {
-      "100": 587
+      "100": 585
     },
     "tags": [
       "hombre rasasi arabes"
@@ -13774,7 +14029,7 @@
       "30": 310
     },
     "precio_combo": {
-      "100": 595
+      "100": 521
     },
     "tags": [
       "hombre rasasi arabes"
@@ -13852,7 +14107,9 @@
       "15": 160,
       "30": 310
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 416
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -14637,7 +14894,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 507
+    },
     "tags": [
       "unisex",
       "lattafa",
@@ -14676,7 +14935,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 620
+      "100": 549
     },
     "tags": [
       "hombre",
@@ -14941,17 +15200,25 @@
     "nombre_interno": "ARMAF Odyssey Aqua",
     "marca": "ARMAF",
     "nombre": "Odyssey Aqua",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 470
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 470
+      },
+      {
+        "ml": 200,
+        "precio": 830
+      }
+    ],
     "precios_decants": {
       "5": 50,
       "10": 100,
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 728
+    },
     "tags": [
       "hombre",
       "armaf",
@@ -15046,7 +15313,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 372
+    },
     "tags": [
       "unisex",
       "hombre",
@@ -15061,6 +15330,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/SUBLIME.jpg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Manzana",
         "Lichi",
@@ -15075,7 +15345,11 @@
         "Musgo",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "atlas-lattafa",
@@ -15271,7 +15545,7 @@
     "nombre": "Odyssey Candee",
     "precio_completo": {
       "ml": 100,
-      "precio": 470
+      "precio": 490
     },
     "precios_decants": {
       "5": 50,
@@ -15280,7 +15554,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 431
+      "100": 377
     },
     "tags": [
       "mujer",
@@ -15294,6 +15568,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/ODYSSEY CANDEE.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Fresa",
         "Frambuesa",
@@ -15311,7 +15586,11 @@
         "Almizcle",
         "Ámbar"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "odyssey-mega-armaf",
@@ -15430,7 +15709,9 @@
       "15": 170,
       "30": 310
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 571
+    },
     "tags": [
       "mujer",
       "armaf",
@@ -15443,6 +15724,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/YUM YUM.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Bayas silvestres",
         "Cereza",
@@ -15459,7 +15741,11 @@
         "Almizcle",
         "Ámbar"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "hayaatim-lattafa",
@@ -15587,7 +15873,9 @@
       "precio": 830
     },
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 585
+    },
     "tags": [
       "hombre",
       "afnan",
@@ -15600,6 +15888,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/TURATHI BLUE.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Cítricos"
       ],
@@ -15612,7 +15901,11 @@
         "Especias",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "gaultier-divine-le-parfum-refill-jean-paul-gaultier",
@@ -15624,7 +15917,9 @@
       "precio": 1560
     },
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1407
+    },
     "tags": [
       "mujer",
       "jpg"
@@ -15636,6 +15931,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/GAULTIER DIVINE LE PARFUM.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Notas solares",
         "Azucena"
@@ -15648,7 +15944,11 @@
         "Ámbar",
         "Benjuí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "khamrah-desodorante-lattafa",
@@ -15818,12 +16118,13 @@
       "hombre ysl"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
-    "en_stock_decants": true,
+    "en_stock_completos": false,
+    "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/ysl/Untitled-1.png",
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Aldehídos",
         "Bergamota",
@@ -15840,7 +16141,11 @@
         "Cedro",
         "Olíbano"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "island-khadlaj",
@@ -15857,7 +16162,9 @@
       "15": 140,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 572
+    },
     "tags": [
       "unisex",
       "khadlaj",
@@ -15870,9 +16177,14 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/KHADLAJ ISLAND.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [],
       "corazon": [],
       "fondo": []
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   }
 ]
