@@ -8227,13 +8227,14 @@
       "hombre",
       "givenchy"
     ],
-    "etiqueta": "novedad",
+    "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/givenchy/Untitled-1.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/GENTLEMAN BOISEE.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pimienta negra",
         "Geranio",
@@ -8249,7 +8250,11 @@
         "Sándalo",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "gentleman-eau-de-parfum-givenchy",
