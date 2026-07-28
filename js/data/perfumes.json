@@ -9802,20 +9802,29 @@
     "nombre_interno": "Jean Paul Gaultier Scandal Pour Homme Absolu",
     "marca": "Jean Paul Gaultier",
     "nombre": "Scandal Pour Homme Absolu",
-    "precio_completo": null,
-    "precios_decants": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1450
+    },
+    "precios_decants": {
+      "5": 130,
+      "10": 250,
+      "15": 350,
+      "30": 670
+    },
     "precio_combo": null,
     "tags": [
       "hombre",
       "jpg"
     ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/jpg/Scandal Absolu Pour Homme.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/SCANDAL ABSOLU.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Mirabel"
       ],
@@ -9825,7 +9834,11 @@
       "fondo": [
         "Sándalo"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "la-belle-paradise-garden-jean-paul-gaultier",
@@ -9980,16 +9993,10 @@
     "nombre_interno": "Jean Paul Gaultier Scandal Pour Homme EDT",
     "marca": "Jean Paul Gaultier",
     "nombre": "Scandal Pour Homme EDT",
-    "precio_completo": [
-      {
-        "ml": 50,
-        "precio": 840
-      },
-      {
-        "ml": 100,
-        "precio": 1400
-      }
-    ],
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1400
+    },
     "precios_decants": null,
     "precio_combo": {
       "50": 632,
