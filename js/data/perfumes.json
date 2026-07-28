@@ -819,6 +819,241 @@
     "precio_cuadro": null
   },
   {
+    "nombre": "Boccanera",
+    "marca": "Orto Parisi",
+    "nombre_interno": "Orto Parisi Boccanera",
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ortoparisi/BOCCANERA.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/BOCCANERA.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "nicho",
+      "ortoparisi"
+    ],
+    "precios_decants": {
+      "5": 300,
+      "10": 600,
+      "15": 900,
+      "30": 1800
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 50,
+      "precio": 3500
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Chile (locoto)",
+        "Pimienta Negra",
+        "Vaina de cacao",
+        "Jengibre"
+      ],
+      "corazon": [
+        "Jazmín"
+      ],
+      "fondo": [
+        "Chocolate",
+        "Almizcle",
+        "Cuero",
+        "Notas de animal",
+        "Pachulí",
+        "Cedro",
+        "Vainilla",
+        "Azúcar"
+      ]
+    },
+    "id": "boccanera-orto-parisi"
+  },
+  {
+    "nombre": "Bergamask",
+    "marca": "Orto Parisi",
+    "nombre_interno": "Orto Parisi Bergamask",
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ortoparisi/BERGAMASK.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/BERGAMASK.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "nicho",
+      "ortoparisi"
+    ],
+    "precios_decants": {
+      "5": 300,
+      "10": 600,
+      "15": 900,
+      "30": 1800
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 50,
+      "precio": 3500
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Bergamota",
+        "Limón"
+      ],
+      "corazon": [
+        "Lavanda",
+        "Flor de azahar del naranjo",
+        "Lirio de los valles"
+      ],
+      "fondo": [
+        "Almizcle",
+        "Cedro",
+        "Haba Tonka"
+      ]
+    },
+    "id": "bergamask-orto-parisi"
+  },
+  {
+    "nombre": "Stercus",
+    "marca": "Orto Parisi",
+    "nombre_interno": "Orto Parisi Stercus",
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ortoparisi/STERCUS.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/STERCUS.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "nicho",
+      "ortoparisi"
+    ],
+    "precios_decants": {
+      "5": 300,
+      "10": 600,
+      "15": 900,
+      "30": 1800
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 50,
+      "precio": 3500
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Almendra",
+        "Aldehídos",
+        "Anís"
+      ],
+      "corazon": [
+        "Rosa"
+      ],
+      "fondo": [
+        "Madera de oud",
+        "Almizcle",
+        "Cuero",
+        "Vainilla",
+        "Cedro",
+        "Heliotropo"
+      ]
+    },
+    "id": "stercus-orto-parisi"
+  },
+  {
+    "nombre": "Seminalis",
+    "marca": "Orto Parisi",
+    "nombre_interno": "Orto Parisi Seminalis",
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ortoparisi/SEMINALIS.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/SEMINALIS.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "nicho",
+      "ortoparisi"
+    ],
+    "precios_decants": {
+      "5": 300,
+      "10": 600,
+      "15": 900,
+      "30": 1800
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 50,
+      "precio": 3500
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [],
+      "corazon": [],
+      "fondo": []
+    },
+    "id": "seminalis-orto-parisi"
+  },
+  {
+    "nombre": "Risvelium",
+    "marca": "Orto Parisi",
+    "nombre_interno": "Orto Parisi Risvelium",
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ortoparisi/RISVELIUM.jpeg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/RISVELIUM.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "nicho",
+      "ortoparisi"
+    ],
+    "precios_decants": {
+      "5": 300,
+      "10": 600,
+      "15": 900,
+      "30": 1800
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 50,
+      "precio": 3500
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Pomelo",
+        "Bergamota"
+      ],
+      "corazon": [
+        "Grosellas negras",
+        "Piña"
+      ],
+      "fondo": [
+        "Almizcle",
+        "Ambroxan",
+        "Ámbar"
+      ]
+    },
+    "id": "risvelium-orto-parisi"
+  },
+  {
     "id": "percival-parfums-de-marly",
     "nombre_interno": "Parfums de Marly Percival",
     "marca": "Parfums de Marly",
@@ -5794,24 +6029,19 @@
     "nombre_interno": "Versace Pour Homme",
     "marca": "Versace",
     "nombre": "Pour Homme",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 800
-    },
+    "precio_completo": null,
     "precios_decants": {
       "5": 80,
       "10": 150,
       "15": 220,
       "30": 410
     },
-    "precio_combo": {
-      "100": 618
-    },
+    "precio_combo": null,
     "tags": [
       "hombre versace"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
+    "en_stock_completos": false,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/versace/VERSACE POUR HOMME.png",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/VERSACE POUR HOMME.JPEG",
@@ -8164,10 +8394,7 @@
     "nombre_interno": "Givenchy Gentleman Réserve Privée",
     "marca": "Givenchy",
     "nombre": "Gentleman Réserve Privée",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 980
-    },
+    "precio_completo": null,
     "precios_decants": {
       "5": 90,
       "10": 170,
@@ -8180,7 +8407,7 @@
       "givenchy"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
+    "en_stock_completos": false,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/givenchy/Untitled.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/GENTLEMAN RESERVE PRIVEE.png",
@@ -11655,22 +11882,28 @@
   },
   {
     "id": "set-polo-blue-polo-ralph-lauren",
-    "nombre_interno": "Polo Ralph Lauren Set Polo Blue",
+    "nombre_interno": "Polo Ralph Lauren Polo Blue",
     "marca": "Polo Ralph Lauren",
-    "nombre": "Set Polo Blue",
+    "nombre": "Polo Blue",
     "precio_completo": null,
-    "precios_decants": null,
+    "precios_decants": {
+      "5": 80,
+      "10": 150,
+      "15": 220,
+      "30": 410
+    },
     "precio_combo": null,
     "tags": [
       "hombre prl"
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/prl/Polo Blue Parfum.webp",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/POLO BLUE.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Mandarina",
         "Pimienta rosa",
@@ -11687,7 +11920,11 @@
         "Olíbano",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "aguafresca-citrus-cedro-adolfo-dominguez",
