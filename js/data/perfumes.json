@@ -3295,7 +3295,10 @@
     "nombre_interno": "Giorgio Armani Acqua Di Gio Profondo",
     "marca": "Giorgio Armani",
     "nombre": "Acqua Di Gio Profondo",
-    "precio_completo": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1720
+    },
     "precios_decants": {
       "5": 110,
       "10": 210,
@@ -3337,12 +3340,7 @@
     },
     "oferta": false,
     "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 100,
-      "10": 190,
-      "15": 270,
-      "30": 510
-    },
+    "precios_decants_oferta": null,
     "precio_cuadro": null
   },
   {
@@ -3387,6 +3385,50 @@
         "Ládano"
       ]
     }
+  },
+  {
+    "nombre": "Acqua Di Gio Profondo Parfum",
+    "marca": "Giorgio Armani",
+    "nombre_interno": "Giorgio Armani Acqua Di Gio Profondo Parfum",
+    "etiqueta": null,
+    "en_stock_completos": false,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": null,
+    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FPROFONDO%20PARFUM.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "armani"
+    ],
+    "precios_decants": {
+      "5": 130,
+      "10": 250,
+      "15": 350,
+      "30": 670
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1400
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Notas Marinas",
+        "Mandarina Verde"
+      ],
+      "corazon": [
+        "Mimosa"
+      ],
+      "fondo": [
+        "Pachulí",
+        "Ládano"
+      ]
+    },
+    "id": "acqua-di-gio-profondo-parfum-giorgio-armani"
   },
   {
     "id": "the-most-wanted-edp-intense-azzaro",
@@ -4038,11 +4080,12 @@
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/ysl/LIBRE LE PARFUM.png",
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/LIBRE LE PARFUM.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Jengibre",
         "Azafrán",
@@ -4059,7 +4102,11 @@
         "Haba tonka",
         "Vetiver"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "bleu-de-chanel-eau-de-toilette-chanel",
@@ -5270,12 +5317,13 @@
       "hombre ysl"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/ysl/Y EDP INTENSE.jpg",
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Jengibre",
         "Bayas de enebro",
@@ -5291,7 +5339,11 @@
         "Pachulí",
         "Cedro"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "y-iced-cologne-yves-saint-laurent",
@@ -5962,19 +6014,28 @@
     "nombre_interno": "Giorgio Armani Acqua Di Gio EDP",
     "marca": "Giorgio Armani",
     "nombre": "Acqua Di Gio Eau De Parfum",
-    "precio_completo": null,
-    "precios_decants": null,
+    "precio_completo": {
+      "ml": 125,
+      "precio": 1100
+    },
+    "precios_decants": {
+      "5": 90,
+      "10": 170,
+      "15": 240,
+      "30": 460
+    },
     "precio_combo": null,
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO EDP.png",
+    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FACQUA%20DI%20GIO%20EDP.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Notas marinas",
         "Mandarina verde"
@@ -5989,7 +6050,11 @@
         "Vetiver",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "acqua-di-gio-profumo-giorgio-armani",
@@ -6978,7 +7043,10 @@
     "nombre_interno": "Dior J'Adore EDP",
     "marca": "Dior",
     "nombre": "J'Adore Eau de Parfum",
-    "precio_completo": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1650
+    },
     "precios_decants": {
       "5": 110,
       "10": 200,
@@ -6990,12 +7058,13 @@
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/dior/Untitled-6.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/mujer/JADORE.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pera",
         "Melón",
@@ -7020,7 +7089,11 @@
         "Cedro",
         "Zarzamora"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "nombre": "Her",
@@ -9633,18 +9706,24 @@
     "marca": "Valentino",
     "nombre": "Uomo Born In Roma EDT",
     "precio_completo": null,
-    "precios_decants": null,
+    "precios_decants": {
+      "5": 100,
+      "10": 190,
+      "15": 270,
+      "30": 510
+    },
     "precio_combo": null,
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": null,
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/VALENTINO BORN IN ROMA EDT.jpeg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Notas minerales",
         "Hoja de violeta",
@@ -9658,7 +9737,11 @@
         "Notas amaderadas",
         "Vetiver"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "le-male-lover-jean-paul-gaultier",
@@ -10354,6 +10437,54 @@
     }
   },
   {
+    "nombre": "Stronger With You Absolutely",
+    "marca": "Emporio Armani",
+    "nombre_interno": "Emporio Armani Stronger With You Absolutely",
+    "etiqueta": null,
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/armani/SWY-ABSOLUTELY.jpeg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/STRONGER WITH YOU ABSOLUTELY.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "armani"
+    ],
+    "precios_decants": {
+      "5": 140,
+      "10": 270,
+      "15": 380,
+      "30": 720
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1500
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Ron",
+        "Elemí",
+        "Bergamota"
+      ],
+      "corazon": [
+        "Lavanda",
+        "Davana"
+      ],
+      "fondo": [
+        "Vainilla de Madagascar",
+        "Castaña",
+        "Cedro",
+        "Pachulí"
+      ]
+    },
+    "id": "stronger-with-you-absolutely-emporio-armani"
+  },
+  {
     "id": "stronger-with-you-powerfully-emporio-armani",
     "nombre_interno": "Emporio Armani Stronger With You Powerfully",
     "marca": "Emporio Armani",
@@ -11021,19 +11152,23 @@
     "nombre_interno": "Dolce&Gabbana Devotion Intense",
     "marca": "Dolce&Gabbana",
     "nombre": "Devotion Intense",
-    "precio_completo": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1360
+    },
     "precios_decants": null,
     "precio_combo": null,
     "tags": [
       "mujer d&g"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/d&g/DEVOTION INTENSE.jpg",
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Avellana"
       ],
@@ -11043,7 +11178,11 @@
       "fondo": [
         "Vainilla"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "devotion-pour-homme-dolce-gabbana",
@@ -11729,11 +11868,12 @@
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": null,
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/FRESH COUTURE.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Bergamota",
         "Mandarina",
@@ -11749,7 +11889,11 @@
         "Notas amaderadas",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "precio_cuadro": null
   },
   {
     "id": "toy-boy-moschino",
@@ -11773,8 +11917,8 @@
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
-    "en_stock_decants": true,
+    "en_stock_completos": false,
+    "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/mosch/eau-de-parfum-moschino-moschino-moschino-toy-boy8011003845132A.png",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/MOSCHINO TOY BOY.png",
     "images_gallery": [],
@@ -15284,7 +15428,7 @@
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Farabes%2F9AM.webp",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2F9AM.png",
     "images_gallery": [],
@@ -15309,7 +15453,7 @@
         "Pachulí"
       ]
     },
-    "oferta": true,
+    "oferta": false,
     "image_cuadro": null,
     "precios_decants_oferta": null,
     "precio_cuadro": null
@@ -15669,7 +15813,7 @@
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": null,
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2F9PM%20ELIXIR.png",
     "images_gallery": [],
@@ -15692,7 +15836,7 @@
         "Jara"
       ]
     },
-    "oferta": true,
+    "oferta": false,
     "image_cuadro": null,
     "precios_decants_oferta": null,
     "precio_cuadro": null
