@@ -3359,10 +3359,10 @@
       "rabanne"
     ],
     "precios_decants": {
-      "5": 140,
-      "10": 240,
-      "15": 350,
-      "30": 670
+      "5": 110,
+      "10": 200,
+      "15": 290,
+      "30": 540
     },
     "precios_decants_oferta": null,
     "decants_auto": true,
@@ -3371,7 +3371,7 @@
     "precio_cuadro": null,
     "precio_completo": {
       "ml": 100,
-      "precio": 1650
+      "precio": 1320
     },
     "precio_combo": null,
     "notas": {
@@ -9685,12 +9685,15 @@
     "nombre_interno": "Terre d'Hermès EDT",
     "marca": "Hermès",
     "nombre": "Terre d'Hermès Eau de Toilette",
-    "precio_completo": null,
+    "precio_completo": {
+      "ml": 125,
+      "precio": 1160
+    },
     "precios_decants": {
-      "5": 70,
+      "5": 90,
       "10": 150,
-      "15": 200,
-      "30": 360
+      "15": 210,
+      "30": 390
     },
     "precio_combo": null,
     "tags": [
@@ -9721,13 +9724,11 @@
     },
     "oferta": false,
     "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 60,
-      "10": 110,
-      "15": 160,
-      "30": 310
-    },
-    "precio_cuadro": null
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 125
   },
   {
     "id": "man-in-black-eau-de-parfum-bvlgari",
