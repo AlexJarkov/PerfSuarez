@@ -6,3 +6,8 @@ watches.md
 arma_tu_combo.md
 inventario.csv
 revision-inventario-catalogo.md
+
+# Assets fuente de Suarez Watches: 573 MB de SVG con PNG en base64.
+# Se convierten a imagenes/relojes/*.webp con scripts/build-watch-assets.py.
+Suarez W/
+temp/revision-relojes/

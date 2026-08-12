@@ -1,0 +1,6398 @@
+{
+  "generadoPor": "scripts/build-watch-assets.py",
+  "anchoRender": 1440,
+  "piezas": [
+    {
+      "id": 1,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/001.webp",
+      "w": 646,
+      "h": 724,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 292.21,
+        "cy": 361.24,
+        "r": 221.33
+      },
+      "radioAsiento": 292.21,
+      "bytes": 51712
+    },
+    {
+      "id": 2,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/002.webp",
+      "w": 632,
+      "h": 707,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 284.5,
+        "cy": 352.2,
+        "r": 216.7
+      },
+      "radioAsiento": 284.5,
+      "bytes": 42314
+    },
+    {
+      "id": 3,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/003.webp",
+      "w": 651,
+      "h": 725,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 292.94,
+        "cy": 361.22,
+        "r": 222.13
+      },
+      "radioAsiento": 292.94,
+      "bytes": 48134
+    },
+    {
+      "id": 4,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/004.webp",
+      "w": 688,
+      "h": 744,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 311.72,
+        "cy": 367.18,
+        "r": 203.28
+      },
+      "radioAsiento": 310.72,
+      "bytes": 62452
+    },
+    {
+      "id": 5,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/005.webp",
+      "w": 672,
+      "h": 719,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 301.65,
+        "cy": 355.64,
+        "r": 198.86
+      },
+      "radioAsiento": 301.65,
+      "bytes": 56926
+    },
+    {
+      "id": 6,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/006.webp",
+      "w": 668,
+      "h": 720,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 299.13,
+        "cy": 355.83,
+        "r": 198.22
+      },
+      "radioAsiento": 299.13,
+      "bytes": 64862
+    },
+    {
+      "id": 7,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/007.webp",
+      "w": 669,
+      "h": 746,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 309.16,
+        "cy": 364.9,
+        "r": 200.39
+      },
+      "radioAsiento": 309.16,
+      "bytes": 62492
+    },
+    {
+      "id": 8,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/008.webp",
+      "w": 669,
+      "h": 744,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 309.07,
+        "cy": 364.21,
+        "r": 200.83
+      },
+      "radioAsiento": 309.07,
+      "bytes": 57426
+    },
+    {
+      "id": 9,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/009.webp",
+      "w": 655,
+      "h": 731,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 302.72,
+        "cy": 357.25,
+        "r": 196.61
+      },
+      "radioAsiento": 302.72,
+      "bytes": 66672
+    },
+    {
+      "id": 10,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/010.webp",
+      "w": 649,
+      "h": 732,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 297.58,
+        "cy": 362.1,
+        "r": 209.76
+      },
+      "radioAsiento": 297.58,
+      "bytes": 61046
+    },
+    {
+      "id": 11,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/011.webp",
+      "w": 637,
+      "h": 716,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 290.81,
+        "cy": 354.83,
+        "r": 206.0
+      },
+      "radioAsiento": 290.81,
+      "bytes": 50668
+    },
+    {
+      "id": 12,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/012.webp",
+      "w": 627,
+      "h": 706,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 287.9,
+        "cy": 348.82,
+        "r": 202.23
+      },
+      "radioAsiento": 287.9,
+      "bytes": 65426
+    },
+    {
+      "id": 13,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/013.webp",
+      "w": 608,
+      "h": 677,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 281.78,
+        "cy": 332.64,
+        "r": 215.6
+      },
+      "radioAsiento": 281.78,
+      "bytes": 44798
+    },
+    {
+      "id": 14,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/014.webp",
+      "w": 609,
+      "h": 675,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 281.74,
+        "cy": 332.78,
+        "r": 215.65
+      },
+      "radioAsiento": 281.74,
+      "bytes": 41298
+    },
+    {
+      "id": 15,
+      "categoria": "caja",
+      "familia": "caja",
+      "src": "imagenes/relojes/caja/015.webp",
+      "w": 614,
+      "h": 685,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 285.78,
+        "cy": 337.18,
+        "r": 218.04
+      },
+      "radioAsiento": 285.78,
+      "bytes": 51000
+    },
+    {
+      "id": 16,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/016.webp",
+      "w": 588,
+      "h": 622,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 292.99,
+        "cy": 305.42,
+        "r": 216.48
+      },
+      "bytes": 36548
+    },
+    {
+      "id": 17,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/017.webp",
+      "w": 581,
+      "h": 619,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 289.99,
+        "cy": 303.31,
+        "r": 215.6
+      },
+      "bytes": 39786
+    },
+    {
+      "id": 18,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/018.webp",
+      "w": 569,
+      "h": 604,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 284.29,
+        "cy": 295.75,
+        "r": 211.51
+      },
+      "bytes": 41716
+    },
+    {
+      "id": 19,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/019.webp",
+      "w": 577,
+      "h": 612,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 288.19,
+        "cy": 299.84,
+        "r": 213.28
+      },
+      "bytes": 40088
+    },
+    {
+      "id": 20,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/020.webp",
+      "w": 570,
+      "h": 609,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 284.31,
+        "cy": 301.05,
+        "r": 211.28
+      },
+      "bytes": 41922
+    },
+    {
+      "id": 21,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/021.webp",
+      "w": 570,
+      "h": 612,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 284.5,
+        "cy": 302.48,
+        "r": 212.05
+      },
+      "bytes": 35966
+    },
+    {
+      "id": 22,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/022.webp",
+      "w": 576,
+      "h": 620,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 286.63,
+        "cy": 305.39,
+        "r": 215.07
+      },
+      "bytes": 42212
+    },
+    {
+      "id": 23,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/023.webp",
+      "w": 565,
+      "h": 608,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 283.39,
+        "cy": 299.97,
+        "r": 210.7
+      },
+      "bytes": 40618
+    },
+    {
+      "id": 24,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/024.webp",
+      "w": 571,
+      "h": 613,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 285.63,
+        "cy": 302.3,
+        "r": 212.71
+      },
+      "bytes": 40838
+    },
+    {
+      "id": 25,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/025.webp",
+      "w": 562,
+      "h": 605,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 279.65,
+        "cy": 299.24,
+        "r": 209.99
+      },
+      "bytes": 38722
+    },
+    {
+      "id": 26,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/026.webp",
+      "w": 563,
+      "h": 606,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 280.63,
+        "cy": 298.39,
+        "r": 210.04
+      },
+      "bytes": 40692
+    },
+    {
+      "id": 27,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/027.webp",
+      "w": 564,
+      "h": 610,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 282.78,
+        "cy": 300.49,
+        "r": 210.75
+      },
+      "bytes": 40360
+    },
+    {
+      "id": 28,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/028.webp",
+      "w": 593,
+      "h": 623,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 295.75,
+        "cy": 307.2,
+        "r": 217.82
+      },
+      "bytes": 36320
+    },
+    {
+      "id": 29,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/029.webp",
+      "w": 586,
+      "h": 625,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 292.41,
+        "cy": 310.5,
+        "r": 216.86
+      },
+      "bytes": 38374
+    },
+    {
+      "id": 30,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/030.webp",
+      "w": 589,
+      "h": 628,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 293.41,
+        "cy": 312.18,
+        "r": 217.47
+      },
+      "bytes": 41346
+    },
+    {
+      "id": 31,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/031.webp",
+      "w": 595,
+      "h": 635,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 295.56,
+        "cy": 313.74,
+        "r": 220.08
+      },
+      "bytes": 39930
+    },
+    {
+      "id": 32,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/032.webp",
+      "w": 680,
+      "h": 621,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 288.44,
+        "cy": 308.46,
+        "r": 215.15
+      },
+      "bytes": 41130
+    },
+    {
+      "id": 33,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/033.webp",
+      "w": 575,
+      "h": 621,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 285.69,
+        "cy": 306.52,
+        "r": 215.06
+      },
+      "bytes": 34856
+    },
+    {
+      "id": 34,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/034.webp",
+      "w": 565,
+      "h": 612,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 281.23,
+        "cy": 303.96,
+        "r": 210.72
+      },
+      "bytes": 39652
+    },
+    {
+      "id": 35,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/035.webp",
+      "w": 577,
+      "h": 624,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 287.19,
+        "cy": 309.97,
+        "r": 214.39
+      },
+      "bytes": 39654
+    },
+    {
+      "id": 36,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/036.webp",
+      "w": 569,
+      "h": 615,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 283.54,
+        "cy": 304.89,
+        "r": 212.57
+      },
+      "bytes": 39224
+    },
+    {
+      "id": 37,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/037.webp",
+      "w": 557,
+      "h": 608,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 277.43,
+        "cy": 301.25,
+        "r": 209.32
+      },
+      "bytes": 36600
+    },
+    {
+      "id": 38,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/038.webp",
+      "w": 549,
+      "h": 597,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 273.07,
+        "cy": 295.47,
+        "r": 204.94
+      },
+      "bytes": 37026
+    },
+    {
+      "id": 39,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/039.webp",
+      "w": 575,
+      "h": 629,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 286.25,
+        "cy": 311.32,
+        "r": 216.04
+      },
+      "bytes": 39358
+    },
+    {
+      "id": 40,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/040.webp",
+      "w": 588,
+      "h": 590,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 292.55,
+        "cy": 296.02,
+        "r": 220.73
+      },
+      "bytes": 30132
+    },
+    {
+      "id": 41,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/041.webp",
+      "w": 587,
+      "h": 595,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 290.71,
+        "cy": 298.92,
+        "r": 219.61
+      },
+      "bytes": 33486
+    },
+    {
+      "id": 42,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/042.webp",
+      "w": 591,
+      "h": 595,
+      "acabado": "rojo",
+      "apertura": {
+        "cx": 294.45,
+        "cy": 299.57,
+        "r": 220.9
+      },
+      "bytes": 39514
+    },
+    {
+      "id": 43,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/043.webp",
+      "w": 589,
+      "h": 592,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 293.65,
+        "cy": 296.3,
+        "r": 220.23
+      },
+      "bytes": 38992
+    },
+    {
+      "id": 44,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/044.webp",
+      "w": 589,
+      "h": 595,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 293.6,
+        "cy": 300.34,
+        "r": 221.16
+      },
+      "bytes": 37444
+    },
+    {
+      "id": 45,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/045.webp",
+      "w": 586,
+      "h": 598,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 292.43,
+        "cy": 302.27,
+        "r": 221.83
+      },
+      "bytes": 34920
+    },
+    {
+      "id": 46,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/046.webp",
+      "w": 590,
+      "h": 600,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 293.99,
+        "cy": 302.1,
+        "r": 223.17
+      },
+      "bytes": 36118
+    },
+    {
+      "id": 47,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/047.webp",
+      "w": 582,
+      "h": 589,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 289.55,
+        "cy": 296.88,
+        "r": 218.4
+      },
+      "bytes": 37566
+    },
+    {
+      "id": 48,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/048.webp",
+      "w": 579,
+      "h": 586,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 288.07,
+        "cy": 295.45,
+        "r": 216.68
+      },
+      "bytes": 37756
+    },
+    {
+      "id": 49,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/049.webp",
+      "w": 581,
+      "h": 588,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 289.88,
+        "cy": 295.29,
+        "r": 217.3
+      },
+      "bytes": 37344
+    },
+    {
+      "id": 50,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/050.webp",
+      "w": 572,
+      "h": 579,
+      "acabado": "rojo",
+      "apertura": {
+        "cx": 285.47,
+        "cy": 291.42,
+        "r": 215.02
+      },
+      "bytes": 38332
+    },
+    {
+      "id": 51,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/051.webp",
+      "w": 575,
+      "h": 587,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 285.86,
+        "cy": 295.22,
+        "r": 216.14
+      },
+      "bytes": 32058
+    },
+    {
+      "id": 52,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/052.webp",
+      "w": 577,
+      "h": 581,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 288.56,
+        "cy": 288.46,
+        "r": 213.2
+      },
+      "bytes": 34768
+    },
+    {
+      "id": 53,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/053.webp",
+      "w": 579,
+      "h": 581,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 288.28,
+        "cy": 288.05,
+        "r": 211.81
+      },
+      "bytes": 37706
+    },
+    {
+      "id": 54,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/054.webp",
+      "w": 577,
+      "h": 582,
+      "acabado": "rojo",
+      "apertura": {
+        "cx": 289.66,
+        "cy": 288.91,
+        "r": 211.47
+      },
+      "bytes": 46234
+    },
+    {
+      "id": 55,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/055.webp",
+      "w": 581,
+      "h": 585,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 291.49,
+        "cy": 290.65,
+        "r": 213.15
+      },
+      "bytes": 44668
+    },
+    {
+      "id": 56,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/056.webp",
+      "w": 579,
+      "h": 588,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 290.06,
+        "cy": 292.57,
+        "r": 214.57
+      },
+      "bytes": 45244
+    },
+    {
+      "id": 57,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/057.webp",
+      "w": 565,
+      "h": 579,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 283.32,
+        "cy": 289.2,
+        "r": 210.49
+      },
+      "bytes": 35212
+    },
+    {
+      "id": 58,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/058.webp",
+      "w": 559,
+      "h": 572,
+      "acabado": "rojo",
+      "apertura": {
+        "cx": 280.22,
+        "cy": 284.43,
+        "r": 206.17
+      },
+      "bytes": 43482
+    },
+    {
+      "id": 59,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/059.webp",
+      "w": 559,
+      "h": 572,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 280.16,
+        "cy": 285.58,
+        "r": 207.27
+      },
+      "bytes": 40622
+    },
+    {
+      "id": 60,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/060.webp",
+      "w": 547,
+      "h": 558,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 272.71,
+        "cy": 279.51,
+        "r": 203.09
+      },
+      "bytes": 40024
+    },
+    {
+      "id": 61,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/061.webp",
+      "w": 541,
+      "h": 557,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 271.53,
+        "cy": 278.38,
+        "r": 201.58
+      },
+      "bytes": 36868
+    },
+    {
+      "id": 62,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/062.webp",
+      "w": 538,
+      "h": 551,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 268.3,
+        "cy": 276.65,
+        "r": 200.26
+      },
+      "bytes": 41642
+    },
+    {
+      "id": 63,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/063.webp",
+      "w": 546,
+      "h": 564,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 271.91,
+        "cy": 282.38,
+        "r": 204.58
+      },
+      "bytes": 40422
+    },
+    {
+      "id": 64,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/064.webp",
+      "w": 586,
+      "h": 576,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 294.26,
+        "cy": 288.86,
+        "r": 224.01
+      },
+      "bytes": 31444
+    },
+    {
+      "id": 65,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/065.webp",
+      "w": 575,
+      "h": 573,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 287.42,
+        "cy": 287.49,
+        "r": 217.59
+      },
+      "bytes": 29518
+    },
+    {
+      "id": 66,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/066.webp",
+      "w": 575,
+      "h": 572,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 286.48,
+        "cy": 286.37,
+        "r": 219.41
+      },
+      "bytes": 36500
+    },
+    {
+      "id": 67,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/067.webp",
+      "w": 565,
+      "h": 565,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 281.69,
+        "cy": 280.86,
+        "r": 215.51
+      },
+      "bytes": 37614
+    },
+    {
+      "id": 68,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/068.webp",
+      "w": 566,
+      "h": 570,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 283.31,
+        "cy": 282.98,
+        "r": 215.6
+      },
+      "bytes": 34388
+    },
+    {
+      "id": 69,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/069.webp",
+      "w": 558,
+      "h": 569,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 278.32,
+        "cy": 282.7,
+        "r": 215.25
+      },
+      "bytes": 42984
+    },
+    {
+      "id": 70,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/070.webp",
+      "w": 551,
+      "h": 566,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 276.39,
+        "cy": 283.21,
+        "r": 217.93
+      },
+      "bytes": 36082
+    },
+    {
+      "id": 71,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/071.webp",
+      "w": 560,
+      "h": 575,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 280.23,
+        "cy": 287.77,
+        "r": 218.31
+      },
+      "bytes": 34674
+    },
+    {
+      "id": 72,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/072.webp",
+      "w": 561,
+      "h": 576,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 280.68,
+        "cy": 288.92,
+        "r": 220.01
+      },
+      "bytes": 42498
+    },
+    {
+      "id": 73,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/073.webp",
+      "w": 587,
+      "h": 588,
+      "acabado": "plata",
+      "apertura": {
+        "cx": 292.19,
+        "cy": 288.42,
+        "r": 221.63
+      },
+      "bytes": 31050
+    },
+    {
+      "id": 74,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/074.webp",
+      "w": 582,
+      "h": 593,
+      "acabado": "gunmetal",
+      "apertura": {
+        "cx": 289.98,
+        "cy": 293.31,
+        "r": 219.01
+      },
+      "bytes": 31010
+    },
+    {
+      "id": 75,
+      "categoria": "bisel",
+      "familia": "bisel",
+      "src": "imagenes/relojes/bisel/075.webp",
+      "w": 589,
+      "h": 591,
+      "acabado": "oro",
+      "apertura": {
+        "cx": 293.44,
+        "cy": 290.33,
+        "r": 220.05
+      },
+      "bytes": 35226
+    },
+    {
+      "id": 76,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/076.webp",
+      "w": 136,
+      "h": 713,
+      "acabado": "gunmetal",
+      "bytes": 11484,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/076.webp",
+          "w": 136,
+          "h": 713
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/077.webp",
+      "w": 137,
+      "h": 711,
+      "acabado": "gunmetal",
+      "bytes": 12366,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/077.webp",
+          "w": 137,
+          "h": 711
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/078.webp",
+      "w": 137,
+      "h": 710,
+      "acabado": "gunmetal",
+      "bytes": 12084,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/078.webp",
+          "w": 137,
+          "h": 710
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/079.webp",
+      "w": 137,
+      "h": 710,
+      "acabado": "gunmetal",
+      "bytes": 10958,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/079.webp",
+          "w": 137,
+          "h": 710
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/080.webp",
+      "w": 139,
+      "h": 714,
+      "acabado": "rojo",
+      "bytes": 14036,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/080.webp",
+          "w": 139,
+          "h": 714
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/081.webp",
+      "w": 139,
+      "h": 713,
+      "acabado": "rojo",
+      "bytes": 13920,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/081.webp",
+          "w": 139,
+          "h": 713
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/082.webp",
+      "w": 139,
+      "h": 713,
+      "acabado": "oro",
+      "bytes": 12274,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/082.webp",
+          "w": 139,
+          "h": 713
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/083.webp",
+      "w": 137,
+      "h": 713,
+      "acabado": "gunmetal",
+      "bytes": 10242,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/083.webp",
+          "w": 137,
+          "h": 713
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/084.webp",
+      "w": 138,
+      "h": 714,
+      "acabado": "plata",
+      "bytes": 8958,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/084.webp",
+          "w": 138,
+          "h": 714
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/085.webp",
+      "w": 140,
+      "h": 717,
+      "acabado": "rojo",
+      "bytes": 11338,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/085.webp",
+          "w": 140,
+          "h": 717
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/086.webp",
+      "w": 141,
+      "h": 722,
+      "acabado": "rojo",
+      "bytes": 13872,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/086.webp",
+          "w": 141,
+          "h": 722
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/087.webp",
+      "w": 142,
+      "h": 722,
+      "acabado": "rojo",
+      "bytes": 13212,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/087.webp",
+          "w": 142,
+          "h": 722
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/088.webp",
+      "w": 142,
+      "h": 725,
+      "acabado": "plata",
+      "bytes": 11498,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/088.webp",
+          "w": 142,
+          "h": 725
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "categoria": "correa",
+      "familia": "cuero-liso",
+      "src": "imagenes/relojes/correa/089.webp",
+      "w": 142,
+      "h": 721,
+      "acabado": "plata",
+      "bytes": 8734,
+      "partes": [
+        {
+          "rol": "unica",
+          "src": "imagenes/relojes/correa/089.webp",
+          "w": 142,
+          "h": 721
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/090.webp",
+      "w": 214,
+      "h": 439,
+      "acabado": "gunmetal",
+      "bytes": 50394,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/090-sup.webp",
+          "w": 102,
+          "h": 320
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/090-inf.webp",
+          "w": 98,
+          "h": 439
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/091.webp",
+      "w": 222,
+      "h": 451,
+      "acabado": "gunmetal",
+      "bytes": 51756,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/091-sup.webp",
+          "w": 110,
+          "h": 329
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/091-inf.webp",
+          "w": 102,
+          "h": 448
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/092.webp",
+      "w": 222,
+      "h": 447,
+      "acabado": "oro",
+      "bytes": 49164,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/092-sup.webp",
+          "w": 107,
+          "h": 324
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/092-inf.webp",
+          "w": 105,
+          "h": 445
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/093.webp",
+      "w": 226,
+      "h": 458,
+      "acabado": "gunmetal",
+      "bytes": 50032,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/093-sup.webp",
+          "w": 109,
+          "h": 332
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/093-inf.webp",
+          "w": 105,
+          "h": 458
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/094.webp",
+      "w": 216,
+      "h": 443,
+      "acabado": "gunmetal",
+      "bytes": 52162,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/094-sup.webp",
+          "w": 104,
+          "h": 322
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/094-inf.webp",
+          "w": 100,
+          "h": 442
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/095.webp",
+      "w": 228,
+      "h": 458,
+      "acabado": "oro",
+      "bytes": 50588,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/095-sup.webp",
+          "w": 111,
+          "h": 332
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/095-inf.webp",
+          "w": 107,
+          "h": 456
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/096.webp",
+      "w": 216,
+      "h": 446,
+      "acabado": "gunmetal",
+      "bytes": 53252,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/096-sup.webp",
+          "w": 104,
+          "h": 324
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/096-inf.webp",
+          "w": 99,
+          "h": 445
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/097.webp",
+      "w": 216,
+      "h": 444,
+      "acabado": "plata",
+      "bytes": 44602,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/097-sup.webp",
+          "w": 108,
+          "h": 328
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/097-inf.webp",
+          "w": 100,
+          "h": 440
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/098.webp",
+      "w": 221,
+      "h": 446,
+      "acabado": "gunmetal",
+      "bytes": 46252,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/098-sup.webp",
+          "w": 113,
+          "h": 328
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/098-inf.webp",
+          "w": 106,
+          "h": 443
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/099.webp",
+      "w": 230,
+      "h": 548,
+      "acabado": "oro",
+      "bytes": 49878,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/099-sup.webp",
+          "w": 111,
+          "h": 335
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/099-inf.webp",
+          "w": 109,
+          "h": 453
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/100.webp",
+      "w": 224,
+      "h": 553,
+      "acabado": "rojo",
+      "bytes": 52788,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/100-sup.webp",
+          "w": 108,
+          "h": 336
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/100-inf.webp",
+          "w": 104,
+          "h": 455
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/101.webp",
+      "w": 217,
+      "h": 450,
+      "acabado": "rojo",
+      "bytes": 51798,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/101-sup.webp",
+          "w": 106,
+          "h": 335
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/101-inf.webp",
+          "w": 98,
+          "h": 448
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/102.webp",
+      "w": 219,
+      "h": 451,
+      "acabado": "oro",
+      "bytes": 44892,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/102-sup.webp",
+          "w": 106,
+          "h": 332
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/102-inf.webp",
+          "w": 100,
+          "h": 449
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/103.webp",
+      "w": 217,
+      "h": 451,
+      "acabado": "plata",
+      "bytes": 39436,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/103-sup.webp",
+          "w": 106,
+          "h": 330
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/103-inf.webp",
+          "w": 97,
+          "h": 449
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/104.webp",
+      "w": 219,
+      "h": 453,
+      "acabado": "oro",
+      "bytes": 49688,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/104-sup.webp",
+          "w": 106,
+          "h": 332
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/104-inf.webp",
+          "w": 100,
+          "h": 452
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/105.webp",
+      "w": 221,
+      "h": 446,
+      "acabado": "rojo",
+      "bytes": 51384,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/105-sup.webp",
+          "w": 107,
+          "h": 329
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/105-inf.webp",
+          "w": 103,
+          "h": 445
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/106.webp",
+      "w": 224,
+      "h": 447,
+      "acabado": "rojo",
+      "bytes": 50198,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/106-sup.webp",
+          "w": 108,
+          "h": 331
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/106-inf.webp",
+          "w": 106,
+          "h": 446
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/107.webp",
+      "w": 220,
+      "h": 442,
+      "acabado": "rojo",
+      "bytes": 51418,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/107-sup.webp",
+          "w": 106,
+          "h": 330
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/107-inf.webp",
+          "w": 104,
+          "h": 441
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/108.webp",
+      "w": 224,
+      "h": 447,
+      "acabado": "plata",
+      "bytes": 47356,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/108-sup.webp",
+          "w": 107,
+          "h": 331
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/108-inf.webp",
+          "w": 103,
+          "h": 446
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/109.webp",
+      "w": 224,
+      "h": 447,
+      "acabado": "rojo",
+      "bytes": 51670,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/109-sup.webp",
+          "w": 108,
+          "h": 333
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/109-inf.webp",
+          "w": 103,
+          "h": 446
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/110.webp",
+      "w": 224,
+      "h": 448,
+      "acabado": "rojo",
+      "bytes": 53682,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/110-sup.webp",
+          "w": 109,
+          "h": 333
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/110-inf.webp",
+          "w": 103,
+          "h": 447
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/111.webp",
+      "w": 222,
+      "h": 451,
+      "acabado": "oro",
+      "bytes": 53016,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/111-sup.webp",
+          "w": 107,
+          "h": 337
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/111-inf.webp",
+          "w": 100,
+          "h": 450
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "categoria": "correa",
+      "familia": "cuero-textura",
+      "src": "imagenes/relojes/correa/112.webp",
+      "w": 228,
+      "h": 454,
+      "acabado": "plata",
+      "bytes": 43182,
+      "partes": [
+        {
+          "rol": "superior",
+          "src": "imagenes/relojes/correa/112-sup.webp",
+          "w": 110,
+          "h": 339
+        },
+        {
+          "rol": "inferior",
+          "src": "imagenes/relojes/correa/112-inf.webp",
+          "w": 105,
+          "h": 453
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/113.webp",
+      "w": 115,
+      "h": 391,
+      "acabado": "plata",
+      "bytes": 10092
+    },
+    {
+      "id": 114,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/114.webp",
+      "w": 116,
+      "h": 391,
+      "acabado": "gunmetal",
+      "bytes": 9034
+    },
+    {
+      "id": 115,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/115.webp",
+      "w": 116,
+      "h": 392,
+      "acabado": "oro",
+      "bytes": 10924
+    },
+    {
+      "id": 116,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/116.webp",
+      "w": 116,
+      "h": 392,
+      "acabado": "plata",
+      "bytes": 11308
+    },
+    {
+      "id": 117,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/117.webp",
+      "w": 120,
+      "h": 392,
+      "acabado": "plata",
+      "bytes": 13322
+    },
+    {
+      "id": 118,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/118.webp",
+      "w": 118,
+      "h": 391,
+      "acabado": "gunmetal",
+      "bytes": 11424
+    },
+    {
+      "id": 119,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/119.webp",
+      "w": 119,
+      "h": 391,
+      "acabado": "oro",
+      "bytes": 14504
+    },
+    {
+      "id": 120,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/120.webp",
+      "w": 120,
+      "h": 392,
+      "acabado": "oro",
+      "bytes": 14886
+    },
+    {
+      "id": 121,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/121.webp",
+      "w": 127,
+      "h": 388,
+      "acabado": "plata",
+      "bytes": 12508
+    },
+    {
+      "id": 122,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/122.webp",
+      "w": 126,
+      "h": 389,
+      "acabado": "gunmetal",
+      "bytes": 11066
+    },
+    {
+      "id": 123,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/123.webp",
+      "w": 125,
+      "h": 388,
+      "acabado": "oro",
+      "bytes": 13334
+    },
+    {
+      "id": 124,
+      "categoria": "brazalete",
+      "familia": "metal",
+      "src": "imagenes/relojes/brazalete/124.webp",
+      "w": 124,
+      "h": 390,
+      "acabado": "oro",
+      "bytes": 13134
+    },
+    {
+      "id": 125,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/125.webp",
+      "w": 106,
+      "h": 184,
+      "acabado": "plata",
+      "bytes": 5554
+    },
+    {
+      "id": 126,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/126.webp",
+      "w": 105,
+      "h": 183,
+      "acabado": "gunmetal",
+      "bytes": 5646
+    },
+    {
+      "id": 127,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/127.webp",
+      "w": 107,
+      "h": 190,
+      "acabado": "oro",
+      "bytes": 6450
+    },
+    {
+      "id": 128,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/128.webp",
+      "w": 106,
+      "h": 195,
+      "acabado": "oro",
+      "bytes": 7790
+    },
+    {
+      "id": 129,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/129.webp",
+      "w": 104,
+      "h": 190,
+      "acabado": "gunmetal",
+      "bytes": 6976
+    },
+    {
+      "id": 130,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/130.webp",
+      "w": 106,
+      "h": 189,
+      "acabado": "plata",
+      "bytes": 6946
+    },
+    {
+      "id": 131,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/131.webp",
+      "w": 106,
+      "h": 181,
+      "acabado": "plata",
+      "bytes": 4788
+    },
+    {
+      "id": 132,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/132.webp",
+      "w": 106,
+      "h": 179,
+      "acabado": "gunmetal",
+      "bytes": 4876
+    },
+    {
+      "id": 133,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/133.webp",
+      "w": 108,
+      "h": 188,
+      "acabado": "oro",
+      "bytes": 5620
+    },
+    {
+      "id": 134,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/134.webp",
+      "w": 114,
+      "h": 189,
+      "acabado": "plata",
+      "bytes": 6202
+    },
+    {
+      "id": 135,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/135.webp",
+      "w": 113,
+      "h": 189,
+      "acabado": "gunmetal",
+      "bytes": 6212
+    },
+    {
+      "id": 136,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/136.webp",
+      "w": 113,
+      "h": 193,
+      "acabado": "oro",
+      "bytes": 7232
+    },
+    {
+      "id": 137,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/137.webp",
+      "w": 111,
+      "h": 186,
+      "acabado": "plata",
+      "bytes": 6340
+    },
+    {
+      "id": 138,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/138.webp",
+      "w": 112,
+      "h": 187,
+      "acabado": "gunmetal",
+      "bytes": 6230
+    },
+    {
+      "id": 139,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/139.webp",
+      "w": 112,
+      "h": 192,
+      "acabado": "oro",
+      "bytes": 7156
+    },
+    {
+      "id": 140,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/140.webp",
+      "w": 114,
+      "h": 204,
+      "acabado": "oro",
+      "bytes": 7124
+    },
+    {
+      "id": 141,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/141.webp",
+      "w": 115,
+      "h": 204,
+      "acabado": "gunmetal",
+      "bytes": 6280
+    },
+    {
+      "id": 142,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/142.webp",
+      "w": 114,
+      "h": 200,
+      "acabado": "plata",
+      "bytes": 6226
+    },
+    {
+      "id": 143,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/143.webp",
+      "w": 113,
+      "h": 184,
+      "acabado": "plata",
+      "bytes": 5554
+    },
+    {
+      "id": 144,
+      "categoria": "broche",
+      "familia": "desplegable",
+      "src": "imagenes/relojes/broche/144.webp",
+      "w": 114,
+      "h": 185,
+      "acabado": "gunmetal",
+      "bytes": 5648
+    },
+    {
+      "id": 145,
+      "categoria": "broche",
+      "familia": "hebilla",
+      "src": "imagenes/relojes/broche/145.webp",
+      "w": 114,
+      "h": 188,
+      "acabado": "oro",
+      "bytes": 6236
+    },
+    {
+      "id": 146,
+      "categoria": "broche",
+      "familia": "hebilla",
+      "src": "imagenes/relojes/broche/146.webp",
+      "w": 116,
+      "h": 112,
+      "acabado": "plata",
+      "bytes": 6306
+    },
+    {
+      "id": 147,
+      "categoria": "broche",
+      "familia": "hebilla",
+      "src": "imagenes/relojes/broche/147.webp",
+      "w": 117,
+      "h": 115,
+      "acabado": "gunmetal",
+      "bytes": 6614
+    },
+    {
+      "id": 148,
+      "categoria": "broche",
+      "familia": "hebilla",
+      "src": "imagenes/relojes/broche/148.webp",
+      "w": 119,
+      "h": 117,
+      "acabado": "oro",
+      "bytes": 7038
+    },
+    {
+      "id": 149,
+      "categoria": "corona",
+      "familia": "corona",
+      "src": "imagenes/relojes/corona/149.webp",
+      "w": 215,
+      "h": 215,
+      "acabado": "plata",
+      "bytes": 10946
+    },
+    {
+      "id": 150,
+      "categoria": "corona",
+      "familia": "corona",
+      "src": "imagenes/relojes/corona/150.webp",
+      "w": 213,
+      "h": 214,
+      "acabado": "gunmetal",
+      "bytes": 10326
+    },
+    {
+      "id": 151,
+      "categoria": "corona",
+      "familia": "corona",
+      "src": "imagenes/relojes/corona/151.webp",
+      "w": 214,
+      "h": 215,
+      "acabado": "oro",
+      "bytes": 12260
+    },
+    {
+      "id": 152,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/152.webp",
+      "w": 25,
+      "h": 39,
+      "acabado": "gunmetal",
+      "bytes": 758
+    },
+    {
+      "id": 153,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/153.webp",
+      "w": 29,
+      "h": 39,
+      "acabado": "gunmetal",
+      "bytes": 1156
+    },
+    {
+      "id": 154,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/154.webp",
+      "w": 29,
+      "h": 40,
+      "acabado": "gunmetal",
+      "bytes": 1286
+    },
+    {
+      "id": 155,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/155.webp",
+      "w": 32,
+      "h": 39,
+      "acabado": "gunmetal",
+      "bytes": 1058
+    },
+    {
+      "id": 156,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/156.webp",
+      "w": 28,
+      "h": 39,
+      "acabado": "gunmetal",
+      "bytes": 1200
+    },
+    {
+      "id": 157,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/157.webp",
+      "w": 30,
+      "h": 39,
+      "acabado": "gunmetal",
+      "bytes": 1330
+    },
+    {
+      "id": 158,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/158.webp",
+      "w": 29,
+      "h": 39,
+      "acabado": "gunmetal",
+      "bytes": 896
+    },
+    {
+      "id": 159,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/159.webp",
+      "w": 31,
+      "h": 40,
+      "acabado": "gunmetal",
+      "bytes": 1366
+    },
+    {
+      "id": 160,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/160.webp",
+      "w": 30,
+      "h": 40,
+      "acabado": "gunmetal",
+      "bytes": 1296
+    },
+    {
+      "id": 161,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/161.webp",
+      "w": 56,
+      "h": 39,
+      "acabado": "gunmetal",
+      "bytes": 1906
+    },
+    {
+      "id": 162,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/162.webp",
+      "w": 53,
+      "h": 38,
+      "acabado": "gunmetal",
+      "bytes": 1390
+    },
+    {
+      "id": 163,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/163.webp",
+      "w": 55,
+      "h": 38,
+      "acabado": "gunmetal",
+      "bytes": 1814
+    },
+    {
+      "id": 164,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/164.webp",
+      "w": 25,
+      "h": 39,
+      "acabado": "oro",
+      "bytes": 860
+    },
+    {
+      "id": 165,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/165.webp",
+      "w": 29,
+      "h": 39,
+      "acabado": "oro",
+      "bytes": 1286
+    },
+    {
+      "id": 166,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/166.webp",
+      "w": 29,
+      "h": 40,
+      "acabado": "oro",
+      "bytes": 1414
+    },
+    {
+      "id": 167,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/167.webp",
+      "w": 32,
+      "h": 39,
+      "acabado": "oro",
+      "bytes": 1230
+    },
+    {
+      "id": 168,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/168.webp",
+      "w": 28,
+      "h": 39,
+      "acabado": "oro",
+      "bytes": 1356
+    },
+    {
+      "id": 169,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/169.webp",
+      "w": 30,
+      "h": 39,
+      "acabado": "oro",
+      "bytes": 1468
+    },
+    {
+      "id": 170,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/170.webp",
+      "w": 29,
+      "h": 39,
+      "acabado": "oro",
+      "bytes": 1038
+    },
+    {
+      "id": 171,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/171.webp",
+      "w": 31,
+      "h": 40,
+      "acabado": "oro",
+      "bytes": 1508
+    },
+    {
+      "id": 172,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/172.webp",
+      "w": 30,
+      "h": 40,
+      "acabado": "oro",
+      "bytes": 1468
+    },
+    {
+      "id": 173,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/173.webp",
+      "w": 56,
+      "h": 39,
+      "acabado": "oro",
+      "bytes": 2100
+    },
+    {
+      "id": 174,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/174.webp",
+      "w": 53,
+      "h": 38,
+      "acabado": "oro",
+      "bytes": 1610
+    },
+    {
+      "id": 175,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/175.webp",
+      "w": 55,
+      "h": 38,
+      "acabado": "oro",
+      "bytes": 1996
+    },
+    {
+      "id": 176,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/176.webp",
+      "w": 25,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 800
+    },
+    {
+      "id": 177,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/177.webp",
+      "w": 29,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 1220
+    },
+    {
+      "id": 178,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/178.webp",
+      "w": 29,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 1316
+    },
+    {
+      "id": 179,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/179.webp",
+      "w": 32,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 1170
+    },
+    {
+      "id": 180,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/180.webp",
+      "w": 28,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 1254
+    },
+    {
+      "id": 181,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/181.webp",
+      "w": 30,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 1372
+    },
+    {
+      "id": 182,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/182.webp",
+      "w": 29,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 1002
+    },
+    {
+      "id": 183,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/183.webp",
+      "w": 30,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 1366
+    },
+    {
+      "id": 184,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/184.webp",
+      "w": 30,
+      "h": 40,
+      "acabado": "plata",
+      "bytes": 1326
+    },
+    {
+      "id": 185,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/185.webp",
+      "w": 56,
+      "h": 39,
+      "acabado": "plata",
+      "bytes": 2112
+    },
+    {
+      "id": 186,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/186.webp",
+      "w": 53,
+      "h": 38,
+      "acabado": "plata",
+      "bytes": 1508
+    },
+    {
+      "id": 187,
+      "categoria": "indice",
+      "familia": "arabigo",
+      "src": "imagenes/relojes/indice/187.webp",
+      "w": 55,
+      "h": 38,
+      "acabado": "plata",
+      "bytes": 1908
+    },
+    {
+      "id": 188,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/188.webp",
+      "w": 12,
+      "h": 62,
+      "acabado": "plata",
+      "bytes": 448
+    },
+    {
+      "id": 189,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/189.webp",
+      "w": 34,
+      "h": 61,
+      "acabado": "plata",
+      "bytes": 1026
+    },
+    {
+      "id": 190,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/190.webp",
+      "w": 12,
+      "h": 62,
+      "acabado": "oro",
+      "bytes": 534
+    },
+    {
+      "id": 191,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/191.webp",
+      "w": 34,
+      "h": 61,
+      "acabado": "oro",
+      "bytes": 1222
+    },
+    {
+      "id": 192,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/192.webp",
+      "w": 12,
+      "h": 62,
+      "acabado": "gunmetal",
+      "bytes": 474
+    },
+    {
+      "id": 193,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/193.webp",
+      "w": 34,
+      "h": 61,
+      "acabado": "gunmetal",
+      "bytes": 1004
+    },
+    {
+      "id": 194,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/194.webp",
+      "w": 17,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 622
+    },
+    {
+      "id": 195,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/195.webp",
+      "w": 32,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 1094
+    },
+    {
+      "id": 196,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/196.webp",
+      "w": 46,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 1336
+    },
+    {
+      "id": 197,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/197.webp",
+      "w": 47,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 1530
+    },
+    {
+      "id": 198,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/198.webp",
+      "w": 31,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 1014
+    },
+    {
+      "id": 199,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/199.webp",
+      "w": 45,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 1562
+    },
+    {
+      "id": 200,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/200.webp",
+      "w": 61,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 1864
+    },
+    {
+      "id": 201,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/201.webp",
+      "w": 75,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 2286
+    },
+    {
+      "id": 202,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/202.webp",
+      "w": 45,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 1628
+    },
+    {
+      "id": 203,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/203.webp",
+      "w": 30,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 1180
+    },
+    {
+      "id": 204,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/204.webp",
+      "w": 47,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 1818
+    },
+    {
+      "id": 205,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/205.webp",
+      "w": 59,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 2012
+    },
+    {
+      "id": 206,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/206.webp",
+      "w": 17,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 654
+    },
+    {
+      "id": 207,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/207.webp",
+      "w": 32,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 1130
+    },
+    {
+      "id": 208,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/208.webp",
+      "w": 46,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 1350
+    },
+    {
+      "id": 209,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/209.webp",
+      "w": 46,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 1628
+    },
+    {
+      "id": 210,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/210.webp",
+      "w": 31,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 1122
+    },
+    {
+      "id": 211,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/211.webp",
+      "w": 45,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 1628
+    },
+    {
+      "id": 212,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/212.webp",
+      "w": 61,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 2046
+    },
+    {
+      "id": 213,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/213.webp",
+      "w": 75,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 2450
+    },
+    {
+      "id": 214,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/214.webp",
+      "w": 45,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 1732
+    },
+    {
+      "id": 215,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/215.webp",
+      "w": 30,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 1214
+    },
+    {
+      "id": 216,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/216.webp",
+      "w": 47,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 1896
+    },
+    {
+      "id": 217,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/217.webp",
+      "w": 59,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 2092
+    },
+    {
+      "id": 218,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/218.webp",
+      "w": 17,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 712
+    },
+    {
+      "id": 219,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/219.webp",
+      "w": 32,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1198
+    },
+    {
+      "id": 220,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/220.webp",
+      "w": 46,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 1492
+    },
+    {
+      "id": 221,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/221.webp",
+      "w": 47,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 1700
+    },
+    {
+      "id": 222,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/222.webp",
+      "w": 31,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1180
+    },
+    {
+      "id": 223,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/223.webp",
+      "w": 45,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 1704
+    },
+    {
+      "id": 224,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/224.webp",
+      "w": 61,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 2120
+    },
+    {
+      "id": 225,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/225.webp",
+      "w": 75,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 2568
+    },
+    {
+      "id": 226,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/226.webp",
+      "w": 45,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 1782
+    },
+    {
+      "id": 227,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/227.webp",
+      "w": 30,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 1316
+    },
+    {
+      "id": 228,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/228.webp",
+      "w": 47,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1964
+    },
+    {
+      "id": 229,
+      "categoria": "indice",
+      "familia": "romano",
+      "src": "imagenes/relojes/indice/229.webp",
+      "w": 59,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 2158
+    },
+    {
+      "id": 230,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/230.webp",
+      "w": 12,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 600
+    },
+    {
+      "id": 231,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/231.webp",
+      "w": 23,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 842
+    },
+    {
+      "id": 232,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/232.webp",
+      "w": 26,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 882
+    },
+    {
+      "id": 233,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/233.webp",
+      "w": 22,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 890
+    },
+    {
+      "id": 234,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/234.webp",
+      "w": 22,
+      "h": 28,
+      "acabado": "plata",
+      "bytes": 850
+    },
+    {
+      "id": 235,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/235.webp",
+      "w": 23,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 806
+    },
+    {
+      "id": 236,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/236.webp",
+      "w": 30,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 1096
+    },
+    {
+      "id": 237,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/237.webp",
+      "w": 29,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 1100
+    },
+    {
+      "id": 238,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/238.webp",
+      "w": 23,
+      "h": 36,
+      "acabado": "plata",
+      "bytes": 922
+    },
+    {
+      "id": 239,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/239.webp",
+      "w": 29,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 908
+    },
+    {
+      "id": 240,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/240.webp",
+      "w": 28,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 1184
+    },
+    {
+      "id": 241,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/241.webp",
+      "w": 38,
+      "h": 37,
+      "acabado": "plata",
+      "bytes": 1396
+    },
+    {
+      "id": 242,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/242.webp",
+      "w": 12,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 616
+    },
+    {
+      "id": 243,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/243.webp",
+      "w": 23,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 836
+    },
+    {
+      "id": 244,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/244.webp",
+      "w": 26,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 826
+    },
+    {
+      "id": 245,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/245.webp",
+      "w": 22,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 898
+    },
+    {
+      "id": 246,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/246.webp",
+      "w": 22,
+      "h": 28,
+      "acabado": "gunmetal",
+      "bytes": 796
+    },
+    {
+      "id": 247,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/247.webp",
+      "w": 23,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 796
+    },
+    {
+      "id": 248,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/248.webp",
+      "w": 30,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 1032
+    },
+    {
+      "id": 249,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/249.webp",
+      "w": 29,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 1112
+    },
+    {
+      "id": 250,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/250.webp",
+      "w": 23,
+      "h": 36,
+      "acabado": "gunmetal",
+      "bytes": 862
+    },
+    {
+      "id": 251,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/251.webp",
+      "w": 29,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 880
+    },
+    {
+      "id": 252,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/252.webp",
+      "w": 28,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 1158
+    },
+    {
+      "id": 253,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/253.webp",
+      "w": 38,
+      "h": 37,
+      "acabado": "gunmetal",
+      "bytes": 1358
+    },
+    {
+      "id": 254,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/254.webp",
+      "w": 12,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 674
+    },
+    {
+      "id": 255,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/255.webp",
+      "w": 23,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 930
+    },
+    {
+      "id": 256,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/256.webp",
+      "w": 26,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 934
+    },
+    {
+      "id": 257,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/257.webp",
+      "w": 22,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 996
+    },
+    {
+      "id": 258,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/258.webp",
+      "w": 22,
+      "h": 28,
+      "acabado": "oro",
+      "bytes": 892
+    },
+    {
+      "id": 259,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/259.webp",
+      "w": 23,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 884
+    },
+    {
+      "id": 260,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/260.webp",
+      "w": 30,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1188
+    },
+    {
+      "id": 261,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/261.webp",
+      "w": 29,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1152
+    },
+    {
+      "id": 262,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/262.webp",
+      "w": 23,
+      "h": 36,
+      "acabado": "oro",
+      "bytes": 966
+    },
+    {
+      "id": 263,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/263.webp",
+      "w": 29,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1002
+    },
+    {
+      "id": 264,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/264.webp",
+      "w": 28,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1272
+    },
+    {
+      "id": 265,
+      "categoria": "indice",
+      "familia": "indico",
+      "src": "imagenes/relojes/indice/265.webp",
+      "w": 39,
+      "h": 37,
+      "acabado": "oro",
+      "bytes": 1552
+    },
+    {
+      "id": 266,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/266.webp",
+      "w": 20,
+      "h": 60,
+      "acabado": "gunmetal",
+      "bytes": 884
+    },
+    {
+      "id": 267,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/267.webp",
+      "w": 41,
+      "h": 60,
+      "acabado": "gunmetal",
+      "bytes": 1584
+    },
+    {
+      "id": 268,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/268.webp",
+      "w": 20,
+      "h": 60,
+      "acabado": "oro",
+      "bytes": 1020
+    },
+    {
+      "id": 269,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/269.webp",
+      "w": 41,
+      "h": 60,
+      "acabado": "oro",
+      "bytes": 1800
+    },
+    {
+      "id": 270,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/270.webp",
+      "w": 20,
+      "h": 60,
+      "acabado": "plata",
+      "bytes": 860
+    },
+    {
+      "id": 271,
+      "categoria": "indice",
+      "familia": "barra",
+      "src": "imagenes/relojes/indice/271.webp",
+      "w": 41,
+      "h": 60,
+      "acabado": "plata",
+      "bytes": 1616
+    },
+    {
+      "id": 272,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/272.webp",
+      "w": 446,
+      "h": 449,
+      "acabado": "gunmetal",
+      "radio": 223.75,
+      "bytes": 19512
+    },
+    {
+      "id": 273,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/273.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "rojo",
+      "radio": 223.5,
+      "bytes": 38156
+    },
+    {
+      "id": 274,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/274.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "oro",
+      "radio": 223.5,
+      "bytes": 31002
+    },
+    {
+      "id": 275,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/275.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "oro",
+      "radio": 223.5,
+      "bytes": 23506
+    },
+    {
+      "id": 276,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/276.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 11830
+    },
+    {
+      "id": 277,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/277.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 27698
+    },
+    {
+      "id": 278,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/278.webp",
+      "w": 454,
+      "h": 456,
+      "acabado": "gunmetal",
+      "radio": 227.5,
+      "bytes": 60930
+    },
+    {
+      "id": 279,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/279.webp",
+      "w": 448,
+      "h": 454,
+      "acabado": "plata",
+      "radio": 225.5,
+      "bytes": 22596
+    },
+    {
+      "id": 281,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/281.webp",
+      "w": 456,
+      "h": 457,
+      "acabado": "plata",
+      "radio": 228.25,
+      "bytes": 52572
+    },
+    {
+      "id": 282,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/282.webp",
+      "w": 456,
+      "h": 457,
+      "acabado": "plata",
+      "radio": 228.25,
+      "bytes": 61616
+    },
+    {
+      "id": 283,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/283.webp",
+      "w": 456,
+      "h": 457,
+      "acabado": "plata",
+      "radio": 228.25,
+      "bytes": 57256
+    },
+    {
+      "id": 284,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/284.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 51586
+    },
+    {
+      "id": 285,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/285.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "rojo",
+      "radio": 223.5,
+      "bytes": 75330
+    },
+    {
+      "id": 286,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/286.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "oro",
+      "radio": 223.5,
+      "bytes": 73816
+    },
+    {
+      "id": 287,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/287.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "oro",
+      "radio": 223.5,
+      "bytes": 64368
+    },
+    {
+      "id": 288,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/288.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 20822
+    },
+    {
+      "id": 289,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/289.webp",
+      "w": 446,
+      "h": 449,
+      "acabado": "gunmetal",
+      "radio": 223.75,
+      "bytes": 19030
+    },
+    {
+      "id": 290,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/290.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 18640
+    },
+    {
+      "id": 291,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/291.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 49802
+    },
+    {
+      "id": 292,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/292.webp",
+      "w": 448,
+      "h": 448,
+      "acabado": "plata",
+      "radio": 224.0,
+      "bytes": 55158
+    },
+    {
+      "id": 294,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/294.webp",
+      "w": 442,
+      "h": 448,
+      "acabado": "plata",
+      "radio": 222.5,
+      "bytes": 23922
+    },
+    {
+      "id": 295,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/295.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 20332
+    },
+    {
+      "id": 296,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/296.webp",
+      "w": 447,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.75,
+      "bytes": 19606
+    },
+    {
+      "id": 297,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/297.webp",
+      "w": 447,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.75,
+      "bytes": 51422
+    },
+    {
+      "id": 298,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/298.webp",
+      "w": 448,
+      "h": 448,
+      "acabado": "plata",
+      "radio": 224.0,
+      "bytes": 56026
+    },
+    {
+      "id": 300,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/300.webp",
+      "w": 437,
+      "h": 443,
+      "acabado": "plata",
+      "radio": 220.0,
+      "bytes": 24138
+    },
+    {
+      "id": 301,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/301.webp",
+      "w": 436,
+      "h": 439,
+      "acabado": "gunmetal",
+      "radio": 218.75,
+      "bytes": 18880
+    },
+    {
+      "id": 302,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/302.webp",
+      "w": 448,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 224.0,
+      "bytes": 18762
+    },
+    {
+      "id": 303,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/303.webp",
+      "w": 446,
+      "h": 448,
+      "acabado": "gunmetal",
+      "radio": 223.5,
+      "bytes": 49888
+    },
+    {
+      "id": 304,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/304.webp",
+      "w": 448,
+      "h": 449,
+      "acabado": "plata",
+      "radio": 224.25,
+      "bytes": 55394
+    },
+    {
+      "id": 305,
+      "categoria": "dial",
+      "familia": "dial",
+      "src": "imagenes/relojes/dial/305.webp",
+      "w": 442,
+      "h": 448,
+      "acabado": "plata",
+      "radio": 222.5,
+      "bytes": 23774
+    },
+    {
+      "id": 307,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/307.webp",
+      "w": 200,
+      "h": 526,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 100.7,
+        "cy": 465.93,
+        "r": 30.05
+      },
+      "slot": "principal",
+      "largo": 465.93,
+      "bytes": 20884
+    },
+    {
+      "id": 308,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/308.webp",
+      "w": 76,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 38.7,
+        "cy": 490.85,
+        "r": 17.61
+      },
+      "slot": "segundero",
+      "largo": 490.85,
+      "bytes": 9496
+    },
+    {
+      "id": 309,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/309.webp",
+      "w": 71,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 35.65,
+        "cy": 492.03,
+        "r": 19.17
+      },
+      "slot": "segundero",
+      "largo": 492.03,
+      "bytes": 8390
+    },
+    {
+      "id": 310,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/310.webp",
+      "w": 195,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 97.37,
+        "cy": 467.82,
+        "r": 30.41
+      },
+      "slot": "principal",
+      "largo": 467.82,
+      "bytes": 17114
+    },
+    {
+      "id": 311,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/311.webp",
+      "w": 108,
+      "h": 527,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 54.73,
+        "cy": 485.95,
+        "r": 19.09
+      },
+      "slot": "principal",
+      "largo": 485.95,
+      "bytes": 10606
+    },
+    {
+      "id": 312,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/312.webp",
+      "w": 88,
+      "h": 526,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 44.99,
+        "cy": 485.71,
+        "r": 20.99
+      },
+      "slot": "segundero",
+      "largo": 485.71,
+      "bytes": 9416
+    },
+    {
+      "id": 313,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/313.webp",
+      "w": 131,
+      "h": 526,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 66.85,
+        "cy": 461.46,
+        "r": 32.01
+      },
+      "slot": "principal",
+      "largo": 461.46,
+      "bytes": 13086
+    },
+    {
+      "id": 314,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/314.webp",
+      "w": 86,
+      "h": 527,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 44.13,
+        "cy": 484.96,
+        "r": 19.69
+      },
+      "slot": "segundero",
+      "largo": 484.96,
+      "bytes": 8256
+    },
+    {
+      "id": 315,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/315.webp",
+      "w": 84,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 41.47,
+        "cy": 484.72,
+        "r": 22.36
+      },
+      "slot": "segundero",
+      "largo": 484.72,
+      "bytes": 9046
+    },
+    {
+      "id": 316,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/316.webp",
+      "w": 126,
+      "h": 526,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 62.44,
+        "cy": 471.3,
+        "r": 27.86
+      },
+      "slot": "principal",
+      "largo": 471.3,
+      "bytes": 16814
+    },
+    {
+      "id": 317,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/317.webp",
+      "w": 83,
+      "h": 531,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 42.08,
+        "cy": 490.34,
+        "r": 19.03
+      },
+      "slot": "segundero",
+      "largo": 490.34,
+      "bytes": 12866
+    },
+    {
+      "id": 318,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/318.webp",
+      "w": 76,
+      "h": 529,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 38.05,
+        "cy": 489.76,
+        "r": 20.43
+      },
+      "slot": "segundero",
+      "largo": 489.76,
+      "bytes": 9116
+    },
+    {
+      "id": 319,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/319.webp",
+      "w": 96,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 47.9,
+        "cy": 481.37,
+        "r": 17.84
+      },
+      "slot": "segundero",
+      "largo": 481.37,
+      "bytes": 12448
+    },
+    {
+      "id": 320,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/320.webp",
+      "w": 104,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 52.84,
+        "cy": 479.9,
+        "r": 19.1
+      },
+      "slot": "principal",
+      "largo": 479.9,
+      "bytes": 15684
+    },
+    {
+      "id": 321,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/321.webp",
+      "w": 73,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 38.31,
+        "cy": 494.86,
+        "r": 14.09
+      },
+      "slot": "segundero",
+      "largo": 494.86,
+      "bytes": 14036
+    },
+    {
+      "id": 322,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/322.webp",
+      "w": 209,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 105.1,
+        "cy": 463.39,
+        "r": 24.96
+      },
+      "slot": "principal",
+      "largo": 463.39,
+      "bytes": 21212
+    },
+    {
+      "id": 323,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/323.webp",
+      "w": 164,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 83.26,
+        "cy": 464.47,
+        "r": 24.57
+      },
+      "slot": "principal",
+      "largo": 464.47,
+      "bytes": 19596
+    },
+    {
+      "id": 324,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/324.webp",
+      "w": 103,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 52.45,
+        "cy": 476.59,
+        "r": 20.07
+      },
+      "slot": "principal",
+      "largo": 476.59,
+      "bytes": 12058
+    },
+    {
+      "id": 325,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/325.webp",
+      "w": 122,
+      "h": 527,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 61.93,
+        "cy": 466.35,
+        "r": 22.92
+      },
+      "slot": "principal",
+      "largo": 466.35,
+      "bytes": 12448
+    },
+    {
+      "id": 326,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/326.webp",
+      "w": 110,
+      "h": 531,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 55.19,
+        "cy": 432.78,
+        "r": 20.67
+      },
+      "slot": "principal",
+      "largo": 432.78,
+      "bytes": 11578
+    },
+    {
+      "id": 327,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/327.webp",
+      "w": 107,
+      "h": 529,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 53.77,
+        "cy": 475.86,
+        "r": 20.92
+      },
+      "slot": "principal",
+      "largo": 475.86,
+      "bytes": 12864
+    },
+    {
+      "id": 328,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/328.webp",
+      "w": 190,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 95.34,
+        "cy": 463.56,
+        "r": 26.21
+      },
+      "slot": "principal",
+      "largo": 463.56,
+      "bytes": 19374
+    },
+    {
+      "id": 329,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/329.webp",
+      "w": 159,
+      "h": 531,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 80.88,
+        "cy": 432.79,
+        "r": 21.46
+      },
+      "slot": "principal",
+      "largo": 432.79,
+      "bytes": 16304
+    },
+    {
+      "id": 330,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/330.webp",
+      "w": 99,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 49.64,
+        "cy": 478.07,
+        "r": 19.25
+      },
+      "slot": "principal",
+      "largo": 478.07,
+      "bytes": 14316
+    },
+    {
+      "id": 331,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/331.webp",
+      "w": 123,
+      "h": 532,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 61.8,
+        "cy": 472.35,
+        "r": 22.88
+      },
+      "slot": "principal",
+      "largo": 472.35,
+      "bytes": 17276
+    },
+    {
+      "id": 332,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/332.webp",
+      "w": 101,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 50.68,
+        "cy": 479.56,
+        "r": 19.02
+      },
+      "slot": "principal",
+      "largo": 479.56,
+      "bytes": 15400
+    },
+    {
+      "id": 333,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/333.webp",
+      "w": 92,
+      "h": 528,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 46.65,
+        "cy": 481.82,
+        "r": 18.1
+      },
+      "slot": "segundero",
+      "largo": 481.82,
+      "bytes": 13412
+    },
+    {
+      "id": 334,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/334.webp",
+      "w": 111,
+      "h": 531,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 55.06,
+        "cy": 476.16,
+        "r": 26.16
+      },
+      "slot": "principal",
+      "largo": 476.16,
+      "bytes": 10648
+    },
+    {
+      "id": 335,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/335.webp",
+      "w": 92,
+      "h": 532,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 46.34,
+        "cy": 485.79,
+        "r": 21.19
+      },
+      "slot": "segundero",
+      "largo": 485.79,
+      "bytes": 9284
+    },
+    {
+      "id": 336,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/336.webp",
+      "w": 81,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 40.15,
+        "cy": 491.73,
+        "r": 21.4
+      },
+      "slot": "segundero",
+      "largo": 491.73,
+      "bytes": 8384
+    },
+    {
+      "id": 337,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/337.webp",
+      "w": 146,
+      "h": 532,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 74.91,
+        "cy": 475.43,
+        "r": 24.17
+      },
+      "slot": "principal",
+      "largo": 475.43,
+      "bytes": 14132
+    },
+    {
+      "id": 338,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/338.webp",
+      "w": 87,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 43.01,
+        "cy": 452.61,
+        "r": 18.46
+      },
+      "slot": "segundero",
+      "largo": 452.61,
+      "bytes": 9848
+    },
+    {
+      "id": 339,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/339.webp",
+      "w": 66,
+      "h": 532,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 33.01,
+        "cy": 500.78,
+        "r": 16.19
+      },
+      "slot": "segundero",
+      "largo": 500.78,
+      "bytes": 8254
+    },
+    {
+      "id": 340,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/340.webp",
+      "w": 151,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 74.89,
+        "cy": 468.13,
+        "r": 28.12
+      },
+      "slot": "principal",
+      "largo": 468.13,
+      "bytes": 15676
+    },
+    {
+      "id": 341,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/341.webp",
+      "w": 88,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 44.5,
+        "cy": 452.75,
+        "r": 17.42
+      },
+      "slot": "segundero",
+      "largo": 452.75,
+      "bytes": 10862
+    },
+    {
+      "id": 342,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/342.webp",
+      "w": 73,
+      "h": 530,
+      "acabado": "gunmetal",
+      "pivote": {
+        "cx": 36.15,
+        "cy": 495.08,
+        "r": 17.71
+      },
+      "slot": "segundero",
+      "largo": 495.08,
+      "bytes": 8630
+    },
+    {
+      "id": 343,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/343.webp",
+      "w": 200,
+      "h": 526,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 100.7,
+        "cy": 465.93,
+        "r": 30.05
+      },
+      "slot": "principal",
+      "largo": 465.93,
+      "bytes": 23412
+    },
+    {
+      "id": 344,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/344.webp",
+      "w": 76,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 38.7,
+        "cy": 490.85,
+        "r": 17.61
+      },
+      "slot": "segundero",
+      "largo": 490.85,
+      "bytes": 10448
+    },
+    {
+      "id": 345,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/345.webp",
+      "w": 71,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 35.65,
+        "cy": 492.03,
+        "r": 19.17
+      },
+      "slot": "segundero",
+      "largo": 492.03,
+      "bytes": 10386
+    },
+    {
+      "id": 346,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/346.webp",
+      "w": 195,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 97.37,
+        "cy": 467.82,
+        "r": 30.41
+      },
+      "slot": "principal",
+      "largo": 467.82,
+      "bytes": 20728
+    },
+    {
+      "id": 347,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/347.webp",
+      "w": 108,
+      "h": 527,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 54.73,
+        "cy": 485.95,
+        "r": 19.09
+      },
+      "slot": "principal",
+      "largo": 485.95,
+      "bytes": 12100
+    },
+    {
+      "id": 348,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/348.webp",
+      "w": 88,
+      "h": 526,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 44.99,
+        "cy": 485.71,
+        "r": 20.99
+      },
+      "slot": "segundero",
+      "largo": 485.71,
+      "bytes": 11254
+    },
+    {
+      "id": 349,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/349.webp",
+      "w": 131,
+      "h": 526,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 66.85,
+        "cy": 461.46,
+        "r": 32.01
+      },
+      "slot": "principal",
+      "largo": 461.46,
+      "bytes": 15238
+    },
+    {
+      "id": 350,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/350.webp",
+      "w": 86,
+      "h": 527,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 44.13,
+        "cy": 484.96,
+        "r": 19.69
+      },
+      "slot": "segundero",
+      "largo": 484.96,
+      "bytes": 9816
+    },
+    {
+      "id": 351,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/351.webp",
+      "w": 84,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 41.47,
+        "cy": 484.72,
+        "r": 22.36
+      },
+      "slot": "segundero",
+      "largo": 484.72,
+      "bytes": 10892
+    },
+    {
+      "id": 352,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/352.webp",
+      "w": 126,
+      "h": 526,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 62.44,
+        "cy": 471.3,
+        "r": 27.86
+      },
+      "slot": "principal",
+      "largo": 471.3,
+      "bytes": 19664
+    },
+    {
+      "id": 353,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/353.webp",
+      "w": 83,
+      "h": 531,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 42.08,
+        "cy": 490.34,
+        "r": 19.03
+      },
+      "slot": "segundero",
+      "largo": 490.34,
+      "bytes": 15220
+    },
+    {
+      "id": 354,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/354.webp",
+      "w": 76,
+      "h": 529,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 38.05,
+        "cy": 489.76,
+        "r": 20.43
+      },
+      "slot": "segundero",
+      "largo": 489.76,
+      "bytes": 10822
+    },
+    {
+      "id": 355,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/355.webp",
+      "w": 96,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 47.9,
+        "cy": 481.37,
+        "r": 17.84
+      },
+      "slot": "segundero",
+      "largo": 481.37,
+      "bytes": 12806
+    },
+    {
+      "id": 356,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/356.webp",
+      "w": 104,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 52.84,
+        "cy": 479.9,
+        "r": 19.1
+      },
+      "slot": "principal",
+      "largo": 479.9,
+      "bytes": 16640
+    },
+    {
+      "id": 357,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/357.webp",
+      "w": 73,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 38.31,
+        "cy": 494.86,
+        "r": 14.09
+      },
+      "slot": "segundero",
+      "largo": 494.86,
+      "bytes": 15614
+    },
+    {
+      "id": 358,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/358.webp",
+      "w": 209,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 105.1,
+        "cy": 463.39,
+        "r": 24.96
+      },
+      "slot": "principal",
+      "largo": 463.39,
+      "bytes": 23118
+    },
+    {
+      "id": 359,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/359.webp",
+      "w": 164,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 83.26,
+        "cy": 464.47,
+        "r": 24.57
+      },
+      "slot": "principal",
+      "largo": 464.47,
+      "bytes": 20494
+    },
+    {
+      "id": 360,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/360.webp",
+      "w": 103,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 52.45,
+        "cy": 476.59,
+        "r": 20.07
+      },
+      "slot": "principal",
+      "largo": 476.59,
+      "bytes": 13666
+    },
+    {
+      "id": 361,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/361.webp",
+      "w": 122,
+      "h": 527,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 61.93,
+        "cy": 466.35,
+        "r": 22.92
+      },
+      "slot": "principal",
+      "largo": 466.35,
+      "bytes": 13126
+    },
+    {
+      "id": 362,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/362.webp",
+      "w": 110,
+      "h": 531,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 55.19,
+        "cy": 432.78,
+        "r": 20.67
+      },
+      "slot": "principal",
+      "largo": 432.78,
+      "bytes": 12018
+    },
+    {
+      "id": 363,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/363.webp",
+      "w": 107,
+      "h": 529,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 53.77,
+        "cy": 475.86,
+        "r": 20.92
+      },
+      "slot": "principal",
+      "largo": 475.86,
+      "bytes": 14516
+    },
+    {
+      "id": 364,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/364.webp",
+      "w": 190,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 95.34,
+        "cy": 463.56,
+        "r": 26.21
+      },
+      "slot": "principal",
+      "largo": 463.56,
+      "bytes": 21546
+    },
+    {
+      "id": 365,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/365.webp",
+      "w": 159,
+      "h": 531,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 80.88,
+        "cy": 432.79,
+        "r": 21.46
+      },
+      "slot": "principal",
+      "largo": 432.79,
+      "bytes": 17800
+    },
+    {
+      "id": 366,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/366.webp",
+      "w": 99,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 49.64,
+        "cy": 478.07,
+        "r": 19.25
+      },
+      "slot": "principal",
+      "largo": 478.07,
+      "bytes": 16016
+    },
+    {
+      "id": 367,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/367.webp",
+      "w": 123,
+      "h": 532,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 61.8,
+        "cy": 472.35,
+        "r": 22.88
+      },
+      "slot": "principal",
+      "largo": 472.35,
+      "bytes": 18438
+    },
+    {
+      "id": 368,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/368.webp",
+      "w": 101,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 50.68,
+        "cy": 479.56,
+        "r": 19.02
+      },
+      "slot": "principal",
+      "largo": 479.56,
+      "bytes": 15998
+    },
+    {
+      "id": 369,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/369.webp",
+      "w": 92,
+      "h": 528,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 46.65,
+        "cy": 481.82,
+        "r": 18.1
+      },
+      "slot": "segundero",
+      "largo": 481.82,
+      "bytes": 14770
+    },
+    {
+      "id": 370,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/370.webp",
+      "w": 111,
+      "h": 531,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 55.06,
+        "cy": 476.16,
+        "r": 26.16
+      },
+      "slot": "principal",
+      "largo": 476.16,
+      "bytes": 12760
+    },
+    {
+      "id": 371,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/371.webp",
+      "w": 92,
+      "h": 532,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 46.34,
+        "cy": 485.79,
+        "r": 21.19
+      },
+      "slot": "segundero",
+      "largo": 485.79,
+      "bytes": 11482
+    },
+    {
+      "id": 372,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/372.webp",
+      "w": 81,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 40.15,
+        "cy": 491.73,
+        "r": 21.4
+      },
+      "slot": "segundero",
+      "largo": 491.73,
+      "bytes": 9570
+    },
+    {
+      "id": 373,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/373.webp",
+      "w": 146,
+      "h": 532,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 74.91,
+        "cy": 475.43,
+        "r": 24.17
+      },
+      "slot": "principal",
+      "largo": 475.43,
+      "bytes": 15336
+    },
+    {
+      "id": 374,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/374.webp",
+      "w": 87,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 43.01,
+        "cy": 452.61,
+        "r": 18.46
+      },
+      "slot": "segundero",
+      "largo": 452.61,
+      "bytes": 10376
+    },
+    {
+      "id": 375,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/375.webp",
+      "w": 66,
+      "h": 532,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 33.01,
+        "cy": 500.78,
+        "r": 16.19
+      },
+      "slot": "segundero",
+      "largo": 500.78,
+      "bytes": 9052
+    },
+    {
+      "id": 376,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/376.webp",
+      "w": 151,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 74.89,
+        "cy": 468.13,
+        "r": 28.12
+      },
+      "slot": "principal",
+      "largo": 468.13,
+      "bytes": 18284
+    },
+    {
+      "id": 377,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/377.webp",
+      "w": 88,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 44.5,
+        "cy": 452.75,
+        "r": 17.42
+      },
+      "slot": "segundero",
+      "largo": 452.75,
+      "bytes": 13078
+    },
+    {
+      "id": 378,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/378.webp",
+      "w": 73,
+      "h": 530,
+      "acabado": "oro",
+      "pivote": {
+        "cx": 36.15,
+        "cy": 495.08,
+        "r": 17.71
+      },
+      "slot": "segundero",
+      "largo": 495.08,
+      "bytes": 9870
+    },
+    {
+      "id": 379,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/379.webp",
+      "w": 200,
+      "h": 526,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 100.7,
+        "cy": 465.93,
+        "r": 30.05
+      },
+      "slot": "principal",
+      "largo": 465.93,
+      "bytes": 21200
+    },
+    {
+      "id": 380,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/380.webp",
+      "w": 76,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 38.7,
+        "cy": 490.85,
+        "r": 17.61
+      },
+      "slot": "segundero",
+      "largo": 490.85,
+      "bytes": 9524
+    },
+    {
+      "id": 381,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/381.webp",
+      "w": 71,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 35.65,
+        "cy": 492.03,
+        "r": 19.17
+      },
+      "slot": "segundero",
+      "largo": 492.03,
+      "bytes": 9606
+    },
+    {
+      "id": 382,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/382.webp",
+      "w": 195,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 97.37,
+        "cy": 467.82,
+        "r": 30.41
+      },
+      "slot": "principal",
+      "largo": 467.82,
+      "bytes": 18880
+    },
+    {
+      "id": 383,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/383.webp",
+      "w": 108,
+      "h": 527,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 54.73,
+        "cy": 485.95,
+        "r": 19.09
+      },
+      "slot": "principal",
+      "largo": 485.95,
+      "bytes": 11060
+    },
+    {
+      "id": 384,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/384.webp",
+      "w": 88,
+      "h": 526,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 44.99,
+        "cy": 485.71,
+        "r": 20.99
+      },
+      "slot": "segundero",
+      "largo": 485.71,
+      "bytes": 10520
+    },
+    {
+      "id": 385,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/385.webp",
+      "w": 131,
+      "h": 526,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 66.85,
+        "cy": 461.46,
+        "r": 32.01
+      },
+      "slot": "principal",
+      "largo": 461.46,
+      "bytes": 13806
+    },
+    {
+      "id": 386,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/386.webp",
+      "w": 86,
+      "h": 527,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 44.13,
+        "cy": 484.96,
+        "r": 19.69
+      },
+      "slot": "segundero",
+      "largo": 484.96,
+      "bytes": 9264
+    },
+    {
+      "id": 387,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/387.webp",
+      "w": 84,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 41.47,
+        "cy": 484.72,
+        "r": 22.36
+      },
+      "slot": "segundero",
+      "largo": 484.72,
+      "bytes": 10216
+    },
+    {
+      "id": 388,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/388.webp",
+      "w": 126,
+      "h": 526,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 62.44,
+        "cy": 471.3,
+        "r": 27.86
+      },
+      "slot": "principal",
+      "largo": 471.3,
+      "bytes": 18044
+    },
+    {
+      "id": 389,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/389.webp",
+      "w": 83,
+      "h": 531,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 42.08,
+        "cy": 490.34,
+        "r": 19.03
+      },
+      "slot": "segundero",
+      "largo": 490.34,
+      "bytes": 13862
+    },
+    {
+      "id": 390,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/390.webp",
+      "w": 76,
+      "h": 529,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 38.05,
+        "cy": 489.76,
+        "r": 20.43
+      },
+      "slot": "segundero",
+      "largo": 489.76,
+      "bytes": 10200
+    },
+    {
+      "id": 391,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/391.webp",
+      "w": 96,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 47.9,
+        "cy": 481.37,
+        "r": 17.84
+      },
+      "slot": "segundero",
+      "largo": 481.37,
+      "bytes": 11942
+    },
+    {
+      "id": 392,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/392.webp",
+      "w": 104,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 52.84,
+        "cy": 479.9,
+        "r": 19.1
+      },
+      "slot": "principal",
+      "largo": 479.9,
+      "bytes": 15414
+    },
+    {
+      "id": 393,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/393.webp",
+      "w": 73,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 38.31,
+        "cy": 494.86,
+        "r": 14.09
+      },
+      "slot": "segundero",
+      "largo": 494.86,
+      "bytes": 14754
+    },
+    {
+      "id": 394,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/394.webp",
+      "w": 209,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 105.1,
+        "cy": 463.39,
+        "r": 24.96
+      },
+      "slot": "principal",
+      "largo": 463.39,
+      "bytes": 20716
+    },
+    {
+      "id": 395,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/395.webp",
+      "w": 164,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 83.26,
+        "cy": 464.47,
+        "r": 24.57
+      },
+      "slot": "principal",
+      "largo": 464.47,
+      "bytes": 18290
+    },
+    {
+      "id": 396,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/396.webp",
+      "w": 103,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 52.45,
+        "cy": 476.59,
+        "r": 20.07
+      },
+      "slot": "principal",
+      "largo": 476.59,
+      "bytes": 12682
+    },
+    {
+      "id": 397,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/397.webp",
+      "w": 122,
+      "h": 527,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 61.93,
+        "cy": 466.35,
+        "r": 22.92
+      },
+      "slot": "principal",
+      "largo": 466.35,
+      "bytes": 12302
+    },
+    {
+      "id": 398,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/398.webp",
+      "w": 110,
+      "h": 531,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 55.19,
+        "cy": 432.78,
+        "r": 20.67
+      },
+      "slot": "principal",
+      "largo": 432.78,
+      "bytes": 11354
+    },
+    {
+      "id": 399,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/399.webp",
+      "w": 107,
+      "h": 529,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 53.77,
+        "cy": 475.86,
+        "r": 20.92
+      },
+      "slot": "principal",
+      "largo": 475.86,
+      "bytes": 13538
+    },
+    {
+      "id": 400,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/400.webp",
+      "w": 190,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 95.34,
+        "cy": 463.56,
+        "r": 26.21
+      },
+      "slot": "principal",
+      "largo": 463.56,
+      "bytes": 19882
+    },
+    {
+      "id": 401,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/401.webp",
+      "w": 159,
+      "h": 531,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 80.88,
+        "cy": 432.79,
+        "r": 21.46
+      },
+      "slot": "principal",
+      "largo": 432.79,
+      "bytes": 16532
+    },
+    {
+      "id": 402,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/402.webp",
+      "w": 99,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 49.64,
+        "cy": 478.07,
+        "r": 19.25
+      },
+      "slot": "principal",
+      "largo": 478.07,
+      "bytes": 14944
+    },
+    {
+      "id": 403,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/403.webp",
+      "w": 123,
+      "h": 532,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 61.8,
+        "cy": 472.35,
+        "r": 22.88
+      },
+      "slot": "principal",
+      "largo": 472.35,
+      "bytes": 17116
+    },
+    {
+      "id": 404,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/404.webp",
+      "w": 101,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 50.68,
+        "cy": 479.56,
+        "r": 19.02
+      },
+      "slot": "principal",
+      "largo": 479.56,
+      "bytes": 14952
+    },
+    {
+      "id": 405,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/405.webp",
+      "w": 92,
+      "h": 528,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 46.65,
+        "cy": 481.82,
+        "r": 18.1
+      },
+      "slot": "segundero",
+      "largo": 481.82,
+      "bytes": 13932
+    },
+    {
+      "id": 406,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/406.webp",
+      "w": 111,
+      "h": 531,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 55.06,
+        "cy": 476.16,
+        "r": 26.16
+      },
+      "slot": "principal",
+      "largo": 476.16,
+      "bytes": 11680
+    },
+    {
+      "id": 407,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/407.webp",
+      "w": 92,
+      "h": 532,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 46.34,
+        "cy": 485.79,
+        "r": 21.19
+      },
+      "slot": "segundero",
+      "largo": 485.79,
+      "bytes": 10464
+    },
+    {
+      "id": 408,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/408.webp",
+      "w": 81,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 40.15,
+        "cy": 491.73,
+        "r": 21.4
+      },
+      "slot": "segundero",
+      "largo": 491.73,
+      "bytes": 8624
+    },
+    {
+      "id": 409,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/409.webp",
+      "w": 146,
+      "h": 532,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 74.91,
+        "cy": 475.43,
+        "r": 24.17
+      },
+      "slot": "principal",
+      "largo": 475.43,
+      "bytes": 14090
+    },
+    {
+      "id": 410,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/410.webp",
+      "w": 87,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 43.01,
+        "cy": 452.61,
+        "r": 18.46
+      },
+      "slot": "segundero",
+      "largo": 452.61,
+      "bytes": 9414
+    },
+    {
+      "id": 411,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/411.webp",
+      "w": 66,
+      "h": 532,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 33.01,
+        "cy": 500.78,
+        "r": 16.19
+      },
+      "slot": "segundero",
+      "largo": 500.78,
+      "bytes": 8328
+    },
+    {
+      "id": 412,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/412.webp",
+      "w": 151,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 74.89,
+        "cy": 468.13,
+        "r": 28.12
+      },
+      "slot": "principal",
+      "largo": 468.13,
+      "bytes": 16200
+    },
+    {
+      "id": 413,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/413.webp",
+      "w": 88,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 44.5,
+        "cy": 452.75,
+        "r": 17.42
+      },
+      "slot": "segundero",
+      "largo": 452.75,
+      "bytes": 11868
+    },
+    {
+      "id": 414,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/414.webp",
+      "w": 73,
+      "h": 530,
+      "acabado": "plata",
+      "pivote": {
+        "cx": 36.15,
+        "cy": 495.08,
+        "r": 17.71
+      },
+      "slot": "segundero",
+      "largo": 495.08,
+      "bytes": 9136
+    },
+    {
+      "id": 415,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/415.webp",
+      "w": 200,
+      "h": 526,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 100.7,
+        "cy": 465.93,
+        "r": 30.05
+      },
+      "slot": "principal",
+      "largo": 465.93,
+      "bytes": 21064
+    },
+    {
+      "id": 416,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/416.webp",
+      "w": 76,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 38.7,
+        "cy": 490.85,
+        "r": 17.61
+      },
+      "slot": "segundero",
+      "largo": 490.85,
+      "bytes": 9374
+    },
+    {
+      "id": 417,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/417.webp",
+      "w": 71,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 35.65,
+        "cy": 492.03,
+        "r": 19.17
+      },
+      "slot": "segundero",
+      "largo": 492.03,
+      "bytes": 9348
+    },
+    {
+      "id": 418,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/418.webp",
+      "w": 195,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 97.37,
+        "cy": 467.82,
+        "r": 30.41
+      },
+      "slot": "principal",
+      "largo": 467.82,
+      "bytes": 18078
+    },
+    {
+      "id": 419,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/419.webp",
+      "w": 108,
+      "h": 527,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 54.73,
+        "cy": 485.95,
+        "r": 19.09
+      },
+      "slot": "principal",
+      "largo": 485.95,
+      "bytes": 10950
+    },
+    {
+      "id": 420,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/420.webp",
+      "w": 88,
+      "h": 526,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 44.99,
+        "cy": 485.71,
+        "r": 20.99
+      },
+      "slot": "segundero",
+      "largo": 485.71,
+      "bytes": 10150
+    },
+    {
+      "id": 421,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/421.webp",
+      "w": 131,
+      "h": 526,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 66.85,
+        "cy": 461.46,
+        "r": 32.01
+      },
+      "slot": "principal",
+      "largo": 461.46,
+      "bytes": 13720
+    },
+    {
+      "id": 422,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/422.webp",
+      "w": 86,
+      "h": 527,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 44.13,
+        "cy": 484.96,
+        "r": 19.69
+      },
+      "slot": "segundero",
+      "largo": 484.96,
+      "bytes": 8664
+    },
+    {
+      "id": 423,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/423.webp",
+      "w": 84,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 41.47,
+        "cy": 484.72,
+        "r": 22.36
+      },
+      "slot": "segundero",
+      "largo": 484.72,
+      "bytes": 9758
+    },
+    {
+      "id": 424,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/424.webp",
+      "w": 126,
+      "h": 526,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 62.44,
+        "cy": 471.3,
+        "r": 27.86
+      },
+      "slot": "principal",
+      "largo": 471.3,
+      "bytes": 17568
+    },
+    {
+      "id": 425,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/425.webp",
+      "w": 83,
+      "h": 531,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 42.08,
+        "cy": 490.34,
+        "r": 19.03
+      },
+      "slot": "segundero",
+      "largo": 490.34,
+      "bytes": 13516
+    },
+    {
+      "id": 426,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/426.webp",
+      "w": 76,
+      "h": 529,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 38.05,
+        "cy": 489.76,
+        "r": 20.43
+      },
+      "slot": "segundero",
+      "largo": 489.76,
+      "bytes": 9794
+    },
+    {
+      "id": 427,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/427.webp",
+      "w": 96,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 47.9,
+        "cy": 481.37,
+        "r": 17.84
+      },
+      "slot": "segundero",
+      "largo": 481.37,
+      "bytes": 11872
+    },
+    {
+      "id": 428,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/428.webp",
+      "w": 104,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 52.84,
+        "cy": 479.9,
+        "r": 19.1
+      },
+      "slot": "principal",
+      "largo": 479.9,
+      "bytes": 15526
+    },
+    {
+      "id": 429,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/429.webp",
+      "w": 73,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 38.31,
+        "cy": 494.86,
+        "r": 14.09
+      },
+      "slot": "segundero",
+      "largo": 494.86,
+      "bytes": 14448
+    },
+    {
+      "id": 430,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/430.webp",
+      "w": 209,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 105.1,
+        "cy": 463.39,
+        "r": 24.96
+      },
+      "slot": "principal",
+      "largo": 463.39,
+      "bytes": 21228
+    },
+    {
+      "id": 431,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/431.webp",
+      "w": 164,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 83.26,
+        "cy": 464.47,
+        "r": 24.57
+      },
+      "slot": "principal",
+      "largo": 464.47,
+      "bytes": 18912
+    },
+    {
+      "id": 432,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/432.webp",
+      "w": 103,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 52.45,
+        "cy": 476.59,
+        "r": 20.07
+      },
+      "slot": "principal",
+      "largo": 476.59,
+      "bytes": 12324
+    },
+    {
+      "id": 433,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/433.webp",
+      "w": 122,
+      "h": 527,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 61.93,
+        "cy": 466.35,
+        "r": 22.92
+      },
+      "slot": "principal",
+      "largo": 466.35,
+      "bytes": 11832
+    },
+    {
+      "id": 434,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/434.webp",
+      "w": 110,
+      "h": 531,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 55.19,
+        "cy": 432.78,
+        "r": 20.67
+      },
+      "slot": "principal",
+      "largo": 432.78,
+      "bytes": 10822
+    },
+    {
+      "id": 435,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/435.webp",
+      "w": 107,
+      "h": 529,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 53.77,
+        "cy": 475.86,
+        "r": 20.92
+      },
+      "slot": "principal",
+      "largo": 475.86,
+      "bytes": 13112
+    },
+    {
+      "id": 436,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/436.webp",
+      "w": 190,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 95.34,
+        "cy": 463.56,
+        "r": 26.21
+      },
+      "slot": "principal",
+      "largo": 463.56,
+      "bytes": 19850
+    },
+    {
+      "id": 437,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/437.webp",
+      "w": 159,
+      "h": 531,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 80.88,
+        "cy": 432.79,
+        "r": 21.46
+      },
+      "slot": "principal",
+      "largo": 432.79,
+      "bytes": 16462
+    },
+    {
+      "id": 438,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/438.webp",
+      "w": 99,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 49.64,
+        "cy": 478.07,
+        "r": 19.25
+      },
+      "slot": "principal",
+      "largo": 478.07,
+      "bytes": 14718
+    },
+    {
+      "id": 439,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/439.webp",
+      "w": 123,
+      "h": 532,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 61.8,
+        "cy": 472.35,
+        "r": 22.88
+      },
+      "slot": "principal",
+      "largo": 472.35,
+      "bytes": 17054
+    },
+    {
+      "id": 440,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/440.webp",
+      "w": 101,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 50.68,
+        "cy": 479.56,
+        "r": 19.02
+      },
+      "slot": "principal",
+      "largo": 479.56,
+      "bytes": 14774
+    },
+    {
+      "id": 441,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/441.webp",
+      "w": 99,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 49.64,
+        "cy": 478.07,
+        "r": 19.25
+      },
+      "slot": "principal",
+      "largo": 478.07,
+      "bytes": 14718
+    },
+    {
+      "id": 442,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/442.webp",
+      "w": 123,
+      "h": 532,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 61.8,
+        "cy": 472.35,
+        "r": 22.88
+      },
+      "slot": "principal",
+      "largo": 472.35,
+      "bytes": 17054
+    },
+    {
+      "id": 443,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/443.webp",
+      "w": 101,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 50.68,
+        "cy": 479.56,
+        "r": 19.02
+      },
+      "slot": "principal",
+      "largo": 479.56,
+      "bytes": 14774
+    },
+    {
+      "id": 444,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/444.webp",
+      "w": 92,
+      "h": 528,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 46.65,
+        "cy": 481.82,
+        "r": 18.1
+      },
+      "slot": "segundero",
+      "largo": 481.82,
+      "bytes": 13424
+    },
+    {
+      "id": 445,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/445.webp",
+      "w": 111,
+      "h": 531,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 55.06,
+        "cy": 476.16,
+        "r": 26.16
+      },
+      "slot": "principal",
+      "largo": 476.16,
+      "bytes": 11272
+    },
+    {
+      "id": 446,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/446.webp",
+      "w": 92,
+      "h": 532,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 46.34,
+        "cy": 485.79,
+        "r": 21.19
+      },
+      "slot": "segundero",
+      "largo": 485.79,
+      "bytes": 9994
+    },
+    {
+      "id": 447,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/447.webp",
+      "w": 81,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 40.15,
+        "cy": 491.73,
+        "r": 21.4
+      },
+      "slot": "segundero",
+      "largo": 491.73,
+      "bytes": 8848
+    },
+    {
+      "id": 448,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/448.webp",
+      "w": 146,
+      "h": 532,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 74.91,
+        "cy": 475.43,
+        "r": 24.17
+      },
+      "slot": "principal",
+      "largo": 475.43,
+      "bytes": 14024
+    },
+    {
+      "id": 449,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/449.webp",
+      "w": 87,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 43.01,
+        "cy": 452.61,
+        "r": 18.46
+      },
+      "slot": "segundero",
+      "largo": 452.61,
+      "bytes": 9644
+    },
+    {
+      "id": 450,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/450.webp",
+      "w": 66,
+      "h": 532,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 33.01,
+        "cy": 500.78,
+        "r": 16.19
+      },
+      "slot": "segundero",
+      "largo": 500.78,
+      "bytes": 8512
+    },
+    {
+      "id": 451,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/451.webp",
+      "w": 151,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 74.89,
+        "cy": 468.13,
+        "r": 28.12
+      },
+      "slot": "principal",
+      "largo": 468.13,
+      "bytes": 16402
+    },
+    {
+      "id": 452,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/452.webp",
+      "w": 88,
+      "h": 530,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 44.5,
+        "cy": 452.75,
+        "r": 17.42
+      },
+      "slot": "segundero",
+      "largo": 452.75,
+      "bytes": 11710
+    },
+    {
+      "id": 453,
+      "categoria": "aguja",
+      "familia": "aguja",
+      "src": "imagenes/relojes/aguja/453.webp",
+      "w": 72,
+      "h": 516,
+      "acabado": "rojo",
+      "pivote": {
+        "cx": 35.83,
+        "cy": 481.57,
+        "r": 17.28
+      },
+      "slot": "segundero",
+      "largo": 481.57,
+      "bytes": 8746
+    }
+  ],
+  "omitidas": [
+    {
+      "id": 280,
+      "motivo": "render"
+    },
+    {
+      "id": 293,
+      "motivo": "render"
+    },
+    {
+      "id": 299,
+      "motivo": "render"
+    },
+    {
+      "id": 306,
+      "motivo": "render"
+    }
+  ]
+}

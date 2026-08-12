@@ -4,6 +4,7 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
 (function (App) {
     const STORAGE_KEY = 'perf-suarez-cart-v1';
     const WHATSAPP_NUMBER = '78064327';
+    const DEFAULT_CURRENCY = 'Bs';
     const MYSTERY_BOX_PRICE = 580;
     const MYSTERY_BOX_RULES = [
         { category: 'arabes', count: 2 },
@@ -36,6 +37,23 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
     function formatPrice(value) {
         const amount = Number(value) || 0;
         return Number.isInteger(amount) ? String(amount) : amount.toFixed(2);
+    }
+
+    // El catálogo cotiza en Bs, pero Suarez Watches se vende en dólares. Los
+    // ítems declaran su moneda y nunca se mezclan en un mismo total.
+    function currencyOf(item) {
+        return (item && item.currency) || DEFAULT_CURRENCY;
+    }
+
+    function formatMoney(value, currency) {
+        return `${currency || DEFAULT_CURRENCY} ${formatPrice(value)}`;
+    }
+
+    function formatTotals(totals) {
+        const parts = Object.keys(totals).map(function (currency) {
+            return formatMoney(totals[currency], currency);
+        });
+        return parts.length ? parts.join(' + ') : formatMoney(0, DEFAULT_CURRENCY);
     }
 
     function buildWhatsAppUrl(message) {
@@ -124,10 +142,16 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
         return cartState.items.length;
     }
 
+    function getTotalsByCurrency() {
+        return cartState.items.reduce(function (totals, item) {
+            const currency = currencyOf(item);
+            totals[currency] = (totals[currency] || 0) + (Number(item.totalPrice) || 0);
+            return totals;
+        }, {});
+    }
+
     function getTotal() {
-        return cartState.items.reduce(function (sum, item) {
-            return sum + (Number(item.totalPrice) || 0);
-        }, 0);
+        return getTotalsByCurrency()[DEFAULT_CURRENCY] || 0;
     }
 
     function addItem(item) {
@@ -365,11 +389,11 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
                     lines.push(`   ${item.subtitle}`);
                 }
             }
-            lines.push(`   Subtotal: Bs ${formatPrice(item.totalPrice)}`);
+            lines.push(`   Subtotal: ${formatMoney(item.totalPrice, currencyOf(item))}`);
             lines.push('');
         });
 
-        lines.push(`Total del carrito: Bs ${formatPrice(getTotal())}`);
+        lines.push(`Total del carrito: ${formatTotals(getTotalsByCurrency())}`);
         return lines.join('\n');
     }
 
@@ -382,10 +406,13 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
         createCuadroItem,
         createMysteryBoxItem,
         createPerfumeItem,
+        formatMoney,
         formatPrice,
+        formatTotals,
         getItemCount,
         getState,
         getTotal,
+        getTotalsByCurrency,
         removeItem,
         subscribe
     };
@@ -438,14 +465,13 @@ window.normalizeRoutePath = window.PerfSuarez.core.normalizeRoutePath;
             }
 
             const state = App.models.cart.getState();
-            const total = App.models.cart.getTotal();
             const itemCount = App.models.cart.getItemCount();
 
             elements.count.textContent = String(itemCount);
             elements.count.classList.toggle('is-empty', itemCount === 0);
 
             if (elements.total) {
-                elements.total.textContent = `Bs ${App.models.cart.formatPrice(total)}`;
+                elements.total.textContent = App.models.cart.formatTotals(App.models.cart.getTotalsByCurrency());
             }
 
             if (elements.send) {

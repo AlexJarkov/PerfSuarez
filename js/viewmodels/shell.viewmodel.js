@@ -25,10 +25,10 @@
             description: 'Armá tu combo de perfumes a medida en Perfumería Suárez. Combinaciones personalizadas para regalar o para vos.'
         },
         {
-            slug: 'mysterybox',
-            src: 'mysterybox.html',
-            title: 'Mystery Box de Perfumes | Perfumería Suárez Bolivia',
-            description: 'La Mystery Box de Perfumería Suárez: una selección sorpresa de perfumes nicho y de diseñador curada especialmente para vos.'
+            slug: 'relojes',
+            src: 'relojes.html',
+            title: 'Suarez Watches | Armá tu reloj a medida en Bolivia',
+            description: 'Configurá tu reloj Suarez Watches pieza por pieza: caja, bisel, dial, índices, agujas, correa y broche. Diseño único, pedido directo por WhatsApp.'
         },
         {
             slug: 'cuadros',

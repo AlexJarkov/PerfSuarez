@@ -1,0 +1,606 @@
+/* Suarez Watches — configurador por pasos.
+   El stage muestra el reloj compuesto y el sheet inferior trae las opciones.
+   Al contraer el sheet, el stage crece y el reloj se ve mas grande. */
+
+/* El sitio no aplica border-box global: cada componente lo declara. Sin esto,
+   el padding se suma al ancho y el panel desborda a la derecha. */
+body.relojes-page .watch-builder,
+body.relojes-page .watch-builder *,
+body.relojes-page .watch-result,
+body.relojes-page .watch-result * {
+    box-sizing: border-box;
+}
+
+body.relojes-page {
+    height: var(--app-height);
+    min-height: 0;
+    /* La pagina no monta el header: solo lo hace el shell. Sin esto quedaria
+       un hueco del alto del header que empuja el builder fuera de pantalla. */
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: var(--bg-main);
+    background-image: var(--marble-image);
+    overflow: hidden;
+}
+
+/* Embebida en el shell, el header del padre se superpone arriba. */
+body.relojes-page.is-shell-embed {
+    padding-top: var(--shell-embed-top-offset);
+}
+
+/* initGlobalUi() le agrega .page-shell a todos los <main>. Ademas, la regla
+   base de `main` es flex centrado y sus align/justify se filtran al grid. */
+body.relojes-page main.watch-builder,
+body.relojes-page main.watch-builder.page-shell {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* El alto del panel vive aca, no en el propio panel: un porcentaje dentro
+       de una fila `auto` es circular y Chrome termina invirtiendo las filas. */
+    --sheet-height: 56%;
+    grid-template-rows: minmax(0, 1fr) var(--sheet-height);
+    align-items: stretch;
+    justify-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* ---------- Stage ---------- */
+
+.watch-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    overflow: hidden;
+    padding: clamp(8px, 2vh, 20px) 16px 0;
+    box-sizing: border-box;
+    container-type: size;
+}
+
+/* Envuelve al reloj para que un toque lo amplie cuando esta en vista chica. */
+.watch-stage__zoom {
+    display: block;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: zoom-in;
+    /* Cuadrado exacto: el lado es el menor de los dos ejes disponibles.
+       `aspect-ratio` con `height:100%` + `max-width` no basta — recorta el
+       ancho pero deja el alto, y el reloj sale ovalado. */
+    width: min(100cqw, 100cqh);
+    height: min(100cqw, 100cqh);
+    min-height: 0;
+    /* Sin esto el flex del stage le recorta alto y deja de ser cuadrado. */
+    flex: 0 0 auto;
+    margin-inline: auto;
+}
+
+.watch-builder.is-collapsed .watch-stage__zoom {
+    cursor: default;
+}
+
+.watch-stage__frame {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: opacity 220ms ease;
+}
+
+.watch-stage__frame.is-loading {
+    opacity: 0;
+}
+
+.watch-stage__frame img {
+    position: absolute;
+    display: block;
+    /* El modelo entrega posicion y tamano como fraccion del lado del stage. */
+    will-change: transform;
+}
+
+/* Fuera del flujo: como item flex le quitaria alto al cuadrado del reloj. */
+.watch-stage__status {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    margin: 0;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-gray);
+    letter-spacing: 0.04em;
+    min-height: 1.2em;
+}
+
+/* ---------- Sheet de opciones ---------- */
+
+.watch-sheet {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--gold-border);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 30px rgba(17, 16, 14, 0.07);
+}
+
+body.relojes-page main.watch-builder {
+    transition: grid-template-rows 260ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+body.relojes-page main.watch-builder.is-dragging {
+    transition: none;
+}
+
+body.relojes-page main.watch-builder.is-half {
+    --sheet-height: 34%;
+}
+
+body.relojes-page main.watch-builder.is-collapsed {
+    --sheet-height: 128px;
+}
+
+.watch-sheet__handle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    padding: 9px 0 7px;
+    background: none;
+    border: 0;
+    cursor: grab;
+    touch-action: none;
+}
+
+.watch-sheet__handle:active {
+    cursor: grabbing;
+}
+
+.watch-sheet__grip {
+    width: 46px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--gold);
+}
+
+/* Pista de que el panel se arrastra. Late un par de veces al entrar y se
+   apaga sola: el objetivo es que se note, no que distraiga. */
+.watch-sheet__hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    color: var(--gold-deep);
+}
+
+.watch-sheet__chevron {
+    width: 8px;
+    height: 8px;
+    border-right: 1.6px solid currentColor;
+    border-bottom: 1.6px solid currentColor;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.watch-builder.is-collapsed .watch-sheet__chevron {
+    transform: rotate(-135deg) translate(-1px, -1px);
+}
+
+.watch-sheet__hint.is-pulsing {
+    animation: watch-hint-pulse 1.6s ease-in-out 3;
+}
+
+@keyframes watch-hint-pulse {
+    0%, 100% { transform: translateY(0); opacity: 0.75; }
+    50% { transform: translateY(3px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .watch-sheet__hint.is-pulsing {
+        animation: none;
+    }
+}
+
+/* ---------- Riel de pasos ---------- */
+
+.watch-steps {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 4px clamp(14px, 4vw, 26px) 12px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.watch-steps::-webkit-scrollbar {
+    display: none;
+}
+
+.watch-step-chip {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: var(--black-soft);
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.watch-step-chip:hover {
+    border-color: var(--gold);
+}
+
+/* Estado activo del rediseno: fondo negro, borde y texto dorados. */
+.watch-step-chip.is-active {
+    background: var(--black-strong);
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+.watch-step-chip.is-done::after {
+    content: '✓';
+    font-size: 0.7rem;
+    color: var(--gold-deep);
+}
+
+.watch-step-chip.is-active.is-done::after {
+    color: var(--gold-light);
+}
+
+/* ---------- Cuerpo scrollable ---------- */
+
+.watch-sheet__body {
+    min-height: 0;
+    overflow-y: auto;
+    /* Deja el gesto vertical al scroll y evita que el shell tome el swipe. */
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 clamp(14px, 4vw, 26px) 12px;
+}
+
+/* Embebida en el shell, el dock del catálogo va fijo encima del iframe: sin
+   este colchón las últimas opciones del grid quedan debajo y no se alcanzan. */
+body.relojes-page.is-shell-embed .watch-sheet__body {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+    body.relojes-page.is-shell-embed .watch-sheet__body {
+        padding-bottom: 12px;
+    }
+}
+
+.watch-step-heading h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 3.4vw, 1.5rem);
+    color: var(--black-strong);
+}
+
+.watch-step-heading p {
+    margin: 4px 0 12px;
+    font-size: 0.84rem;
+    color: var(--text-gray);
+}
+
+.watch-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.watch-filters:empty {
+    display: none;
+}
+
+.watch-filter {
+    padding: 5px 12px;
+    font-size: 0.76rem;
+    color: var(--black-soft);
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.watch-filter.is-active {
+    background: var(--black-strong);
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+.watch-panel-title {
+    margin: 14px 0 8px;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: var(--gold-deep);
+}
+
+.watch-panel-title:first-child {
+    margin-top: 0;
+}
+
+/* ---------- Grid de opciones ---------- */
+
+.watch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: 8px;
+}
+
+.watch-option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 4px 6px;
+    background: var(--bg-main);
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.watch-option:hover {
+    border-color: var(--gold);
+    transform: translateY(-1px);
+}
+
+.watch-option.is-active {
+    border-color: var(--gold);
+    box-shadow: inset 0 0 0 1px var(--gold);
+}
+
+.watch-option img {
+    width: 100%;
+    height: 54px;
+    object-fit: contain;
+}
+
+.watch-option__label {
+    font-size: 0.66rem;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.watch-option.is-active .watch-option__label {
+    color: var(--black-strong);
+}
+
+/* ---------- Pie del sheet ---------- */
+
+/* Flotantes por encima del handle: al pie del panel quedaban tapados por el
+   dock del catálogo, que va fijo sobre el iframe.
+   El sitio tiene además una regla global `footer { flex-direction: column }`
+   que si no se anula apila los botones uno debajo del otro. */
+.watch-sheet__foot {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 clamp(14px, 4vw, 26px);
+    border-top: 0;
+    background: none;
+    /* Solo los botones capturan el toque: el resto deja ver y tocar el reloj. */
+    pointer-events: none;
+}
+
+.watch-sheet__foot .watch-btn {
+    pointer-events: auto;
+    /* Pastillas compactas: ocupan lo justo y dejan ver el reloj detrás. */
+    flex: 0 1 150px;
+    padding-inline: 10px;
+    box-shadow: 0 6px 18px rgba(17, 16, 14, 0.16);
+    backdrop-filter: blur(6px);
+}
+
+/* Sobre el mármol necesitan fondo propio para leerse. */
+.watch-sheet__foot .watch-btn--ghost {
+    background: var(--bg-secondary);
+}
+
+.watch-btn {
+    flex: 1;
+    padding: 11px 16px;
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    border-radius: 999px;
+    border: 1px solid var(--gold-border);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.watch-btn--ghost {
+    background: transparent;
+    color: var(--black-soft);
+}
+
+.watch-btn--ghost:hover {
+    border-color: var(--gold);
+}
+
+.watch-btn--solid {
+    background: var(--black-strong);
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+.watch-btn--wa {
+    background: #25d366;
+    border-color: #25d366;
+    color: #fff;
+}
+
+.watch-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* ---------- Resultado final ---------- */
+
+.watch-result {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(17, 16, 14, 0.55);
+    overflow-y: auto;
+}
+
+.watch-result[hidden] {
+    display: none;
+}
+
+.watch-result__card {
+    position: relative;
+    width: min(460px, 100%);
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 22px clamp(16px, 5vw, 28px) 24px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--gold-border);
+    border-radius: 18px;
+    text-align: center;
+}
+
+.watch-result__close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    line-height: 1;
+    color: var(--black-soft);
+    background: transparent;
+    border: 1px solid var(--divider);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.watch-result__card h2 {
+    margin: 2px 0 14px;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    color: var(--black-strong);
+}
+
+.watch-result__image img {
+    width: min(280px, 78%);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.watch-result__summary {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3px 12px;
+    margin: 14px 0;
+    text-align: left;
+    font-size: 0.78rem;
+}
+
+.watch-result__summary dt {
+    color: var(--text-gray);
+}
+
+.watch-result__summary dd {
+    margin: 0;
+    color: var(--black-strong);
+}
+
+.watch-result__price {
+    margin: 0 0 14px;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--black-strong);
+}
+
+.watch-result__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ---------- Escritorio: stage al lado del panel ---------- */
+
+@media (min-width: 900px) {
+    body.relojes-page main.watch-builder,
+    body.relojes-page main.watch-builder.page-shell,
+    /* En escritorio hay espacio de sobra: el panel no se contrae. */
+    body.relojes-page main.watch-builder.is-half,
+    body.relojes-page main.watch-builder.is-collapsed {
+        grid-template-rows: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 34%);
+    }
+
+    .watch-stage {
+        padding-bottom: clamp(8px, 2vh, 20px);
+    }
+
+    .watch-sheet {
+        grid-template-rows: auto auto minmax(0, 1fr) auto;
+        border-top: 0;
+        border-left: 1px solid var(--gold-border);
+        border-radius: 0;
+        box-shadow: -10px 0 30px rgba(17, 16, 14, 0.05);
+    }
+
+    /* En escritorio el panel ocupa toda la columna derecha y no hay dock:
+       los botones vuelven al pie, en el flujo. */
+    .watch-sheet__foot {
+        position: static;
+        padding: 10px clamp(14px, 4vw, 26px);
+        border-top: 1px solid var(--divider);
+        background: var(--bg-secondary);
+        pointer-events: auto;
+    }
+
+    .watch-sheet__foot .watch-btn {
+        max-width: none;
+        box-shadow: none;
+    }
+
+    .watch-sheet__handle {
+        display: none;
+    }
+
+    .watch-grid {
+        grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    }
+}
