@@ -145,27 +145,134 @@ body.relojes-page main.watch-builder.page-shell {
     opacity: 1;
 }
 
-/* Rótulo del arrastre: dice qué pieza se está recorriendo y se apaga solo. */
-.watch-stage__swipe {
+/* ---------- Carrusel del arrastre ---------- */
+
+/* Tira de piezas que sigue al dedo, como el selector de modo de la cámara de
+   iOS: la ficha del centro es la que queda elegida y las de los costados se
+   encogen y se desvanecen. Vive por encima del reloj y no captura el gesto. */
+.watch-carousel {
     position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    padding: 5px 12px;
-    font-size: 0.74rem;
-    letter-spacing: 0.04em;
-    color: var(--gold-light);
-    background: var(--black-strong);
-    border: 1px solid var(--gold);
-    border-radius: 999px;
+    left: 0;
+    right: 0;
+    /* Por encima de los botones flotantes, que viven al pie del stage. */
+    bottom: 18%;
+    height: 96px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 180ms ease;
+    transition: opacity 220ms ease;
+    z-index: 3;
 }
 
-.watch-stage__swipe.is-visible {
+.watch-builder.is-carruseleando .watch-carousel {
     opacity: 1;
+}
+
+/* Velo para que las fichas se lean sobre el reloj sin taparlo del todo. */
+.watch-carousel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        rgba(250, 248, 243, 0) 0%,
+        rgba(250, 248, 243, 0.82) 12%,
+        rgba(250, 248, 243, 0.82) 88%,
+        rgba(250, 248, 243, 0) 100%);
+    backdrop-filter: blur(3px);
+}
+
+.watch-carousel__rail {
+    position: absolute;
+    inset: 0;
+}
+
+.watch-carousel__item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 78px;
+    /* La posición exacta la escribe el modelo en cada pointermove. */
+    transform: translate(-50%, -50%);
+    transition: none;
+}
+
+.watch-carousel__item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Dos marcas doradas señalan el centro, que es lo que va a quedar elegido.
+   Un marco cerrado daba a entender una casilla y, a mitad del arrastre, con la
+   tira entre dos piezas, parecía desalineado. */
+.watch-carousel::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.5px;
+    height: 90px;
+    margin: -45px 0 0 -0.75px;
+    background: linear-gradient(180deg,
+        var(--gold) 0, var(--gold) 10px,
+        transparent 10px, transparent 80px,
+        var(--gold) 80px, var(--gold) 90px);
+}
+
+.watch-carousel__label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    z-index: 4;
+    margin: 0;
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    color: var(--black-strong);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+}
+
+.watch-builder.is-carruseleando .watch-carousel__label {
+    opacity: 1;
+}
+
+/* Guía permanente: se apaga mientras el carrusel está a la vista. Va arriba
+   porque el reloj ocupa el alto entero del stage y abajo flotan los botones. */
+.watch-swipe-hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    margin: 0;
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    color: var(--text-gray);
+    opacity: 0.75;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+}
+
+.watch-swipe-hint span {
+    color: var(--gold-deep);
+}
+
+.watch-builder.is-carruseleando .watch-swipe-hint {
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .watch-carousel,
+    .watch-carousel__label,
+    .watch-swipe-hint {
+        transition: none;
+    }
 }
 
 /* Fuera del flujo: como item flex le quitaria alto al cuadrado del reloj. */
@@ -398,6 +505,7 @@ body.relojes-page.is-shell-embed .watch-sheet__body {
     background: var(--bg-main);
     border: 1px solid var(--divider);
     border-radius: 12px;
+    cursor: pointer;
     transition: border-color 160ms ease, transform 160ms ease;
 }
 
@@ -409,20 +517,6 @@ body.relojes-page.is-shell-embed .watch-sheet__body {
 .watch-option.is-active {
     border-color: var(--gold);
     box-shadow: inset 0 0 0 1px var(--gold);
-}
-
-/* El botón ocupa la tarjeta entera; los puntitos de color quedan debajo y
-   tienen su propio click, así que no puede haber un botón dentro de otro. */
-.watch-option__pick {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    width: 100%;
-    padding: 0;
-    background: none;
-    border: 0;
-    cursor: pointer;
 }
 
 .watch-option img {
@@ -442,48 +536,56 @@ body.relojes-page.is-shell-embed .watch-sheet__body {
     color: var(--black-strong);
 }
 
-/* ---------- Puntitos de color ---------- */
+/* ---------- Barra de colores ---------- */
 
-/* Un modelo agrupa el mismo diseño en varios colores: en vez de una tarjeta
-   por archivo (147 agujas, 60 biseles) va una tarjeta y los colores acá. */
-.watch-dots {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px;
-    width: 100%;
-    padding-top: 2px;
+/* Antes cada tarjeta llevaba su propia fila de puntitos de 14 px: en el
+   teléfono no se acertaban y llenaban el grid de ruido. Ahora hay una sola
+   barra por paso, con muestras grandes y el nombre del color a la vista. */
+.watch-colors {
+    margin: 10px 0 16px;
 }
 
-.watch-dot {
-    width: 14px;
-    height: 14px;
+.watch-colors:empty {
+    display: none;
+}
+
+.watch-colors__head {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0 0 7px;
+    font-size: 0.76rem;
+    color: var(--text-gray);
+}
+
+.watch-colors__head strong {
+    font-weight: 500;
+    color: var(--black-strong);
+}
+
+.watch-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.watch-swatch {
+    width: 34px;
+    height: 34px;
     padding: 0;
-    background: var(--dot, #ccc);
-    border: 1px solid rgba(17, 16, 14, 0.22);
+    background: var(--tono, #ccc);
+    border: 1px solid rgba(17, 16, 14, 0.2);
     border-radius: 50%;
     cursor: pointer;
     transition: transform 140ms ease, box-shadow 140ms ease;
 }
 
-.watch-dot:hover {
-    transform: scale(1.15);
+.watch-swatch:hover {
+    transform: scale(1.08);
 }
 
-.watch-dot.is-active {
-    box-shadow: 0 0 0 2px var(--bg-main), 0 0 0 3.5px var(--gold);
-}
-
-/* Fuera de una tarjeta (las dos mitades del bisel bicolor) los puntitos van
-   más grandes y alineados a la izquierda. */
-.watch-panels > .watch-dots {
-    justify-content: flex-start;
-    margin-bottom: 10px;
-}
-
-.watch-panels > .watch-dots .watch-dot {
-    width: 22px;
-    height: 22px;
+.watch-swatch.is-active {
+    box-shadow: 0 0 0 2px var(--bg-secondary), 0 0 0 3.5px var(--gold);
 }
 
 /* ---------- Alternadores ---------- */
@@ -522,6 +624,94 @@ body.relojes-page.is-shell-embed .watch-sheet__body {
     font-size: 0.74rem;
     line-height: 1.35;
     color: var(--text-gray);
+}
+
+/* ---------- Rueda del fechador ---------- */
+
+/* 24 posiciones. Una lista de 24 chips no entra en el panel y no dice nada;
+   sobre un círculo se ve de una dónde va a quedar la ventana. */
+.watch-clock {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.watch-clock.is-disabled {
+    opacity: 0.4;
+}
+
+.watch-clock__face {
+    position: relative;
+    flex: 0 0 auto;
+    width: 132px;
+    height: 132px;
+    border: 1px solid var(--gold-border);
+    border-radius: 50%;
+}
+
+.watch-clock__dot {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* El punto visible es más chico que el área que se puede tocar. */
+.watch-clock__dot::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    margin: -2.5px 0 0 -2.5px;
+    background: var(--text-gray);
+    border-radius: 50%;
+    transition: transform 140ms ease, background-color 140ms ease;
+}
+
+/* Las posiciones que caen sobre un índice se marcan un poco más. */
+.watch-clock__dot.is-hora::after {
+    width: 7px;
+    height: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    background: var(--black-soft);
+}
+
+.watch-clock__dot:hover::after {
+    transform: scale(1.4);
+    background: var(--gold-deep);
+}
+
+.watch-clock__dot.is-active::after {
+    width: 13px;
+    height: 13px;
+    margin: -6.5px 0 0 -6.5px;
+    background: var(--black-strong);
+    box-shadow: 0 0 0 2px var(--gold);
+}
+
+.watch-clock__dot:disabled {
+    cursor: not-allowed;
+}
+
+.watch-clock__side {
+    min-width: 0;
+}
+
+.watch-clock__value {
+    margin: 0 0 8px;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--black-strong);
 }
 
 /* ---------- Foto del dial ---------- */

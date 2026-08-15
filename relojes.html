@@ -31,7 +31,15 @@
                 <span class="watch-stage__frame" id="watch-frame" role="img" aria-label="Reloj en construcción"></span>
                 <span class="watch-stage__mark" aria-hidden="true"></span>
             </button>
-            <p class="watch-stage__swipe" id="watch-swipe" aria-live="polite"></p>
+            <!-- Carrusel del arrastre: la tira de piezas sigue al dedo y la
+                 del centro es la que queda elegida. -->
+            <div class="watch-carousel" aria-hidden="true">
+                <div class="watch-carousel__rail" id="watch-carousel-rail"></div>
+            </div>
+            <p class="watch-carousel__label" id="watch-carousel-label" aria-live="polite"></p>
+            <p class="watch-swipe-hint" id="watch-swipe-hint">
+                <span aria-hidden="true">‹</span> Deslizá sobre el reloj para cambiar la pieza <span aria-hidden="true">›</span>
+            </p>
             <p class="watch-stage__status" id="watch-status">Cargando piezas…</p>
         </section>
 

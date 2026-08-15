@@ -24,7 +24,8 @@
             stage: document.getElementById('watch-stage'),
             frame: document.getElementById('watch-frame'),
             status: document.getElementById('watch-status'),
-            swipe: document.getElementById('watch-swipe'),
+            carruselRail: document.getElementById('watch-carousel-rail'),
+            carruselLabel: document.getElementById('watch-carousel-label'),
             sheet: document.getElementById('watch-sheet'),
             handle: document.getElementById('watch-sheet-handle'),
             hint: document.getElementById('watch-sheet-hint'),
@@ -87,38 +88,64 @@
             }, conf);
         }
 
-        function panelesDeBisel() {
-            const izquierda = modelo.get(seleccion.bisel);
-            const grupo = modelo.grupoDe('bisel', izquierda);
-            const colores = modelo.coloresDe(grupo);
-            const paneles = [];
+        /**
+         * Grid de modelos + su barra de colores. Van juntos siempre: elegir
+         * diseno y elegir color son dos decisiones distintas sobre lo mismo.
+         */
+        function bloqueDeModelos(campo, opciones) {
+            const conf = opciones || {};
+            const activa = modelo.get(seleccion[campo]);
+            const grupo = modelo.grupoDe(conf.paso || campo, activa);
+            return [
+                panelDeModelos(campo, conf),
+                { html: vista.coloresHtml(modelo.coloresDe(grupo), seleccion[campo], campo) }
+            ];
+        }
 
-            // El bisel bicolor no recolorea nada: dibuja la mitad izquierda de
-            // una variante y la derecha de otra. Como las variantes del mismo
-            // modelo comparten geometria, la costura cae justa en la vertical.
-            if (colores.length > 1) {
+        function panelesDeBisel() {
+            const arriba = modelo.get(seleccion.bisel);
+            const grupo = modelo.grupoDe('bisel', arriba);
+            const colores = modelo.coloresDe(grupo);
+            const esGmt = modelo.admiteBicolor(arriba);
+            const paneles = [panelDeModelos('bisel')];
+
+            // El bicolor solo aplica a los biseles GMT: son los unicos con una
+            // escala de 24 horas, donde la mitad de arriba es la noche y la de
+            // abajo el dia. En un bisel de buceo o taquimetro partir el color no
+            // significa nada.
+            if (esGmt && colores.length > 1) {
                 paneles.push({
                     html: vista.alternadorHtml('bisel-bicolor', [
                         { valor: 'no', label: 'Un color' },
-                        { valor: 'si', label: 'Bicolor' }
+                        { valor: 'si', label: 'Bicolor GMT' }
                     ], biselBicolor ? 'si' : 'no')
                 });
             }
 
-            paneles.push(panelDeModelos('bisel', { titulo: biselBicolor ? 'Diseño' : null }));
-
-            if (biselBicolor && colores.length > 1) {
-                paneles.push({
-                    titulo: 'Mitad izquierda',
-                    html: vista.coloresHtml(colores, seleccion.bisel, 'bisel')
-                });
-                paneles.push({
-                    titulo: 'Mitad derecha',
-                    html: vista.coloresHtml(colores, seleccion.biselDerecho, 'biselDerecho')
-                });
+            if (biselBicolor && esGmt && colores.length > 1) {
+                paneles.push({ html: vista.coloresHtml(colores, seleccion.bisel, 'bisel', 'Mitad superior (noche)') });
+                paneles.push({ html: vista.coloresHtml(colores, seleccion.biselAbajo, 'biselAbajo', 'Mitad inferior (día)') });
+            } else {
+                paneles.push({ html: vista.coloresHtml(colores, seleccion.bisel, 'bisel') });
             }
 
             return paneles;
+        }
+
+        /**
+         * Al encender el bicolor la mitad de abajo arranca en otro color: si
+         * arrancara en el mismo, activar la opcion no cambiaria nada en pantalla
+         * y no se entenderia que quedo encendida.
+         */
+        function mitadInferiorPorDefecto() {
+            if (seleccion.biselAbajo && seleccion.biselAbajo !== seleccion.bisel) {
+                return seleccion.biselAbajo;
+            }
+            const colores = modelo.coloresDe(modelo.grupoDe('bisel', modelo.get(seleccion.bisel)));
+            const otra = colores.find(function (pieza) {
+                return pieza.id !== seleccion.bisel;
+            });
+            return otra ? otra.id : seleccion.bisel;
         }
 
         function panelesDeIndices() {
@@ -130,8 +157,7 @@
             }];
 
             if (modoIndices === 'juego') {
-                paneles.push(panelDeModelos('indiceJuego', { paso: 'indice' }));
-                return paneles;
+                return paneles.concat(bloqueDeModelos('indiceJuego', { paso: 'indice' }));
             }
 
             const hora = posicionActiva + 1;
@@ -154,23 +180,29 @@
             return `${nombre}${doble} · ${color}`;
         }
 
-        function panelesDeDetalles() {
-            const disponibles = modelo.fechadoresDe(seleccion.dial);
-            const chips = ['no', '3', '430', '6'].map(function (valor) {
-                const habilitado = disponibles.indexOf(valor) >= 0;
-                const clases = ['watch-toggle'];
-                if (valor === seleccion.fechador) {
-                    clases.push('is-active');
-                }
-                if (!habilitado) {
-                    clases.push('is-disabled');
-                }
-                const attr = habilitado ? '' : ' disabled';
-                return `<button type="button" class="${clases.join(' ')}" data-alternador="fechador" data-valor="${valor}"${attr}>${vista.escapar(catalogo.FECHADORES[valor])}</button>`;
-            }).join('');
+        /** Las 24 posiciones del fechador, ya ubicadas sobre la rueda. */
+        function posicionesDeFecha() {
+            const posiciones = [];
+            for (let p = 0; p < modelo.POSICIONES_FECHA; p += 1) {
+                const angulo = (modelo.anguloDeFecha(p) * Math.PI) / 180;
+                // Dos posiciones por hora: las pares caen sobre el indice y las
+                // impares en la media hora, entre dos indices.
+                const hora = Math.floor(p / 2) || 12;
+                posiciones.push({
+                    valor: p,
+                    label: `${hora}${p % 2 ? ':30' : ''}`,
+                    sobreIndice: p % 2 === 0,
+                    x: +(50 + 40 * Math.sin(angulo)).toFixed(2),
+                    y: +(50 - 40 * Math.cos(angulo)).toFixed(2)
+                });
+            }
+            return posiciones;
+        }
 
-            const nota = disponibles.length > 1
-                ? 'La ventana viene grabada en la esfera, así que depende del dial elegido.'
+        function panelesDeDetalles() {
+            const habilitado = modelo.admiteFechador(seleccion.dial);
+            const nota = habilitado
+                ? 'La ventana se puede poner en cualquiera de las 24 posiciones, sobre un índice o entre dos.'
                 : 'Este dial no tiene versión con fechador. Probá con otro color o textura.';
 
             const foto = seleccion.foto
@@ -179,7 +211,11 @@
                 : '<p class="watch-panel-note">La foto se guarda solo en este dispositivo: el sitio es estático y no sube nada a ningún servidor.</p>';
 
             return [
-                { titulo: 'Fechador', nota: nota, html: `<div class="watch-toggles" role="group">${chips}</div>` },
+                {
+                    titulo: 'Fechador',
+                    nota: nota,
+                    html: vista.fechadorHtml(posicionesDeFecha(), seleccion.fechador, habilitado)
+                },
                 {
                     titulo: 'Foto en la esfera',
                     html: `<button type="button" class="watch-btn watch-btn--solid" id="watch-foto-elegir">${seleccion.foto ? 'Cambiar foto' : 'Subir una foto'}</button>${foto}`
@@ -196,13 +232,11 @@
                 case 'detalles':
                     return panelesDeDetalles();
                 case 'aguja':
-                    return [
-                        panelDeModelos('hora', { titulo: 'Horas' }),
-                        panelDeModelos('minuto', { titulo: 'Minutos' }),
-                        panelDeModelos('segundero', { titulo: 'Segundero' })
-                    ];
+                    return bloqueDeModelos('hora', { titulo: 'Horas' })
+                        .concat(bloqueDeModelos('minuto', { titulo: 'Minutos' }))
+                        .concat(bloqueDeModelos('segundero', { titulo: 'Segundero' }));
                 default:
-                    return [panelDeModelos(pasoId)];
+                    return bloqueDeModelos(pasoId);
             }
         }
 
@@ -303,26 +337,31 @@
             } else if (campo === 'indicePos') {
                 seleccion.indices = Object.assign({}, seleccion.indices);
                 seleccion.indices[posicionActiva] = pieza.id;
-            } else if (campo === 'biselDerecho') {
-                seleccion.biselDerecho = pieza.id;
+            } else if (campo === 'biselAbajo') {
+                seleccion.biselAbajo = pieza.id;
             } else {
                 seleccion[campo] = conservandoColor(campo, pieza).id;
             }
 
-            if (campo === 'bisel' && biselBicolor) {
-                // El bicolor solo cierra entre variantes del mismo modelo.
-                const derecha = modelo.get(seleccion.biselDerecho);
-                if (!derecha || derecha.modelo !== modelo.get(seleccion.bisel).modelo) {
-                    seleccion.biselDerecho = seleccion.bisel;
+            if (campo === 'bisel') {
+                const elegido = modelo.get(seleccion.bisel);
+                // El bicolor solo cierra entre variantes del mismo modelo, y
+                // solo los GMT lo admiten: cambiar a un bisel de buceo lo apaga.
+                if (!modelo.admiteBicolor(elegido)) {
+                    biselBicolor = false;
+                    seleccion.biselAbajo = null;
+                } else if (biselBicolor) {
+                    const abajo = modelo.get(seleccion.biselAbajo);
+                    if (!abajo || abajo.modelo !== elegido.modelo) {
+                        seleccion.biselAbajo = seleccion.bisel;
+                    }
                 }
             }
 
-            if (campo === 'dial') {
-                // El fechador vive en el asset del dial: si el nuevo no tiene la
-                // ventana en esa posicion, se vuelve a "sin fechador".
-                if (modelo.fechadoresDe(seleccion.dial).indexOf(seleccion.fechador) < 0) {
-                    seleccion.fechador = 'no';
-                }
+            if (campo === 'dial' && !modelo.admiteFechador(seleccion.dial)) {
+                // El fechador vive en el asset del dial: si el nuevo no tiene
+                // ninguna variante con ventana, se vuelve a "sin fechador".
+                seleccion.fechador = 'no';
             }
 
             marcarVisitado(pasos[pasoActivo].id);
@@ -348,6 +387,11 @@
         function recorridoDelPaso() {
             const paso = pasos[pasoActivo];
             if (paso.id === 'detalles') {
+                return null;
+            }
+            if (paso.id === 'indice' && modoIndices === 'individual') {
+                // Arrastrar aplicaria un juego entero y borraria lo editado
+                // posicion por posicion, que es justo lo que se vino a hacer.
                 return null;
             }
             if (paso.id === 'indice') {
@@ -385,69 +429,77 @@
             return encontrado < 0 ? 0 : encontrado;
         }
 
-        function avanzarModelo(direccion) {
-            const recorrido = recorridoDelPaso();
-            if (!recorrido || !recorrido.ids.length) {
-                return;
-            }
-            const total = recorrido.ids.length;
-            const proximo = (indiceActualEnRecorrido(recorrido) + direccion + total) % total;
-            elegir(recorrido.campo, recorrido.ids[proximo]);
-            mostrarRotulo(recorrido, proximo + 1, total);
-        }
-
-        function mostrarRotulo(recorrido, numero, total) {
-            const paso = pasos[pasoActivo];
-            el.swipe.textContent = `${paso.label} · ${numero}/${total}`;
-            el.swipe.classList.add('is-visible');
-            clearTimeout(mostrarRotulo.temporizador);
-            mostrarRotulo.temporizador = setTimeout(function () {
-                el.swipe.classList.remove('is-visible');
-            }, 1100);
-        }
-
+        /**
+         * Arrastre sobre el reloj con carrusel, al estilo del selector de modo
+         * de la camara de iOS: la tira de piezas sigue al dedo y la del centro
+         * es la que se aplica. El indice fraccionario manda tanto la animacion
+         * como la seleccion, asi lo que se ve y lo que se elige no se separan.
+         */
         function initArrastreStage() {
-            let inicio = null;
+            let arrastre = null;
             // El <button> del zoom dispara su click al soltar el arrastre; sin
             // esta bandera, deslizar sobre el reloj tambien lo ampliaria.
             let ignorarClick = false;
 
             el.stage.addEventListener('pointerdown', function (event) {
-                inicio = { x: event.clientX, y: event.clientY, consumido: 0, movido: false };
+                const recorrido = recorridoDelPaso();
+                if (!recorrido || recorrido.ids.length < 2) {
+                    arrastre = { x: event.clientX, y: event.clientY, movido: false };
+                    return;
+                }
+                arrastre = {
+                    x: event.clientX,
+                    y: event.clientY,
+                    movido: false,
+                    recorrido: recorrido,
+                    base: indiceActualEnRecorrido(recorrido),
+                    aplicado: indiceActualEnRecorrido(recorrido),
+                    fichas: vista.montarCarrusel(el.carruselRail, recorrido.ids.map(modelo.get))
+                };
                 el.stage.setPointerCapture?.(event.pointerId);
             });
 
             el.stage.addEventListener('pointermove', function (event) {
-                if (!inicio) {
+                if (!arrastre) {
                     return;
                 }
-                const dx = event.clientX - inicio.x;
-                const dy = event.clientY - inicio.y;
-                if (Math.abs(dx) < 4 || Math.abs(dx) < Math.abs(dy)) {
+                const dx = event.clientX - arrastre.x;
+                const dy = event.clientY - arrastre.y;
+                if (!arrastre.movido && (Math.abs(dx) < 4 || Math.abs(dx) < Math.abs(dy))) {
                     return;
                 }
-                inicio.movido = true;
+                if (!arrastre.recorrido) {
+                    arrastre.movido = true;
+                    return;
+                }
+                if (!arrastre.movido) {
+                    arrastre.movido = true;
+                    abrirCarrusel();
+                }
 
-                // Un tramo de PASO_ARRASTRE px equivale a una pieza. Se compara
-                // contra lo ya consumido para que un arrastre largo avance de a
-                // una y no salte varias de golpe.
-                const pasosDados = Math.trunc(dx / PASO_ARRASTRE);
-                if (pasosDados !== inicio.consumido) {
-                    const direccion = pasosDados > inicio.consumido ? 1 : -1;
-                    avanzarModelo(direccion);
-                    inicio.consumido += direccion;
+                const total = arrastre.recorrido.ids.length;
+                const posicion = Math.max(0, Math.min(total - 1, arrastre.base + dx / vista.FICHA));
+                vista.moverCarrusel(arrastre.fichas, posicion);
+
+                const destino = Math.round(posicion);
+                if (destino !== arrastre.aplicado) {
+                    arrastre.aplicado = destino;
+                    elegir(arrastre.recorrido.campo, arrastre.recorrido.ids[destino]);
+                    etiquetarCarrusel(destino, total);
                 }
             });
 
             function soltar(event) {
-                if (!inicio) {
+                if (!arrastre) {
                     return;
                 }
-                const movido = inicio.movido;
-                inicio = null;
+                const movido = arrastre.movido && !!arrastre.recorrido;
+                arrastre = null;
                 el.stage.releasePointerCapture?.(event.pointerId);
                 ignorarClick = movido;
-                if (!movido) {
+                if (movido) {
+                    cerrarCarrusel();
+                } else {
                     apuntarIndice(event.clientX, event.clientY);
                 }
             }
@@ -466,6 +518,27 @@
                 }
                 ampliarReloj();
             });
+        }
+
+        function abrirCarrusel() {
+            clearTimeout(abrirCarrusel.temporizador);
+            builder.classList.add('is-carruseleando');
+            etiquetarCarrusel(null, null);
+        }
+
+        function etiquetarCarrusel(indice, total) {
+            const paso = pasos[pasoActivo];
+            const pieza = modelo.get(seleccion[campoDe(paso.id)]);
+            const nombre = pieza ? catalogo.nombrarModelo(modelo.grupoDe(campoDe(paso.id), pieza)) : '';
+            const cuenta = indice === null ? '' : ` · ${indice + 1}/${total}`;
+            el.carruselLabel.textContent = `${nombre}${cuenta}`;
+        }
+
+        function cerrarCarrusel() {
+            // Se queda un momento a la vista para que se lea que quedo elegido.
+            abrirCarrusel.temporizador = setTimeout(function () {
+                builder.classList.remove('is-carruseleando');
+            }, 620);
         }
 
         // Un toque sobre un indice en modo "uno por uno" lo selecciona en vez de
@@ -680,13 +753,13 @@
                 { label: 'Bisel', valor: nombreDe('bisel') }
             ];
 
-            const derecha = modelo.get(seleccion.biselDerecho);
-            if (biselBicolor && derecha && derecha.id !== seleccion.bisel) {
-                filas[1].valor = `${filas[1].valor} / ${derecha.color.nombre} (bicolor)`;
+            const abajo = modelo.get(seleccion.biselAbajo);
+            if (biselBicolor && abajo && abajo.id !== seleccion.bisel) {
+                filas[1].valor = `${filas[1].valor} arriba / ${abajo.color.nombre} abajo (bicolor GMT)`;
             }
 
             filas.push({ label: 'Dial', valor: nombreDe('dial') });
-            filas.push({ label: 'Fechador', valor: catalogo.FECHADORES[seleccion.fechador] || 'Sin fechador' });
+            filas.push({ label: 'Fechador', valor: etiquetaDeFechador() });
             filas.push({ label: 'Índices', valor: descripcionDeIndices() });
             filas.push({ label: 'Horas', valor: nombreDe('hora') });
             filas.push({ label: 'Minutos', valor: nombreDe('minuto') });
@@ -698,6 +771,16 @@
             }
 
             return filas;
+        }
+
+        function etiquetaDeFechador() {
+            if (seleccion.fechador === 'no') {
+                return 'Sin fechador';
+            }
+            const posicion = posicionesDeFecha().find(function (opcion) {
+                return opcion.valor === Number(seleccion.fechador);
+            });
+            return posicion ? `A las ${posicion.label}` : 'Sin fechador';
         }
 
         /** Si las doce posiciones comparten juego se nombra el juego; si no, "combinados". */
@@ -824,6 +907,14 @@
                 return;
             }
 
+            const fecha = event.target.closest('[data-fecha]');
+            if (fecha) {
+                seleccion.fechador = fecha.dataset.fecha === 'no' ? 'no' : Number(fecha.dataset.fecha);
+                pintarReloj();
+                pintarPaso();
+                return;
+            }
+
             if (event.target.closest('#watch-aplicar-todos')) {
                 const pieza = modelo.get((seleccion.indices || {})[posicionActiva]);
                 if (pieza) {
@@ -857,9 +948,7 @@
                 modoIndices = valor;
             } else if (nombre === 'bisel-bicolor') {
                 biselBicolor = valor === 'si';
-                seleccion.biselDerecho = biselBicolor ? (seleccion.biselDerecho || seleccion.bisel) : null;
-            } else if (nombre === 'fechador') {
-                seleccion.fechador = valor;
+                seleccion.biselAbajo = biselBicolor ? mitadInferiorPorDefecto() : null;
             }
             pintarReloj();
             pintarPaso();

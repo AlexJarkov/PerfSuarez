@@ -41,9 +41,18 @@
 
     // Hora de escaparate: 10:10:30, la que usan las fotos de catalogo.
     const ANGULOS = { hora: 305, minuto: 60, segundero: 180 };
-    // Con el fechador a las 6 el segundero cae justo encima de la ventana y la
-    // tapa entera: se corre al 35 para que se vea lo que se acaba de elegir.
-    const SEGUNDERO_CON_FECHA_6 = 210;
+
+    // Solo los biseles GMT se parten en dos colores, y la particion es
+    // HORIZONTAL: en la escala de 24 horas el 6 cae a las 3 en punto y el 18 a
+    // las 9, asi que la linea dia/noche es el diametro horizontal.
+    const MODELOS_GMT = ['bisel-01', 'bisel-02'];
+
+    // Posiciones del fechador: 24 alrededor de la esfera, una cada 15 grados,
+    // sobre los indices (pares) y entre ellos (impares). Los assets solo traen
+    // la ventana a los 90, 135 y 180 grados, pero esta orientada radialmente y
+    // siempre al mismo radio, asi que para el resto se rota el dial entero.
+    const POSICIONES_FECHA = 24;
+    const GRADOS_POR_POSICION = 360 / POSICIONES_FECHA;
 
     // De atras hacia adelante: correa, caja, dial, foto, indices, logo, bisel, agujas.
 
@@ -187,26 +196,57 @@
 
     // ---------- Fechador ----------
 
-    /** Posiciones de fechador disponibles para un dial base. */
-    function fechadoresDe(dialId) {
-        const disponibles = ['no'];
+    // Angulo al que cada asset trae dibujada la ventana.
+    const ANGULO_DE_ASSET = { '3': 90, '430': 135, '6': 180 };
+
+    /** Variantes con fechador de un dial base, indexadas por su angulo. */
+    function variantesConFecha(dialId) {
+        const variantes = {};
         porCategoria('dial').forEach(function (pieza) {
-            if (pieza.gemelo === Number(dialId) && disponibles.indexOf(pieza.fecha) < 0) {
-                disponibles.push(pieza.fecha);
+            if (pieza.gemelo === Number(dialId) && ANGULO_DE_ASSET[pieza.fecha] !== undefined) {
+                variantes[ANGULO_DE_ASSET[pieza.fecha]] = pieza;
             }
         });
-        return disponibles;
+        return variantes;
     }
 
-    /** El dial que se dibuja: el base, o su variante con ventana de fecha. */
+    /** Si el dial elegido admite fechador (o sea, si tiene alguna variante). */
+    function admiteFechador(dialId) {
+        return Object.keys(variantesConFecha(dialId)).length > 0;
+    }
+
+    function anguloDeFecha(posicion) {
+        return ((Number(posicion) % POSICIONES_FECHA) + POSICIONES_FECHA) % POSICIONES_FECHA * GRADOS_POR_POSICION;
+    }
+
+    /**
+     * El dial que se dibuja y cuanto hay que girarlo.
+     *
+     * Si existe un asset con la ventana justo en esa posicion se usa tal cual;
+     * si no, se toma el que esta mas cerca y se rota la diferencia. Rotar el
+     * dial es seguro: las texturas son radiales u organicas, y la ventana viene
+     * orientada hacia el centro, asi que sigue leyendose bien en cualquier hora.
+     */
     function dialEfectivo(seleccion) {
         const base = get(seleccion.dial);
-        if (!base || !seleccion.fechador || seleccion.fechador === 'no') {
-            return base;
+        if (!base || seleccion.fechador === 'no' || seleccion.fechador === undefined || seleccion.fechador === null) {
+            return { pieza: base, rot: 0 };
         }
-        return porCategoria('dial').find(function (pieza) {
-            return pieza.gemelo === base.id && pieza.fecha === seleccion.fechador;
-        }) || base;
+
+        const variantes = variantesConFecha(base.id);
+        const angulos = Object.keys(variantes).map(Number);
+        if (!angulos.length) {
+            return { pieza: base, rot: 0 };
+        }
+
+        const objetivo = anguloDeFecha(seleccion.fechador);
+        const elegido = angulos.reduce(function (mejor, angulo) {
+            const propia = Math.abs(((objetivo - angulo + 540) % 360) - 180);
+            const previa = Math.abs(((objetivo - mejor + 540) % 360) - 180);
+            return propia < previa ? angulo : mejor;
+        }, angulos[0]);
+
+        return { pieza: variantes[elegido], rot: (objetivo - elegido + 360) % 360 };
     }
 
     // ---------- Indices ----------
@@ -324,7 +364,7 @@
         return {
             caja: (porCategoria('caja')[0] || {}).id,
             bisel: (porCategoria('bisel')[0] || {}).id,
-            biselDerecho: null,
+            biselAbajo: null,
             dial: (dialesBase()[0] || {}).id,
             fechador: 'no',
             foto: null,
@@ -343,10 +383,18 @@
 
     // ---------- Capas ----------
 
-    function capa(src, width, height, left, top, rot, originX, originY) {
+    /**
+     * `clave` identifica a la capa entre repintados. La vista reusa los nodos
+     * por clave y no por posicion: cuando una capa aparece o desaparece (el
+     * bisel bicolor pasa de una a dos, el fechador tapa un indice) el indice de
+     * todas las siguientes se corre y los nodos se reciclaban cruzados, con el
+     * parpadeo y los saltos que se veian.
+     */
+    function capa(src, width, height, left, top, rot, originX, originY, clave) {
         return {
             tipo: 'imagen',
             clip: null,
+            clave: clave || src,
             src: src,
             width: width,
             height: height,
@@ -417,7 +465,11 @@
             const alto = parte.h * escala;
             const left = CX - objetivo / 2;
             const top = arriba ? marco.top + solape - alto : marco.bottom - solape;
-            capas.push(capa(parte.src, objetivo, alto, left, top, arriba && unica ? 180 : 0));
+            capas.push(capa(
+                parte.src, objetivo, alto, left, top,
+                arriba && unica ? 180 : 0, undefined, undefined,
+                arriba ? 'correa-sup' : 'correa-inf'
+            ));
         }
 
         partes.forEach(function (parte) {
@@ -441,16 +493,21 @@
         return (posicion + 1) * 30;
     }
 
-    /** Posiciones que tapa la ventana del fechador y que por eso no llevan indice. */
+    /**
+     * Indice que tapa la ventana del fechador. Solo las posiciones pares caen
+     * sobre una hora; las impares quedan entre dos indices y no pisan ninguno.
+     */
     function posicionOcupadaPorFecha(fechador) {
-        if (fechador === '3') {
-            return 2;
+        if (fechador === 'no' || fechador === undefined || fechador === null) {
+            return -1;
         }
-        if (fechador === '6') {
-            return 5;
+        const posicion = Number(fechador);
+        if (posicion % 2 !== 0) {
+            return -1;
         }
-        // La ventana a las 4:30 cae entre dos indices y no pisa ninguno.
-        return -1;
+        // Las capas de indice van de la una a las doce: la posicion 0 (mediodia)
+        // es la ultima de la vuelta.
+        return (posicion / 2 + 11) % 12;
     }
 
     function capasDeIndices(seleccion, radioDial) {
@@ -477,7 +534,10 @@
             // Las barras apuntan al centro de la esfera, como en un reloj real;
             // los numerales se leen siempre derechos.
             const rot = glifo.variante ? grados : 0;
-            capas.push(capa(glifo.src, ancho, alto, x - ancho / 2, y - alto / 2, rot));
+            capas.push(capa(
+                glifo.src, ancho, alto, x - ancho / 2, y - alto / 2, rot,
+                undefined, undefined, `indice-${posicion}`
+            ));
         }
 
         return capas;
@@ -501,7 +561,8 @@
             CY - pieza.pivote.cy * escala,
             angulo,
             pieza.pivote.cx / pieza.w,
-            pieza.pivote.cy / pieza.h
+            pieza.pivote.cy / pieza.h,
+            tipo
         );
     }
 
@@ -515,7 +576,10 @@
     function capaDeLogo(seleccion, dial, radioDial) {
         const ancho = LOGO_ANCHO * radioDial;
         const alto = ancho * (320 / 742);
-        const capaLogo = capa(LOGO_SRC, ancho, alto, CX - ancho / 2, CY - LOGO_ALTURA * radioDial - alto / 2, 0);
+        const capaLogo = capa(
+            LOGO_SRC, ancho, alto, CX - ancho / 2, CY - LOGO_ALTURA * radioDial - alto / 2,
+            0, undefined, undefined, 'logo'
+        );
         capaLogo.tipo = 'tinte';
         capaLogo.tinta = tintaDelLogo(seleccion, dial);
         return capaLogo;
@@ -526,40 +590,60 @@
             return null;
         }
         const lado = radioDial * 2;
-        const capaFoto = capa(seleccion.foto, lado, lado, CX - radioDial, CY - radioDial, 0);
+        const capaFoto = capa(
+            seleccion.foto, lado, lado, CX - radioDial, CY - radioDial,
+            0, undefined, undefined, 'foto'
+        );
         capaFoto.clip = 'circulo';
         return capaFoto;
+    }
+
+    /** Solo los biseles GMT se parten en dos colores. */
+    function admiteBicolor(pieza) {
+        return !!pieza && MODELOS_GMT.indexOf(pieza.modelo) >= 0;
     }
 
     /**
      * El bisel bicolor se arma con dos variantes de color del mismo modelo,
      * cada una recortada a su mitad. No hace falta recolorear nada: las piezas
-     * comparten geometria exacta, asi que la costura cae justo en la vertical.
+     * comparten geometria exacta, asi que la costura cae justa.
+     *
+     * El corte es HORIZONTAL porque en la escala GMT de 24 horas el 6 queda a
+     * las 3 en punto y el 18 a las 9: la linea que separa dia de noche es el
+     * diametro horizontal, no el vertical.
+     *
+     * Las dos mitades se dibujan con la geometria de la pieza de arriba para
+     * que no puedan desalinearse ni por un pixel, y se pisan un pelo en la
+     * costura para que el antialias no deje una linea de fondo entremedio.
      */
     function capasDeBisel(seleccion, aro) {
-        const izquierda = get(seleccion.bisel);
-        if (!izquierda) {
+        const arriba = get(seleccion.bisel);
+        if (!arriba) {
             return [];
         }
 
-        function capaBisel(pieza, clip) {
+        function capaBisel(pieza, clip, clave) {
             const item = capa(
                 pieza.src,
-                izquierda.w * aro.escala,
-                izquierda.h * aro.escala,
-                CX - izquierda.apertura.cx * aro.escala,
-                CY - izquierda.apertura.cy * aro.escala,
+                arriba.w * aro.escala,
+                arriba.h * aro.escala,
+                CX - arriba.apertura.cx * aro.escala,
+                CY - arriba.apertura.cy * aro.escala,
                 0
             );
             item.clip = clip;
+            item.clave = clave;
             return item;
         }
 
-        const derecha = get(seleccion.biselDerecho);
-        if (!derecha || derecha.id === izquierda.id || derecha.modelo !== izquierda.modelo) {
-            return [capaBisel(izquierda, null)];
+        const abajo = get(seleccion.biselAbajo);
+        const parte = abajo && abajo.id !== arriba.id
+            && abajo.modelo === arriba.modelo && admiteBicolor(arriba);
+
+        if (!parte) {
+            return [capaBisel(arriba, null, 'bisel')];
         }
-        return [capaBisel(izquierda, 'izquierda'), capaBisel(derecha, 'derecha')];
+        return [capaBisel(arriba, 'arriba', 'bisel'), capaBisel(abajo, 'abajo', 'bisel-abajo')];
     }
 
     /** Todas las capas del reloj, en orden de dibujo. */
@@ -574,14 +658,17 @@
 
         const radioDial = aro.radioDial;
         const capas = capasDeCorrea(seleccion, marco);
-        capas.push(capa(caja.src, marco.ancho, marco.alto, marco.left, marco.top, 0));
+        capas.push(capa(caja.src, marco.ancho, marco.alto, marco.left, marco.top, 0, undefined, undefined, 'caja'));
 
-        const dial = dialEfectivo(seleccion);
+        const { pieza: dial, rot: rotDial } = dialEfectivo(seleccion);
         if (dial) {
             const escala = radioDial / dial.radio;
             const ancho = dial.w * escala;
             const alto = dial.h * escala;
-            capas.push(capa(dial.src, ancho, alto, CX - ancho / 2, CY - alto / 2, 0));
+            capas.push(capa(
+                dial.src, ancho, alto, CX - ancho / 2, CY - alto / 2,
+                rotDial, undefined, undefined, 'dial'
+            ));
         }
 
         const foto = capaDeFoto(seleccion, radioDial);
@@ -722,11 +809,14 @@
     }
 
     App.models.relojes = {
+        POSICIONES_FECHA,
+        admiteBicolor,
+        admiteFechador,
+        anguloDeFecha,
         capasDe,
         centrosDeIndices,
         coloresDe,
         dialEfectivo,
-        fechadoresDe,
         get,
         glifosParaPosicion,
         grupoDe,

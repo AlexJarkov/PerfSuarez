@@ -52,15 +52,8 @@
         'indice-barra-marco': 'Barras con marco'
     };
 
-    // Etiquetas de las posiciones de fechador. Los diales 289-306 ya traen la
-    // ventana dibujada, asi que elegir fechador es elegir otra variante del
-    // mismo dial: no todas estan disponibles para todos los colores.
-    const FECHADORES = {
-        no: 'Sin fechador',
-        '3': 'A las 3',
-        '430': 'A las 4:30',
-        '6': 'A las 6'
-    };
+    // El fechador se ubica en 24 posiciones alrededor de la esfera y sus
+    // etiquetas se arman solas ("3", "4:30"), asi que no hay tabla que mantener.
 
     // Broches y coronas quedaron fuera de la seleccion por decision interna
     // (Ago 2026). Los assets siguen generados en imagenes/relojes/ por si vuelven.
@@ -142,7 +135,6 @@
         MONEDA: 'US$',
         CAJAS_CON_BISEL_INTEGRADO,
         ACABADOS,
-        FECHADORES,
         MODELOS,
         PASOS,
         acabadoLabel,
