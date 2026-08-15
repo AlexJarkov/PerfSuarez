@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Suarez Watches</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/catalog-shared.css">
+    <link rel="stylesheet" href="css/pages/relojes.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="imagenes/Cowboy.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="imagenes/applogo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Perfumería Suárez">
+    <script src="/js/runtime-config.js"></script>
+    <script src="js/direct-access-guard.js"></script>
+    <meta property="og:title" content="Suarez Watches">
+    <meta property="og:description" content="Armá tu reloj Suarez Watches pieza por pieza.">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="relojes-page">
+    <main class="watch-builder" id="watch-builder">
+        <section class="watch-stage" aria-label="Vista previa del reloj">
+            <button class="watch-stage__zoom" id="watch-zoom" type="button" aria-label="Ampliar el reloj">
+                <span class="watch-stage__frame" id="watch-frame" role="img" aria-label="Reloj en construcción"></span>
+            </button>
+            <p class="watch-stage__status" id="watch-status">Cargando piezas…</p>
+        </section>
+
+        <section class="watch-sheet" id="watch-sheet" aria-label="Opciones del reloj">
+            <button class="watch-sheet__handle" id="watch-sheet-handle" type="button" aria-label="Contraer o expandir el panel de opciones">
+                <span class="watch-sheet__grip" aria-hidden="true"></span>
+                <span class="watch-sheet__hint" id="watch-sheet-hint">
+                    <span class="watch-sheet__chevron" aria-hidden="true"></span>
+                    <span id="watch-sheet-hint-text">Deslizá para ver el reloj más grande</span>
+                </span>
+            </button>
+
+            <nav class="watch-steps" id="watch-steps" aria-label="Pasos del armado"></nav>
+
+            <div class="watch-sheet__body" id="watch-sheet-body" data-shell-swipe-ignore>
+                <header class="watch-step-heading">
+                    <h1 id="watch-step-title">Armá tu reloj</h1>
+                    <p id="watch-step-copy">Elegí cada pieza y mirá cómo se arma en tiempo real.</p>
+                </header>
+                <div class="watch-filters" id="watch-filters" role="group" aria-label="Filtros"></div>
+                <div class="watch-panels" id="watch-panels"></div>
+            </div>
+
+            <footer class="watch-sheet__foot">
+                <button class="watch-btn watch-btn--ghost" id="watch-prev" type="button">Atrás</button>
+                <button class="watch-btn watch-btn--solid" id="watch-next" type="button">Siguiente</button>
+            </footer>
+        </section>
+    </main>
+
+    <section class="watch-result" id="watch-result" aria-hidden="true" hidden>
+        <div class="watch-result__card">
+            <button class="watch-result__close" id="watch-result-close" type="button" aria-label="Volver a editar">×</button>
+            <p class="eyebrow">Tu Suarez Watch</p>
+            <h2>Así quedó tu reloj</h2>
+            <div class="watch-result__image">
+                <img id="watch-result-img" alt="Reloj configurado">
+            </div>
+            <dl class="watch-result__summary" id="watch-result-summary"></dl>
+            <p class="watch-result__price">US$ 500</p>
+            <div class="watch-result__actions">
+                <a class="watch-btn watch-btn--wa" id="watch-wa" href="javascript:void(0);" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+                <button class="watch-btn watch-btn--solid" id="watch-cart" type="button">Añadir al carrito</button>
+                <button class="watch-btn watch-btn--ghost" id="watch-download" type="button">Descargar imagen</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/core/app.js"></script>
+    <script src="js/views/common.view.js"></script>
+    <script src="js/viewmodels/common.viewmodel.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/data/relojes-catalog.js"></script>
+    <script src="js/models/relojes.model.js"></script>
+    <script src="js/views/relojes.view.js"></script>
+    <script src="js/viewmodels/relojes.viewmodel.js"></script>
+</body>
+
+</html>
