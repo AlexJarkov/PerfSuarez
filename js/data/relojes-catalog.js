@@ -15,65 +15,98 @@
         rojo: 'Rojo'
     };
 
-    const FAMILIAS_INDICE = {
-        arabigo: 'Números arábigos',
-        romano: 'Números romanos',
-        indico: 'Números índicos',
-        barra: 'Barras'
+    // Nombre visible de cada modelo. Los assets vienen numerados y sin nombre,
+    // asi que el nombre sale de la revision visual de las hojas de contacto que
+    // deja `scripts/medir-piezas-reloj.py`.
+    const MODELOS = {
+        'caja-01': 'Clásica',
+        'caja-02': 'Buceo',
+        'caja-03': 'GMT',
+        'caja-04': 'Estriada',
+        'caja-05': 'Lisa',
+
+        'bisel-01': 'GMT 24h',
+        'bisel-02': 'GMT 24h fina',
+        'bisel-03': 'Buceo 60 min',
+        'bisel-04': 'Taquímetro',
+        'bisel-05': 'Pulido',
+        'bisel-06': 'Moleteado',
+        'bisel-07': 'Estriado fino',
+        'bisel-08': 'Buceo marcado',
+
+        'dial-01': 'Sol radial',
+        'dial-02': 'Calado',
+        'dial-03': 'Nácar',
+        'dial-04': 'Waffle',
+
+        'correa-01': 'Cuero liso',
+        'correa-02': 'Cuero texturizado',
+        'brazalete-01': 'Brazalete eslabón ancho',
+        'brazalete-02': 'Brazalete tejido',
+        'brazalete-03': 'Brazalete plano',
+
+        'indice-arabigo': 'Números arábigos',
+        'indice-romano': 'Números romanos',
+        'indice-indico': 'Números índicos',
+        'indice-barra-solida': 'Barras',
+        'indice-barra-marco': 'Barras con marco'
     };
 
-    const FAMILIAS_CORREA = {
-        'cuero-liso': 'Cuero liso',
-        'cuero-textura': 'Cuero texturizado'
+    // Etiquetas de las posiciones de fechador. Los diales 289-306 ya traen la
+    // ventana dibujada, asi que elegir fechador es elegir otra variante del
+    // mismo dial: no todas estan disponibles para todos los colores.
+    const FECHADORES = {
+        no: 'Sin fechador',
+        '3': 'A las 3',
+        '430': 'A las 4:30',
+        '6': 'A las 6'
     };
 
     // Broches y coronas quedaron fuera de la seleccion por decision interna
     // (Ago 2026). Los assets siguen generados en imagenes/relojes/ por si vuelven.
 
-    // Orden de armado. `capa` es false cuando el paso no dibuja nada sobre el
-    // reloj (la corona ya viene dibujada de perfil en cada caja).
     const PASOS = [
         {
             id: 'caja',
             label: 'Caja',
             titulo: 'Elegí la caja',
-            descripcion: 'Define el tamaño, el perfil y el acabado del reloj.',
-            capa: true
+            descripcion: 'Define el tamaño, el perfil y el acabado del reloj.'
         },
         {
             id: 'bisel',
             label: 'Bisel',
             titulo: 'Elegí el bisel',
-            descripcion: 'El anillo que rodea la esfera. Se monta sobre la caja.',
-            capa: true
+            descripcion: 'El anillo que rodea la esfera. Se monta sobre la caja.'
         },
         {
             id: 'dial',
             label: 'Dial',
             titulo: 'Elegí el dial',
-            descripcion: 'La esfera del reloj: color, textura y acabado.',
-            capa: true
+            descripcion: 'La esfera del reloj: color, textura y acabado.'
         },
         {
             id: 'indice',
             label: 'Índices',
             titulo: 'Elegí los índices',
-            descripcion: 'Los doce marcadores de hora sobre la esfera.',
-            capa: true
+            descripcion: 'Los doce marcadores de hora sobre la esfera.'
         },
         {
             id: 'aguja',
             label: 'Agujas',
             titulo: 'Elegí las agujas',
-            descripcion: 'Un diseño para horas y minutos, otro para el segundero.',
-            capa: true
+            descripcion: 'Horas, minutos y segundero se eligen por separado.'
         },
         {
             id: 'correa',
             label: 'Correa',
             titulo: 'Elegí la correa',
-            descripcion: 'Cuero o brazalete metálico.',
-            capa: true
+            descripcion: 'Cuero o brazalete metálico.'
+        },
+        {
+            id: 'detalles',
+            label: 'Detalles',
+            titulo: 'Últimos detalles',
+            descripcion: 'Fechador y foto personalizada en la esfera.'
         }
     ];
 
@@ -86,27 +119,22 @@
         return ACABADOS[pieza.acabado] || titleCase(pieza.acabado);
     }
 
-    // Nombre visible de cada pieza. Los assets vienen numerados y sin nombre,
-    // asi que se arma con la familia, el acabado y un correlativo por grupo.
-    function nombrarPieza(pieza, ordinal) {
-        switch (pieza.categoria) {
-            case 'caja':
-                return `Caja ${acabadoLabel(pieza)} ${ordinal}`;
-            case 'bisel':
-                return `Bisel ${acabadoLabel(pieza)} ${ordinal}`;
-            case 'dial':
-                return `Dial ${ordinal}`;
-            case 'indice':
-                return `${FAMILIAS_INDICE[pieza.familia] || titleCase(pieza.familia)} · ${acabadoLabel(pieza)}`;
-            case 'aguja':
-                return `Aguja ${acabadoLabel(pieza)} ${ordinal}`;
-            case 'correa':
-                return `${FAMILIAS_CORREA[pieza.familia] || titleCase(pieza.familia)} ${ordinal}`;
-            case 'brazalete':
-                return `Brazalete ${acabadoLabel(pieza)} ${ordinal}`;
-            default:
-                return `Pieza ${pieza.id}`;
+    /** Nombre del diseno, sin el color. */
+    function nombrarModelo(grupo) {
+        if (!grupo) {
+            return '';
         }
+        return MODELOS[grupo.modelo] || titleCase(grupo.modelo);
+    }
+
+    /** Nombre completo de una pieza: diseno + color. */
+    function nombrarPieza(pieza) {
+        if (!pieza) {
+            return '';
+        }
+        const modelo = MODELOS[pieza.modelo] || titleCase(pieza.modelo);
+        const color = pieza.color ? pieza.color.nombre : acabadoLabel(pieza);
+        return `${modelo} · ${color}`;
     }
 
     App.data.relojes = {
@@ -114,10 +142,11 @@
         MONEDA: 'US$',
         CAJAS_CON_BISEL_INTEGRADO,
         ACABADOS,
-        FAMILIAS_INDICE,
-        FAMILIAS_CORREA,
+        FECHADORES,
+        MODELOS,
         PASOS,
         acabadoLabel,
+        nombrarModelo,
         nombrarPieza
     };
 })(window.PerfSuarez);

@@ -24,10 +24,14 @@
 
 <body class="relojes-page">
     <main class="watch-builder" id="watch-builder">
-        <section class="watch-stage" aria-label="Vista previa del reloj">
+        <!-- El shell escucha gestos en el documento del iframe: sin la marca,
+             deslizar sobre el reloj cambiaría de panel en vez de pieza. -->
+        <section class="watch-stage" id="watch-stage" aria-label="Vista previa del reloj" data-shell-swipe-ignore>
             <button class="watch-stage__zoom" id="watch-zoom" type="button" aria-label="Ampliar el reloj">
                 <span class="watch-stage__frame" id="watch-frame" role="img" aria-label="Reloj en construcción"></span>
+                <span class="watch-stage__mark" aria-hidden="true"></span>
             </button>
+            <p class="watch-stage__swipe" id="watch-swipe" aria-live="polite"></p>
             <p class="watch-stage__status" id="watch-status">Cargando piezas…</p>
         </section>
 
@@ -47,9 +51,10 @@
                     <h1 id="watch-step-title">Armá tu reloj</h1>
                     <p id="watch-step-copy">Elegí cada pieza y mirá cómo se arma en tiempo real.</p>
                 </header>
-                <div class="watch-filters" id="watch-filters" role="group" aria-label="Filtros"></div>
                 <div class="watch-panels" id="watch-panels"></div>
             </div>
+
+            <input class="watch-file" id="watch-foto" type="file" accept="image/*" hidden>
 
             <footer class="watch-sheet__foot">
                 <button class="watch-btn watch-btn--ghost" id="watch-prev" type="button">Atrás</button>
