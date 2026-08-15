@@ -16,7 +16,20 @@
         "r": 221.33
       },
       "radioAsiento": 292.21,
-      "bytes": 51712
+      "bytes": 51712,
+      "color": {
+        "rgb": [
+          207,
+          176,
+          130
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "caja-01",
+      "asas": {
+        "anchoSuperior": 0.596,
+        "anchoInferior": 0.6022
+      }
     },
     {
       "id": 2,
@@ -32,7 +45,20 @@
         "r": 216.7
       },
       "radioAsiento": 284.5,
-      "bytes": 42314
+      "bytes": 42314,
+      "color": {
+        "rgb": [
+          52,
+          52,
+          51
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "caja-01",
+      "asas": {
+        "anchoSuperior": 0.6013,
+        "anchoInferior": 0.606
+      }
     },
     {
       "id": 3,
@@ -48,7 +74,20 @@
         "r": 222.13
       },
       "radioAsiento": 292.94,
-      "bytes": 48134
+      "bytes": 48134,
+      "color": {
+        "rgb": [
+          189,
+          186,
+          183
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "caja-01",
+      "asas": {
+        "anchoSuperior": 0.6006,
+        "anchoInferior": 0.6083
+      }
     },
     {
       "id": 4,
@@ -64,7 +103,20 @@
         "r": 203.28
       },
       "radioAsiento": 310.72,
-      "bytes": 62452
+      "bytes": 62452,
+      "color": {
+        "rgb": [
+          127,
+          126,
+          125
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "caja-02",
+      "asas": {
+        "anchoSuperior": 0.5887,
+        "anchoInferior": 0.5988
+      }
     },
     {
       "id": 5,
@@ -80,7 +132,20 @@
         "r": 198.86
       },
       "radioAsiento": 301.65,
-      "bytes": 56926
+      "bytes": 56926,
+      "color": {
+        "rgb": [
+          51,
+          51,
+          50
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "caja-02",
+      "asas": {
+        "anchoSuperior": 0.5863,
+        "anchoInferior": 0.5997
+      }
     },
     {
       "id": 6,
@@ -96,7 +161,20 @@
         "r": 198.22
       },
       "radioAsiento": 299.13,
-      "bytes": 64862
+      "bytes": 64862,
+      "color": {
+        "rgb": [
+          144,
+          122,
+          91
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "caja-02",
+      "asas": {
+        "anchoSuperior": 0.5853,
+        "anchoInferior": 0.6018
+      }
     },
     {
       "id": 7,
@@ -112,7 +190,20 @@
         "r": 200.39
       },
       "radioAsiento": 309.16,
-      "bytes": 62492
+      "bytes": 62492,
+      "color": {
+        "rgb": [
+          113,
+          113,
+          111
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "caja-03",
+      "asas": {
+        "anchoSuperior": 0.5979,
+        "anchoInferior": 0.5994
+      }
     },
     {
       "id": 8,
@@ -128,7 +219,20 @@
         "r": 200.83
       },
       "radioAsiento": 309.07,
-      "bytes": 57426
+      "bytes": 57426,
+      "color": {
+        "rgb": [
+          36,
+          36,
+          36
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "caja-03",
+      "asas": {
+        "anchoSuperior": 0.5994,
+        "anchoInferior": 0.5994
+      }
     },
     {
       "id": 9,
@@ -144,7 +248,20 @@
         "r": 196.61
       },
       "radioAsiento": 302.72,
-      "bytes": 66672
+      "bytes": 66672,
+      "color": {
+        "rgb": [
+          141,
+          117,
+          77
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "caja-03",
+      "asas": {
+        "anchoSuperior": 0.5985,
+        "anchoInferior": 0.6
+      }
     },
     {
       "id": 10,
@@ -160,7 +277,20 @@
         "r": 209.76
       },
       "radioAsiento": 297.58,
-      "bytes": 61046
+      "bytes": 61046,
+      "color": {
+        "rgb": [
+          150,
+          149,
+          146
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "caja-04",
+      "asas": {
+        "anchoSuperior": 0.6163,
+        "anchoInferior": 0.6179
+      }
     },
     {
       "id": 11,
@@ -176,7 +306,20 @@
         "r": 206.0
       },
       "radioAsiento": 290.81,
-      "bytes": 50668
+      "bytes": 50668,
+      "color": {
+        "rgb": [
+          38,
+          38,
+          38
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "caja-04",
+      "asas": {
+        "anchoSuperior": 0.6201,
+        "anchoInferior": 0.617
+      }
     },
     {
       "id": 12,
@@ -192,7 +335,20 @@
         "r": 202.23
       },
       "radioAsiento": 287.9,
-      "bytes": 65426
+      "bytes": 65426,
+      "color": {
+        "rgb": [
+          178,
+          148,
+          101
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "caja-04",
+      "asas": {
+        "anchoSuperior": 0.6156,
+        "anchoInferior": 0.6188
+      }
     },
     {
       "id": 13,
@@ -208,7 +364,20 @@
         "r": 215.6
       },
       "radioAsiento": 281.78,
-      "bytes": 44798
+      "bytes": 44798,
+      "color": {
+        "rgb": [
+          168,
+          168,
+          165
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "caja-05",
+      "asas": {
+        "anchoSuperior": 0.5954,
+        "anchoInferior": 0.602
+      }
     },
     {
       "id": 14,
@@ -224,7 +393,20 @@
         "r": 215.65
       },
       "radioAsiento": 281.74,
-      "bytes": 41298
+      "bytes": 41298,
+      "color": {
+        "rgb": [
+          50,
+          50,
+          48
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "caja-05",
+      "asas": {
+        "anchoSuperior": 0.601,
+        "anchoInferior": 0.6076
+      }
     },
     {
       "id": 15,
@@ -240,7 +422,20 @@
         "r": 218.04
       },
       "radioAsiento": 285.78,
-      "bytes": 51000
+      "bytes": 51000,
+      "color": {
+        "rgb": [
+          195,
+          166,
+          120
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "caja-05",
+      "asas": {
+        "anchoSuperior": 0.5993,
+        "anchoInferior": 0.6075
+      }
     },
     {
       "id": 16,
@@ -255,7 +450,16 @@
         "cy": 305.42,
         "r": 216.48
       },
-      "bytes": 36548
+      "bytes": 36548,
+      "color": {
+        "rgb": [
+          193,
+          193,
+          193
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 17,
@@ -270,7 +474,16 @@
         "cy": 303.31,
         "r": 215.6
       },
-      "bytes": 39786
+      "bytes": 39786,
+      "color": {
+        "rgb": [
+          135,
+          133,
+          130
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 18,
@@ -285,7 +498,16 @@
         "cy": 295.75,
         "r": 211.51
       },
-      "bytes": 41716
+      "bytes": 41716,
+      "color": {
+        "rgb": [
+          191,
+          125,
+          122
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 19,
@@ -300,7 +522,16 @@
         "cy": 299.84,
         "r": 213.28
       },
-      "bytes": 40088
+      "bytes": 40088,
+      "color": {
+        "rgb": [
+          189,
+          171,
+          141
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 20,
@@ -315,7 +546,16 @@
         "cy": 301.05,
         "r": 211.28
       },
-      "bytes": 41922
+      "bytes": 41922,
+      "color": {
+        "rgb": [
+          126,
+          145,
+          182
+        ],
+        "nombre": "Azul"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 21,
@@ -330,7 +570,16 @@
         "cy": 302.48,
         "r": 212.05
       },
-      "bytes": 35966
+      "bytes": 35966,
+      "color": {
+        "rgb": [
+          165,
+          165,
+          164
+        ],
+        "nombre": "Plata 2"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 22,
@@ -345,7 +594,16 @@
         "cy": 305.39,
         "r": 215.07
       },
-      "bytes": 42212
+      "bytes": 42212,
+      "color": {
+        "rgb": [
+          211,
+          154,
+          121
+        ],
+        "nombre": "Oro 2"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 23,
@@ -360,7 +618,16 @@
         "cy": 299.97,
         "r": 210.7
       },
-      "bytes": 40618
+      "bytes": 40618,
+      "color": {
+        "rgb": [
+          159,
+          136,
+          178
+        ],
+        "nombre": "Violeta"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 24,
@@ -375,7 +642,16 @@
         "cy": 302.3,
         "r": 212.71
       },
-      "bytes": 40838
+      "bytes": 40838,
+      "color": {
+        "rgb": [
+          124,
+          159,
+          135
+        ],
+        "nombre": "Verde"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 25,
@@ -390,7 +666,16 @@
         "cy": 299.24,
         "r": 209.99
       },
-      "bytes": 38722
+      "bytes": 38722,
+      "color": {
+        "rgb": [
+          199,
+          147,
+          157
+        ],
+        "nombre": "Rojo 2"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 26,
@@ -405,7 +690,16 @@
         "cy": 298.39,
         "r": 210.04
       },
-      "bytes": 40692
+      "bytes": 40692,
+      "color": {
+        "rgb": [
+          123,
+          168,
+          198
+        ],
+        "nombre": "Celeste"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 27,
@@ -420,7 +714,16 @@
         "cy": 300.49,
         "r": 210.75
       },
-      "bytes": 40360
+      "bytes": 40360,
+      "color": {
+        "rgb": [
+          153,
+          137,
+          127
+        ],
+        "nombre": "Oro 3"
+      },
+      "modelo": "bisel-01"
     },
     {
       "id": 28,
@@ -435,7 +738,16 @@
         "cy": 307.2,
         "r": 217.82
       },
-      "bytes": 36320
+      "bytes": 36320,
+      "color": {
+        "rgb": [
+          197,
+          197,
+          196
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 29,
@@ -450,7 +762,16 @@
         "cy": 310.5,
         "r": 216.86
       },
-      "bytes": 38374
+      "bytes": 38374,
+      "color": {
+        "rgb": [
+          144,
+          143,
+          141
+        ],
+        "nombre": "Plata 2"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 30,
@@ -465,7 +786,16 @@
         "cy": 312.18,
         "r": 217.47
       },
-      "bytes": 41346
+      "bytes": 41346,
+      "color": {
+        "rgb": [
+          196,
+          138,
+          137
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 31,
@@ -480,7 +810,16 @@
         "cy": 313.74,
         "r": 220.08
       },
-      "bytes": 39930
+      "bytes": 39930,
+      "color": {
+        "rgb": [
+          194,
+          180,
+          155
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 32,
@@ -495,7 +834,16 @@
         "cy": 308.46,
         "r": 215.15
       },
-      "bytes": 41130
+      "bytes": 41130,
+      "color": {
+        "rgb": [
+          135,
+          154,
+          182
+        ],
+        "nombre": "Azul"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 33,
@@ -510,7 +858,16 @@
         "cy": 306.52,
         "r": 215.06
       },
-      "bytes": 34856
+      "bytes": 34856,
+      "color": {
+        "rgb": [
+          175,
+          175,
+          175
+        ],
+        "nombre": "Plata 3"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 34,
@@ -525,7 +882,16 @@
         "cy": 303.96,
         "r": 210.72
       },
-      "bytes": 39652
+      "bytes": 39652,
+      "color": {
+        "rgb": [
+          210,
+          158,
+          133
+        ],
+        "nombre": "Oro 2"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 35,
@@ -540,7 +906,16 @@
         "cy": 309.97,
         "r": 214.39
       },
-      "bytes": 39654
+      "bytes": 39654,
+      "color": {
+        "rgb": [
+          158,
+          141,
+          176
+        ],
+        "nombre": "Violeta pálido"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 36,
@@ -555,7 +930,16 @@
         "cy": 304.89,
         "r": 212.57
       },
-      "bytes": 39224
+      "bytes": 39224,
+      "color": {
+        "rgb": [
+          136,
+          167,
+          145
+        ],
+        "nombre": "Verde pálido"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 37,
@@ -570,7 +954,16 @@
         "cy": 301.25,
         "r": 209.32
       },
-      "bytes": 36600
+      "bytes": 36600,
+      "color": {
+        "rgb": [
+          198,
+          166,
+          172
+        ],
+        "nombre": "Rojo pálido"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 38,
@@ -585,7 +978,16 @@
         "cy": 295.47,
         "r": 204.94
       },
-      "bytes": 37026
+      "bytes": 37026,
+      "color": {
+        "rgb": [
+          156,
+          179,
+          197
+        ],
+        "nombre": "Azul pálido"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 39,
@@ -600,7 +1002,16 @@
         "cy": 311.32,
         "r": 216.04
       },
-      "bytes": 39358
+      "bytes": 39358,
+      "color": {
+        "rgb": [
+          156,
+          145,
+          139
+        ],
+        "nombre": "Plata 4"
+      },
+      "modelo": "bisel-02"
     },
     {
       "id": 40,
@@ -615,7 +1026,16 @@
         "cy": 296.02,
         "r": 220.73
       },
-      "bytes": 30132
+      "bytes": 30132,
+      "color": {
+        "rgb": [
+          213,
+          213,
+          213
+        ],
+        "nombre": "Blanco"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 41,
@@ -630,7 +1050,16 @@
         "cy": 298.92,
         "r": 219.61
       },
-      "bytes": 33486
+      "bytes": 33486,
+      "color": {
+        "rgb": [
+          54,
+          54,
+          54
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 42,
@@ -645,7 +1074,16 @@
         "cy": 299.57,
         "r": 220.9
       },
-      "bytes": 39514
+      "bytes": 39514,
+      "color": {
+        "rgb": [
+          186,
+          62,
+          48
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 43,
@@ -660,7 +1098,16 @@
         "cy": 296.3,
         "r": 220.23
       },
-      "bytes": 38992
+      "bytes": 38992,
+      "color": {
+        "rgb": [
+          198,
+          168,
+          100
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 44,
@@ -675,7 +1122,16 @@
         "cy": 300.34,
         "r": 221.16
       },
-      "bytes": 37444
+      "bytes": 37444,
+      "color": {
+        "rgb": [
+          49,
+          102,
+          65
+        ],
+        "nombre": "Verde"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 45,
@@ -690,7 +1146,16 @@
         "cy": 302.27,
         "r": 221.83
       },
-      "bytes": 34920
+      "bytes": 34920,
+      "color": {
+        "rgb": [
+          232,
+          149,
+          159
+        ],
+        "nombre": "Rojo 2"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 46,
@@ -705,7 +1170,16 @@
         "cy": 302.1,
         "r": 223.17
       },
-      "bytes": 36118
+      "bytes": 36118,
+      "color": {
+        "rgb": [
+          124,
+          177,
+          214
+        ],
+        "nombre": "Celeste"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 47,
@@ -720,7 +1194,16 @@
         "cy": 296.88,
         "r": 218.4
       },
-      "bytes": 37566
+      "bytes": 37566,
+      "color": {
+        "rgb": [
+          102,
+          72,
+          57
+        ],
+        "nombre": "Bronce"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 48,
@@ -735,7 +1218,16 @@
         "cy": 295.45,
         "r": 216.68
       },
-      "bytes": 37756
+      "bytes": 37756,
+      "color": {
+        "rgb": [
+          46,
+          75,
+          125
+        ],
+        "nombre": "Azul"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 49,
@@ -750,7 +1242,16 @@
         "cy": 295.29,
         "r": 217.3
       },
-      "bytes": 37344
+      "bytes": 37344,
+      "color": {
+        "rgb": [
+          91,
+          58,
+          117
+        ],
+        "nombre": "Violeta"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 50,
@@ -765,7 +1266,16 @@
         "cy": 291.42,
         "r": 215.02
       },
-      "bytes": 38332
+      "bytes": 38332,
+      "color": {
+        "rgb": [
+          231,
+          107,
+          44
+        ],
+        "nombre": "Naranja"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 51,
@@ -780,7 +1290,16 @@
         "cy": 295.22,
         "r": 216.14
       },
-      "bytes": 32058
+      "bytes": 32058,
+      "color": {
+        "rgb": [
+          115,
+          115,
+          115
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "bisel-03"
     },
     {
       "id": 52,
@@ -795,7 +1314,16 @@
         "cy": 288.46,
         "r": 213.2
       },
-      "bytes": 34768
+      "bytes": 34768,
+      "color": {
+        "rgb": [
+          208,
+          208,
+          208
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 53,
@@ -810,7 +1338,16 @@
         "cy": 288.05,
         "r": 211.81
       },
-      "bytes": 37706
+      "bytes": 37706,
+      "color": {
+        "rgb": [
+          57,
+          57,
+          56
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 54,
@@ -825,7 +1362,16 @@
         "cy": 288.91,
         "r": 211.47
       },
-      "bytes": 46234
+      "bytes": 46234,
+      "color": {
+        "rgb": [
+          201,
+          64,
+          57
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 55,
@@ -840,7 +1386,16 @@
         "cy": 290.65,
         "r": 213.15
       },
-      "bytes": 44668
+      "bytes": 44668,
+      "color": {
+        "rgb": [
+          201,
+          168,
+          108
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 56,
@@ -855,7 +1410,16 @@
         "cy": 292.57,
         "r": 214.57
       },
-      "bytes": 45244
+      "bytes": 45244,
+      "color": {
+        "rgb": [
+          46,
+          90,
+          152
+        ],
+        "nombre": "Azul"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 57,
@@ -870,7 +1434,16 @@
         "cy": 289.2,
         "r": 210.49
       },
-      "bytes": 35212
+      "bytes": 35212,
+      "color": {
+        "rgb": [
+          120,
+          120,
+          119
+        ],
+        "nombre": "Gunmetal 2"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 58,
@@ -885,7 +1458,16 @@
         "cy": 284.43,
         "r": 206.17
       },
-      "bytes": 43482
+      "bytes": 43482,
+      "color": {
+        "rgb": [
+          236,
+          115,
+          46
+        ],
+        "nombre": "Naranja"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 59,
@@ -900,7 +1482,16 @@
         "cy": 285.58,
         "r": 207.27
       },
-      "bytes": 40622
+      "bytes": 40622,
+      "color": {
+        "rgb": [
+          104,
+          81,
+          135
+        ],
+        "nombre": "Violeta"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 60,
@@ -915,7 +1506,16 @@
         "cy": 279.51,
         "r": 203.09
       },
-      "bytes": 40024
+      "bytes": 40024,
+      "color": {
+        "rgb": [
+          45,
+          111,
+          73
+        ],
+        "nombre": "Verde"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 61,
@@ -930,7 +1530,16 @@
         "cy": 278.38,
         "r": 201.58
       },
-      "bytes": 36868
+      "bytes": 36868,
+      "color": {
+        "rgb": [
+          229,
+          133,
+          148
+        ],
+        "nombre": "Rojo 2"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 62,
@@ -945,7 +1554,16 @@
         "cy": 276.65,
         "r": 200.26
       },
-      "bytes": 41642
+      "bytes": 41642,
+      "color": {
+        "rgb": [
+          80,
+          159,
+          210
+        ],
+        "nombre": "Celeste"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 63,
@@ -960,7 +1578,16 @@
         "cy": 282.38,
         "r": 204.58
       },
-      "bytes": 40422
+      "bytes": 40422,
+      "color": {
+        "rgb": [
+          113,
+          84,
+          66
+        ],
+        "nombre": "Bronce"
+      },
+      "modelo": "bisel-04"
     },
     {
       "id": 64,
@@ -975,7 +1602,16 @@
         "cy": 288.86,
         "r": 224.01
       },
-      "bytes": 31444
+      "bytes": 31444,
+      "color": {
+        "rgb": [
+          184,
+          184,
+          182
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "bisel-05"
     },
     {
       "id": 65,
@@ -990,7 +1626,16 @@
         "cy": 287.49,
         "r": 217.59
       },
-      "bytes": 29518
+      "bytes": 29518,
+      "color": {
+        "rgb": [
+          56,
+          56,
+          56
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "bisel-05"
     },
     {
       "id": 66,
@@ -1005,7 +1650,16 @@
         "cy": 286.37,
         "r": 219.41
       },
-      "bytes": 36500
+      "bytes": 36500,
+      "color": {
+        "rgb": [
+          193,
+          166,
+          122
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-05"
     },
     {
       "id": 67,
@@ -1020,7 +1674,16 @@
         "cy": 280.86,
         "r": 215.51
       },
-      "bytes": 37614
+      "bytes": 37614,
+      "color": {
+        "rgb": [
+          160,
+          160,
+          159
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "bisel-06"
     },
     {
       "id": 68,
@@ -1035,7 +1698,16 @@
         "cy": 282.98,
         "r": 215.6
       },
-      "bytes": 34388
+      "bytes": 34388,
+      "color": {
+        "rgb": [
+          46,
+          47,
+          46
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "bisel-06"
     },
     {
       "id": 69,
@@ -1050,7 +1722,16 @@
         "cy": 282.7,
         "r": 215.25
       },
-      "bytes": 42984
+      "bytes": 42984,
+      "color": {
+        "rgb": [
+          174,
+          148,
+          103
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-06"
     },
     {
       "id": 70,
@@ -1065,7 +1746,16 @@
         "cy": 283.21,
         "r": 217.93
       },
-      "bytes": 36082
+      "bytes": 36082,
+      "color": {
+        "rgb": [
+          168,
+          167,
+          164
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "bisel-07"
     },
     {
       "id": 71,
@@ -1080,7 +1770,16 @@
         "cy": 287.77,
         "r": 218.31
       },
-      "bytes": 34674
+      "bytes": 34674,
+      "color": {
+        "rgb": [
+          44,
+          44,
+          44
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "bisel-07"
     },
     {
       "id": 72,
@@ -1095,7 +1794,16 @@
         "cy": 288.92,
         "r": 220.01
       },
-      "bytes": 42498
+      "bytes": 42498,
+      "color": {
+        "rgb": [
+          182,
+          150,
+          99
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-07"
     },
     {
       "id": 73,
@@ -1110,7 +1818,16 @@
         "cy": 288.42,
         "r": 221.63
       },
-      "bytes": 31050
+      "bytes": 31050,
+      "color": {
+        "rgb": [
+          179,
+          177,
+          173
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "bisel-08"
     },
     {
       "id": 74,
@@ -1125,7 +1842,16 @@
         "cy": 293.31,
         "r": 219.01
       },
-      "bytes": 31010
+      "bytes": 31010,
+      "color": {
+        "rgb": [
+          49,
+          49,
+          49
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "bisel-08"
     },
     {
       "id": 75,
@@ -1140,7 +1866,16 @@
         "cy": 290.33,
         "r": 220.05
       },
-      "bytes": 35226
+      "bytes": 35226,
+      "color": {
+        "rgb": [
+          189,
+          155,
+          103
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "bisel-08"
     },
     {
       "id": 76,
@@ -1158,7 +1893,16 @@
           "w": 136,
           "h": 713
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          48,
+          48,
+          48
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 77,
@@ -1176,7 +1920,16 @@
           "w": 137,
           "h": 711
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          45,
+          55,
+          68
+        ],
+        "nombre": "Azul oscuro"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 78,
@@ -1194,7 +1947,16 @@
           "w": 137,
           "h": 710
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          45,
+          58,
+          75
+        ],
+        "nombre": "Azul oscuro 2"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 79,
@@ -1212,7 +1974,16 @@
           "w": 137,
           "h": 710
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          52,
+          65,
+          44
+        ],
+        "nombre": "Verde oscuro"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 80,
@@ -1230,7 +2001,16 @@
           "w": 139,
           "h": 714
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          94,
+          57,
+          42
+        ],
+        "nombre": "Naranja"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 81,
@@ -1248,7 +2028,16 @@
           "w": 139,
           "h": 713
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          180,
+          90,
+          36
+        ],
+        "nombre": "Marrón"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 82,
@@ -1266,7 +2055,16 @@
           "w": 139,
           "h": 713
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          177,
+          127,
+          70
+        ],
+        "nombre": "Naranja 2"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 83,
@@ -1284,7 +2082,16 @@
           "w": 137,
           "h": 713
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          110,
+          110,
+          110
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 84,
@@ -1302,7 +2109,16 @@
           "w": 138,
           "h": 714
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          231,
+          226,
+          216
+        ],
+        "nombre": "Crema"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 85,
@@ -1320,7 +2136,16 @@
           "w": 140,
           "h": 717
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          84,
+          37,
+          41
+        ],
+        "nombre": "Rojo oscuro"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 86,
@@ -1338,7 +2163,16 @@
           "w": 141,
           "h": 722
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          171,
+          31,
+          37
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 87,
@@ -1356,7 +2190,16 @@
           "w": 142,
           "h": 722
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          232,
+          90,
+          45
+        ],
+        "nombre": "Rojo 2"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 88,
@@ -1374,7 +2217,16 @@
           "w": 142,
           "h": 725
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          227,
+          156,
+          172
+        ],
+        "nombre": "Rosa"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 89,
@@ -1392,7 +2244,16 @@
           "w": 142,
           "h": 721
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          234,
+          233,
+          231
+        ],
+        "nombre": "Blanco"
+      },
+      "modelo": "correa-01"
     },
     {
       "id": 90,
@@ -1416,7 +2277,16 @@
           "w": 98,
           "h": 439
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          32,
+          56,
+          121
+        ],
+        "nombre": "Azul"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 91,
@@ -1440,7 +2310,16 @@
           "w": 102,
           "h": 448
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          46,
+          85,
+          54
+        ],
+        "nombre": "Verde oscuro"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 92,
@@ -1464,7 +2343,16 @@
           "w": 105,
           "h": 445
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          85,
+          89,
+          53
+        ],
+        "nombre": "Bronce"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 93,
@@ -1488,7 +2376,16 @@
           "w": 105,
           "h": 458
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          36,
+          49,
+          77
+        ],
+        "nombre": "Azul oscuro"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 94,
@@ -1512,7 +2409,16 @@
           "w": 100,
           "h": 442
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          66,
+          121,
+          169
+        ],
+        "nombre": "Azul 2"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 95,
@@ -1536,7 +2442,16 @@
           "w": 107,
           "h": 456
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          85,
+          89,
+          53
+        ],
+        "nombre": "Bronce 2"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 96,
@@ -1560,7 +2475,16 @@
           "w": 99,
           "h": 445
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          31,
+          137,
+          159
+        ],
+        "nombre": "Celeste"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 97,
@@ -1584,7 +2508,16 @@
           "w": 100,
           "h": 440
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          162,
+          189,
+          216
+        ],
+        "nombre": "Azul 3"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 98,
@@ -1608,7 +2541,16 @@
           "w": 106,
           "h": 443
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          106,
+          103,
+          99
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 99,
@@ -1632,7 +2574,16 @@
           "w": 109,
           "h": 453
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          66,
+          48,
+          42
+        ],
+        "nombre": "Rojo oscuro"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 100,
@@ -1656,7 +2607,16 @@
           "w": 104,
           "h": 455
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          132,
+          72,
+          42
+        ],
+        "nombre": "Naranja"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 101,
@@ -1680,7 +2640,16 @@
           "w": 98,
           "h": 448
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          176,
+          99,
+          37
+        ],
+        "nombre": "Marrón"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 102,
@@ -1704,7 +2673,16 @@
           "w": 100,
           "h": 449
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          217,
+          188,
+          150
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 103,
@@ -1728,7 +2706,16 @@
           "w": 97,
           "h": 449
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          237,
+          224,
+          200
+        ],
+        "nombre": "Crema"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 104,
@@ -1752,7 +2739,16 @@
           "w": 100,
           "h": 452
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          232,
+          170,
+          26
+        ],
+        "nombre": "Amarillo"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 105,
@@ -1776,7 +2772,16 @@
           "w": 103,
           "h": 445
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          231,
+          108,
+          28
+        ],
+        "nombre": "Naranja 2"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 106,
@@ -1800,7 +2805,16 @@
           "w": 106,
           "h": 446
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          117,
+          40,
+          41
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 107,
@@ -1824,7 +2838,16 @@
           "w": 104,
           "h": 441
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          187,
+          38,
+          34
+        ],
+        "nombre": "Rojo 2"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 108,
@@ -1848,7 +2871,16 @@
           "w": 103,
           "h": 446
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          234,
+          135,
+          153
+        ],
+        "nombre": "Rojo 3"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 109,
@@ -1872,7 +2904,16 @@
           "w": 103,
           "h": 446
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          241,
+          116,
+          97
+        ],
+        "nombre": "Rojo 4"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 110,
@@ -1896,7 +2937,16 @@
           "w": 103,
           "h": 447
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          127,
+          40,
+          44
+        ],
+        "nombre": "Rojo 5"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 111,
@@ -1920,7 +2970,16 @@
           "w": 100,
           "h": 450
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          209,
+          148,
+          80
+        ],
+        "nombre": "Naranja 3"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 112,
@@ -1944,7 +3003,16 @@
           "w": 105,
           "h": 453
         }
-      ]
+      ],
+      "color": {
+        "rgb": [
+          196,
+          196,
+          196
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "correa-02"
     },
     {
       "id": 113,
@@ -1954,7 +3022,16 @@
       "w": 115,
       "h": 391,
       "acabado": "plata",
-      "bytes": 10092
+      "bytes": 10092,
+      "color": {
+        "rgb": [
+          191,
+          188,
+          182
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "brazalete-01"
     },
     {
       "id": 114,
@@ -1964,7 +3041,16 @@
       "w": 116,
       "h": 391,
       "acabado": "gunmetal",
-      "bytes": 9034
+      "bytes": 9034,
+      "color": {
+        "rgb": [
+          73,
+          72,
+          70
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "brazalete-01"
     },
     {
       "id": 115,
@@ -1974,7 +3060,16 @@
       "w": 116,
       "h": 392,
       "acabado": "oro",
-      "bytes": 10924
+      "bytes": 10924,
+      "color": {
+        "rgb": [
+          209,
+          181,
+          134
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "brazalete-01"
     },
     {
       "id": 116,
@@ -1984,7 +3079,16 @@
       "w": 116,
       "h": 392,
       "acabado": "plata",
-      "bytes": 11308
+      "bytes": 11308,
+      "color": {
+        "rgb": [
+          201,
+          186,
+          161
+        ],
+        "nombre": "Oro 2"
+      },
+      "modelo": "brazalete-01"
     },
     {
       "id": 117,
@@ -1994,7 +3098,16 @@
       "w": 120,
       "h": 392,
       "acabado": "plata",
-      "bytes": 13322
+      "bytes": 13322,
+      "color": {
+        "rgb": [
+          153,
+          150,
+          144
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "brazalete-02"
     },
     {
       "id": 118,
@@ -2004,7 +3117,16 @@
       "w": 118,
       "h": 391,
       "acabado": "gunmetal",
-      "bytes": 11424
+      "bytes": 11424,
+      "color": {
+        "rgb": [
+          46,
+          45,
+          43
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "brazalete-02"
     },
     {
       "id": 119,
@@ -2014,7 +3136,16 @@
       "w": 119,
       "h": 391,
       "acabado": "oro",
-      "bytes": 14504
+      "bytes": 14504,
+      "color": {
+        "rgb": [
+          176,
+          147,
+          103
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "brazalete-02"
     },
     {
       "id": 120,
@@ -2024,7 +3155,16 @@
       "w": 120,
       "h": 392,
       "acabado": "oro",
-      "bytes": 14886
+      "bytes": 14886,
+      "color": {
+        "rgb": [
+          170,
+          153,
+          128
+        ],
+        "nombre": "Oro 2"
+      },
+      "modelo": "brazalete-02"
     },
     {
       "id": 121,
@@ -2034,7 +3174,16 @@
       "w": 127,
       "h": 388,
       "acabado": "plata",
-      "bytes": 12508
+      "bytes": 12508,
+      "color": {
+        "rgb": [
+          170,
+          166,
+          160
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "brazalete-03"
     },
     {
       "id": 122,
@@ -2044,7 +3193,16 @@
       "w": 126,
       "h": 389,
       "acabado": "gunmetal",
-      "bytes": 11066
+      "bytes": 11066,
+      "color": {
+        "rgb": [
+          53,
+          52,
+          49
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "brazalete-03"
     },
     {
       "id": 123,
@@ -2054,7 +3212,16 @@
       "w": 125,
       "h": 388,
       "acabado": "oro",
-      "bytes": 13334
+      "bytes": 13334,
+      "color": {
+        "rgb": [
+          188,
+          157,
+          109
+        ],
+        "nombre": "Oro 2"
+      },
+      "modelo": "brazalete-03"
     },
     {
       "id": 124,
@@ -2064,7 +3231,16 @@
       "w": 124,
       "h": 390,
       "acabado": "oro",
-      "bytes": 13134
+      "bytes": 13134,
+      "color": {
+        "rgb": [
+          183,
+          163,
+          134
+        ],
+        "nombre": "Oro 3"
+      },
+      "modelo": "brazalete-03"
     },
     {
       "id": 125,
@@ -2074,7 +3250,16 @@
       "w": 106,
       "h": 184,
       "acabado": "plata",
-      "bytes": 5554
+      "bytes": 5554,
+      "color": {
+        "rgb": [
+          196,
+          194,
+          191
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-125"
     },
     {
       "id": 126,
@@ -2084,7 +3269,16 @@
       "w": 105,
       "h": 183,
       "acabado": "gunmetal",
-      "bytes": 5646
+      "bytes": 5646,
+      "color": {
+        "rgb": [
+          73,
+          71,
+          68
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-126"
     },
     {
       "id": 127,
@@ -2094,7 +3288,16 @@
       "w": 107,
       "h": 190,
       "acabado": "oro",
-      "bytes": 6450
+      "bytes": 6450,
+      "color": {
+        "rgb": [
+          209,
+          184,
+          134
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-127"
     },
     {
       "id": 128,
@@ -2104,7 +3307,16 @@
       "w": 106,
       "h": 195,
       "acabado": "oro",
-      "bytes": 7790
+      "bytes": 7790,
+      "color": {
+        "rgb": [
+          202,
+          179,
+          134
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-128"
     },
     {
       "id": 129,
@@ -2114,7 +3326,16 @@
       "w": 104,
       "h": 190,
       "acabado": "gunmetal",
-      "bytes": 6976
+      "bytes": 6976,
+      "color": {
+        "rgb": [
+          75,
+          74,
+          70
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-129"
     },
     {
       "id": 130,
@@ -2124,7 +3345,16 @@
       "w": 106,
       "h": 189,
       "acabado": "plata",
-      "bytes": 6946
+      "bytes": 6946,
+      "color": {
+        "rgb": [
+          186,
+          185,
+          181
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-130"
     },
     {
       "id": 131,
@@ -2134,7 +3364,16 @@
       "w": 106,
       "h": 181,
       "acabado": "plata",
-      "bytes": 4788
+      "bytes": 4788,
+      "color": {
+        "rgb": [
+          197,
+          196,
+          192
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-131"
     },
     {
       "id": 132,
@@ -2144,7 +3383,16 @@
       "w": 106,
       "h": 179,
       "acabado": "gunmetal",
-      "bytes": 4876
+      "bytes": 4876,
+      "color": {
+        "rgb": [
+          81,
+          80,
+          77
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-132"
     },
     {
       "id": 133,
@@ -2154,7 +3402,16 @@
       "w": 108,
       "h": 188,
       "acabado": "oro",
-      "bytes": 5620
+      "bytes": 5620,
+      "color": {
+        "rgb": [
+          212,
+          184,
+          135
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-133"
     },
     {
       "id": 134,
@@ -2164,7 +3421,16 @@
       "w": 114,
       "h": 189,
       "acabado": "plata",
-      "bytes": 6202
+      "bytes": 6202,
+      "color": {
+        "rgb": [
+          186,
+          184,
+          180
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-134"
     },
     {
       "id": 135,
@@ -2174,7 +3440,16 @@
       "w": 113,
       "h": 189,
       "acabado": "gunmetal",
-      "bytes": 6212
+      "bytes": 6212,
+      "color": {
+        "rgb": [
+          66,
+          65,
+          61
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-135"
     },
     {
       "id": 136,
@@ -2184,7 +3459,16 @@
       "w": 113,
       "h": 193,
       "acabado": "oro",
-      "bytes": 7232
+      "bytes": 7232,
+      "color": {
+        "rgb": [
+          201,
+          172,
+          117
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-136"
     },
     {
       "id": 137,
@@ -2194,7 +3478,16 @@
       "w": 111,
       "h": 186,
       "acabado": "plata",
-      "bytes": 6340
+      "bytes": 6340,
+      "color": {
+        "rgb": [
+          186,
+          185,
+          181
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-137"
     },
     {
       "id": 138,
@@ -2204,7 +3497,16 @@
       "w": 112,
       "h": 187,
       "acabado": "gunmetal",
-      "bytes": 6230
+      "bytes": 6230,
+      "color": {
+        "rgb": [
+          71,
+          69,
+          66
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-138"
     },
     {
       "id": 139,
@@ -2214,7 +3516,16 @@
       "w": 112,
       "h": 192,
       "acabado": "oro",
-      "bytes": 7156
+      "bytes": 7156,
+      "color": {
+        "rgb": [
+          205,
+          178,
+          126
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-139"
     },
     {
       "id": 140,
@@ -2224,7 +3535,16 @@
       "w": 114,
       "h": 204,
       "acabado": "oro",
-      "bytes": 7124
+      "bytes": 7124,
+      "color": {
+        "rgb": [
+          204,
+          175,
+          122
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-140"
     },
     {
       "id": 141,
@@ -2234,7 +3554,16 @@
       "w": 115,
       "h": 204,
       "acabado": "gunmetal",
-      "bytes": 6280
+      "bytes": 6280,
+      "color": {
+        "rgb": [
+          72,
+          70,
+          66
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-141"
     },
     {
       "id": 142,
@@ -2244,7 +3573,16 @@
       "w": 114,
       "h": 200,
       "acabado": "plata",
-      "bytes": 6226
+      "bytes": 6226,
+      "color": {
+        "rgb": [
+          186,
+          185,
+          181
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-142"
     },
     {
       "id": 143,
@@ -2254,7 +3592,16 @@
       "w": 113,
       "h": 184,
       "acabado": "plata",
-      "bytes": 5554
+      "bytes": 5554,
+      "color": {
+        "rgb": [
+          184,
+          183,
+          179
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-143"
     },
     {
       "id": 144,
@@ -2264,7 +3611,16 @@
       "w": 114,
       "h": 185,
       "acabado": "gunmetal",
-      "bytes": 5648
+      "bytes": 5648,
+      "color": {
+        "rgb": [
+          70,
+          69,
+          65
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-144"
     },
     {
       "id": 145,
@@ -2274,7 +3630,16 @@
       "w": 114,
       "h": 188,
       "acabado": "oro",
-      "bytes": 6236
+      "bytes": 6236,
+      "color": {
+        "rgb": [
+          203,
+          176,
+          123
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-145"
     },
     {
       "id": 146,
@@ -2284,7 +3649,16 @@
       "w": 116,
       "h": 112,
       "acabado": "plata",
-      "bytes": 6306
+      "bytes": 6306,
+      "color": {
+        "rgb": [
+          179,
+          177,
+          174
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "broche-146"
     },
     {
       "id": 147,
@@ -2294,7 +3668,16 @@
       "w": 117,
       "h": 115,
       "acabado": "gunmetal",
-      "bytes": 6614
+      "bytes": 6614,
+      "color": {
+        "rgb": [
+          65,
+          64,
+          60
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "broche-147"
     },
     {
       "id": 148,
@@ -2304,7 +3687,16 @@
       "w": 119,
       "h": 117,
       "acabado": "oro",
-      "bytes": 7038
+      "bytes": 7038,
+      "color": {
+        "rgb": [
+          200,
+          174,
+          122
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "broche-148"
     },
     {
       "id": 149,
@@ -2314,7 +3706,16 @@
       "w": 215,
       "h": 215,
       "acabado": "plata",
-      "bytes": 10946
+      "bytes": 10946,
+      "color": {
+        "rgb": [
+          185,
+          182,
+          180
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "corona-149"
     },
     {
       "id": 150,
@@ -2324,7 +3725,16 @@
       "w": 213,
       "h": 214,
       "acabado": "gunmetal",
-      "bytes": 10326
+      "bytes": 10326,
+      "color": {
+        "rgb": [
+          57,
+          57,
+          55
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "corona-150"
     },
     {
       "id": 151,
@@ -2334,7 +3744,16 @@
       "w": 214,
       "h": 215,
       "acabado": "oro",
-      "bytes": 12260
+      "bytes": 12260,
+      "color": {
+        "rgb": [
+          204,
+          170,
+          117
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "corona-151"
     },
     {
       "id": 152,
@@ -2344,7 +3763,16 @@
       "w": 25,
       "h": 39,
       "acabado": "gunmetal",
-      "bytes": 758
+      "bytes": 758,
+      "color": {
+        "rgb": [
+          87,
+          84,
+          86
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 153,
@@ -2354,7 +3782,16 @@
       "w": 29,
       "h": 39,
       "acabado": "gunmetal",
-      "bytes": 1156
+      "bytes": 1156,
+      "color": {
+        "rgb": [
+          90,
+          87,
+          88
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 154,
@@ -2364,7 +3801,16 @@
       "w": 29,
       "h": 40,
       "acabado": "gunmetal",
-      "bytes": 1286
+      "bytes": 1286,
+      "color": {
+        "rgb": [
+          85,
+          82,
+          83
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 155,
@@ -2374,7 +3820,16 @@
       "w": 32,
       "h": 39,
       "acabado": "gunmetal",
-      "bytes": 1058
+      "bytes": 1058,
+      "color": {
+        "rgb": [
+          86,
+          83,
+          84
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 156,
@@ -2384,7 +3839,16 @@
       "w": 28,
       "h": 39,
       "acabado": "gunmetal",
-      "bytes": 1200
+      "bytes": 1200,
+      "color": {
+        "rgb": [
+          86,
+          82,
+          83
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 157,
@@ -2394,7 +3858,16 @@
       "w": 30,
       "h": 39,
       "acabado": "gunmetal",
-      "bytes": 1330
+      "bytes": 1330,
+      "color": {
+        "rgb": [
+          88,
+          85,
+          86
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 158,
@@ -2404,7 +3877,16 @@
       "w": 29,
       "h": 39,
       "acabado": "gunmetal",
-      "bytes": 896
+      "bytes": 896,
+      "color": {
+        "rgb": [
+          84,
+          81,
+          82
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 159,
@@ -2414,7 +3896,16 @@
       "w": 31,
       "h": 40,
       "acabado": "gunmetal",
-      "bytes": 1366
+      "bytes": 1366,
+      "color": {
+        "rgb": [
+          89,
+          86,
+          87
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 160,
@@ -2424,7 +3915,16 @@
       "w": 30,
       "h": 40,
       "acabado": "gunmetal",
-      "bytes": 1296
+      "bytes": 1296,
+      "color": {
+        "rgb": [
+          82,
+          80,
+          80
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 161,
@@ -2434,7 +3934,16 @@
       "w": 56,
       "h": 39,
       "acabado": "gunmetal",
-      "bytes": 1906
+      "bytes": 1906,
+      "color": {
+        "rgb": [
+          85,
+          82,
+          83
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 162,
@@ -2444,7 +3953,16 @@
       "w": 53,
       "h": 38,
       "acabado": "gunmetal",
-      "bytes": 1390
+      "bytes": 1390,
+      "color": {
+        "rgb": [
+          83,
+          81,
+          82
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 163,
@@ -2454,7 +3972,16 @@
       "w": 55,
       "h": 38,
       "acabado": "gunmetal",
-      "bytes": 1814
+      "bytes": 1814,
+      "color": {
+        "rgb": [
+          87,
+          84,
+          85
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 164,
@@ -2464,7 +3991,16 @@
       "w": 25,
       "h": 39,
       "acabado": "oro",
-      "bytes": 860
+      "bytes": 860,
+      "color": {
+        "rgb": [
+          193,
+          162,
+          98
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 165,
@@ -2474,7 +4010,16 @@
       "w": 29,
       "h": 39,
       "acabado": "oro",
-      "bytes": 1286
+      "bytes": 1286,
+      "color": {
+        "rgb": [
+          198,
+          166,
+          100
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 166,
@@ -2484,7 +4029,16 @@
       "w": 29,
       "h": 40,
       "acabado": "oro",
-      "bytes": 1414
+      "bytes": 1414,
+      "color": {
+        "rgb": [
+          195,
+          161,
+          92
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 167,
@@ -2494,7 +4048,16 @@
       "w": 32,
       "h": 39,
       "acabado": "oro",
-      "bytes": 1230
+      "bytes": 1230,
+      "color": {
+        "rgb": [
+          196,
+          163,
+          98
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 168,
@@ -2504,7 +4067,16 @@
       "w": 28,
       "h": 39,
       "acabado": "oro",
-      "bytes": 1356
+      "bytes": 1356,
+      "color": {
+        "rgb": [
+          195,
+          162,
+          94
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 169,
@@ -2514,7 +4086,16 @@
       "w": 30,
       "h": 39,
       "acabado": "oro",
-      "bytes": 1468
+      "bytes": 1468,
+      "color": {
+        "rgb": [
+          200,
+          168,
+          100
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 170,
@@ -2524,7 +4105,16 @@
       "w": 29,
       "h": 39,
       "acabado": "oro",
-      "bytes": 1038
+      "bytes": 1038,
+      "color": {
+        "rgb": [
+          195,
+          162,
+          92
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 171,
@@ -2534,7 +4124,16 @@
       "w": 31,
       "h": 40,
       "acabado": "oro",
-      "bytes": 1508
+      "bytes": 1508,
+      "color": {
+        "rgb": [
+          204,
+          171,
+          102
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 172,
@@ -2544,7 +4143,16 @@
       "w": 30,
       "h": 40,
       "acabado": "oro",
-      "bytes": 1468
+      "bytes": 1468,
+      "color": {
+        "rgb": [
+          196,
+          160,
+          90
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 173,
@@ -2554,7 +4162,16 @@
       "w": 56,
       "h": 39,
       "acabado": "oro",
-      "bytes": 2100
+      "bytes": 2100,
+      "color": {
+        "rgb": [
+          197,
+          164,
+          98
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 174,
@@ -2564,7 +4181,16 @@
       "w": 53,
       "h": 38,
       "acabado": "oro",
-      "bytes": 1610
+      "bytes": 1610,
+      "color": {
+        "rgb": [
+          191,
+          161,
+          96
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 175,
@@ -2574,7 +4200,16 @@
       "w": 55,
       "h": 38,
       "acabado": "oro",
-      "bytes": 1996
+      "bytes": 1996,
+      "color": {
+        "rgb": [
+          195,
+          164,
+          97
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 176,
@@ -2584,7 +4219,16 @@
       "w": 25,
       "h": 39,
       "acabado": "plata",
-      "bytes": 800
+      "bytes": 800,
+      "color": {
+        "rgb": [
+          199,
+          196,
+          191
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 177,
@@ -2594,7 +4238,16 @@
       "w": 29,
       "h": 39,
       "acabado": "plata",
-      "bytes": 1220
+      "bytes": 1220,
+      "color": {
+        "rgb": [
+          204,
+          201,
+          195
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 178,
@@ -2604,7 +4257,16 @@
       "w": 29,
       "h": 39,
       "acabado": "plata",
-      "bytes": 1316
+      "bytes": 1316,
+      "color": {
+        "rgb": [
+          204,
+          201,
+          196
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 179,
@@ -2614,7 +4276,16 @@
       "w": 32,
       "h": 39,
       "acabado": "plata",
-      "bytes": 1170
+      "bytes": 1170,
+      "color": {
+        "rgb": [
+          202,
+          198,
+          193
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 180,
@@ -2624,7 +4295,16 @@
       "w": 28,
       "h": 39,
       "acabado": "plata",
-      "bytes": 1254
+      "bytes": 1254,
+      "color": {
+        "rgb": [
+          201,
+          198,
+          194
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 181,
@@ -2634,7 +4314,16 @@
       "w": 30,
       "h": 39,
       "acabado": "plata",
-      "bytes": 1372
+      "bytes": 1372,
+      "color": {
+        "rgb": [
+          207,
+          204,
+          199
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 182,
@@ -2644,7 +4333,16 @@
       "w": 29,
       "h": 39,
       "acabado": "plata",
-      "bytes": 1002
+      "bytes": 1002,
+      "color": {
+        "rgb": [
+          201,
+          198,
+          194
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 183,
@@ -2654,7 +4352,16 @@
       "w": 30,
       "h": 39,
       "acabado": "plata",
-      "bytes": 1366
+      "bytes": 1366,
+      "color": {
+        "rgb": [
+          211,
+          208,
+          203
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 184,
@@ -2664,7 +4371,16 @@
       "w": 30,
       "h": 40,
       "acabado": "plata",
-      "bytes": 1326
+      "bytes": 1326,
+      "color": {
+        "rgb": [
+          203,
+          200,
+          196
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 185,
@@ -2674,7 +4390,16 @@
       "w": 56,
       "h": 39,
       "acabado": "plata",
-      "bytes": 2112
+      "bytes": 2112,
+      "color": {
+        "rgb": [
+          203,
+          200,
+          196
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 186,
@@ -2684,7 +4409,16 @@
       "w": 53,
       "h": 38,
       "acabado": "plata",
-      "bytes": 1508
+      "bytes": 1508,
+      "color": {
+        "rgb": [
+          198,
+          195,
+          191
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 187,
@@ -2694,7 +4428,16 @@
       "w": 55,
       "h": 38,
       "acabado": "plata",
-      "bytes": 1908
+      "bytes": 1908,
+      "color": {
+        "rgb": [
+          202,
+          200,
+          195
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-arabigo"
     },
     {
       "id": 188,
@@ -2704,7 +4447,17 @@
       "w": 12,
       "h": 62,
       "acabado": "plata",
-      "bytes": 448
+      "bytes": 448,
+      "color": {
+        "rgb": [
+          210,
+          207,
+          202
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-barra-solida",
+      "variante": "simple"
     },
     {
       "id": 189,
@@ -2714,7 +4467,17 @@
       "w": 34,
       "h": 61,
       "acabado": "plata",
-      "bytes": 1026
+      "bytes": 1026,
+      "color": {
+        "rgb": [
+          207,
+          204,
+          197
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-barra-solida",
+      "variante": "doble"
     },
     {
       "id": 190,
@@ -2724,7 +4487,17 @@
       "w": 12,
       "h": 62,
       "acabado": "oro",
-      "bytes": 534
+      "bytes": 534,
+      "color": {
+        "rgb": [
+          209,
+          178,
+          108
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-barra-solida",
+      "variante": "simple"
     },
     {
       "id": 191,
@@ -2734,7 +4507,17 @@
       "w": 34,
       "h": 61,
       "acabado": "oro",
-      "bytes": 1222
+      "bytes": 1222,
+      "color": {
+        "rgb": [
+          206,
+          176,
+          108
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-barra-solida",
+      "variante": "doble"
     },
     {
       "id": 192,
@@ -2744,7 +4527,17 @@
       "w": 12,
       "h": 62,
       "acabado": "gunmetal",
-      "bytes": 474
+      "bytes": 474,
+      "color": {
+        "rgb": [
+          99,
+          96,
+          93
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-barra-solida",
+      "variante": "simple"
     },
     {
       "id": 193,
@@ -2754,7 +4547,17 @@
       "w": 34,
       "h": 61,
       "acabado": "gunmetal",
-      "bytes": 1004
+      "bytes": 1004,
+      "color": {
+        "rgb": [
+          102,
+          99,
+          96
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-barra-solida",
+      "variante": "doble"
     },
     {
       "id": 194,
@@ -2764,7 +4567,16 @@
       "w": 17,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 622
+      "bytes": 622,
+      "color": {
+        "rgb": [
+          85,
+          82,
+          83
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 195,
@@ -2774,7 +4586,16 @@
       "w": 32,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 1094
+      "bytes": 1094,
+      "color": {
+        "rgb": [
+          82,
+          79,
+          79
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 196,
@@ -2784,7 +4605,16 @@
       "w": 46,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 1336
+      "bytes": 1336,
+      "color": {
+        "rgb": [
+          84,
+          81,
+          82
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 197,
@@ -2794,7 +4624,16 @@
       "w": 47,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 1530
+      "bytes": 1530,
+      "color": {
+        "rgb": [
+          83,
+          80,
+          82
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 198,
@@ -2804,7 +4643,16 @@
       "w": 31,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 1014
+      "bytes": 1014,
+      "color": {
+        "rgb": [
+          81,
+          79,
+          80
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 199,
@@ -2814,7 +4662,16 @@
       "w": 45,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 1562
+      "bytes": 1562,
+      "color": {
+        "rgb": [
+          82,
+          80,
+          81
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 200,
@@ -2824,7 +4681,16 @@
       "w": 61,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 1864
+      "bytes": 1864,
+      "color": {
+        "rgb": [
+          81,
+          78,
+          79
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 201,
@@ -2834,7 +4700,16 @@
       "w": 75,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 2286
+      "bytes": 2286,
+      "color": {
+        "rgb": [
+          81,
+          78,
+          79
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 202,
@@ -2844,7 +4719,16 @@
       "w": 45,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 1628
+      "bytes": 1628,
+      "color": {
+        "rgb": [
+          86,
+          83,
+          84
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 203,
@@ -2854,7 +4738,16 @@
       "w": 30,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 1180
+      "bytes": 1180,
+      "color": {
+        "rgb": [
+          88,
+          83,
+          85
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 204,
@@ -2864,7 +4757,16 @@
       "w": 47,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 1818
+      "bytes": 1818,
+      "color": {
+        "rgb": [
+          82,
+          78,
+          80
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 205,
@@ -2874,7 +4776,16 @@
       "w": 59,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 2012
+      "bytes": 2012,
+      "color": {
+        "rgb": [
+          85,
+          81,
+          83
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 206,
@@ -2884,7 +4795,16 @@
       "w": 17,
       "h": 36,
       "acabado": "plata",
-      "bytes": 654
+      "bytes": 654,
+      "color": {
+        "rgb": [
+          202,
+          199,
+          193
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 207,
@@ -2894,7 +4814,16 @@
       "w": 32,
       "h": 37,
       "acabado": "plata",
-      "bytes": 1130
+      "bytes": 1130,
+      "color": {
+        "rgb": [
+          197,
+          194,
+          189
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 208,
@@ -2904,7 +4833,16 @@
       "w": 46,
       "h": 36,
       "acabado": "plata",
-      "bytes": 1350
+      "bytes": 1350,
+      "color": {
+        "rgb": [
+          199,
+          196,
+          191
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 209,
@@ -2914,7 +4852,16 @@
       "w": 46,
       "h": 36,
       "acabado": "plata",
-      "bytes": 1628
+      "bytes": 1628,
+      "color": {
+        "rgb": [
+          199,
+          195,
+          190
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 210,
@@ -2924,7 +4871,16 @@
       "w": 31,
       "h": 37,
       "acabado": "plata",
-      "bytes": 1122
+      "bytes": 1122,
+      "color": {
+        "rgb": [
+          202,
+          198,
+          194
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 211,
@@ -2934,7 +4890,16 @@
       "w": 45,
       "h": 36,
       "acabado": "plata",
-      "bytes": 1628
+      "bytes": 1628,
+      "color": {
+        "rgb": [
+          200,
+          196,
+          192
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 212,
@@ -2944,7 +4909,16 @@
       "w": 61,
       "h": 36,
       "acabado": "plata",
-      "bytes": 2046
+      "bytes": 2046,
+      "color": {
+        "rgb": [
+          198,
+          195,
+          190
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 213,
@@ -2954,7 +4928,16 @@
       "w": 75,
       "h": 36,
       "acabado": "plata",
-      "bytes": 2450
+      "bytes": 2450,
+      "color": {
+        "rgb": [
+          197,
+          194,
+          189
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 214,
@@ -2964,7 +4947,16 @@
       "w": 45,
       "h": 36,
       "acabado": "plata",
-      "bytes": 1732
+      "bytes": 1732,
+      "color": {
+        "rgb": [
+          202,
+          198,
+          192
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 215,
@@ -2974,7 +4966,16 @@
       "w": 30,
       "h": 36,
       "acabado": "plata",
-      "bytes": 1214
+      "bytes": 1214,
+      "color": {
+        "rgb": [
+          202,
+          198,
+          192
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 216,
@@ -2984,7 +4985,16 @@
       "w": 47,
       "h": 37,
       "acabado": "plata",
-      "bytes": 1896
+      "bytes": 1896,
+      "color": {
+        "rgb": [
+          199,
+          195,
+          190
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 217,
@@ -2994,7 +5004,16 @@
       "w": 59,
       "h": 36,
       "acabado": "plata",
-      "bytes": 2092
+      "bytes": 2092,
+      "color": {
+        "rgb": [
+          202,
+          198,
+          194
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 218,
@@ -3004,7 +5023,16 @@
       "w": 17,
       "h": 36,
       "acabado": "oro",
-      "bytes": 712
+      "bytes": 712,
+      "color": {
+        "rgb": [
+          194,
+          162,
+          95
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 219,
@@ -3014,7 +5042,16 @@
       "w": 32,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1198
+      "bytes": 1198,
+      "color": {
+        "rgb": [
+          189,
+          157,
+          90
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 220,
@@ -3024,7 +5061,16 @@
       "w": 46,
       "h": 36,
       "acabado": "oro",
-      "bytes": 1492
+      "bytes": 1492,
+      "color": {
+        "rgb": [
+          192,
+          162,
+          96
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 221,
@@ -3034,7 +5080,16 @@
       "w": 47,
       "h": 36,
       "acabado": "oro",
-      "bytes": 1700
+      "bytes": 1700,
+      "color": {
+        "rgb": [
+          192,
+          161,
+          93
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 222,
@@ -3044,7 +5099,16 @@
       "w": 31,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1180
+      "bytes": 1180,
+      "color": {
+        "rgb": [
+          194,
+          161,
+          96
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 223,
@@ -3054,7 +5118,16 @@
       "w": 45,
       "h": 36,
       "acabado": "oro",
-      "bytes": 1704
+      "bytes": 1704,
+      "color": {
+        "rgb": [
+          192,
+          160,
+          93
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 224,
@@ -3064,7 +5137,16 @@
       "w": 61,
       "h": 36,
       "acabado": "oro",
-      "bytes": 2120
+      "bytes": 2120,
+      "color": {
+        "rgb": [
+          190,
+          159,
+          94
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 225,
@@ -3074,7 +5156,16 @@
       "w": 75,
       "h": 36,
       "acabado": "oro",
-      "bytes": 2568
+      "bytes": 2568,
+      "color": {
+        "rgb": [
+          191,
+          158,
+          92
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 226,
@@ -3084,7 +5175,16 @@
       "w": 45,
       "h": 36,
       "acabado": "oro",
-      "bytes": 1782
+      "bytes": 1782,
+      "color": {
+        "rgb": [
+          194,
+          162,
+          95
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 227,
@@ -3094,7 +5194,16 @@
       "w": 30,
       "h": 36,
       "acabado": "oro",
-      "bytes": 1316
+      "bytes": 1316,
+      "color": {
+        "rgb": [
+          194,
+          162,
+          97
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 228,
@@ -3104,7 +5213,16 @@
       "w": 47,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1964
+      "bytes": 1964,
+      "color": {
+        "rgb": [
+          191,
+          159,
+          93
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 229,
@@ -3114,7 +5232,16 @@
       "w": 59,
       "h": 36,
       "acabado": "oro",
-      "bytes": 2158
+      "bytes": 2158,
+      "color": {
+        "rgb": [
+          193,
+          161,
+          95
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-romano"
     },
     {
       "id": 230,
@@ -3124,7 +5251,16 @@
       "w": 12,
       "h": 37,
       "acabado": "plata",
-      "bytes": 600
+      "bytes": 600,
+      "color": {
+        "rgb": [
+          220,
+          217,
+          214
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 231,
@@ -3134,7 +5270,16 @@
       "w": 23,
       "h": 37,
       "acabado": "plata",
-      "bytes": 842
+      "bytes": 842,
+      "color": {
+        "rgb": [
+          219,
+          217,
+          213
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 232,
@@ -3144,7 +5289,16 @@
       "w": 26,
       "h": 36,
       "acabado": "plata",
-      "bytes": 882
+      "bytes": 882,
+      "color": {
+        "rgb": [
+          214,
+          212,
+          209
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 233,
@@ -3154,7 +5308,16 @@
       "w": 22,
       "h": 36,
       "acabado": "plata",
-      "bytes": 890
+      "bytes": 890,
+      "color": {
+        "rgb": [
+          215,
+          213,
+          208
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 234,
@@ -3164,7 +5327,16 @@
       "w": 22,
       "h": 28,
       "acabado": "plata",
-      "bytes": 850
+      "bytes": 850,
+      "color": {
+        "rgb": [
+          221,
+          219,
+          215
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 235,
@@ -3174,7 +5346,16 @@
       "w": 23,
       "h": 37,
       "acabado": "plata",
-      "bytes": 806
+      "bytes": 806,
+      "color": {
+        "rgb": [
+          218,
+          215,
+          212
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 236,
@@ -3184,7 +5365,16 @@
       "w": 30,
       "h": 37,
       "acabado": "plata",
-      "bytes": 1096
+      "bytes": 1096,
+      "color": {
+        "rgb": [
+          217,
+          214,
+          209
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 237,
@@ -3194,7 +5384,16 @@
       "w": 29,
       "h": 37,
       "acabado": "plata",
-      "bytes": 1100
+      "bytes": 1100,
+      "color": {
+        "rgb": [
+          215,
+          214,
+          209
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 238,
@@ -3204,7 +5403,16 @@
       "w": 23,
       "h": 36,
       "acabado": "plata",
-      "bytes": 922
+      "bytes": 922,
+      "color": {
+        "rgb": [
+          214,
+          212,
+          208
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 239,
@@ -3214,7 +5422,16 @@
       "w": 29,
       "h": 37,
       "acabado": "plata",
-      "bytes": 908
+      "bytes": 908,
+      "color": {
+        "rgb": [
+          214,
+          211,
+          207
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 240,
@@ -3224,7 +5441,16 @@
       "w": 28,
       "h": 37,
       "acabado": "plata",
-      "bytes": 1184
+      "bytes": 1184,
+      "color": {
+        "rgb": [
+          213,
+          210,
+          205
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 241,
@@ -3234,7 +5460,16 @@
       "w": 38,
       "h": 37,
       "acabado": "plata",
-      "bytes": 1396
+      "bytes": 1396,
+      "color": {
+        "rgb": [
+          214,
+          212,
+          208
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 242,
@@ -3244,7 +5479,16 @@
       "w": 12,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 616
+      "bytes": 616,
+      "color": {
+        "rgb": [
+          93,
+          90,
+          91
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 243,
@@ -3254,7 +5498,16 @@
       "w": 23,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 836
+      "bytes": 836,
+      "color": {
+        "rgb": [
+          92,
+          89,
+          90
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 244,
@@ -3264,7 +5517,16 @@
       "w": 26,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 826
+      "bytes": 826,
+      "color": {
+        "rgb": [
+          87,
+          85,
+          85
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 245,
@@ -3274,7 +5536,16 @@
       "w": 22,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 898
+      "bytes": 898,
+      "color": {
+        "rgb": [
+          94,
+          90,
+          92
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 246,
@@ -3284,7 +5555,16 @@
       "w": 22,
       "h": 28,
       "acabado": "gunmetal",
-      "bytes": 796
+      "bytes": 796,
+      "color": {
+        "rgb": [
+          93,
+          89,
+          91
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 247,
@@ -3294,7 +5574,16 @@
       "w": 23,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 796
+      "bytes": 796,
+      "color": {
+        "rgb": [
+          91,
+          88,
+          89
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 248,
@@ -3304,7 +5593,16 @@
       "w": 30,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 1032
+      "bytes": 1032,
+      "color": {
+        "rgb": [
+          90,
+          87,
+          88
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 249,
@@ -3314,7 +5612,16 @@
       "w": 29,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 1112
+      "bytes": 1112,
+      "color": {
+        "rgb": [
+          92,
+          90,
+          91
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 250,
@@ -3324,7 +5631,16 @@
       "w": 23,
       "h": 36,
       "acabado": "gunmetal",
-      "bytes": 862
+      "bytes": 862,
+      "color": {
+        "rgb": [
+          85,
+          82,
+          83
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 251,
@@ -3334,7 +5650,16 @@
       "w": 29,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 880
+      "bytes": 880,
+      "color": {
+        "rgb": [
+          88,
+          85,
+          86
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 252,
@@ -3344,7 +5669,16 @@
       "w": 28,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 1158
+      "bytes": 1158,
+      "color": {
+        "rgb": [
+          90,
+          87,
+          88
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 253,
@@ -3354,7 +5688,16 @@
       "w": 38,
       "h": 37,
       "acabado": "gunmetal",
-      "bytes": 1358
+      "bytes": 1358,
+      "color": {
+        "rgb": [
+          90,
+          87,
+          88
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 254,
@@ -3364,7 +5707,16 @@
       "w": 12,
       "h": 37,
       "acabado": "oro",
-      "bytes": 674
+      "bytes": 674,
+      "color": {
+        "rgb": [
+          213,
+          181,
+          110
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 255,
@@ -3374,7 +5726,16 @@
       "w": 23,
       "h": 37,
       "acabado": "oro",
-      "bytes": 930
+      "bytes": 930,
+      "color": {
+        "rgb": [
+          213,
+          180,
+          107
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 256,
@@ -3384,7 +5745,16 @@
       "w": 26,
       "h": 36,
       "acabado": "oro",
-      "bytes": 934
+      "bytes": 934,
+      "color": {
+        "rgb": [
+          209,
+          173,
+          99
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 257,
@@ -3394,7 +5764,16 @@
       "w": 22,
       "h": 36,
       "acabado": "oro",
-      "bytes": 996
+      "bytes": 996,
+      "color": {
+        "rgb": [
+          208,
+          177,
+          107
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 258,
@@ -3404,7 +5783,16 @@
       "w": 22,
       "h": 28,
       "acabado": "oro",
-      "bytes": 892
+      "bytes": 892,
+      "color": {
+        "rgb": [
+          215,
+          182,
+          111
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 259,
@@ -3414,7 +5802,16 @@
       "w": 23,
       "h": 37,
       "acabado": "oro",
-      "bytes": 884
+      "bytes": 884,
+      "color": {
+        "rgb": [
+          212,
+          178,
+          107
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 260,
@@ -3424,7 +5821,16 @@
       "w": 30,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1188
+      "bytes": 1188,
+      "color": {
+        "rgb": [
+          210,
+          177,
+          106
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 261,
@@ -3434,7 +5840,16 @@
       "w": 29,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1152
+      "bytes": 1152,
+      "color": {
+        "rgb": [
+          210,
+          179,
+          109
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 262,
@@ -3444,7 +5859,16 @@
       "w": 23,
       "h": 36,
       "acabado": "oro",
-      "bytes": 966
+      "bytes": 966,
+      "color": {
+        "rgb": [
+          207,
+          172,
+          99
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 263,
@@ -3454,7 +5878,16 @@
       "w": 29,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1002
+      "bytes": 1002,
+      "color": {
+        "rgb": [
+          207,
+          174,
+          101
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 264,
@@ -3464,7 +5897,16 @@
       "w": 28,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1272
+      "bytes": 1272,
+      "color": {
+        "rgb": [
+          206,
+          176,
+          109
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 265,
@@ -3474,7 +5916,16 @@
       "w": 39,
       "h": 37,
       "acabado": "oro",
-      "bytes": 1552
+      "bytes": 1552,
+      "color": {
+        "rgb": [
+          207,
+          174,
+          103
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-indico"
     },
     {
       "id": 266,
@@ -3484,7 +5935,17 @@
       "w": 20,
       "h": 60,
       "acabado": "gunmetal",
-      "bytes": 884
+      "bytes": 884,
+      "color": {
+        "rgb": [
+          86,
+          84,
+          84
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-barra-marco",
+      "variante": "doble"
     },
     {
       "id": 267,
@@ -3494,7 +5955,17 @@
       "w": 41,
       "h": 60,
       "acabado": "gunmetal",
-      "bytes": 1584
+      "bytes": 1584,
+      "color": {
+        "rgb": [
+          87,
+          85,
+          85
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "indice-barra-marco",
+      "variante": "doble"
     },
     {
       "id": 268,
@@ -3504,7 +5975,17 @@
       "w": 20,
       "h": 60,
       "acabado": "oro",
-      "bytes": 1020
+      "bytes": 1020,
+      "color": {
+        "rgb": [
+          209,
+          168,
+          74
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-barra-marco",
+      "variante": "doble"
     },
     {
       "id": 269,
@@ -3514,7 +5995,17 @@
       "w": 41,
       "h": 60,
       "acabado": "oro",
-      "bytes": 1800
+      "bytes": 1800,
+      "color": {
+        "rgb": [
+          207,
+          167,
+          82
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "indice-barra-marco",
+      "variante": "doble"
     },
     {
       "id": 270,
@@ -3524,7 +6015,17 @@
       "w": 20,
       "h": 60,
       "acabado": "plata",
-      "bytes": 860
+      "bytes": 860,
+      "color": {
+        "rgb": [
+          215,
+          213,
+          210
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-barra-marco",
+      "variante": "doble"
     },
     {
       "id": 271,
@@ -3534,7 +6035,17 @@
       "w": 41,
       "h": 60,
       "acabado": "plata",
-      "bytes": 1616
+      "bytes": 1616,
+      "color": {
+        "rgb": [
+          213,
+          212,
+          209
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "indice-barra-marco",
+      "variante": "doble"
     },
     {
       "id": 272,
@@ -3545,7 +6056,18 @@
       "h": 449,
       "acabado": "gunmetal",
       "radio": 223.75,
-      "bytes": 19512
+      "bytes": 19512,
+      "color": {
+        "rgb": [
+          5,
+          44,
+          102
+        ],
+        "nombre": "Azul"
+      },
+      "modelo": "dial-01",
+      "luminancia": 39.9,
+      "fecha": "no"
     },
     {
       "id": 273,
@@ -3556,7 +6078,18 @@
       "h": 448,
       "acabado": "rojo",
       "radio": 223.5,
-      "bytes": 38156
+      "bytes": 38156,
+      "color": {
+        "rgb": [
+          164,
+          57,
+          44
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "dial-01",
+      "luminancia": 78.8,
+      "fecha": "no"
     },
     {
       "id": 274,
@@ -3567,7 +6100,18 @@
       "h": 448,
       "acabado": "oro",
       "radio": 223.5,
-      "bytes": 31002
+      "bytes": 31002,
+      "color": {
+        "rgb": [
+          123,
+          95,
+          46
+        ],
+        "nombre": "Amarillo"
+      },
+      "modelo": "dial-01",
+      "luminancia": 97.4,
+      "fecha": "no"
     },
     {
       "id": 275,
@@ -3578,7 +6122,18 @@
       "h": 448,
       "acabado": "oro",
       "radio": 223.5,
-      "bytes": 23506
+      "bytes": 23506,
+      "color": {
+        "rgb": [
+          36,
+          74,
+          2
+        ],
+        "nombre": "Verde oscuro"
+      },
+      "modelo": "dial-01",
+      "luminancia": 60.7,
+      "fecha": "no"
     },
     {
       "id": 276,
@@ -3589,7 +6144,18 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 11830
+      "bytes": 11830,
+      "color": {
+        "rgb": [
+          22,
+          22,
+          22
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "dial-01",
+      "luminancia": 22.0,
+      "fecha": "no"
     },
     {
       "id": 277,
@@ -3600,7 +6166,18 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 27698
+      "bytes": 27698,
+      "color": {
+        "rgb": [
+          100,
+          100,
+          99
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "dial-01",
+      "luminancia": 99.9,
+      "fecha": "no"
     },
     {
       "id": 278,
@@ -3611,7 +6188,18 @@
       "h": 456,
       "acabado": "gunmetal",
       "radio": 227.5,
-      "bytes": 60930
+      "bytes": 60930,
+      "color": {
+        "rgb": [
+          75,
+          74,
+          73
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "dial-02",
+      "luminancia": 74.1,
+      "fecha": "no"
     },
     {
       "id": 279,
@@ -3622,7 +6210,18 @@
       "h": 454,
       "acabado": "plata",
       "radio": 225.5,
-      "bytes": 22596
+      "bytes": 22596,
+      "color": {
+        "rgb": [
+          226,
+          218,
+          218
+        ],
+        "nombre": "Blanco"
+      },
+      "modelo": "dial-03",
+      "luminancia": 219.7,
+      "fecha": "no"
     },
     {
       "id": 281,
@@ -3633,7 +6232,18 @@
       "h": 457,
       "acabado": "plata",
       "radio": 228.25,
-      "bytes": 52572
+      "bytes": 52572,
+      "color": {
+        "rgb": [
+          240,
+          230,
+          222
+        ],
+        "nombre": "Crema"
+      },
+      "modelo": "dial-03",
+      "luminancia": 231.5,
+      "fecha": "no"
     },
     {
       "id": 282,
@@ -3644,7 +6254,18 @@
       "h": 457,
       "acabado": "plata",
       "radio": 228.25,
-      "bytes": 61616
+      "bytes": 61616,
+      "color": {
+        "rgb": [
+          214,
+          226,
+          226
+        ],
+        "nombre": "Turquesa pálido"
+      },
+      "modelo": "dial-03",
+      "luminancia": 223.4,
+      "fecha": "no"
     },
     {
       "id": 283,
@@ -3655,7 +6276,18 @@
       "h": 457,
       "acabado": "plata",
       "radio": 228.25,
-      "bytes": 57256
+      "bytes": 57256,
+      "color": {
+        "rgb": [
+          238,
+          223,
+          223
+        ],
+        "nombre": "Rosa"
+      },
+      "modelo": "dial-03",
+      "luminancia": 226.2,
+      "fecha": "no"
     },
     {
       "id": 284,
@@ -3666,7 +6298,18 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 51586
+      "bytes": 51586,
+      "color": {
+        "rgb": [
+          16,
+          34,
+          63
+        ],
+        "nombre": "Azul oscuro"
+      },
+      "modelo": "dial-04",
+      "luminancia": 32.3,
+      "fecha": "no"
     },
     {
       "id": 285,
@@ -3677,7 +6320,18 @@
       "h": 448,
       "acabado": "rojo",
       "radio": 223.5,
-      "bytes": 75330
+      "bytes": 75330,
+      "color": {
+        "rgb": [
+          117,
+          14,
+          21
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "dial-04",
+      "luminancia": 36.4,
+      "fecha": "no"
     },
     {
       "id": 286,
@@ -3688,7 +6342,18 @@
       "h": 448,
       "acabado": "oro",
       "radio": 223.5,
-      "bytes": 73816
+      "bytes": 73816,
+      "color": {
+        "rgb": [
+          43,
+          74,
+          7
+        ],
+        "nombre": "Verde oscuro"
+      },
+      "modelo": "dial-04",
+      "luminancia": 62.6,
+      "fecha": "no"
     },
     {
       "id": 287,
@@ -3699,7 +6364,18 @@
       "h": 448,
       "acabado": "oro",
       "radio": 223.5,
-      "bytes": 64368
+      "bytes": 64368,
+      "color": {
+        "rgb": [
+          73,
+          63,
+          45
+        ],
+        "nombre": "Bronce"
+      },
+      "modelo": "dial-04",
+      "luminancia": 63.8,
+      "fecha": "no"
     },
     {
       "id": 288,
@@ -3710,7 +6386,18 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 20822
+      "bytes": 20822,
+      "color": {
+        "rgb": [
+          48,
+          51,
+          51
+        ],
+        "nombre": "Negro"
+      },
+      "modelo": "dial-04",
+      "luminancia": 50.4,
+      "fecha": "no"
     },
     {
       "id": 289,
@@ -3721,7 +6408,19 @@
       "h": 449,
       "acabado": "gunmetal",
       "radio": 223.75,
-      "bytes": 19030
+      "bytes": 19030,
+      "color": {
+        "rgb": [
+          5,
+          44,
+          102
+        ],
+        "nombre": "Azul"
+      },
+      "fecha": "3",
+      "gemelo": 272,
+      "luminancia": 39.8,
+      "modelo": "dial-01"
     },
     {
       "id": 290,
@@ -3732,7 +6431,19 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 18640
+      "bytes": 18640,
+      "color": {
+        "rgb": [
+          48,
+          51,
+          51
+        ],
+        "nombre": "Negro"
+      },
+      "fecha": "3",
+      "gemelo": 288,
+      "luminancia": 50.6,
+      "modelo": "dial-04"
     },
     {
       "id": 291,
@@ -3743,7 +6454,19 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 49802
+      "bytes": 49802,
+      "color": {
+        "rgb": [
+          16,
+          34,
+          63
+        ],
+        "nombre": "Azul oscuro"
+      },
+      "fecha": "3",
+      "gemelo": 284,
+      "luminancia": 32.5,
+      "modelo": "dial-04"
     },
     {
       "id": 292,
@@ -3754,7 +6477,19 @@
       "h": 448,
       "acabado": "plata",
       "radio": 224.0,
-      "bytes": 55158
+      "bytes": 55158,
+      "color": {
+        "rgb": [
+          240,
+          230,
+          222
+        ],
+        "nombre": "Crema"
+      },
+      "fecha": "3",
+      "gemelo": 281,
+      "luminancia": 228.2,
+      "modelo": "dial-03"
     },
     {
       "id": 294,
@@ -3765,7 +6500,19 @@
       "h": 448,
       "acabado": "plata",
       "radio": 222.5,
-      "bytes": 23922
+      "bytes": 23922,
+      "color": {
+        "rgb": [
+          226,
+          218,
+          218
+        ],
+        "nombre": "Blanco"
+      },
+      "fecha": "3",
+      "gemelo": 279,
+      "luminancia": 221.0,
+      "modelo": "dial-03"
     },
     {
       "id": 295,
@@ -3776,7 +6523,19 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 20332
+      "bytes": 20332,
+      "color": {
+        "rgb": [
+          5,
+          44,
+          102
+        ],
+        "nombre": "Azul"
+      },
+      "fecha": "430",
+      "gemelo": 272,
+      "luminancia": 39.9,
+      "modelo": "dial-01"
     },
     {
       "id": 296,
@@ -3787,7 +6546,19 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.75,
-      "bytes": 19606
+      "bytes": 19606,
+      "color": {
+        "rgb": [
+          48,
+          51,
+          51
+        ],
+        "nombre": "Negro"
+      },
+      "fecha": "430",
+      "gemelo": 288,
+      "luminancia": 50.6,
+      "modelo": "dial-04"
     },
     {
       "id": 297,
@@ -3798,7 +6569,19 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.75,
-      "bytes": 51422
+      "bytes": 51422,
+      "color": {
+        "rgb": [
+          16,
+          34,
+          63
+        ],
+        "nombre": "Azul oscuro"
+      },
+      "fecha": "430",
+      "gemelo": 284,
+      "luminancia": 32.5,
+      "modelo": "dial-04"
     },
     {
       "id": 298,
@@ -3809,7 +6592,19 @@
       "h": 448,
       "acabado": "plata",
       "radio": 224.0,
-      "bytes": 56026
+      "bytes": 56026,
+      "color": {
+        "rgb": [
+          240,
+          230,
+          222
+        ],
+        "nombre": "Crema"
+      },
+      "fecha": "430",
+      "gemelo": 281,
+      "luminancia": 228.2,
+      "modelo": "dial-03"
     },
     {
       "id": 300,
@@ -3820,7 +6615,19 @@
       "h": 443,
       "acabado": "plata",
       "radio": 220.0,
-      "bytes": 24138
+      "bytes": 24138,
+      "color": {
+        "rgb": [
+          226,
+          218,
+          218
+        ],
+        "nombre": "Blanco"
+      },
+      "fecha": "430",
+      "gemelo": 279,
+      "luminancia": 221.0,
+      "modelo": "dial-03"
     },
     {
       "id": 301,
@@ -3831,7 +6638,19 @@
       "h": 439,
       "acabado": "gunmetal",
       "radio": 218.75,
-      "bytes": 18880
+      "bytes": 18880,
+      "color": {
+        "rgb": [
+          5,
+          44,
+          102
+        ],
+        "nombre": "Azul"
+      },
+      "fecha": "6",
+      "gemelo": 272,
+      "luminancia": 40.1,
+      "modelo": "dial-01"
     },
     {
       "id": 302,
@@ -3842,7 +6661,19 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 224.0,
-      "bytes": 18762
+      "bytes": 18762,
+      "color": {
+        "rgb": [
+          48,
+          51,
+          51
+        ],
+        "nombre": "Negro"
+      },
+      "fecha": "6",
+      "gemelo": 288,
+      "luminancia": 50.6,
+      "modelo": "dial-04"
     },
     {
       "id": 303,
@@ -3853,7 +6684,19 @@
       "h": 448,
       "acabado": "gunmetal",
       "radio": 223.5,
-      "bytes": 49888
+      "bytes": 49888,
+      "color": {
+        "rgb": [
+          16,
+          34,
+          63
+        ],
+        "nombre": "Azul oscuro"
+      },
+      "fecha": "6",
+      "gemelo": 284,
+      "luminancia": 32.5,
+      "modelo": "dial-04"
     },
     {
       "id": 304,
@@ -3864,7 +6707,19 @@
       "h": 449,
       "acabado": "plata",
       "radio": 224.25,
-      "bytes": 55394
+      "bytes": 55394,
+      "color": {
+        "rgb": [
+          240,
+          230,
+          222
+        ],
+        "nombre": "Crema"
+      },
+      "fecha": "6",
+      "gemelo": 281,
+      "luminancia": 228.2,
+      "modelo": "dial-03"
     },
     {
       "id": 305,
@@ -3875,7 +6730,19 @@
       "h": 448,
       "acabado": "plata",
       "radio": 222.5,
-      "bytes": 23774
+      "bytes": 23774,
+      "color": {
+        "rgb": [
+          226,
+          218,
+          218
+        ],
+        "nombre": "Blanco"
+      },
+      "fecha": "6",
+      "gemelo": 279,
+      "luminancia": 221.0,
+      "modelo": "dial-03"
     },
     {
       "id": 307,
@@ -3892,7 +6759,16 @@
       },
       "slot": "principal",
       "largo": 465.93,
-      "bytes": 20884
+      "bytes": 20884,
+      "color": {
+        "rgb": [
+          101,
+          108,
+          117
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-01"
     },
     {
       "id": 308,
@@ -3909,7 +6785,16 @@
       },
       "slot": "segundero",
       "largo": 490.85,
-      "bytes": 9496
+      "bytes": 9496,
+      "color": {
+        "rgb": [
+          100,
+          107,
+          117
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-02"
     },
     {
       "id": 309,
@@ -3926,7 +6811,16 @@
       },
       "slot": "segundero",
       "largo": 492.03,
-      "bytes": 8390
+      "bytes": 8390,
+      "color": {
+        "rgb": [
+          111,
+          117,
+          127
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-03"
     },
     {
       "id": 310,
@@ -3943,7 +6837,16 @@
       },
       "slot": "principal",
       "largo": 467.82,
-      "bytes": 17114
+      "bytes": 17114,
+      "color": {
+        "rgb": [
+          91,
+          97,
+          106
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-04"
     },
     {
       "id": 311,
@@ -3960,7 +6863,16 @@
       },
       "slot": "principal",
       "largo": 485.95,
-      "bytes": 10606
+      "bytes": 10606,
+      "color": {
+        "rgb": [
+          109,
+          116,
+          126
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-05"
     },
     {
       "id": 312,
@@ -3977,7 +6889,16 @@
       },
       "slot": "segundero",
       "largo": 485.71,
-      "bytes": 9416
+      "bytes": 9416,
+      "color": {
+        "rgb": [
+          101,
+          107,
+          116
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-06"
     },
     {
       "id": 313,
@@ -3994,7 +6915,16 @@
       },
       "slot": "principal",
       "largo": 461.46,
-      "bytes": 13086
+      "bytes": 13086,
+      "color": {
+        "rgb": [
+          92,
+          98,
+          107
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-07"
     },
     {
       "id": 314,
@@ -4011,7 +6941,16 @@
       },
       "slot": "segundero",
       "largo": 484.96,
-      "bytes": 8256
+      "bytes": 8256,
+      "color": {
+        "rgb": [
+          83,
+          89,
+          98
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-08"
     },
     {
       "id": 315,
@@ -4028,7 +6967,16 @@
       },
       "slot": "segundero",
       "largo": 484.72,
-      "bytes": 9046
+      "bytes": 9046,
+      "color": {
+        "rgb": [
+          103,
+          109,
+          118
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-09"
     },
     {
       "id": 316,
@@ -4045,7 +6993,16 @@
       },
       "slot": "principal",
       "largo": 471.3,
-      "bytes": 16814
+      "bytes": 16814,
+      "color": {
+        "rgb": [
+          96,
+          103,
+          113
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-10"
     },
     {
       "id": 317,
@@ -4062,7 +7019,16 @@
       },
       "slot": "segundero",
       "largo": 490.34,
-      "bytes": 12866
+      "bytes": 12866,
+      "color": {
+        "rgb": [
+          92,
+          98,
+          108
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-11"
     },
     {
       "id": 318,
@@ -4079,7 +7045,16 @@
       },
       "slot": "segundero",
       "largo": 489.76,
-      "bytes": 9116
+      "bytes": 9116,
+      "color": {
+        "rgb": [
+          116,
+          123,
+          133
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-12"
     },
     {
       "id": 319,
@@ -4096,7 +7071,16 @@
       },
       "slot": "segundero",
       "largo": 481.37,
-      "bytes": 12448
+      "bytes": 12448,
+      "color": {
+        "rgb": [
+          86,
+          93,
+          102
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-13"
     },
     {
       "id": 320,
@@ -4113,7 +7097,16 @@
       },
       "slot": "principal",
       "largo": 479.9,
-      "bytes": 15684
+      "bytes": 15684,
+      "color": {
+        "rgb": [
+          86,
+          93,
+          102
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-14"
     },
     {
       "id": 321,
@@ -4130,7 +7123,16 @@
       },
       "slot": "segundero",
       "largo": 494.86,
-      "bytes": 14036
+      "bytes": 14036,
+      "color": {
+        "rgb": [
+          78,
+          84,
+          93
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-15"
     },
     {
       "id": 322,
@@ -4147,7 +7149,16 @@
       },
       "slot": "principal",
       "largo": 463.39,
-      "bytes": 21212
+      "bytes": 21212,
+      "color": {
+        "rgb": [
+          99,
+          106,
+          115
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-16"
     },
     {
       "id": 323,
@@ -4164,7 +7175,16 @@
       },
       "slot": "principal",
       "largo": 464.47,
-      "bytes": 19596
+      "bytes": 19596,
+      "color": {
+        "rgb": [
+          100,
+          107,
+          117
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-17"
     },
     {
       "id": 324,
@@ -4181,7 +7201,16 @@
       },
       "slot": "principal",
       "largo": 476.59,
-      "bytes": 12058
+      "bytes": 12058,
+      "color": {
+        "rgb": [
+          92,
+          99,
+          109
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-18"
     },
     {
       "id": 325,
@@ -4198,7 +7227,16 @@
       },
       "slot": "principal",
       "largo": 466.35,
-      "bytes": 12448
+      "bytes": 12448,
+      "color": {
+        "rgb": [
+          94,
+          101,
+          111
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-19"
     },
     {
       "id": 326,
@@ -4215,7 +7253,16 @@
       },
       "slot": "principal",
       "largo": 432.78,
-      "bytes": 11578
+      "bytes": 11578,
+      "color": {
+        "rgb": [
+          92,
+          98,
+          108
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-20"
     },
     {
       "id": 327,
@@ -4232,7 +7279,16 @@
       },
       "slot": "principal",
       "largo": 475.86,
-      "bytes": 12864
+      "bytes": 12864,
+      "color": {
+        "rgb": [
+          89,
+          96,
+          105
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-21"
     },
     {
       "id": 328,
@@ -4249,7 +7305,16 @@
       },
       "slot": "principal",
       "largo": 463.56,
-      "bytes": 19374
+      "bytes": 19374,
+      "color": {
+        "rgb": [
+          90,
+          97,
+          106
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-22"
     },
     {
       "id": 329,
@@ -4266,7 +7331,16 @@
       },
       "slot": "principal",
       "largo": 432.79,
-      "bytes": 16304
+      "bytes": 16304,
+      "color": {
+        "rgb": [
+          92,
+          99,
+          108
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-23"
     },
     {
       "id": 330,
@@ -4283,7 +7357,16 @@
       },
       "slot": "principal",
       "largo": 478.07,
-      "bytes": 14316
+      "bytes": 14316,
+      "color": {
+        "rgb": [
+          92,
+          98,
+          107
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-24"
     },
     {
       "id": 331,
@@ -4300,7 +7383,16 @@
       },
       "slot": "principal",
       "largo": 472.35,
-      "bytes": 17276
+      "bytes": 17276,
+      "color": {
+        "rgb": [
+          92,
+          99,
+          108
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-25"
     },
     {
       "id": 332,
@@ -4317,7 +7409,16 @@
       },
       "slot": "principal",
       "largo": 479.56,
-      "bytes": 15400
+      "bytes": 15400,
+      "color": {
+        "rgb": [
+          100,
+          108,
+          118
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-26"
     },
     {
       "id": 333,
@@ -4334,7 +7435,16 @@
       },
       "slot": "segundero",
       "largo": 481.82,
-      "bytes": 13412
+      "bytes": 13412,
+      "color": {
+        "rgb": [
+          100,
+          107,
+          117
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-27"
     },
     {
       "id": 334,
@@ -4351,7 +7461,16 @@
       },
       "slot": "principal",
       "largo": 476.16,
-      "bytes": 10648
+      "bytes": 10648,
+      "color": {
+        "rgb": [
+          79,
+          85,
+          93
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-28"
     },
     {
       "id": 335,
@@ -4368,7 +7487,16 @@
       },
       "slot": "segundero",
       "largo": 485.79,
-      "bytes": 9284
+      "bytes": 9284,
+      "color": {
+        "rgb": [
+          77,
+          83,
+          90
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-29"
     },
     {
       "id": 336,
@@ -4385,7 +7513,16 @@
       },
       "slot": "segundero",
       "largo": 491.73,
-      "bytes": 8384
+      "bytes": 8384,
+      "color": {
+        "rgb": [
+          84,
+          91,
+          99
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-30"
     },
     {
       "id": 337,
@@ -4402,7 +7539,16 @@
       },
       "slot": "principal",
       "largo": 475.43,
-      "bytes": 14132
+      "bytes": 14132,
+      "color": {
+        "rgb": [
+          70,
+          76,
+          85
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-31"
     },
     {
       "id": 338,
@@ -4419,7 +7565,16 @@
       },
       "slot": "segundero",
       "largo": 452.61,
-      "bytes": 9848
+      "bytes": 9848,
+      "color": {
+        "rgb": [
+          90,
+          97,
+          107
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-32"
     },
     {
       "id": 339,
@@ -4436,7 +7591,16 @@
       },
       "slot": "segundero",
       "largo": 500.78,
-      "bytes": 8254
+      "bytes": 8254,
+      "color": {
+        "rgb": [
+          87,
+          93,
+          102
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-33"
     },
     {
       "id": 340,
@@ -4453,7 +7617,16 @@
       },
       "slot": "principal",
       "largo": 468.13,
-      "bytes": 15676
+      "bytes": 15676,
+      "color": {
+        "rgb": [
+          95,
+          102,
+          111
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-34"
     },
     {
       "id": 341,
@@ -4470,7 +7643,16 @@
       },
       "slot": "segundero",
       "largo": 452.75,
-      "bytes": 10862
+      "bytes": 10862,
+      "color": {
+        "rgb": [
+          96,
+          103,
+          112
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-35"
     },
     {
       "id": 342,
@@ -4487,7 +7669,16 @@
       },
       "slot": "segundero",
       "largo": 495.08,
-      "bytes": 8630
+      "bytes": 8630,
+      "color": {
+        "rgb": [
+          94,
+          101,
+          110
+        ],
+        "nombre": "Gunmetal"
+      },
+      "modelo": "aguja-36"
     },
     {
       "id": 343,
@@ -4504,7 +7695,16 @@
       },
       "slot": "principal",
       "largo": 465.93,
-      "bytes": 23412
+      "bytes": 23412,
+      "color": {
+        "rgb": [
+          222,
+          174,
+          74
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-01"
     },
     {
       "id": 344,
@@ -4521,7 +7721,16 @@
       },
       "slot": "segundero",
       "largo": 490.85,
-      "bytes": 10448
+      "bytes": 10448,
+      "color": {
+        "rgb": [
+          223,
+          175,
+          74
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-02"
     },
     {
       "id": 345,
@@ -4538,7 +7747,16 @@
       },
       "slot": "segundero",
       "largo": 492.03,
-      "bytes": 10386
+      "bytes": 10386,
+      "color": {
+        "rgb": [
+          207,
+          166,
+          78
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-03"
     },
     {
       "id": 346,
@@ -4555,7 +7773,16 @@
       },
       "slot": "principal",
       "largo": 467.82,
-      "bytes": 20728
+      "bytes": 20728,
+      "color": {
+        "rgb": [
+          212,
+          163,
+          67
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-04"
     },
     {
       "id": 347,
@@ -4572,7 +7799,16 @@
       },
       "slot": "principal",
       "largo": 485.95,
-      "bytes": 12100
+      "bytes": 12100,
+      "color": {
+        "rgb": [
+          227,
+          180,
+          80
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-05"
     },
     {
       "id": 348,
@@ -4589,7 +7825,16 @@
       },
       "slot": "segundero",
       "largo": 485.71,
-      "bytes": 11254
+      "bytes": 11254,
+      "color": {
+        "rgb": [
+          202,
+          160,
+          72
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-06"
     },
     {
       "id": 349,
@@ -4606,7 +7851,16 @@
       },
       "slot": "principal",
       "largo": 461.46,
-      "bytes": 15238
+      "bytes": 15238,
+      "color": {
+        "rgb": [
+          219,
+          169,
+          68
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-07"
     },
     {
       "id": 350,
@@ -4623,7 +7877,16 @@
       },
       "slot": "segundero",
       "largo": 484.96,
-      "bytes": 9816
+      "bytes": 9816,
+      "color": {
+        "rgb": [
+          202,
+          155,
+          62
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-08"
     },
     {
       "id": 351,
@@ -4640,7 +7903,16 @@
       },
       "slot": "segundero",
       "largo": 484.72,
-      "bytes": 10892
+      "bytes": 10892,
+      "color": {
+        "rgb": [
+          203,
+          160,
+          73
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-09"
     },
     {
       "id": 352,
@@ -4657,7 +7929,16 @@
       },
       "slot": "principal",
       "largo": 471.3,
-      "bytes": 19664
+      "bytes": 19664,
+      "color": {
+        "rgb": [
+          219,
+          171,
+          71
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-10"
     },
     {
       "id": 353,
@@ -4674,7 +7955,16 @@
       },
       "slot": "segundero",
       "largo": 490.34,
-      "bytes": 15220
+      "bytes": 15220,
+      "color": {
+        "rgb": [
+          220,
+          169,
+          68
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-11"
     },
     {
       "id": 354,
@@ -4691,7 +7981,16 @@
       },
       "slot": "segundero",
       "largo": 489.76,
-      "bytes": 10822
+      "bytes": 10822,
+      "color": {
+        "rgb": [
+          213,
+          172,
+          82
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-12"
     },
     {
       "id": 355,
@@ -4708,7 +8007,16 @@
       },
       "slot": "segundero",
       "largo": 481.37,
-      "bytes": 12806
+      "bytes": 12806,
+      "color": {
+        "rgb": [
+          218,
+          167,
+          65
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-13"
     },
     {
       "id": 356,
@@ -4725,7 +8033,16 @@
       },
       "slot": "principal",
       "largo": 479.9,
-      "bytes": 16640
+      "bytes": 16640,
+      "color": {
+        "rgb": [
+          220,
+          168,
+          65
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-14"
     },
     {
       "id": 357,
@@ -4742,7 +8059,16 @@
       },
       "slot": "segundero",
       "largo": 494.86,
-      "bytes": 15614
+      "bytes": 15614,
+      "color": {
+        "rgb": [
+          217,
+          163,
+          59
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-15"
     },
     {
       "id": 358,
@@ -4759,7 +8085,16 @@
       },
       "slot": "principal",
       "largo": 463.39,
-      "bytes": 23118
+      "bytes": 23118,
+      "color": {
+        "rgb": [
+          224,
+          175,
+          72
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-16"
     },
     {
       "id": 359,
@@ -4776,7 +8111,16 @@
       },
       "slot": "principal",
       "largo": 464.47,
-      "bytes": 20494
+      "bytes": 20494,
+      "color": {
+        "rgb": [
+          230,
+          180,
+          73
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-17"
     },
     {
       "id": 360,
@@ -4793,7 +8137,16 @@
       },
       "slot": "principal",
       "largo": 476.59,
-      "bytes": 13666
+      "bytes": 13666,
+      "color": {
+        "rgb": [
+          223,
+          172,
+          67
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-18"
     },
     {
       "id": 361,
@@ -4810,7 +8163,16 @@
       },
       "slot": "principal",
       "largo": 466.35,
-      "bytes": 13126
+      "bytes": 13126,
+      "color": {
+        "rgb": [
+          231,
+          179,
+          70
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-19"
     },
     {
       "id": 362,
@@ -4827,7 +8189,16 @@
       },
       "slot": "principal",
       "largo": 432.78,
-      "bytes": 12018
+      "bytes": 12018,
+      "color": {
+        "rgb": [
+          220,
+          171,
+          68
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-20"
     },
     {
       "id": 363,
@@ -4844,7 +8215,16 @@
       },
       "slot": "principal",
       "largo": 475.86,
-      "bytes": 14516
+      "bytes": 14516,
+      "color": {
+        "rgb": [
+          224,
+          172,
+          66
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-21"
     },
     {
       "id": 364,
@@ -4861,7 +8241,16 @@
       },
       "slot": "principal",
       "largo": 463.56,
-      "bytes": 21546
+      "bytes": 21546,
+      "color": {
+        "rgb": [
+          227,
+          175,
+          67
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-22"
     },
     {
       "id": 365,
@@ -4878,7 +8267,16 @@
       },
       "slot": "principal",
       "largo": 432.79,
-      "bytes": 17800
+      "bytes": 17800,
+      "color": {
+        "rgb": [
+          227,
+          175,
+          68
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-23"
     },
     {
       "id": 366,
@@ -4895,7 +8293,16 @@
       },
       "slot": "principal",
       "largo": 478.07,
-      "bytes": 16016
+      "bytes": 16016,
+      "color": {
+        "rgb": [
+          218,
+          166,
+          66
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-24"
     },
     {
       "id": 367,
@@ -4912,7 +8319,16 @@
       },
       "slot": "principal",
       "largo": 472.35,
-      "bytes": 18438
+      "bytes": 18438,
+      "color": {
+        "rgb": [
+          231,
+          178,
+          69
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-25"
     },
     {
       "id": 368,
@@ -4929,7 +8345,16 @@
       },
       "slot": "principal",
       "largo": 479.56,
-      "bytes": 15998
+      "bytes": 15998,
+      "color": {
+        "rgb": [
+          230,
+          180,
+          74
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-26"
     },
     {
       "id": 369,
@@ -4946,7 +8371,16 @@
       },
       "slot": "segundero",
       "largo": 481.82,
-      "bytes": 14770
+      "bytes": 14770,
+      "color": {
+        "rgb": [
+          226,
+          176,
+          72
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-27"
     },
     {
       "id": 370,
@@ -4963,7 +8397,16 @@
       },
       "slot": "principal",
       "largo": 476.16,
-      "bytes": 12760
+      "bytes": 12760,
+      "color": {
+        "rgb": [
+          204,
+          152,
+          57
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-28"
     },
     {
       "id": 371,
@@ -4980,7 +8423,16 @@
       },
       "slot": "segundero",
       "largo": 485.79,
-      "bytes": 11482
+      "bytes": 11482,
+      "color": {
+        "rgb": [
+          199,
+          148,
+          56
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-29"
     },
     {
       "id": 372,
@@ -4997,7 +8449,16 @@
       },
       "slot": "segundero",
       "largo": 491.73,
-      "bytes": 9570
+      "bytes": 9570,
+      "color": {
+        "rgb": [
+          214,
+          166,
+          64
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-30"
     },
     {
       "id": 373,
@@ -5014,7 +8475,16 @@
       },
       "slot": "principal",
       "largo": 475.43,
-      "bytes": 15336
+      "bytes": 15336,
+      "color": {
+        "rgb": [
+          223,
+          168,
+          57
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-31"
     },
     {
       "id": 374,
@@ -5031,7 +8501,16 @@
       },
       "slot": "segundero",
       "largo": 452.61,
-      "bytes": 10376
+      "bytes": 10376,
+      "color": {
+        "rgb": [
+          231,
+          180,
+          70
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-32"
     },
     {
       "id": 375,
@@ -5048,7 +8527,16 @@
       },
       "slot": "segundero",
       "largo": 500.78,
-      "bytes": 9052
+      "bytes": 9052,
+      "color": {
+        "rgb": [
+          222,
+          174,
+          67
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-33"
     },
     {
       "id": 376,
@@ -5065,7 +8553,16 @@
       },
       "slot": "principal",
       "largo": 468.13,
-      "bytes": 18284
+      "bytes": 18284,
+      "color": {
+        "rgb": [
+          215,
+          166,
+          68
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-34"
     },
     {
       "id": 377,
@@ -5082,7 +8579,16 @@
       },
       "slot": "segundero",
       "largo": 452.75,
-      "bytes": 13078
+      "bytes": 13078,
+      "color": {
+        "rgb": [
+          225,
+          175,
+          70
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-35"
     },
     {
       "id": 378,
@@ -5099,7 +8605,16 @@
       },
       "slot": "segundero",
       "largo": 495.08,
-      "bytes": 9870
+      "bytes": 9870,
+      "color": {
+        "rgb": [
+          217,
+          171,
+          70
+        ],
+        "nombre": "Oro"
+      },
+      "modelo": "aguja-36"
     },
     {
       "id": 379,
@@ -5116,7 +8631,16 @@
       },
       "slot": "principal",
       "largo": 465.93,
-      "bytes": 21200
+      "bytes": 21200,
+      "color": {
+        "rgb": [
+          204,
+          209,
+          214
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-01"
     },
     {
       "id": 380,
@@ -5133,7 +8657,16 @@
       },
       "slot": "segundero",
       "largo": 490.85,
-      "bytes": 9524
+      "bytes": 9524,
+      "color": {
+        "rgb": [
+          206,
+          210,
+          216
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-02"
     },
     {
       "id": 381,
@@ -5150,7 +8683,16 @@
       },
       "slot": "segundero",
       "largo": 492.03,
-      "bytes": 9606
+      "bytes": 9606,
+      "color": {
+        "rgb": [
+          192,
+          195,
+          199
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-03"
     },
     {
       "id": 382,
@@ -5167,7 +8709,16 @@
       },
       "slot": "principal",
       "largo": 467.82,
-      "bytes": 18880
+      "bytes": 18880,
+      "color": {
+        "rgb": [
+          191,
+          196,
+          202
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-04"
     },
     {
       "id": 383,
@@ -5184,7 +8735,16 @@
       },
       "slot": "principal",
       "largo": 485.95,
-      "bytes": 11060
+      "bytes": 11060,
+      "color": {
+        "rgb": [
+          211,
+          216,
+          221
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-05"
     },
     {
       "id": 384,
@@ -5201,7 +8761,16 @@
       },
       "slot": "segundero",
       "largo": 485.71,
-      "bytes": 10520
+      "bytes": 10520,
+      "color": {
+        "rgb": [
+          184,
+          188,
+          193
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-06"
     },
     {
       "id": 385,
@@ -5218,7 +8787,16 @@
       },
       "slot": "principal",
       "largo": 461.46,
-      "bytes": 13806
+      "bytes": 13806,
+      "color": {
+        "rgb": [
+          198,
+          204,
+          210
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-07"
     },
     {
       "id": 386,
@@ -5235,7 +8813,16 @@
       },
       "slot": "segundero",
       "largo": 484.96,
-      "bytes": 9264
+      "bytes": 9264,
+      "color": {
+        "rgb": [
+          181,
+          186,
+          192
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-08"
     },
     {
       "id": 387,
@@ -5252,7 +8839,16 @@
       },
       "slot": "segundero",
       "largo": 484.72,
-      "bytes": 10216
+      "bytes": 10216,
+      "color": {
+        "rgb": [
+          186,
+          189,
+          193
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-09"
     },
     {
       "id": 388,
@@ -5269,7 +8865,16 @@
       },
       "slot": "principal",
       "largo": 471.3,
-      "bytes": 18044
+      "bytes": 18044,
+      "color": {
+        "rgb": [
+          201,
+          205,
+          211
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-10"
     },
     {
       "id": 389,
@@ -5286,7 +8891,16 @@
       },
       "slot": "segundero",
       "largo": 490.34,
-      "bytes": 13862
+      "bytes": 13862,
+      "color": {
+        "rgb": [
+          199,
+          204,
+          211
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-11"
     },
     {
       "id": 390,
@@ -5303,7 +8917,16 @@
       },
       "slot": "segundero",
       "largo": 489.76,
-      "bytes": 10200
+      "bytes": 10200,
+      "color": {
+        "rgb": [
+          198,
+          202,
+          205
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-12"
     },
     {
       "id": 391,
@@ -5320,7 +8943,16 @@
       },
       "slot": "segundero",
       "largo": 481.37,
-      "bytes": 11942
+      "bytes": 11942,
+      "color": {
+        "rgb": [
+          196,
+          202,
+          208
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-13"
     },
     {
       "id": 392,
@@ -5337,7 +8969,16 @@
       },
       "slot": "principal",
       "largo": 479.9,
-      "bytes": 15414
+      "bytes": 15414,
+      "color": {
+        "rgb": [
+          198,
+          204,
+          211
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-14"
     },
     {
       "id": 393,
@@ -5354,7 +8995,16 @@
       },
       "slot": "segundero",
       "largo": 494.86,
-      "bytes": 14754
+      "bytes": 14754,
+      "color": {
+        "rgb": [
+          190,
+          197,
+          204
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-15"
     },
     {
       "id": 394,
@@ -5371,7 +9021,16 @@
       },
       "slot": "principal",
       "largo": 463.39,
-      "bytes": 20716
+      "bytes": 20716,
+      "color": {
+        "rgb": [
+          205,
+          210,
+          216
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-16"
     },
     {
       "id": 395,
@@ -5388,7 +9047,16 @@
       },
       "slot": "principal",
       "largo": 464.47,
-      "bytes": 18290
+      "bytes": 18290,
+      "color": {
+        "rgb": [
+          212,
+          217,
+          223
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-17"
     },
     {
       "id": 396,
@@ -5405,7 +9073,16 @@
       },
       "slot": "principal",
       "largo": 476.59,
-      "bytes": 12682
+      "bytes": 12682,
+      "color": {
+        "rgb": [
+          201,
+          206,
+          213
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-18"
     },
     {
       "id": 397,
@@ -5422,7 +9099,16 @@
       },
       "slot": "principal",
       "largo": 466.35,
-      "bytes": 12302
+      "bytes": 12302,
+      "color": {
+        "rgb": [
+          212,
+          217,
+          224
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-19"
     },
     {
       "id": 398,
@@ -5439,7 +9125,16 @@
       },
       "slot": "principal",
       "largo": 432.78,
-      "bytes": 11354
+      "bytes": 11354,
+      "color": {
+        "rgb": [
+          201,
+          206,
+          212
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-20"
     },
     {
       "id": 399,
@@ -5456,7 +9151,16 @@
       },
       "slot": "principal",
       "largo": 475.86,
-      "bytes": 13538
+      "bytes": 13538,
+      "color": {
+        "rgb": [
+          201,
+          207,
+          213
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-21"
     },
     {
       "id": 400,
@@ -5473,7 +9177,16 @@
       },
       "slot": "principal",
       "largo": 463.56,
-      "bytes": 19882
+      "bytes": 19882,
+      "color": {
+        "rgb": [
+          206,
+          212,
+          218
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-22"
     },
     {
       "id": 401,
@@ -5490,7 +9203,16 @@
       },
       "slot": "principal",
       "largo": 432.79,
-      "bytes": 16532
+      "bytes": 16532,
+      "color": {
+        "rgb": [
+          206,
+          212,
+          219
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-23"
     },
     {
       "id": 402,
@@ -5507,7 +9229,16 @@
       },
       "slot": "principal",
       "largo": 478.07,
-      "bytes": 14944
+      "bytes": 14944,
+      "color": {
+        "rgb": [
+          194,
+          199,
+          205
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-24"
     },
     {
       "id": 403,
@@ -5524,7 +9255,16 @@
       },
       "slot": "principal",
       "largo": 472.35,
-      "bytes": 17116
+      "bytes": 17116,
+      "color": {
+        "rgb": [
+          211,
+          217,
+          223
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-25"
     },
     {
       "id": 404,
@@ -5541,7 +9281,16 @@
       },
       "slot": "principal",
       "largo": 479.56,
-      "bytes": 14952
+      "bytes": 14952,
+      "color": {
+        "rgb": [
+          212,
+          217,
+          223
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-26"
     },
     {
       "id": 405,
@@ -5558,7 +9307,16 @@
       },
       "slot": "segundero",
       "largo": 481.82,
-      "bytes": 13932
+      "bytes": 13932,
+      "color": {
+        "rgb": [
+          206,
+          211,
+          216
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-27"
     },
     {
       "id": 406,
@@ -5575,7 +9333,16 @@
       },
       "slot": "principal",
       "largo": 476.16,
-      "bytes": 11680
+      "bytes": 11680,
+      "color": {
+        "rgb": [
+          177,
+          183,
+          190
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-28"
     },
     {
       "id": 407,
@@ -5592,7 +9359,16 @@
       },
       "slot": "segundero",
       "largo": 485.79,
-      "bytes": 10464
+      "bytes": 10464,
+      "color": {
+        "rgb": [
+          172,
+          177,
+          184
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-29"
     },
     {
       "id": 408,
@@ -5609,7 +9385,16 @@
       },
       "slot": "segundero",
       "largo": 491.73,
-      "bytes": 8624
+      "bytes": 8624,
+      "color": {
+        "rgb": [
+          194,
+          200,
+          206
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-30"
     },
     {
       "id": 409,
@@ -5626,7 +9411,16 @@
       },
       "slot": "principal",
       "largo": 475.43,
-      "bytes": 14090
+      "bytes": 14090,
+      "color": {
+        "rgb": [
+          201,
+          208,
+          216
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-31"
     },
     {
       "id": 410,
@@ -5643,7 +9437,16 @@
       },
       "slot": "segundero",
       "largo": 452.61,
-      "bytes": 9414
+      "bytes": 9414,
+      "color": {
+        "rgb": [
+          214,
+          220,
+          227
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-32"
     },
     {
       "id": 411,
@@ -5660,7 +9463,16 @@
       },
       "slot": "segundero",
       "largo": 500.78,
-      "bytes": 8328
+      "bytes": 8328,
+      "color": {
+        "rgb": [
+          204,
+          210,
+          216
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-33"
     },
     {
       "id": 412,
@@ -5677,7 +9489,16 @@
       },
       "slot": "principal",
       "largo": 468.13,
-      "bytes": 16200
+      "bytes": 16200,
+      "color": {
+        "rgb": [
+          194,
+          200,
+          205
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-34"
     },
     {
       "id": 413,
@@ -5694,7 +9515,16 @@
       },
       "slot": "segundero",
       "largo": 452.75,
-      "bytes": 11868
+      "bytes": 11868,
+      "color": {
+        "rgb": [
+          206,
+          211,
+          217
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-35"
     },
     {
       "id": 414,
@@ -5711,7 +9541,16 @@
       },
       "slot": "segundero",
       "largo": 495.08,
-      "bytes": 9136
+      "bytes": 9136,
+      "color": {
+        "rgb": [
+          200,
+          205,
+          210
+        ],
+        "nombre": "Plata"
+      },
+      "modelo": "aguja-36"
     },
     {
       "id": 415,
@@ -5728,7 +9567,16 @@
       },
       "slot": "principal",
       "largo": 465.93,
-      "bytes": 21064
+      "bytes": 21064,
+      "color": {
+        "rgb": [
+          209,
+          49,
+          47
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-01"
     },
     {
       "id": 416,
@@ -5745,7 +9593,16 @@
       },
       "slot": "segundero",
       "largo": 490.85,
-      "bytes": 9374
+      "bytes": 9374,
+      "color": {
+        "rgb": [
+          211,
+          49,
+          47
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-02"
     },
     {
       "id": 417,
@@ -5762,7 +9619,16 @@
       },
       "slot": "segundero",
       "largo": 492.03,
-      "bytes": 9348
+      "bytes": 9348,
+      "color": {
+        "rgb": [
+          197,
+          55,
+          51
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-03"
     },
     {
       "id": 418,
@@ -5779,7 +9645,16 @@
       },
       "slot": "principal",
       "largo": 467.82,
-      "bytes": 18078
+      "bytes": 18078,
+      "color": {
+        "rgb": [
+          198,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-04"
     },
     {
       "id": 419,
@@ -5796,7 +9671,16 @@
       },
       "slot": "principal",
       "largo": 485.95,
-      "bytes": 10950
+      "bytes": 10950,
+      "color": {
+        "rgb": [
+          216,
+          54,
+          51
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-05"
     },
     {
       "id": 420,
@@ -5813,7 +9697,16 @@
       },
       "slot": "segundero",
       "largo": 485.71,
-      "bytes": 10150
+      "bytes": 10150,
+      "color": {
+        "rgb": [
+          191,
+          50,
+          47
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-06"
     },
     {
       "id": 421,
@@ -5830,7 +9723,16 @@
       },
       "slot": "principal",
       "largo": 461.46,
-      "bytes": 13720
+      "bytes": 13720,
+      "color": {
+        "rgb": [
+          205,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-07"
     },
     {
       "id": 422,
@@ -5847,7 +9749,16 @@
       },
       "slot": "segundero",
       "largo": 484.96,
-      "bytes": 8664
+      "bytes": 8664,
+      "color": {
+        "rgb": [
+          188,
+          40,
+          39
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-08"
     },
     {
       "id": 423,
@@ -5864,7 +9775,16 @@
       },
       "slot": "segundero",
       "largo": 484.72,
-      "bytes": 9758
+      "bytes": 9758,
+      "color": {
+        "rgb": [
+          192,
+          51,
+          47
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-09"
     },
     {
       "id": 424,
@@ -5881,7 +9801,16 @@
       },
       "slot": "principal",
       "largo": 471.3,
-      "bytes": 17568
+      "bytes": 17568,
+      "color": {
+        "rgb": [
+          206,
+          47,
+          45
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-10"
     },
     {
       "id": 425,
@@ -5898,7 +9827,16 @@
       },
       "slot": "segundero",
       "largo": 490.34,
-      "bytes": 13516
+      "bytes": 13516,
+      "color": {
+        "rgb": [
+          205,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-11"
     },
     {
       "id": 426,
@@ -5915,7 +9853,16 @@
       },
       "slot": "segundero",
       "largo": 489.76,
-      "bytes": 9794
+      "bytes": 9794,
+      "color": {
+        "rgb": [
+          204,
+          58,
+          53
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-12"
     },
     {
       "id": 427,
@@ -5932,7 +9879,16 @@
       },
       "slot": "segundero",
       "largo": 481.37,
-      "bytes": 11872
+      "bytes": 11872,
+      "color": {
+        "rgb": [
+          203,
+          41,
+          41
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-13"
     },
     {
       "id": 428,
@@ -5949,7 +9905,16 @@
       },
       "slot": "principal",
       "largo": 479.9,
-      "bytes": 15526
+      "bytes": 15526,
+      "color": {
+        "rgb": [
+          205,
+          41,
+          41
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-14"
     },
     {
       "id": 429,
@@ -5966,7 +9931,16 @@
       },
       "slot": "segundero",
       "largo": 494.86,
-      "bytes": 14448
+      "bytes": 14448,
+      "color": {
+        "rgb": [
+          199,
+          37,
+          37
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-15"
     },
     {
       "id": 430,
@@ -5983,7 +9957,16 @@
       },
       "slot": "principal",
       "largo": 463.39,
-      "bytes": 21228
+      "bytes": 21228,
+      "color": {
+        "rgb": [
+          211,
+          48,
+          46
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-16"
     },
     {
       "id": 431,
@@ -6000,7 +9983,16 @@
       },
       "slot": "principal",
       "largo": 464.47,
-      "bytes": 18912
+      "bytes": 18912,
+      "color": {
+        "rgb": [
+          217,
+          49,
+          46
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-17"
     },
     {
       "id": 432,
@@ -6017,7 +10009,16 @@
       },
       "slot": "principal",
       "largo": 476.59,
-      "bytes": 12324
+      "bytes": 12324,
+      "color": {
+        "rgb": [
+          208,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-18"
     },
     {
       "id": 433,
@@ -6034,7 +10035,16 @@
       },
       "slot": "principal",
       "largo": 466.35,
-      "bytes": 11832
+      "bytes": 11832,
+      "color": {
+        "rgb": [
+          217,
+          45,
+          44
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-19"
     },
     {
       "id": 434,
@@ -6051,7 +10061,16 @@
       },
       "slot": "principal",
       "largo": 432.78,
-      "bytes": 10822
+      "bytes": 10822,
+      "color": {
+        "rgb": [
+          207,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-20"
     },
     {
       "id": 435,
@@ -6068,7 +10087,16 @@
       },
       "slot": "principal",
       "largo": 475.86,
-      "bytes": 13112
+      "bytes": 13112,
+      "color": {
+        "rgb": [
+          208,
+          42,
+          42
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-21"
     },
     {
       "id": 436,
@@ -6085,7 +10113,16 @@
       },
       "slot": "principal",
       "largo": 463.56,
-      "bytes": 19850
+      "bytes": 19850,
+      "color": {
+        "rgb": [
+          212,
+          43,
+          42
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-22"
     },
     {
       "id": 437,
@@ -6102,7 +10139,16 @@
       },
       "slot": "principal",
       "largo": 432.79,
-      "bytes": 16462
+      "bytes": 16462,
+      "color": {
+        "rgb": [
+          212,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-23"
     },
     {
       "id": 438,
@@ -6119,7 +10165,16 @@
       },
       "slot": "principal",
       "largo": 478.07,
-      "bytes": 14718
+      "bytes": 14718,
+      "color": {
+        "rgb": [
+          202,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-24"
     },
     {
       "id": 439,
@@ -6136,7 +10191,16 @@
       },
       "slot": "principal",
       "largo": 472.35,
-      "bytes": 17054
+      "bytes": 17054,
+      "color": {
+        "rgb": [
+          216,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-25"
     },
     {
       "id": 440,
@@ -6153,7 +10217,16 @@
       },
       "slot": "principal",
       "largo": 479.56,
-      "bytes": 14774
+      "bytes": 14774,
+      "color": {
+        "rgb": [
+          217,
+          49,
+          47
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-26"
     },
     {
       "id": 441,
@@ -6170,7 +10243,16 @@
       },
       "slot": "principal",
       "largo": 478.07,
-      "bytes": 14718
+      "bytes": 14718,
+      "color": {
+        "rgb": [
+          202,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-24"
     },
     {
       "id": 442,
@@ -6187,7 +10269,16 @@
       },
       "slot": "principal",
       "largo": 472.35,
-      "bytes": 17054
+      "bytes": 17054,
+      "color": {
+        "rgb": [
+          216,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-25"
     },
     {
       "id": 443,
@@ -6204,7 +10295,16 @@
       },
       "slot": "principal",
       "largo": 479.56,
-      "bytes": 14774
+      "bytes": 14774,
+      "color": {
+        "rgb": [
+          217,
+          49,
+          47
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-26"
     },
     {
       "id": 444,
@@ -6221,7 +10321,16 @@
       },
       "slot": "segundero",
       "largo": 481.82,
-      "bytes": 13424
+      "bytes": 13424,
+      "color": {
+        "rgb": [
+          212,
+          48,
+          46
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-27"
     },
     {
       "id": 445,
@@ -6238,7 +10347,16 @@
       },
       "slot": "principal",
       "largo": 476.16,
-      "bytes": 11272
+      "bytes": 11272,
+      "color": {
+        "rgb": [
+          187,
+          37,
+          37
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-28"
     },
     {
       "id": 446,
@@ -6255,7 +10373,16 @@
       },
       "slot": "segundero",
       "largo": 485.79,
-      "bytes": 9994
+      "bytes": 9994,
+      "color": {
+        "rgb": [
+          182,
+          37,
+          36
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-29"
     },
     {
       "id": 447,
@@ -6272,7 +10399,16 @@
       },
       "slot": "segundero",
       "largo": 491.73,
-      "bytes": 8848
+      "bytes": 8848,
+      "color": {
+        "rgb": [
+          200,
+          41,
+          40
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-30"
     },
     {
       "id": 448,
@@ -6289,7 +10425,16 @@
       },
       "slot": "principal",
       "largo": 475.43,
-      "bytes": 14024
+      "bytes": 14024,
+      "color": {
+        "rgb": [
+          206,
+          33,
+          34
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-31"
     },
     {
       "id": 449,
@@ -6306,7 +10451,16 @@
       },
       "slot": "segundero",
       "largo": 452.61,
-      "bytes": 9644
+      "bytes": 9644,
+      "color": {
+        "rgb": [
+          217,
+          44,
+          43
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-32"
     },
     {
       "id": 450,
@@ -6323,7 +10477,16 @@
       },
       "slot": "segundero",
       "largo": 500.78,
-      "bytes": 8512
+      "bytes": 8512,
+      "color": {
+        "rgb": [
+          208,
+          42,
+          41
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-33"
     },
     {
       "id": 451,
@@ -6340,7 +10503,16 @@
       },
       "slot": "principal",
       "largo": 468.13,
-      "bytes": 16402
+      "bytes": 16402,
+      "color": {
+        "rgb": [
+          202,
+          46,
+          44
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-34"
     },
     {
       "id": 452,
@@ -6357,7 +10529,16 @@
       },
       "slot": "segundero",
       "largo": 452.75,
-      "bytes": 11710
+      "bytes": 11710,
+      "color": {
+        "rgb": [
+          211,
+          46,
+          45
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-35"
     },
     {
       "id": 453,
@@ -6374,7 +10555,16 @@
       },
       "slot": "segundero",
       "largo": 481.57,
-      "bytes": 8746
+      "bytes": 8746,
+      "color": {
+        "rgb": [
+          205,
+          45,
+          44
+        ],
+        "nombre": "Rojo"
+      },
+      "modelo": "aguja-36"
     }
   ],
   "omitidas": [
@@ -6394,5 +10584,6 @@
       "id": 306,
       "motivo": "render"
     }
-  ]
+  ],
+  "medidoPor": "scripts/medir-piezas-reloj.py"
 }
