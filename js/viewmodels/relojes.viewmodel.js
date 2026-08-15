@@ -478,7 +478,10 @@
                 }
 
                 const total = arrastre.recorrido.ids.length;
-                const posicion = Math.max(0, Math.min(total - 1, arrastre.base + dx / vista.FICHA));
+                // Restar y no sumar: la tira tiene que acompanar al dedo. Al
+                // arrastrar hacia la derecha las fichas viajan a la derecha y
+                // entra la pieza anterior, como cualquier carrusel del sistema.
+                const posicion = Math.max(0, Math.min(total - 1, arrastre.base - dx / vista.FICHA));
                 vista.moverCarrusel(arrastre.fichas, posicion);
 
                 const destino = Math.round(posicion);

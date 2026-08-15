@@ -222,20 +222,33 @@ body.relojes-page main.watch-builder.page-shell {
         var(--gold) 80px, var(--gold) 90px);
 }
 
-.watch-carousel__label {
+/* Ambos rótulos van en burbuja: quedan sobre el reloj, que puede ser negro,
+   y un texto suelto se volvía ilegible según la correa y el dial elegidos. */
+.watch-carousel__label,
+.watch-swipe-hint {
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 50%;
     top: 8px;
-    z-index: 4;
+    transform: translateX(-50%);
+    max-width: calc(100% - 24px);
     margin: 0;
-    text-align: center;
-    font-size: 0.78rem;
+    padding: 5px 13px;
+    border-radius: 999px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     letter-spacing: 0.03em;
-    color: var(--black-strong);
-    opacity: 0;
     pointer-events: none;
     transition: opacity 220ms ease;
+}
+
+.watch-carousel__label {
+    z-index: 4;
+    font-size: 0.78rem;
+    color: var(--gold-light);
+    background: var(--black-strong);
+    border: 1px solid var(--gold);
+    opacity: 0;
 }
 
 .watch-builder.is-carruseleando .watch-carousel__label {
@@ -245,18 +258,13 @@ body.relojes-page main.watch-builder.page-shell {
 /* Guía permanente: se apaga mientras el carrusel está a la vista. Va arriba
    porque el reloj ocupa el alto entero del stage y abajo flotan los botones. */
 .watch-swipe-hint {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 8px;
-    margin: 0;
-    text-align: center;
+    z-index: 3;
     font-size: 0.7rem;
-    letter-spacing: 0.03em;
-    color: var(--text-gray);
-    opacity: 0.75;
-    pointer-events: none;
-    transition: opacity 220ms ease;
+    color: var(--black-soft);
+    background: rgba(250, 248, 243, 0.88);
+    border: 1px solid var(--gold-border);
+    backdrop-filter: blur(4px);
+    opacity: 0.92;
 }
 
 .watch-swipe-hint span {
