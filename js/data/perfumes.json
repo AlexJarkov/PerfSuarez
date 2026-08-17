@@ -3879,13 +3879,13 @@
     "nombre": "Le Beau Le Parfum",
     "precio_completo": {
       "ml": 125,
-      "precio": 1380
+      "precio": 1690
     },
     "precios_decants": {
-      "5": 100,
-      "10": 170,
-      "15": 240,
-      "30": 460
+      "5": 120,
+      "10": 200,
+      "15": 290,
+      "30": 560
     },
     "precio_combo": {
       "125": 1614
