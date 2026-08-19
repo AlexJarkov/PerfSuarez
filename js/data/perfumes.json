@@ -442,6 +442,62 @@
     "decants_auto_ml": 125
   },
   {
+    "nombre": "Delina Exclusif",
+    "marca": "Parfums de Marly",
+    "nombre_interno": "Parfums de Marly Delina Exclusif",
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/marly/DELINA-EXCLUSIF.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/DELINA-EXCLUSIF.png",
+    "image_cuadro": null,
+    "tags": [
+      "mujer",
+      "nicho"
+    ],
+    "precios_decants": {
+      "5": 400,
+      "10": 770,
+      "15": 1140,
+      "30": 2240
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 75,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 75,
+      "precio": 4260
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Lichi",
+        "Pera",
+        "Bergamota",
+        "Pimienta rosa",
+        "Toronja (pomelo)"
+      ],
+      "corazon": [
+        "Rosa turca",
+        "Madera de oud",
+        "Incienso"
+      ],
+      "fondo": [
+        "Vainilla",
+        "Ámbar",
+        "Notas amaderadas",
+        "Almizcle",
+        "Evernil",
+        "Vetiver"
+      ]
+    },
+    "id": "delina-exclusif-parfums-de-marly"
+  },
+  {
     "id": "santal-33-le-labo",
     "nombre_interno": "Le Labo Santal 33",
     "marca": "Le Labo",
@@ -615,7 +671,7 @@
       "mujer"
     ],
     "etiqueta": "novedad",
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/mancera/RED TOBACCO.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/RED TOBACCO.png",
@@ -1193,7 +1249,7 @@
       "nicho"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/marly/PERCIVAL.webp",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/PERCIVAL.png",
@@ -2837,18 +2893,18 @@
     "precio_completo": [
       {
         "ml": 100,
-        "precio": 2200
+        "precio": 1990
       },
       {
         "ml": 200,
-        "precio": 2490
+        "precio": 2120
       }
     ],
     "precios_decants": {
-      "5": 130,
-      "10": 250,
-      "15": 360,
-      "30": 670
+      "5": 160,
+      "10": 290,
+      "15": 420,
+      "30": 800
     },
     "precio_combo": {
       "100": 1612
@@ -2885,12 +2941,10 @@
     },
     "image_cuadro": "imagenes/fotos-cuadros/Y-EDP.jpeg",
     "oferta": false,
-    "precios_decants_oferta": {
-      "5": 80,
-      "10": 150,
-      "15": 220,
-      "30": 410
-    }
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "invictus-victory-elixir-rabanne",
@@ -3073,13 +3127,13 @@
     "nombre": "Le Male Le Parfum",
     "precio_completo": {
       "ml": 125,
-      "precio": 1510
+      "precio": 1310
     },
     "precios_decants": {
-      "5": 110,
-      "10": 210,
-      "15": 300,
-      "30": 570
+      "5": 100,
+      "10": 160,
+      "15": 230,
+      "30": 440
     },
     "precio_combo": null,
     "precio_cuadro": 350,
@@ -3090,8 +3144,8 @@
     "etiqueta": null,
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": "imagenes/fotos-catalogo/jpg/LE MALE LE PARFUM.webp",
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE MALE LE PARFUM.png",
+    "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Fjpg%2FLE%20MALE%20LE%20PARFUM.webp",
+    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FLE%20MALE%20LE%20PARFUM.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -3108,14 +3162,12 @@
         "Notas amaderadas"
       ]
     },
-    "image_cuadro": "imagenes/fotos-cuadros/LE-MALE-LE-PARFUM.jpeg",
+    "image_cuadro": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-cuadros%2FLE-MALE-LE-PARFUM.jpeg",
     "oferta": false,
-    "precios_decants_oferta": {
-      "5": 80,
-      "10": 150,
-      "15": 220,
-      "30": 410
-    }
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 125
   },
   {
     "id": "uomo-born-in-roma-intense-valentino",
@@ -3124,13 +3176,13 @@
     "nombre": "Uomo Born In Roma Intense",
     "precio_completo": {
       "ml": 100,
-      "precio": 2000
+      "precio": 2090
     },
     "precios_decants": {
       "5": 160,
-      "10": 290,
-      "15": 420,
-      "30": 810
+      "10": 300,
+      "15": 440,
+      "30": 840
     },
     "precio_combo": null,
     "tags": [
@@ -3934,13 +3986,13 @@
     "nombre": "Ultra Male",
     "precio_completo": {
       "ml": 125,
-      "precio": 1800
+      "precio": 1460
     },
     "precios_decants": {
-      "5": 120,
-      "10": 220,
-      "15": 310,
-      "30": 590
+      "5": 100,
+      "10": 180,
+      "15": 260,
+      "30": 480
     },
     "precio_combo": null,
     "tags": [
@@ -4135,6 +4187,55 @@
     "decants_auto": true,
     "decants_auto_base": "normal",
     "decants_auto_ml": 100
+  },
+  {
+    "nombre": "Ombré Leather Parfum",
+    "marca": "Tom Ford",
+    "nombre_interno": "Tom Ford Ombré Leather Parfum",
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/tomford/OMBRE-LEATHER-PARFUM.avif",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/OMBRE-LEATHER-PARFUM.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "tomford"
+    ],
+    "precios_decants": {
+      "5": 220,
+      "10": 410,
+      "15": 610,
+      "30": 1190
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 2970
+    },
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Hojas de violeta",
+        "Cedro"
+      ],
+      "corazon": [
+        "Jazmín sambac (sampaguita)",
+        "Raíz de lirio"
+      ],
+      "fondo": [
+        "Cuero",
+        "Notas amaderadas",
+        "Tabaco"
+      ]
+    },
+    "id": "ombre-leather-parfum-tom-ford"
   },
   {
     "id": "eau-d-ombre-leather-tom-ford",
@@ -5404,9 +5505,14 @@
     "nombre": "Born In Roma Intense",
     "precio_completo": {
       "ml": 100,
-      "precio": 2180
+      "precio": 2090
     },
-    "precios_decants": null,
+    "precios_decants": {
+      "5": 160,
+      "10": 300,
+      "15": 440,
+      "30": 840
+    },
     "precio_combo": {
       "100": 1535
     },
@@ -5434,7 +5540,10 @@
     "oferta": false,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "donna-born-in-roma-intense-valentino",
@@ -5493,13 +5602,13 @@
     "nombre": "Uomo Born In Roma Coral Fantasy",
     "precio_completo": {
       "ml": 100,
-      "precio": 2180
+      "precio": 1880
     },
     "precios_decants": {
-      "5": 170,
-      "10": 310,
-      "15": 450,
-      "30": 880
+      "5": 150,
+      "10": 270,
+      "15": 400,
+      "30": 760
     },
     "precio_combo": null,
     "tags": [
@@ -5544,9 +5653,14 @@
     "nombre": "Born In Roma Coral Fantasy",
     "precio_completo": {
       "ml": 100,
-      "precio": 2180
+      "precio": 1880
     },
-    "precios_decants": null,
+    "precios_decants": {
+      "5": 150,
+      "10": 270,
+      "15": 400,
+      "30": 760
+    },
     "precio_combo": {
       "100": 1534
     },
@@ -5560,6 +5674,7 @@
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Manzana roja",
         "Cardamomo",
@@ -5575,7 +5690,14 @@
         "Pachulí",
         "Vetiver haitiano"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null
   },
   {
     "id": "stronger-with-you-parfum-emporio-armani",
@@ -5914,13 +6036,13 @@
     "nombre": "Y Iced Cologne",
     "precio_completo": {
       "ml": 100,
-      "precio": 1800
+      "precio": 1920
     },
     "precios_decants": {
       "5": 150,
-      "10": 260,
-      "15": 380,
-      "30": 730
+      "10": 280,
+      "15": 400,
+      "30": 780
     },
     "precio_combo": null,
     "tags": [
@@ -5999,10 +6121,10 @@
     "nombre": "Y EDT",
     "precio_completo": {
       "ml": 100,
-      "precio": 1800
+      "precio": 1790
     },
     "precios_decants": {
-      "5": 150,
+      "5": 140,
       "10": 260,
       "15": 380,
       "30": 730
@@ -6317,13 +6439,13 @@
     "nombre": "Luna Rossa Carbon EDT",
     "precio_completo": {
       "ml": 100,
-      "precio": 1450
+      "precio": 1270
     },
     "precios_decants": {
-      "5": 120,
-      "10": 220,
-      "15": 310,
-      "30": 590
+      "5": 110,
+      "10": 190,
+      "15": 280,
+      "30": 520
     },
     "precio_combo": null,
     "tags": [
@@ -7054,13 +7176,13 @@
     "nombre": "Spicebomb Extreme",
     "precio_completo": {
       "ml": 90,
-      "precio": 1500
+      "precio": 1130
     },
     "precios_decants": {
-      "5": 140,
-      "10": 250,
-      "15": 350,
-      "30": 680
+      "5": 110,
+      "10": 190,
+      "15": 270,
+      "30": 520
     },
     "precio_combo": null,
     "tags": [
@@ -8047,13 +8169,13 @@
     "nombre": "Paradoxe",
     "precio_completo": {
       "ml": 90,
-      "precio": 2020
+      "precio": 1900
     },
     "precios_decants": {
-      "5": 180,
-      "10": 340,
-      "15": 490,
-      "30": 920
+      "5": 170,
+      "10": 300,
+      "15": 440,
+      "30": 850
     },
     "precio_combo": null,
     "tags": [
@@ -8088,12 +8210,10 @@
     "image_cuadro": null,
     "precio_cuadro": null,
     "oferta": false,
-    "precios_decants_oferta": {
-      "5": 130,
-      "10": 250,
-      "15": 350,
-      "30": 660
-    }
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 90
   },
   {
     "id": "miss-dior-blooming-bouquet-dior",
@@ -9532,7 +9652,7 @@
       "givenchy"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/givenchy/Untitled.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/GENTLEMAN RESERVE PRIVEE.png",
@@ -10588,13 +10708,13 @@
     "nombre": "Donna Born In Roma Extradose",
     "precio_completo": {
       "ml": 100,
-      "precio": 2090
+      "precio": 2000
     },
     "precios_decants": {
       "5": 160,
-      "10": 300,
-      "15": 440,
-      "30": 840
+      "10": 290,
+      "15": 420,
+      "30": 810
     },
     "precio_combo": null,
     "tags": [
@@ -10667,13 +10787,13 @@
     "nombre": "Donna Born In Roma Green Stravaganza",
     "precio_completo": {
       "ml": 100,
-      "precio": 1840
+      "precio": 2440
     },
     "precios_decants": {
-      "5": 120,
-      "10": 240,
-      "15": 340,
-      "30": 620
+      "5": 190,
+      "10": 350,
+      "15": 500,
+      "30": 980
     },
     "precio_combo": {
       "100": 1390
@@ -10703,7 +10823,10 @@
     "image_cuadro": null,
     "precio_cuadro": null,
     "oferta": false,
-    "precios_decants_oferta": null
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "uomo-born-in-roma-purple-melancholia-valentino",
@@ -10712,13 +10835,13 @@
     "nombre": "Uomo Born In Roma Purple Melancholia",
     "precio_completo": {
       "ml": 100,
-      "precio": 1980
+      "precio": 1880
     },
     "precios_decants": {
-      "5": 160,
-      "10": 290,
-      "15": 410,
-      "30": 800
+      "5": 150,
+      "10": 270,
+      "15": 400,
+      "30": 760
     },
     "precio_combo": null,
     "tags": [
@@ -10758,13 +10881,13 @@
     "nombre": "Donna Born In Roma Purple Melancholia",
     "precio_completo": {
       "ml": 100,
-      "precio": 2270
+      "precio": 2440
     },
     "precios_decants": {
-      "5": 150,
-      "10": 270,
-      "15": 380,
-      "30": 720
+      "5": 190,
+      "10": 350,
+      "15": 500,
+      "30": 980
     },
     "precio_combo": null,
     "tags": [
@@ -10778,10 +10901,18 @@
     "image_miniatura_decant": null,
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [],
       "corazon": [],
       "fondo": []
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null
   },
   {
     "id": "born-in-roma-purple-melancholia-valentino",
@@ -10790,9 +10921,14 @@
     "nombre": "Born In Roma Purple Melancholia",
     "precio_completo": {
       "ml": 100,
-      "precio": 1980
+      "precio": 1880
     },
-    "precios_decants": null,
+    "precios_decants": {
+      "5": 150,
+      "10": 270,
+      "15": 400,
+      "30": 760
+    },
     "precio_combo": null,
     "tags": [
       "hombre valentino"
@@ -10817,7 +10953,12 @@
       ]
     },
     "image_cuadro": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "oferta": false,
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "uomo-born-in-roma-edt-valentino",
@@ -10826,13 +10967,13 @@
     "nombre": "Uomo Born In Roma EDT",
     "precio_completo": {
       "ml": 100,
-      "precio": 1400
+      "precio": 1880
     },
     "precios_decants": {
-      "5": 120,
-      "10": 210,
-      "15": 300,
-      "30": 570
+      "5": 150,
+      "10": 270,
+      "15": 400,
+      "30": 760
     },
     "precio_combo": null,
     "tags": [
@@ -11881,13 +12022,13 @@
     "nombre": "Spicebomb Infrared Eau de Parfum",
     "precio_completo": {
       "ml": 90,
-      "precio": 1130
+      "precio": 1270
     },
     "precios_decants": {
-      "5": 110,
-      "10": 190,
-      "15": 270,
-      "30": 520
+      "5": 120,
+      "10": 210,
+      "15": 300,
+      "30": 580
     },
     "precio_combo": null,
     "tags": [
@@ -13341,17 +13482,15 @@
     "nombre": "Toy Boy",
     "precio_completo": {
       "ml": 100,
-      "precio": 1350
+      "precio": 600
     },
     "precios_decants": {
-      "5": 90,
-      "10": 170,
-      "15": 250,
-      "30": 470
+      "5": 70,
+      "10": 110,
+      "15": 150,
+      "30": 260
     },
-    "precio_combo": {
-      "100": 515
-    },
+    "precio_combo": null,
     "tags": [
       "hombre"
     ],
@@ -13387,7 +13526,10 @@
     "oferta": false,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "sauvage-eau-forte-dior",
@@ -13745,13 +13887,13 @@
     "nombre": "The Icon",
     "precio_completo": {
       "ml": 150,
-      "precio": 490
+      "precio": 330
     },
     "precios_decants": {
-      "5": 70,
-      "10": 110,
-      "15": 160,
-      "30": 310
+      "5": 40,
+      "10": 60,
+      "15": 70,
+      "30": 110
     },
     "precio_combo": null,
     "tags": [
@@ -13764,6 +13906,7 @@
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/THE ICON EDT.jpeg",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Pomelo",
         "Pimienta negra"
@@ -13776,7 +13919,14 @@
         "Sándalo",
         "Musgo de roble"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 150,
+    "precio_cuadro": null
   },
   {
     "id": "khamrah-lattafa",
