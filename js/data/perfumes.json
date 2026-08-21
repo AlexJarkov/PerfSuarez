@@ -347,9 +347,7 @@
       "15": 500,
       "30": 980
     },
-    "precio_combo": {
-      "100": 2338
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "mujer",
@@ -405,7 +403,9 @@
       "15": 650,
       "30": 1260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 3533
+    },
     "tags": [
       "hombre",
       "marly",
