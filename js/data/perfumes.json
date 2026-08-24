@@ -3599,6 +3599,58 @@
     "precio_cuadro": null
   },
   {
+    "nombre": "Allure Homme Sport Superleggera",
+    "marca": "Chanel",
+    "nombre_interno": "Chanel Allure Homme Sport Superleggera",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/chanel/ALLURE-HOMME-SPORT-SUPPERLEGGERA.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ALLURE-HOMME-SPORT-SUPPERLEGGERA.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "chanel"
+    ],
+    "precios_decants": {
+      "5": 150,
+      "10": 280,
+      "15": 400,
+      "30": 780
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1930,
+      "en_stock": false
+    },
+    "en_stock_completos": false,
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Cítricos",
+        "Mandarina",
+        "Toronja (pomelo)"
+      ],
+      "corazon": [
+        "Notas amaderadas",
+        "Cedro"
+      ],
+      "fondo": [
+        "Almizcle blanco",
+        "Ámbar",
+        "Pachulí",
+        "Sándalo"
+      ]
+    },
+    "id": "allure-homme-sport-superleggera-chanel"
+  },
+  {
     "id": "bleu-de-chanel-parfum-chanel",
     "nombre_interno": "Bleu de Chanel Parfum",
     "marca": "Chanel",
@@ -7315,21 +7367,24 @@
     "nombre": "212 VIP Men Black Elixir",
     "precio_completo": {
       "ml": 100,
-      "precio": 1128
+      "precio": 1150,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 100,
       "10": 180,
       "15": 250,
-      "30": 470
+      "30": 480
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1128
+    },
     "tags": [
       "hombre",
       "carolina"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
+    "en_stock_completos": false,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/ch/212 VIP MEN BLACK ELIXIR.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/212 VIP MEN BLACK ELIXIR.png",
@@ -13947,7 +14002,8 @@
     "nombre": "The Icon",
     "precio_completo": {
       "ml": 150,
-      "precio": 330
+      "precio": 330,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 40,
@@ -13960,7 +14016,7 @@
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
+    "en_stock_completos": false,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/banderas/THE ICON EDT.png",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/THE ICON EDT.jpeg",
@@ -15521,7 +15577,8 @@
     "precio_cuadro": null,
     "precio_completo": {
       "ml": 100,
-      "precio": 1650
+      "precio": 1650,
+      "en_stock": false
     },
     "precio_combo": null,
     "notas": {
