@@ -217,6 +217,64 @@
     "decants_auto_ml": 120
   },
   {
+    "nombre": "Vibrato",
+    "marca": "Sospiro Perfumes",
+    "nombre_interno": "",
+    "etiqueta": null,
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/nicho/SOSPIRO.jpeg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/SOSPIRO.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "nicho",
+      "sospiro"
+    ],
+    "precios_decants": {
+      "5": 220,
+      "10": 410,
+      "15": 590,
+      "30": 1160
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 2900,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "100": 2750
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Toronja (pomelo)",
+        "Bergamota",
+        "Jazmín",
+        "Magnolia"
+      ],
+      "corazon": [
+        "Jengibre",
+        "Notas herbales",
+        "Notas atalcadas"
+      ],
+      "fondo": [
+        "Almizcle",
+        "Cedro",
+        "Ámbar",
+        "Pachulí",
+        "Raíz de lirio"
+      ]
+    },
+    "id": "vibrato-sospiro-perfumes"
+  },
+  {
     "id": "erba-pura-xerjoff",
     "nombre_interno": "Xerjoff Erba Pura",
     "marca": "Xerjoff",
@@ -593,6 +651,58 @@
     "decants_auto_base": "normal",
     "decants_auto_ml": 50,
     "precio_cuadro": null
+  },
+  {
+    "nombre": "Tuxedo",
+    "marca": "Yves Saint Laurent",
+    "nombre_interno": "Yves Saint Laurent Tuxedo",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ysl/TUXEDO.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/TUXEDO.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "ysl"
+    ],
+    "precios_decants": {
+      "5": 290,
+      "10": 560,
+      "15": 830,
+      "30": 1630
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 75,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 75,
+      "precio": 3070,
+      "en_stock": false
+    },
+    "en_stock_completos": false,
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Hojas de violeta",
+        "Cilantro",
+        "Bergamota"
+      ],
+      "corazon": [
+        "Rosa",
+        "Pimienta negra",
+        "Lirio de los valles (muguete)"
+      ],
+      "fondo": [
+        "Pachulí",
+        "Vainilla Bourbon",
+        "Ámbar Gris"
+      ]
+    },
+    "id": "tuxedo-yves-saint-laurent"
   },
   {
     "nombre": "Black Afgano",
@@ -4007,7 +4117,8 @@
     "nombre": "Le Beau Le Parfum",
     "precio_completo": {
       "ml": 125,
-      "precio": 1690
+      "precio": 1690,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 120,
@@ -4016,7 +4127,7 @@
       "30": 560
     },
     "precio_combo": {
-      "125": 1614
+      "125": 1548
     },
     "tags": [
       "hombre",
@@ -7267,6 +7378,54 @@
     }
   },
   {
+    "nombre": "Wanted Tonic",
+    "marca": "Azzaro",
+    "nombre_interno": "Azzaro Wanted Tonic",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/azzaro/WANTED-TONIC.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/AZZARO-WANTED-TONIC.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "azzaro"
+    ],
+    "precios_decants": {
+      "5": 90,
+      "10": 150,
+      "15": 210,
+      "30": 390
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 930,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "100": 549
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Lima (Limón verde)"
+      ],
+      "corazon": [
+        "Jengibre"
+      ],
+      "fondo": [
+        "Pachulí"
+      ]
+    },
+    "id": "wanted-tonic-azzaro"
+  },
+  {
     "id": "spicebomb-extreme-viktor-rolf",
     "nombre_interno": "Viktor&Rolf Spicebomb Extreme",
     "marca": "Viktor&Rolf",
@@ -7361,6 +7520,65 @@
     "decants_auto_ml": 100
   },
   {
+    "nombre": "212 Men",
+    "marca": "Carolina Herrera",
+    "nombre_interno": "Carolina Herrera 212 Men",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ch/212_Men.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/212-MEN.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "ch"
+    ],
+    "precios_decants": {
+      "5": 90,
+      "10": 150,
+      "15": 220,
+      "30": 400
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 960,
+      "en_stock": false
+    },
+    "en_stock_completos": false,
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Notas verdes",
+        "Toronja (pomelo)",
+        "Especias",
+        "Bergamota",
+        "Lavanda",
+        "Petit Grain"
+      ],
+      "corazon": [
+        "Jengibre",
+        "Violeta",
+        "Gardenia",
+        "Salvia"
+      ],
+      "fondo": [
+        "Almizcle",
+        "Sándalo",
+        "Incienso",
+        "Vetiver",
+        "Madera de gaiac",
+        "Ládano"
+      ]
+    },
+    "id": "212-men-carolina-herrera"
+  },
+  {
     "id": "212-vip-men-black-elixir-carolina-herrera",
     "nombre_interno": "Carolina Herrera 212 VIP Men Black Elixir",
     "marca": "Carolina Herrera",
@@ -7368,7 +7586,7 @@
     "precio_completo": {
       "ml": 100,
       "precio": 1150,
-      "en_stock": false
+      "en_stock": true
     },
     "precios_decants": {
       "5": 100,
@@ -7384,7 +7602,7 @@
       "carolina"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/ch/212 VIP MEN BLACK ELIXIR.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/212 VIP MEN BLACK ELIXIR.png",
@@ -11786,6 +12004,56 @@
     "decants_auto_ml": 80
   },
   {
+    "nombre": "La Bomba Intensa",
+    "marca": "Carolina Herrera",
+    "nombre_interno": "Carolina Herrera La Bomba Intensa",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ch/LA-BOMBA-INTENSE.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA-BOMBA-INTENSE.png",
+    "image_cuadro": null,
+    "tags": [
+      "mujer",
+      "ch"
+    ],
+    "precios_decants": {
+      "5": 150,
+      "10": 270,
+      "15": 400,
+      "30": 760
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 80,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 80,
+      "precio": 1510,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Bayas",
+        "Frambuesa",
+        "Bergamota"
+      ],
+      "corazon": [
+        "Orquídea",
+        "Flor de azahar del naranjo"
+      ],
+      "fondo": [
+        "Ámbar rojo",
+        "Pachulí"
+      ]
+    },
+    "id": "la-bomba-intensa-carolina-herrera"
+  },
+  {
     "id": "acqua-di-gio-absolu-giorgio-armani",
     "nombre_interno": "Giorgio Armani Acqua Di Gio Absolu",
     "marca": "Giorgio Armani",
@@ -11936,7 +12204,8 @@
     "nombre": "Stronger With You Powerfully",
     "precio_completo": {
       "ml": 100,
-      "precio": 2200
+      "precio": 2200,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 170,
@@ -11944,7 +12213,9 @@
       "15": 460,
       "30": 890
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1950
+    },
     "tags": [
       "hombre",
       "armani"
@@ -11986,7 +12257,8 @@
     "nombre": "Power Of You",
     "precio_completo": {
       "ml": 90,
-      "precio": 1710
+      "precio": 1710,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 150,
@@ -11994,7 +12266,9 @@
       "15": 400,
       "30": 770
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 1590
+    },
     "tags": [
       "mujer"
     ],
@@ -12327,11 +12601,13 @@
     "precio_completo": [
       {
         "ml": 100,
-        "precio": 1490
+        "precio": 1490,
+        "en_stock": false
       },
       {
         "ml": 200,
-        "precio": 2160
+        "precio": 2160,
+        "en_stock": true
       }
     ],
     "precios_decants": {
@@ -12444,11 +12720,13 @@
     "precio_completo": [
       {
         "ml": 100,
-        "precio": 1220
+        "precio": 1220,
+        "en_stock": false
       },
       {
         "ml": 200,
-        "precio": 1870
+        "precio": 1870,
+        "en_stock": true
       }
     ],
     "precios_decants": {
@@ -12466,7 +12744,7 @@
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/d&g/30494500000.png",
     "image_miniatura_decant": null,
     "images_gallery": [],
@@ -13653,19 +13931,29 @@
     "nombre_interno": "Dior Sauvage Eau Forte",
     "marca": "Dior",
     "nombre": "Sauvage Eau Forte",
-    "precio_completo": null,
-    "precios_decants": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 2730,
+      "en_stock": false
+    },
+    "precios_decants": {
+      "5": 210,
+      "10": 380,
+      "15": 560,
+      "30": 1090
+    },
     "precio_combo": null,
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": null,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/dior/SAUVAGE-EAU-FORTE.webp",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE EAU FORTE.JPEG",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Especias",
         "Resina de elemi"
@@ -13677,7 +13965,14 @@
         "Almizcle",
         "Notas amaderadas"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null
   },
   {
     "id": "dior-fahrenheit-dior",
@@ -14781,15 +15076,18 @@
     "precio_completo": {
       "ml": 100,
       "precio": 580,
-      "precio_oferta": 500
+      "precio_oferta": 500,
+      "en_stock": true
     },
     "precios_decants": {
-      "5": 60,
-      "10": 110,
-      "15": 150,
-      "30": 260
+      "5": 70,
+      "10": 100,
+      "15": 140,
+      "30": 250
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 429
+    },
     "tags": [
       "mujer",
       "lattafa",
@@ -14820,8 +15118,16 @@
     },
     "oferta": true,
     "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precios_decants_oferta": {
+      "5": 60,
+      "10": 90,
+      "15": 130,
+      "30": 220
+    },
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "9am-dive-afnan",
@@ -14831,16 +15137,17 @@
     "precio_completo": {
       "ml": 100,
       "precio": 580,
-      "precio_oferta": 500
+      "precio_oferta": 500,
+      "en_stock": true
     },
     "precios_decants": {
-      "5": 60,
-      "10": 110,
-      "15": 150,
-      "30": 260
+      "5": 70,
+      "10": 100,
+      "15": 140,
+      "30": 250
     },
     "precio_combo": {
-      "100": 430
+      "100": 436
     },
     "tags": [
       "hombre",
@@ -14875,8 +15182,16 @@
     },
     "oferta": true,
     "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precios_decants_oferta": {
+      "5": 60,
+      "10": 90,
+      "15": 130,
+      "30": 220
+    },
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "turathi-blue-afnan",
@@ -15056,7 +15371,8 @@
     "precio_completo": {
       "ml": 120,
       "precio": 1060,
-      "precio_oferta": 910
+      "precio_oferta": 910,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 90,
@@ -15064,7 +15380,9 @@
       "15": 200,
       "30": 370
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "120": 722
+    },
     "tags": [
       "hombre",
       "rasasi",
@@ -15280,7 +15598,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 580,
-      "precio_oferta": 500
+      "precio_oferta": 500,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 70,
@@ -15288,7 +15607,9 @@
       "15": 140,
       "30": 250
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 447
+    },
     "tags": [
       "hombre",
       "lattafa",
@@ -16910,7 +17231,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 770,
-      "precio_oferta": 660
+      "precio_oferta": 660,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 80,
@@ -16919,7 +17241,7 @@
       "30": 330
     },
     "precio_combo": {
-      "100": 558
+      "100": 593
     },
     "tags": [
       "hombre rasasi arabes"
@@ -17692,21 +18014,33 @@
     "nombre_interno": "Lattafa His Confession",
     "marca": "Lattafa",
     "nombre": "His Confession",
-    "precio_completo": null,
-    "precios_decants": null,
-    "precio_combo": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 650,
+      "en_stock": true
+    },
+    "precios_decants": {
+      "5": 70,
+      "10": 110,
+      "15": 160,
+      "30": 280
+    },
+    "precio_combo": {
+      "100": 603
+    },
     "tags": [
       "hombre",
       "lattafa",
       "arabes"
     ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/arabes/HIS CONFESSION.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/HIS CONFESSION.png",
     "images_gallery": [],
     "notas": {
+      "generales": [],
       "salida": [
         "Lavanda",
         "Canela",
@@ -17726,7 +18060,14 @@
         "Cedro",
         "Pachulí"
       ]
-    }
+    },
+    "oferta": false,
+    "image_cuadro": null,
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null
   },
   {
     "id": "her-confession-lattafa",
@@ -18356,7 +18697,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 580,
-      "precio_oferta": 500
+      "precio_oferta": 500,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 70,
@@ -18365,7 +18707,7 @@
       "30": 250
     },
     "precio_combo": {
-      "100": 388
+      "100": 389
     },
     "tags": [
       "unisex",
@@ -18632,7 +18974,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 580,
-      "precio_oferta": 500
+      "precio_oferta": 500,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 70,
@@ -18648,7 +18991,7 @@
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": null,
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/LATTAFA AL NOBLE SAFEER.png",
     "images_gallery": [],
@@ -18673,7 +19016,7 @@
         "Cashmeran"
       ]
     },
-    "oferta": true,
+    "oferta": false,
     "image_cuadro": null,
     "precios_decants_oferta": {
       "5": 60,
