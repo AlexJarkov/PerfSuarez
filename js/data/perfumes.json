@@ -5328,7 +5328,7 @@
     "etiqueta": null,
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/paco/1M-LUCKY.jpeg",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2F1MILLION%20LUCKY.png",
     "images_gallery": [],
     "notas": {
@@ -16914,13 +16914,14 @@
     "nombre": "Hawas For Her",
     "precio_completo": {
       "ml": 100,
-      "precio": 710
+      "precio": 710,
+      "en_stock": true
     },
     "precios_decants": {
-      "5": 60,
-      "10": 110,
-      "15": 160,
-      "30": 260
+      "5": 70,
+      "10": 120,
+      "15": 170,
+      "30": 310
     },
     "precio_combo": {
       "100": 429
@@ -16931,7 +16932,7 @@
     "etiqueta": "novedad",
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS-HER.jpeg",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fmujer%2FHAWAS%20FOR%20HER.png",
     "images_gallery": [],
     "notas": {
@@ -16955,7 +16956,10 @@
     "oferta": true,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "hawas-tropical-rasasi",
@@ -18454,7 +18458,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 820,
-      "precio_oferta": 700
+      "precio_oferta": 700,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 80,
@@ -18471,7 +18476,7 @@
     "etiqueta": null,
     "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/9PM-NIGHT-OUT.webp",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2F9PM%20NIGHT%20OUT.png",
     "images_gallery": [],
     "notas": {
