@@ -7305,9 +7305,10 @@
     },
     "precio_cuadro": 350,
     "tags": [
-      "hombre"
+      "hombre",
+      "versace"
     ],
-    "etiqueta": null,
+    "etiqueta": "novedad",
     "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/versace/EROS FLAME.webp",
