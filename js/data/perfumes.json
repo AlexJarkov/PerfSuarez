@@ -6,13 +6,14 @@
     "nombre": "God Of Fire",
     "precio_completo": {
       "ml": 50,
-      "precio": 5260
+      "precio": 5260,
+      "en_stock": true
     },
     "precios_decants": {
-      "5": 330,
-      "10": 610,
-      "15": 880,
-      "30": 1650
+      "5": 710,
+      "10": 1400,
+      "15": 2080,
+      "30": 4130
     },
     "precio_combo": {
       "50": 2834
@@ -52,7 +53,10 @@
     "oferta": false,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 50
   },
   {
     "id": "baccarat-rouge-540-extrait-maison-francis-kurkdjian",
