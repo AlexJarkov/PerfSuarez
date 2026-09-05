@@ -1824,19 +1824,23 @@
     "nombre_interno": "Louis Vuitton Ombré Nomade",
     "marca": "Louis Vuitton",
     "nombre": "Ombré Nomade",
-    "precio_completo": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 6830,
+      "en_stock": true
+    },
     "precios_decants": {
-      "5": 350,
-      "10": 670,
-      "15": 960,
-      "30": 1790
+      "5": 470,
+      "10": 920,
+      "15": 1360,
+      "30": 2690
     },
     "precio_combo": null,
     "tags": [
       "hombre nicho"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": null,
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FLV%20OMBRE%20NOMADE.jpg",
@@ -1858,13 +1862,11 @@
     },
     "oferta": false,
     "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 260,
-      "10": 490,
-      "15": 700,
-      "30": 1330
-    },
-    "precio_cuadro": null
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "pacific-chill-louis-vuitton",
