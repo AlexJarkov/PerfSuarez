@@ -11876,7 +11876,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 1370,
-      "precio_oferta": 1000
+      "precio_oferta": 1080,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 120,
@@ -11911,10 +11912,10 @@
     "oferta": true,
     "image_cuadro": null,
     "precios_decants_oferta": {
-      "5": 90,
-      "10": 160,
-      "15": 220,
-      "30": 420
+      "5": 100,
+      "10": 170,
+      "15": 240,
+      "30": 450
     },
     "precio_cuadro": null,
     "decants_auto": true,
