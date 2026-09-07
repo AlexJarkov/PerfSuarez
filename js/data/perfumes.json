@@ -794,7 +794,8 @@
     "nombre": "Red Tobacco",
     "precio_completo": {
       "ml": 120,
-      "precio": 1920
+      "precio": 1920,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 130,
@@ -803,7 +804,7 @@
       "30": 650
     },
     "precio_combo": {
-      "120": 1263
+      "120": 1367
     },
     "tags": [
       "hombre",
@@ -3010,6 +3011,54 @@
     "decants_auto_ml": 125
   },
   {
+    "nombre": "Le Male In Blue",
+    "marca": "Jean Paul Gaultier",
+    "nombre_interno": "Jean Paul Gaultier Le Male In Blue",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/jpg/LE-MALE-IN-BLUE.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE-MALE-IN-BLUE.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "jpg"
+    ],
+    "precios_decants": {
+      "5": 100,
+      "10": 170,
+      "15": 240,
+      "30": 450
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 125,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 125,
+      "precio": 1340,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "125": 1254
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Lavanda"
+      ],
+      "corazon": [
+        "Anís"
+      ],
+      "fondo": [
+        "Benjuí"
+      ]
+    },
+    "id": "le-male-in-blue-jean-paul-gaultier"
+  },
+  {
     "id": "stronger-with-you-intensely-emporio-armani",
     "nombre_interno": "Emporio Armani Stronger With You Intensely",
     "marca": "Emporio Armani",
@@ -3191,12 +3240,14 @@
       {
         "ml": 100,
         "precio": 1350,
-        "precio_oferta": 1050
+        "precio_oferta": 1050,
+        "en_stock": true
       },
       {
         "ml": 200,
         "precio": 1920,
-        "precio_oferta": 1490
+        "precio_oferta": 1490,
+        "en_stock": true
       }
     ],
     "precios_decants": {
@@ -3206,7 +3257,7 @@
       "30": 560
     },
     "precio_combo": {
-      "100": 1014,
+      "100": 1284,
       "200": 1357
     },
     "tags": [
@@ -4397,29 +4448,89 @@
     "decants_auto_ml": 100
   },
   {
+    "nombre": "Noir Extreme",
+    "marca": "Tom Ford",
+    "nombre_interno": "Tom Ford Noir Extreme",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/tomford/NOIR-EXTREME.jpeg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/TOM FORD NOIR EXTREME.JPEG",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "tomford"
+    ],
+    "precios_decants": {
+      "5": 180,
+      "10": 320,
+      "15": 470,
+      "30": 910
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 2270,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Cardamomo",
+        "Nuez moscada",
+        "Azafrán",
+        "Mandarina",
+        "Neroli"
+      ],
+      "corazon": [
+        "Kulfi",
+        "Rosa",
+        "Resina almáciga del lentisco",
+        "Flor de azahar del naranjo",
+        "Jazmín"
+      ],
+      "fondo": [
+        "Vainilla",
+        "Ámbar",
+        "Notas Amaderadas",
+        "Sándalo"
+      ]
+    },
+    "id": "noir-extreme-tom-ford"
+  },
+  {
     "id": "ombre-leather-tom-ford",
     "nombre_interno": "Tom Ford Ombré Leather",
     "marca": "Tom Ford",
     "nombre": "Ombré Leather",
     "precio_completo": {
       "ml": 100,
-      "precio": 2620
+      "precio": 2590,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 200,
       "10": 370,
-      "15": 540,
-      "30": 1050
+      "15": 530,
+      "30": 1040
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2481
+    },
     "precio_cuadro": null,
     "tags": [
       "hombre"
     ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": null,
+    "etiqueta": "novedad",
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/tomford/OMBRE-LEATHER.avif",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/TOM FORD OMBRÉ LEATHER.png",
     "images_gallery": [],
     "notas": {
@@ -4583,7 +4694,8 @@
     "nombre": "Invictus Victory",
     "precio_completo": {
       "ml": 100,
-      "precio": 1360
+      "precio": 1360,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 120,
@@ -4592,7 +4704,7 @@
       "30": 560
     },
     "precio_combo": {
-      "100": 1013
+      "100": 1134
     },
     "tags": [
       "hombre",
@@ -5159,11 +5271,13 @@
     "precio_completo": [
       {
         "ml": 75,
-        "precio": 1080
+        "precio": 1080,
+        "en_stock": true
       },
       {
         "ml": 125,
-        "precio": 1480
+        "precio": 1480,
+        "en_stock": true
       }
     ],
     "precios_decants": {
@@ -5173,7 +5287,7 @@
       "30": 490
     },
     "precio_combo": {
-      "75": 844,
+      "75": 870,
       "125": 1295
     },
     "tags": [
@@ -6129,9 +6243,12 @@
     "precio_cuadro": null,
     "precio_completo": {
       "ml": 100,
-      "precio": 2220
+      "precio": 2220,
+      "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2076
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -6261,7 +6378,8 @@
     "nombre": "Y EDP Intense",
     "precio_completo": {
       "ml": 100,
-      "precio": 1970
+      "precio": 1970,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 160,
@@ -6270,7 +6388,7 @@
       "30": 800
     },
     "precio_combo": {
-      "100": 1735
+      "100": 1786
     },
     "tags": [
       "hombre ysl"
@@ -6630,22 +6748,25 @@
     "nombre": "Tobacco Vanille",
     "precio_completo": {
       "ml": 100,
-      "precio": 4370
+      "precio": 4800,
+      "en_stock": true
     },
     "precios_decants": {
-      "5": 310,
-      "10": 600,
-      "15": 880,
-      "30": 1730
+      "5": 340,
+      "10": 650,
+      "15": 960,
+      "30": 1900
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 4720
+    },
     "tags": [
       "hombre",
       "mujer",
       "unisex"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/tomford/TOBACCO VANILLE.webp",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/TOBACCO VANILLE.jpeg",
@@ -8428,7 +8549,7 @@
     "precio_completo": {
       "ml": 100,
       "precio": 2200,
-      "precio_oferta": 1320
+      "en_stock": true
     },
     "precios_decants": {
       "5": 170,
@@ -8436,7 +8557,9 @@
       "15": 460,
       "30": 890
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1720
+    },
     "tags": [
       "mujer",
       "lancome"
@@ -8467,12 +8590,7 @@
     },
     "oferta": true,
     "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 110,
-      "10": 200,
-      "15": 290,
-      "30": 540
-    },
+    "precios_decants_oferta": null,
     "precio_cuadro": null,
     "decants_auto": true,
     "decants_auto_base": "normal",
@@ -9076,7 +9194,8 @@
     "nombre": "Gaultier Divine Le Parfum",
     "precio_completo": {
       "ml": 100,
-      "precio": 1650
+      "precio": 1650,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 140,
@@ -9084,7 +9203,9 @@
       "15": 350,
       "30": 670
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1460
+    },
     "tags": [
       "mujer",
       "jpg"
@@ -9212,7 +9333,8 @@
     "nombre": "Scandal Absolu",
     "precio_completo": {
       "ml": 80,
-      "precio": 1580
+      "precio": 1580,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 160,
@@ -9220,7 +9342,9 @@
       "15": 410,
       "30": 800
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "80": 1485
+    },
     "tags": [
       "mujer",
       "jpg"
@@ -12036,7 +12160,8 @@
     "nombre": "La Bomba",
     "precio_completo": {
       "ml": 80,
-      "precio": 1590
+      "precio": 1590,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 160,
@@ -12045,7 +12170,7 @@
       "30": 800
     },
     "precio_combo": {
-      "80": 1309
+      "80": 1486
     },
     "tags": [
       "mujer",
@@ -15565,16 +15690,17 @@
     "precio_completo": {
       "ml": 100,
       "precio": 640,
-      "precio_oferta": 500
+      "precio_oferta": 500,
+      "en_stock": true
     },
     "precios_decants": {
-      "5": 60,
+      "5": 70,
       "10": 110,
       "15": 150,
-      "30": 260
+      "30": 280
     },
     "precio_combo": {
-      "100": 367
+      "100": 380
     },
     "tags": [
       "hombre",
@@ -15606,8 +15732,16 @@
     },
     "oferta": true,
     "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precios_decants_oferta": {
+      "5": 60,
+      "10": 90,
+      "15": 130,
+      "30": 220
+    },
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "bade-e-al-oud-honor-and-glory-lattafa",
@@ -15617,7 +15751,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 640,
-      "precio_oferta": 500
+      "precio_oferta": 500,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 70,
@@ -15626,7 +15761,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 214
+      "100": 391
     },
     "tags": [
       "hombre",
@@ -16484,12 +16619,14 @@
       {
         "ml": 100,
         "precio": 640,
-        "precio_oferta": 500
+        "precio_oferta": 500,
+        "en_stock": true
       },
       {
         "ml": 200,
         "precio": 960,
-        "precio_oferta": 750
+        "precio_oferta": 750,
+        "en_stock": true
       }
     ],
     "precios_decants": {
@@ -16499,7 +16636,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 435,
+      "100": 443,
       "200": 715
     },
     "tags": [
@@ -17370,7 +17507,9 @@
     "nombre": "Odyssey Homme White Edition",
     "precio_completo": {
       "ml": 100,
-      "precio": 780
+      "precio": 780,
+      "precio_oferta": 710,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 80,
@@ -17378,7 +17517,9 @@
       "15": 180,
       "30": 330
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 436
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -17407,7 +17548,12 @@
     },
     "oferta": true,
     "image_cuadro": null,
-    "precios_decants_oferta": null,
+    "precios_decants_oferta": {
+      "5": 70,
+      "10": 120,
+      "15": 170,
+      "30": 310
+    },
     "precio_cuadro": null,
     "decants_auto": true,
     "decants_auto_base": "normal",
@@ -17847,7 +17993,8 @@
     "nombre": "Qaed Al Fursan Unlimited",
     "precio_completo": {
       "ml": 90,
-      "precio": 550
+      "precio": 550,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 70,
@@ -17855,12 +18002,14 @@
       "15": 150,
       "30": 270
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 364
+    },
     "tags": [
       "hombre arabes"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": null,
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FQAED%20AL%20FURSAN%20UNLIMITED.JPEG",
