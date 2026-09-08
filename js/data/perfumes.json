@@ -16,7 +16,7 @@
       "30": 4510
     },
     "precio_combo": {
-      "50": 2834
+      "50": 4199
     },
     "tags": [
       "hombre",
@@ -73,7 +73,9 @@
       "15": 1330,
       "30": 2630
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 10016.5
+    },
     "tags": [
       "unisex",
       "nicho"
@@ -123,7 +125,7 @@
       "30": 600
     },
     "precio_combo": {
-      "120": 1443
+      "120": 1443.43
     },
     "tags": [
       "hombre",
@@ -253,7 +255,7 @@
     },
     "en_stock_completos": true,
     "precio_combo": {
-      "100": 2750
+      "100": 3159
     },
     "notas": {
       "generales": [],
@@ -410,7 +412,9 @@
       "15": 550,
       "30": 1070
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2509
+    },
     "tags": [
       "hombre",
       "mujer",
@@ -467,7 +471,9 @@
       "15": 700,
       "30": 1380
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 4121
+    },
     "tags": [
       "hombre",
       "marly",
@@ -537,7 +543,7 @@
       "precio": 4650
     },
     "precio_combo": {
-      "75": 3618
+      "75": 3618.39
     },
     "notas": {
       "generales": [],
@@ -580,7 +586,9 @@
       "15": 880,
       "30": 1730
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 4134
+    },
     "tags": [
       "hombre",
       "mujer",
@@ -632,7 +640,9 @@
       "15": 2370,
       "30": 4710
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 4394
+    },
     "tags": [
       "hombre",
       "kilian",
@@ -703,7 +713,9 @@
       "en_stock": false
     },
     "en_stock_completos": false,
-    "precio_combo": null,
+    "precio_combo": {
+      "75": 2604
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -752,7 +764,9 @@
       "precio": 2500,
       "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "30": 2119
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -804,7 +818,7 @@
       "30": 650
     },
     "precio_combo": {
-      "120": 1367
+      "120": 1367.74
     },
     "tags": [
       "hombre",
@@ -867,7 +881,9 @@
       "15": 530,
       "30": 1030
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1989
+    },
     "precio_cuadro": null,
     "tags": [
       "hombre",
@@ -929,7 +945,7 @@
       "30": 1800
     },
     "precio_combo": {
-      "50": 2567
+      "50": 2567.5
     },
     "tags": [
       "hombre nicho"
@@ -1037,7 +1053,7 @@
       "30": 1800
     },
     "precio_combo": {
-      "50": 2606
+      "50": 2606.5
     },
     "tags": [
       "hombre",
@@ -1106,7 +1122,9 @@
       "precio": 3500,
       "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 2574
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -1161,7 +1179,9 @@
       "precio": 3500,
       "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 2574
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -1211,7 +1231,9 @@
       "precio": 3500,
       "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 2574
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -1263,7 +1285,9 @@
       "precio": 3500,
       "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 2054
+    },
     "notas": {
       "generales": [],
       "salida": [],
@@ -1303,7 +1327,9 @@
       "precio": 3500,
       "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 2574
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -1355,7 +1381,9 @@
       "precio": 3500,
       "en_stock": true
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 2509
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -1391,7 +1419,7 @@
       "30": 1380
     },
     "precio_combo": {
-      "125": 3368
+      "125": 3368.64
     },
     "tags": [
       "hombre",
@@ -1454,7 +1482,7 @@
       "30": 1390
     },
     "precio_combo": {
-      "125": 3152
+      "125": 3152.5
     },
     "tags": [
       "hombre",
@@ -1547,7 +1575,9 @@
     "id": "pegasus-exclusif-parfums-de-marly",
     "oferta": false,
     "precios_decants_oferta": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 2476.5
+    },
     "decants_auto": true,
     "decants_auto_base": "normal",
     "decants_auto_ml": 125
@@ -1620,7 +1650,9 @@
       "15": 1080,
       "30": 2050
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 3419
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -1671,7 +1703,9 @@
       "15": 500,
       "30": 960
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1859
+    },
     "tags": [
       "hombre",
       "nicho"
@@ -1724,7 +1758,9 @@
       "15": 500,
       "30": 960
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1859
+    },
     "tags": [
       "hombre",
       "nicho"
@@ -1783,7 +1819,10 @@
       "15": 1090,
       "30": 2160
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 7449,
+      "100": 5239
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -1884,7 +1923,10 @@
       "15": 1090,
       "30": 2160
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 5239,
+      "200": 7969
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -1931,7 +1973,9 @@
     "nombre": "City Of Stars",
     "precio_completo": null,
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 4459
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -1966,7 +2010,9 @@
     "nombre": "Angel's Share",
     "precio_completo": null,
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 3939
+    },
     "tags": [
       "hombre mujer unisex nicho"
     ],
@@ -2064,7 +2110,9 @@
       "15": 650,
       "30": 1280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2314
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -2110,7 +2158,7 @@
       "30": 810
     },
     "precio_combo": {
-      "100": 1755
+      "100": 1859
     },
     "tags": [
       "hombre unisex nicho mujer"
@@ -2154,7 +2202,9 @@
     "nombre": "N°4 Aprés l'Amour Eau de Parfum",
     "precio_completo": null,
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2509
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -2194,7 +2244,9 @@
       "15": 1050,
       "30": 2070
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 3929.64
+    },
     "tags": [
       "hombre unisex nicho mujer"
     ],
@@ -2296,7 +2348,9 @@
       "15": 1190,
       "30": 2350
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 4849
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -2350,7 +2404,9 @@
       "15": 700,
       "30": 1380
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 2704
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -2405,7 +2461,9 @@
       "15": 300,
       "30": 560
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "120": 1339
+    },
     "tags": [
       "hombre unisex nicho mujer"
     ],
@@ -2511,7 +2569,9 @@
     "nombre": "Layton Exclusif",
     "precio_completo": null,
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 3029
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -2569,7 +2629,9 @@
       "15": 700,
       "30": 1380
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 3289
+    },
     "tags": [
       "hombre nicho"
     ],
@@ -2827,7 +2889,9 @@
     "decants_auto": true,
     "decants_auto_base": "normal",
     "decants_auto_ml": 50,
-    "precio_combo": null
+    "precio_combo": {
+      "50": 1963
+    }
   },
   {
     "id": "summer-hammer-lorenzo-pazzaglia",
@@ -2845,7 +2909,7 @@
       "30": 2690
     },
     "precio_combo": {
-      "50": 2821
+      "50": 2821.3
     },
     "tags": [
       "hombre nicho"
@@ -2907,7 +2971,8 @@
       "30": 1330
     },
     "precio_combo": {
-      "150": 3600
+      "100": 3107.69,
+      "150": 3600.09
     },
     "tags": [
       "hombre",
@@ -2972,9 +3037,9 @@
       "30": 500
     },
     "precio_combo": {
-      "75": 920,
-      "125": 1329,
-      "200": 1729
+      "125": 1329.28,
+      "75": 920.74,
+      "200": 1729.26
     },
     "precio_cuadro": null,
     "tags": [
@@ -3042,7 +3107,7 @@
     },
     "en_stock_completos": true,
     "precio_combo": {
-      "125": 1254
+      "125": 1253.85
     },
     "notas": {
       "generales": [],
@@ -3073,7 +3138,9 @@
       "15": 340,
       "30": 620
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1521
+    },
     "tags": [
       "hombre",
       "armani"
@@ -3136,7 +3203,8 @@
       "30": 880
     },
     "precio_combo": {
-      "100": 1664
+      "100": 2119,
+      "150": 1089.78
     },
     "precio_cuadro": 350,
     "tags": [
@@ -3196,7 +3264,9 @@
       "15": 320,
       "30": 600
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1989
+    },
     "tags": [
       "hombre",
       "rabanne"
@@ -3257,8 +3327,8 @@
       "30": 560
     },
     "precio_combo": {
-      "100": 1284,
-      "200": 1357
+      "100": 1258.35,
+      "200": 1357.85
     },
     "tags": [
       "hombre",
@@ -3324,7 +3394,7 @@
     },
     "precio_combo": {
       "100": 1157,
-      "150": 1542
+      "150": 1542.28
     },
     "tags": [
       "hombre",
@@ -3375,7 +3445,9 @@
       "15": 250,
       "30": 470
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1885
+    },
     "precio_cuadro": 350,
     "tags": [
       "hombre",
@@ -3416,7 +3488,8 @@
     "nombre": "Uomo Born In Roma Intense",
     "precio_completo": {
       "ml": 100,
-      "precio": 2280
+      "precio": 2280,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 180,
@@ -3424,14 +3497,16 @@
       "15": 470,
       "30": 920
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1729
+    },
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/valentino/BORN IN ROMA INTENSE.webp",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA INTENSE.jpeg",
     "images_gallery": [],
     "notas": {
@@ -3572,7 +3647,9 @@
       "15": 310,
       "30": 590
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1416.3
+    },
     "tags": [
       "hombre",
       "rabanne"
@@ -3615,7 +3692,8 @@
     "nombre": "One Million Eau de Toilette",
     "precio_completo": {
       "ml": 100,
-      "precio": 1250
+      "precio": 1250,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 110,
@@ -3630,60 +3708,8 @@
     "etiqueta": null,
     "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ONE MILLION EDT.jpg",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Mandarina sanguina",
-        "Pomelo",
-        "Menta"
-      ],
-      "corazon": [
-        "Canela",
-        "Notas especiadas",
-        "Rosa"
-      ],
-      "fondo": [
-        "Ámbar",
-        "Cuero",
-        "Notas amaderadas",
-        "Pachulí hindú"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100,
-    "precio_cuadro": null
-  },
-  {
-    "id": "one-million-edt-rabanne",
-    "nombre_interno": "Rabanne One Million EDT",
-    "marca": "Rabanne",
-    "nombre": "One Million EDT",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1250
-    },
-    "precios_decants": {
-      "5": 110,
-      "10": 190,
-      "15": 270,
-      "30": 520
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre rabanne"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/paco/Untitled-2.png",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ONE MILLION EDT.jpg",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -3742,7 +3768,9 @@
       "ml": 100,
       "precio": 1440
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1339
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -3778,7 +3806,9 @@
       "15": 270,
       "30": 520
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1404
+    },
     "tags": [
       "hombre"
     ],
@@ -3849,7 +3879,9 @@
       "en_stock": false
     },
     "en_stock_completos": false,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1487.58
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -3885,7 +3917,9 @@
       "15": 430,
       "30": 830
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1664
+    },
     "tags": [
       "hombre"
     ],
@@ -3948,7 +3982,9 @@
       "15": 520,
       "30": 1010
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2184
+    },
     "tags": [
       "hombre",
       "chanel"
@@ -3974,69 +4010,14 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "acqua-di-gio-profondo-giorgio-armani",
-    "nombre_interno": "Giorgio Armani Acqua Di Gio Profondo",
-    "marca": "Giorgio Armani",
-    "nombre": "Acqua Di Gio Profondo",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1860
-    },
-    "precios_decants": {
-      "5": 150,
-      "10": 270,
-      "15": 390,
-      "30": 750
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO PROFONDO.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Notas marinas",
-        "Bergamota",
-        "Pera",
-        "Manzana",
-        "Pomelo",
-        "Limón"
-      ],
-      "corazon": [
-        "Lavanda",
-        "Romero",
-        "Geranio"
-      ],
-      "fondo": [
-        "Notas amaderadas",
-        "Haba tonka",
-        "Amberwood",
-        "Pachulí",
-        "Ládano"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "aqcua-di-gio-profondo-giorgio-armani",
     "nombre_interno": "Giorgio Armani Acqua Di Gio Profondo",
     "marca": "Giorgio Armani",
     "nombre": "Aqcua Di Gio Profondo",
     "precio_completo": {
       "ml": 100,
-      "precio": 1860
+      "precio": 1860,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 150,
@@ -4045,16 +4026,17 @@
       "30": 750
     },
     "precio_combo": {
-      "100": 1387
+      "100": 1387.48,
+      "200": 1989
     },
     "tags": [
       "hombre armani"
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Farmani%2FUntitled-1.jpg",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO PROFONDO.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -4114,7 +4096,9 @@
       "ml": 100,
       "precio": 1840
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 955.84
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -4149,7 +4133,9 @@
       "15": 290,
       "30": 550
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1298.14
+    },
     "tags": [
       "hombre",
       "azzaro"
@@ -4182,53 +4168,6 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "myslf-eau-de-parfum-yves-saint-laurent",
-    "nombre_interno": "Yves Saint Laurent MYSLF EDP",
-    "marca": "Yves Saint Laurent",
-    "nombre": "MYSLF Eau De Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1970
-    },
-    "precios_decants": {
-      "5": 160,
-      "10": 280,
-      "15": 410,
-      "30": 800
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/MYSLF.JPEG",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Bergamota de Calabria",
-        "Bergamota"
-      ],
-      "corazon": [
-        "Flor de azahar tunecina"
-      ],
-      "fondo": [
-        "Ambrofix",
-        "Pachulí"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "le-beau-le-parfum-jean-paul-gaultier",
     "nombre_interno": "Jean Paul Gaultier Le Beau Le Parfum",
     "marca": "Jean Paul Gaultier",
@@ -4245,7 +4184,7 @@
       "30": 610
     },
     "precio_combo": {
-      "125": 1548
+      "125": 1437.35
     },
     "tags": [
       "hombre",
@@ -4356,7 +4295,7 @@
       "30": 860
     },
     "precio_combo": {
-      "100": 1559
+      "100": 1559.14
     },
     "tags": [
       "hombre"
@@ -4410,7 +4349,7 @@
       "30": 860
     },
     "precio_combo": {
-      "100": 1565
+      "100": 1566.5
     },
     "tags": [
       "hombre"
@@ -4521,7 +4460,7 @@
       "30": 1040
     },
     "precio_combo": {
-      "100": 2481
+      "100": 2480.57
     },
     "precio_cuadro": null,
     "tags": [
@@ -4585,7 +4524,9 @@
       "ml": 100,
       "precio": 3240
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 3218.55
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -4704,7 +4645,7 @@
       "30": 560
     },
     "precio_combo": {
-      "100": 1134
+      "100": 1134.43
     },
     "tags": [
       "hombre",
@@ -4801,7 +4742,8 @@
     "nombre": "Acqua Di Gio Parfum",
     "precio_completo": {
       "ml": 100,
-      "precio": 1980
+      "precio": 1980,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 160,
@@ -4816,57 +4758,8 @@
     "etiqueta": null,
     "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO PARFUM.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Notas marinas",
-        "Bergamota"
-      ],
-      "corazon": [
-        "Romero",
-        "Salvia",
-        "Geranio"
-      ],
-      "fondo": [
-        "Olíbano",
-        "Pachulí"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100,
-    "precio_cuadro": null
-  },
-  {
-    "id": "aqcua-di-gio-parfum-giorgio-armani",
-    "nombre_interno": "Giorgio Armani Acqua Di Gio Parfum",
-    "marca": "Giorgio Armani",
-    "nombre": "Aqcua Di Gio Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1980
-    },
-    "precios_decants": {
-      "5": 160,
-      "10": 290,
-      "15": 410,
-      "30": 800
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre armani"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/armani/ACQUA DI GIO PARFUM.jpg",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/ACQUA DI GIO PARFUM.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -4907,7 +4800,10 @@
       "15": 250,
       "30": 480
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1599,
+      "100": 884
+    },
     "tags": [
       "hombre"
     ],
@@ -4960,7 +4856,9 @@
       "15": 610,
       "30": 1190
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 1975.3
+    },
     "tags": [
       "mujer",
       "ysl"
@@ -5127,7 +5025,9 @@
       "15": 270,
       "30": 520
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 2373.81
+    },
     "tags": [
       "hombre",
       "dior"
@@ -5182,7 +5082,9 @@
       "15": 540,
       "30": 1060
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 2314
+    },
     "tags": [
       "hombre",
       "dior"
@@ -5232,7 +5134,9 @@
       "15": 450,
       "30": 880
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1815.06
+    },
     "tags": [
       "hombre",
       "dior"
@@ -5287,8 +5191,8 @@
       "30": 490
     },
     "precio_combo": {
-      "75": 870,
-      "125": 1295
+      "125": 1198.17,
+      "75": 844.47
     },
     "tags": [
       "hombre",
@@ -5347,7 +5251,9 @@
       "15": 300,
       "30": 580
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "150": 1859
+    },
     "tags": [
       "hombre",
       "jpg"
@@ -5393,7 +5299,9 @@
       "15": 270,
       "30": 520
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "150": 1245.86
+    },
     "tags": [
       "hombre"
     ],
@@ -5514,8 +5422,8 @@
       "30": 560
     },
     "precio_combo": {
-      "100": 853,
-      "200": 1430
+      "100": 853.84,
+      "200": 1429.99
     },
     "tags": [
       "hombre",
@@ -5574,7 +5482,9 @@
       "15": 320,
       "30": 610
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1062.87
+    },
     "tags": [
       "hombre",
       "rabanne"
@@ -5665,7 +5575,7 @@
       "30": 580
     },
     "precio_combo": {
-      "100": 1089
+      "100": 1089.4
     },
     "tags": [
       "hombre",
@@ -5726,7 +5636,9 @@
       "15": 310,
       "30": 580
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1351.44
+    },
     "tags": [
       "hombre",
       "carolina"
@@ -5801,7 +5713,8 @@
     "precio_completo": {
       "ml": 80,
       "precio": 1700,
-      "precio_oferta": 900
+      "precio_oferta": 900,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 170,
@@ -5819,7 +5732,7 @@
     "en_stock_completos": true,
     "en_stock_decants": false,
     "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Fch%2FUntitled-8.png",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/VERY GOOD GIRL.jpeg",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -5849,84 +5762,6 @@
     "decants_auto_ml": 80
   },
   {
-    "id": "very-good-girl-eau-de-parfum-carolina-herrera",
-    "nombre_interno": "Carolina Herrera Very Good Girl EDP",
-    "marca": "Carolina Herrera",
-    "nombre": "Very Good Girl Eau De Parfum",
-    "precio_completo": null,
-    "precios_decants": null,
-    "precio_combo": null,
-    "tags": [
-      "mujer"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/mujer/VERY GOOD GIRL.jpeg",
-    "images_gallery": [],
-    "notas": {
-      "salida": [
-        "Lichi",
-        "Grosellas rojas"
-      ],
-      "corazon": [
-        "Rosa"
-      ],
-      "fondo": [
-        "Vainilla",
-        "Vetiver"
-      ]
-    }
-  },
-  {
-    "id": "born-in-roma-intense-valentino",
-    "nombre_interno": "Valentino Born In Roma Intense",
-    "marca": "Valentino",
-    "nombre": "Born In Roma Intense",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 2280
-    },
-    "precios_decants": {
-      "5": 180,
-      "10": 330,
-      "15": 470,
-      "30": 920
-    },
-    "precio_combo": {
-      "100": 1729
-    },
-    "tags": [
-      "hombre valentino"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": true,
-    "en_stock_decants": false,
-    "image_miniatura": "imagenes/fotos-catalogo/valentino/BORN IN ROMA INTENSE.webp",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Vainilla"
-      ],
-      "corazon": [
-        "Lavanda"
-      ],
-      "fondo": [
-        "Vetiver"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "donna-born-in-roma-intense-valentino",
     "nombre_interno": "Valentino Donna Born In Roma Intense",
     "marca": "Valentino",
@@ -5942,7 +5777,7 @@
       "30": 980
     },
     "precio_combo": {
-      "100": 1877
+      "100": 1877.2
     },
     "tags": [
       "mujer",
@@ -5977,61 +5812,10 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "uomo-born-in-roma-coral-fantasy-valentino",
+    "id": "born-in-roma-coral-fantasy-valentino",
     "nombre_interno": "Valentino Uomo Born In Roma Coral Fantasy",
     "marca": "Valentino",
     "nombre": "Uomo Born In Roma Coral Fantasy",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 2060
-    },
-    "precios_decants": {
-      "5": 160,
-      "10": 300,
-      "15": 430,
-      "30": 830
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA CORAL FANTASY.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Manzana roja",
-        "Cardamomo",
-        "Bergamota de Calabria"
-      ],
-      "corazon": [
-        "Lavanda",
-        "Geranio bourbon",
-        "Salvia esclarea"
-      ],
-      "fondo": [
-        "Hoja de tabaco",
-        "Pachulí",
-        "Vetiver haitiano"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
-    "id": "born-in-roma-coral-fantasy-valentino",
-    "nombre_interno": "Valentino Born In Roma Coral Fantasy",
-    "marca": "Valentino",
-    "nombre": "Born In Roma Coral Fantasy",
     "precio_completo": {
       "ml": 100,
       "precio": 2060,
@@ -6044,16 +5828,16 @@
       "30": 830
     },
     "precio_combo": {
-      "100": 1655
+      "100": 1654.72
     },
     "tags": [
       "hombre valentino"
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/valentino/BORN IN ROMA CORAL FANTASY.jpg",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA CORAL FANTASY.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -6088,7 +5872,9 @@
     "nombre": "Stronger With You Parfum",
     "precio_completo": null,
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 1339
+    },
     "tags": [
       "hombre"
     ],
@@ -6131,7 +5917,7 @@
       "30": 900
     },
     "precio_combo": {
-      "100": 1754
+      "100": 1754.45
     },
     "tags": [
       "hombre",
@@ -6173,7 +5959,8 @@
     "nombre": "MYSLF",
     "precio_completo": {
       "ml": 100,
-      "precio": 1640
+      "precio": 1640,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 140,
@@ -6182,7 +5969,8 @@
       "30": 670
     },
     "precio_combo": {
-      "100": 1393
+      "100": 1393.54,
+      "150": 1011.65
     },
     "precio_cuadro": 350,
     "tags": [
@@ -6190,9 +5978,9 @@
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/ysl/ysl-myslf-240415062511.webp",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/MYSLF.JPEG",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -6247,7 +6035,7 @@
       "en_stock": true
     },
     "precio_combo": {
-      "100": 2076
+      "100": 2050.36
     },
     "notas": {
       "generales": [],
@@ -6281,7 +6069,9 @@
       "15": 540,
       "30": 1050
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1684.8
+    },
     "tags": [
       "hombre",
       "ysl"
@@ -6321,57 +6111,6 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "y-eau-de-parfum-intense-yves-saint-laurent",
-    "nombre_interno": "Yves Saint Laurent Y EDP Intense",
-    "marca": "Yves Saint Laurent",
-    "nombre": "Y Eau de Parfum Intense",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1970
-    },
-    "precios_decants": {
-      "5": 160,
-      "10": 280,
-      "15": 410,
-      "30": 800
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y EDP INTENSE.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Jengibre",
-        "Bayas de enebro",
-        "Bergamota"
-      ],
-      "corazon": [
-        "Salvia",
-        "Lavanda",
-        "Geranio"
-      ],
-      "fondo": [
-        "Vetiver",
-        "Pachulí",
-        "Cedro"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "y-edp-intense-yves-saint-laurent",
     "nombre_interno": "Yves Saint Laurent Y EDP Intense",
     "marca": "Yves Saint Laurent",
@@ -6388,16 +6127,16 @@
       "30": 800
     },
     "precio_combo": {
-      "100": 1786
+      "100": 1786.72
     },
     "tags": [
       "hombre ysl"
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/ysl/Y EDP INTENSE.jpg",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y EDP INTENSE.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -6440,7 +6179,9 @@
       "15": 440,
       "30": 850
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1794
+    },
     "tags": [
       "hombre"
     ],
@@ -6475,49 +6216,14 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "y-eau-de-toilette-yves-saint-laurent",
-    "nombre_interno": "Yves Saint Laurent Y EDT",
-    "marca": "Yves Saint Laurent",
-    "nombre": "Y Eau de Toilette",
-    "precio_completo": null,
-    "precios_decants": null,
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y EDT.JPEG",
-    "images_gallery": [],
-    "notas": {
-      "salida": [
-        "Aldehídos",
-        "Bergamota",
-        "Jengibre"
-      ],
-      "corazon": [
-        "Lavanda",
-        "Salvia esclarea",
-        "Geranio"
-      ],
-      "fondo": [
-        "Ámbar gris",
-        "Vainilla",
-        "Cedro",
-        "Olíbano"
-      ]
-    }
-  },
-  {
     "id": "y-edt-yves-saint-laurent",
     "nombre_interno": "Yves Saint Laurent Y EDT",
     "marca": "Yves Saint Laurent",
     "nombre": "Y EDT",
     "precio_completo": {
       "ml": 100,
-      "precio": 1960
+      "precio": 1960,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 160,
@@ -6526,7 +6232,7 @@
       "30": 790
     },
     "precio_combo": {
-      "100": 1098
+      "100": 1098.44
     },
     "tags": [
       "hombre ysl"
@@ -6535,7 +6241,7 @@
     "en_stock_completos": false,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/ysl/Untitled-1.png",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/Y EDT.JPEG",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -6579,7 +6285,9 @@
       "15": 1240,
       "30": 2450
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 3679
+    },
     "tags": [
       "unisex mujer"
     ],
@@ -6689,7 +6397,9 @@
       "15": 490,
       "30": 950
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2088.45
+    },
     "tags": [
       "mujer",
       "tomford",
@@ -6758,7 +6468,7 @@
       "30": 1900
     },
     "precio_combo": {
-      "100": 4720
+      "100": 4720.66
     },
     "tags": [
       "hombre",
@@ -6803,7 +6513,9 @@
     "nombre": "Cherry Smoke",
     "precio_completo": null,
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 3419
+    },
     "tags": [
       "unisex mujer"
     ],
@@ -6846,7 +6558,9 @@
       "15": 300,
       "30": 570
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1144
+    },
     "tags": [
       "hombre"
     ],
@@ -6897,7 +6611,9 @@
       "15": 210,
       "30": 390
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 494
+    },
     "tags": [
       "hombre"
     ],
@@ -7079,7 +6795,9 @@
       "30": 530
     },
     "precio_combo": {
-      "200": 992
+      "75": 499.73,
+      "125": 541.26,
+      "200": 992.37
     },
     "tags": [
       "hombre",
@@ -7200,7 +6918,9 @@
       "15": 240,
       "30": 460
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 604.21
+    },
     "tags": [
       "hombre"
     ],
@@ -7325,7 +7045,9 @@
       "15": 250,
       "30": 470
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1599
+    },
     "tags": [
       "hombre",
       "versace"
@@ -7381,7 +7103,9 @@
       "15": 250,
       "30": 470
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 618.33
+    },
     "tags": [
       "hombre versace"
     ],
@@ -7436,7 +7160,7 @@
       "30": 800
     },
     "precio_combo": {
-      "100": 1599
+      "200": 1599
     },
     "precio_cuadro": 350,
     "tags": [
@@ -7494,7 +7218,9 @@
       "15": 300,
       "30": 570
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 689
+    },
     "tags": [
       "hombre",
       "v&r"
@@ -7606,7 +7332,7 @@
     },
     "en_stock_completos": true,
     "precio_combo": {
-      "100": 549
+      "100": 549.16
     },
     "notas": {
       "generales": [],
@@ -7629,15 +7355,17 @@
     "nombre": "Spicebomb Extreme",
     "precio_completo": {
       "ml": 90,
-      "precio": 1240
+      "precio": 1500
     },
     "precios_decants": {
-      "5": 120,
-      "10": 210,
-      "15": 300,
-      "30": 570
+      "5": 140,
+      "10": 250,
+      "15": 350,
+      "30": 680
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 1469
+    },
     "tags": [
       "hombre"
     ],
@@ -7684,7 +7412,7 @@
       "30": 520
     },
     "precio_combo": {
-      "100": 885
+      "100": 884.82
     },
     "tags": [
       "hombre"
@@ -7747,7 +7475,10 @@
       "en_stock": false
     },
     "en_stock_completos": false,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 437.92,
+      "200": 796.95
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -7792,7 +7523,7 @@
       "30": 520
     },
     "precio_combo": {
-      "100": 1128
+      "100": 1128.08
     },
     "tags": [
       "hombre",
@@ -7899,7 +7630,9 @@
       "15": 290,
       "30": 560
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1314.63
+    },
     "tags": [
       "hombre",
       "carolina"
@@ -7966,8 +7699,8 @@
       "30": 560
     },
     "precio_combo": {
-      "100": 1147,
-      "200": 1248
+      "100": 1146.83,
+      "200": 1248.56
     },
     "tags": [
       "hombre",
@@ -8018,7 +7751,9 @@
       "15": 230,
       "30": 430
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 903.5
+    },
     "tags": [
       "hombre"
     ],
@@ -8127,7 +7862,9 @@
       "15": 270,
       "30": 510
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "150": 689
+    },
     "tags": [
       "hombre rabanne"
     ],
@@ -8186,7 +7923,9 @@
       "15": 290,
       "30": 560
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 952.58
+    },
     "tags": [
       "hombre"
     ],
@@ -8234,10 +7973,18 @@
     "nombre_interno": "Rabanne Fame EDP",
     "marca": "Rabanne",
     "nombre": "Fame Eau de Parfum",
-    "precio_completo": {
-      "ml": 80,
-      "precio": 1470
-    },
+    "precio_completo": [
+      {
+        "ml": 80,
+        "precio": 1470,
+        "en_stock": true
+      },
+      {
+        "ml": 150,
+        "precio": 1830,
+        "en_stock": true
+      }
+    ],
     "precios_decants": {
       "5": 150,
       "10": 270,
@@ -8245,7 +7992,8 @@
       "30": 750
     },
     "precio_combo": {
-      "80": 1152
+      "80": 1152.49,
+      "150": 1159.69
     },
     "tags": [
       "mujer",
@@ -8297,7 +8045,7 @@
       "30": 770
     },
     "precio_combo": {
-      "80": 1154
+      "80": 1154.39
     },
     "tags": [
       "mujer",
@@ -8356,7 +8104,7 @@
       "30": 890
     },
     "precio_combo": {
-      "80": 1342
+      "80": 1342.61
     },
     "tags": [
       "mujer",
@@ -8407,7 +8155,7 @@
       "30": 830
     },
     "precio_combo": {
-      "80": 1298
+      "80": 1298.88
     },
     "tags": [
       "mujer",
@@ -8457,7 +8205,9 @@
       "15": 480,
       "30": 930
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1961.75
+    },
     "tags": [
       "hombre"
     ],
@@ -8539,7 +8289,9 @@
     "decants_auto": true,
     "decants_auto_base": "normal",
     "decants_auto_ml": 100,
-    "precio_combo": null
+    "precio_combo": {
+      "100": 1274
+    }
   },
   {
     "id": "la-vie-est-belle-l-eau-de-parfum-lancome",
@@ -8558,7 +8310,7 @@
       "30": 890
     },
     "precio_combo": {
-      "100": 1720
+      "100": 1694.39
     },
     "tags": [
       "mujer",
@@ -8679,7 +8431,9 @@
       "15": 480,
       "30": 930
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 1859
+    },
     "tags": [
       "mujer"
     ],
@@ -8732,7 +8486,9 @@
       "15": 410,
       "30": 790
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1475.18
+    },
     "tags": [
       "mujer",
       "dior"
@@ -8904,7 +8660,7 @@
     },
     "id": "miss-dior-parfum-dior",
     "precio_combo": {
-      "80": 2266
+      "80": 2266.13
     },
     "decants_auto": true,
     "decants_auto_base": "normal",
@@ -8996,7 +8752,7 @@
       "30": 990
     },
     "precio_combo": {
-      "90": 1587
+      "90": 1586.99
     },
     "tags": [
       "mujer"
@@ -9109,7 +8865,7 @@
       "30": 640
     },
     "precio_combo": {
-      "100": 1207
+      "100": 1207.19
     },
     "tags": [
       "mujer",
@@ -9156,7 +8912,9 @@
       "15": 310,
       "30": 580
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1148.8
+    },
     "tags": [
       "mujer",
       "jpg"
@@ -9204,7 +8962,8 @@
       "30": 670
     },
     "precio_combo": {
-      "100": 1460
+      "100": 1459.59,
+      "200": 1407.9
     },
     "tags": [
       "mujer",
@@ -9343,7 +9102,7 @@
       "30": 800
     },
     "precio_combo": {
-      "80": 1485
+      "80": 1458.7
     },
     "tags": [
       "mujer",
@@ -9391,7 +9150,7 @@
       "30": 770
     },
     "precio_combo": {
-      "100": 1482
+      "100": 1482.01
     },
     "tags": [
       "mujer",
@@ -9484,7 +9243,9 @@
       "15": 280,
       "30": 540
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "80": 943.41
+    },
     "tags": [
       "mujer"
     ],
@@ -9571,7 +9332,9 @@
       "15": 390,
       "30": 750
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "80": 1010.45
+    },
     "tags": [
       "mujer",
       "carolina"
@@ -9732,7 +9495,8 @@
       "30": 700
     },
     "precio_combo": {
-      "100": 834
+      "100": 834.41,
+      "200": 1119.74
     },
     "tags": [
       "mujer",
@@ -9819,51 +9583,6 @@
     "precio_cuadro": null
   },
   {
-    "id": "devotion-edp-intense-dolce-gabbana",
-    "nombre_interno": "Dolce&Gabbana Devotion EDP Intense",
-    "marca": "Dolce&Gabbana",
-    "nombre": "Devotion EDP Intense",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 2010
-    },
-    "precios_decants": {
-      "5": 160,
-      "10": 290,
-      "15": 420,
-      "30": 810
-    },
-    "precio_combo": null,
-    "tags": [
-      "mujer"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fmujer%2FDEVOTION%20INTENSE.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Avellana"
-      ],
-      "corazon": [
-        "Flor de azahar"
-      ],
-      "fondo": [
-        "Vainilla"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "q-by-d-g-eau-de-parfum-dolce-gabbana",
     "nombre_interno": "Dolce&Gabbana Q By D&G EDP",
     "marca": "Dolce&Gabbana",
@@ -9933,7 +9652,7 @@
       "30": 540
     },
     "precio_combo": {
-      "100": 700
+      "100": 700.75
     },
     "tags": [
       "mujer d&g"
@@ -10012,7 +9731,9 @@
       "15": 400,
       "30": 780
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 1139.92
+    },
     "tags": [
       "hombre",
       "versace",
@@ -10066,7 +9787,9 @@
       "15": 1240,
       "30": 2450
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 3646.5
+    },
     "tags": [
       "unisex mujer"
     ],
@@ -10125,7 +9848,9 @@
       "15": 540,
       "30": 1040
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2568.71
+    },
     "tags": [
       "hombre"
     ],
@@ -10173,7 +9898,7 @@
       "30": 600
     },
     "precio_combo": {
-      "100": 887
+      "100": 887.9
     },
     "tags": [
       "hombre",
@@ -10223,7 +9948,9 @@
       "15": 250,
       "30": 480
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 844.23
+    },
     "tags": [
       "hombre",
       "givenchy"
@@ -10261,66 +9988,14 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "gentleman-eau-de-parfum-givenchy",
-    "nombre_interno": "Givenchy Gentleman Eau De Parfum",
-    "marca": "Givenchy",
-    "nombre": "Gentleman Eau De Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 890
-    },
-    "precios_decants": {
-      "5": 90,
-      "10": 140,
-      "15": 200,
-      "30": 380
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/GENTLEMAN EDP.JPEG",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Pimienta negra",
-        "Lavanda",
-        "Bergamota"
-      ],
-      "corazon": [
-        "Orris",
-        "Clavo de olor",
-        "Canela"
-      ],
-      "fondo": [
-        "Vainilla negra",
-        "Bálsamo de Tolú",
-        "Haba tonka",
-        "Benjuí",
-        "Pachulí"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100,
-    "precio_cuadro": null
-  },
-  {
     "id": "gentleman-edp-givenchy",
     "nombre_interno": "Givenchy Gentleman EDP",
     "marca": "Givenchy",
     "nombre": "Gentleman EDP",
     "precio_completo": {
       "ml": 100,
-      "precio": 1160
+      "precio": 1160,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 100,
@@ -10328,15 +10003,17 @@
       "15": 250,
       "30": 480
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1039.74
+    },
     "tags": [
       "hombre givenchy"
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/givenchy/Untitled.png",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/GENTLEMAN EDP.JPEG",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -10382,7 +10059,7 @@
       "30": 580
     },
     "precio_combo": {
-      "100": 1096
+      "100": 1096.36
     },
     "tags": [
       "hombre",
@@ -10434,7 +10111,9 @@
       "15": 360,
       "30": 690
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1334.57
+    },
     "tags": [
       "hombre"
     ],
@@ -10488,7 +10167,7 @@
       "30": 660
     },
     "precio_combo": {
-      "100": 850
+      "100": 849.5
     },
     "tags": [
       "hombre",
@@ -10545,7 +10224,9 @@
       "15": 320,
       "30": 600
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "110": 733.08
+    },
     "tags": [
       "hombre"
     ],
@@ -10581,51 +10262,6 @@
     "decants_auto_ml": 110
   },
   {
-    "id": "homme-edp-kenzo",
-    "nombre_interno": "Kenzo Homme EDP",
-    "marca": "Kenzo",
-    "nombre": "Homme EDP",
-    "precio_completo": {
-      "ml": 110,
-      "precio": 990
-    },
-    "precios_decants": {
-      "5": 90,
-      "10": 150,
-      "15": 200,
-      "30": 380
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre kenzo"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Fkenzo%2FUntitled.png",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Notas marinas"
-      ],
-      "corazon": [
-        "Cuero"
-      ],
-      "fondo": [
-        "Pachulí"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 110,
-    "precio_cuadro": null
-  },
-  {
     "id": "homme-intense-kenzo",
     "nombre_interno": "Kenzo Homme Intense",
     "marca": "Kenzo",
@@ -10641,7 +10277,9 @@
       "15": 240,
       "30": 450
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "110": 716.2
+    },
     "tags": [
       "hombre",
       "kenzo"
@@ -10754,7 +10392,9 @@
       "15": 260,
       "30": 490
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "110": 681.9
+    },
     "tags": [
       "hombre"
     ],
@@ -10855,7 +10495,9 @@
       "15": 330,
       "30": 630
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 247
+    },
     "tags": [
       "hombre"
     ],
@@ -10943,64 +10585,14 @@
     }
   },
   {
-    "id": "original-lacoste",
-    "nombre_interno": "Lacoste Original",
-    "marca": "Lacoste",
-    "nombre": "Original",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1110
-    },
-    "precios_decants": {
-      "5": 100,
-      "10": 170,
-      "15": 250,
-      "30": 460
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre lacoste"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": "imagenes/fotos-catalogo/lacoste/LACOSTE ORIGINAL.jpg",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Bergamota",
-        "Pimienta rosa",
-        "Cardamomo"
-      ],
-      "corazon": [
-        "Salvia esclarea",
-        "Lavanda"
-      ],
-      "fondo": [
-        "Amber Xtreme",
-        "Sándalo",
-        "Pachulí",
-        "Haba tonka"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100,
-    "precio_cuadro": null
-  },
-  {
     "id": "original-eau-de-parfum-lacoste",
     "nombre_interno": "Lacoste Original",
     "marca": "Lacoste",
     "nombre": "Original Eau de Parfum",
     "precio_completo": {
       "ml": 100,
-      "precio": 1110
+      "precio": 1110,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 100,
@@ -11009,7 +10601,7 @@
       "30": 460
     },
     "precio_combo": {
-      "100": 750
+      "100": 748.38
     },
     "tags": [
       "hombre"
@@ -11017,7 +10609,7 @@
     "etiqueta": null,
     "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/lacoste/LACOSTE ORIGINAL.jpg",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FLACOSTE%20ORIGINAL.png",
     "images_gallery": [],
     "notas": {
@@ -11061,7 +10653,9 @@
       "15": 730,
       "30": 1430
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1599
+    },
     "tags": [
       "hombre unisex mujer"
     ],
@@ -11108,7 +10702,9 @@
       "15": 730,
       "30": 1430
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1599
+    },
     "tags": [
       "hombre unisex mujer"
     ],
@@ -11151,7 +10747,9 @@
       "15": 730,
       "30": 1430
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1599
+    },
     "tags": [
       "hombre unisex mujer"
     ],
@@ -11197,7 +10795,9 @@
       "15": 480,
       "30": 930
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1144
+    },
     "tags": [
       "hombre"
     ],
@@ -11242,7 +10842,9 @@
       "15": 460,
       "30": 880
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2054
+    },
     "tags": [
       "mujer"
     ],
@@ -11322,7 +10924,7 @@
       "30": 1070
     },
     "precio_combo": {
-      "100": 1390
+      "100": 1390.88
     },
     "tags": [
       "mujer",
@@ -11361,7 +10963,8 @@
     "nombre": "Uomo Born In Roma Purple Melancholia",
     "precio_completo": {
       "ml": 100,
-      "precio": 2060
+      "precio": 2060,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 160,
@@ -11369,14 +10972,16 @@
       "15": 430,
       "30": 830
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1885
+    },
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
+    "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/valentino/BORN IN ROMA PURPLE MELANCHOLIA.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/BORN IN ROMA PURPLE MELANCHOLIA.png",
     "images_gallery": [],
     "notas": {
@@ -11415,7 +11020,9 @@
       "15": 550,
       "30": 1070
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 2054
+    },
     "tags": [
       "mujer",
       "valentino"
@@ -11441,52 +11048,6 @@
     "precio_cuadro": null
   },
   {
-    "id": "born-in-roma-purple-melancholia-valentino",
-    "nombre_interno": "Valentino Born In Roma Purple Melancholia",
-    "marca": "Valentino",
-    "nombre": "Born In Roma Purple Melancholia",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 2060
-    },
-    "precios_decants": {
-      "5": 160,
-      "10": 300,
-      "15": 430,
-      "30": 830
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre valentino"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": true,
-    "en_stock_decants": false,
-    "image_miniatura": "imagenes/fotos-catalogo/valentino/BORN IN ROMA PURPLE MELANCHOLIA.jpg",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Cardamomo"
-      ],
-      "corazon": [
-        "Coco",
-        "Lavanda"
-      ],
-      "fondo": [
-        "Madera de ámbar"
-      ]
-    },
-    "image_cuadro": null,
-    "precio_cuadro": null,
-    "oferta": false,
-    "precios_decants_oferta": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "uomo-born-in-roma-edt-valentino",
     "nombre_interno": "Valentino Uomo Born In Roma EDT",
     "marca": "Valentino",
@@ -11501,7 +11062,9 @@
       "15": 430,
       "30": 830
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 833.44
+    },
     "tags": [
       "hombre"
     ],
@@ -11583,7 +11146,9 @@
       "15": 260,
       "30": 490
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 1295.78
+    },
     "tags": [
       "hombre",
       "jpg"
@@ -11685,7 +11250,7 @@
       "30": 650
     },
     "precio_combo": {
-      "100": 1276
+      "100": 1276.83
     },
     "tags": [
       "hombre",
@@ -11733,7 +11298,7 @@
       "30": 650
     },
     "precio_combo": {
-      "100": 1047
+      "100": 1046.9
     },
     "tags": [
       "mujer",
@@ -11780,7 +11345,9 @@
       "15": 330,
       "30": 630
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1088.37
+    },
     "tags": [
       "mujer",
       "jpg"
@@ -11816,59 +11383,6 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "scandal-pour-homme-eau-de-toilette-jean-paul-gaultier",
-    "nombre_interno": "Jean Paul Gaultier Scandal Pour Homme EDT",
-    "marca": "Jean Paul Gaultier",
-    "nombre": "Scandal Pour Homme Eau De Toilette",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1370,
-      "precio_oferta": 1000
-    },
-    "precios_decants": {
-      "5": 120,
-      "10": 210,
-      "15": 300,
-      "30": 560
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/SCANDALL.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Mandarina",
-        "Salvia esclarea"
-      ],
-      "corazon": [
-        "Caramelo",
-        "Haba tonka"
-      ],
-      "fondo": [
-        "Vetiver"
-      ]
-    },
-    "oferta": true,
-    "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 90,
-      "10": 160,
-      "15": 220,
-      "30": 420
-    },
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "scandal-pour-homme-edt-jean-paul-gaultier",
     "nombre_interno": "Jean Paul Gaultier Scandal Pour Homme EDT",
     "marca": "Jean Paul Gaultier",
@@ -11885,15 +11399,19 @@
       "15": 300,
       "30": 560
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1165.62,
+      "50": 631.8,
+      "150": 1152.55
+    },
     "tags": [
       "hombre jpg"
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Fjpg%2FUntitled.jpg",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/SCANDALL.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -11937,7 +11455,9 @@
       "15": 240,
       "30": 450
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 797.55
+    },
     "tags": [
       "hombre"
     ],
@@ -11986,7 +11506,9 @@
       "15": 420,
       "30": 820
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "80": 1023.56
+    },
     "tags": [
       "mujer",
       "carolina"
@@ -12035,7 +11557,8 @@
       "30": 580
     },
     "precio_combo": {
-      "100": 921
+      "150": 1532.7,
+      "100": 921.05
     },
     "tags": [
       "hombre",
@@ -12120,7 +11643,9 @@
       "15": 200,
       "30": 360
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "150": 757.58
+    },
     "tags": [
       "hombre"
     ],
@@ -12171,7 +11696,7 @@
       "30": 800
     },
     "precio_combo": {
-      "80": 1486
+      "80": 1459.98
     },
     "tags": [
       "mujer",
@@ -12270,7 +11795,9 @@
       "15": 310,
       "30": 580
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "125": 916.5
+    },
     "tags": [
       "hombre"
     ],
@@ -12378,7 +11905,9 @@
       "ml": 100,
       "precio": 1640
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1534
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -12518,7 +12047,9 @@
       "15": 300,
       "30": 560
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1052.29
+    },
     "tags": [
       "hombre"
     ],
@@ -12558,43 +12089,6 @@
     "precio_cuadro": null
   },
   {
-    "id": "pour-homme-eau-de-toilette-versace",
-    "nombre_interno": "Versace Pour Homme EDT",
-    "marca": "Versace",
-    "nombre": "Pour Homme Eau de Toilette",
-    "precio_completo": null,
-    "precios_decants": null,
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/VERSACE POUR HOMME.JPEG",
-    "images_gallery": [],
-    "notas": {
-      "salida": [
-        "Limón",
-        "Bergamota",
-        "Neroli",
-        "Rosa de mayo"
-      ],
-      "corazon": [
-        "Jacinto",
-        "Cedro",
-        "Salvia esclarea",
-        "Geranio"
-      ],
-      "fondo": [
-        "Almizcle",
-        "Haba tonka",
-        "Ámbar"
-      ]
-    }
-  },
-  {
     "id": "spicebomb-infrared-eau-de-parfum-viktor-rolf",
     "nombre_interno": "Viktor&Rolf Spicebomb Infrared EDP",
     "marca": "Viktor&Rolf",
@@ -12609,7 +12103,9 @@
       "15": 330,
       "30": 630
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "50": 949
+    },
     "tags": [
       "hombre"
     ],
@@ -12659,7 +12155,7 @@
       "30": 680
     },
     "precio_combo": {
-      "100": 943
+      "100": 943.74
     },
     "tags": [
       "hombre"
@@ -12706,7 +12202,7 @@
       "30": 790
     },
     "precio_combo": {
-      "100": 998
+      "100": 998.74
     },
     "tags": [
       "mujer"
@@ -12817,7 +12313,7 @@
       "30": 660
     },
     "precio_combo": {
-      "200": 981
+      "200": 981.51
     },
     "tags": [
       "hombre d&g"
@@ -12860,59 +12356,6 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "k-by-d-g-eau-de-toilette-dolce-gabbana",
-    "nombre_interno": "Dolce&Gabbana K By D&G EDT",
-    "marca": "Dolce&Gabbana",
-    "nombre": "K By D&G Eau De Toilette",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1320
-    },
-    "precios_decants": {
-      "5": 110,
-      "10": 200,
-      "15": 290,
-      "30": 540
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/DOLCE GABBANA K.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Bayas de enebro",
-        "Cítricos",
-        "Naranja sanguina",
-        "Limón siciliano"
-      ],
-      "corazon": [
-        "Pimiento",
-        "Lavanda",
-        "Salvia esclarea",
-        "Geranio"
-      ],
-      "fondo": [
-        "Vetiver",
-        "Cedro",
-        "Pachulí"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100,
-    "precio_cuadro": null
-  },
-  {
     "id": "k-by-d-g-edt-dolce-gabbana",
     "nombre_interno": "Dolce&Gabbana K EDT",
     "marca": "Dolce&Gabbana",
@@ -12936,8 +12379,8 @@
       "30": 550
     },
     "precio_combo": {
-      "100": 724,
-      "200": 1072
+      "100": 724.43,
+      "200": 1071.69
     },
     "tags": [
       "hombre d&g"
@@ -12946,7 +12389,7 @@
     "en_stock_completos": true,
     "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/d&g/30494500000.png",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/DOLCE GABBANA K.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -13039,7 +12482,9 @@
       "15": 380,
       "30": 730
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 793
+    },
     "tags": [
       "hombre d&g"
     ],
@@ -13185,25 +12630,26 @@
     "nombre": "Devotion Intense",
     "precio_completo": {
       "ml": 100,
-      "precio": 1490
+      "precio": 2010,
+      "en_stock": true
     },
     "precios_decants": {
-      "5": 130,
-      "10": 220,
-      "15": 320,
-      "30": 610
+      "5": 160,
+      "10": 290,
+      "15": 420,
+      "30": 810
     },
     "precio_combo": {
-      "100": 1105
+      "100": 1105.55
     },
     "tags": [
       "mujer d&g"
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/d&g/DEVOTION INTENSE.jpg",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fmujer%2FDEVOTION%20INTENSE.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -13240,7 +12686,9 @@
       "15": 370,
       "30": 700
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 766.45
+    },
     "tags": [
       "hombre",
       "d&g"
@@ -13359,7 +12807,9 @@
       "15": 330,
       "30": 630
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "60": 670.93
+    },
     "tags": [
       "hombre"
     ],
@@ -13404,7 +12854,9 @@
       "15": 270,
       "30": 520
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 593.23
+    },
     "tags": [
       "hombre",
       "mntblanc"
@@ -13686,7 +13138,9 @@
       "15": 300,
       "30": 570
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 741
+    },
     "tags": [
       "hombre",
       "azzaro"
@@ -13732,7 +13186,9 @@
       "15": 250,
       "30": 470
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 332.8
+    },
     "tags": [
       "hombre"
     ],
@@ -13786,7 +13242,8 @@
       "30": 630
     },
     "precio_combo": {
-      "100": 831
+      "150": 1341.6,
+      "100": 831.35
     },
     "tags": [
       "hombre",
@@ -13838,7 +13295,8 @@
       "30": 630
     },
     "precio_combo": {
-      "100": 1007
+      "100": 1007.41,
+      "150": 1341.6
     },
     "tags": [
       "mujer",
@@ -13891,7 +13349,9 @@
       "15": 220,
       "30": 410
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 847.74
+    },
     "tags": [
       "hombre",
       "moncler"
@@ -13943,7 +13403,9 @@
       "15": 330,
       "30": 630
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 890.99
+    },
     "tags": [
       "mujer",
       "moncler"
@@ -13991,7 +13453,9 @@
       "precio": 1140
     },
     "precios_decants": null,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 776.84
+    },
     "tags": [
       "hombre",
       "moncler"
@@ -14085,7 +13549,9 @@
       "15": 160,
       "30": 290
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 514.83
+    },
     "tags": [
       "hombre"
     ],
@@ -14142,7 +13608,9 @@
       "15": 610,
       "30": 1190
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1014
+    },
     "tags": [
       "hombre"
     ],
@@ -14181,7 +13649,8 @@
     "nombre": "Dior Fahrenheit",
     "precio_completo": {
       "ml": 100,
-      "precio": 1780
+      "precio": 1780,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 140,
@@ -14189,7 +13658,9 @@
       "15": 380,
       "30": 720
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1240.73
+    },
     "tags": [
       "hombre dior"
     ],
@@ -14197,7 +13668,7 @@
     "en_stock_completos": false,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/dior/FAHRENHEIT.jpg",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/FAHRENHEIT.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -14237,70 +13708,6 @@
     "decants_auto_base": "normal",
     "decants_auto_ml": 100,
     "precio_cuadro": null
-  },
-  {
-    "id": "fahrenheit-eau-de-toilette-dior",
-    "nombre_interno": "Dior Fahrenheit EDT",
-    "marca": "Dior",
-    "nombre": "Fahrenheit Eau de Toilette",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1530
-    },
-    "precios_decants": {
-      "5": 130,
-      "10": 230,
-      "15": 330,
-      "30": 630
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "imagenes/fotos-decants/hombre/FAHRENHEIT.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Flor de nuez moscada",
-        "Lavanda",
-        "Cedro",
-        "Mandarina",
-        "Manzanilla",
-        "Bergamota",
-        "Espino blanco",
-        "Limón"
-      ],
-      "corazon": [
-        "Hoja de violeta",
-        "Nuez moscada",
-        "Cedro",
-        "Sándalo",
-        "Clavel",
-        "Madreselva",
-        "Jazmín",
-        "Lirio de los valles"
-      ],
-      "fondo": [
-        "Cuero",
-        "Vetiver",
-        "Almizcle",
-        "Ámbar",
-        "Pachulí",
-        "Haba tonka"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
   },
   {
     "id": "212-vip-men-black-mtv-edition-carolina-herrera",
@@ -14403,7 +13810,9 @@
       "15": 280,
       "30": 530
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "165": 1292.85
+    },
     "tags": [
       "hombre prl"
     ],
@@ -14556,7 +13965,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 368
+      "100": 368.72
     },
     "tags": [
       "hombre",
@@ -14623,7 +14032,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 359
+      "100": 359.24
     },
     "tags": [
       "hombre",
@@ -14688,7 +14097,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 370
+      "100": 370.42
     },
     "tags": [
       "hombre",
@@ -14766,7 +14175,9 @@
       "precio": 1060,
       "precio_oferta": 830
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 882.47
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -14808,7 +14219,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 404
+      "100": 404.11
     },
     "tags": [
       "mujer",
@@ -14868,7 +14279,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 457
+      "100": 455.95
     },
     "tags": [
       "hombre",
@@ -14929,7 +14340,9 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 409.5
+    },
     "tags": [
       "hombre",
       "rasasi",
@@ -14992,7 +14405,7 @@
       "30": 290
     },
     "precio_combo": {
-      "105": 537
+      "105": 537.73
     },
     "tags": [
       "hombre",
@@ -15055,7 +14468,9 @@
       "15": 140,
       "30": 240
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "105": 559
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -15112,7 +14527,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 439
+      "100": 439.4
     },
     "tags": [
       "hombre arabes"
@@ -15233,7 +14648,9 @@
       "15": 170,
       "30": 310
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 661.7
+    },
     "tags": [
       "mujer",
       "lattafa",
@@ -15292,7 +14709,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 429
+      "100": 429.18
     },
     "tags": [
       "mujer",
@@ -15353,7 +14770,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 436
+      "100": 435.5
     },
     "tags": [
       "hombre",
@@ -15416,7 +14833,7 @@
       "30": 260
     },
     "precio_combo": {
-      "90": 493
+      "90": 566.7
     },
     "tags": [
       "hombre",
@@ -15465,7 +14882,9 @@
       "15": 180,
       "30": 340
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 451.31
+    },
     "tags": [
       "hombre",
       "afnan",
@@ -15526,7 +14945,9 @@
       "15": 180,
       "30": 330
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 602.11
+    },
     "tags": [
       "hombre",
       "rasasi",
@@ -15588,7 +15009,7 @@
       "30": 410
     },
     "precio_combo": {
-      "120": 722
+      "120": 721.5
     },
     "tags": [
       "hombre",
@@ -15648,7 +15069,9 @@
       "15": 220,
       "30": 360
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 831.51
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -15701,7 +15124,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 380
+      "100": 379.28
     },
     "tags": [
       "hombre",
@@ -15762,7 +15185,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 391
+      "100": 391.3
     },
     "tags": [
       "hombre",
@@ -15825,7 +15248,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 447
+      "100": 447.2
     },
     "tags": [
       "hombre",
@@ -15943,7 +15366,9 @@
       "15": 180,
       "30": 330
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 598
+    },
     "tags": [
       "mujer",
       "lattafa",
@@ -16119,7 +15544,9 @@
       "precio": 1800,
       "en_stock": false
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1066
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -16158,7 +15585,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 321
+      "100": 320.59
     },
     "tags": [
       "mujer",
@@ -16218,7 +15645,9 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 494
+    },
     "tags": [
       "hombre",
       "lattafa",
@@ -16278,7 +15707,7 @@
       "30": 300
     },
     "precio_combo": {
-      "100": 504
+      "100": 505.52
     },
     "tags": [
       "hombre",
@@ -16339,7 +15768,9 @@
       "15": 160,
       "30": 290
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "105": 562.47
+    },
     "tags": [
       "hombre",
       "armaf",
@@ -16405,7 +15836,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 325
+      "100": 325.98
     },
     "tags": [
       "unisex",
@@ -16460,7 +15891,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 321
+      "100": 320.79
     },
     "tags": [
       "mujer",
@@ -16577,7 +16008,9 @@
       "15": 150,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 659.2
+    },
     "tags": [
       "hombre",
       "lattafa",
@@ -16637,7 +16070,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 443,
+      "100": 443.08,
       "200": 715
     },
     "tags": [
@@ -16691,7 +16124,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 710,
-      "precio_oferta": 560
+      "precio_oferta": 560,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 70,
@@ -16707,66 +16141,8 @@
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
-    "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Farabes%2FHAWAS%20ICE.png",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Manzana",
-        "Limón italiano",
-        "Bergamota siciliana",
-        "Anís estrellado"
-      ],
-      "corazon": [
-        "Ciruela",
-        "Flor de azahar",
-        "Cardamomo"
-      ],
-      "fondo": [
-        "Almizcle",
-        "Ámbar",
-        "Madera a la deriva",
-        "Musgo"
-      ]
-    },
-    "oferta": true,
-    "image_cuadro": null,
-    "precios_decants_oferta": {
-      "10": 100,
-      "15": 140,
-      "30": 250
-    },
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
-    "id": "hawas-ice-for-him-rasasi",
-    "nombre_interno": "Rasasi Hawas ICE For Him",
-    "marca": "Rasasi",
-    "nombre": "Hawas ICE For Him",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 710,
-      "precio_oferta": 560
-    },
-    "precios_decants": {
-      "5": 70,
-      "10": 120,
-      "15": 170,
-      "30": 310
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre arabes"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Farabes%2FHAWAS%20ICE.png",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FHAWAS%20ICE.jpg",
     "images_gallery": [],
     "notas": {
@@ -16809,7 +16185,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 840,
-      "precio_oferta": 660
+      "precio_oferta": 660,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 80,
@@ -16817,68 +16194,16 @@
       "15": 190,
       "30": 360
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 615.88
+    },
     "tags": [
       "hombre rasasi arabes"
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
-    "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Farabes%2FHAWAS%20FIRE.jpg",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Salvia esclarea"
-      ],
-      "corazon": [
-        "Notas marinas",
-        "Jazmín egipcio"
-      ],
-      "fondo": [
-        "Ámbar",
-        "Notas minerales",
-        "Ámbar gris"
-      ]
-    },
-    "oferta": true,
-    "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 70,
-      "10": 110,
-      "15": 160,
-      "30": 290
-    },
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
-    "id": "hawas-fire-for-him-rasasi",
-    "nombre_interno": "Rasasi Hawas Fire For Him",
-    "marca": "Rasasi",
-    "nombre": "Hawas Fire For Him",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 840,
-      "precio_oferta": 660
-    },
-    "precios_decants": {
-      "5": 80,
-      "10": 140,
-      "15": 190,
-      "30": 360
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre arabes"
-    ],
-    "etiqueta": "novedad",
-    "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-catalogo%2Farabes%2FHAWAS%20FIRE.jpg",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FHAWAS%20FIRE.png",
     "images_gallery": [],
     "notas": {
@@ -16961,50 +16286,6 @@
     "precio_cuadro": null
   },
   {
-    "id": "hawas-black-rasasi",
-    "nombre_interno": "Rasasi Hawas Black",
-    "marca": "Rasasi",
-    "nombre": "Hawas Black",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 710,
-      "precio_oferta": 560
-    },
-    "precios_decants": null,
-    "precio_combo": null,
-    "tags": [
-      "hombre rasasi arabes"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS BLACK.jpg",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Bergamota",
-        "Piña",
-        "Pomelo"
-      ],
-      "corazon": [
-        "Pachulí",
-        "Madera de cedro",
-        "Jazmín"
-      ],
-      "fondo": [
-        "Musgo de roble",
-        "Notas amaderadas",
-        "Ámbar"
-      ]
-    },
-    "oferta": false,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null
-  },
-  {
     "id": "hawas-black-for-him-rasasi",
     "nombre_interno": "Rasasi Hawas Black For Him",
     "marca": "Rasasi",
@@ -17012,7 +16293,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 710,
-      "precio_oferta": 560
+      "precio_oferta": 560,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 70,
@@ -17027,7 +16309,7 @@
     "etiqueta": null,
     "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS BLACK.jpg",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FHAWAS%20BLACK.png",
     "images_gallery": [],
     "notas": {
@@ -17122,7 +16404,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 840,
-      "precio_oferta": 660
+      "precio_oferta": 660,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 80,
@@ -17130,72 +16413,17 @@
       "15": 190,
       "30": 360
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 611
+    },
     "tags": [
       "hombre rasasi arabes"
     ],
     "etiqueta": "novedad",
     "en_stock_completos": true,
-    "en_stock_decants": false,
-    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS TROPICAL.jpg",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Agua de coco",
-        "Hoja de higo",
-        "Jengibre"
-      ],
-      "corazon": [
-        "Coco",
-        "Higo",
-        "Menta"
-      ],
-      "fondo": [
-        "Sándalo",
-        "Haba tonka",
-        "Almizcle"
-      ]
-    },
-    "oferta": true,
-    "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 70,
-      "10": 110,
-      "15": 160,
-      "30": 290
-    },
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
-    "id": "hawas-tropical-for-him-rasasi",
-    "nombre_interno": "Rasasi Hawas Tropical For Him",
-    "marca": "Rasasi",
-    "nombre": "Hawas Tropical For Him",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 840,
-      "precio_oferta": 660
-    },
-    "precios_decants": {
-      "5": 80,
-      "10": 140,
-      "15": 190,
-      "30": 360
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre arabes"
-    ],
-    "etiqueta": "novedad",
-    "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FHAWAS%20TROPICAL.png",
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS TROPICAL.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/HAWAS FIRE.png",
     "images_gallery": [],
     "notas": {
       "generales": [],
@@ -17236,51 +16464,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 840,
-      "precio_oferta": 660
-    },
-    "precios_decants": null,
-    "precio_combo": null,
-    "tags": [
-      "hombre rasasi arabes"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": true,
-    "en_stock_decants": false,
-    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS KOBRA.jpg",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Jengibre",
-        "Bergamota",
-        "Mandarina"
-      ],
-      "corazon": [
-        "Canela",
-        "Té verde",
-        "Neroli"
-      ],
-      "fondo": [
-        "Almizcle",
-        "Notas amaderadas",
-        "Ámbar"
-      ]
-    },
-    "oferta": true,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null
-  },
-  {
-    "id": "hawas-kobra-for-him-rasasi",
-    "nombre_interno": "Rasasi Hawas Kobra For Him",
-    "marca": "Rasasi",
-    "nombre": "Hawas Kobra For Him",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 840,
-      "precio_oferta": 660
+      "precio_oferta": 660,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 80,
@@ -17288,14 +16473,16 @@
       "15": 190,
       "30": 360
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 650
+    },
     "tags": [
-      "hombre arabes"
+      "hombre rasasi arabes"
     ],
-    "etiqueta": "novedad",
-    "en_stock_completos": false,
+    "etiqueta": null,
+    "en_stock_completos": true,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS KOBRA.jpg",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FHAWAS%20KOBRA.png",
     "images_gallery": [],
     "notas": {
@@ -17337,7 +16524,8 @@
     "precio_completo": {
       "ml": 100,
       "precio": 840,
-      "precio_oferta": 660
+      "precio_oferta": 660,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 80,
@@ -17346,73 +16534,15 @@
       "30": 360
     },
     "precio_combo": {
-      "100": 578
+      "100": 577.72
     },
     "tags": [
       "hombre rasasi arabes"
     ],
     "etiqueta": "novedad",
     "en_stock_completos": true,
-    "en_stock_decants": false,
-    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS MALIBU.jpg",
-    "image_miniatura_decant": null,
-    "images_gallery": [],
-    "notas": {
-      "generales": [],
-      "salida": [
-        "Piña",
-        "Naranja",
-        "Pomelo"
-      ],
-      "corazon": [
-        "Ámbar",
-        "Raíz de lirio",
-        "Lavanda"
-      ],
-      "fondo": [
-        "Haba tonka",
-        "Almizcle",
-        "Cashmeran",
-        "Pachulí"
-      ]
-    },
-    "oferta": true,
-    "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 70,
-      "10": 110,
-      "15": 160,
-      "30": 290
-    },
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
-    "id": "hawas-malibu-for-him-rasasi",
-    "nombre_interno": "Rasasi Hawas Malibu For Him",
-    "marca": "Rasasi",
-    "nombre": "Hawas Malibu For Him",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 840,
-      "precio_oferta": 660
-    },
-    "precios_decants": {
-      "5": 80,
-      "10": 140,
-      "15": 190,
-      "30": 360
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre arabes"
-    ],
-    "etiqueta": "novedad",
-    "en_stock_completos": false,
     "en_stock_decants": true,
-    "image_miniatura": null,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/HAWAS MALIBU.jpg",
     "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FHAWAS%20MALIBU.png",
     "images_gallery": [],
     "notas": {
@@ -17465,7 +16595,7 @@
       "30": 360
     },
     "precio_combo": {
-      "100": 593
+      "100": 593.13
     },
     "tags": [
       "hombre rasasi arabes"
@@ -17519,7 +16649,7 @@
       "30": 330
     },
     "precio_combo": {
-      "100": 436
+      "100": 435.5
     },
     "tags": [
       "hombre arabes"
@@ -17575,7 +16705,9 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 39
+    },
     "tags": [
       "hombre mujer arabes"
     ],
@@ -17628,7 +16760,9 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 39
+    },
     "tags": [
       "hombre mujer arabes"
     ],
@@ -17699,9 +16833,9 @@
     ],
     "etiqueta": null,
     "en_stock_completos": true,
-    "en_stock_decants": false,
+    "en_stock_decants": true,
     "image_miniatura": "imagenes/fotos-catalogo/arabes/bharara-king-pr.webp",
-    "image_miniatura_decant": null,
+    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FBHARARA%20KING.png",
     "images_gallery": [],
     "notas": {
       "generales": [
@@ -17731,53 +16865,6 @@
     "decants_auto_ml": 100
   },
   {
-    "id": "king-eau-de-parfum-bharara",
-    "nombre_interno": "Bharara King",
-    "marca": "Bharara",
-    "nombre": "King Eau De Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1000
-    },
-    "precios_decants": {
-      "5": 90,
-      "10": 160,
-      "15": 220,
-      "30": 420
-    },
-    "precio_combo": null,
-    "tags": [
-      "hombre unisex arabes"
-    ],
-    "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": true,
-    "image_miniatura": null,
-    "image_miniatura_decant": "https://suarezperfum.com/acciones/catalogo_imagen.php?path=fotos-decants%2Fhombre%2FBHARARA%20KING.png",
-    "images_gallery": [],
-    "notas": {
-      "generales": [
-        "Naranja",
-        "Bergamota",
-        "Limón",
-        "Notas afrutadas",
-        "Vainilla",
-        "Ámbar blanco",
-        "Almizcle"
-      ],
-      "salida": [],
-      "corazon": [],
-      "fondo": []
-    },
-    "oferta": true,
-    "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null,
-    "decants_auto": true,
-    "decants_auto_base": "normal",
-    "decants_auto_ml": 100
-  },
-  {
     "id": "hayaati-beau-fragrance-world",
     "nombre_interno": "Fragrance World Hayaati Beau",
     "marca": "Fragrance World",
@@ -17793,7 +16880,9 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 520
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -17849,7 +16938,9 @@
       "15": 150,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 695.46
+    },
     "tags": [
       "mujer",
       "lattafa",
@@ -18057,7 +17148,9 @@
       "15": 150,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 299
+    },
     "tags": [
       "hombre arabes"
     ],
@@ -18110,7 +17203,9 @@
       "15": 150,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 377
+    },
     "tags": [
       "hombre",
       "afnan",
@@ -18214,7 +17309,7 @@
       "30": 310
     },
     "precio_combo": {
-      "100": 603
+      "100": 602.94
     },
     "tags": [
       "hombre",
@@ -18269,7 +17364,9 @@
       "15": 150,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 533
+    },
     "tags": [
       "mujer",
       "lattafa",
@@ -18371,7 +17468,9 @@
       "15": 160,
       "30": 310
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 667.13
+    },
     "tags": [
       "hombre",
       "rasasi",
@@ -18426,7 +17525,7 @@
       "30": 310
     },
     "precio_combo": {
-      "100": 510
+      "100": 510.34
     },
     "tags": [
       "unisex",
@@ -18474,7 +17573,7 @@
       "30": 330
     },
     "precio_combo": {
-      "100": 589
+      "100": 588.85
     },
     "tags": [
       "hombre",
@@ -18731,7 +17830,9 @@
       "precio": 870,
       "precio_oferta": 680
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 721.98
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -18775,7 +17876,9 @@
       "15": 200,
       "30": 360
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 611
+    },
     "tags": [
       "hombre",
       "armaf",
@@ -18837,7 +17940,10 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 568.22,
+      "200": 728
+    },
     "tags": [
       "hombre",
       "armaf",
@@ -18897,7 +18003,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 389
+      "100": 389.44
     },
     "tags": [
       "unisex",
@@ -18957,7 +18063,7 @@
       "30": 280
     },
     "precio_combo": {
-      "100": 353
+      "100": 353.57
     },
     "tags": [
       "unisex",
@@ -19019,7 +18125,7 @@
       "30": 470
     },
     "precio_combo": {
-      "55": 453
+      "55": 453.08
     },
     "tags": [
       "hombre",
@@ -19070,7 +18176,9 @@
       "15": 170,
       "30": 310
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 585
+    },
     "tags": [
       "hombre",
       "mujer",
@@ -19173,7 +18281,9 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 494
+    },
     "tags": [
       "hombre",
       "lattafa",
@@ -19236,7 +18346,7 @@
       "30": 290
     },
     "precio_combo": {
-      "100": 393
+      "100": 392.6
     },
     "tags": [
       "mujer",
@@ -19293,10 +18403,10 @@
       "precio_oferta": 500
     },
     "precios_decants": {
-      "5": 60,
+      "5": 70,
       "10": 110,
       "15": 150,
-      "30": 260
+      "30": 280
     },
     "precio_combo": {
       "100": 416
@@ -19336,8 +18446,16 @@
     },
     "oferta": true,
     "image_cuadro": null,
-    "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precios_decants_oferta": {
+      "5": 60,
+      "10": 90,
+      "15": 130,
+      "30": 220
+    },
+    "precio_cuadro": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100
   },
   {
     "id": "odyssey-spectra-armaf",
@@ -19413,7 +18531,7 @@
       "30": 310
     },
     "precio_combo": {
-      "100": 571
+      "100": 571.3
     },
     "tags": [
       "mujer",
@@ -19498,7 +18616,9 @@
       "15": 150,
       "30": 280
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 554.68
+    },
     "tags": [
       "mujer arabes"
     ],
@@ -19554,7 +18674,9 @@
       "15": 150,
       "30": 260
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 599.64
+    },
     "tags": [
       "mujer arabes"
     ],
@@ -19641,7 +18763,7 @@
       "hombre mujer unisex lattafa arabes"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
+    "en_stock_completos": false,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/arabes/DESODORANTE KHAMRAH.jpg",
     "image_miniatura_decant": null,
@@ -19680,7 +18802,7 @@
       "hombre mujer unisex lattafa arabes"
     ],
     "etiqueta": null,
-    "en_stock_completos": true,
+    "en_stock_completos": false,
     "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/arabes/DESODORANTE YARA.webp",
     "image_miniatura_decant": null,
@@ -19718,7 +18840,9 @@
       "15": 180,
       "30": 330
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 572
+    },
     "tags": [
       "unisex",
       "khadlaj",
