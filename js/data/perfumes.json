@@ -2671,16 +2671,18 @@
     "nombre": "Narcotic Delight",
     "precio_completo": {
       "ml": 90,
-      "precio": 3280,
+      "precio": 4160,
       "en_stock": false
     },
     "precios_decants": {
-      "5": 270,
-      "10": 500,
-      "15": 740,
-      "30": 1450
+      "5": 330,
+      "10": 630,
+      "15": 930,
+      "30": 1830
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "90": 3549
+    },
     "tags": [
       "hombre unisex nicho mujer"
     ],
@@ -3310,7 +3312,7 @@
       {
         "ml": 100,
         "precio": 1350,
-        "precio_oferta": 1050,
+        "precio_oferta": 1140,
         "en_stock": true
       },
       {
@@ -3362,9 +3364,9 @@
     "image_cuadro": null,
     "precios_decants_oferta": {
       "5": 100,
-      "10": 170,
-      "15": 230,
-      "30": 440
+      "10": 180,
+      "15": 250,
+      "30": 470
     },
     "precio_cuadro": null,
     "decants_auto": true,
@@ -3690,18 +3692,28 @@
     "nombre_interno": "Rabanne One Million EDT",
     "marca": "Rabanne",
     "nombre": "One Million Eau de Toilette",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1250,
-      "en_stock": false
-    },
+    "precio_completo": [
+      {
+        "en_stock": false,
+        "ml": 200,
+        "precio": 1450
+      },
+      {
+        "ml": 100,
+        "precio": 1100,
+        "en_stock": false
+      }
+    ],
     "precios_decants": {
-      "5": 110,
-      "10": 190,
-      "15": 270,
-      "30": 520
+      "5": 100,
+      "10": 170,
+      "15": 240,
+      "30": 460
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "200": 1090.05,
+      "100": 639.6
+    },
     "tags": [
       "hombre"
     ],
@@ -4014,11 +4026,18 @@
     "nombre_interno": "Giorgio Armani Acqua Di Gio Profondo",
     "marca": "Giorgio Armani",
     "nombre": "Aqcua Di Gio Profondo",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1860,
-      "en_stock": true
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1860,
+        "en_stock": true
+      },
+      {
+        "en_stock": true,
+        "ml": 200,
+        "precio": 2900
+      }
+    ],
     "precios_decants": {
       "5": 150,
       "10": 270,
@@ -5017,6 +5036,11 @@
       {
         "ml": 200,
         "precio": 2500
+      },
+      {
+        "en_stock": true,
+        "ml": 300,
+        "precio": 3530
       }
     ],
     "precios_decants": {
@@ -5026,7 +5050,8 @@
       "30": 520
     },
     "precio_combo": {
-      "200": 2373.81
+      "200": 2373.81,
+      "300": 39
     },
     "tags": [
       "hombre",
@@ -7847,23 +7872,23 @@
     "nombre": "Phantom Eau de Toilette",
     "precio_completo": [
       {
-        "ml": 100,
-        "precio": 1240,
-        "precio_oferta": 900
-      },
-      {
         "ml": 150,
         "precio": 1760
+      },
+      {
+        "ml": 100,
+        "precio": 1260
       }
     ],
     "precios_decants": {
       "5": 110,
       "10": 190,
       "15": 270,
-      "30": 510
+      "30": 520
     },
     "precio_combo": {
-      "150": 689
+      "150": 689,
+      "100": 616.9
     },
     "tags": [
       "hombre rabanne"
@@ -7896,12 +7921,7 @@
     },
     "oferta": false,
     "image_cuadro": null,
-    "precios_decants_oferta": {
-      "5": 90,
-      "10": 150,
-      "15": 200,
-      "30": 380
-    },
+    "precios_decants_oferta": null,
     "precio_cuadro": null,
     "decants_auto": true,
     "decants_auto_base": "normal",
