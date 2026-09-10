@@ -202,6 +202,9 @@
                 }
                 return {
                     tipo: type,
+                    // El id del catálogo es lo que permite volver a resolver el
+                    // producto desde un código de combo compartido.
+                    id: p.id,
                     skuBase: null,
                     nombre: p.nombre_interno,
                     imagen: (isPerfume ? p.image_miniatura : p.image_miniatura_decant) || 'imagenes/image.webp',

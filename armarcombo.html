@@ -35,6 +35,17 @@
                 </div>
             </div>
 
+            <button class="combo-code-field" id="combo-code-open" type="button" aria-expanded="false" aria-haspopup="dialog">
+                <span class="combo-code-field__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="3" width="6" height="4" rx="1"></rect>
+                        <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
+                        <path d="M9 12h6M9 16h4"></path>
+                    </svg>
+                </span>
+                <span class="combo-code-field__text">Pegá un código de combo</span>
+            </button>
+
             <div class="combo-type-tabs" id="combo-type-tabs">
                 <button class="combo-type-tab active" data-value="perfumes" type="button">Perfumes completos</button>
                 <button class="combo-type-tab" data-value="decants" type="button">Set de Decants</button>
@@ -73,6 +84,7 @@
                     Confirmar combo por WhatsApp
                 </a>
                 <button id="cart-link" class="combo-cart-btn disabled" type="button">Añadir combo al carrito</button>
+                <button id="combo-share" class="combo-share-btn disabled" type="button">Copiar código</button>
                 <p class="combo-wa-hint" id="combo-wa-hint">Seleccioná todos los elementos para continuar</p>
             </div>
 
@@ -80,11 +92,24 @@
 
         </section>
     </main>
+
+    <div class="combo-code-backdrop" id="combo-code-backdrop"></div>
+    <div class="combo-code-modal" id="combo-code-modal" role="dialog" aria-modal="true" aria-labelledby="combo-code-title" aria-hidden="true">
+        <div class="combo-code-modal__header">
+            <h2 class="combo-code-modal__title" id="combo-code-title">Código de combo</h2>
+            <button class="combo-code-modal__close" id="combo-code-close" type="button" aria-label="Cerrar">&times;</button>
+        </div>
+        <p class="combo-code-modal__hint">Pegá el código que te compartieron (o el link completo) y armamos el combo por vos.</p>
+        <input class="combo-code-modal__input" id="combo-code-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="SRZ-C3-...">
+        <p class="combo-code-modal__feedback" id="combo-code-feedback" role="status" aria-live="polite"></p>
+        <button class="combo-code-modal__apply" id="combo-code-apply" type="button">Aplicar código</button>
+    </div>
     <script src="js/core/app.js"></script>
     <script src="js/data/perfumes-data.js"></script>
     <script src="js/models/catalog.model.js"></script>
     <script src="js/models/search.model.js"></script>
     <script src="js/models/combo.model.js"></script>
+    <script src="js/models/combo-code.js"></script>
     <script src="js/views/common.view.js"></script>
     <script src="js/views/include.view.js"></script>
     <script src="js/views/catalog.view.js"></script>

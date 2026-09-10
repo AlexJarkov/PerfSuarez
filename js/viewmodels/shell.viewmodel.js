@@ -110,9 +110,13 @@
             const slug = cleanPath.replace(/^\//, '').replace(/\.html$/, '');
             if (metaBySlug[slug] && metaBySlug[slug].index < PRIMARY_PANEL_COUNT) {
                 const panel = metaBySlug[slug];
+                // El armador necesita leer ?combo= desde su propio documento,
+                // así que a este panel sí se le reenvía el query string (los
+                // demás paneles primarios no lo usan y conviene no recargarlos).
+                const carriesSearch = slug === 'armarcombo';
                 return {
                     index: panel.index,
-                    panelSrc: panel.item.src,
+                    panelSrc: carriesSearch ? `${panel.item.src}${search || ''}` : panel.item.src,
                     historyUrl: makeHistoryUrl(panel.item.src, panel.item.slug, search, hash),
                     navHref: panel.item.src,
                     meta: panel.item
@@ -325,6 +329,15 @@
             const panel = panels[index];
             const iframe = panel?.querySelector('iframe');
             if (!panel || !iframe) {
+                return;
+            }
+
+            // Sin ruta explícita esto es un preload de vecino: sólo debe llenar
+            // un panel vacío, nunca reemplazar lo que una navegación real ya
+            // cargó. El preload va por requestIdleCallback (timeout 1500ms), así
+            // que puede llegar después de la navegación; sin esta guarda pisaba
+            // el panel con su data-src pelado y descartaba su query string.
+            if (!route && iframe.dataset.loadedSrc) {
                 return;
             }
 
