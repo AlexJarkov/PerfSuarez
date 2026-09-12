@@ -1913,10 +1913,17 @@
     "nombre_interno": "Louis Vuitton Pacific Chill",
     "marca": "Louis Vuitton",
     "nombre": "Pacific Chill",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 5460
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 5460
+      },
+      {
+        "en_stock": false,
+        "ml": 200,
+        "precio": 8500
+      }
+    ],
     "precios_decants": {
       "5": 380,
       "10": 740,
@@ -5199,13 +5206,13 @@
     "nombre": "Le Beau Paradise Garden",
     "precio_completo": [
       {
-        "ml": 75,
-        "precio": 1080,
+        "ml": 125,
+        "precio": 1480,
         "en_stock": true
       },
       {
-        "ml": 125,
-        "precio": 1480,
+        "ml": 75,
+        "precio": 1080,
         "en_stock": true
       }
     ],
@@ -11566,10 +11573,17 @@
     "nombre_interno": "Carolina Herrera Bad Boy Le Parfum",
     "marca": "Carolina Herrera",
     "nombre": "Bad Boy Le Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1420
-    },
+    "precio_completo": [
+      {
+        "en_stock": true,
+        "ml": 150,
+        "precio": 1550
+      },
+      {
+        "ml": 100,
+        "precio": 1420
+      }
+    ],
     "precios_decants": {
       "5": 120,
       "10": 210,
@@ -17878,7 +17892,8 @@
         "Cuero"
       ]
     },
-    "id": "arabian-sky-armaf"
+    "id": "arabian-sky-armaf",
+    "decants_auto": false
   },
   {
     "id": "odyssey-mandarin-sky-elixir-armaf",
@@ -18695,7 +18710,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 599.64
+      "100": 533
     },
     "tags": [
       "mujer arabes"
@@ -18724,7 +18739,8 @@
     "oferta": true,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": false
   },
   {
     "id": "turathi-blue-set-afnan",
