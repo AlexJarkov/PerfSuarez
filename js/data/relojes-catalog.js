@@ -52,54 +52,78 @@
         'indice-barra-marco': 'Barras con marco'
     };
 
-    // El fechador se ubica en 24 posiciones alrededor de la esfera y sus
-    // etiquetas se arman solas ("3", "4:30"), asi que no hay tabla que mantener.
-
     // Broches y coronas quedaron fuera de la seleccion por decision interna
     // (Ago 2026). Los assets siguen generados en imagenes/relojes/ por si vuelven.
 
+    /**
+     * Siete partes, cada una partida en pantallas de UNA sola decision.
+     *
+     * La version anterior mezclaba en cada paso un grid de modelos, una barra
+     * de colores y alternadores: en la prueba con un usuario sin experiencia no
+     * se entendio por donde empezar. Ahora cada pantalla es una lista que se
+     * recorre deslizando sobre el reloj, y nada mas.
+     *
+     * `pregunta` es lo que se lee arriba: frases cortas, como hablando.
+     */
     const PASOS = [
         {
             id: 'caja',
             label: 'Caja',
-            titulo: 'Elegí la caja',
-            descripcion: 'Define el tamaño, el perfil y el acabado del reloj.'
+            pantallas: [
+                { id: 'caja-modelo', label: 'Forma', pregunta: '¿Qué forma de reloj te gusta?' },
+                { id: 'caja-color', label: 'Color', pregunta: '¿De qué color querés la caja?' }
+            ]
         },
         {
             id: 'bisel',
             label: 'Bisel',
-            titulo: 'Elegí el bisel',
-            descripcion: 'El anillo que rodea la esfera. Se monta sobre la caja.'
+            pantallas: [
+                { id: 'bisel-modelo', label: 'Modelo', pregunta: '¿Qué aro querés alrededor?' },
+                { id: 'bisel-color', label: 'Color', pregunta: '¿De qué color querés el aro?' },
+                { id: 'bisel-abajo', label: 'Dos colores', pregunta: '¿Querés la mitad de abajo de otro color?' }
+            ]
         },
         {
             id: 'dial',
-            label: 'Dial',
-            titulo: 'Elegí el dial',
-            descripcion: 'La esfera del reloj: color, textura y acabado.'
+            label: 'Esfera',
+            pantallas: [
+                { id: 'dial-modelo', label: 'Textura', pregunta: '¿Qué fondo querés para la esfera?' },
+                { id: 'dial-color', label: 'Color', pregunta: '¿De qué color querés la esfera?' },
+                { id: 'dial-fecha', label: 'Fecha', pregunta: '¿Querés que muestre la fecha? ¿Dónde?' }
+            ]
         },
         {
             id: 'indice',
-            label: 'Índices',
-            titulo: 'Elegí los índices',
-            descripcion: 'Los doce marcadores de hora sobre la esfera.'
+            label: 'Números',
+            pantallas: [
+                { id: 'indice-modelo', label: 'Estilo', pregunta: '¿Números o marcas para las horas?' },
+                { id: 'indice-color', label: 'Color', pregunta: '¿De qué color los números?' }
+            ]
         },
         {
             id: 'aguja',
             label: 'Agujas',
-            titulo: 'Elegí las agujas',
-            descripcion: 'Horas, minutos y segundero se eligen por separado.'
+            pantallas: [
+                { id: 'aguja-modelo', label: 'Agujas', pregunta: '¿Qué agujas te gustan?' },
+                { id: 'aguja-color', label: 'Color', pregunta: '¿De qué color las agujas?' },
+                { id: 'segundero-modelo', label: 'Segundero', pregunta: '¿Qué aguja fina para los segundos?' },
+                { id: 'segundero-color', label: 'Color', pregunta: '¿De qué color el segundero?' }
+            ]
         },
         {
             id: 'correa',
             label: 'Correa',
-            titulo: 'Elegí la correa',
-            descripcion: 'Cuero o brazalete metálico.'
+            pantallas: [
+                { id: 'correa-modelo', label: 'Modelo', pregunta: '¿Cuero o metal?' },
+                { id: 'correa-color', label: 'Color', pregunta: '¿De qué color la correa?' }
+            ]
         },
         {
-            id: 'detalles',
-            label: 'Detalles',
-            titulo: 'Últimos detalles',
-            descripcion: 'Fechador y foto personalizada en la esfera.'
+            id: 'foto',
+            label: 'Foto',
+            pantallas: [
+                { id: 'foto', label: 'Foto', pregunta: '¿Querés una foto tuya en la esfera?' }
+            ]
         }
     ];
 

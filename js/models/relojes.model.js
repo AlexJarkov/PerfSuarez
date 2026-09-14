@@ -368,6 +368,7 @@
             dial: (dialesBase()[0] || {}).id,
             fechador: 'no',
             foto: null,
+            usarFoto: false,
             indiceModelo: juego ? juego.modelo : null,
             indiceAcabado: juego ? juego.acabado : null,
             // Representante del juego activo: es el glifo que el grid marca
@@ -550,9 +551,7 @@
         const escala = (LARGO_AGUJA[tipo] * radioDial) / pieza.pivote.cy;
         const ancho = pieza.w * escala;
         const alto = pieza.h * escala;
-        const angulo = tipo === 'segundero' && fechador === '6'
-            ? SEGUNDERO_CON_FECHA_6
-            : ANGULOS[tipo];
+        const angulo = ANGULOS[tipo];
         return capa(
             pieza.src,
             ancho,
@@ -586,7 +585,9 @@
     }
 
     function capaDeFoto(seleccion, radioDial) {
-        if (!seleccion.foto) {
+        // La foto queda guardada aunque se elija "Sin foto": deslizar de ida y
+        // vuelta por esa pantalla no deberia obligar a subirla otra vez.
+        if (!seleccion.foto || !seleccion.usarFoto) {
             return null;
         }
         const lado = radioDial * 2;
@@ -808,12 +809,384 @@
         });
     }
 
+    // ---------- Pantallas del configurador ----------
+
+    /**
+     * Que campo gobierna cada pantalla y contra que categoria se agrupan sus
+     * modelos. Horas y minutos comparten pieza: el asset `principal` es el
+     * mismo para las dos agujas, solo cambia el largo con el que se dibuja.
+     */
+    const PANTALLAS = {
+        'caja-modelo': { campo: 'caja', grupo: 'caja', tipo: 'modelo' },
+        'caja-color': { campo: 'caja', grupo: 'caja', tipo: 'color' },
+        'bisel-modelo': { campo: 'bisel', grupo: 'bisel', tipo: 'modelo' },
+        'bisel-color': { campo: 'bisel', grupo: 'bisel', tipo: 'color' },
+        'bisel-abajo': { campo: 'biselAbajo', grupo: 'bisel', tipo: 'abajo' },
+        'dial-modelo': { campo: 'dial', grupo: 'dial', tipo: 'modelo' },
+        'dial-color': { campo: 'dial', grupo: 'dial', tipo: 'color' },
+        'dial-fecha': { campo: 'fechador', tipo: 'fecha' },
+        'indice-modelo': { campo: 'indices', tipo: 'indice-modelo' },
+        'indice-color': { campo: 'indices', tipo: 'indice-color' },
+        // Solo desde el menu, en modo avanzado: glifo de una hora suelta.
+        'indice-pos': { campo: 'indices', tipo: 'indice-pos' },
+        'aguja-modelo': { campo: 'hora', grupo: 'hora', tipo: 'modelo' },
+        'aguja-color': { campo: 'hora', grupo: 'hora', tipo: 'color' },
+        'segundero-modelo': { campo: 'segundero', grupo: 'segundero', tipo: 'modelo' },
+        'segundero-color': { campo: 'segundero', grupo: 'segundero', tipo: 'color' },
+        'correa-modelo': { campo: 'correa', grupo: 'correa', tipo: 'modelo' },
+        'correa-color': { campo: 'correa', grupo: 'correa', tipo: 'color' },
+        foto: { campo: 'usarFoto', tipo: 'foto' }
+    };
+
+    function catalogo() {
+        return App.data.relojes;
+    }
+
+    function tipoDe(pantallaId) {
+        return (PANTALLAS[pantallaId] || {}).tipo || null;
+    }
+
+    function nombreDeColor(pieza) {
+        if (!pieza) {
+            return '';
+        }
+        return pieza.color ? pieza.color.nombre : catalogo().acabadoLabel(pieza);
+    }
+
+    function grupoDeIndice(modelo) {
+        return modelosDe('indice').find(function (grupo) {
+            return grupo.modelo === modelo;
+        }) || null;
+    }
+
+    /**
+     * Las tres posiciones que ya traen los assets van primero: son las que se
+     * ven "de fabrica", sin girar el dial. El resto sigue en sentido horario
+     * desde las 12, para que buscar una hora sea contar como en un reloj.
+     */
+    const FECHAS_PRIMERAS = [6, 9, 12];
+
+    function ordenDeFechas() {
+        const resto = [];
+        for (let posicion = 0; posicion < POSICIONES_FECHA; posicion += 1) {
+            if (FECHAS_PRIMERAS.indexOf(posicion) < 0) {
+                resto.push(posicion);
+            }
+        }
+        return FECHAS_PRIMERAS.concat(resto);
+    }
+
+    function etiquetaDeFecha(valor) {
+        if (valor === 'no' || valor === undefined || valor === null) {
+            return 'Sin fecha';
+        }
+        const posicion = Number(valor);
+        const hora = Math.floor(posicion / 2) || 12;
+        return `A las ${hora}${posicion % 2 ? ':30' : ''}`;
+    }
+
+    /**
+     * Si la pantalla tiene algo para elegir con la seleccion actual. Una
+     * pantalla de color con un solo color, el bicolor de un bisel que no es
+     * GMT o la fecha de un dial sin gemelo con ventana se saltan solas.
+     */
+    function pantallaVisible(pantallaId, seleccion) {
+        const conf = PANTALLAS[pantallaId];
+        if (!conf) {
+            return false;
+        }
+        switch (conf.tipo) {
+            case 'abajo': {
+                const bisel = get(seleccion.bisel);
+                return admiteBicolor(bisel) && coloresDe(grupoDe('bisel', bisel)).length > 1;
+            }
+            case 'fecha':
+                return admiteFechador(seleccion.dial);
+            case 'color':
+                return coloresDe(grupoDe(conf.grupo, get(seleccion[conf.campo]))).length > 1;
+            case 'indice-color':
+                return coloresDe(grupoDeIndice(seleccion.indiceModelo)).length > 1;
+            case 'indice-pos':
+                return false;
+            default:
+                return true;
+        }
+    }
+
+    /** Pantallas visibles, en orden, con su parte y su lugar dentro de ella. */
+    function pantallasDe(seleccion) {
+        const lista = [];
+        catalogo().PASOS.forEach(function (parte, parteIndice) {
+            const visibles = parte.pantallas.filter(function (pantalla) {
+                return pantallaVisible(pantalla.id, seleccion);
+            });
+            visibles.forEach(function (pantalla, enParte) {
+                lista.push({
+                    id: pantalla.id,
+                    pantalla: pantalla,
+                    parte: parte,
+                    parteIndice: parteIndice,
+                    enParte: enParte,
+                    totalEnParte: visibles.length
+                });
+            });
+        });
+        return lista;
+    }
+
+    /**
+     * Opciones de una pantalla, como lista plana. Es la unica fuente que usan
+     * el carrusel, las flechas, el menu y el tutorial: lo que se ve deslizando
+     * y lo que se ve en el grid no pueden separarse.
+     *
+     * `tipo` le dice a la vista como dibujar la ficha: la pieza entera, una
+     * muestra de color, la ventana de la fecha o el icono de la foto.
+     */
+    function opcionesDe(pantallaId, seleccion, extra) {
+        const conf = PANTALLAS[pantallaId];
+        if (!conf) {
+            return [];
+        }
+        const nombres = catalogo();
+
+        switch (conf.tipo) {
+            case 'modelo': {
+                // Cada modelo se ofrece en el color que ya estaba elegido si lo
+                // tiene: cambiar de bisel no obliga a volver a buscar el azul.
+                const activa = get(seleccion[conf.campo]);
+                return modelosDe(conf.grupo).map(function (grupo) {
+                    const pieza = (activa && activa.color
+                        ? variantePorColor(grupo, activa.color.nombre)
+                        : null) || grupo.piezas[0];
+                    return {
+                        valor: String(pieza.id),
+                        etiqueta: nombres.nombrarModelo(grupo),
+                        tipo: 'pieza',
+                        pieza: pieza,
+                        modelo: grupo.modelo
+                    };
+                });
+            }
+            case 'color': {
+                const grupo = grupoDe(conf.grupo, get(seleccion[conf.campo]));
+                return coloresDe(grupo).map(function (pieza) {
+                    return { valor: String(pieza.id), etiqueta: nombreDeColor(pieza), tipo: 'color', pieza: pieza };
+                });
+            }
+            case 'abajo': {
+                const arriba = get(seleccion.bisel);
+                if (!arriba) {
+                    return [];
+                }
+                const otros = coloresDe(grupoDe('bisel', arriba)).filter(function (pieza) {
+                    return pieza.id !== arriba.id;
+                }).map(function (pieza) {
+                    return { valor: String(pieza.id), etiqueta: `Abajo ${nombreDeColor(pieza).toLowerCase()}`, tipo: 'color', pieza: pieza };
+                });
+                return [{ valor: 'igual', etiqueta: 'Todo de un color', tipo: 'pieza', pieza: arriba }].concat(otros);
+            }
+            case 'fecha':
+                return [{ valor: 'no', etiqueta: 'Sin fecha', tipo: 'fecha', angulo: null }].concat(
+                    ordenDeFechas().map(function (posicion) {
+                        return {
+                            valor: String(posicion),
+                            etiqueta: etiquetaDeFecha(posicion),
+                            tipo: 'fecha',
+                            angulo: anguloDeFecha(posicion)
+                        };
+                    })
+                );
+            case 'indice-modelo':
+                return modelosDe('indice').map(function (grupo) {
+                    const acabados = coloresDe(grupo).map(function (pieza) {
+                        return pieza.acabado;
+                    });
+                    const acabado = acabados.indexOf(seleccion.indiceAcabado) >= 0 ? seleccion.indiceAcabado : acabados[0];
+                    const juego = juegoDeIndices(grupo.modelo, acabado);
+                    return {
+                        valor: `${grupo.modelo}|${acabado}`,
+                        etiqueta: nombres.nombrarModelo(grupo),
+                        tipo: 'pieza',
+                        // El glifo de las 12 es el que mejor representa al juego.
+                        pieza: juego ? get(juego.glifos[POSICIONES - 1]) : grupo.piezas[0]
+                    };
+                }).filter(function (opcion) {
+                    return !!opcion.pieza;
+                });
+            case 'indice-color': {
+                const grupo = grupoDeIndice(seleccion.indiceModelo);
+                return coloresDe(grupo).map(function (pieza) {
+                    return { valor: `${grupo.modelo}|${pieza.acabado}`, etiqueta: nombres.acabadoLabel(pieza), tipo: 'color', pieza: pieza };
+                });
+            }
+            case 'indice-pos': {
+                const posicion = extra && typeof extra.posicion === 'number' ? extra.posicion : POSICIONES - 1;
+                return glifosParaPosicion(posicion).map(function (pieza) {
+                    const doble = pieza.variante === 'doble' ? ' doble' : '';
+                    return {
+                        valor: String(pieza.id),
+                        etiqueta: `${nombres.MODELOS[pieza.modelo] || pieza.modelo}${doble} · ${nombres.acabadoLabel(pieza)}`,
+                        tipo: 'pieza',
+                        pieza: pieza
+                    };
+                });
+            }
+            case 'foto':
+                return [
+                    { valor: 'no', etiqueta: 'Sin foto', tipo: 'foto' },
+                    { valor: 'si', etiqueta: 'Con mi foto', tipo: 'foto' }
+                ];
+            default:
+                return [];
+        }
+    }
+
+    /** Posicion de la opcion elegida dentro de `opciones`. */
+    function indiceActual(pantallaId, seleccion, opciones, extra) {
+        const conf = PANTALLAS[pantallaId];
+        if (!conf || !opciones.length) {
+            return 0;
+        }
+        let buscado = null;
+        switch (conf.tipo) {
+            case 'modelo': {
+                const activa = get(seleccion[conf.campo]);
+                const encontrado = activa
+                    ? opciones.findIndex(function (opcion) {
+                        return opcion.modelo === activa.modelo;
+                    })
+                    : 0;
+                return Math.max(0, encontrado);
+            }
+            case 'color':
+                buscado = String(seleccion[conf.campo]);
+                break;
+            case 'abajo':
+                buscado = seleccion.biselAbajo && seleccion.biselAbajo !== seleccion.bisel
+                    ? String(seleccion.biselAbajo)
+                    : 'igual';
+                break;
+            case 'fecha':
+                buscado = String(seleccion.fechador === undefined || seleccion.fechador === null ? 'no' : seleccion.fechador);
+                break;
+            case 'indice-modelo': {
+                const prefijo = `${seleccion.indiceModelo}|`;
+                return Math.max(0, opciones.findIndex(function (opcion) {
+                    return opcion.valor.indexOf(prefijo) === 0;
+                }));
+            }
+            case 'indice-color':
+                buscado = `${seleccion.indiceModelo}|${seleccion.indiceAcabado}`;
+                break;
+            case 'indice-pos': {
+                const posicion = extra && typeof extra.posicion === 'number' ? extra.posicion : POSICIONES - 1;
+                buscado = String((seleccion.indices || {})[posicion]);
+                break;
+            }
+            case 'foto':
+                buscado = seleccion.usarFoto ? 'si' : 'no';
+                break;
+            default:
+                return 0;
+        }
+        return Math.max(0, opciones.findIndex(function (opcion) {
+            return opcion.valor === buscado;
+        }));
+    }
+
+    /**
+     * Deja la seleccion coherente despues de un cambio: el bicolor solo cierra
+     * entre variantes del mismo bisel GMT, y la fecha solo existe si el dial
+     * tiene gemelo con ventana.
+     */
+    function normalizar(seleccion) {
+        const arriba = get(seleccion.bisel);
+        const abajo = get(seleccion.biselAbajo);
+        if (abajo && admiteBicolor(arriba)) {
+            if (abajo.modelo !== arriba.modelo) {
+                // GMT a GMT fina: se conserva el color de la mitad de abajo.
+                const equivalente = variantePorColor(grupoDe('bisel', arriba), nombreDeColor(abajo));
+                seleccion.biselAbajo = equivalente && equivalente.id !== arriba.id ? equivalente.id : null;
+            } else if (abajo.id === arriba.id) {
+                seleccion.biselAbajo = null;
+            }
+        } else {
+            seleccion.biselAbajo = null;
+        }
+
+        if (!admiteFechador(seleccion.dial)) {
+            seleccion.fechador = 'no';
+        }
+        return seleccion;
+    }
+
+    /** Aplica una opcion y devuelve una seleccion nueva. */
+    function aplicar(pantallaId, seleccion, valor, extra) {
+        const conf = PANTALLAS[pantallaId];
+        const nueva = Object.assign({}, seleccion);
+        if (!conf) {
+            return nueva;
+        }
+
+        switch (conf.tipo) {
+            case 'modelo':
+            case 'color': {
+                const pieza = get(valor);
+                if (!pieza) {
+                    return nueva;
+                }
+                nueva[conf.campo] = pieza.id;
+                if (conf.campo === 'hora') {
+                    nueva.minuto = pieza.id;
+                }
+                break;
+            }
+            case 'abajo':
+                nueva.biselAbajo = valor === 'igual' ? null : Number(valor);
+                break;
+            case 'fecha':
+                nueva.fechador = valor === 'no' ? 'no' : Number(valor);
+                break;
+            case 'indice-modelo':
+            case 'indice-color': {
+                const partes = String(valor).split('|');
+                const juego = juegoDeIndices(partes[0], partes[1]);
+                if (juego) {
+                    nueva.indiceModelo = juego.modelo;
+                    nueva.indiceAcabado = juego.acabado;
+                    nueva.indiceJuego = juego.glifos[0];
+                    nueva.indices = mapaDeIndices(juego);
+                }
+                break;
+            }
+            case 'indice-pos': {
+                const posicion = extra && typeof extra.posicion === 'number' ? extra.posicion : POSICIONES - 1;
+                nueva.indices = Object.assign({}, nueva.indices);
+                nueva.indices[posicion] = Number(valor);
+                break;
+            }
+            case 'foto':
+                nueva.usarFoto = valor === 'si';
+                break;
+            default:
+                break;
+        }
+        return normalizar(nueva);
+    }
+
     App.models.relojes = {
         POSICIONES_FECHA,
         admiteBicolor,
         admiteFechador,
         anguloDeFecha,
+        aplicar,
         capasDe,
+        etiquetaDeFecha,
+        indiceActual,
+        nombreDeColor,
+        opcionesDe,
+        pantallasDe,
+        tipoDe,
         centrosDeIndices,
         coloresDe,
         dialEfectivo,

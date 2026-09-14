@@ -75,13 +75,17 @@
     }
 }
 
-body.is-home-panel header {
+/* Watches esconde header y dock mientras su menú de opciones está abierto: el
+   espacio es del reloj y de la lista, y la navegación distraía. */
+body.is-home-panel header,
+body.is-watch-menu header {
     transform: translateY(-110%);
     opacity: 0;
     pointer-events: none;
 }
 
-body.is-home-panel .catalog-dock {
+body.is-home-panel .catalog-dock,
+body.is-watch-menu .catalog-dock {
     transform: translate(-50%, 160%);
     opacity: 0;
     pointer-events: none;

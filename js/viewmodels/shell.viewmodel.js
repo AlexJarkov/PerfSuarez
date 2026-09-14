@@ -367,6 +367,11 @@
             navController?.setActiveByHref(route.navHref);
             syncHeaderLinks(route.navHref);
             document.body.classList.toggle('is-home-panel', currentIndex === 0);
+            // Watches esconde header y dock con su menu abierto. Al cambiar de
+            // panel se restituyen siempre: si no, fuera de Watches no quedaria
+            // forma de navegar. Watches los vuelve a esconder al tocarlo.
+            document.body.classList.remove('is-watch-menu');
+            document.getElementById('catalog-dock')?.classList.remove('catalog-dock--detail-hidden');
 
             if (pushHistory) {
                 history.pushState({ route: route.historyUrl }, '', route.historyUrl);

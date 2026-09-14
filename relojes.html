@@ -23,69 +23,105 @@
 </head>
 
 <body class="relojes-page">
-    <main class="watch-builder" id="watch-builder">
-        <!-- El shell escucha gestos en el documento del iframe: sin la marca,
-             deslizar sobre el reloj cambiaría de panel en vez de pieza. -->
-        <section class="watch-stage" id="watch-stage" aria-label="Vista previa del reloj" data-shell-swipe-ignore>
-            <button class="watch-stage__zoom" id="watch-zoom" type="button" aria-label="Ampliar el reloj">
-                <span class="watch-stage__frame" id="watch-frame" role="img" aria-label="Reloj en construcción"></span>
+    <!-- El shell escucha gestos en el documento del iframe. La marca va en todo
+         el builder: deslizar sobre el reloj cambia la pieza, y un gesto de más
+         en cualquier otro lado no debe sacar a nadie de Watches sin querer. -->
+    <main class="watch-builder" id="watch-builder" data-shell-swipe-ignore>
+        <header class="watch-head" id="watch-head">
+            <div class="watch-head__top">
+                <p class="watch-head__paso" id="watch-head-paso">Armá tu reloj</p>
+                <span class="watch-head__puntos" id="watch-head-puntos" aria-hidden="true"></span>
+                <button class="watch-help" id="watch-help" type="button" aria-label="Ver cómo se usa">?</button>
+            </div>
+            <div class="watch-head__barra" id="watch-head-barra" aria-hidden="true"></div>
+            <h1 class="watch-head__pregunta" id="watch-head-pregunta">Cargando tu reloj…</h1>
+        </header>
+
+        <section class="watch-stage" id="watch-stage" aria-label="Tu reloj. Deslizá hacia un costado para cambiar la pieza">
+            <div class="watch-stage__watch">
+                <span class="watch-stage__frame" id="watch-frame" role="img" aria-label="Tu reloj"></span>
                 <span class="watch-stage__mark" aria-hidden="true"></span>
+                <span class="watch-hand" aria-hidden="true">👆</span>
+            </div>
+
+            <button class="watch-arrow watch-arrow--prev" id="watch-arrow-prev" type="button" aria-label="Opción anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <!-- Carrusel del arrastre: la tira de piezas sigue al dedo y la
-                 del centro es la que queda elegida. -->
-            <div class="watch-carousel" aria-hidden="true">
+            <button class="watch-arrow watch-arrow--next" id="watch-arrow-next" type="button" aria-label="Opción siguiente">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <button class="watch-menu-btn" id="watch-menu-abrir" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                Ver todas
+            </button>
+            <div class="watch-stage__acciones">
+                <button class="watch-foto-btn" id="watch-foto-elegir" type="button" hidden>Elegir foto</button>
+            </div>
+
+            <p class="watch-stage__status" id="watch-status" aria-live="polite">Cargando piezas…</p>
+        </section>
+
+        <!-- Forma principal de elegir: la tira sigue al dedo y la del centro es
+             la elegida. Tocar una ficha también la elige. -->
+        <section class="watch-picker" id="watch-picker" aria-label="Opciones de esta pieza">
+            <div class="watch-carousel" id="watch-carousel">
                 <div class="watch-carousel__rail" id="watch-carousel-rail"></div>
             </div>
-            <p class="watch-carousel__label" id="watch-carousel-label" aria-live="polite"></p>
-            <p class="watch-swipe-hint" id="watch-swipe-hint">
-                <span aria-hidden="true">‹</span> Deslizá sobre el reloj para cambiar la pieza <span aria-hidden="true">›</span>
+            <p class="watch-picker__label" aria-live="polite">
+                <strong id="watch-opcion-nombre"></strong>
+                <span id="watch-opcion-cuenta"></span>
             </p>
-            <p class="watch-stage__status" id="watch-status">Cargando piezas…</p>
         </section>
 
-        <section class="watch-sheet" id="watch-sheet" aria-label="Opciones del reloj">
-            <button class="watch-sheet__handle" id="watch-sheet-handle" type="button" aria-label="Contraer o expandir el panel de opciones">
-                <span class="watch-sheet__grip" aria-hidden="true"></span>
-                <span class="watch-sheet__hint" id="watch-sheet-hint">
-                    <span class="watch-sheet__chevron" aria-hidden="true"></span>
-                    <span id="watch-sheet-hint-text">Deslizá para ver el reloj más grande</span>
-                </span>
+        <!-- Forma secundaria: todas las opciones juntas. -->
+        <section class="watch-sheet" id="watch-sheet" aria-label="Todas las opciones">
+            <button class="watch-sheet__handle" id="watch-sheet-cerrar" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Cerrar la lista
             </button>
-
-            <nav class="watch-steps" id="watch-steps" aria-label="Pasos del armado"></nav>
-
-            <div class="watch-sheet__body" id="watch-sheet-body" data-shell-swipe-ignore>
-                <header class="watch-step-heading">
-                    <h1 id="watch-step-title">Armá tu reloj</h1>
-                    <p id="watch-step-copy">Elegí cada pieza y mirá cómo se arma en tiempo real.</p>
-                </header>
+            <div class="watch-sheet__body" id="watch-sheet-body">
                 <div class="watch-panels" id="watch-panels"></div>
             </div>
-
-            <input class="watch-file" id="watch-foto" type="file" accept="image/*" hidden>
-
-            <footer class="watch-sheet__foot">
-                <button class="watch-btn watch-btn--ghost" id="watch-prev" type="button">Atrás</button>
-                <button class="watch-btn watch-btn--solid" id="watch-next" type="button">Siguiente</button>
-            </footer>
         </section>
+
+        <!-- No es <footer>: el sitio tiene una regla global que apila sus hijos. -->
+        <div class="watch-nav">
+            <button class="watch-btn watch-btn--ghost" id="watch-prev" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Atrás
+            </button>
+            <button class="watch-btn watch-btn--solid" id="watch-next" type="button">Siguiente</button>
+        </div>
+
+        <input class="watch-file" id="watch-foto" type="file" accept="image/*" hidden>
     </main>
 
     <section class="watch-result" id="watch-result" aria-hidden="true" hidden>
-        <div class="watch-result__card">
-            <button class="watch-result__close" id="watch-result-close" type="button" aria-label="Volver a editar">×</button>
-            <p class="eyebrow">Tu Suarez Watch</p>
-            <h2>Así quedó tu reloj</h2>
+        <div class="watch-result__card" role="dialog" aria-modal="true" aria-labelledby="watch-result-title">
+            <p class="watch-result__eyebrow">Suarez Watches</p>
+            <h2 id="watch-result-title">¡Tu reloj está listo!</h2>
             <div class="watch-result__image">
-                <img id="watch-result-img" alt="Reloj configurado">
+                <img id="watch-result-img" alt="Tu reloj terminado">
             </div>
-            <dl class="watch-result__summary" id="watch-result-summary"></dl>
-            <p class="watch-result__price">US$ 500</p>
+            <p class="watch-result__price"><small>Precio final</small><span id="watch-result-price"></span></p>
+
             <div class="watch-result__actions">
-                <a class="watch-btn watch-btn--wa" id="watch-wa" href="javascript:void(0);" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+                <a class="watch-btn watch-btn--wa watch-btn--xl" id="watch-wa" href="javascript:void(0);" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.6c.3 2.9 2.5 5.4 5.6 6.2l1.1-1.3-1.8-.9-.8.8c-1-.5-1.8-1.3-2.3-2.3l.8-.8-.9-1.8z" fill="currentColor"/></svg>
+                    Pedir por WhatsApp
+                </a>
                 <button class="watch-btn watch-btn--solid" id="watch-cart" type="button">Añadir al carrito</button>
-                <button class="watch-btn watch-btn--ghost" id="watch-download" type="button">Descargar imagen</button>
             </div>
+
+            <h3 class="watch-result__subtitulo">Lo que elegiste</h3>
+            <ul class="watch-resumen" id="watch-result-summary"></ul>
+
+            <button class="watch-btn watch-btn--ghost watch-result__volver" id="watch-result-close" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Seguir editando
+            </button>
+            <button class="watch-result__link" id="watch-download" type="button">Descargar la imagen</button>
         </div>
     </section>
 
@@ -97,6 +133,7 @@
     <script src="js/models/relojes.model.js"></script>
     <script src="js/views/relojes.view.js"></script>
     <script src="js/viewmodels/relojes.viewmodel.js"></script>
+    <script src="js/viewmodels/relojes-tutorial.js"></script>
 </body>
 
 </html>

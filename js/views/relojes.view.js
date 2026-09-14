@@ -1,17 +1,10 @@
 (function (App) {
-    const catalogo = App.data.relojes;
-
     function escapar(texto) {
         return String(texto == null ? '' : texto)
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;');
-    }
-
-    function rgbCss(color) {
-        const rgb = color && color.rgb ? color.rgb : [200, 200, 200];
-        return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
     }
 
     /**
@@ -101,203 +94,205 @@
         });
     }
 
-    function renderPasos(nav, pasos, activo, completados) {
-        nav.innerHTML = pasos.map(function (paso, indice) {
-            const clases = ['watch-step-chip'];
-            if (indice === activo) {
-                clases.push('is-active');
-            }
-            if (completados.indexOf(paso.id) >= 0) {
-                clases.push('is-done');
-            }
-            return `<button type="button" class="${clases.join(' ')}" data-paso="${paso.id}">${indice + 1}. ${paso.label}</button>`;
-        }).join('');
-    }
+    // ---------- Fichas: como se dibuja cada opcion ----------
 
     /**
-     * Barra de colores del modelo activo.
+     * Como recortar cada categoria para la muestra de color.
      *
-     * Antes cada tarjeta llevaba su propia fila de puntitos de 14 px: en el
-     * telefono eran imposibles de acertar y llenaban el grid de ruido. Ahora hay
-     * una sola barra, debajo del grid, con muestras grandes y el nombre del
-     * color elegido a la vista.
+     * Antes la muestra era el RGB promedio del asset, y mentia: el bisel GMT
+     * "Rojo" es blanco y rojo, y promediado salia rosa. Ahora la muestra ES el
+     * asset, recortado donde mejor se lee su color.
      */
-    function coloresHtml(colores, seleccionado, campo, etiqueta) {
-        if (colores.length < 2) {
-            return '';
+    const MUESTRA = {
+        bisel: 'contain',
+        caja: 'contain',
+        dial: 'cover',
+        correa: 'tira',
+        brazalete: 'tira'
+    };
+
+    function muestraHtml(pieza) {
+        if (!pieza) {
+            return '<span class="watch-muestra" aria-hidden="true"></span>';
         }
-
-        const activa = colores.find(function (pieza) {
-            return pieza.id === seleccionado;
-        });
-        const muestras = colores.map(function (pieza) {
-            const clase = pieza.id === seleccionado ? 'watch-swatch is-active' : 'watch-swatch';
-            const nombre = pieza.color ? pieza.color.nombre : '';
-            return `<button type="button" class="${clase}" data-campo="${escapar(campo)}" data-pieza="${pieza.id}"`
-                + ` style="--tono: ${rgbCss(pieza.color)}" title="${escapar(nombre)}" aria-label="${escapar(nombre)}"></button>`;
-        }).join('');
-
-        return ''
-            + '<div class="watch-colors">'
-            +   '<p class="watch-colors__head">'
-            +     `<span>${escapar(etiqueta || 'Color')}</span>`
-            +     `<strong>${escapar(activa && activa.color ? activa.color.nombre : '')}</strong>`
-            +   '</p>'
-            +   `<div class="watch-swatches">${muestras}</div>`
-            + '</div>';
+        // Agujas e indices son trazos de un par de pixeles: recortados no se
+        // ve nada. Se muestran como una pastilla del metal que son.
+        if (pieza.categoria === 'aguja' || pieza.categoria === 'indice') {
+            return `<span class="watch-muestra watch-muestra--metal is-${escapar(pieza.acabado)}" aria-hidden="true"></span>`;
+        }
+        const modo = MUESTRA[pieza.categoria] || 'cover';
+        return `<span class="watch-muestra watch-muestra--${modo}" style="background-image: url('${escapar(pieza.src)}')" aria-hidden="true"></span>`;
     }
 
-    /**
-     * Tarjeta de un modelo. Reemplaza al listado de una tarjeta por archivo,
-     * que dejaba 147 agujas practicamente iguales en pantalla. El color se
-     * elige aparte, en la barra de colores del paso.
-     */
-    function modeloHtml(grupo, colores, activa, campo) {
-        const seleccionada = activa && activa.modelo === grupo.modelo;
-        const muestra = seleccionada ? activa : colores[0];
-        const clase = seleccionada ? 'watch-option is-active' : 'watch-option';
-        const nombre = catalogo.nombrarModelo(grupo);
-        return ''
-            + `<button type="button" class="${clase}" data-campo="${escapar(campo)}" data-pieza="${muestra.id}" title="${escapar(nombre)}">`
-            +   `<img src="${muestra.src}" alt="${escapar(nombre)}" loading="lazy">`
-            +   `<span class="watch-option__label">${escapar(nombre)}</span>`
-            + '</button>';
+    const ICONO_SIN_FOTO = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 17.5l11-11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+    const ICONO_CAMARA = '<svg viewBox="0 0 24 24"><path d="M4 8h3.2l1.8-2.5h6l1.8 2.5H20v11H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13.2" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+
+    /** Lo que va dentro de una ficha, del carrusel o del menu. */
+    function fichaInterior(opcion, extras) {
+        const conf = extras || {};
+        switch (opcion.tipo) {
+            case 'color':
+                return muestraHtml(opcion.pieza);
+            case 'fecha':
+                return opcion.angulo === null || opcion.angulo === undefined
+                    ? '<span class="watch-fecha is-sin" aria-hidden="true"></span>'
+                    : `<span class="watch-fecha" style="--ang: ${opcion.angulo}deg" aria-hidden="true"><i></i></span>`;
+            case 'foto':
+                if (opcion.valor === 'si' && conf.foto) {
+                    return `<span class="watch-foto-icono" aria-hidden="true"><img src="${conf.foto}" alt="" draggable="false"></span>`;
+                }
+                return `<span class="watch-foto-icono" aria-hidden="true">${opcion.valor === 'si' ? ICONO_CAMARA : ICONO_SIN_FOTO}</span>`;
+            default:
+                return opcion.pieza
+                    ? `<img src="${escapar(opcion.pieza.src)}" alt="" draggable="false">`
+                    : '';
+        }
     }
 
-    /** Tarjeta de una pieza suelta, sin agrupar (glifos de un indice puntual). */
-    function piezaHtml(pieza, seleccionada, campo, etiqueta) {
-        const clase = seleccionada ? 'watch-option is-active' : 'watch-option';
-        const nombre = etiqueta || catalogo.nombrarPieza(pieza);
-        return ''
-            + `<button type="button" class="${clase}" data-campo="${escapar(campo)}" data-pieza="${pieza.id}" title="${escapar(nombre)}">`
-            +   `<img src="${pieza.src}" alt="${escapar(nombre)}" loading="lazy">`
-            +   `<span class="watch-option__label">${escapar(nombre)}</span>`
-            + '</button>';
-    }
+    // ---------- Encabezado ----------
 
-    /**
-     * Un paso puede traer varios paneles (las agujas traen tres) y cada panel
-     * puede ser un grid de modelos, un grid de piezas sueltas o un bloque de
-     * controles propio.
-     */
-    function renderPaneles(contenedor, paneles) {
-        contenedor.innerHTML = paneles.map(function (panel) {
-            const titulo = panel.titulo ? `<h2 class="watch-panel-title">${escapar(panel.titulo)}</h2>` : '';
-            const nota = panel.nota ? `<p class="watch-panel-note">${escapar(panel.nota)}</p>` : '';
-
-            if (panel.html) {
-                return `${titulo}${nota}${panel.html}`;
+    /** "Paso 2 de 7 · Bisel", la barra de partes y la pregunta de la pantalla. */
+    function renderEncabezado(el, info) {
+        el.headPaso.textContent = `Paso ${info.parteIndice + 1} de ${info.partes.length} · ${info.parte.label}`;
+        el.headBarra.innerHTML = info.partes.map(function (parte, indice) {
+            let clase = '';
+            if (indice < info.parteIndice) {
+                clase = 'is-hecho';
+            } else if (indice === info.parteIndice) {
+                clase = 'is-actual';
             }
-
-            const cuerpo = panel.modelos
-                ? panel.modelos.map(function (item) {
-                    return modeloHtml(item.grupo, item.colores, item.activa, panel.campo);
-                }).join('')
-                : panel.piezas.map(function (pieza) {
-                    return piezaHtml(pieza, pieza.id === panel.seleccion, panel.campo, panel.etiqueta && panel.etiqueta(pieza));
-                }).join('');
-
-            return `${titulo}${nota}<div class="watch-grid">${cuerpo}</div>`;
+            return `<span class="${clase}"></span>`;
         }).join('');
+
+        // Los puntitos cuentan las pantallas dentro de la parte: con uno solo
+        // no dicen nada y se ocultan.
+        el.headPuntos.innerHTML = info.totalEnParte > 1
+            ? Array.from({ length: info.totalEnParte }, function (_, indice) {
+                let clase = '';
+                if (indice < info.enParte) {
+                    clase = 'is-hecho';
+                } else if (indice === info.enParte) {
+                    clase = 'is-actual';
+                }
+                return `<i class="${clase}"></i>`;
+            }).join('')
+            : '';
+        el.headPregunta.textContent = info.pregunta;
     }
 
-    /** Interruptor de dos opciones (todos iguales / uno por uno, bisel bicolor). */
-    function alternadorHtml(campo, opciones, activo) {
-        const botones = opciones.map(function (opcion) {
-            const clase = opcion.valor === activo ? 'watch-toggle is-active' : 'watch-toggle';
-            return `<button type="button" class="${clase}" data-alternador="${escapar(campo)}" data-valor="${escapar(opcion.valor)}">${escapar(opcion.label)}</button>`;
-        }).join('');
-        return `<div class="watch-toggles" role="group">${botones}</div>`;
-    }
+    // ---------- Carrusel ----------
 
-    // ---------- Carrusel del arrastre ----------
-
-    // Ancho de cada ficha del carrusel, en px. El arrastre avanza una pieza
-    // cada este tanto, asi que la tira sigue al dedo uno a uno.
-    const FICHA = 68;
+    // Distancia entre fichas, en px. El arrastre avanza una opcion cada este
+    // tanto, asi que la tira sigue al dedo uno a uno.
+    const FICHA = 76;
     // Cuantas fichas a cada lado siguen siendo visibles.
     const ALCANCE = 3;
 
-    /** Monta la tira de piezas del paso activo. Se llama al empezar a arrastrar. */
-    function montarCarrusel(rail, piezas) {
-        rail.innerHTML = piezas.map(function (pieza) {
-            return `<span class="watch-carousel__item"><img src="${pieza.src}" alt="" draggable="false"></span>`;
+    function montarCarrusel(rail, opciones, extras) {
+        rail.innerHTML = opciones.map(function (opcion, indice) {
+            return `<span class="watch-ficha watch-ficha--${opcion.tipo}" data-ficha="${indice}">${fichaInterior(opcion, extras)}</span>`;
         }).join('');
         return Array.from(rail.children);
     }
 
     /**
-     * Coloca la tira segun la posicion (fraccionaria) en la que va el arrastre.
-     * Las fichas se alejan del centro encogiendose y desvaneciendose, como el
-     * selector de modo de la camara de iOS.
+     * Coloca la tira segun la posicion (fraccionaria) elegida. Las fichas se
+     * alejan del centro encogiendose y desvaneciendose, como el selector de
+     * modo de la camara de iOS. `animado` suaviza el acomodo al soltar o al
+     * tocar una flecha; durante el arrastre la tira va pegada al dedo.
      */
-    function moverCarrusel(fichas, posicion) {
+    function moverCarrusel(fichas, posicion, animado) {
         fichas.forEach(function (ficha, indice) {
             const distancia = indice - posicion;
             const absoluta = Math.abs(distancia);
-            if (absoluta > ALCANCE + 0.5) {
-                ficha.style.display = 'none';
-                return;
-            }
             const suave = Math.min(absoluta, ALCANCE);
-            ficha.style.display = '';
-            ficha.style.transform = `translate(-50%, -50%) translateX(${distancia * FICHA}px) scale(${1 - suave * 0.17})`;
-            ficha.style.opacity = String(Math.max(0.12, 1 - suave * 0.3));
+            const visible = absoluta <= ALCANCE + 0.5;
+            ficha.style.transition = animado ? 'transform 240ms ease, opacity 240ms ease' : 'none';
+            ficha.style.transform = `translate(-50%, -50%) translateX(${distancia * FICHA}px) scale(${1 - suave * 0.16})`;
+            ficha.style.opacity = visible ? String(Math.max(0.15, 1 - suave * 0.28)) : '0';
+            ficha.style.visibility = visible ? '' : 'hidden';
             ficha.style.zIndex = String(10 - Math.round(suave));
+            ficha.classList.toggle('is-centro', Math.round(posicion) === indice);
         });
     }
 
-    // ---------- Selector de fechador ----------
+    // ---------- Menu secundario ----------
 
-    /**
-     * Rueda de 24 posiciones. Una lista de 24 chips no entra en el panel y no
-     * dice nada; sobre un circulo se ve de una donde va a quedar la ventana.
-     */
-    function fechadorHtml(posiciones, activa, habilitado) {
-        const puntos = posiciones.map(function (opcion) {
-            const clases = ['watch-clock__dot'];
-            if (String(opcion.valor) === String(activa)) {
-                clases.push('is-active');
-            }
-            if (opcion.sobreIndice) {
-                clases.push('is-hora');
-            }
-            return `<button type="button" class="${clases.join(' ')}" data-fecha="${opcion.valor}"`
-                + ` style="--x: ${opcion.x}%; --y: ${opcion.y}%" title="${escapar(opcion.label)}"`
-                + ` aria-label="${escapar(opcion.label)}"${habilitado ? '' : ' disabled'}></button>`;
-        }).join('');
-
-        const clase = habilitado ? 'watch-clock' : 'watch-clock is-disabled';
-        const activaLabel = activa === 'no'
-            ? 'Sin fechador'
-            : `A las ${(posiciones.find(function (o) { return String(o.valor) === String(activa); }) || {}).label || ''}`;
-
-        return ''
-            + `<div class="${clase}">`
-            +   `<div class="watch-clock__face">${puntos}</div>`
-            +   '<div class="watch-clock__side">'
-            +     `<p class="watch-clock__value">${escapar(activaLabel)}</p>`
-            +     `<button type="button" class="watch-toggle${activa === 'no' ? ' is-active' : ''}" data-fecha="no"${habilitado ? '' : ' disabled'}>Sin fechador</button>`
-            +   '</div>'
-            + '</div>';
+    function alternadorHtml(opciones, activo) {
+        return '<div class="watch-toggles" role="group">' + opciones.map(function (opcion) {
+            const clase = opcion.valor === activo ? 'watch-toggle is-active' : 'watch-toggle';
+            return `<button type="button" class="${clase}" data-modo-indices="${escapar(opcion.valor)}" aria-pressed="${opcion.valor === activo}">${escapar(opcion.label)}</button>`;
+        }).join('') + '</div>';
     }
 
-    function renderResumen(lista, filas) {
+    /**
+     * El menu dibuja la misma lista que se recorre deslizando, en grid. Es la
+     * forma secundaria de elegir: para quien prefiere ver todo junto.
+     */
+    function renderMenu(contenedor, conf) {
+        let html = `<p class="watch-menu-titulo">${escapar(conf.titulo)}</p>`;
+
+        if (conf.indices) {
+            html += '<div class="watch-avanzado">'
+                + '<p class="watch-avanzado__titulo">Avanzado</p>'
+                + alternadorHtml([
+                    { valor: 'juego', label: 'Todos iguales' },
+                    { valor: 'individual', label: 'Uno por uno' }
+                ], conf.indices.modo)
+                + (conf.indices.modo === 'individual'
+                    ? `<p class="watch-panel-note">Tocá una hora sobre el reloj para cambiarla. Ahora estás cambiando las ${conf.indices.hora}.</p>`
+                    : '')
+                + '</div>';
+        }
+
+        html += `<div class="watch-grid">${conf.opciones.map(function (opcion, indice) {
+            const activa = indice === conf.actual;
+            return `<button type="button" class="watch-option${activa ? ' is-active' : ''}" data-opcion="${indice}" aria-pressed="${activa}">`
+                + `<span class="watch-option__ficha watch-option__ficha--${opcion.tipo}">${fichaInterior(opcion, conf.extras)}</span>`
+                + `<span class="watch-option__label">${escapar(opcion.etiqueta)}</span>`
+                + '</button>';
+        }).join('')}</div>`;
+
+        if (conf.foto) {
+            html += '<div class="watch-foto-acciones">'
+                + `<button type="button" class="watch-btn watch-btn--solid" data-foto="elegir">${conf.foto.tiene ? 'Cambiar foto' : 'Elegir foto'}</button>`
+                + (conf.foto.tiene ? '<button type="button" class="watch-btn watch-btn--ghost" data-foto="quitar">Borrar foto</button>' : '')
+                + '</div>'
+                + '<p class="watch-panel-note">La foto queda solo en este teléfono: no se sube a ningún lado.</p>';
+        }
+
+        contenedor.innerHTML = html;
+    }
+
+    /** Cambia la opcion marcada sin volver a dibujar el grid (no mueve el scroll). */
+    function marcarActivo(contenedor, actual) {
+        contenedor.querySelectorAll('[data-opcion]').forEach(function (boton) {
+            const activa = Number(boton.dataset.opcion) === actual;
+            boton.classList.toggle('is-active', activa);
+            boton.setAttribute('aria-pressed', String(activa));
+        });
+    }
+
+    // ---------- Resultado ----------
+
+    function renderResumen(lista, filas, extras) {
         lista.innerHTML = filas.map(function (fila) {
-            return `<dt>${escapar(fila.label)}</dt><dd>${escapar(fila.valor)}</dd>`;
+            return '<li class="watch-resumen__fila">'
+                + `<span class="watch-resumen__mini">${fila.opcion ? fichaInterior(fila.opcion, extras) : ''}</span>`
+                + `<span class="watch-resumen__texto"><small>${escapar(fila.label)}</small><strong>${escapar(fila.valor)}</strong></span>`
+                + `<button type="button" class="watch-resumen__cambiar" data-parte="${escapar(fila.parte)}">Cambiar</button>`
+                + '</li>';
         }).join('');
     }
 
     App.views.relojes = {
         FICHA,
-        alternadorHtml,
-        coloresHtml,
         escapar,
-        fechadorHtml,
+        marcarActivo,
         montarCarrusel,
         moverCarrusel,
-        renderPaneles,
-        renderPasos,
+        renderEncabezado,
+        renderMenu,
         renderResumen,
         renderStage
     };

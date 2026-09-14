@@ -1,13 +1,16 @@
 (function (App) {
     const WHATSAPP_NUMBER = '78064327';
-    const ESTADOS_SHEET = ['is-expanded', 'is-half', 'is-collapsed'];
-    // Cuanto hay que arrastrar sobre el reloj para pasar a la pieza siguiente.
-    const PASO_ARRASTRE = 52;
     const CLAVE_FOTO = 'perfsuarez:reloj:foto';
     // La foto viaja a localStorage como data URL: a 700 px y calidad 0.82 pesa
     // unos 60 KB, lejos del tope de 5 MB que comparte con el carrito.
     const FOTO_LADO = 700;
     const FOTO_CALIDAD = 0.82;
+    // Si en este tiempo nadie toca nada, una mano muestra el gesto.
+    const INACTIVIDAD_MS = 8000;
+    // La pista deja de aparecer cuando ya se cambio de opcion varias veces.
+    const CAMBIOS_PARA_APRENDIDO = 3;
+    // Cuanto hay que desplazar el trackpad para pasar una opcion.
+    const UMBRAL_RUEDA = 36;
 
     function initRelojes() {
         const builder = document.getElementById('watch-builder');
@@ -18,29 +21,35 @@
         const catalogo = App.data.relojes;
         const modelo = App.models.relojes;
         const vista = App.views.relojes;
-        const pasos = catalogo.PASOS;
+        const partes = catalogo.PASOS;
+        const escritorio = window.matchMedia('(min-width: 900px)');
 
         const el = {
+            head: document.getElementById('watch-head'),
+            headPaso: document.getElementById('watch-head-paso'),
+            headPuntos: document.getElementById('watch-head-puntos'),
+            headBarra: document.getElementById('watch-head-barra'),
+            headPregunta: document.getElementById('watch-head-pregunta'),
             stage: document.getElementById('watch-stage'),
             frame: document.getElementById('watch-frame'),
             status: document.getElementById('watch-status'),
-            carruselRail: document.getElementById('watch-carousel-rail'),
-            carruselLabel: document.getElementById('watch-carousel-label'),
-            sheet: document.getElementById('watch-sheet'),
-            handle: document.getElementById('watch-sheet-handle'),
-            hint: document.getElementById('watch-sheet-hint'),
-            hintText: document.getElementById('watch-sheet-hint-text'),
-            zoom: document.getElementById('watch-zoom'),
-            steps: document.getElementById('watch-steps'),
+            arrowPrev: document.getElementById('watch-arrow-prev'),
+            arrowNext: document.getElementById('watch-arrow-next'),
+            menuAbrir: document.getElementById('watch-menu-abrir'),
+            fotoElegir: document.getElementById('watch-foto-elegir'),
+            carrusel: document.getElementById('watch-carousel'),
+            rail: document.getElementById('watch-carousel-rail'),
+            opcionNombre: document.getElementById('watch-opcion-nombre'),
+            opcionCuenta: document.getElementById('watch-opcion-cuenta'),
+            sheetCerrar: document.getElementById('watch-sheet-cerrar'),
             body: document.getElementById('watch-sheet-body'),
-            title: document.getElementById('watch-step-title'),
-            copy: document.getElementById('watch-step-copy'),
             panels: document.getElementById('watch-panels'),
             foto: document.getElementById('watch-foto'),
             prev: document.getElementById('watch-prev'),
             next: document.getElementById('watch-next'),
             result: document.getElementById('watch-result'),
             resultImg: document.getElementById('watch-result-img'),
+            resultPrice: document.getElementById('watch-result-price'),
             resultSummary: document.getElementById('watch-result-summary'),
             resultClose: document.getElementById('watch-result-close'),
             wa: document.getElementById('watch-wa'),
@@ -49,212 +58,118 @@
         };
 
         let seleccion = {};
-        let pasoActivo = 0;
-        let visitados = [];
-        let estadoSheet = 0;
-        // Modo del paso de indices: 'juego' aplica el mismo glifo a las doce
-        // posiciones, 'individual' deja editar una por una tocando el reloj.
+        let pantallas = [];
+        let pantallaId = partes[0].pantallas[0].id;
+        let opciones = [];
+        let actual = 0;
+        let fichas = [];
+        let claveMontada = '';
+        let menuAbierto = false;
+        let resultadoAbierto = false;
+        // Modo avanzado de los indices, solo desde el menu: 'juego' aplica el
+        // mismo glifo a las doce horas, 'individual' edita una por una.
         let modoIndices = 'juego';
         let posicionActiva = 11;
-        let biselBicolor = false;
+        let cambios = 0;
 
-        // ---------- Paneles de cada paso ----------
+        // ---------- Tutorial ----------
 
         /**
-         * Campo que gobierna cada paso. Es el que cambia al arrastrar sobre el
-         * reloj y el que se usa para saber que modelo esta activo.
+         * Mientras corre el tutorial, `data-tuto-permite` dice que acciones
+         * valen: si alguien toca otra cosa no pasa nada, y el paso no se
+         * desordena. Sin tutorial, todo esta permitido.
          */
-        function campoDe(pasoId) {
-            return pasoId === 'aguja' ? 'hora' : pasoId;
+        function permitido(accion) {
+            const permite = builder.dataset.tutoPermite;
+            if (permite === undefined) {
+                return true;
+            }
+            return permite.split(' ').indexOf(accion) >= 0;
         }
 
-        function modelosConColores(campo, pasoId) {
-            const activa = modelo.get(seleccion[campo]);
-            return modelo.modelosDe(pasoId || campo).map(function (grupo) {
-                return {
-                    grupo: grupo,
-                    colores: modelo.coloresDe(grupo),
-                    activa: activa
-                };
+        function emitir(tipo, detalle) {
+            builder.dispatchEvent(new CustomEvent(`reloj:${tipo}`, { detail: detalle || {} }));
+        }
+
+        // ---------- Estado derivado ----------
+
+        function pantallaActual() {
+            return pantallas.find(function (pantalla) {
+                return pantalla.id === pantallaId;
+            }) || pantallas[0];
+        }
+
+        function indicePantalla() {
+            return pantallas.findIndex(function (pantalla) {
+                return pantalla.id === pantallaId;
             });
         }
 
-        /** `paso` solo hace falta cuando el campo no se llama como la categoria. */
-        function panelDeModelos(campo, opciones) {
-            const conf = opciones || {};
-            return Object.assign({
-                campo: campo,
-                modelos: modelosConColores(campo, conf.paso || campo)
-            }, conf);
+        function enModoAvanzado() {
+            const pantalla = pantallaActual();
+            return !!pantalla && pantalla.parte.id === 'indice' && modoIndices === 'individual';
+        }
+
+        function idDeOpciones() {
+            return enModoAvanzado() ? 'indice-pos' : pantallaId;
+        }
+
+        function extra() {
+            return { posicion: posicionActiva };
+        }
+
+        function claveDe(lista) {
+            return lista.map(function (opcion) {
+                return opcion.valor;
+            }).join(',');
         }
 
         /**
-         * Grid de modelos + su barra de colores. Van juntos siempre: elegir
-         * diseno y elegir color son dos decisiones distintas sobre lo mismo.
+         * Si la pantalla actual deja de tener sentido (por ejemplo, la fecha de
+         * un dial que no la admite) se pasa a la siguiente que exista, en el
+         * orden del catalogo.
          */
-        function bloqueDeModelos(campo, opciones) {
-            const conf = opciones || {};
-            const activa = modelo.get(seleccion[campo]);
-            const grupo = modelo.grupoDe(conf.paso || campo, activa);
-            return [
-                panelDeModelos(campo, conf),
-                { html: vista.coloresHtml(modelo.coloresDe(grupo), seleccion[campo], campo) }
-            ];
-        }
-
-        function panelesDeBisel() {
-            const arriba = modelo.get(seleccion.bisel);
-            const grupo = modelo.grupoDe('bisel', arriba);
-            const colores = modelo.coloresDe(grupo);
-            const esGmt = modelo.admiteBicolor(arriba);
-            const paneles = [panelDeModelos('bisel')];
-
-            // El bicolor solo aplica a los biseles GMT: son los unicos con una
-            // escala de 24 horas, donde la mitad de arriba es la noche y la de
-            // abajo el dia. En un bisel de buceo o taquimetro partir el color no
-            // significa nada.
-            if (esGmt && colores.length > 1) {
-                paneles.push({
-                    html: vista.alternadorHtml('bisel-bicolor', [
-                        { valor: 'no', label: 'Un color' },
-                        { valor: 'si', label: 'Bicolor GMT' }
-                    ], biselBicolor ? 'si' : 'no')
+        function recalcular() {
+            pantallas = modelo.pantallasDe(seleccion);
+            if (!pantallas.some(function (pantalla) { return pantalla.id === pantallaId; })) {
+                const orden = [];
+                partes.forEach(function (parte) {
+                    parte.pantallas.forEach(function (pantalla) {
+                        orden.push(pantalla.id);
+                    });
                 });
-            }
-
-            if (biselBicolor && esGmt && colores.length > 1) {
-                paneles.push({ html: vista.coloresHtml(colores, seleccion.bisel, 'bisel', 'Mitad superior (noche)') });
-                paneles.push({ html: vista.coloresHtml(colores, seleccion.biselAbajo, 'biselAbajo', 'Mitad inferior (día)') });
-            } else {
-                paneles.push({ html: vista.coloresHtml(colores, seleccion.bisel, 'bisel') });
-            }
-
-            return paneles;
-        }
-
-        /**
-         * Al encender el bicolor la mitad de abajo arranca en otro color: si
-         * arrancara en el mismo, activar la opcion no cambiaria nada en pantalla
-         * y no se entenderia que quedo encendida.
-         */
-        function mitadInferiorPorDefecto() {
-            if (seleccion.biselAbajo && seleccion.biselAbajo !== seleccion.bisel) {
-                return seleccion.biselAbajo;
-            }
-            const colores = modelo.coloresDe(modelo.grupoDe('bisel', modelo.get(seleccion.bisel)));
-            const otra = colores.find(function (pieza) {
-                return pieza.id !== seleccion.bisel;
-            });
-            return otra ? otra.id : seleccion.bisel;
-        }
-
-        function panelesDeIndices() {
-            const paneles = [{
-                html: vista.alternadorHtml('modo-indices', [
-                    { valor: 'juego', label: 'Todos iguales' },
-                    { valor: 'individual', label: 'Uno por uno' }
-                ], modoIndices)
-            }];
-
-            if (modoIndices === 'juego') {
-                return paneles.concat(bloqueDeModelos('indiceJuego', { paso: 'indice' }));
-            }
-
-            const hora = posicionActiva + 1;
-            paneles.push({
-                campo: 'indicePos',
-                titulo: `Editando la posición ${hora}`,
-                nota: 'Tocá otro índice sobre el reloj para cambiar de posición.',
-                piezas: modelo.glifosParaPosicion(posicionActiva),
-                seleccion: (seleccion.indices || {})[posicionActiva],
-                etiqueta: etiquetaDeGlifo
-            });
-            paneles.push({ html: '<button type="button" class="watch-btn watch-btn--ghost" id="watch-aplicar-todos">Aplicar a todos</button>' });
-            return paneles;
-        }
-
-        function etiquetaDeGlifo(pieza) {
-            const nombre = catalogo.MODELOS[pieza.modelo] || pieza.modelo;
-            const color = pieza.color ? pieza.color.nombre : '';
-            const doble = pieza.variante === 'doble' ? ' doble' : '';
-            return `${nombre}${doble} · ${color}`;
-        }
-
-        /** Las 24 posiciones del fechador, ya ubicadas sobre la rueda. */
-        function posicionesDeFecha() {
-            const posiciones = [];
-            for (let p = 0; p < modelo.POSICIONES_FECHA; p += 1) {
-                const angulo = (modelo.anguloDeFecha(p) * Math.PI) / 180;
-                // Dos posiciones por hora: las pares caen sobre el indice y las
-                // impares en la media hora, entre dos indices.
-                const hora = Math.floor(p / 2) || 12;
-                posiciones.push({
-                    valor: p,
-                    label: `${hora}${p % 2 ? ':30' : ''}`,
-                    sobreIndice: p % 2 === 0,
-                    x: +(50 + 40 * Math.sin(angulo)).toFixed(2),
-                    y: +(50 - 40 * Math.cos(angulo)).toFixed(2)
+                const desde = orden.indexOf(pantallaId);
+                const siguiente = orden.slice(desde + 1).concat(orden.slice(0, desde)).find(function (id) {
+                    return pantallas.some(function (pantalla) { return pantalla.id === id; });
                 });
+                pantallaId = siguiente || pantallas[0].id;
             }
-            return posiciones;
-        }
-
-        function panelesDeDetalles() {
-            const habilitado = modelo.admiteFechador(seleccion.dial);
-            const nota = habilitado
-                ? 'La ventana se puede poner en cualquiera de las 24 posiciones, sobre un índice o entre dos.'
-                : 'Este dial no tiene versión con fechador. Probá con otro color o textura.';
-
-            const foto = seleccion.foto
-                ? `<div class="watch-foto"><img src="${seleccion.foto}" alt="Foto del dial">`
-                    + '<button type="button" class="watch-btn watch-btn--ghost" id="watch-foto-quitar">Quitar foto</button></div>'
-                : '<p class="watch-panel-note">La foto se guarda solo en este dispositivo: el sitio es estático y no sube nada a ningún servidor.</p>';
-
-            return [
-                {
-                    titulo: 'Fechador',
-                    nota: nota,
-                    html: vista.fechadorHtml(posicionesDeFecha(), seleccion.fechador, habilitado)
-                },
-                {
-                    titulo: 'Foto en la esfera',
-                    html: `<button type="button" class="watch-btn watch-btn--solid" id="watch-foto-elegir">${seleccion.foto ? 'Cambiar foto' : 'Subir una foto'}</button>${foto}`
-                }
-            ];
-        }
-
-        function panelesDe(pasoId) {
-            switch (pasoId) {
-                case 'bisel':
-                    return panelesDeBisel();
-                case 'indice':
-                    return panelesDeIndices();
-                case 'detalles':
-                    return panelesDeDetalles();
-                case 'aguja':
-                    return bloqueDeModelos('hora', { titulo: 'Horas' })
-                        .concat(bloqueDeModelos('minuto', { titulo: 'Minutos' }))
-                        .concat(bloqueDeModelos('segundero', { titulo: 'Segundero' }));
-                default:
-                    return bloqueDeModelos(pasoId);
-            }
+            const id = idDeOpciones();
+            opciones = modelo.opcionesDe(id, seleccion, extra());
+            actual = modelo.indiceActual(id, seleccion, opciones, extra());
         }
 
         // ---------- Render ----------
 
+        function extrasDeVista() {
+            return { foto: seleccion.foto };
+        }
+
         function pintarReloj() {
             vista.renderStage(el.frame, modelo.capasDe(seleccion));
-            builder.classList.toggle('is-editando-indices', pasos[pasoActivo].id === 'indice' && modoIndices === 'individual');
+            builder.classList.toggle('is-editando-indices', enModoAvanzado());
             marcarPosicionActiva();
         }
 
         /** Aro dorado sobre el indice que se esta editando. */
         function marcarPosicionActiva() {
-            if (pasos[pasoActivo].id !== 'indice' || modoIndices !== 'individual') {
+            if (!enModoAvanzado()) {
                 el.stage.style.removeProperty('--marca-x');
                 el.stage.style.removeProperty('--marca-y');
                 return;
             }
+            // El aro vive dentro del mismo cuadrado que el reloj: el modelo da
+            // el centro como fraccion del lado y alcanza con porcentajes.
             const centro = modelo.centrosDeIndices(seleccion)[posicionActiva];
             if (centro) {
                 el.stage.style.setProperty('--marca-x', `${centro.x * 100}%`);
@@ -262,296 +177,395 @@
             }
         }
 
-        function pintarPaso() {
-            const paso = pasos[pasoActivo];
-            vista.renderPasos(el.steps, pasos, pasoActivo, visitados);
-            el.title.textContent = paso.titulo;
-            el.copy.textContent = mensajeDePaso(paso);
-            vista.renderPaneles(el.panels, panelesDe(paso.id));
+        function pintarEncabezado() {
+            const pantalla = pantallaActual();
+            vista.renderEncabezado(el, {
+                partes: partes,
+                parte: pantalla.parte,
+                parteIndice: pantalla.parteIndice,
+                enParte: pantalla.enParte,
+                totalEnParte: pantalla.totalEnParte,
+                pregunta: enModoAvanzado()
+                    ? `¿Qué ponemos en las ${posicionActiva + 1}?`
+                    : pantalla.pantalla.pregunta
+            });
+        }
 
-            el.prev.disabled = pasoActivo === 0;
-            el.next.textContent = pasoActivo === pasos.length - 1 ? 'Ver mi reloj' : 'Siguiente';
-            el.body.scrollTop = 0;
+        function pintarEtiqueta() {
+            const opcion = opciones[actual];
+            el.opcionNombre.textContent = opcion ? opcion.etiqueta : '';
+            el.opcionCuenta.textContent = opciones.length > 1 ? `${actual + 1} de ${opciones.length}` : '';
+            el.arrowPrev.disabled = actual <= 0;
+            el.arrowNext.disabled = actual >= opciones.length - 1;
+        }
 
-            centrarChipActivo();
+        function pintarNav() {
+            const indice = indicePantalla();
+            const ultima = indice === pantallas.length - 1;
+            el.prev.disabled = indice <= 0;
+            el.next.textContent = ultima ? 'Terminar mi reloj' : 'Siguiente';
+            el.next.classList.toggle('is-final', ultima);
+        }
+
+        function pintarFotoAccion() {
+            const visible = pantallaId === 'foto' && !!seleccion.usarFoto;
+            el.fotoElegir.hidden = !visible;
+            el.fotoElegir.textContent = seleccion.foto ? 'Cambiar foto' : 'Elegir foto';
+            // Con el boton de la foto a la vista, "Ver todas" sobra y lo tapa.
+            el.menuAbrir.hidden = visible;
+        }
+
+        function montarCarrusel() {
+            fichas = vista.montarCarrusel(el.rail, opciones, extrasDeVista());
+            claveMontada = claveDe(opciones);
+            vista.moverCarrusel(fichas, actual, false);
+        }
+
+        function sincronizarCarrusel(animado) {
+            if (claveDe(opciones) !== claveMontada) {
+                montarCarrusel();
+                return;
+            }
+            vista.moverCarrusel(fichas, actual, animado);
+        }
+
+        /** Siempre conserva el scroll: volver arriba solo pasa al cambiar de pantalla. */
+        function pintarMenu() {
+            const scroll = el.body.scrollTop;
+            const pantalla = pantallaActual();
+            vista.renderMenu(el.panels, {
+                titulo: enModoAvanzado() ? `Elegí qué va en las ${posicionActiva + 1}` : pantalla.pantalla.pregunta,
+                opciones: opciones,
+                actual: actual,
+                extras: extrasDeVista(),
+                indices: pantalla.parte.id === 'indice' ? { modo: modoIndices, hora: posicionActiva + 1 } : null,
+                foto: pantalla.id === 'foto' ? { tiene: !!seleccion.foto } : null
+            });
+            el.body.scrollTop = scroll;
+        }
+
+        function pintarTodo() {
+            recalcular();
+            pintarReloj();
+            pintarEncabezado();
+            montarCarrusel();
+            pintarEtiqueta();
+            pintarMenu();
+            pintarNav();
+            pintarFotoAccion();
         }
 
         /**
-         * Centra el chip del paso actual moviendo SOLO el riel.
+         * Centra la opcion elegida moviendo SOLO el cuerpo del menu.
          * No usar scrollIntoView: propaga el scroll a todos los contenedores
          * ancestros, incluidos los del documento padre cuando la pagina corre
          * embebida, y termina desplazando el carrusel de paneles del shell.
          */
-        function centrarChipActivo() {
-            const chip = el.steps.querySelector('.is-active');
-            if (!chip) {
+        function centrarOpcionActiva() {
+            const boton = el.panels.querySelector('.watch-option.is-active');
+            if (!boton) {
                 return;
             }
-            const destino = chip.offsetLeft - (el.steps.clientWidth - chip.offsetWidth) / 2;
-            el.steps.scrollLeft = Math.max(0, destino);
+            const destino = boton.offsetTop - (el.body.clientHeight - boton.offsetHeight) / 2;
+            el.body.scrollTop = Math.max(0, destino);
         }
 
-        function mensajeDePaso(paso) {
-            if (paso.id === 'bisel') {
-                const caja = modelo.get(seleccion.caja);
-                if (caja && catalogo.CAJAS_CON_BISEL_INTEGRADO.indexOf(caja.id) >= 0) {
-                    return 'Esta caja ya trae bisel integrado. El que elijas se monta encima.';
+        // ---------- Elegir ----------
+
+        function vibrar() {
+            try {
+                if (navigator.vibrate) {
+                    navigator.vibrate(8);
                 }
-            }
-            if (paso.id === 'indice' && modoIndices === 'individual') {
-                return 'Tocá un índice sobre el reloj y elegí qué poner en esa hora.';
-            }
-            return paso.descripcion;
-        }
-
-        function marcarVisitado(pasoId) {
-            if (visitados.indexOf(pasoId) < 0) {
-                visitados.push(pasoId);
+            } catch (error) {
+                // Algunos navegadores lo bloquean dentro de iframes.
             }
         }
-
-        // ---------- Selección ----------
 
         /**
-         * Al cambiar de modelo se conserva el color que ya estaba elegido si el
-         * nuevo modelo lo tiene: cambiar de bisel no deberia obligar a volver a
-         * buscar el azul.
+         * Aplica la opcion `indice` de `lista`. Durante un arrastre la lista es
+         * la que estaba al empezar: si se rearmara a mitad del gesto (cambia el
+         * color preferido de cada modelo) la tira y el dedo se desfasarian.
          */
-        function conservandoColor(campo, pieza) {
-            const actual = modelo.get(seleccion[campo]);
-            if (!actual || !actual.color || actual.modelo === pieza.modelo) {
-                return pieza;
+        function elegirOpcion(indice, origen, lista) {
+            const fuente = lista || opciones;
+            const destino = Math.max(0, Math.min(fuente.length - 1, indice));
+            if (!fuente.length || (fuente === opciones && destino === actual)) {
+                return false;
             }
-            const grupo = modelo.grupoDe(campo === 'hora' || campo === 'minuto' ? 'hora' : campo, pieza);
-            return modelo.variantePorColor(grupo, actual.color.nombre) || pieza;
-        }
-
-        function elegir(campo, id) {
-            const pieza = modelo.get(id);
-            if (!pieza) {
-                return;
+            const opcion = fuente[destino];
+            seleccion = modelo.aplicar(idDeOpciones(), seleccion, opcion.valor, extra());
+            cambios += 1;
+            if (origen === 'arrastre' || origen === 'flecha' || origen === 'rueda') {
+                vibrar();
             }
 
-            if (campo === 'indiceJuego') {
-                aplicarJuego(pieza);
-            } else if (campo === 'indicePos') {
-                seleccion.indices = Object.assign({}, seleccion.indices);
-                seleccion.indices[posicionActiva] = pieza.id;
-            } else if (campo === 'biselAbajo') {
-                seleccion.biselAbajo = pieza.id;
-            } else {
-                seleccion[campo] = conservandoColor(campo, pieza).id;
-            }
-
-            if (campo === 'bisel') {
-                const elegido = modelo.get(seleccion.bisel);
-                // El bicolor solo cierra entre variantes del mismo modelo, y
-                // solo los GMT lo admiten: cambiar a un bisel de buceo lo apaga.
-                if (!modelo.admiteBicolor(elegido)) {
-                    biselBicolor = false;
-                    seleccion.biselAbajo = null;
-                } else if (biselBicolor) {
-                    const abajo = modelo.get(seleccion.biselAbajo);
-                    if (!abajo || abajo.modelo !== elegido.modelo) {
-                        seleccion.biselAbajo = seleccion.bisel;
-                    }
-                }
-            }
-
-            if (campo === 'dial' && !modelo.admiteFechador(seleccion.dial)) {
-                // El fechador vive en el asset del dial: si el nuevo no tiene
-                // ninguna variante con ventana, se vuelve a "sin fechador".
-                seleccion.fechador = 'no';
-            }
-
-            marcarVisitado(pasos[pasoActivo].id);
+            recalcular();
             pintarReloj();
-            pintarPaso();
+            pintarEncabezado();
+            pintarEtiqueta();
+            pintarNav();
+            pintarFotoAccion();
+
+            // El grid solo se rehace si cambiaron sus opciones; si no, se mueve
+            // la marca. En los dos casos el scroll queda donde estaba.
+            if (claveDe(opciones) !== claveMontada) {
+                pintarMenu();
+            } else {
+                vista.marcarActivo(el.panels, actual);
+            }
+            if (origen !== 'arrastre') {
+                sincronizarCarrusel(true);
+            }
+
+            // Elegir "Con mi foto" con un toque abre directo el selector de
+            // archivos. Desde un arrastre no se puede: el navegador exige que
+            // lo dispare un click.
+            if (pantallaId === 'foto' && opcion.valor === 'si' && !seleccion.foto && origen !== 'arrastre' && origen !== 'rueda') {
+                el.foto.click();
+            }
+
+            emitir('opcion', { origen: origen });
+            return true;
         }
 
-        /** Aplica un juego completo a las doce posiciones. */
-        function aplicarJuego(pieza) {
-            const juego = modelo.juegoDeIndices(pieza.modelo, pieza.acabado);
-            if (!juego) {
-                return;
+        function irAPantalla(id) {
+            pantallaId = id;
+            if (!pantallaActual() || pantallaActual().parte.id !== 'indice') {
+                modoIndices = 'juego';
             }
-            seleccion.indiceModelo = juego.modelo;
-            seleccion.indiceAcabado = juego.acabado;
-            seleccion.indiceJuego = juego.glifos[0];
-            seleccion.indices = modelo.mapaDeIndices(juego);
+            pintarTodo();
+            if (pantallaActual().parte.id !== 'indice') {
+                modoIndices = 'juego';
+            }
+            el.body.scrollTop = 0;
+            centrarOpcionActiva();
+            emitir('pantalla', { id: pantallaId });
         }
 
-        // ---------- Arrastre sobre el reloj ----------
-
-        /** Modelos del paso activo, para poder recorrerlos arrastrando. */
-        function recorridoDelPaso() {
-            const paso = pasos[pasoActivo];
-            if (paso.id === 'detalles') {
-                return null;
-            }
-            if (paso.id === 'indice' && modoIndices === 'individual') {
-                // Arrastrar aplicaria un juego entero y borraria lo editado
-                // posicion por posicion, que es justo lo que se vino a hacer.
-                return null;
-            }
-            if (paso.id === 'indice') {
-                const juegos = modelo.juegosDeIndices().map(function (juego) {
-                    return juego.glifos[0];
-                });
-                return { campo: 'indiceJuego', ids: juegos, actual: seleccion.indiceJuego };
-            }
-
-            const campo = campoDe(paso.id);
-            const grupos = modelo.modelosDe(campo);
-            const activa = modelo.get(seleccion[campo]);
-            return {
-                campo: campo,
-                ids: grupos.map(function (grupo) {
-                    const preferida = activa && activa.color
-                        ? modelo.variantePorColor(grupo, activa.color.nombre)
-                        : grupo.piezas[0];
-                    return (preferida || grupo.piezas[0]).id;
-                }),
-                actual: activa ? activa.id : null,
-                grupos: grupos
-            };
-        }
-
-        function indiceActualEnRecorrido(recorrido) {
-            const actual = modelo.get(recorrido.actual);
-            if (!actual) {
-                return 0;
-            }
-            const encontrado = recorrido.ids.findIndex(function (id) {
-                const pieza = modelo.get(id);
-                return pieza && pieza.modelo === actual.modelo;
+        function irAParte(parteId) {
+            const primera = pantallas.find(function (pantalla) {
+                return pantalla.parte.id === parteId;
             });
-            return encontrado < 0 ? 0 : encontrado;
+            if (primera) {
+                irAPantalla(primera.id);
+            }
+        }
+
+        // ---------- Navegacion del padre ----------
+
+        function navOculta() {
+            // Durante el tutorial tambien: el dock tapaba la tarjeta y era una
+            // salida facil a mitad de aprendizaje.
+            const tutorialActivo = builder.dataset.tutoPermite !== undefined;
+            return !escritorio.matches && (menuAbierto || resultadoAbierto || tutorialActivo);
         }
 
         /**
-         * Arrastre sobre el reloj con carrusel, al estilo del selector de modo
-         * de la camara de iOS: la tira de piezas sigue al dedo y la del centro
-         * es la que se aplica. El indice fraccionario manda tanto la animacion
-         * como la seleccion, asi lo que se ve y lo que se elige no se separan.
+         * Con el menu o el resultado abiertos se esconden el header y el dock
+         * del shell: el espacio es del reloj. El padre es del mismo origen, asi
+         * que se tocan sus clases directo; `catalog-dock--detail-hidden` ya
+         * existia en catalog-dock.css.
          */
-        function initArrastreStage() {
-            let arrastre = null;
-            // El <button> del zoom dispara su click al soltar el arrastre; sin
-            // esta bandera, deslizar sobre el reloj tambien lo ampliaria.
-            let ignorarClick = false;
+        function sincronizarNav() {
+            const ocultar = navOculta();
+            document.body.classList.toggle('is-nav-oculta', ocultar);
+            if (window.parent === window) {
+                return;
+            }
+            try {
+                const doc = window.parent.document;
+                doc.body.classList.toggle('is-watch-menu', ocultar);
+                const dock = doc.getElementById('catalog-dock');
+                if (dock) {
+                    dock.classList.toggle('catalog-dock--detail-hidden', ocultar);
+                }
+            } catch (error) {
+                // Padre de otro origen: la navegacion queda como esta.
+            }
+        }
 
-            el.stage.addEventListener('pointerdown', function (event) {
-                const recorrido = recorridoDelPaso();
-                if (!recorrido || recorrido.ids.length < 2) {
-                    arrastre = { x: event.clientX, y: event.clientY, movido: false };
+        /**
+         * El shell restituye su navegacion al cambiar de panel. Si eso pasa con
+         * el menu abierto, el menu se cierra: si no, al volver a Watches el
+         * reloj quedaria achicado debajo del header.
+         */
+        function vigilarNavDelPadre() {
+            if (window.parent === window || typeof MutationObserver === 'undefined') {
+                return;
+            }
+            try {
+                const cuerpo = window.parent.document.body;
+                new MutationObserver(function () {
+                    if (navOculta() && !cuerpo.classList.contains('is-watch-menu')) {
+                        menuAbierto = false;
+                        builder.classList.remove('is-menu');
+                        document.body.classList.remove('is-nav-oculta');
+                    }
+                }).observe(cuerpo, { attributes: true, attributeFilter: ['class'] });
+            } catch (error) {
+                // Padre de otro origen.
+            }
+        }
+
+        // ---------- Menu ----------
+
+        function alternarMenu(abrir) {
+            const siguiente = typeof abrir === 'boolean' ? abrir : !menuAbierto;
+            if (siguiente === menuAbierto) {
+                return;
+            }
+            menuAbierto = siguiente;
+            builder.classList.toggle('is-menu', menuAbierto);
+            sincronizarNav();
+            if (menuAbierto) {
+                requestAnimationFrame(centrarOpcionActiva);
+            }
+            // El stage cambia de alto: el aro del indice se recalcula en pixeles.
+            requestAnimationFrame(marcarPosicionActiva);
+            emitir(menuAbierto ? 'menu-abierto' : 'menu-cerrado');
+        }
+
+        // ---------- Gestos ----------
+
+        /**
+         * Arrastre con carrusel, al estilo del selector de modo de la camara de
+         * iOS: la tira de opciones sigue al dedo y la del centro se aplica. El
+         * indice fraccionario manda tanto la animacion como la seleccion, asi
+         * lo que se ve y lo que se elige no se separan.
+         *
+         * Vale sobre el reloj y sobre la tira. Un toque sin movimiento llama a
+         * `alTocar`.
+         */
+        function conectarArrastre(zona, alTocar) {
+            let gesto = null;
+
+            zona.addEventListener('pointerdown', function (event) {
+                if ((event.button !== undefined && event.button > 0) || event.target.closest('button')) {
                     return;
                 }
-                arrastre = {
+                gesto = {
                     x: event.clientX,
                     y: event.clientY,
                     movido: false,
-                    recorrido: recorrido,
-                    base: indiceActualEnRecorrido(recorrido),
-                    aplicado: indiceActualEnRecorrido(recorrido),
-                    fichas: vista.montarCarrusel(el.carruselRail, recorrido.ids.map(modelo.get))
+                    bloqueado: false,
+                    base: actual,
+                    aplicado: actual,
+                    lista: opciones,
+                    objetivo: event.target
                 };
-                el.stage.setPointerCapture?.(event.pointerId);
+                zona.setPointerCapture?.(event.pointerId);
             });
 
-            el.stage.addEventListener('pointermove', function (event) {
-                if (!arrastre) {
+            zona.addEventListener('pointermove', function (event) {
+                if (!gesto) {
                     return;
                 }
-                const dx = event.clientX - arrastre.x;
-                const dy = event.clientY - arrastre.y;
-                if (!arrastre.movido && (Math.abs(dx) < 4 || Math.abs(dx) < Math.abs(dy))) {
-                    return;
+                const dx = event.clientX - gesto.x;
+                const dy = event.clientY - gesto.y;
+                if (!gesto.movido) {
+                    if (Math.abs(dx) < 8 || Math.abs(dx) < Math.abs(dy)) {
+                        return;
+                    }
+                    gesto.movido = true;
+                    gesto.bloqueado = !permitido('arrastre') || gesto.lista.length < 2;
+                    if (!gesto.bloqueado) {
+                        builder.classList.add('is-arrastrando');
+                    }
                 }
-                if (!arrastre.recorrido) {
-                    arrastre.movido = true;
+                if (gesto.bloqueado) {
                     return;
-                }
-                if (!arrastre.movido) {
-                    arrastre.movido = true;
-                    abrirCarrusel();
                 }
 
-                const total = arrastre.recorrido.ids.length;
-                // Restar y no sumar: la tira tiene que acompanar al dedo. Al
-                // arrastrar hacia la derecha las fichas viajan a la derecha y
-                // entra la pieza anterior, como cualquier carrusel del sistema.
-                const posicion = Math.max(0, Math.min(total - 1, arrastre.base - dx / vista.FICHA));
-                vista.moverCarrusel(arrastre.fichas, posicion);
+                // Restar y no sumar: la tira acompana al dedo. Al arrastrar a
+                // la derecha las fichas viajan a la derecha y entra la anterior.
+                const posicion = Math.max(0, Math.min(gesto.lista.length - 1, gesto.base - dx / vista.FICHA));
+                vista.moverCarrusel(fichas, posicion, false);
 
                 const destino = Math.round(posicion);
-                if (destino !== arrastre.aplicado) {
-                    arrastre.aplicado = destino;
-                    elegir(arrastre.recorrido.campo, arrastre.recorrido.ids[destino]);
-                    etiquetarCarrusel(destino, total);
+                if (destino !== gesto.aplicado) {
+                    gesto.aplicado = destino;
+                    elegirOpcion(destino, 'arrastre', gesto.lista);
                 }
             });
 
             function soltar(event) {
-                if (!arrastre) {
+                if (!gesto) {
                     return;
                 }
-                const movido = arrastre.movido && !!arrastre.recorrido;
-                arrastre = null;
-                el.stage.releasePointerCapture?.(event.pointerId);
-                ignorarClick = movido;
-                if (movido) {
-                    cerrarCarrusel();
-                } else {
-                    apuntarIndice(event.clientX, event.clientY);
+                const terminado = gesto;
+                gesto = null;
+                zona.releasePointerCapture?.(event.pointerId);
+
+                if (!terminado.movido) {
+                    if (event.type === 'pointerup') {
+                        alTocar(event, terminado.objetivo);
+                    }
+                    return;
                 }
+                if (terminado.bloqueado) {
+                    return;
+                }
+                builder.classList.remove('is-arrastrando');
+                sincronizarCarrusel(true);
+                emitir('arrastre-fin', { cambio: terminado.aplicado !== terminado.base });
             }
 
-            el.stage.addEventListener('pointerup', soltar);
-            el.stage.addEventListener('pointercancel', soltar);
+            zona.addEventListener('pointerup', soltar);
+            zona.addEventListener('pointercancel', soltar);
+        }
 
-            el.zoom.addEventListener('click', function () {
-                if (ignorarClick) {
-                    ignorarClick = false;
+        /**
+         * Swipe de trackpad en escritorio. El builder es
+         * `data-shell-swipe-ignore`, asi que el shell no cambia de panel; aca se
+         * traduce a una opcion por gesto, con el mismo lock que usa el shell.
+         */
+        function conectarRueda(zona) {
+            let acumulado = 0;
+            let bloqueado = false;
+            let reinicio = null;
+
+            zona.addEventListener('wheel', function (event) {
+                if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) {
                     return;
                 }
-                if (yaApunte) {
-                    yaApunte = false;
+                event.preventDefault();
+                clearTimeout(reinicio);
+                reinicio = setTimeout(function () {
+                    acumulado = 0;
+                    bloqueado = false;
+                }, 180);
+                if (bloqueado || !permitido('arrastre')) {
                     return;
                 }
-                ampliarReloj();
-            });
+                acumulado += event.deltaX;
+                if (Math.abs(acumulado) > UMBRAL_RUEDA) {
+                    bloqueado = true;
+                    elegirOpcion(actual + (acumulado > 0 ? 1 : -1), 'rueda');
+                }
+            }, { passive: false });
         }
 
-        function abrirCarrusel() {
-            clearTimeout(abrirCarrusel.temporizador);
-            builder.classList.add('is-carruseleando');
-            etiquetarCarrusel(null, null);
-        }
-
-        function etiquetarCarrusel(indice, total) {
-            const paso = pasos[pasoActivo];
-            const pieza = modelo.get(seleccion[campoDe(paso.id)]);
-            const nombre = pieza ? catalogo.nombrarModelo(modelo.grupoDe(campoDe(paso.id), pieza)) : '';
-            const cuenta = indice === null ? '' : ` · ${indice + 1}/${total}`;
-            el.carruselLabel.textContent = `${nombre}${cuenta}`;
-        }
-
-        function cerrarCarrusel() {
-            // Se queda un momento a la vista para que se lea que quedo elegido.
-            abrirCarrusel.temporizador = setTimeout(function () {
-                builder.classList.remove('is-carruseleando');
-            }, 620);
-        }
-
-        // Un toque sobre un indice en modo "uno por uno" lo selecciona en vez de
-        // ampliar el reloj; la bandera evita que el click posterior haga las dos.
-        let yaApunte = false;
-
-        function apuntarIndice(clientX, clientY) {
-            if (pasos[pasoActivo].id !== 'indice' || modoIndices !== 'individual') {
+        function alTocarReloj(event) {
+            if (enModoAvanzado() && apuntarIndice(event.clientX, event.clientY)) {
                 return;
             }
+            // En escritorio el menu esta siempre a la vista.
+            if (escritorio.matches || !permitido('menu')) {
+                return;
+            }
+            alternarMenu();
+        }
+
+        function alTocarCarrusel(event, objetivo) {
+            const ficha = objetivo && objetivo.closest ? objetivo.closest('[data-ficha]') : null;
+            if (ficha && permitido('elegir')) {
+                elegirOpcion(Number(ficha.dataset.ficha), 'toque');
+            }
+        }
+
+        /** Un toque sobre una hora, en modo "uno por uno", la elige para editar. */
+        function apuntarIndice(clientX, clientY) {
             const caja = el.frame.getBoundingClientRect();
             const posicion = modelo.posicionMasCercana(
                 seleccion,
@@ -559,101 +573,29 @@
                 (clientY - caja.top) / caja.height
             );
             if (posicion === null || posicion === modelo.posicionOcupadaPorFecha(seleccion.fechador)) {
-                return;
+                return false;
             }
             posicionActiva = posicion;
-            yaApunte = true;
-            marcarPosicionActiva();
-            pintarPaso();
+            pintarTodo();
+            return true;
         }
 
-        function ampliarReloj() {
-            if (estadoSheet < ESTADOS_SHEET.length - 1) {
-                estadoSheet += 1;
-                el.hint.classList.remove('is-pulsing');
-                aplicarEstadoSheet();
+        // ---------- Pista por inactividad ----------
+
+        let temporizadorPista = null;
+
+        function reiniciarPista() {
+            builder.classList.remove('is-nudge');
+            clearTimeout(temporizadorPista);
+            if (cambios >= CAMBIOS_PARA_APRENDIDO) {
+                return;
             }
-        }
-
-        // ---------- Sheet arrastrable ----------
-
-        function aplicarEstadoSheet() {
-            ESTADOS_SHEET.forEach(function (clase, indice) {
-                builder.classList.toggle(clase, indice === estadoSheet);
-            });
-            // El texto acompaña a lo que hace el próximo toque.
-            el.hintText.textContent = estadoSheet === ESTADOS_SHEET.length - 1
-                ? 'Deslizá para volver a las opciones'
-                : 'Deslizá para ver el reloj más grande';
-        }
-
-        function initSheet() {
-            aplicarEstadoSheet();
-            el.hint.classList.add('is-pulsing');
-            // Una vez que el usuario mueve el panel, la pista ya cumplió.
-            el.hint.addEventListener('animationend', function () {
-                el.hint.classList.remove('is-pulsing');
-            });
-
-            let inicio = null;
-            // Al soltar un arrastre el navegador dispara igual un click; sin
-            // esto el panel saltaria de estado dos veces.
-            let ignorarClick = false;
-
-            el.handle.addEventListener('click', function () {
-                if (ignorarClick) {
-                    ignorarClick = false;
-                    return;
+            temporizadorPista = setTimeout(function () {
+                const tutorialActivo = builder.dataset.tutoPermite !== undefined;
+                if (!tutorialActivo && !resultadoAbierto && !menuAbierto && cambios < CAMBIOS_PARA_APRENDIDO) {
+                    builder.classList.add('is-nudge');
                 }
-                estadoSheet = (estadoSheet + 1) % ESTADOS_SHEET.length;
-                el.hint.classList.remove('is-pulsing');
-                aplicarEstadoSheet();
-            });
-
-            el.handle.addEventListener('pointerdown', function (event) {
-                el.hint.classList.remove('is-pulsing');
-                inicio = { y: event.clientY, alto: el.sheet.getBoundingClientRect().height, movido: false };
-                el.handle.setPointerCapture(event.pointerId);
-                builder.classList.add('is-dragging');
-            });
-
-            el.handle.addEventListener('pointermove', function (event) {
-                if (!inicio) {
-                    return;
-                }
-                const delta = event.clientY - inicio.y;
-                if (Math.abs(delta) > 4) {
-                    inicio.movido = true;
-                }
-                const alto = Math.max(96, Math.min(window.innerHeight * 0.8, inicio.alto - delta));
-                // La variable vive en el builder: es el grid quien reparte el alto.
-                builder.style.setProperty('--sheet-height', `${alto}px`);
-            });
-
-            function soltar(event) {
-                if (!inicio) {
-                    return;
-                }
-                const movido = inicio.movido;
-                const alto = el.sheet.getBoundingClientRect().height;
-                inicio = null;
-                builder.classList.remove('is-dragging');
-                builder.style.removeProperty('--sheet-height');
-                el.handle.releasePointerCapture?.(event.pointerId);
-
-                if (!movido) {
-                    return;
-                }
-
-                ignorarClick = true;
-                // Se engancha al punto de anclaje mas cercano.
-                const ratio = alto / window.innerHeight;
-                estadoSheet = ratio > 0.45 ? 0 : (ratio > 0.24 ? 1 : 2);
-                aplicarEstadoSheet();
-            }
-
-            el.handle.addEventListener('pointerup', soltar);
-            el.handle.addEventListener('pointercancel', soltar);
+            }, INACTIVIDAD_MS);
         }
 
         // ---------- Foto del dial ----------
@@ -717,19 +659,19 @@
                 if (!archivo) {
                     return;
                 }
+                el.status.textContent = 'Poniendo tu foto…';
                 recortarFoto(archivo).then(function (dataUrl) {
                     guardarFoto(dataUrl);
-                    pintarReloj();
-                    pintarPaso();
+                    seleccion.usarFoto = true;
+                    pintarTodo();
                     el.status.textContent = '';
                 }).catch(function (error) {
                     el.status.textContent = 'No se pudo leer esa imagen.';
                     console.error(error);
                 }).finally(function () {
                     // Recien aca: vaciar el input antes de que termine la
-                    // lectura suelta el File y `createImageBitmap` falla con
-                    // "source image could not be decoded". Se vacia igual para
-                    // poder volver a elegir la misma foto.
+                    // lectura suelta el File y la decodificacion falla. Se
+                    // vacia igual para poder volver a elegir la misma foto.
                     el.foto.value = '';
                 });
             });
@@ -738,6 +680,7 @@
                 const guardada = localStorage.getItem(CLAVE_FOTO);
                 if (guardada) {
                     seleccion.foto = guardada;
+                    seleccion.usarFoto = true;
                 }
             } catch (error) {
                 console.warn(error);
@@ -748,42 +691,6 @@
 
         function nombreDe(campo) {
             return catalogo.nombrarPieza(modelo.get(seleccion[campo]));
-        }
-
-        function resumen() {
-            const filas = [
-                { label: 'Caja', valor: nombreDe('caja') },
-                { label: 'Bisel', valor: nombreDe('bisel') }
-            ];
-
-            const abajo = modelo.get(seleccion.biselAbajo);
-            if (biselBicolor && abajo && abajo.id !== seleccion.bisel) {
-                filas[1].valor = `${filas[1].valor} arriba / ${abajo.color.nombre} abajo (bicolor GMT)`;
-            }
-
-            filas.push({ label: 'Dial', valor: nombreDe('dial') });
-            filas.push({ label: 'Fechador', valor: etiquetaDeFechador() });
-            filas.push({ label: 'Índices', valor: descripcionDeIndices() });
-            filas.push({ label: 'Horas', valor: nombreDe('hora') });
-            filas.push({ label: 'Minutos', valor: nombreDe('minuto') });
-            filas.push({ label: 'Segundero', valor: nombreDe('segundero') });
-            filas.push({ label: 'Correa', valor: nombreDe('correa') });
-
-            if (seleccion.foto) {
-                filas.push({ label: 'Esfera', valor: 'Con foto personalizada' });
-            }
-
-            return filas;
-        }
-
-        function etiquetaDeFechador() {
-            if (seleccion.fechador === 'no') {
-                return 'Sin fechador';
-            }
-            const posicion = posicionesDeFecha().find(function (opcion) {
-                return opcion.valor === Number(seleccion.fechador);
-            });
-            return posicion ? `A las ${posicion.label}` : 'Sin fechador';
         }
 
         /** Si las doce posiciones comparten juego se nombra el juego; si no, "combinados". */
@@ -806,6 +713,48 @@
             }).join(', ')})`;
         }
 
+        function pieza(campo) {
+            return modelo.get(seleccion[campo]);
+        }
+
+        function resumen() {
+            const filas = [];
+            function fila(parte, label, valor, opcion) {
+                filas.push({ parte: parte, label: label, valor: valor, opcion: opcion });
+            }
+
+            fila('caja', 'Caja', nombreDe('caja'), { tipo: 'pieza', pieza: pieza('caja') });
+
+            let bisel = nombreDe('bisel');
+            const abajo = pieza('biselAbajo');
+            if (abajo) {
+                bisel = `${bisel} arriba / ${modelo.nombreDeColor(abajo)} abajo`;
+            }
+            fila('bisel', 'Bisel', bisel, { tipo: 'pieza', pieza: pieza('bisel') });
+
+            fila('dial', 'Esfera', nombreDe('dial'), { tipo: 'pieza', pieza: pieza('dial') });
+            if (modelo.admiteFechador(seleccion.dial)) {
+                const conFecha = seleccion.fechador !== 'no';
+                fila('dial', 'Fecha', modelo.etiquetaDeFecha(seleccion.fechador), {
+                    tipo: 'fecha',
+                    angulo: conFecha ? modelo.anguloDeFecha(seleccion.fechador) : null
+                });
+            }
+
+            fila('indice', 'Números', descripcionDeIndices(), {
+                tipo: 'pieza',
+                pieza: modelo.get((seleccion.indices || {})[11])
+            });
+            fila('aguja', 'Agujas', nombreDe('hora'), { tipo: 'pieza', pieza: pieza('hora') });
+            fila('aguja', 'Segundero', nombreDe('segundero'), { tipo: 'pieza', pieza: pieza('segundero') });
+            fila('correa', 'Correa', nombreDe('correa'), { tipo: 'pieza', pieza: pieza('correa') });
+
+            if (seleccion.foto && seleccion.usarFoto) {
+                fila('foto', 'Foto', 'Con tu foto en la esfera', { tipo: 'foto', valor: 'si' });
+            }
+            return filas;
+        }
+
         function mensajeWhatsApp() {
             const lineas = ['Hola! Quisiera pedir este Suarez Watch:', ''];
             resumen().forEach(function (fila) {
@@ -818,24 +767,37 @@
         let composicion = null;
 
         function abrirResultado() {
-            el.status.textContent = 'Componiendo tu reloj…';
+            el.next.disabled = true;
+            el.next.textContent = 'Armando tu reloj…';
             modelo.renderizar(seleccion, 1600).then(function (canvas) {
                 composicion = canvas;
                 el.resultImg.src = canvas.toDataURL('image/png');
-                vista.renderResumen(el.resultSummary, resumen());
+                el.resultPrice.textContent = `${catalogo.MONEDA} ${catalogo.PRECIO_USD}`;
+                vista.renderResumen(el.resultSummary, resumen(), extrasDeVista());
                 el.wa.href = `https://wa.me/${WHATSAPP_NUMBER}/?text=${encodeURIComponent(mensajeWhatsApp())}`;
                 el.result.hidden = false;
                 el.result.setAttribute('aria-hidden', 'false');
-                el.status.textContent = '';
+                el.result.scrollTop = 0;
+                resultadoAbierto = true;
+                sincronizarNav();
+                emitir('resultado');
             }).catch(function (error) {
-                el.status.textContent = 'No se pudo componer la imagen.';
+                el.status.textContent = 'No se pudo armar la imagen. Probá de nuevo.';
                 console.error(error);
+            }).finally(function () {
+                el.next.disabled = false;
+                pintarNav();
             });
         }
 
         function cerrarResultado() {
+            if (!resultadoAbierto) {
+                return;
+            }
             el.result.hidden = true;
             el.result.setAttribute('aria-hidden', 'true');
+            resultadoAbierto = false;
+            sincronizarNav();
         }
 
         function agregarAlCarrito() {
@@ -883,109 +845,173 @@
             }, 'image/png');
         }
 
-        // ---------- Navegación ----------
-
-        function irAPaso(indice) {
-            pasoActivo = Math.max(0, Math.min(pasos.length - 1, indice));
-            marcarVisitado(pasos[pasoActivo].id);
-            pintarPaso();
-            pintarReloj();
-        }
-
         // ---------- Eventos ----------
 
-        el.steps.addEventListener('click', function (event) {
-            const chip = event.target.closest('[data-paso]');
-            if (chip) {
-                irAPaso(pasos.findIndex(function (paso) {
-                    return paso.id === chip.dataset.paso;
-                }));
-            }
-        });
+        function initEventos() {
+            conectarArrastre(el.stage, alTocarReloj);
+            conectarArrastre(el.carrusel, alTocarCarrusel);
+            conectarRueda(el.stage);
+            conectarRueda(el.carrusel);
 
-        el.panels.addEventListener('click', function (event) {
-            const alternador = event.target.closest('[data-alternador]');
-            if (alternador) {
-                cambiarAlternador(alternador.dataset.alternador, alternador.dataset.valor);
-                return;
-            }
-
-            const fecha = event.target.closest('[data-fecha]');
-            if (fecha) {
-                seleccion.fechador = fecha.dataset.fecha === 'no' ? 'no' : Number(fecha.dataset.fecha);
-                pintarReloj();
-                pintarPaso();
-                return;
-            }
-
-            if (event.target.closest('#watch-aplicar-todos')) {
-                const pieza = modelo.get((seleccion.indices || {})[posicionActiva]);
-                if (pieza) {
-                    aplicarJuego(pieza);
-                    pintarReloj();
-                    pintarPaso();
+            el.arrowPrev.addEventListener('click', function () {
+                if (permitido('flechas') && elegirOpcion(actual - 1, 'flecha')) {
+                    emitir('flecha');
                 }
-                return;
-            }
+            });
+            el.arrowNext.addEventListener('click', function () {
+                if (permitido('flechas') && elegirOpcion(actual + 1, 'flecha')) {
+                    emitir('flecha');
+                }
+            });
 
-            if (event.target.closest('#watch-foto-elegir')) {
+            document.addEventListener('keydown', function (event) {
+                if (resultadoAbierto || (event.target.closest && event.target.closest('input, textarea, select'))) {
+                    return;
+                }
+                if ((event.key === 'ArrowLeft' || event.key === 'ArrowRight') && permitido('flechas')) {
+                    event.preventDefault();
+                    elegirOpcion(actual + (event.key === 'ArrowRight' ? 1 : -1), 'tecla');
+                }
+                if (event.key === 'Escape' && menuAbierto) {
+                    alternarMenu(false);
+                }
+            });
+
+            el.menuAbrir.addEventListener('click', function () {
+                if (permitido('menu')) {
+                    alternarMenu(true);
+                }
+            });
+            el.sheetCerrar.addEventListener('click', function () {
+                if (permitido('menu')) {
+                    alternarMenu(false);
+                }
+            });
+            el.fotoElegir.addEventListener('click', function () {
                 el.foto.click();
-                return;
-            }
+            });
 
-            if (event.target.closest('#watch-foto-quitar')) {
-                guardarFoto(null);
-                pintarReloj();
-                pintarPaso();
-                return;
-            }
+            el.panels.addEventListener('click', function (event) {
+                const modo = event.target.closest('[data-modo-indices]');
+                if (modo) {
+                    modoIndices = modo.dataset.modoIndices;
+                    pintarTodo();
+                    return;
+                }
 
-            const boton = event.target.closest('[data-pieza]');
-            if (boton) {
-                elegir(boton.dataset.campo, boton.dataset.pieza);
-            }
-        });
+                const accionFoto = event.target.closest('[data-foto]');
+                if (accionFoto) {
+                    if (accionFoto.dataset.foto === 'elegir') {
+                        el.foto.click();
+                    } else {
+                        guardarFoto(null);
+                        seleccion.usarFoto = false;
+                        pintarTodo();
+                    }
+                    return;
+                }
 
-        function cambiarAlternador(nombre, valor) {
-            if (nombre === 'modo-indices') {
-                modoIndices = valor;
-            } else if (nombre === 'bisel-bicolor') {
-                biselBicolor = valor === 'si';
-                seleccion.biselAbajo = biselBicolor ? mitadInferiorPorDefecto() : null;
+                const boton = event.target.closest('[data-opcion]');
+                if (boton && permitido('elegir')) {
+                    elegirOpcion(Number(boton.dataset.opcion), 'menu');
+                }
+            });
+
+            el.prev.addEventListener('click', function () {
+                if (!permitido('atras')) {
+                    return;
+                }
+                const indice = indicePantalla();
+                if (indice > 0) {
+                    irAPantalla(pantallas[indice - 1].id);
+                }
+            });
+
+            el.next.addEventListener('click', function () {
+                if (!permitido('siguiente')) {
+                    return;
+                }
+                const indice = indicePantalla();
+                if (indice === pantallas.length - 1) {
+                    alternarMenu(false);
+                    abrirResultado();
+                    return;
+                }
+                irAPantalla(pantallas[indice + 1].id);
+            });
+
+            el.resultClose.addEventListener('click', cerrarResultado);
+            el.resultSummary.addEventListener('click', function (event) {
+                const boton = event.target.closest('[data-parte]');
+                if (boton) {
+                    cerrarResultado();
+                    irAParte(boton.dataset.parte);
+                }
+            });
+            el.cart.addEventListener('click', agregarAlCarrito);
+            el.download.addEventListener('click', descargar);
+
+            // Cualquier toque reinicia la pista, y si el shell restituyo su
+            // navegacion con el menu abierto, la vuelve a esconder.
+            document.addEventListener('pointerdown', function () {
+                reiniciarPista();
+                if (navOculta()) {
+                    sincronizarNav();
+                }
+            }, true);
+            builder.addEventListener('animationend', function (event) {
+                if (event.animationName === 'watch-pista') {
+                    builder.classList.remove('is-nudge');
+                    reiniciarPista();
+                }
+            });
+
+            const alCambiarAncho = function () {
+                sincronizarNav();
+                requestAnimationFrame(marcarPosicionActiva);
+            };
+            if (escritorio.addEventListener) {
+                escritorio.addEventListener('change', alCambiarAncho);
+            } else if (escritorio.addListener) {
+                escritorio.addListener(alCambiarAncho);
             }
-            pintarReloj();
-            pintarPaso();
+            window.addEventListener('resize', function () {
+                requestAnimationFrame(marcarPosicionActiva);
+            });
+            builder.addEventListener('reloj:tutorial-inicio', sincronizarNav);
+            builder.addEventListener('reloj:tutorial-fin', function () {
+                sincronizarNav();
+                reiniciarPista();
+            });
+            window.addEventListener('pagehide', function () {
+                menuAbierto = false;
+                resultadoAbierto = false;
+                sincronizarNav();
+            });
         }
 
-        el.prev.addEventListener('click', function () {
-            irAPaso(pasoActivo - 1);
-        });
-
-        el.next.addEventListener('click', function () {
-            if (pasoActivo === pasos.length - 1) {
-                abrirResultado();
-                return;
-            }
-            irAPaso(pasoActivo + 1);
-        });
-
-        el.resultClose.addEventListener('click', cerrarResultado);
-        el.cart.addEventListener('click', agregarAlCarrito);
-        el.download.addEventListener('click', descargar);
-
         // ---------- Arranque ----------
+
+        App.viewmodels.relojes.control = {
+            /** El tutorial arranca con el reloj a la vista y sin nada encima. */
+            prepararTutorial: function () {
+                cerrarResultado();
+                alternarMenu(false);
+                builder.classList.remove('is-nudge');
+            }
+        };
 
         el.frame.classList.add('is-loading');
         modelo.load().then(function () {
             seleccion = modelo.seleccionInicial();
-            visitados = ['caja'];
             initFoto();
-            initSheet();
-            initArrastreStage();
-            pintarReloj();
-            pintarPaso();
+            initEventos();
+            vigilarNavDelPadre();
+            pintarTodo();
             el.frame.classList.remove('is-loading');
             el.status.textContent = '';
+            reiniciarPista();
+            emitir('listo');
         }).catch(function (error) {
             el.status.textContent = 'No se pudieron cargar las piezas del reloj.';
             console.error(error);
