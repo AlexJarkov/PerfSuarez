@@ -578,7 +578,7 @@
     "precio_completo": {
       "ml": 100,
       "precio": 4360,
-      "en_stock": true
+      "en_stock": false
     },
     "precios_decants": {
       "5": 310,
@@ -597,8 +597,8 @@
       "nicho"
     ],
     "etiqueta": "novedad",
-    "en_stock_completos": true,
-    "en_stock_decants": true,
+    "en_stock_completos": false,
+    "en_stock_decants": false,
     "image_miniatura": "imagenes/fotos-catalogo/lelabo/SANTAL 33.webp",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/SANTAL 33.JPEG",
     "images_gallery": [],
@@ -741,8 +741,8 @@
     "marca": "Nasomatto",
     "nombre_interno": "Nasomatto Black Afgano",
     "etiqueta": "novedad",
-    "en_stock_completos": true,
-    "en_stock_decants": true,
+    "en_stock_completos": false,
+    "en_stock_decants": false,
     "oferta": false,
     "image_miniatura": "imagenes/fotos-catalogo/nicho/BLACK-AFGANO.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/BLACK-AFGANO.png",
@@ -762,7 +762,7 @@
     "precio_completo": {
       "ml": 30,
       "precio": 2500,
-      "en_stock": true
+      "en_stock": false
     },
     "precio_combo": {
       "30": 2119
@@ -1123,7 +1123,7 @@
       "en_stock": true
     },
     "precio_combo": {
-      "50": 2574
+      "50": 2864.88
     },
     "notas": {
       "generales": [],
@@ -1695,7 +1695,8 @@
     "nombre": "NoMad",
     "precio_completo": {
       "ml": 100,
-      "precio": 2400
+      "precio": 2400,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 180,
@@ -1712,7 +1713,7 @@
     ],
     "etiqueta": "novedad",
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": null,
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/NOMAD.png",
     "images_gallery": [],
@@ -1750,7 +1751,8 @@
     "nombre": "Chez Bond",
     "precio_completo": {
       "ml": 100,
-      "precio": 2400
+      "precio": 2400,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 180,
@@ -1767,7 +1769,7 @@
     ],
     "etiqueta": "novedad",
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": null,
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/CHEZ BOND.png",
     "images_gallery": [],
@@ -2054,7 +2056,8 @@
     "nombre": "Aventus",
     "precio_completo": {
       "ml": 100,
-      "precio": 4370
+      "precio": 4370,
+      "en_stock": false
     },
     "precios_decants": {
       "5": 310,
@@ -2068,7 +2071,7 @@
     ],
     "etiqueta": null,
     "en_stock_completos": false,
-    "en_stock_decants": true,
+    "en_stock_decants": false,
     "image_miniatura": null,
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/AVENTUS.jpg",
     "images_gallery": [],
@@ -3762,8 +3765,8 @@
     "marca": "Rabanne",
     "nombre_interno": "Rabanne One Million Night Elixir",
     "etiqueta": "novedad",
-    "en_stock_completos": true,
-    "en_stock_decants": true,
+    "en_stock_completos": false,
+    "en_stock_decants": false,
     "oferta": false,
     "image_miniatura": "imagenes/fotos-catalogo/paco/ONE-MILLION-NIGHT-ELIXIR.webp",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/ONE-MILLION-NIGHT-ELIXIR.png",
@@ -3785,7 +3788,8 @@
     "precio_cuadro": null,
     "precio_completo": {
       "ml": 100,
-      "precio": 1440
+      "precio": 1440,
+      "en_stock": false
     },
     "precio_combo": {
       "100": 1339
@@ -5058,7 +5062,7 @@
     },
     "precio_combo": {
       "200": 2373.81,
-      "300": 39
+      "300": 2444
     },
     "tags": [
       "hombre",
@@ -6985,6 +6989,60 @@
     "precio_cuadro": null
   },
   {
+    "nombre": "Acqua Di Gio Profondo Eau de Toilette",
+    "marca": "Giorgio Armani",
+    "nombre_interno": "Giorgio Armani Acqua Di Gio Profondo EDT",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/armani/PROFONDO-EDT.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/PROFONDO-EDT.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "armani"
+    ],
+    "precios_decants": {
+      "5": 130,
+      "10": 240,
+      "15": 340,
+      "30": 660
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 1620,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "100": 1373.18
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Limón (Lima ácida)",
+        "Toronja (pomelo)",
+        "Especias"
+      ],
+      "corazon": [
+        "Calone",
+        "Lavandia",
+        "Ciprés"
+      ],
+      "fondo": [
+        "Notas minerales",
+        "Notas amaderadas",
+        "Pachulí"
+      ]
+    },
+    "id": "acqua-di-gio-profondo-eau-de-toilette-giorgio-armani"
+  },
+  {
     "id": "acqua-di-gio-profumo-giorgio-armani",
     "nombre_interno": "Giorgio Armani Acqua Di Gio Profumo",
     "marca": "Giorgio Armani",
@@ -8415,9 +8473,19 @@
     "nombre_interno": "Giorgio Armani My Way EDP",
     "marca": "Giorgio Armani",
     "nombre": "My Way Eau De Parfum",
-    "precio_completo": null,
-    "precios_decants": null,
-    "precio_combo": null,
+    "precio_completo": {
+      "en_stock": false,
+      "ml": 90,
+      "precio": 2230
+    },
+    "precios_decants": {
+      "5": 100,
+      "10": 190,
+      "15": 270
+    },
+    "precio_combo": {
+      "90": 1633.23
+    },
     "tags": [
       "mujer"
     ],
@@ -8441,7 +8509,9 @@
         "Vainilla de Madagascar",
         "Cedro de Virginia"
       ]
-    }
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": false
   },
   {
     "id": "prada-paradoxe-prada",
@@ -9081,8 +9151,17 @@
     "nombre_interno": "Jean Paul Gaultier Gaultier Divine",
     "marca": "Jean Paul Gaultier",
     "nombre": "Gaultier Divine",
-    "precio_completo": null,
-    "precios_decants": null,
+    "precio_completo": {
+      "en_stock": false,
+      "ml": 100,
+      "precio": 1450
+    },
+    "precios_decants": {
+      "5": 100,
+      "10": 190,
+      "15": 270,
+      "30": 510
+    },
     "precio_combo": null,
     "tags": [
       "mujer",
@@ -9110,7 +9189,9 @@
         "Almizcle",
         "Pachulí"
       ]
-    }
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": false
   },
   {
     "id": "scandal-absolu-jean-paul-gaultier",
@@ -11216,6 +11297,58 @@
     "decants_auto_ml": 125
   },
   {
+    "nombre": "Le Beau Narcisse",
+    "marca": "Jean Paul Gaultier",
+    "nombre_interno": "Jean Paul Gaultier Le Beau Narcisse",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/jpg/LE-BEAU-NARCISSE.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/LE-BEAU-NARCISSE.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "jpg"
+    ],
+    "precios_decants": {
+      "5": 100,
+      "10": 180,
+      "15": 260,
+      "30": 480
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 125,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 125,
+      "precio": 1460,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "125": 1352.78
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Bergamota",
+        "Coco"
+      ],
+      "corazon": [
+        "Almizcle",
+        "Flor de azahar del naranjo"
+      ],
+      "fondo": [
+        "Vainilla",
+        "Haba Tonka",
+        "Vetiver"
+      ]
+    },
+    "id": "le-beau-narcisse-jean-paul-gaultier"
+  },
+  {
     "id": "le-beau-eau-de-toilette-jean-paul-gaultier",
     "nombre_interno": "Jean Paul Gaultier Le Beau EDT",
     "marca": "Jean Paul Gaultier",
@@ -11519,6 +11652,57 @@
     "precio_cuadro": null
   },
   {
+    "nombre": "Good Girl Jasmine Absolute",
+    "marca": "Carolina Herrera",
+    "nombre_interno": "Carolina Herrera Good Girl Jasmine Absolute",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ch/GG-JASMINE-ABSOLUTE.jpeg",
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/GG-JASMINE-ABSOLUTE.png",
+    "image_cuadro": null,
+    "tags": [
+      "mujer",
+      "ch"
+    ],
+    "precios_decants": {
+      "5": 180,
+      "10": 340,
+      "15": 500,
+      "30": 960
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 80,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 80,
+      "precio": 1920,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "80": 1609.92
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Grosellas negras",
+        "Mandarina"
+      ],
+      "corazon": [
+        "Jazmín",
+        "Almendra amarga"
+      ],
+      "fondo": [
+        "Toffee",
+        "Haba Tonka"
+      ]
+    },
+    "id": "good-girl-jasmine-absolute-carolina-herrera"
+  },
+  {
     "id": "good-girl-sparkling-ice-carolina-herrera",
     "nombre_interno": "Carolina Herrera Good Girl Sparkling Ice",
     "marca": "Carolina Herrera",
@@ -11718,11 +11902,18 @@
     "nombre_interno": "Carolina Herrera La Bomba",
     "marca": "Carolina Herrera",
     "nombre": "La Bomba",
-    "precio_completo": {
-      "ml": 80,
-      "precio": 1590,
-      "en_stock": true
-    },
+    "precio_completo": [
+      {
+        "ml": 80,
+        "precio": 1590,
+        "en_stock": true
+      },
+      {
+        "en_stock": true,
+        "ml": 200,
+        "precio": 2270
+      }
+    ],
     "precios_decants": {
       "5": 160,
       "10": 290,
@@ -11730,7 +11921,8 @@
       "30": 800
     },
     "precio_combo": {
-      "80": 1459.98
+      "80": 1459.98,
+      "200": 2039.88
     },
     "tags": [
       "mujer",
@@ -11763,6 +11955,56 @@
     "decants_auto": true,
     "decants_auto_base": "normal",
     "decants_auto_ml": 80
+  },
+  {
+    "nombre": "La Bomba SET",
+    "marca": "Carolina Herrera",
+    "nombre_interno": "Carolina Herrera La Bomba (SET + Crema)",
+    "etiqueta": "novedad",
+    "en_stock_decants": false,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/ch/LA BOMBA.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/mujer/LA BOMBA.png",
+    "image_cuadro": null,
+    "tags": [
+      "mujer",
+      "carolina"
+    ],
+    "precios_decants": {
+      "5": 170,
+      "10": 300,
+      "15": 440,
+      "30": 850
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 80,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 80,
+      "precio": 1690,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "80": 1467.34
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Pitahaya"
+      ],
+      "corazon": [
+        "Frangipani",
+        "Peonía roja"
+      ],
+      "fondo": [
+        "Vainilla",
+        "Pachulí"
+      ]
+    },
+    "id": "la-bomba-set-carolina-herrera"
   },
   {
     "nombre": "La Bomba Intensa",
@@ -12454,6 +12696,56 @@
     "decants_auto_ml": 100
   },
   {
+    "nombre": "K By D&G Parfum",
+    "marca": "Dolce&Gabbana",
+    "nombre_interno": "Dolce&Gabbana K Parfum",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/d&g/K-PARFUM.avif",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/K-PARFUM.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "d&g"
+    ],
+    "precios_decants": {
+      "5": 160,
+      "10": 300,
+      "15": 430,
+      "30": 830
+    },
+    "precios_decants_oferta": null,
+    "decants_auto": true,
+    "decants_auto_base": "normal",
+    "decants_auto_ml": 100,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 100,
+      "precio": 2050,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "100": 1227.33
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Higo",
+        "Caramelo"
+      ],
+      "corazon": [
+        "Regaliz"
+      ],
+      "fondo": [
+        "Sándalo",
+        "Notas amaderadas"
+      ]
+    },
+    "id": "k-by-d-g-parfum-dolce-gabbana"
+  },
+  {
     "id": "k-by-d-g-eau-de-parfum-intense-dolce-gabbana",
     "nombre_interno": "Dolce&Gabbana K By D&G EDP Intense",
     "marca": "Dolce&Gabbana",
@@ -12831,10 +13123,17 @@
     "nombre_interno": "Montblanc Explorer Platinum",
     "marca": "Montblanc",
     "nombre": "Explorer Platinum",
-    "precio_completo": {
-      "ml": 60,
-      "precio": 930
-    },
+    "precio_completo": [
+      {
+        "ml": 60,
+        "precio": 930
+      },
+      {
+        "en_stock": false,
+        "ml": 100,
+        "precio": 1350
+      }
+    ],
     "precios_decants": {
       "5": 130,
       "10": 230,
@@ -12842,7 +13141,8 @@
       "30": 630
     },
     "precio_combo": {
-      "60": 670.93
+      "60": 670.93,
+      "100": 39
     },
     "tags": [
       "hombre"
@@ -13265,15 +13565,22 @@
     "nombre_interno": "Moncler Pour Homme",
     "marca": "Moncler",
     "nombre": "Pour Homme",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1530
-    },
+    "precio_completo": [
+      {
+        "en_stock": false,
+        "ml": 150,
+        "precio": 1510
+      },
+      {
+        "ml": 100,
+        "precio": 2270
+      }
+    ],
     "precios_decants": {
-      "5": 130,
-      "10": 230,
-      "15": 330,
-      "30": 630
+      "5": 90,
+      "10": 160,
+      "15": 220,
+      "30": 420
     },
     "precio_combo": {
       "150": 1341.6,
@@ -13311,25 +13618,32 @@
     "precio_cuadro": null,
     "decants_auto": true,
     "decants_auto_base": "normal",
-    "decants_auto_ml": 100
+    "decants_auto_ml": 150
   },
   {
     "id": "pour-femme-moncler",
     "nombre_interno": "Moncler Pour Femme",
     "marca": "Moncler",
     "nombre": "Pour Femme",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1530
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1510
+      },
+      {
+        "en_stock": false,
+        "ml": 150,
+        "precio": 2270
+      }
+    ],
     "precios_decants": {
       "5": 130,
-      "10": 230,
-      "15": 330,
-      "30": 630
+      "10": 220,
+      "15": 320,
+      "30": 620
     },
     "precio_combo": {
-      "100": 1007.41,
+      "100": 787.68,
       "150": 1341.6
     },
     "tags": [
@@ -13375,13 +13689,13 @@
     "nombre": "Sunrise Pour Homme",
     "precio_completo": {
       "ml": 100,
-      "precio": 990
+      "precio": 1510
     },
     "precios_decants": {
-      "5": 90,
-      "10": 160,
-      "15": 220,
-      "30": 410
+      "5": 130,
+      "10": 220,
+      "15": 320,
+      "30": 620
     },
     "precio_combo": {
       "100": 847.74
@@ -13429,13 +13743,13 @@
     "nombre": "Sunrise Pour Femme",
     "precio_completo": {
       "ml": 100,
-      "precio": 1530
+      "precio": 1510
     },
     "precios_decants": {
       "5": 130,
-      "10": 230,
-      "15": 330,
-      "30": 630
+      "10": 220,
+      "15": 320,
+      "30": 620
     },
     "precio_combo": {
       "100": 890.99
@@ -14234,7 +14548,8 @@
         "Ambrofix"
       ]
     },
-    "id": "khamrah-waha-lattafa"
+    "id": "khamrah-waha-lattafa",
+    "decants_auto": false
   },
   {
     "id": "yara-lattafa",
