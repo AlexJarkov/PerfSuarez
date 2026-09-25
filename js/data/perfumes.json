@@ -125,7 +125,7 @@
       "30": 550
     },
     "precio_combo": {
-      "120": 1443.43
+      "120": 1553.72
     },
     "tags": [
       "hombre",
@@ -1804,13 +1804,13 @@
     "nombre": "Imagination",
     "precio_completo": [
       {
-        "ml": 100,
-        "precio": 5010,
+        "ml": 200,
+        "precio": 9780,
         "en_stock": true
       },
       {
-        "ml": 200,
-        "precio": 9780,
+        "ml": 100,
+        "precio": 5010,
         "en_stock": true
       }
     ],
@@ -1821,8 +1821,7 @@
       "30": 1980
     },
     "precio_combo": {
-      "200": 7449,
-      "100": 5239
+      "200": 9074
     },
     "tags": [
       "hombre nicho"
@@ -1865,16 +1864,23 @@
     "nombre_interno": "Louis Vuitton Ombré Nomade",
     "marca": "Louis Vuitton",
     "nombre": "Ombré Nomade",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 6260,
-      "en_stock": true
-    },
+    "precio_completo": [
+      {
+        "en_stock": true,
+        "ml": 200,
+        "precio": 7790
+      },
+      {
+        "ml": 100,
+        "precio": 6260,
+        "en_stock": true
+      }
+    ],
     "precios_decants": {
-      "5": 440,
-      "10": 840,
-      "15": 1250,
-      "30": 2470
+      "5": 280,
+      "10": 530,
+      "15": 790,
+      "30": 1550
     },
     "precio_combo": null,
     "tags": [
@@ -1907,7 +1913,7 @@
     "precio_cuadro": null,
     "decants_auto": true,
     "decants_auto_base": "normal",
-    "decants_auto_ml": 100
+    "decants_auto_ml": 200
   },
   {
     "id": "pacific-chill-louis-vuitton",
@@ -1932,10 +1938,7 @@
       "15": 1010,
       "30": 1980
     },
-    "precio_combo": {
-      "100": 5239,
-      "200": 7969
-    },
+    "precio_combo": null,
     "tags": [
       "hombre nicho"
     ],
@@ -2120,9 +2123,7 @@
       "15": 600,
       "30": 1180
     },
-    "precio_combo": {
-      "100": 2314
-    },
+    "precio_combo": null,
     "tags": [
       "hombre nicho"
     ],
@@ -2168,7 +2169,7 @@
       "30": 750
     },
     "precio_combo": {
-      "100": 1859
+      "100": 1822.6
     },
     "tags": [
       "hombre unisex nicho mujer"
@@ -2691,7 +2692,7 @@
       "30": 1680
     },
     "precio_combo": {
-      "90": 3549
+      "90": 3602.52
     },
     "tags": [
       "hombre unisex nicho mujer"
@@ -2968,6 +2969,11 @@
     "nombre": "Sauvage Elixir",
     "precio_completo": [
       {
+        "en_stock": true,
+        "ml": 60,
+        "precio": 1650
+      },
+      {
         "ml": 100,
         "precio": 3050
       },
@@ -2983,7 +2989,6 @@
       "30": 1220
     },
     "precio_combo": {
-      "100": 3107.69,
       "150": 3600.09
     },
     "tags": [
@@ -3030,12 +3035,12 @@
     "nombre": "Le Male Elixir",
     "precio_completo": [
       {
-        "ml": 75,
-        "precio": 1050
-      },
-      {
         "ml": 125,
         "precio": 1390
+      },
+      {
+        "ml": 75,
+        "precio": 1050
       },
       {
         "ml": 200,
@@ -3049,8 +3054,8 @@
       "30": 460
     },
     "precio_combo": {
-      "125": 1329.28,
-      "75": 920.74,
+      "125": 1326.49,
+      "75": 929.96,
       "200": 1729.26
     },
     "precio_cuadro": null,
@@ -3150,9 +3155,7 @@
       "15": 340,
       "30": 620
     },
-    "precio_combo": {
-      "100": 1521
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "armani"
@@ -3191,7 +3194,8 @@
       "10": 190,
       "15": 270,
       "30": 510
-    }
+    },
+    "decants_auto": false
   },
   {
     "id": "y-edp-yves-saint-laurent",
@@ -3446,11 +3450,18 @@
     "nombre_interno": "Jean Paul Gaultier Le Male Le Parfum",
     "marca": "Jean Paul Gaultier",
     "nombre": "Le Male Le Parfum",
-    "precio_completo": {
-      "ml": 125,
-      "precio": 1310,
-      "en_stock": true
-    },
+    "precio_completo": [
+      {
+        "ml": 125,
+        "precio": 1310,
+        "en_stock": true
+      },
+      {
+        "en_stock": true,
+        "ml": 200,
+        "precio": 2380
+      }
+    ],
     "precios_decants": {
       "5": 100,
       "10": 160,
@@ -4163,9 +4174,7 @@
       "15": 270,
       "30": 510
     },
-    "precio_combo": {
-      "100": 1298.14
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "azzaro"
@@ -5061,7 +5070,6 @@
       "30": 480
     },
     "precio_combo": {
-      "200": 2373.81,
       "300": 2444
     },
     "tags": [
@@ -5227,7 +5235,7 @@
       "30": 450
     },
     "precio_combo": {
-      "125": 1198.17,
+      "125": 1227.34,
       "75": 844.47
     },
     "tags": [
@@ -5993,11 +6001,18 @@
     "nombre_interno": "Yves Saint Laurent MYSLF",
     "marca": "Yves Saint Laurent",
     "nombre": "MYSLF",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1500,
-      "en_stock": true
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1500,
+        "en_stock": true
+      },
+      {
+        "en_stock": true,
+        "ml": 150,
+        "precio": 1560
+      }
+    ],
     "precios_decants": {
       "5": 130,
       "10": 220,
@@ -7238,16 +7253,23 @@
     "nombre_interno": "Versace Eros Flame",
     "marca": "Versace",
     "nombre": "Eros Flame",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1810,
-      "en_stock": true
-    },
+    "precio_completo": [
+      {
+        "en_stock": true,
+        "ml": 200,
+        "precio": 1650
+      },
+      {
+        "ml": 100,
+        "precio": 1810,
+        "en_stock": true
+      }
+    ],
     "precios_decants": {
-      "5": 150,
-      "10": 260,
-      "15": 380,
-      "30": 730
+      "5": 80,
+      "10": 140,
+      "15": 190,
+      "30": 350
     },
     "precio_combo": {
       "200": 1599
@@ -7291,7 +7313,7 @@
     "precios_decants_oferta": null,
     "decants_auto": true,
     "decants_auto_base": "normal",
-    "decants_auto_ml": 100
+    "decants_auto_ml": 200
   },
   {
     "id": "spicebomb-eau-de-toilette-viktor-rolf",
@@ -7308,9 +7330,7 @@
       "15": 280,
       "30": 530
     },
-    "precio_combo": {
-      "90": 689
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "v&r"
@@ -9047,11 +9067,18 @@
     "nombre_interno": "Jean Paul Gaultier Gaultier Divine Le Parfum",
     "marca": "Jean Paul Gaultier",
     "nombre": "Gaultier Divine Le Parfum",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1510,
-      "en_stock": true
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1510,
+        "en_stock": true
+      },
+      {
+        "en_stock": true,
+        "ml": 200,
+        "precio": 1750
+      }
+    ],
     "precios_decants": {
       "5": 130,
       "10": 220,
@@ -9995,10 +10022,17 @@
     "nombre_interno": "Givenchy Gentleman Réserve Privée",
     "marca": "Givenchy",
     "nombre": "Gentleman Réserve Privée",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1350
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1350
+      },
+      {
+        "en_stock": true,
+        "ml": 60,
+        "precio": 730
+      }
+    ],
     "precios_decants": {
       "5": 120,
       "10": 200,
@@ -11922,7 +11956,7 @@
     },
     "precio_combo": {
       "80": 1459.98,
-      "200": 2039.88
+      "200": 1972.02
     },
     "tags": [
       "mujer",
@@ -12966,7 +13000,7 @@
       "30": 750
     },
     "precio_combo": {
-      "100": 1105.55
+      "100": 1149.58
     },
     "tags": [
       "mujer d&g"
@@ -13142,7 +13176,7 @@
     },
     "precio_combo": {
       "60": 670.93,
-      "100": 39
+      "100": 746.97
     },
     "tags": [
       "hombre"
@@ -13569,18 +13603,18 @@
       {
         "en_stock": false,
         "ml": 150,
-        "precio": 1380
+        "precio": 2080
       },
       {
         "ml": 100,
-        "precio": 2080
+        "precio": 1380
       }
     ],
     "precios_decants": {
-      "5": 90,
-      "10": 150,
-      "15": 210,
-      "30": 390
+      "5": 120,
+      "10": 210,
+      "15": 300,
+      "30": 570
     },
     "precio_combo": {
       "150": 1341.6,
@@ -13618,7 +13652,7 @@
     "precio_cuadro": null,
     "decants_auto": true,
     "decants_auto_base": "normal",
-    "decants_auto_ml": 150
+    "decants_auto_ml": 100
   },
   {
     "id": "pour-femme-moncler",
@@ -14568,7 +14602,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 404.11
+      "100": 455
     },
     "tags": [
       "mujer",
@@ -14628,7 +14662,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 455.95
+      "100": 495.25
     },
     "tags": [
       "hombre",
@@ -14754,7 +14788,7 @@
       "30": 270
     },
     "precio_combo": {
-      "105": 537.73
+      "105": 507.61
     },
     "tags": [
       "hombre",
@@ -15119,7 +15153,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 435.5
+      "100": 480.19
     },
     "tags": [
       "hombre",
@@ -15213,7 +15247,8 @@
     "oferta": true,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": false
   },
   {
     "id": "turathi-electric-afnan",
@@ -15295,7 +15330,7 @@
       "30": 300
     },
     "precio_combo": {
-      "100": 602.11
+      "100": 620.28
     },
     "tags": [
       "hombre",
@@ -15357,7 +15392,7 @@
       "30": 370
     },
     "precio_combo": {
-      "120": 721.5
+      "120": 752.91
     },
     "tags": [
       "hombre",
@@ -15452,7 +15487,8 @@
     "oferta": true,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": false
   },
   {
     "id": "bade-e-al-oud-oud-for-glory-lattafa",
@@ -15825,7 +15861,7 @@
       "30": 670
     },
     "precio_combo": {
-      "100": 1066
+      "100": 1141.22
     },
     "tags": [
       "hombre",
@@ -16117,7 +16153,7 @@
       "30": 270
     },
     "precio_combo": {
-      "105": 562.47
+      "105": 545.25
     },
     "tags": [
       "hombre",
@@ -16418,7 +16454,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 443.08,
+      "100": 470.87,
       "200": 715
     },
     "tags": [
@@ -16481,9 +16517,7 @@
       "15": 160,
       "30": 280
     },
-    "precio_combo": {
-      "100": 533
-    },
+    "precio_combo": null,
     "tags": [
       "hombre rasasi arabes"
     ],
@@ -16543,7 +16577,7 @@
       "30": 330
     },
     "precio_combo": {
-      "100": 615.88
+      "100": 713.7
     },
     "tags": [
       "hombre rasasi arabes"
@@ -16762,7 +16796,7 @@
       "30": 330
     },
     "precio_combo": {
-      "100": 611
+      "100": 649.13
     },
     "tags": [
       "hombre rasasi arabes"
@@ -16943,7 +16977,7 @@
       "30": 330
     },
     "precio_combo": {
-      "100": 593.13
+      "100": 633.01
     },
     "tags": [
       "hombre rasasi arabes"
@@ -16997,7 +17031,7 @@
       "30": 310
     },
     "precio_combo": {
-      "100": 435.5
+      "100": 439.36
     },
     "tags": [
       "hombre arabes"
@@ -17814,7 +17848,7 @@
       "30": 310
     },
     "precio_combo": {
-      "100": 667.13
+      "100": 689.14
     },
     "tags": [
       "hombre",
@@ -17851,7 +17885,8 @@
     "oferta": true,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": false
   },
   {
     "id": "art-of-universe-lattafa",
@@ -18026,9 +18061,7 @@
       "15": 190,
       "30": 350
     },
-    "precio_combo": {
-      "100": 676
-    },
+    "precio_combo": null,
     "tags": [
       "hombre arabes"
     ],
@@ -18409,7 +18442,7 @@
       "30": 260
     },
     "precio_combo": {
-      "100": 353.57
+      "100": 416.6
     },
     "tags": [
       "unisex",
@@ -18471,7 +18504,7 @@
       "30": 470
     },
     "precio_combo": {
-      "55": 453.08
+      "55": 576.33
     },
     "tags": [
       "hombre",
@@ -18504,7 +18537,8 @@
     "oferta": true,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": false
   },
   {
     "id": "fakhar-extrait-lattafa",
@@ -19063,7 +19097,11 @@
       "precio": 1030,
       "precio_oferta": 870
     },
-    "precios_decants": null,
+    "precios_decants": {
+      "5": 50,
+      "10": 100,
+      "15": 140
+    },
     "precio_combo": {
       "90": 585
     },
@@ -19096,7 +19134,8 @@
     "oferta": false,
     "image_cuadro": null,
     "precios_decants_oferta": null,
-    "precio_cuadro": null
+    "precio_cuadro": null,
+    "decants_auto": false
   },
   {
     "id": "khamrah-desodorante-lattafa",
