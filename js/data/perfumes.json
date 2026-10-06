@@ -278,7 +278,9 @@
       "15": 510,
       "30": 1000
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "tc_oferta_ancla": 2470
+    },
     "precio_cuadro": 350,
     "tags": [
       "hombre",
@@ -515,7 +517,7 @@
     },
     "en_stock_completos": true,
     "precio_combo": {
-      "75": 3770
+      "tc_oferta_ancla": 3770
     },
     "notas": {
       "generales": [],
@@ -953,7 +955,7 @@
       "30": 1800
     },
     "precio_combo": {
-      "50": 2570
+      "tc_oferta_ancla": 2570
     },
     "tags": [
       "hombre nicho"
@@ -1382,7 +1384,7 @@
       "en_stock": true
     },
     "precio_combo": {
-      "50": 2870
+      "tc_oferta_ancla": 2870
     },
     "notas": {
       "generales": [],
@@ -2270,7 +2272,7 @@
       "30": 1280
     },
     "precio_combo": {
-      "100": 2850
+      "tc_oferta_ancla": 2880
     },
     "tags": [
       "hombre unisex nicho mujer"
@@ -3428,9 +3430,7 @@
       "15": 440,
       "30": 840
     },
-    "precio_combo": {
-      "100": 1710
-    },
+    "precio_combo": null,
     "tags": [
       "hombre"
     ],
@@ -3464,22 +3464,25 @@
     "nombre": "Sauvage Eau De Parfum",
     "precio_completo": {
       "ml": 100,
-      "precio": 1990
+      "precio": 1970,
+      "en_stock": true
     },
     "precios_decants": {
       "5": 160,
-      "10": 290,
-      "15": 420,
+      "10": 280,
+      "15": 410,
       "30": 800
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1210
+    },
     "tags": [
       "hombre"
     ],
     "etiqueta": null,
-    "en_stock_completos": false,
-    "en_stock_decants": false,
-    "image_miniatura": null,
+    "en_stock_completos": true,
+    "en_stock_decants": true,
+    "image_miniatura": "imagenes/fotos-catalogo/dior/Untitled.jpg",
     "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE EDP.png",
     "images_gallery": [],
     "notas": {
@@ -4491,7 +4494,7 @@
       "30": 510
     },
     "precio_combo": {
-      "100": 1140
+      "tc_oferta_ancla": 1150
     },
     "tags": [
       "hombre",
@@ -4850,14 +4853,12 @@
       }
     ],
     "precios_decants": {
-      "5": 100,
-      "10": 180,
-      "15": 250,
-      "30": 480
+      "5": 130,
+      "10": 240,
+      "15": 350,
+      "30": 660
     },
-    "precio_combo": {
-      "300": 2450
-    },
+    "precio_combo": null,
     "tags": [
       "hombre",
       "dior"
@@ -12153,8 +12154,7 @@
       "30": 570
     },
     "precio_combo": {
-      "100": 790,
-      "150": 1070
+      "tc_oferta_ancla": 790
     },
     "tags": [
       "mujer",
@@ -14700,8 +14700,8 @@
       {
         "ml": 100,
         "precio": 580,
-        "precio_oferta": 500,
-        "en_stock": true
+        "en_stock": true,
+        "precio_oferta": 500
       },
       {
         "ml": 200,
@@ -14717,8 +14717,7 @@
       "30": 250
     },
     "precio_combo": {
-      "100": 480,
-      "200": 720
+      "tc_oferta_ancla": 480
     },
     "tags": [
       "hombre",
@@ -16941,7 +16940,7 @@
       "30": 250
     },
     "precio_combo": {
-      "100": 470
+      "tc_oferta_ancla": 480
     },
     "tags": [
       "hombre",
