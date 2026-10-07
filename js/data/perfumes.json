@@ -664,7 +664,7 @@
       "30": 4320
     },
     "precio_combo": {
-      "50": 4400
+      "tc_oferta_ancla": 4850
     },
     "tags": [
       "hombre",
@@ -2257,6 +2257,51 @@
     "precio_cuadro": null
   },
   {
+    "nombre": "Oud For Greatness NEO",
+    "marca": "INITIO PARFUMS PRIVÉS",
+    "nombre_interno": "Initio Oud For Greatness NEO",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/nicho/OUD-FOR-GREATNESS-NEO.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/OUD-FOR-GREATNESS-NEO.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "nicho"
+    ],
+    "precios_decants": {
+      "5": 300,
+      "10": 580,
+      "15": 860,
+      "30": 1680
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 90,
+      "precio": 3820,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "90": 3820
+    },
+    "notas": {
+      "generales": [
+        "Madera de oud",
+        "Abeto",
+        "Lavanda",
+        "Azafrán",
+        "Bergamota"
+      ],
+      "salida": [],
+      "corazon": [],
+      "fondo": []
+    },
+    "id": "oud-for-greatness-neo-initio"
+  },
+  {
     "id": "torino21-xerjoff",
     "nombre_interno": "Xerjoff Torino21",
     "marca": "Xerjoff",
@@ -2963,6 +3008,56 @@
     "precio_cuadro": null
   },
   {
+    "nombre": "Sauvage Extrait",
+    "marca": "Dior",
+    "nombre_interno": "Dior Sauvage Extrait",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/dior/SAUVAGE-EXTRAIT.jpg",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/SAUVAGE-EXTRAIT.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "dior"
+    ],
+    "precios_decants": {
+      "5": 460,
+      "10": 900,
+      "15": 1330,
+      "30": 2630
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": {
+      "ml": 50,
+      "precio": 3340,
+      "en_stock": true
+    },
+    "en_stock_completos": true,
+    "precio_combo": {
+      "50": 2810
+    },
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Lavanda",
+        "Ambroxan",
+        "Bergamota"
+      ],
+      "corazon": [
+        "Oud vietnamita"
+      ],
+      "fondo": [
+        "Cedro de Virginia",
+        "Cedro del Atlas",
+        "Pachulí",
+        "Vetiver"
+      ]
+    },
+    "id": "sauvage-extrait-dior"
+  },
+  {
     "id": "le-male-elixir-jean-paul-gaultier",
     "nombre_interno": "Jean Paul Gaultier Le Male Elixir",
     "marca": "Jean Paul Gaultier",
@@ -3430,7 +3525,9 @@
       "15": 440,
       "30": 840
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "tc_oferta_ancla": 1980
+    },
     "tags": [
       "hombre"
     ],
@@ -4447,7 +4544,9 @@
       "15": 440,
       "30": 850
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "tc_oferta_ancla": 2100
+    },
     "tags": [
       "hombre"
     ],
@@ -4840,16 +4939,18 @@
     "precio_completo": [
       {
         "ml": 100,
-        "precio": 1630
+        "precio": 1630,
+        "en_stock": true
       },
       {
         "ml": 200,
-        "precio": 2290
+        "precio": 2290,
+        "en_stock": true
       },
       {
-        "en_stock": true,
         "ml": 300,
-        "precio": 3240
+        "precio": 3240,
+        "en_stock": true
       }
     ],
     "precios_decants": {
@@ -4858,7 +4959,10 @@
       "15": 350,
       "30": 660
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 1600,
+      "300": 2450
+    },
     "tags": [
       "hombre",
       "dior"
@@ -12154,7 +12258,8 @@
       "30": 570
     },
     "precio_combo": {
-      "tc_oferta_ancla": 790
+      "100": 790,
+      "150": 1070
     },
     "tags": [
       "mujer",
@@ -14700,8 +14805,8 @@
       {
         "ml": 100,
         "precio": 580,
-        "en_stock": true,
-        "precio_oferta": 500
+        "precio_oferta": 500,
+        "en_stock": true
       },
       {
         "ml": 200,
@@ -14717,7 +14822,8 @@
       "30": 250
     },
     "precio_combo": {
-      "tc_oferta_ancla": 480
+      "100": 480,
+      "200": 720
     },
     "tags": [
       "hombre",
