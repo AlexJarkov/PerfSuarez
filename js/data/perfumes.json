@@ -15934,6 +15934,63 @@
     "precio_cuadro": null
   },
   {
+    "nombre": "Amber Oud Dubai Night",
+    "marca": "Al Haramain",
+    "nombre_interno": "Al Haramain Amber Oud Dubai Night",
+    "etiqueta": "novedad",
+    "en_stock_decants": true,
+    "oferta": false,
+    "image_miniatura": "imagenes/fotos-catalogo/arabes/DUBAI-NIGHT.webp",
+    "image_miniatura_decant": "imagenes/fotos-decants/hombre/DUBAI-NIGHT.png",
+    "image_cuadro": null,
+    "tags": [
+      "hombre",
+      "arabes"
+    ],
+    "precios_decants": {
+      "5": 90,
+      "10": 150,
+      "15": 210,
+      "30": 400
+    },
+    "precios_decants_oferta": null,
+    "precio_cuadro": null,
+    "precio_completo": [
+      {
+        "en_stock": true,
+        "ml": 75,
+        "precio": 710
+      },
+      {
+        "ml": 120,
+        "precio": 10,
+        "en_stock": true
+      }
+    ],
+    "en_stock_completos": true,
+    "precio_combo": null,
+    "notas": {
+      "generales": [],
+      "salida": [
+        "Azafrán",
+        "Bergamota",
+        "Elemí"
+      ],
+      "corazon": [
+        "Rosa de Bulgaria",
+        "Madera de Oud",
+        "Lirio de los Valles"
+      ],
+      "fondo": [
+        "Haba Tonka",
+        "Ámbar",
+        "Almizcle blanco",
+        "Musgo de roble"
+      ]
+    },
+    "id": "amber-oud-dubai-night-al-haramain"
+  },
+  {
     "id": "eclaire-banoffi-lattafa",
     "nombre_interno": "Lattafa Eclaire Banoffi",
     "marca": "Lattafa",
@@ -16350,7 +16407,6 @@
     "precio_completo": {
       "ml": 100,
       "precio": 820,
-      "precio_oferta": 750,
       "en_stock": true
     },
     "precios_decants": {
@@ -16394,11 +16450,7 @@
     },
     "oferta": true,
     "image_cuadro": null,
-    "precios_decants_oferta": {
-      "10": 130,
-      "15": 170,
-      "30": 320
-    },
+    "precios_decants_oferta": null,
     "precio_cuadro": null
   },
   {
