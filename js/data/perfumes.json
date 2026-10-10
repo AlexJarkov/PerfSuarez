@@ -226,20 +226,22 @@
       "sospiro"
     ],
     "precios_decants": {
-      "5": 220,
-      "10": 410,
-      "15": 590,
-      "30": 1160
+      "5": 260,
+      "10": 500,
+      "15": 730,
+      "30": 1430
     },
     "precios_decants_oferta": null,
     "precio_cuadro": null,
     "precio_completo": {
       "ml": 100,
-      "precio": 2900,
+      "precio": 3590,
       "en_stock": true
     },
     "en_stock_completos": true,
-    "precio_combo": null,
+    "precio_combo": {
+      "100": 3160
+    },
     "notas": {
       "generales": [],
       "salida": [
@@ -2271,16 +2273,16 @@
       "nicho"
     ],
     "precios_decants": {
-      "5": 300,
-      "10": 580,
-      "15": 860,
-      "30": 1680
+      "5": 370,
+      "10": 720,
+      "15": 1070,
+      "30": 2100
     },
     "precios_decants_oferta": null,
     "precio_cuadro": null,
     "precio_completo": {
       "ml": 90,
-      "precio": 3820,
+      "precio": 4790,
       "en_stock": true
     },
     "en_stock_completos": true,
@@ -3022,22 +3024,20 @@
       "dior"
     ],
     "precios_decants": {
-      "5": 460,
-      "10": 900,
-      "15": 1330,
-      "30": 2630
+      "5": 360,
+      "10": 690,
+      "15": 1020,
+      "30": 2020
     },
     "precios_decants_oferta": null,
     "precio_cuadro": null,
     "precio_completo": {
       "ml": 50,
-      "precio": 3340,
+      "precio": 2550,
       "en_stock": true
     },
     "en_stock_completos": true,
-    "precio_combo": {
-      "50": 2810
-    },
+    "precio_combo": null,
     "notas": {
       "generales": [],
       "salida": [
@@ -4137,17 +4137,26 @@
     "nombre_interno": "Azzaro The Most Wanted EDP Intense",
     "marca": "Azzaro",
     "nombre": "The Most Wanted EDP Intense",
-    "precio_completo": {
-      "ml": 100,
-      "precio": 1225
-    },
+    "precio_completo": [
+      {
+        "ml": 100,
+        "precio": 1225
+      },
+      {
+        "en_stock": true,
+        "ml": 150,
+        "precio": 1670
+      }
+    ],
     "precios_decants": {
       "5": 110,
       "10": 190,
       "15": 270,
       "30": 510
     },
-    "precio_combo": null,
+    "precio_combo": {
+      "150": 40
+    },
     "tags": [
       "hombre",
       "azzaro"
@@ -15955,18 +15964,11 @@
     },
     "precios_decants_oferta": null,
     "precio_cuadro": null,
-    "precio_completo": [
-      {
-        "en_stock": true,
-        "ml": 75,
-        "precio": 710
-      },
-      {
-        "ml": 120,
-        "precio": 10,
-        "en_stock": true
-      }
-    ],
+    "precio_completo": {
+      "ml": 75,
+      "precio": 710,
+      "en_stock": true
+    },
     "en_stock_completos": true,
     "precio_combo": null,
     "notas": {
